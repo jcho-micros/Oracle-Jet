@@ -3,11 +3,12 @@ define(['knockout', 'ojs/ojcore', 'ojs/ojknockout', 'ojs/ojrouter', 'ojs/ojnavig
         function laborContentViewModel() {
         var self = this;
         
-        
-
         //KNOCK detect for lgQuery to return true or false
         var mdQuery = oj.ResponsiveUtils.getFrameworkQuery(oj.ResponsiveUtils.FRAMEWORK_QUERY_KEY.MD_UP);
         self.medium = oj.ResponsiveKnockoutUtils.createMediaQueryObservable(mdQuery);
+        
+        this.sectionName = ko.observable('Labor');
+        this.iconClass = ko.observable('fa fa-briefcase');
         
         var appSideNavData = [
             {
@@ -98,5 +99,4 @@ define(['knockout', 'ojs/ojcore', 'ojs/ojknockout', 'ojs/ojrouter', 'ojs/ojnavig
         }
 
    return laborContentViewModel;
-
 });
