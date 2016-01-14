@@ -1,0 +1,96 @@
+<div class="demo-appheader">
+    <div class="oj-row demo-appheader-classic">
+        <div class="demo-grid-display demo-appheader-col">
+            <div class="oj-row">
+                <div class="oj-md-1 oj-lg-only-hide oj-xl-hide demo-off-canvas-toggle demo-appheader-toggle-button left">
+                    <button class='oj-button-half-chrome demo-appheader-toggle-button'
+                            data-bind="click:toggleAppDrawer,
+			     ojComponent: {component:'ojButton',
+                                    label: offScreenButtonLabel, 
+                                    display: 'icons', 
+                                    icons: {start: offScreenButtonIconClass}}">
+                    </button>
+                </div>
+                <div class="oj-sm-9 oj-md-9 oj-lg-only-hide oj-xl-hide left">
+                   <div role="img" class="oj-icon appheader-logo-oracle left" title="Oracle Logo" alt="Oracle Logo"></div>
+                </div>
+                <div class="oj-md-1 oj-lg-only-hide oj-xl-hide demo-off-canvas-toggle demo-appheader-toggle-button right">
+
+                    <button id="menuButton2"
+                                class='oj-button-half-chrome demo-appheader-pulldown-small'
+                                data-bind="ojComponent: { component: 'ojButton', 
+                             label: 'Avatar', 
+                             display: 'icons',
+                             icons: {start:'oj-icon fa fa-user'},
+                             menu: '#demoAppheaderGlobalNavMenuId'
+                             }">
+                    </button>
+                </div>
+            </div>
+            <div class="oj-row">
+                <div class="oj-sm-only-hide oj-md-only-hide oj-lg-4 oj-xl-4 left">
+                    <div role="img" class="oj-icon appheader-logo-oracle" title="Oracle Logo" alt="Oracle Logo"><span style="" class="oj-lg-10 oj-xl-10 demo-appheader-appname" data-bind="text: appName"></span></div>
+                </div>
+                <div class="oj-sm-12 oj-med-12 oj-lg-4 oj-xl-4 left">
+                    <div id="ojAppNav2" class="demo-appheader-nav oj-lg-justify-content-center oj-xl-justify-content-flex-end" 
+                         data-bind="ojComponent: {component: 'ojNavigationList', 
+                              drillMode: 'none', 
+                              edge: 'top', 
+                              selection: $root.router.stateId(),
+                              data: $root.dataSource,
+                              optionChange: $root.optionChangeHandler,
+                              item: { template: 'app_nav_template' }
+                              }" aria-label="Choose only one navigation element">
+                    </div>
+                </div>
+                <div class="oj-sm-only-hide oj-md-only-hide oj-lg-4 oj-xl-4 oj-helper-text-align-right right">
+                    <div id='demoAppheaderMenuAndToolbarContainer' class="demo-appheader-menuandtoolbar-container">
+                        <div class="demo-appheader-toolbar-container">
+                                
+                                <div id='demoAppheaderMenuContainer'>
+                                    <ul id="demoAppheaderGlobalNavMenuId" data-bind="ojComponent: {component: 'ojMenu', select: menuItemSelect}" style="display:none">
+ 
+                                        <li data-bind="attr: {label: userName}"><a data-bind="text: userName, href: url"> <span class=""></span>  </a></li>
+                                       
+                                        <!-- ko foreach: globalNavItems -->
+                                        <li data-bind="attr: {id: label}"> <a data-bind="text: label, href: url"> <span class=""></span>  </a></li>
+                                        <!-- /ko -->
+                                    </ul>
+                                </div>
+                            <div class="demo-appheader-toolbar oj-toolbar-no-chrome" aria-controls="player" data-bind="ojComponent: {component:'ojToolbar'}">
+
+                                <!-- ko foreach: toolbarButtons -->
+                                <button class='oj-button-half-chrome demo-appheader-toolbar-button'
+                                        data-bind="
+                                     ojComponent: {component:'ojButton', label: label, display: 'icons', icons: {start: iconClass}} ">
+                                </button>
+                                <!-- /ko -->
+
+                                <!-- This is how to add a separator to the toolbar.  
+                                     Be sure to include the role and aria-orientation as shown to make it accessible.  -->
+                                <span role="separator" aria-orientation="vertical" class="oj-toolbar-separator demo-appheader-toolbar-separator"></span>
+
+                                <!-- This pulldown menu is used for wider screens -->
+                                <button id="menuButton"
+                                        class='oj-button-half-chrome demo-appheader-pulldown-normal'
+                                        data-bind="ojComponent: { component: 'ojButton', label: userName, menu: '#demoAppheaderGlobalNavMenuId'}">
+                                </button>
+
+
+                            </div>
+
+                        </div>
+                </div>  <!-- demoAppheaderMenuAndToolbarContainer -->   
+                </div>
+            </div>        
+        </div> <!-- oj-col -->
+    </div> <!-- oj-row -->
+</div> <!-- demo-appheader -->
+<script type="text/html" id="app_nav_template">
+    <li>
+        <a href="#">
+            <span data-bind="css: $data['iconClass']"></span>
+            <!-- ko text: $data['name'] --> <!--/ko-->
+        </a>
+    </li>    
+</script>

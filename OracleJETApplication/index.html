@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My App</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/libs/oj/v1.1.2/alta/oj-alta-min.css" 
+              rel="stylesheet" 
+              type="text/css"/>
+        <script data-main="js/main" 
+                src="js/libs/require/require.js">
+        </script>
+        <link href="css/libs/fa/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="css/override.css">
+    </head>
+    <body id="globalBody">
+        <div id="appDrawer" class="oj-offcanvas-start">
+            <div data-bind="ojModule: {
+                        name: 'header', 
+                        viewName: 'demoAppHeaderOffCanvasTemplate'}">
+
+            </div>
+        </div>
+        <header data-bind="ojModule: { name: 'header'}"></header>
+        <div class="oj-row">
+            <div class="oj-xl-9 oj-lg-9 oj-sm-12 oj-col" id="mainCol"> 
+                <div data-bind="ojModule: { name: router.stateId()}" class="routerDiv"></div>
+            </div>
+        </div>
+<div id="routing-container">
+                <div id='buttons-container' data-bind="foreach: router.states">
+                   Use the go function of the state as the handler for a click binding 
+                  <input type="button"
+                         data-bind="click: go, attr: {id: id},
+                         ojComponent: {component: 'ojButton', label: label}"/>
+                </div>
+             </div>
+    </body>
+</html>

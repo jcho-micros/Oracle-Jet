@@ -1,0 +1,41 @@
+<div id="accordionPage" data-bind="ojComponent: {component: 'ojAccordion'}">
+    <div id="c1">
+      <span> Header 1</span>
+      <p class="oj-p">Content 1.</p>
+    </div>
+    <div id="c3" data-bind="ojComponent: {component: 'ojCollapsible', expanded:true}">
+      <span>Header 3</span>
+      <div>
+        <label id="mainlabelid">Colors</label>
+        <div id="radiosetSetBasicDemoId" aria-labelledby="mainlabelid"
+           data-bind="ojComponent: {component: 'ojRadioset', 
+                     value: 'red'}" >
+          <span class="oj-choice-row">
+              <input id="blueopt" type="radio" name="rbb" value="blue">
+              <label for="blueopt">Blue</label>
+          </span>
+          <span class="oj-choice-row">
+              <input id="greenopt" type="radio" name="rbb" value="green">
+              <label for="greenopt">Green</label>
+          </span>
+          <span class="oj-choice-row">
+              <input id="redopt" type="radio" name="rbb" value="red">
+              <label for="redopt">Red</label>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div id="c4">
+      <span>Header 4</span>
+      <div id="nestedAccordion" data-bind="ojComponent: {component: 'ojAccordion'}" >
+        <div id="ic1">
+          <span>Inner Header 1</span>
+          <p class="oj-p">I'm collapsible inside an inner accordion.</p>
+        </div>
+        <div id="ic2" data-bind="ojComponent: {component: 'ojCollapsible'}">
+          <span>Inner Header 2</span>
+          <p class="oj-p">Another collapsible inside an inner accordion.</p>
+        </div>
+      </div>
+    </div>
+</div>

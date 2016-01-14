@@ -1,0 +1,131 @@
+<div class="oj-row">
+    <div class="oj-sm-only-hide oj-md-only-hide oj-lg-3 oj-xl-3 left">
+        <div id='sideNavigationContainer'>
+            <div class="row" id="login---row">
+                <div class="large-12 medium-12 columns" id="login---wrap">
+                    <div class="login---text">System Admin</div>
+                    <div class="login---text">Mike Rose Cafe</div>
+                    <div class="login---input">
+                        <input type="text" placeholder="My 1st Page">
+                    </div>
+                </div>
+                <div class="large-12 medium-12 panel" id="global---sidenav">
+                    <ul class="side-nav">
+                        <!-- ko foreach: dataSideSource -->
+                        <li data-bind="attr: {id: name}"> <a data-bind="text: name, href: url"> <span class=""></span>  </a></li>
+                        <!-- /ko -->
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="oj-sm-12 oj-md-12 oj-lg-9 oj-xl-9 right">
+
+        <!-- large template -->
+        <script type="text/html" id="med_lg_xl_template">
+
+              <div class="oj-row">
+                 <h2 data-bind="text: $root.iconBig"></h2>
+                  <h2 data-bind="text: $root.router.currentValue" />
+                  <div class="oj-col oj-med-12 oj-lg-12 oj-xl-12">
+                          <div id="tabs" data-bind="ojComponent:{component: 'ojTabs'}">
+                              <!-- tab bar -->
+                              <ul>
+                                  <!-- ko foreach: dataTabSource -->
+                                  <li data-bind="attr: {id: name}"><span data-bind="text:name"></span></li>
+                                  <!-- /ko -->
+                              </ul>
+                               <!-- tab contents -->
+                              <div id="tabs-1">
+                                 <div data-bind="ojModule: {
+                                      name: 'labor-tab1', 
+                                      viewName: 'labor-tab1'}">
+                                  </div>
+                              </div>
+                              <div id="tabs-2">
+                                <p>Tab 2 Content</p>
+                              </div>
+                              <div id="tabs-3">
+                                <p>Tab 3 Content</p>
+                              </div>
+                              <div id="tabs-4">
+                                <p>Tab 4 Content</p>
+                              </div>
+                              <div id="tabs-5">
+                                <p>Tab 5 Content</p>
+                              </div>
+                              <div id="tabs-6">
+                                <p>Tab 6 Content</p>
+                              </div>
+                          </div>
+                      </div> 
+                  </div>
+        </script>
+
+        <!-- small template -->
+        <script type="text/html" id="sm_template">
+          <div id="sm_only" class="oj-col">
+              <div class="oj-row">
+                  <div class="oj-col">
+                      <ul>
+                          <!-- ko foreach: dataTabSource -->
+                          <li data-bind="attr: {id: name}"><span data-bind="text:name"></span></li>
+                          <!-- /ko -->
+                      </ul>
+                  </div>
+
+              </div>
+              <div class="oj-row">
+                <div id="tabs-1">
+                  <div data-bind="ojModule: {
+                       name: 'labor-tab1', 
+                       viewName: 'labor-tab1'}">
+                   </div>
+               </div>
+               <div id="tabs-2">
+                  <div data-bind="ojModule: {
+                       name: 'labor-tab2', 
+                       viewName: 'labor-tab2'}">
+                   </div>
+               </div>
+               <div id="tabs-3">
+                 <p>Tab 3 Content</p>
+               </div>
+               <div id="tabs-4">
+                 <p>Tab 4 Content</p>
+               </div>
+               <div id="tabs-5">
+                 <p>Tab 5 Content</p>
+               </div>
+               <div id="tabs-6">
+                 <p>Tab 6 Content</p>
+               </div>  
+          </div>
+        </script>      
+        <div data-bind="template: {name: medium() ? 'med_lg_xl_template' : 'sm_template'}"></div>
+            
+    </div><!-- end of Right side -->
+        
+</div><!-- Main OJ Row End -->
+<script>
+  $(document).Ready(function(){
+    if (jQuery) {  
+     // jQuery is loaded  
+    alert("Yeah!");
+    } else {
+    // jQuery is not loaded
+    alert("Doesn't Work");
+        }
+    });
+</script>
+
+
+<script type="text/html" id="app_sidenav_template">
+    <li>
+        <a href="#">
+            <span data-bind="css: $data['iconClass']"></span>
+            <!-- ko text: $data['name'] --> <!--/ko-->
+        </a>
+    </li>    
+</script>
