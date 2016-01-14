@@ -26,10 +26,6 @@
         <script type="text/html" id="med_lg_xl_template">
 
               <div class="oj-row">
-
-                  
-                  
-             
                   <h2><span data-bind="css: iconClass"></span><span data-bind="text: sectionName"></span></h2>
                   <div class="oj-col oj-med-12 oj-lg-12 oj-xl-12">
                           <div id="tabs" data-bind="ojComponent:{component: 'ojTabs'}">
@@ -71,11 +67,22 @@
           <div id="sm_only" class="oj-col">
               <div class="oj-row">
                   <div class="oj-col">
-                      <ul>
-                          <!-- ko foreach: dataTabSource -->
-                          <li data-bind="attr: {id: name}"><span data-bind="text:name"></span></li>
-                          <!-- /ko -->
-                      </ul>
+        <div data-bind="ojComponent:{
+                    component: 'ojNavigationList', 
+                    drillMode: 'collapsible',
+                    item: {selectable: itemOnly},
+                    selection: selectedItem}"> 
+            <ul>
+                    <li id="overview"><a href="#">Overview</a>
+                          <ul>
+                              <!-- ko foreach: dataTabSource -->
+                                <li><a href="#"><span data-bind="text:name"></span></a></li>
+                               <!--/ko-->
+                          </ul>
+                      </li>
+            </ul>
+                    </div>
+
                   </div>
 
               </div>
