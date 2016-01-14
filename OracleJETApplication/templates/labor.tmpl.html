@@ -26,8 +26,11 @@
         <script type="text/html" id="med_lg_xl_template">
 
               <div class="oj-row">
-                 <h2 data-bind="text: $root.iconBig"></h2>
-                  <h2 data-bind="text: $root.router.currentValue" />
+
+                  
+                  
+             
+                  <h2><span data-bind="css: iconClass"></span><span data-bind="text: sectionName"></span></h2>
                   <div class="oj-col oj-med-12 oj-lg-12 oj-xl-12">
                           <div id="tabs" data-bind="ojComponent:{component: 'ojTabs'}">
                               <!-- tab bar -->
@@ -77,6 +80,7 @@
 
               </div>
               <div class="oj-row">
+                <h2><span data-bind="css: iconClass"></span><span data-bind="text: sectionName"></span></h2>  
                 <div id="tabs-1">
                   <div data-bind="ojModule: {
                        name: 'labor-tab1', 
