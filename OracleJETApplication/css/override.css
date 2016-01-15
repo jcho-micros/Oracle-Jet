@@ -49,7 +49,6 @@
     width: 100%;
 }
 .side-nav li{
-    font-size: 1.05em;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -196,14 +195,15 @@ li {
         border-bottom: 1px solid #cccccc;
         padding-bottom: 20px;
         padding-top: 25px;
+        padding-left: 20px;
         width: 100%;
     }
     .side-nav li a:not(.button) {
         color: #0572ce;
-        font-size: 1.25em;
+        font-size: 1.05em;
         padding: 10px 5px 10px 25px;
         margin: 0 0 0 0;
-        width: 200px;
+        width: 100%;
         display: block;
     }
     .sideLink{
