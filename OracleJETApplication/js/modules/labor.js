@@ -1,5 +1,11 @@
 define(['knockout', 'ojs/ojcore', 'ojs/ojknockout', 'ojs/ojrouter', 'ojs/ojnavigationlist', 'ojs/ojdatacollection-common', 'ojs/ojdialog',  'ojs/ojtabs', 'ojs/ojconveyorbelt','ojs/ojaccordion', 'ojs/ojcollapsible', 'ojs/ojradioset'
 ], function (ko, oj) {
+    
+$('span.labor').on('click', function(){
+          alert('labor clicked');
+
+       });
+    
         function laborContentViewModel() {
         var self = this;
         
@@ -101,6 +107,14 @@ define(['knockout', 'ojs/ojcore', 'ojs/ojknockout', 'ojs/ojrouter', 'ojs/ojnavig
         self.something = ko.observable("Hello World");
 
         }
+        alert("hello");
 
+    if (jQuery) {  
+     // jQuery is loaded  
+    alert("Yeah!");
+    } else {
+    // jQuery is not loaded
+    alert("Doesn't Work");
+        }
    return laborContentViewModel;
 });
