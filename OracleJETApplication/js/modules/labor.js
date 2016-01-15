@@ -97,7 +97,11 @@ $('span.labor').on('click', function(){
                     }
 
         ];
-
+        this.itemOnly = function(context) {
+            return context['leaf'];
+        };
+        this.selectedItem = ko.observable("overview");
+        
         self.dataSideSource = new oj.ArrayTableDataSource(appSideNavData, {idAttribute: 'id'});
         self.dataTabSource = new oj.ArrayTableDataSource(appTabData, {idAttribute: 'id'});
         self.something = ko.observable("Hello World");
