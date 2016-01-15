@@ -30,6 +30,9 @@
 .appheader-logo-oracle, .appheader-lite-logo-oracle {
     padding-top: 3px;
 }
+.demo-appheader{
+      background-color: #0c4a7e; 
+}
 .left{
     float: left;
 }
@@ -98,7 +101,7 @@ li {
     }
     html:not([dir="rtl"]) .oj-navigationlist-expanded:not(.oj-navigationlist-icon-only).oj-navigationlist-vertical .oj-navigationlist-item, html:not([dir="rtl"]) .oj-navigationlist-collapsible .oj-navigationlist-item {
         padding-right: 0;
-        width: 166px;
+        width: 100%;
     }
     .oj-navigationlist-vertical .oj-navigationlist-item-label {
         padding: 0px 0;
@@ -106,7 +109,7 @@ li {
 }
 /* IPAD  */
 
-@media only screen and (min-width: 35.61111em) and (max-width: 780px) and (-webkit-min-device-pixel-ratio: 1) {
+@media only screen and (min-width: 20.000em) and (max-width: 50.00em) and (-webkit-min-device-pixel-ratio: 1) {
     .demo-appheader-col{
         background-color: #0c4a7e;
     }
@@ -200,6 +203,11 @@ li {
         font-size: 1.25em;
         padding: 10px 5px 10px 25px;
         margin: 0 0 0 0;
+        width: 200px;
+        display: block;
+    }
+    .sideLink{
+        width:100%;
     }
     #global---sidenav {
         /* margin-top: 5.5rem; */
@@ -210,6 +218,6 @@ li {
         border-left: 3px solid #0572ce;
         color: #0572ce !important;
         padding-left: 22px !important;
-        width: 100%;
+        width: auto;
     }
 }
