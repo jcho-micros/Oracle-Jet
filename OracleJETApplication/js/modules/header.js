@@ -2,6 +2,10 @@ define(['knockout', 'ojs/ojcore', 'ojs/ojknockout', 'ojs/ojnavigationlist', 'ojs
 ], function (ko, oj) {
     function HeaderViewModel() {
         var self = this;
+        
+        var customQuery = oj.ResponsiveKnockoutUtils.createMediaQueryObservable('(max-width: 372px)');
+        
+        
         //Required for the Drop down
         self.menuItemSelect = function (event, ui) {
             switch (ui.item.attr("id")) {
@@ -11,7 +15,7 @@ define(['knockout', 'ojs/ojcore', 'ojs/ojknockout', 'ojs/ojnavigationlist', 'ojs
                 default:
             }
         };
-        self.offScreenButtonIconClass = "oj-fwk-icon oj-fwk-icon-hamburger";
+        self.offScreenButtonIconClass = "fa fa-bars fa-lg";
         self.offScreenButtonLabel = "MENU";
         self.appDrawer =
             {
@@ -20,45 +24,7 @@ define(['knockout', 'ojs/ojcore', 'ojs/ojknockout', 'ojs/ojnavigationlist', 'ojs
                 "selector": "#appDrawer",
                 "selection": "selectedItem"
             };
-//        var appNavData = [
-//            {
-//                name: 'Home',
-//                id: 'home',
-//                iconClass: 'fa fa-home oj-navigationlist-item-icon'
-//            
-//            },
-//            {
-//                name: 'Labor',
-//                id: 'labor',
-//                iconClass: 'fa fa-briefcase oj-navigationlist-item-icon'
-//            },
-//            {
-//                name: 'Inventory',
-//                id: 'inventory',
-//                iconClass: 'fa fa-dropbox oj-navigationlist-item-icon'
-//            },
-//            {
-//                name: 'iCare',
-//                id: 'icare',
-//                iconClass: 'fa fa-gift oj-navigationlist-item-icon'
-//            },
-//            {
-//                name: 'Report & Charts',
-//                id: 'reportcharts',
-//                iconClass: 'fa fa-bar-chart oj-navigationlist-item-icon'
-//            },
-//            {
-//                name: 'Enterprise Name',
-//                id: 'entrerprisename',
-//                iconClass: 'fa fa-building-o oj-navigationlist-item-icon'
-//            },
-//            {
-//                name: 'People',
-//                id: 'people',
-//                iconClass: 'fa fa-users oj-navigationlist-item-icon'
-//            }
-//            
-//        ];
+
         var appSideNavData = [
             {
                 name: 'System Admin\n\ Mike Rose Cafe',
