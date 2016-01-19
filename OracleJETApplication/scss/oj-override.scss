@@ -1408,7 +1408,11 @@ li {
     display: list-item;
     text-align: -webkit-match-parent;
 }
-
+.tbd{
+    height: 627px;
+    width: 350px;
+    background-color: #cccccc;
+}
 //Media Query 
 //Mobile
 @media only screen and (min-device-width: 320px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
@@ -1429,8 +1433,8 @@ li {
     #leftOffButton{
         width: 4.33333%;
     }
-    #ui-id-12 > li {
-        border-bottom: 1px solid #cccccc;
+    #ui-id-1 > li {
+        border-bottom: 1px solid #585959;
     }
     //Min Height
     div#mainCol {
@@ -1458,6 +1462,10 @@ li {
     //Icon padding Right to Text
     html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack-icon-label):not(.oj-navigationlist-icon-only) .oj-navigationlist-item-icon{
        margin-right:5px; 
+    }
+    //Right Side User Area
+    button#menuButton > span.oj-button-text{
+        color: $background1Color;
     }
     #ui-id-2 > li > .oj-navigationlist-item-content > span.oj-navigationlist-item-label{
         display:none;
@@ -1491,6 +1499,14 @@ li {
     //Router Div
     .routerDiv{
         min-height: 1000px;
+    }
+    //Right Side User Area
+    button#menuButton > span.oj-button-text{
+        color: $background1Color;
+    }
+    .oj-button.oj-hover{
+       background-color: $background7Color;
+       border: 0px solid transparent;
     }
     
     
