@@ -1320,6 +1320,7 @@ $headerUserIcon: $imageDir + 'vatar_24px.png';
 // 
 // Custom Override CSS
 //Header CSS
+@font-face{font-family:'Alta Icon Font';src:url("fonts/JetFW_iconfont.woff") format("woff")}
 .appheader-logo-oracle{
     background-image: url($headerBGLogo);
     background-repeat: no-repeat;
