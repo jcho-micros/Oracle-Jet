@@ -1,6 +1,8 @@
 define(['knockout', 'ojs/ojcore', 'ojs/ojknockout', 'ojs/ojrouter', 'ojs/ojnavigationlist', 'ojs/ojdatacollection-common', 'ojs/ojdialog',  'ojs/ojtabs', 'ojs/ojconveyorbelt','ojs/ojaccordion', 'ojs/ojcollapsible', 'ojs/ojradioset'
 ], function (ko, oj) {
-
+$(function () {       
+    $('a.alert.oj-tabs-title').on('click', '#btnParse', function () { alert('clicked');});
+});
         function homeContentViewModel() {
         var self = this;
         
@@ -15,6 +17,7 @@ define(['knockout', 'ojs/ojcore', 'ojs/ojknockout', 'ojs/ojrouter', 'ojs/ojnavig
             var d = data || {};
             this.id = ko.observable(d.Id || 0);
             this.title = ko.observable(d.title || '');
+            this.template = ko.observable(d.template || '');
         };
         
         var appSideNavData = [
@@ -66,36 +69,38 @@ define(['knockout', 'ojs/ojcore', 'ojs/ojknockout', 'ojs/ojrouter', 'ojs/ojnavig
 
         ];
         var appTabData = [
-                    {
-                        name: 'Overview',
-                        id: 'overview',
-                        url: '#'
-                    },
-                    {
-                        name: 'Generic Tab 1',
-                        id: 'inventory-tab-1',
-                        url: '#'
-                    },
-                    {
-                        name: 'Generic Tab 2',
-                        id: 'inventory-tab-2',
-                        url: '#'
-                    },
-                    {
-                        name: 'Generic Tab 3',
-                        id: 'inventory-tab-3',
-                        url: '#'
-                    },
-                    {
-                        name: 'Generic Tab 4',
-                        id: 'inventory-tab-4',
-                        url: '#'
-                    },
-                    {
-                        name: 'Generic Tab 5',
-                        id: 'inventory-tab-5',
-                        url: '#'
-                    }
+            {
+                name: 'Overview',
+                id: 'overview',
+                template: 'tab-overview',
+                url: '#'
+            },
+            {
+                name: 'Generic Tab 1',
+                id: 'inventory-tab-1',
+                template: 'tab-overview',
+                url: '#'
+            },
+            {
+                name: 'Generic Tab 2',
+                id: 'inventory-tab-2',
+                url: '#'
+            },
+            {
+                name: 'Generic Tab 3',
+                id: 'inventory-tab-3',
+                url: '#'
+            },
+            {
+                name: 'Generic Tab 4',
+                id: 'inventory-tab-4',
+                url: '#'
+            },
+            {
+                name: 'Generic Tab 5',
+                id: 'inventory-tab-5',
+                url: '#'
+            }
 
         ];
         this.itemOnly = function(context) {
@@ -107,7 +112,7 @@ define(['knockout', 'ojs/ojcore', 'ojs/ojknockout', 'ojs/ojrouter', 'ojs/ojnavig
         );
         this.selectedTab = ko.observable();
 
-//        this.selectedItem = ko.observable(selectable: itemOnly);
+        this.selectedItem = ko.observable();
 
         self.dataSideSource = new oj.ArrayTableDataSource(appSideNavData, {idAttribute: 'id'});
         self.dataTabSource = new oj.ArrayTableDataSource(appTabData, {idAttribute: 'id'});
@@ -116,7 +121,11 @@ define(['knockout', 'ojs/ojcore', 'ojs/ojknockout', 'ojs/ojrouter', 'ojs/ojnavig
         }
         //Please Custom JQuery Scripts Here
 
-        
-   return homeContentViewModel;
+
+   
+return homeContentViewModel;
+
+
+
 
 });
