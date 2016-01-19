@@ -1,2 +1,15 @@
 <h1>Inventory Content Area</h1>
+<div id="dialogWrapper">
+  <div style="display:none" id="modalDialog1" title="Modal Dialog" 
+       data-bind="ojComponent:{component: 'ojDialog', initialVisibility: 'hide'}">
+     <div class="oj-dialog-body">
+       The dialog window can be moved, resized and closed with the 'x' icon.
+       Arbitrary content can be added to the the oj-dialog-body and oj-dialog-footer sections.
+     </div>
+     <div class="oj-dialog-footer">
+        <button id="okButton" data-bind="ojComponent: {component: 'ojButton', label: 'OK'}"> </button>
+      </div>
+  </div>
+  <button id="buttonOpener" data-bind="ojComponent: {component: 'ojButton', label: 'Open Modal Dialog'}"></button>
 
+</div>
