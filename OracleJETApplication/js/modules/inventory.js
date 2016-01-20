@@ -3,11 +3,13 @@ define(['ojs/ojcore' ,'knockout'
             function inventoryContentViewModel() {
                 var self = this;
                 self.something = ko.observable("Hello World");
-                $("#buttonOpener").click(function() {
-                    $("#modalDialog1").ojDialog("open"); });
+                $(document).on('click', '#buttonOpener', function() {
+                    $("#modalDialog1").ojDialog("open"); 
+                });
 
-                $("#okButton").click(function() {
-                    $("#modalDialog1").ojDialog("close"); });
+                $(document).on('click', '#okButton', function() {
+                    $("#modalDialog1").ojDialog("close"); 
+                });
             }
             
    return inventoryContentViewModel;
