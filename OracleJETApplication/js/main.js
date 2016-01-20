@@ -140,7 +140,7 @@ require(['ojs/ojcore',
             };
         }
 
-        oj.Router.defaults['urlAdapter'] = new oj.Router.urlPathAdapter();
+        oj.Router.defaults['urlAdapter'] = new oj.Router.urlParamAdapter();
         oj.Router.sync().then(
             function () {
                 //bind your ViewModel for the content of the whole page body.
