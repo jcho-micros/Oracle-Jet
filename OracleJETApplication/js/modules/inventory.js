@@ -4,10 +4,10 @@ define(['ojs/ojcore' ,'knockout'
                 var self = this;
                 self.something = ko.observable("Hello World");
                 self.handleAttached = function() {
-                    $("#buttonOpener").click(function() {
+                    self.handleOpen = $("#buttonOpener").click(function() {
                         $("#modalDialog1").ojDialog("open"); });
 
-                    $("#okButton").click(function() {
+                    self.handleOKClose = $("#okButton").click(function() {
                         $("#modalDialog1").ojDialog("close"); });
                 };
             }
