@@ -158,6 +158,8 @@ $fontFamily: "Helvetica Neue", Helvetica, Arial, sans-serif;
 // $mediumFontSize:  1.143rem;  // 16px when root 14px
 // $largeFontSize:   1.286rem;  // 18px when root 14px
 // $largestFontSize: 1.429rem;  // 20px when root 14px
+$customsmallFontSize: 1.25em;
+$customsmallmobileFontSize: 1.25em;
 // 
 // 
 // text colors
@@ -369,7 +371,10 @@ $headerOffCanvas: $background8Color;
 // $headerBgImage:         null;
 $headerBGLogo: $imageDir + 'oracle-logo.png';
 $headerUserIcon: $imageDir + 'vatar_24px.png';
-// 
+//IPAD icon text
+$headerNavigationText: $customsmallFontSize;
+//Mobile icon size
+$headerNavigationMobileSize: $customsmallmobileFontSize; 
 // 
 // WINDOW
 // ---------------------------------------------------------------
@@ -1320,7 +1325,7 @@ $headerUserIcon: $imageDir + 'vatar_24px.png';
 // 
 // Custom Override CSS
 //Header CSS
-@font-face{font-family:'Alta Icon Font';src:url("fonts/JetFW_iconfont.woff") format("woff")}
+@font-face{font-family:'Alta Icon Font'; src:url("fonts/JetFW_iconfont.woff") format("woff");}
 .appheader-logo-oracle{
     background-image: url($headerBGLogo);
     background-repeat: no-repeat;
@@ -1426,10 +1431,23 @@ li {
     div#mainCol {
         min-height: 627px;
     }
-    
+    .oj-navigationlist-item-icon{
+        font-size: $headerNavigationMobileSize !important;
+    }
+        h1{
+        font-size: 24px;
+        font-weight: normal;
+    }
+    .labor{
+        padding-left:5px;
+    }
+    .header{
+        border-bottom: 1px solid #cccccc;
+    }
 }
 // MD IPad
 @media only screen and (min-width: 768px) and (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1) {
+
     #leftOffButton{
         width: 4.33333%;
     }
@@ -1439,6 +1457,9 @@ li {
     //Min Height
     div#mainCol {
         min-height: 800px;
+    }
+    .oj-navigationlist-item-label{
+        font-size: $headerNavigationText;
     }
 }
 // LG Desktop
