@@ -26,13 +26,15 @@
         <script type="text/html" id="med_lg_xl_template">
 
               <div class="oj-row">
-                  <h2><span data-bind="css: iconClass"></span><span data-bind="text: sectionName"></span></h2>
+                  <div class="oj-col oj-med-12 oj-lg-12 oj-xl-12">
+                  <h1><span data-bind="css: iconClass"></span><span data-bind="text: sectionName"></span></h1>
+                  </div>
                   <div class="oj-col oj-med-12 oj-lg-12 oj-xl-12">
                           <div id="tabs" data-bind="ojComponent:{component: 'ojTabs'}">
                               <!-- tab bar -->
                               <ul>
                                   <!-- ko foreach: dataTabSource -->
-                                  <li data-bind="attr: {id: name}"><a class="alert" data-bind='click: $parent.selectedTab'><span data-bind="text:name"></a></span></li>
+                                  <li data-bind="attr: {id: name}"><a data-bind='click: $parent.selectedTab'><span data-bind="text:name"></a></span></li>
                                   <!-- /ko -->
                               </ul>
                                <!-- tab contents -->
@@ -84,7 +86,10 @@
 
               </div>
               <div class="oj-row">
-                <h2><span data-bind="css: iconClass"></span><span class="labor" data-bind="text: sectionName"></span></h2>  
+
+                    <div class="oj-sm-12 header">
+                          <h1><span data-bind="css: iconClass"></span><span class="labor" data-bind="text: sectionName"></span></h1>
+                    </div>
                 <!-- tab contents -->
                     <div id="tabs-1">
                            <div data-bind="template: { name: 'tab-overview'}"></div>
@@ -114,7 +119,7 @@
 
 <script type="text/html" id="generic_template">
 <div data-bind="with: selectedTab">
-    <h1 data-bind="text: name"></h1>
+    <h1 data-bind="text: name || 'Overview' "></h1>
     <div class="tbd">
     Content TBD...
     </div>
