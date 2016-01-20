@@ -1,5 +1,24 @@
 <h1>Icare Content Changed Area</h1>
 
-<h2 data-bind="text: $root.router.currentValue" />
+<h2 data-bind="text: $root.router.currentValue"></h2>
 
 <div data-bind="text: something"></div>
+
+<div id="tabs-container">
+  <div><a href="#" data-bind="click: hideSections, text:currentSection"></a></div>
+  <div id="tabs" data-bind="ojComponent:{component: 'ojTabs',  orientation: 'vertical'}">
+    <!-- tab bar -->
+    <ul class="vertical-tabs" data-bind="visible: sectionsState">
+        <!-- ko foreach: dataTabSource -->
+        <li data-bind="attr: {id: id}, click: $parent.selectedSection"><span data-bind="text:name"></span></li>
+        <!-- /ko -->
+    </ul>
+
+    <!-- tab contents -->
+    <!-- ko foreach: dataTabSource -->
+    <div data-bind="attr: {id: 'tab-' + id}">
+      <p data-bind="text:name"></p>
+    </div>
+    <!-- /ko-->
+  </div>
+</div>
