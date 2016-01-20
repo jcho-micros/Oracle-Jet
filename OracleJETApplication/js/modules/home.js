@@ -110,7 +110,7 @@ $(function () {
         this.appTabData = ko.observableArray(
             ko.utils.arrayMap(appTabData, function(c) {return new Tabs(c);})
         );
-        this.selectedTab = ko.observable();
+        this.selectedTab = ko.observable("Overview");
 
         this.selectedItem = ko.observable();
 
