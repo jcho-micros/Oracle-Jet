@@ -174,12 +174,15 @@ $customsmallmobileFontSize: 1.25em;
 // $textColorDisabled:     #9e9e9e; 
 $logoText: #ffffff;
 $iconColor: #ffffff;
+$tabText: #ffffff;
+$selectedtabText: #333333;
 // 
 // link colors
 // ---------------------------------
-// $linkTextColor:         #045fab;   
+//$linkTextColor:         #045fab;   
 // $linkTextColorVisited:  $linkTextColor; 
 // $linkTextColorDisabled: $textColorDisabled;
+$customLinkTextColor: #ffffff;
 // 
 // 
 // 
@@ -320,7 +323,7 @@ $iconColor: #ffffff;
 // 
 // panel defaults:
 // $panelBorderColor: $border1Color;
-// $panelBgColor:     $background1Color;
+$panelBgColor:     $background7Color;
 // $panelPadding:     .8571rem; // 12px when root is 14px
 // 
 // 
@@ -660,12 +663,15 @@ $headerNavigationMobileSize: $customsmallmobileFontSize;
 // 
 // tabs content area
 // ---------------------------------
-// $tabsPanelBgColor:      $panelBgColor;
+$tabsPanelBgColor:      $panelBgColor;
 // $tabsPanelBorderColor:  $panelBorderColor;
 // 
 // individual tabs
 // ---------------------------------
-// $tabsNavTextColor:                 $linkTextColor;
+$tabsNavTextColor:                 $linkTextColor;
+$customtabsNavTextColor:    $customLinkTextColor;
+$customSelectedtabsNavColor: $selectedtabText;
+
 // $tabsNavBorderRadius:              0;
 // 
 // selected
@@ -1414,7 +1420,7 @@ li {
     text-align: -webkit-match-parent;
 }
 .tbd{
-    height: 627px;
+    height: 427px;
     width: 350px;
     background-color: #cccccc;
 }
@@ -1458,8 +1464,35 @@ li {
     div#mainCol {
         min-height: 800px;
     }
+    //Header
+    .sectionheader{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    button#menuButton2 {
+        width: 100%;
+    }
     .oj-navigationlist-item-label{
         font-size: $headerNavigationText;
+    }
+    //Tabs
+    .oj-tabs-tab{
+        background-color: $tabsPanelBgColor;
+
+    }
+    a.oj-tabs-title{
+        color: $customtabsNavTextColor;
+    }
+    .oj-tabs-tab.oj-selected .oj-tabs-title{
+        color: $customSelectedtabsNavColor;
+    }
+    //Section Block
+    .sectionName{
+        padding-left:5px;
+    }
+    .oj-tabs-panel{
+        border: 0px solid #cccccc;
+        border-top: 1px solid #cccccc;
     }
 }
 // LG Desktop
@@ -1484,6 +1517,29 @@ li {
     html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack-icon-label):not(.oj-navigationlist-icon-only) .oj-navigationlist-item-icon{
        margin-right:5px; 
     }
+    .navigationlist-item-icon{
+        font-size: $mediumFontSize;
+    }
+    .oj-tabs-horizontal > .oj-tabs-nav-root .oj-tabs-tab{
+        border-width: 3px 0 0 0 ;
+    }
+    //Header
+    .logoWrap {
+        margin-top: 5px;
+    }
+    .sectionheader{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .grid-display.appheader-col {
+        height: 50px;
+    }
+    button#menuButton2 {
+        width: 100%;
+    }
+    div#ojAppNav2 {
+        margin-top: 17px;
+    }
     //Right Side User Area
     button#menuButton > span.oj-button-text{
         color: $background1Color;
@@ -1491,57 +1547,26 @@ li {
     #ui-id-2 > li > .oj-navigationlist-item-content > span.oj-navigationlist-item-label{
         display:none;
     }
-}
-// XL Desktop
-@media only screen and (min-width: 1280px) and (max-width: 1900px) and (-webkit-min-device-pixel-ratio: 1) {
-    //Icon padding Right to Text
-    html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack-icon-label):not(.oj-navigationlist-icon-only) .oj-navigationlist-item-icon{
-       margin-right:0; 
-    }
-    ul#ui-id-1{
-       background-color: #333333; 
-    }
-    .demo-appheader-appname {
-        color: #ffffff;
-        margin-left: 120px;
-    }
-    .demo-appheader-appname-block {
-        display: none;
-        margin-left: 4px;
-        vertical-align: 2px;
-    }
-    #mainCol{
-        min-height: 1000px;
-    }
-
-    #ui-id-2 > li > .oj-navigationlist-item-content > span.oj-navigationlist-item-label{
-        display:none;
-    }
-    //Router Div
-    .routerDiv{
-        min-height: 1000px;
-    }
-    //Right Side User Area
-    button#menuButton > span.oj-button-text{
-        color: $background1Color;
-    }
-    .oj-button.oj-hover{
-       background-color: $background7Color;
-       border: 0px solid transparent;
-    }
-    
-    
     // Side Navigation
+    #sideNavigationContainer{
+        height:100%;
+    }
     div#login---row {
         border-right: 1px solid #cccccc;
         height: 100%;
+        position: absolute;
     }
     div#login---wrap {
-        border-bottom: 1px solid #cccccc;
         padding-bottom: 20px;
         padding-top: 25px;
         padding-left: 20px;
-        width: 92%;
+        width: 90%;
+    }
+    .login---text{
+        width: 100%;
+    }
+    .login---input > input[type="text"]{
+        width: 85%;
     }
     .side-nav li a:not(.button) {
         color: #0572ce;
@@ -1556,6 +1581,7 @@ li {
     }
     #global---sidenav {
         padding-right: 0;
+        border-top: 1px solid #cccccc;
     }
     #global---sidenav a:hover, #global---sidenav a:focus{
         background-color: #e4f0fa !important;
@@ -1563,5 +1589,170 @@ li {
         color: #0572ce !important;
         padding-left: 22px !important;
         width: auto;
+    }
+    //Tabs
+    .oj-tabs-tab{
+        background-color: $tabsPanelBgColor;
+
+    }
+    a.oj-tabs-title{
+        color: $customtabsNavTextColor;
+    }
+    .oj-tabs-tab.oj-selected .oj-tabs-title{
+        color: $customSelectedtabsNavColor;
+    }
+    //Section Block
+    .sectionName{
+        padding-left:5px;
+    }
+    .oj-tabs-panel{
+        border: 0px solid #cccccc;
+        border-top: 1px solid #cccccc;
+    }
+}
+// XL Desktop
+@media only screen and (min-width: 1280px) and (max-width: 1900px) and (-webkit-min-device-pixel-ratio: 1) {
+    //Icon padding Right to Text
+    html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack-icon-label):not(.oj-navigationlist-icon-only) .oj-navigationlist-item-icon{
+       margin-right:0; 
+       font-size:18px;
+    }
+    ul#ui-id-1{
+       background-color: #333333; 
+    }
+    .demo-appheader-appname {
+        color: #ffffff;
+        margin-left: 120px;
+    }
+    .demo-appheader-appname-block {
+        display: none;
+        margin-left: 4px;
+        vertical-align: 2px;
+    }
+    //Main Div height
+    #mainCol{
+        min-height: 1000px;
+    }
+    // Hides icons in sub navigation
+    #ui-id-2 > li > .oj-navigationlist-item-content > span.oj-navigationlist-item-label{
+        display:none;
+    }
+    .sectionheader{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    //Router Div
+    .routerDiv{
+        min-height: 1000px;
+    }
+    //Header
+    .logoWrap {
+        margin-top: 5px;
+    }
+    button#menuButton2 {
+        width: 100%;
+    }
+    .grid-display.appheader-col {
+        height: 50px;
+    }
+    div#ojAppNav2 {
+        margin-top: 17px;
+    }
+    //Right Side User Area
+    button#menuButton > span.oj-button-text{
+        color: $background1Color;
+    }
+    .oj-button.oj-hover{
+       background-color: $background7Color;
+       border: 0px solid transparent;
+    }
+
+    // Side Navigation
+    #sideNavigationContainer{
+        height:100%;
+    }
+    div#login---row {
+        border-right: 1px solid #cccccc;
+        height: 100%;
+        width: 16%;
+        position: absolute;
+    }
+    div#login---wrap {
+        padding-bottom: 20px;
+        padding-top: 25px;
+        padding-left: 20px;
+        width: 90%;
+    }
+    .login---input > input[type="text"]{
+        width: 85%;
+    }
+    .side-nav li a:not(.button) {
+        color: #0572ce;
+        font-size: 1.05em;
+        padding: 10px 5px 10px 25px;
+        margin: 0 0 0 0;
+        width: 100%;
+        display: block;
+    }
+    .sideLink{
+        width:100%;
+    }
+    #global---sidenav {
+        padding-right: 0;
+        border-top: 1px solid #cccccc;
+    }
+    #global---sidenav a:hover, #global---sidenav a:focus{
+        background-color: #e4f0fa !important;
+        border-left: 3px solid #0572ce;
+        color: #0572ce !important;
+        padding-left: 22px !important;
+        width: auto;
+    }
+    //Tabs
+    .oj-tabs-tab{
+        background-color: $tabsPanelBgColor;
+
+    }
+    a.oj-tabs-title{
+        color: $customtabsNavTextColor;
+    }
+    .oj-tabs-tab.oj-selected .oj-tabs-title{
+        color: $customSelectedtabsNavColor;
+    }
+    //Section Block
+    .sectionName{
+        padding-left:5px;
+    }
+    .oj-tabs-panel{
+        border: 0px solid #cccccc;
+        border-top: 1px solid #cccccc;
+    }
+    //Section People
+    .addButton {
+        margin-left: 121px;
+        margin-top: 10px;
+        position: absolute;
+    }
+    .searchForm{
+        border-bottom:1px solid #cccccc;
+        padding-bottom:25px;
+        padding-top: 10px;
+    }
+    .divider{
+        border-left: 1px solid #cccccc;
+        display: block;
+        height: 100px;
+    }
+    .checkboxWrapper{
+        padding: 10px;
+    }
+    .resultWrapper{
+        width: 100%;
+        height: 300px;
+        background-color:#cccccc;
+    }
+    .bottomRow{
+        bottom-border:1px solid #cccccc;
+        height: 5px;
     }
 }
