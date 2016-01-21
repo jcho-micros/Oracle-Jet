@@ -5,7 +5,7 @@
 <div data-bind="text: something"></div>-->
 
 <div id="tabs-container">
-  <div><a href="#" data-bind="click: hideSections, text:currentSection"></a></div>
+  <div id="selected-title" data-bind="click: hideSections"><a href="#" data-bind="text:currentSection"></a></div>
   <div id="tabs" data-bind="ojComponent:{component: 'ojTabs',  orientation: 'vertical'}">
     <!-- tab bar -->
     <ul class="vertical-tabs" data-bind="visible: sectionsState">
@@ -17,7 +17,10 @@
     <!-- tab contents -->
     <!-- ko foreach: dataTabSource -->
     <div data-bind="attr: {id: 'tab-' + id}">
-      <p data-bind="text:name"></p>
+           <div data-bind="ojModule: {
+                name: 'labor/overview', 
+                viewName: 'labor/overview'}">
+          </div>
     </div>
     <!-- /ko-->
   </div>
