@@ -1,25 +1,4 @@
-<div class="oj-row" id="test">
-    <div class="oj-sm-only-hide oj-md-only-hide oj-lg-2 oj-xl-2 left">
-        <div id='sideNavigationContainer'>
-            <div class="row" id="login---row">
-                <div class="large-12 medium-12 columns" id="login---wrap">
-                    <div class="login---text">System Admin</div>
-                    <div class="login---text">Mike Rose Cafe</div>
-                    <div class="login---input">
-                        <input type="text" placeholder="My 1st Page">
-                    </div>
-                </div>
-                <div class="large-12 medium-12 panel" id="global---sidenav">
-                    <ul class="side-nav">
-                        <!-- ko foreach: dataSideSource -->
-                        <li data-bind="attr: {id: name}"> <a data-bind="text: name, href: url"> <span class="sideLink"></span>  </a></li>
-                        <!-- /ko -->
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-    </div>
+<div class="oj-row">
     <div class="oj-sm-12 oj-md-12 oj-lg-10 oj-xl-10 right">
 
         <!-- large template -->
@@ -34,7 +13,7 @@
                               <!-- tab bar -->
                               <ul>
                                   <!-- ko foreach: dataTabSource -->
-                                  <li data-bind="attr: {id: name}"><a data-bind='click: $parent.selectedTab'><span data-bind="text:name"></a></span></li>
+                                  <li data-bind="attr: {id: name}"><a data-bind='click: $parent.selectedTab'><span data-bind="text:name"></span></a></li>
                                   <!-- /ko -->
                               </ul>
                                <!-- tab contents -->

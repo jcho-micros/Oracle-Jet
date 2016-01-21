@@ -20,54 +20,54 @@ $(function () {
             this.template = ko.observable(d.template || '');
         };
         
-        var appSideNavData = [
-            {
-                name: 'Charts',
-                id: 'charts',
-                url: '#'
-            },
-            {
-                name: 'Reports',
-                id: 'reports',
-                url: '#'
-            },
-            {
-                name: 'Links',
-                id: 'links',
-                url: '#'
-            },
-            {
-                name: 'iCare',
-                id: 'icare',
-                url: '#'
-            },
-            {
-                name: 'MyInventory',
-                id: 'myinventory',
-                url: '#'
-            },
-            {
-                name: 'Forecasting',
-                id: 'forecasting',
-                url: '#'
-            },
-            {
-                name: 'Dashboards',
-                id: 'dashboards',
-                url: '#'
-            },
-            {
-                name: 'myLabor',
-                id: 'mylabor',
-                url: '#'
-            },
-            {
-                name: 'Admin',
-                id: 'admin',
-                url: '#'
-            }
-
-        ];
+//        var appSideNavData = [
+//            {
+//                name: 'Charts',
+//                id: 'charts',
+//                url: '#'
+//            },
+//            {
+//                name: 'Reports',
+//                id: 'reports',
+//                url: '#'
+//            },
+//            {
+//                name: 'Links',
+//                id: 'links',
+//                url: '#'
+//            },
+//            {
+//                name: 'iCare',
+//                id: 'icare',
+//                url: '#'
+//            },
+//            {
+//                name: 'MyInventory',
+//                id: 'myinventory',
+//                url: '#'
+//            },
+//            {
+//                name: 'Forecasting',
+//                id: 'forecasting',
+//                url: '#'
+//            },
+//            {
+//                name: 'Dashboards',
+//                id: 'dashboards',
+//                url: '#'
+//            },
+//            {
+//                name: 'myLabor',
+//                id: 'mylabor',
+//                url: '#'
+//            },
+//            {
+//                name: 'Admin',
+//                id: 'admin',
+//                url: '#'
+//            }
+//
+//        ];
         var appTabData = [
             {
                 name: 'Overview',
@@ -114,7 +114,7 @@ $(function () {
 
         this.selectedItem = ko.observable();
 
-        self.dataSideSource = new oj.ArrayTableDataSource(appSideNavData, {idAttribute: 'id'});
+//        self.dataSideSource = new oj.ArrayTableDataSource(appSideNavData, {idAttribute: 'id'});
         self.dataTabSource = new oj.ArrayTableDataSource(appTabData, {idAttribute: 'id'});
         self.something = ko.observable("Hello World");
 

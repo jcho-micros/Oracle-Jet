@@ -1434,6 +1434,12 @@ li {
     background-color: #cccccc;
 }
 //General Styles
+body, html{
+    height:100%;
+}
+#mainCol{
+    padding:0;
+}
 .oj-tabs.oj-tabs-vertical{
     display:block !important;
 }
@@ -1461,8 +1467,8 @@ li {
 #selected-title{
     background-color: $headerNavColorSelected;
     height: 20px;
-    padding: 10px;
-    width: 100%;
+    padding: 2%;
+    width: 96%;
     a{
         color:$headerLinkTextColor;
         text-decoration:none;

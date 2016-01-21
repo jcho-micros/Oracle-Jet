@@ -1,23 +1,28 @@
 <!-- large template -->
 <script type="text/html" id="med_lg_xl_template">
-     <div id="tabs" data-bind="ojComponent:{component: 'ojTabs'}">
-            <!-- tab bar -->
-            <ul>
-                <!-- ko foreach: dataTabSource -->
-                <li data-bind="attr: {id: id}, click: $parent.selectedSection"><span data-bind="text:name"></span></li>
-                <!-- /ko -->
-            </ul>
+    <div class="oj-col oj-med-12 oj-lg-12 oj-xl-12 sectionheader">
 
-            <!-- tab contents -->
+        <span data-bind="css: iconClass"></span><h1 data-bind="text: $root.router.currentValue"></h1>
+<!--      <h1><span data-bind="css: iconClass"></span><span data-bind="text: sectionName" class="sectionName"></span></h1>-->
+    </div>
+    <div id="tabs" data-bind="ojComponent:{component: 'ojTabs'}">
+        <!-- tab bar -->
+        <ul>
             <!-- ko foreach: dataTabSource -->
-            <div data-bind="attr: {id: 'tab-' + id}">
-                <div data-bind="ojModule: {
-                        name: 'icare/' + fileName,
+            <li data-bind="attr: {id: id}, click: $parent.selectedSection"><span data-bind="text:name"></span></li>
+            <!-- /ko -->
+        </ul>
+
+        <!-- tab contents -->
+        <!-- ko foreach: dataTabSource -->
+        <div data-bind="attr: {id: 'tab-' + id}">
+            <div data-bind="ojModule: {
+                        name: 'icare/' + fileNameJs,
                         viewName: 'icare/' + fileName + '-large'}">
-                </div>
             </div>
-            <!-- /ko-->
         </div>
+        <!-- /ko-->
+    </div>
 </script>
 <!-- small template -->
 <script type="text/html" id="sm_template">
@@ -37,7 +42,7 @@
             <!-- ko foreach: dataTabSource -->
             <div data-bind="attr: {id: 'tab-' + id}">
                 <div data-bind="ojModule: {
-                        name: 'icare/' + fileName,
+                        name: 'icare/' + fileNameJs,
                         viewName: 'icare/' + fileName + '-small'}">
                 </div>
             </div>
