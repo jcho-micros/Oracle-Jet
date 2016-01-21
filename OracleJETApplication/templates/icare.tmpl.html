@@ -17,10 +17,10 @@
     <!-- tab contents -->
     <!-- ko foreach: dataTabSource -->
     <div data-bind="attr: {id: 'tab-' + id}">
-           <div data-bind="ojModule: {
-                name: 'labor/overview', 
-                viewName: 'labor/overview'}">
-          </div>
+        <div data-bind="ojModule: {
+            name: 'icare/' + id, 
+            viewName: 'icare/' + id}">
+        </div>
     </div>
     <!-- /ko-->
   </div>
