@@ -1,17 +1,12 @@
 define(['knockout', 'ojs/ojcore', 'ojs/ojknockout', 'ojs/ojrouter', 'ojs/ojnavigationlist', 'ojs/ojdatacollection-common', 'ojs/ojdialog',  'ojs/ojtabs', 'ojs/ojconveyorbelt','ojs/ojaccordion', 'ojs/ojcollapsible', 'ojs/ojradioset'
 ], function (ko, oj) {
-    
-$('span.labor').on('click', function(){
-          alert('labor clicked');
 
-       });
-    
         function laborContentViewModel() {
         var self = this;
         
-        //KNOCK detect for lgQuery to return true or false
-        var mdQuery = oj.ResponsiveUtils.getFrameworkQuery(oj.ResponsiveUtils.FRAMEWORK_QUERY_KEY.MD_UP);
-        self.medium = oj.ResponsiveKnockoutUtils.createMediaQueryObservable(mdQuery);
+//        //KNOCK detect for lgQuery to return true or false
+//        var mdQuery = oj.ResponsiveUtils.getFrameworkQuery(oj.ResponsiveUtils.FRAMEWORK_QUERY_KEY.MD_UP);
+//        self.medium = oj.ResponsiveKnockoutUtils.createMediaQueryObservable(mdQuery);
         
         this.sectionName = ko.observable('Labor');
         this.iconClass = ko.observable('fa fa-briefcase');
@@ -106,15 +101,6 @@ $('span.labor').on('click', function(){
         self.dataTabSource = new oj.ArrayTableDataSource(appTabData, {idAttribute: 'id'});
         self.something = ko.observable("Hello World");
 
-        }
-        alert("hello");
-
-    if (jQuery) {  
-     // jQuery is loaded  
-    alert("Yeah!");
-    } else {
-    // jQuery is not loaded
-    alert("Doesn't Work");
         }
    return laborContentViewModel;
 });

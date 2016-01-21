@@ -1,323 +1,13 @@
+/********************************************************************************************
+* This is the "no tag selectors" version of the theme file.
+* In the regular version of the JET CSS file we directly style certain tags like
+* <p> <a> <h1>, etc. However for developers trying to mix JET with other
+* technologies styling these tags directly could cause issues on other parts of the page.
+* We therefore set $allowTagSelectors: false; in this version of the file.
+*
+* See the "compatibility" section of the theming documentation for more information
+*********************************************************************************************/
 /*$background4Color: #f0f0f0 !default; */
-/*! normalize.css v2.1.2 | MIT License | git.io/normalize */
-/* ==========================================================================
-   HTML5 display definitions
-   ========================================================================== */
-/**
- * Correct `block` display not defined in IE 8/9.
- */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section,
-summary {
-  display: block; }
-
-/**
- * Correct `inline-block` display not defined in IE 8/9.
- */
-audio,
-canvas,
-video {
-  display: inline-block; }
-
-/**
- * Prevent modern browsers from displaying `audio` without controls.
- * Remove excess height in iOS 5 devices.
- */
-audio:not([controls]) {
-  display: none;
-  height: 0; }
-
-/**
- * Address styling not present in IE 8/9.
- */
-[hidden] {
-  display: none; }
-
-/* ==========================================================================
-   Base
-   ========================================================================== */
-/**
- * 1. Set default font family to sans-serif.
- * 2. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
- */
-html {
-  font-family: sans-serif;
-  /* 1 */
-  -ms-text-size-adjust: 100%;
-  /* 2 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */ }
-
-/**
- * Remove default margin.
- */
-body {
-  margin: 0; }
-
-/* ==========================================================================
-   Links
-   ========================================================================== */
-/* ==========================================================================
-   Typography
-   ========================================================================== */
-/**
- * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari 5, and Chrome.
- */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0; }
-
-/**
- * Address styling not present in IE 8/9, Safari 5, and Chrome.
- */
-abbr[title] {
-  border-bottom: 1px dotted; }
-
-/**
- * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
- */
-b,
-strong {
-  font-weight: bold; }
-
-/**
- * Address styling not present in Safari 5 and Chrome.
- */
-dfn {
-  font-style: italic; }
-
-/**
- * Address differences between Firefox and other browsers.
- */
-hr {
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0; }
-
-/**
- * Address styling not present in IE 8/9.
- */
-mark {
-  background: #ff0;
-  color: #000; }
-
-/**
- * Correct font family set oddly in Safari 5 and Chrome.
- */
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, serif;
-  font-size: 1em; }
-
-/**
- * Improve readability of pre-formatted text in all browsers.
- */
-pre {
-  white-space: pre-wrap; }
-
-/**
- * Set consistent quote types.
- */
-q {
-  quotes: "\201C" "\201D" "\2018" "\2019"; }
-
-/**
- * Address inconsistent and variable font size in all browsers.
- */
-small {
-  font-size: 80%; }
-
-/**
- * Prevent `sub` and `sup` affecting `line-height` in all browsers.
- */
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline; }
-
-sup {
-  top: -0.5em; }
-
-sub {
-  bottom: -0.25em; }
-
-/* ==========================================================================
-   Embedded content
-   ========================================================================== */
-/**
- * Remove border when inside `a` element in IE 8/9.
- */
-img {
-  border: 0; }
-
-/**
- * Correct overflow displayed oddly in IE 9.
- */
-svg:not(:root) {
-  overflow: hidden; }
-
-/* ==========================================================================
-   Figures
-   ========================================================================== */
-/**
- * Address margin not present in IE 8/9 and Safari 5.
- */
-figure {
-  margin: 0; }
-
-/* ==========================================================================
-   Forms
-   ========================================================================== */
-/**
- * Define consistent border, margin, and padding.
- */
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
-
-/**
- * 1. Correct `color` not being inherited in IE 8/9.
- * 2. Remove padding so people aren't caught out if they zero out fieldsets.
- */
-legend {
-  border: 0;
-  /* 1 */
-  padding: 0;
-  /* 2 */ }
-
-/**
- * 1. Correct font family not being inherited in all browsers.
- * 2. Correct font size not being inherited in all browsers.
- * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
- */
-button,
-input,
-select,
-textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 2 */
-  margin: 0;
-  /* 3 */ }
-
-/**
- * Address Firefox 4+ setting `line-height` on `input` using `!important` in
- * the UA stylesheet.
- */
-button,
-input {
-  line-height: normal; }
-
-/**
- * Address inconsistent `text-transform` inheritance for `button` and `select`.
- * All other form control elements do not inherit `text-transform` values.
- * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
- * Correct `select` style inheritance in Firefox 4+ and Opera.
- */
-button,
-select {
-  text-transform: none; }
-
-/**
- * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
- *    and `video` controls.
- * 2. Correct inability to style clickable `input` types in iOS.
- * 3. Improve usability and consistency of cursor style between image-type
- *    `input` and others.
- */
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button;
-  /* 2 */
-  cursor: pointer;
-  /* 3 */ }
-
-/**
- * Re-set default cursor for disabled elements.
- */
-button[disabled],
-html input[disabled] {
-  cursor: default; }
-
-/**
- * 1. Address box sizing set to `content-box` in IE 8/9.
- * 2. Remove excess padding in IE 8/9.
- */
-input[type="checkbox"],
-input[type="radio"] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */ }
-
-/**
- * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
- *    (include `-moz` to future-proof).
- */
-input[type="search"] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  /* 2 */
-  box-sizing: content-box; }
-
-/**
- * Remove inner padding and search cancel button in Safari 5 and Chrome
- * on OS X.
- */
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none; }
-
-/**
- * Remove inner padding and border in Firefox 4+.
- */
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0; }
-
-/**
- * 1. Remove default vertical scrollbar in IE 8/9.
- * 2. Improve readability and alignment in all browsers.
- */
-textarea {
-  overflow: auto;
-  /* 1 */
-  vertical-align: top;
-  /* 2 */ }
-
-/* ==========================================================================
-   Tables
-   ========================================================================== */
-/**
- * Remove most spacing between table cells.
- */
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
 /* helpers
 ----------------------------------*/
 [data-bind*="ojComponent"]:not(.oj-component-initnode) {
@@ -387,13 +77,16 @@ table {
 
 /* html */
 /* --------------------------------------------------------------- */
-html {
+.oj-html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 0.875em; }
 
 /* body */
 /* --------------------------------------------------------------- */
-body {
+.oj-body {
+  margin: 0;
   background-image: none;
   background-repeat: repeat;
   background-position: top left;
@@ -402,27 +95,27 @@ body {
 
 /* links */
 /* --------------------------------------------------------------- */
-a {
+.oj-link {
   color: #045fab;
   line-height: inherit;
   text-decoration: none; }
 
-a:visited {
+.oj-link:visited {
   color: #045fab; }
 
-a:hover, a:focus {
+.oj-link:hover, .oj-link:focus {
   text-decoration: underline; }
 
-a:active {
+.oj-link:active {
   font-weight: bold; }
 
-a.oj-disabled {
+.oj-link.oj-disabled {
   color: #9e9e9e;
   cursor: default; }
 
 /* header */
 /* --------------------------------------------------------------- */
-h1, h2, h3, h4 {
+.oj-header {
   color: #252525;
   font-family: inherit;
   font-style: normal;
@@ -430,16 +123,16 @@ h1, h2, h3, h4 {
   margin: 8px 0;
   padding: 0 0 2px; }
 
-h1 {
+h1.oj-header {
   font-size: 1.429rem; }
 
-h2 {
+h2.oj-header {
   font-size: 1.286rem; }
 
-h3 {
+h3.oj-header {
   font-size: 1.143rem; }
 
-h4 {
+h4.oj-header {
   font-size: 1rem; }
 
 .oj-header-border {
@@ -449,28 +142,28 @@ h4 {
 
 /* hr */
 /* --------------------------------------------------------------- */
-hr {
+.oj-hr {
   border: solid #d6dfe6;
   border-width: 1px 0 0;
   margin: 7px 0; }
 
 /* p */
 /* --------------------------------------------------------------- */
-p {
+.oj-p {
   margin: 0 0 12px 0; }
 
 /* lists */
 /* --------------------------------------------------------------- */
-ul, ol {
+.oj-ul, .oj-ol {
   margin: 12px 0;
   padding-left: 40px; }
 
-ul ul, ul ol, ol ul, ol ol {
+.oj-ul .oj-ul, .oj-ul .oj-ol, .oj-ol .oj-ul, .oj-ol .oj-ol {
   margin-bottom: 0;
   margin-top: 0;
   padding-left: 30px; }
 
-ul li, ol li {
+.oj-ul li, .oj-ol li {
   line-height: 1.25; }
 
 @font-face {
@@ -478,12 +171,12 @@ ul li, ol li {
   src: url("fonts/JetFW_iconfont.woff") format("woff"); }
 /*--------------------------------------------------------------------
 /  Generic style that can be used for widget images
-/  You can use the mixin ("oj-icon-content") to generate 
+/  You can use the mixin ("oj-icon-content") to generate
 /  a class with additions/overrides
-/ 
-/  For example let's say you used the mixin ("oj-icon-content") to 
+/
+/  For example let's say you used the mixin ("oj-icon-content") to
 /  generate a class ".binky-icon". You
-/  could then put class="oj-icon binky-icon" on your dom element. 
+/  could then put class="oj-icon binky-icon" on your dom element.
 --------------------------------------------------------------------*/
 .oj-fwk-icon, .oj-component-icon, .oj-popup-tail.oj-popup-tail-simple, .oj-panel-drag-icon {
   font-family: "Alta Icon Font";
@@ -507,13 +200,13 @@ ul li, ol li {
 /* Icons
 --------------------------------------------------------------------*/
 /*--------------------------------------------------------------------
-/  Generic style that can be used for images 
-/  App developers can use the mixin ("oj-icon-content") to generate 
+/  Generic style that can be used for images
+/  App developers can use the mixin ("oj-icon-content") to generate
 /  a class with additions/overrides
-/ 
-/  For example let's say you used the mixin ("oj-icon-content") to 
+/
+/  For example let's say you used the mixin ("oj-icon-content") to
 /  generate a class ".binky-icon". You
-/  could then put class="oj-icon binky-icon" on your dom element. 
+/  could then put class="oj-icon binky-icon" on your dom element.
 --------------------------------------------------------------------*/
 .oj-icon {
   display: inline-block;
@@ -936,7 +629,7 @@ a.oj-disabled.oj-clickable-icon-nocontext,
 
 /* collapsible with "showDetail" style */
 /* ------------------------------------*/
-/* 
+/*
  * this is the default style for collapsible header
  */
 .oj-collapsible-header {
@@ -963,7 +656,7 @@ a.oj-disabled.oj-clickable-icon-nocontext,
   padding: 7px 0 4px 0; }
 
 /*
- * specify sizes for h1 - h4 collapsible header 
+ * specify sizes for h1 - h4 collapsible header
  */
 h1.oj-collapsible-header {
   font-size: 1.429rem; }
@@ -978,7 +671,7 @@ h4.oj-collapsible-header {
   font-size: 1rem; }
 
 /*
- * applied to the disabled collapsible header 
+ * applied to the disabled collapsible header
  */
 .oj-collapsible.oj-disabled > .oj-collapsible-header {
   color: #9e9e9e; }
@@ -1022,9 +715,9 @@ h4.oj-collapsible-header {
 
 .oj-collapsible-header a,
 .oj-collapsible-header .oj-collapsible-header-icon {
-  /* 
+  /*
    * For a basic collapsible (not in an accordion)
-   * the closed font icon has some whitespace on the left side, 
+   * the closed font icon has some whitespace on the left side,
    * use a negative margin to move over the icon
    */ }
   html:not([dir="rtl"]) .oj-collapsible-header a, html:not([dir="rtl"])
@@ -1034,7 +727,7 @@ h4.oj-collapsible-header {
   .oj-collapsible-header .oj-collapsible-header-icon {
     margin-right: -7px; }
 
-/* 
+/*
  * set hand cursor while over the clickable area
  */
 .oj-collapsible-header.oj-hover,
@@ -1048,7 +741,7 @@ h4.oj-collapsible-header {
   color: #d4d6d7; }
 
 /*
- * applied to the disabled accordion header 
+ * applied to the disabled accordion header
  */
 .oj-accordion-collapsible.oj-disabled > .oj-collapsible-header {
   color: #9e9e9e;
@@ -1067,13 +760,13 @@ h4.oj-collapsible-header {
   padding: 3px 0; }
 
 /*
- * need to restore top padding for the first nested collapsible, 
+ * need to restore top padding for the first nested collapsible,
  * because it's being reset in collapsible
  */
 .oj-collapsible-content > .oj-accordion-collapsible.oj-collapsible:first-child > .oj-collapsible-header {
   padding-top: 3px; }
 
-/* 
+/*
  * need to reset margin because it's being set in collapsible to -7px
  */
 html:not([dir="rtl"]) .oj-accordion-collapsible > .oj-collapsible-header > .oj-collapsible-header-icon {
@@ -1104,13 +797,13 @@ html[dir="rtl"] .oj-accordion-collapsible > .oj-collapsible-header > .oj-collaps
   border-top: 0; }
 
 /*
- * applied to the disabled accordion header 
+ * applied to the disabled accordion header
  */
 .oj-accordion-collapsible.oj-disabled > .oj-collapsible-header {
   background-color: #fafafa; }
 
 /*
- * For the first Collapsible in an accordion 
+ * For the first Collapsible in an accordion
  * display all borders and put radius on top border
  */
 .oj-accordion-collapsible:first-child > .oj-collapsible-header {
@@ -1123,12 +816,12 @@ html[dir="rtl"] .oj-accordion-collapsible > .oj-collapsible-header > .oj-collaps
     border-radius: 0; }
 
 /*
- * For the middle Collapsibles in an accordion 
+ * For the middle Collapsibles in an accordion
  * display right, bottom and left borders and without any radius
  */
 /*
- * For the last Collapsible in an accordion 
- * display right, bottom and left borders 
+ * For the last Collapsible in an accordion
+ * display right, bottom and left borders
  * display border-radius at the bottom of the header only when the collapsible is close
  */
 .oj-accordion-collapsible.oj-collapsed:last-child > .oj-collapsible-header {
@@ -1140,7 +833,7 @@ html[dir="rtl"] .oj-accordion-collapsible > .oj-collapsible-header > .oj-collaps
     border-radius: 0; }
 
 /*
- * For the last Collapsible in an accordion 
+ * For the last Collapsible in an accordion
  * display border-radius at the bottom of the content only when the collapsible is open
  */
 .oj-accordion-collapsible.oj-expanded:last-child > .oj-collapsible-wrapper > .oj-collapsible-content {
@@ -1583,7 +1276,7 @@ html[dir="rtl"] .oj-filmstrip-arrow-container-overlay.oj-top, html[dir="rtl"]
 .oj-tabs-horizontal.oj-tabs-bottom > .oj-tabs-nav-root .oj-tabs-tab.ui-sortable-placeholder {
   margin-top: -1rem; }
 
-/* 
+/*
  * Bug 18283133 - ER for placing buttons alongside tabs
  */
 /*
@@ -1696,8 +1389,8 @@ html[dir="rtl"] .oj-tabs-vertical.oj-tabs-end > .oj-tabs-nav-root .oj-tabs-tab.o
 
 /* Tabs with the oj-tabs-icon-only class specified */
 /* --------------------------------------------------------------- */
-/* 
- * override background setting in 
+/*
+ * override background setting in
  * .oj-tabs-icon-only > .oj-tabs-nav-root .oj-tabs-tab
  */
 .oj-tabs-text-icon > .oj-tabs-nav-root .oj-tabs-tab.oj-selected,
@@ -1738,7 +1431,7 @@ html[dir="rtl"] .oj-tabs-vertical.oj-tabs-end > .oj-tabs-nav-root .oj-tabs-tab.o
   border: 0; }
 
 /*
- * applied to each tab 
+ * applied to each tab
  */
 .oj-tabs-tab {
   border-color: transparent;
@@ -1968,7 +1661,7 @@ html.oj-slow-borderradius .oj-tabs-vertical.oj-tabs-text-icon > .oj-tabs-nav-roo
   border-radius: 0; }
 
 /*
- * display top, bottom and right border and border radius on the selected tab 
+ * display top, bottom and right border and border radius on the selected tab
  * when edge = end
  */
 html:not([dir="rtl"]) .oj-tabs-vertical.oj-tabs-text-icon.oj-tabs-end > .oj-tabs-nav-root .oj-tabs-tab.oj-selected, html:not([dir="rtl"])
@@ -2238,7 +1931,7 @@ html body .oj-button {
 .oj-button:focus {
   outline: none; }
 
-/* oj-default is applied iff the button is not in any of the other states, 
+/* oj-default is applied iff the button is not in any of the other states,
    namely oj-active, oj-disabled, oj-selected, oj-hover, or oj-focus.
    oj-focus-only is applied iff the button has oj-focus but not any of the other 4 states listed above.*/
 .oj-button.oj-default,
@@ -2252,7 +1945,7 @@ html body .oj-button {
   .oj-button.oj-focus-only {
     background-image: none; }
 
-/* "oj-button-icon oj-start" is applied to the button's start icon, if any.  
+/* "oj-button-icon oj-start" is applied to the button's start icon, if any.
    "oj-button-icon oj-end" is applied to the button's end icon, if any.  */
 .oj-button .oj-button-icon {
   font-weight: normal;
@@ -2274,7 +1967,7 @@ html body .oj-button {
 .oj-button.oj-hover .oj-button-icon {
   color: #85bbe7; }
 
-/* oj-active is applied to a push button when it is actively being held down 
+/* oj-active is applied to a push button when it is actively being held down
    by the mouse button or Enter or Spacebar. */
 .oj-button.oj-active {
   background-color: #0572ce;
@@ -2320,21 +2013,21 @@ html body .oj-button {
 .oj-button-half-chrome .oj-button.oj-disabled.oj-selected .oj-button-icon {
   color: #ffffff; }
 
-/* Half-chrome buttons have no chrome (background or border) in their default, 
- * focus-only, and disabled-not-selected states, but acquire chrome in their 
+/* Half-chrome buttons have no chrome (background or border) in their default,
+ * focus-only, and disabled-not-selected states, but acquire chrome in their
  * hover, active, and selected states.
- * 
- * Half-chroming is recommended for buttons in a toolbar, and anytime the 
+ *
+ * Half-chroming is recommended for buttons in a toolbar, and anytime the
  * half-chrome look is desired.
- * 
+ *
  * To make buttons half-chrome, apps can apply the oj-button-half-chrome class, as follows:
- * 
+ *
  * - For buttons in a buttonset, the class must be applied to the buttonset.
- * - For buttons not in a buttonset, the class can be applied to the button, 
- *   or to any ancestor, such as a toolbar.  
- * - As long as those requirements are met, it is fine for the class to appear 
- *   multiple times in the button's ancestry, inclusive.  E.g. an app can apply 
- *   the class both to a buttonset and to an ancestor such as a toolbar, where 
+ * - For buttons not in a buttonset, the class can be applied to the button,
+ *   or to any ancestor, such as a toolbar.
+ * - As long as those requirements are met, it is fine for the class to appear
+ *   multiple times in the button's ancestry, inclusive.  E.g. an app can apply
+ *   the class both to a buttonset and to an ancestor such as a toolbar, where
  *   the latter takes care of buttons under that ancestor that are not in the buttonset.
  */
 .oj-button.oj-default.oj-button-half-chrome,
@@ -2373,8 +2066,8 @@ html body .oj-button {
   vertical-align: middle;
   margin-bottom: 3px; }
 
-/* The element containing the text of buttons without icons.  This is the Button (input element) 
- * itself for <input type=button|submit|reset>, which doesn't support icons at all, and a nested span 
+/* The element containing the text of buttons without icons.  This is the Button (input element)
+ * itself for <input type=button|submit|reset>, which doesn't support icons at all, and a nested span
  * for other types of Buttons.
  */
 input.oj-button[type="button"],
@@ -2444,8 +2137,8 @@ html:not([dir="rtl"]) .oj-button-icons-only .oj-button-icon.oj-end {
 html[dir="rtl"] .oj-button-icons-only .oj-button-icon.oj-start {
   margin-right: 0.5rem; }
 
-/* The element containing the text of buttons without icons.  This is the Button (input element) 
- * itself for <input type=button|submit|reset>, which doesn't support icons at all, and a nested span 
+/* The element containing the text of buttons without icons.  This is the Button (input element)
+ * itself for <input type=button|submit|reset>, which doesn't support icons at all, and a nested span
  * for other types of Buttons.
  */
 input.oj-button-sm.oj-button[type="button"],
@@ -2515,8 +2208,8 @@ html:not([dir="rtl"]) .oj-button-sm.oj-button-icons-only .oj-button-icon.oj-end 
 html[dir="rtl"] .oj-button-sm.oj-button-icons-only .oj-button-icon.oj-start {
   margin-right: 0.357rem; }
 
-/* The element containing the text of buttons without icons.  This is the Button (input element) 
- * itself for <input type=button|submit|reset>, which doesn't support icons at all, and a nested span 
+/* The element containing the text of buttons without icons.  This is the Button (input element)
+ * itself for <input type=button|submit|reset>, which doesn't support icons at all, and a nested span
  * for other types of Buttons.
  */
 input.oj-button-lg.oj-button[type="button"],
@@ -2586,8 +2279,8 @@ html:not([dir="rtl"]) .oj-button-lg.oj-button-icons-only .oj-button-icon.oj-end 
 html[dir="rtl"] .oj-button-lg.oj-button-icons-only .oj-button-icon.oj-start {
   margin-right: 0.857rem; }
 
-/* The element containing the text of buttons without icons.  This is the Button (input element) 
- * itself for <input type=button|submit|reset>, which doesn't support icons at all, and a nested span 
+/* The element containing the text of buttons without icons.  This is the Button (input element)
+ * itself for <input type=button|submit|reset>, which doesn't support icons at all, and a nested span
  * for other types of Buttons.
  */
 input.oj-button-xl.oj-button[type="button"],
@@ -4011,8 +3704,8 @@ html[dir="rtl"] .oj-progressbar-end-label {
   display: inline-block;
   white-space: nowrap; }
 
-/* Due to limitations in CSS syntax, the buttonset rules that depend on half-chrome vs. full-chrome check whether 
-   the buttonset itself has .oj-button-half-chrome.  This is why we require that half-chrome buttonsets have the 
+/* Due to limitations in CSS syntax, the buttonset rules that depend on half-chrome vs. full-chrome check whether
+   the buttonset itself has .oj-button-half-chrome.  This is why we require that half-chrome buttonsets have the
    class on the buttonset itself.*/
 .oj-buttonset:not(.oj-button-half-chrome) {
   font-size: 0;
@@ -4080,10 +3773,10 @@ html[dir="rtl"] .oj-buttonset:not(.oj-button-half-chrome) .oj-button:not(.oj-but
 .oj-toolbar .oj-button {
   margin-bottom: 0; }
 
-/* Apps can apply this class to a span to get a toolbar separator.  
- * To make it accessible, the span should also have 
+/* Apps can apply this class to a span to get a toolbar separator.
+ * To make it accessible, the span should also have
  * role="separator" aria-orientation="vertical".
- * Separators should be placed around any buttonsets in the toolbar, and 
+ * Separators should be placed around any buttonsets in the toolbar, and
  * anywhere else in the toolbar that a separator is desirable.
  */
 .oj-toolbar-separator {
@@ -4094,8 +3787,8 @@ html[dir="rtl"] .oj-buttonset:not(.oj-button-half-chrome) .oj-button:not(.oj-but
   margin-left: 0.167em;
   margin-right: 0.167em; }
 
-/* To layout multiple toolbars, an element with .oj-toolbars can contain 1 or more elements 
-   each having .oj-toolbar-row, which can each contain 1 or more JET Toolbars 
+/* To layout multiple toolbars, an element with .oj-toolbars can contain 1 or more elements
+   each having .oj-toolbar-row, which can each contain 1 or more JET Toolbars
    (which have the oj-toolbar class). */
 .oj-toolbars {
   border-style: solid;
@@ -4136,7 +3829,7 @@ html[dir="rtl"] .oj-buttonset:not(.oj-button-half-chrome) .oj-button:not(.oj-but
 
 /* paging control */
 /* --------------------------------------------------------------- */
-/* Styling for the component. Set the line-height back to normal in case it 
+/* Styling for the component. Set the line-height back to normal in case it
    was set to 0 by the table/datagrid footer classes */
 .oj-pagingcontrol {
   line-height: normal; }
@@ -4683,7 +4376,7 @@ html[dir="rtl"] .oj-table-vgrid-lines:last-child {
   color: #333333;
   padding: 0.5em; }
 
-/* Styling for a panel that can attach to the bottom of the table 
+/* Styling for a panel that can attach to the bottom of the table
    and match the table colors. An app developer can put a paging control
    in a div with this class, for example. */
 .oj-table-panel-bottom {
@@ -4959,7 +4652,7 @@ html[dir="rtl"] .oj-tree-list > .oj-tree-node {
   overflow: hidden;
   white-space: nowrap; }
 
-/* Styling on header and cell default text for vertical alignment, add this class name to headers when using a 
+/* Styling on header and cell default text for vertical alignment, add this class name to headers when using a
     knockout template or custom renderer to bottom align text*/
 .oj-datagrid-cell-text,
 .oj-datagrid-header-cell-text {
@@ -5037,7 +4730,7 @@ html[dir="rtl"] .oj-tree-list > .oj-tree-node {
   width: 100%;
   height: 100%; }
 
-/* Styles used to optimize scolling on touch devices used to optimize translate 
+/* Styles used to optimize scolling on touch devices used to optimize translate
    3d swiping on touch and engage hardware acceleration, they are not for animation changes*/
 .oj-datagrid-scroller-touch {
   transition: 0.5s;
@@ -6135,9 +5828,9 @@ html[dir="rtl"] .oj-treemap-restore-icon.oj-active {
 .oj-checkboxset .oj-messaging-inline-container .oj-message {
   border-top-width: 1px; }
 
-/** 
+/**
  * wraps a message block that includes the icon and content inline-blocks
- * 1. prevent wrapping the content inline-block.  
+ * 1. prevent wrapping the content inline-block.
  */
 .oj-message {
   display: block;
@@ -6148,8 +5841,8 @@ html[dir="rtl"] .oj-treemap-restore-icon.oj-active {
 .oj-message:nth-of-type(n+2) {
   padding-top: 20px; }
 
-/* 
- * wraps the message summary and detail parts 
+/*
+ * wraps the message summary and detail parts
  * 1. IE requires width to be set in addition to max-width. 324 is 95% of 340px
  */
 .oj-message-content {
@@ -6159,7 +5852,7 @@ html[dir="rtl"] .oj-treemap-restore-icon.oj-active {
   /* 1 */ }
 
 /**
- * message summary text 
+ * message summary text
  * 1. allow summary text to wrap normally.
  */
 .oj-message-summary {
@@ -6174,8 +5867,8 @@ html[dir="rtl"] .oj-treemap-restore-icon.oj-active {
   html[dir="rtl"] .oj-message-summary {
     padding: 0 10px 0 0; }
 
-/** 
- * message detail text 
+/**
+ * message detail text
  * 1. allow detail text to wrap normally.
  */
 .oj-message-detail {
@@ -6194,8 +5887,8 @@ html[dir="rtl"] .oj-treemap-restore-icon.oj-active {
  * for hint types - validator, converter
  */
 /**
- * for hint title 
- * 1. if title isn't the first hint add padding to the top. 
+ * for hint title
+ * 1. if title isn't the first hint add padding to the top.
  */
 .oj-form-control-hint-title:not(:first-child) {
   padding-top: 20px;
@@ -6213,15 +5906,15 @@ html[dir="rtl"] .oj-treemap-restore-icon.oj-active {
   font-weight: bold;
   margin-bottom: 0.25em; }
 
-/* 
-  We need to line up a label with plain text but without giving it top margins which 
+/*
+  We need to line up a label with plain text but without giving it top margins which
   we get with oj-label-inline.
  */
 .oj-label-nocomp.oj-label-inline.oj-label-for-non-control {
   margin-top: 0;
   vertical-align: baseline; }
 
-/* When label is block, this wrapper is needed in order 
+/* When label is block, this wrapper is needed in order
    to float modifiers (required, help, changed) to the end of the label */
 .oj-label-group {
   display: inline-block;
@@ -6362,8 +6055,8 @@ html .oj-form-control {
   box-sizing: border-box;
   display: inline-block;
   font-size: 1rem;
-  /* use a width of 100% and then max and min width so that when 
-     there's less room for the form control it can automatically 
+  /* use a width of 100% and then max and min width so that when
+     there's less room for the form control it can automatically
      get smaller instead of overflowing its boundaries */
   max-width: 18em;
   min-width: 8em;
@@ -6430,11 +6123,26 @@ html .oj-form-control {
 .oj-inputpassword-input,
 .oj-inputtext-nocomp,
 .oj-inputpassword-nocomp {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  line-height: normal;
   height: 2.286rem;
   padding: 0 5px; }
+  .oj-inputtext-input::-moz-focus-inner,
+  .oj-inputpassword-input::-moz-focus-inner,
+  .oj-inputtext-nocomp::-moz-focus-inner,
+  .oj-inputpassword-nocomp::-moz-focus-inner {
+    border: 0;
+    padding: 0; }
 
 .oj-textarea-input,
 .oj-textarea-nocomp {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  overflow: auto;
+  vertical-align: top;
   height: auto;
   padding: 0.5em 5px;
   resize: none; }
@@ -6477,14 +6185,14 @@ html .oj-form-control {
 
 /* inputnumber */
 /* --------------------------------------------------------------- */
-/* We need to support this sizing use cases: 
+/* We need to support this sizing use cases:
    - width on root dom element should be the width of input and buttons, not just input. */
-/* Root dom element for inputnumber. 
+/* Root dom element for inputnumber.
  It wraps the input and the down/up buttons */
 .oj-inputnumber {
   display: inline-block;
-  /* use a width of 100% and then max and min width so that when 
-     there's less room for the form control it can automatically 
+  /* use a width of 100% and then max and min width so that when
+     there's less room for the form control it can automatically
      get smaller instead of overflowing its boundaries */
   max-width: 15em;
   min-width: 8em;
@@ -6668,7 +6376,7 @@ html.oj-slow-borderradius .oj-inputnumber-up.oj-button {
 .oj-listbox-placeholder {
   color: #737373; }
 
-/* 
+/*
  * applied to results
  */
 .oj-listbox-results {
@@ -6680,7 +6388,7 @@ html.oj-slow-borderradius .oj-inputnumber-up.oj-button {
   overflow-y: auto;
   -webkit-tap-highlight-color: transparent; }
 
-/* 
+/*
  * applied to nested option groups
  */
 .oj-listbox-result-sub {
@@ -6690,7 +6398,7 @@ html.oj-slow-borderradius .oj-inputnumber-up.oj-button {
   html[dir="rtl"] .oj-listbox-result-sub {
     padding-right: 0; }
 
-/* 
+/*
  * applied to result labels
  */
 .oj-listbox-result-label {
@@ -6708,7 +6416,7 @@ html.oj-slow-borderradius .oj-inputnumber-up.oj-button {
   html[dir="rtl"] .oj-listbox-result-label {
     padding-right: 5px; }
 
-/* 
+/*
  * applied to result labels in different nested levels of option groups.
  * Padding is used instead of margins because the background color for states
  * like hover need to span across the entire box.
@@ -6748,14 +6456,14 @@ html:not([dir="rtl"]) .oj-listbox-results-depth-7 > .oj-listbox-result-label {
 html[dir="rtl"] .oj-listbox-results-depth-7 > .oj-listbox-result-label {
   padding-right: 110px; }
 
-/* 
- * applied to the nested option group labels, 
+/*
+ * applied to the nested option group labels,
  * they are direct children of li.oj-listbox-result-with-children
  */
 .oj-listbox-result-with-children > .oj-listbox-result-label {
   font-weight: bold; }
 
-/* 
+/*
  * applied to choices in the dropdown
  */
 .oj-listbox-results li {
@@ -6763,7 +6471,7 @@ html[dir="rtl"] .oj-listbox-results-depth-7 > .oj-listbox-result-label {
   display: list-item;
   background-image: none; }
 
-/* 
+/*
  * applied to the hovered choices in the dropdown
  */
 .oj-listbox-results .oj-hover {
@@ -6799,13 +6507,13 @@ html[dir="rtl"] .oj-listbox-results-depth-7 > .oj-listbox-result-label {
 
 /* icons */
 /* -----------------------------*/
-/* 
+/*
  * Applied to the search icon
  */
 .oj-listbox-search-icon {
   color: #878c90; }
 
-/* 
+/*
  * Applied to the spyglass (search icon) container
  */
 .oj-listbox-spyglass-box {
@@ -6824,7 +6532,7 @@ html[dir="rtl"] .oj-listbox-results-depth-7 > .oj-listbox-result-label {
     left: 0;
     padding-left: 5px; }
 
-/* 
+/*
  * Applied to the search box which includes the search text and the spyglass icon
  */
 .oj-listbox-search {
@@ -6838,7 +6546,7 @@ html[dir="rtl"] .oj-listbox-results-depth-7 > .oj-listbox-result-label {
   html.oj-slow-borderradius .oj-listbox-search {
     border-radius: 0; }
 
-/* 
+/*
  * Applied to the search text
  */
 .oj-listbox-input {
@@ -6862,7 +6570,7 @@ html[dir="rtl"] .oj-listbox-results-depth-7 > .oj-listbox-result-label {
     padding-left: 2rem;
     padding-right: 5px; }
 
-/* 
+/*
  * Used to cover the border bottom of the select box when the dropdown is open
  */
 .oj-listbox-search-wrapper {
@@ -6870,7 +6578,7 @@ html[dir="rtl"] .oj-listbox-results-depth-7 > .oj-listbox-result-label {
   padding: 5px;
   background-color: #fcfdfe; }
 
-/* 
+/*
  * Applied to the "No matches found" result entry
  */
 html:not([dir="rtl"]) .oj-listbox-no-results {
@@ -6884,13 +6592,13 @@ html[dir="rtl"] .oj-listbox-no-results {
 .oj-hicontrast .oj-listbox-results .oj-disabled {
   border: 1px dotted #dfe4e7; }
 
-/* 
+/*
  * Applied to the search icon
  */
 .oj-listbox-search-icon {
   padding: 0.31rem; }
 
-/* 
+/*
  * Applied to the spyglass (search icon) container
  */
 .oj-listbox-spyglass-box {
@@ -6904,8 +6612,8 @@ html[dir="rtl"] .oj-listbox-no-results {
 .oj-inputdatetime-date-time,
 .oj-inputdatetime-date-only,
 .oj-inputdatetime-time-only {
-  /* use a width of 100% and then max and min width so that when 
-     there's less room for the form control it can automatically 
+  /* use a width of 100% and then max and min width so that when
+     there's less room for the form control it can automatically
      get smaller instead of overflowing its boundaries */
   max-width: 18em;
   min-width: 8em;
@@ -6913,8 +6621,8 @@ html[dir="rtl"] .oj-listbox-no-results {
   display: inline-block; }
 
 .oj-inputdatetime-inline {
-  /* use a width of 100% and then max and min width so that when 
-     there's less room for the form control it can automatically 
+  /* use a width of 100% and then max and min width so that when
+     there's less room for the form control it can automatically
      get smaller instead of overflowing its boundaries */
   max-width: 18em;
   min-width: 8em;
@@ -7267,6 +6975,8 @@ around the input/label */
 .oj-radio,
 .oj-checkbox,
 .oj-checkbox-nocomp {
+  box-sizing: border-box;
+  padding: 0;
   display: inline-block;
   vertical-align: middle; }
   html:not([dir="rtl"]) .oj-radio, html:not([dir="rtl"])
@@ -7348,7 +7058,7 @@ around the input/label */
   font-size: 1rem; }
 
 /* single-select */
-/* 
+/*
  * Applied to the single-select box which includes the input field and the dropdown open icon
  */
 .oj-combobox-choice {
@@ -7388,7 +7098,7 @@ around the input/label */
     padding-right: 5px;
     padding-left: 26px; }
 
-/* 
+/*
  * Applied to the input field
  */
 .oj-combobox-input {
@@ -7417,7 +7127,7 @@ around the input/label */
     opacity: 1;
     font-style: italic; }
 
-/* 
+/*
  * Applied to the single-select drop down arrow
  */
 .oj-combobox-arrow {
@@ -7431,7 +7141,7 @@ around the input/label */
     left: 0; }
 
 /* multi-select */
-/* 
+/*
  * Applied to the multi-select box which includes the input field and the selected choices
  */
 .oj-combobox-choices {
@@ -7467,7 +7177,7 @@ around the input/label */
   html[dir="rtl"] .oj-combobox-choices {
     padding-right: 5px; }
 
-/* 
+/*
  * Applied to the multi-select box list items which include the search field and the selected choices
  */
 .oj-combobox-choices li {
@@ -7477,7 +7187,7 @@ around the input/label */
   html[dir="rtl"] .oj-combobox-choices li {
     float: right; }
 
-/* 
+/*
  * Applied to the multi-select search field which is an li to wrap the input
  */
 .oj-combobox-search-field {
@@ -7486,7 +7196,7 @@ around the input/label */
   white-space: nowrap;
   line-height: 2.0574rem; }
 
-/* 
+/*
  * Applied to the multi-select selected choice
  */
 .oj-combobox-selected-choice {
@@ -7510,14 +7220,14 @@ around the input/label */
   html[dir="rtl"] .oj-combobox-selected-choice {
     margin: 2px 0 2px 2px; }
 
-/* 
+/*
  * Applied to the multi-select selected choice when getting focus
  */
 .oj-combobox-selected-choice.oj-focus {
   outline: dotted 1px black;
   outline: -webkit-focus-ring-color auto; }
 
-/* 
+/*
  * Applied to the label of the selected choice
  */
 .oj-combobox-selected-choice-label {
@@ -7539,22 +7249,22 @@ around the input/label */
     left: 3px; }
 
 /* end multiselect */
-/* 
- * Invalid styling for the widget 
+/*
+ * Invalid styling for the widget
  */
 .oj-combobox.oj-invalid .oj-combobox-choice,
 .oj-combobox-multi.oj-invalid .oj-combobox-choices {
   border: 2px solid #dd6666; }
 
-/* 
- * Warning styling for the widget 
+/*
+ * Warning styling for the widget
  */
 .oj-combobox.oj-warning .oj-combobox-choice,
 .oj-combobox-multi.oj-warning .oj-combobox-choices {
   border: 2px solid #ffd699; }
 
-/* 
- * Disabled styles for single-select 
+/*
+ * Disabled styles for single-select
  */
 .oj-combobox.oj-disabled .oj-combobox-choice,
 .oj-combobox.oj-disabled input {
@@ -7568,8 +7278,8 @@ around the input/label */
 .oj-combobox.oj-disabled .oj-combobox-arrow {
   cursor: default; }
 
-/* 
- * Disabled styles for multi-select 
+/*
+ * Disabled styles for multi-select
  */
 .oj-combobox-multi.oj-disabled .oj-combobox-choices,
 .oj-combobox-multi.oj-disabled .oj-combobox-selected-choice,
@@ -7589,7 +7299,7 @@ around the input/label */
 
 /* icon */
 /* -----------------------------*/
-/* 
+/*
  * Applied to the clear entry icon
  */
 .oj-combobox-clear-entry-icon {
@@ -7599,7 +7309,7 @@ around the input/label */
 
 /* icon */
 /* -----------------------------*/
-/* 
+/*
  * Applied to the single-select drop down open icon
  */
 .oj-combobox-open-icon {
@@ -7621,7 +7331,7 @@ around the input/label */
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* 
+/*
  * Applied to the select box which includes the selected text and the dropdown open icon
  */
 .oj-select-choice {
@@ -7660,7 +7370,7 @@ around the input/label */
     padding-right: 5px; }
 
 /* multi-select */
-/* 
+/*
  * Applied to the multi-select box which includes the input field and the selected choices
  */
 .oj-select-choices {
@@ -7696,7 +7406,7 @@ around the input/label */
   html[dir="rtl"] .oj-select-choices {
     padding-right: 5px; }
 
-/* 
+/*
  * Applied to the multi-select box list items which include the search field and the selected choices
  */
 .oj-select-choices li {
@@ -7706,7 +7416,7 @@ around the input/label */
   html[dir="rtl"] .oj-select-choices li {
     float: right; }
 
-/* 
+/*
  * Applied to the multi-select search field which is an li to wrap the input
  */
 .oj-select-search-field {
@@ -7715,7 +7425,7 @@ around the input/label */
   white-space: nowrap;
   line-height: 2.0574rem; }
 
-/* 
+/*
  * Applied to the input field. Override default .oj-listbox-input
  */
 .oj-select-multi .oj-listbox-input {
@@ -7746,7 +7456,7 @@ around the input/label */
     padding-left: 0;
     padding-right: 0; }
 
-/* 
+/*
  * Applied to the multi-select selected choice
  */
 .oj-select-selected-choice {
@@ -7770,14 +7480,14 @@ around the input/label */
   html[dir="rtl"] .oj-select-selected-choice {
     margin: 2px 0 2px 2px; }
 
-/* 
+/*
  * Applied to the multi-select selected choice when getting focus
  */
 .oj-select-selected-choice.oj-focus {
   outline: dotted 1px black;
   outline: -webkit-focus-ring-color auto; }
 
-/* 
+/*
  * Applied to the label of the selected choice
  */
 .oj-select-selected-choice-label {
@@ -7813,8 +7523,8 @@ around the input/label */
   background-color: #efeff1;
   border: 1px solid #efeff1; }
 
-/* 
- * Disabled styles for multi-select 
+/*
+ * Disabled styles for multi-select
  */
 .oj-select-multi.oj-disabled .oj-select-choices,
 .oj-select-multi.oj-disabled .oj-select-selected-choice,
@@ -7829,14 +7539,14 @@ around the input/label */
   display: none;
   background: none; }
 
-/* 
+/*
  * Applied to the place holder text
  */
 .oj-select-chosen.oj-select-default {
   color: #737373;
   font-style: italic; }
 
-/* 
+/*
  * Applied to the selected text
  */
 .oj-select-chosen {
@@ -7855,7 +7565,7 @@ around the input/label */
   html[dir="rtl"] .oj-select-chosen {
     padding-left: 24px; }
 
-/* 
+/*
  * Applied to the dropdown open icon
  */
 .oj-select-arrow {
@@ -7871,7 +7581,7 @@ around the input/label */
 .oj-hicontrast .oj-select.oj-disabled {
   border-style: dotted; }
 
-/* 
+/*
  * Applied to the dropdown open icon
  */
 .oj-select-open-icon {
@@ -8055,8 +7765,8 @@ html[dir="rtl"] .oj-switch.oj-selected .oj-switch-thumb {
     text-align: right; }
 
 .oj-slider.oj-slider-horizontal {
-  /* use a width of 100% and then max and min width so that when 
-     there's less room for the form control it can automatically 
+  /* use a width of 100% and then max and min width so that when
+     there's less room for the form control it can automatically
       get smaller instead of overflowing its boundaries */
   max-width: 18em;
   min-width: 8em;
@@ -8281,7 +7991,7 @@ html[dir="rtl"] .oj-slider-horizontal .oj-slider-range-max {
 
   /* Centering multiple columns with th current implementation makes them stack.
      In future we plan to switch the grid to use flexbox which would not stack the columns,
-     so to future proof the current classes jet only supports centering a single column, 
+     so to future proof the current classes jet only supports centering a single column,
      anything after the first column is hidden.*/
   .oj-row.oj-sm-center > .oj-col:not(:first-child) {
     display: none; }
@@ -8476,7 +8186,7 @@ html[dir="rtl"] .oj-slider-horizontal .oj-slider-range-max {
 
   /* Centering multiple columns with th current implementation makes them stack.
      In future we plan to switch the grid to use flexbox which would not stack the columns,
-     so to future proof the current classes jet only supports centering a single column, 
+     so to future proof the current classes jet only supports centering a single column,
      anything after the first column is hidden.*/
   .oj-row.oj-md-center > .oj-col:not(:first-child) {
     display: none; }
@@ -8671,7 +8381,7 @@ html[dir="rtl"] .oj-slider-horizontal .oj-slider-range-max {
 
   /* Centering multiple columns with th current implementation makes them stack.
      In future we plan to switch the grid to use flexbox which would not stack the columns,
-     so to future proof the current classes jet only supports centering a single column, 
+     so to future proof the current classes jet only supports centering a single column,
      anything after the first column is hidden.*/
   .oj-row.oj-lg-center > .oj-col:not(:first-child) {
     display: none; }
@@ -8866,7 +8576,7 @@ html[dir="rtl"] .oj-slider-horizontal .oj-slider-range-max {
 
   /* Centering multiple columns with th current implementation makes them stack.
      In future we plan to switch the grid to use flexbox which would not stack the columns,
-     so to future proof the current classes jet only supports centering a single column, 
+     so to future proof the current classes jet only supports centering a single column,
      anything after the first column is hidden.*/
   .oj-row.oj-xl-center > .oj-col:not(:first-child) {
     display: none; }
@@ -8959,7 +8669,7 @@ html[dir="rtl"] .oj-slider-horizontal .oj-slider-range-max {
 
   /* Centering multiple columns with th current implementation makes them stack.
      In future we plan to switch the grid to use flexbox which would not stack the columns,
-     so to future proof the current classes jet only supports centering a single column, 
+     so to future proof the current classes jet only supports centering a single column,
      anything after the first column is hidden.*/
   .oj-row.oj-sm-only-center > .oj-col:not(:first-child) {
     display: none; } }
@@ -8971,7 +8681,7 @@ html[dir="rtl"] .oj-slider-horizontal .oj-slider-range-max {
 
   /* Centering multiple columns with th current implementation makes them stack.
      In future we plan to switch the grid to use flexbox which would not stack the columns,
-     so to future proof the current classes jet only supports centering a single column, 
+     so to future proof the current classes jet only supports centering a single column,
      anything after the first column is hidden.*/
   .oj-row.oj-md-only-center > .oj-col:not(:first-child) {
     display: none; } }
@@ -8983,7 +8693,7 @@ html[dir="rtl"] .oj-slider-horizontal .oj-slider-range-max {
 
   /* Centering multiple columns with th current implementation makes them stack.
      In future we plan to switch the grid to use flexbox which would not stack the columns,
-     so to future proof the current classes jet only supports centering a single column, 
+     so to future proof the current classes jet only supports centering a single column,
      anything after the first column is hidden.*/
   .oj-row.oj-lg-only-center > .oj-col:not(:first-child) {
     display: none; } }
@@ -9091,7 +8801,7 @@ html[dir="rtl"] .oj-slider-horizontal .oj-slider-range-max {
 
   /* Centering multiple columns with th current implementation makes them stack.
      In future we plan to switch the grid to use flexbox which would not stack the columns,
-     so to future proof the current classes jet only supports centering a single column, 
+     so to future proof the current classes jet only supports centering a single column,
      anything after the first column is hidden.*/
   .oj-row.oj-print-center > .oj-col:not(:first-child) {
     display: none; }
@@ -9407,7 +9117,7 @@ html[dir="rtl"] .oj-slider-horizontal .oj-slider-range-max {
 /**
  * This idea/code is from zurb foundation, thanks zurb!
  *
- * In the jet sass files there are variables for 
+ * In the jet sass files there are variables for
  * responsive screen sizes, these look something like
  *    $screenSmallRange:  0, 767px !default;
  *    $screenMediumRange: 768px, 1023px !default;
@@ -9416,8 +9126,8 @@ html[dir="rtl"] .oj-slider-horizontal .oj-slider-range-max {
  *
  * These variables in turn are used to generate responsive media queries in variables like
  * $responsiveQuerySmallUp, $responsiveQueryMediumUp, etc.
- * 
- * we send down these media queries as the font family in classes 
+ *
+ * we send down these media queries as the font family in classes
  * that look something like this:
  *
  * .oj-mq-md {
@@ -9901,4 +9611,4 @@ html[dir="rtl"] .oj-slider-horizontal .oj-slider-range-max {
   .oj-label-nocomp:not(.oj-label-for-non-control) {
     line-height: 1.6em; } }
 
-/*# sourceMappingURL=oj-alta.css.map */
+/*# sourceMappingURL=oj-alta-notag.css.map */

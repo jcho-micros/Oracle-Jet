@@ -7,32 +7,38 @@ define(['ojs/ojcore' ,'knockout', 'ojs/ojtabs'
                     {
                         name: 'Overview',
                         id: 'overview',
-                        url: '#'
+                        url: '#',
+                        fileName: 'overview'
                     },
                     {
                         name: 'Employees',
                         id: 'employees',
-                        url: '#'
+                        url: '#',
+                        fileName: 'employees'
                     },
                     {
                         name: 'Schedules & Timecards',
                         id: 'schedulestimecards',
-                        url: '#'
+                        url: '#',
+                        fileName: 'schedulestimecards'
                     },
                     {
                         name: 'Forecasting',
                         id: 'forecasting',
-                        url: '#'
+                        url: '#',
+                        fileName: 'forecasting'
                     },
                     {
                         name: 'Payroll',
                         id: 'payroll',
-                        url: '#'
+                        url: '#',
+                        fileName: 'payroll'
                     },
                     {
                         name: 'Metrics',
                         id: 'metrics',
-                        url: '#'
+                        url: '#',
+                        fileName: 'metrics'
                     }
                 ];
                 //current visible state of section, either true or false

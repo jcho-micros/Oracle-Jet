@@ -88,6 +88,10 @@ require(['ojs/ojcore',
             var self = this;
             self.router = router;
             
+            //Knockout js detect for lgQuery to return true or false
+            var mdQuery = oj.ResponsiveUtils.getFrameworkQuery(oj.ResponsiveUtils.FRAMEWORK_QUERY_KEY.MD_UP);
+            self.medium = oj.ResponsiveKnockoutUtils.createMediaQueryObservable(mdQuery);
+
             var appNavData = [
             {
                 name: 'Home',

@@ -113,6 +113,9 @@ $background4Color: #0c4a7e;
 // $background6Color: #e4e8ea;
 $background7Color: #0572CE;
 $background8Color: #333333;
+$background9Color: #000000;
+$background10Color: #666666;
+$highlightColor: #ffffff;
 // 
 // border colors
 // ---------------------------------
@@ -183,6 +186,7 @@ $selectedtabText: #333333;
 // $linkTextColorVisited:  $linkTextColor; 
 // $linkTextColorDisabled: $textColorDisabled;
 $customLinkTextColor: #ffffff;
+$headerLinkTextColor: $highlightColor;
 // 
 // 
 // 
@@ -328,8 +332,10 @@ $panelBgColor:     $background7Color;
 // 
 // 
 // panel alternatives
-// $panel1BgColor:     #eff2f5;
-// $panel1BorderColor: $panelBorderColor;
+$panel1BgColor:     $background8Color;
+$panel1BorderColor: $background9Color;
+
+$panel2BgColor: $background10Color;
 // 
 // most panels determine their border colors by changing 
 // the saturation/lightness of their background colors
@@ -682,7 +688,10 @@ $customSelectedtabsNavColor: $selectedtabText;
 // (or on the start side when the tabs are vertical)
 // $tabsNavAccentBorderColorSelected: $interaction1Color;
 // $tabsNavAccentBorderWidthSelected: 3px;
-// 
+//Vertical Tabs
+$vTabsPanelBgColor: $panel1BgColor;
+$vTabsPanelBgActiveColor: $panel2BgColor;
+$vTabsPanelBorderColor: $panel1BorderColor;
 // 
 // PROGRESSBAR
 // ---------------------------------------------------------------
@@ -1424,6 +1433,45 @@ li {
     width: 350px;
     background-color: #cccccc;
 }
+//General Styles
+.oj-tabs.oj-tabs-vertical{
+    display:block !important;
+}
+.oj-tabs-vertical > .oj-tabs-nav-root {
+    padding: 0;
+    background-color: $vTabsPanelBgColor;
+    .oj-tabs-tab-content{
+        border-width:0 0 1px 0;
+        border-color:$vTabsPanelBorderColor;
+    }
+    .oj-tabs-tab.oj-selected{
+        background-color:$vTabsPanelBgColor;
+    }
+    li{
+        border:0 !important;
+        span{
+            color:$headerLinkTextColor;
+        }
+        &:active{
+              background-color: $vTabsPanelBgActiveColor;
+        }
+    }
+}
+//iCare
+#selected-title{
+    background-color: $headerNavColorSelected;
+    height: 20px;
+    padding: 10px;
+    width: 100%;
+    a{
+        color:$headerLinkTextColor;
+        text-decoration:none;
+    }
+}
+.vertical-tabs > li{
+    border:0 0 1px 0;
+}
+
 //Media Query 
 //Mobile
 @media only screen and (min-device-width: 320px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {

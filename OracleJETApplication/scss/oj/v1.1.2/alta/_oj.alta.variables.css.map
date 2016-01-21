@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "_oj.alta.variables.css",
+  "sources": [
+    "_oj.alta.variables.scss",
+    "../utilities/_oj.utilities.urls.scss",
+    "../utilities/_oj.utilities.math.scss"
+  ],
+  "sourcesContent": [],
+  "mappings": "AA+GA,yCAAyC",
+  "names": []
+}
