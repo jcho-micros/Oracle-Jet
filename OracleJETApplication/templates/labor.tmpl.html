@@ -37,13 +37,17 @@
                               </ul>
                                <!-- tab contents -->
                               <div id="tabs-1">
+                                  <div data-bind="ojModule: {
+                                      name: 'labor/overview', 
+                                      viewName: 'labor/overview'}">
+                                </div>
+                              </div>
+                              <div id="tabs-2">
+                                <p>Tab 2 Content</p>
                                  <div data-bind="ojModule: {
                                       name: 'labor-tab1', 
                                       viewName: 'labor-tab1'}">
                                   </div>
-                              </div>
-                              <div id="tabs-2">
-                                <p>Tab 2 Content</p>
                               </div>
                               <div id="tabs-3">
                                 <p>Tab 3 Content</p>
@@ -119,17 +123,6 @@
     </div><!-- end of Right side -->
         
 </div><!-- Main OJ Row End -->
-<script>
-  $(document).Ready(function(){
-    if (jQuery) {  
-     // jQuery is loaded  
-    alert("Yeah!");
-    } else {
-    // jQuery is not loaded
-    alert("Doesn't Work");
-        }
-    });
-</script>
 
 
 <script type="text/html" id="app_sidenav_template">
