@@ -4,8 +4,7 @@ define(['knockout', 'ojs/ojcore', 'ojs/ojknockout', 'ojs/ojnavigationlist', 'ojs
         var self = this;
         
         var customQuery = oj.ResponsiveKnockoutUtils.createMediaQueryObservable('(max-width: 372px)');
-        
-        
+
         //Required for the Drop down
         self.menuItemSelect = function (event, ui) {
             switch (ui.item.attr("id")) {

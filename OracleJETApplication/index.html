@@ -11,7 +11,6 @@
     <script data-main="js/main" src="js/libs/require/require.js">
     </script>
     <link href="css/libs/fa/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <!--        <link rel="stylesheet" href="css/override.css">-->
 </head>
 
 <body id="globalBody">
@@ -21,7 +20,7 @@
                         viewName: 'off-canvas-template-left'}">
         </div>
     </div>
-    <header data-bind="ojModule: { name: 'header'}"></header>
+    <header data-bind="ojModule: { name: 'header'}" class="app-header"></header>
     <div class="oj-row">
         <div class="oj-xl-12 oj-lg-12 oj-sm-12 oj-col" id="mainCol">
             <div class="oj-row">
@@ -31,7 +30,7 @@
                         viewName: 'sidebar-left'}">
                     </div>
                 </div>
-                <div class="oj-sm-12 oj-md-12 oj-lg-10 oj-xl-10 oj-col">
+                <div class="oj-sm-12 oj-md-12 oj-lg-10 oj-xl-10 oj-col page-area">
                     <div data-bind="ojModule: { name: router.stateId()}" class="routerDiv"></div>
                 </div>
             </div>
