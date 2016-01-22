@@ -11,6 +11,6 @@ define(['ojs/ojcore' ,'knockout'
                         $("#modalDialog1").ojDialog("close"); });
                 };
             }
-            
+
    return inventoryContentViewModel;
 });

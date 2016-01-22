@@ -46,7 +46,7 @@ define(['knockout', 'ojs/ojcore', 'ojs/ojknockout', 'ojs/ojnavigationlist', 'ojs
                 id: 'icare'
             },
             {
-                name: 'MyInventory',
+                name: 'myInventory',
                 id: 'myinventory'
             },
             {

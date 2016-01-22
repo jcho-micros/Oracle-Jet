@@ -76,7 +76,7 @@ require(['ojs/ojcore',
         router.configure({
             'home': {label: 'Home', value: 'Home', isDefault: true},
             'labor': {label: 'Labor', value: 'Labor'},
-            'inventory': {label: 'Inventory', value: 'Inventory'},
+            'inventory-management': {label: 'Inventory Management', value: 'Inventory Management'},
             'icare': {label: 'iCare', value: 'iCare'},
             'reports-charts': {label: 'Reports & Charts', value:'Reports & Charts'},
             'enterprise': {label: 'Enterprise', value: 'Enterprise'},
@@ -105,8 +105,8 @@ require(['ojs/ojcore',
                 iconClass: 'fa fa-briefcase oj-navigationlist-item-icon'
             },
             {
-                name: 'Inventory',
-                id: 'inventory',
+                name: 'Inventory Management',
+                id: 'inventory-management',
                 iconClass: 'fa fa-dropbox oj-navigationlist-item-icon'
             },
             {
