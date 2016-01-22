@@ -154,7 +154,7 @@ li {
   div#mainCol {
     min-height: 800px; }
 
-  .sectionheader {
+  .page-header {
     padding-top: 10px;
     padding-bottom: 10px; }
 
@@ -207,7 +207,7 @@ li {
   .logoWrap {
     margin-top: 5px; }
 
-  .sectionheader {
+  .page-header {
     padding-top: 10px;
     padding-bottom: 10px; }
 
@@ -306,7 +306,7 @@ li {
   #ui-id-2 > li > .oj-navigationlist-item-content > span.oj-navigationlist-item-label {
     display: none; }
 
-  .sectionheader {
+  .page-header {
     padding-top: 10px;
     padding-bottom: 10px; }
 
