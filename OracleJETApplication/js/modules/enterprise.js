@@ -1,9 +1,9 @@
 define(['ojs/ojcore' ,'knockout'
    ], function(oj, ko) {
-            function enterpriseeContentViewModel() {
+            function enterpriseContentViewModel() {
                 var self = this;
                 self.something = ko.observable("Hello World");
             }
-            
-   return enterpriseeContentViewModel;
+
+   return enterpriseContentViewModel;
 });
