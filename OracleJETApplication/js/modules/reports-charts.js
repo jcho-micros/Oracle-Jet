@@ -1,9 +1,9 @@
 define(['ojs/ojcore' ,'knockout'
    ], function(oj, ko) {
-            function reportschartsContentViewModel() {
+            function reportsChartsContentViewModel() {
                 var self = this;
                 self.something = ko.observable("Hello World");
             }
-            
-   return reportschartsContentViewModel;
+
+   return reportsChartsContentViewModel;
 });

@@ -78,7 +78,7 @@ require(['ojs/ojcore',
             'labor': {label: 'Labor', value: 'Labor'},
             'inventory': {label: 'Inventory', value: 'Inventory'},
             'icare': {label: 'iCare', value: 'iCare'},
-            'reportcharts': {label: 'Reports & Charts', value:'Reports & Charts'},
+            'reports-charts': {label: 'Reports & Charts', value:'Reports & Charts'},
             'enterprise': {label: 'Enterprise', value: 'Enterprise'},
             'people': {label: 'People', value: 'People'},
         });
@@ -115,8 +115,8 @@ require(['ojs/ojcore',
                 iconClass: 'fa fa-gift oj-navigationlist-item-icon'
             },
             {
-                name: 'Report & Charts',
-                id: 'reportcharts',
+                name: 'Reports & Charts',
+                id: 'reports-charts',
                 iconClass: 'fa fa-bar-chart oj-navigationlist-item-icon'
             },
             {
