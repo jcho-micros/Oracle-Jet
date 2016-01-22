@@ -161,7 +161,7 @@ $fontFamily: "Helvetica Neue", Helvetica, Arial, sans-serif;
 // $mediumFontSize:  1.143rem;  // 16px when root 14px
 // $largeFontSize:   1.286rem;  // 18px when root 14px
 // $largestFontSize: 1.429rem;  // 20px when root 14px
-$customsmallFontSize: 1.25em;
+$customsmallFontSize: 14px;
 $customsmallmobileFontSize: 1.25em;
 // 
 // 
@@ -1337,16 +1337,34 @@ $vTabsPanelBorderColor: $panel1BorderColor;
 // $boxShadowGeneration: slowOverride;
 // $gradientGeneration: slowOverride;
 // 
-// 
+
+// Mobile First Setup
 // Custom Override CSS
 //Header CSS
 @font-face{font-family:'Alta Icon Font'; src:url("fonts/JetFW_iconfont.woff") format("woff");}
+
+.app-header{
+    background-color: $headerBgColor;
+}
+
+.app-header-mobile {
+    padding-top: 5px;
+    padding-left: 10px;
+}
+.oj-navigationlist-horizontal:not(.oj-navigationlist-icon-only) .oj-navigationlist-item {
+    padding-left: 0.472rem;
+    padding-right: 0.472rem;
+}
+
+
 .appheader-logo-oracle{
     background-image: url($headerBGLogo);
     background-repeat: no-repeat;
-    width: 89%;
+    background-position: 5px 2px;
+    width: 140px;
     height: 25px;
-    margin-top: 6px;
+    display: inline-block;
+    vertical-align: middle;
 }
 .appheader-avatar{
     background-image: url($headerUserIcon);
@@ -1355,15 +1373,7 @@ $vTabsPanelBorderColor: $panel1BorderColor;
     height: 50px;
     margin-right: 50px;
 }
-.demo-appheader-logo-oracle, .demo-appheader-lite-logo-oracle {
-    width: 100%;
-    height: 100%;
-}
-.appheader-logo-oracle, .appheader-lite-logo-oracle {
-    margin-left:8px;
-    margin-top: 9px;
-    width: 140px;
-}
+
 .oj-offcanvas-open{
     background-color:$headerOffCanvas;
 }
@@ -1374,9 +1384,7 @@ $vTabsPanelBorderColor: $panel1BorderColor;
     margin-top: 14px;
     margin-left:5px;
 }
-.appheader{
-    background-color: $headerBgColor;
-}
+
 //Header Navigation Icon - Text
 .oj-navigationlist-item-icon{
     color: $iconColor; 
@@ -1402,13 +1410,6 @@ a.oj-navigationlist-item-content{
 .oj-navigationlist-item.oj-hover:not(.oj-selected){
     background-color:$headerNavColorSelected;
     border-color: transparent;
-}
-
-.left{
-    float: left;
-}
-.right{
-    float: right;
 }
 .side-nav{
     display: block;
@@ -1440,6 +1441,18 @@ body, html{
 #mainCol{
     padding:0;
 }
+
+//Header styles
+.page-header{
+    h1{
+        display:inline-block;
+    }
+}
+
+html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack-icon-label):not(.oj-navigationlist-icon-only) .oj-navigationlist-item-icon{
+    margin-right:0;
+}
+//Vertical Tabs
 .oj-tabs.oj-tabs-vertical{
     display:block !important;
 }
@@ -1478,53 +1491,60 @@ body, html{
     border:0 0 1px 0;
 }
 
-//Media Query 
-//Mobile
-@media only screen and (min-device-width: 320px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
-    #ui-id-2 > li > .oj-navigationlist-item-content > span.oj-navigationlist-item-label{
-        display:none;
+//Media Query
+//Medium/ipad (UP)
+@media only screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
+    .page-area{
+        padding-left: 1.072rem;
     }
+    //Header
+    .page-header {
+        padding: 10px 0;
+    }
+
+    .oj-selected {
+        .oj-tabs-title {
+            color: black;
+        }
+    }
+    .oj-tabs-title {
+        color: $customtabsNavTextColor;
+    }
+    .page-sub-navigation {
+        padding-left: 25px;
+    }
+}
+
+//large/desktop (UP)
+@media only screen and (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+//xLarge (UP)
+@media only screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+//Mobile (CAP)
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
+    //Header
+
     #ui-id-1 > li {
         border-bottom: 1px solid #585959;
-    }
-    //Min Height
-    div#mainCol {
-        min-height: 627px;
     }
     .oj-navigationlist-item-icon{
         font-size: $headerNavigationMobileSize !important;
     }
-        h1{
-        font-size: 24px;
-        font-weight: normal;
-    }
-    .labor{
-        padding-left:5px;
-    }
-    .header{
-        border-bottom: 1px solid #cccccc;
-    }
 }
-// MD IPad
+// MD IPad (CAP)
 @media only screen and (min-width: 768px) and (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1) {
-
-    #leftOffButton{
-        width: 4.33333%;
+    //Header
+    //Icon padding Right to Text
+    html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack-icon-label):not(.oj-navigationlist-icon-only) .oj-navigationlist-item-icon{
+       margin-right:5px;
     }
     #ui-id-1 > li {
         border-bottom: 1px solid #585959;
-    }
-    //Min Height
-    div#mainCol {
-        min-height: 800px;
-    }
-    //Header
-    .sectionheader{
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-    button#menuButton2 {
-        width: 100%;
     }
     .oj-navigationlist-item-label{
         font-size: $headerNavigationText;
@@ -1534,12 +1554,9 @@ body, html{
         background-color: $tabsPanelBgColor;
 
     }
-    a.oj-tabs-title{
-        color: $customtabsNavTextColor;
-    }
-    .oj-tabs-tab.oj-selected .oj-tabs-title{
-        color: $customSelectedtabsNavColor;
-    }
+//    .oj-tabs-tab.oj-selected .oj-tabs-title{
+//        color: $customSelectedtabsNavColor;
+//    }
     //Section Block
     .sectionName{
         padding-left:5px;
@@ -1549,7 +1566,7 @@ body, html{
         border-top: 1px solid #cccccc;
     }
 }
-// LG Desktop
+// LG Desktop (CAP)
 @media only screen and (min-width: 1024px) and (max-width: 1279px) and (-webkit-min-device-pixel-ratio: 1) {
     .oj-lg-justify-content-center{
         width: 90%;
@@ -1563,14 +1580,7 @@ body, html{
         margin-left: 5px;
         font-size: .875rem;
     }
-    //Min Height
-    div#mainCol {
-        min-height: 800px;
-    }
-    //Icon padding Right to Text
-    html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack-icon-label):not(.oj-navigationlist-icon-only) .oj-navigationlist-item-icon{
-       margin-right:5px; 
-    }
+
     .navigationlist-item-icon{
         font-size: $mediumFontSize;
     }
@@ -1581,15 +1591,9 @@ body, html{
     .logoWrap {
         margin-top: 5px;
     }
-    .sectionheader{
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
+
     .grid-display.appheader-col {
         height: 50px;
-    }
-    button#menuButton2 {
-        width: 100%;
     }
     div#ojAppNav2 {
         margin-top: 17px;
@@ -1598,9 +1602,7 @@ body, html{
     button#menuButton > span.oj-button-text{
         color: $background1Color;
     }
-    #ui-id-2 > li > .oj-navigationlist-item-content > span.oj-navigationlist-item-label{
-        display:none;
-    }
+
     // Side Navigation
     #sideNavigationContainer{
         height:100%;
@@ -1649,12 +1651,12 @@ body, html{
         background-color: $tabsPanelBgColor;
 
     }
-    a.oj-tabs-title{
-        color: $customtabsNavTextColor;
-    }
-    .oj-tabs-tab.oj-selected .oj-tabs-title{
-        color: $customSelectedtabsNavColor;
-    }
+//    a.oj-tabs-title{
+//        color: $customtabsNavTextColor;
+//    }
+//    .oj-tabs-tab.oj-selected .oj-tabs-title{
+//        color: $customSelectedtabsNavColor;
+//    }
     //Section Block
     .sectionName{
         padding-left:5px;
@@ -1664,7 +1666,7 @@ body, html{
         border-top: 1px solid #cccccc;
     }
 }
-// XL Desktop
+// XL Desktop (CAP)
 @media only screen and (min-width: 1280px) and (max-width: 1900px) and (-webkit-min-device-pixel-ratio: 1) {
     //Icon padding Right to Text
     html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack-icon-label):not(.oj-navigationlist-icon-only) .oj-navigationlist-item-icon{
@@ -1674,26 +1676,18 @@ body, html{
     ul#ui-id-1{
        background-color: #333333; 
     }
-    .demo-appheader-appname {
-        color: #ffffff;
-        margin-left: 120px;
-    }
-    .demo-appheader-appname-block {
-        display: none;
-        margin-left: 4px;
-        vertical-align: 2px;
-    }
+//    .demo-appheader-appname {
+//        color: #ffffff;
+//        margin-left: 120px;
+//    }
+//    .demo-appheader-appname-block {
+//        display: none;
+//        margin-left: 4px;
+//        vertical-align: 2px;
+//    }
     //Main Div height
     #mainCol{
         min-height: 1000px;
-    }
-    // Hides icons in sub navigation
-    #ui-id-2 > li > .oj-navigationlist-item-content > span.oj-navigationlist-item-label{
-        display:none;
-    }
-    .sectionheader{
-        padding-top: 10px;
-        padding-bottom: 10px;
     }
     //Router Div
     .routerDiv{
@@ -1703,9 +1697,7 @@ body, html{
     .logoWrap {
         margin-top: 5px;
     }
-    button#menuButton2 {
-        width: 100%;
-    }
+
     .grid-display.appheader-col {
         height: 50px;
     }
@@ -1767,12 +1759,12 @@ body, html{
         background-color: $tabsPanelBgColor;
 
     }
-    a.oj-tabs-title{
-        color: $customtabsNavTextColor;
-    }
-    .oj-tabs-tab.oj-selected .oj-tabs-title{
-        color: $customSelectedtabsNavColor;
-    }
+//    a.oj-tabs-title{
+//        color: $customtabsNavTextColor;
+//    }
+//    .oj-tabs-tab.oj-selected .oj-tabs-title{
+//        color: $customSelectedtabsNavColor;
+//    }
     //Section Block
     .sectionName{
         padding-left:5px;
