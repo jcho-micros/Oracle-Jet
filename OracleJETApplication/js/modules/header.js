@@ -7,12 +7,12 @@ define(['knockout', 'ojs/ojcore', 'ojs/ojknockout', 'ojs/ojnavigationlist', 'ojs
 
         //Required for the Drop down
         self.menuItemSelect = function (event, ui) {
-            switch (ui.item.attr("id")) {
-                case "About":
-                    $("#aboutDialog").ojDialog("open");
-                    break;
-                default:
-            }
+//            switch (ui.item.attr("id")) {
+//                case "About":
+//                    $("#aboutDialog").ojDialog("open");
+//                    break;
+//                default:
+//            }
         };
         self.offScreenButtonIconClass = "fa fa-bars fa-lg";
         self.offScreenButtonLabel = "MENU";

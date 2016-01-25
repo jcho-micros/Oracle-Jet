@@ -1426,14 +1426,6 @@ a.oj-navigationlist-item-content {
     border-color: transparent;
 }
 
-.sidebar-left-nav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0.77778rem 0;
-    border-top: solid 1px #ccc;
-    margin-top: 15px;
-}
-
 li {
     display: list-item;
     text-align: -webkit-match-parent;
@@ -1450,6 +1442,10 @@ body,
 html {
     height: 100%;
 }
+.page-area {
+     height:100%;
+}
+
 
 //helper styles
 .full-height {
@@ -1463,6 +1459,12 @@ html {
     }
 }
 
+//Footer styles
+footer{
+    position:absolute;
+    bottom:0;
+    padding:10px;
+}
 html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack-icon-label):not(.oj-navigationlist-icon-only) .oj-navigationlist-item-icon {
     margin-right: 0;
 }
@@ -1513,12 +1515,15 @@ html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack
 //Medium/ipad (UP)
 @media only screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
     .page-area {
-        padding-left: 1.072rem;
+        padding-left: 1.072rem !important;
         padding-top: 10px;
     }
     //Header
-    .page-header > h1 {
-        margin: 0;
+    .page-header {
+        padding: 10px 0;
+        > h1 {
+            margin: 0;
+        }
     }
     .oj-selected {
         .oj-tabs-title {
@@ -1560,11 +1565,20 @@ html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack
     #sideNavigationContainer > div {
         padding: 0 0 6px 0;
     }
-    .sidebar-left-nav li a:not(.button) {
-        color: #0572ce;
-        font-size: 1.05em;
-        padding: 10px 5px 10px 25px;
-        display: block;
+
+    .sidebar-left-nav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0.77778rem 0;
+        border-top: solid 1px #ccc;
+        margin-top: 15px;
+
+        li a:not(.button) {
+            color: #0572ce;
+            font-size: 1.05em;
+            padding: 10px 5px 10px 25px;
+            display: block;
+        }
     }
 }
 
@@ -1721,14 +1735,6 @@ html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack
     //        margin-left: 4px;
     //        vertical-align: 2px;
     //    }
-    //Main Div height
-    //    #mainCol{
-    //        min-height: 1000px;
-    //    }
-    //Router Div
-    .routerDiv {
-        min-height: 1000px;
-    }
     //Header
     .logoWrap {
         margin-top: 5px;
@@ -1766,14 +1772,6 @@ html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack
     .login---input > input[type="text"] {
         width: 85%;
     }
-    //    .sidebar-left-nav li a:not(.button) {
-    //        color: #0572ce;
-    //        font-size: 1.05em;
-    //        padding: 10px 5px 10px 25px;
-    //        margin: 0 0 0 0;
-    //        width: 100%;
-    //        display: block;
-    //    }
     .sideLink {
         width: 100%;
     }

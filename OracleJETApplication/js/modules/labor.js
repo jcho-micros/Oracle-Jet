@@ -1,106 +1,86 @@
-define(['knockout', 'ojs/ojcore', 'ojs/ojknockout', 'ojs/ojrouter', 'ojs/ojnavigationlist', 'ojs/ojdatacollection-common', 'ojs/ojdialog',  'ojs/ojtabs', 'ojs/ojconveyorbelt','ojs/ojaccordion', 'ojs/ojcollapsible', 'ojs/ojradioset'
-], function (ko, oj) {
-
-        function laborContentViewModel() {
+define(['ojs/ojcore', 'knockout', 'ojs/ojtabs'
+   ], function (oj, ko) {
+    function laborContentViewModel() {
         var self = this;
-        
-//        //KNOCK detect for lgQuery to return true or false
-//        var mdQuery = oj.ResponsiveUtils.getFrameworkQuery(oj.ResponsiveUtils.FRAMEWORK_QUERY_KEY.MD_UP);
-//        self.medium = oj.ResponsiveKnockoutUtils.createMediaQueryObservable(mdQuery);
-        
-        this.sectionName = ko.observable('Labor');
-        this.iconClass = ko.observable('fa fa-briefcase');
-        
-        var appSideNavData = [
+
+        self.pageHeading = ko.observable("Labor");
+        self.pageHeadingIconClass = ko.observable('fa fa-briefcase');
+        self.organizationName = ko.observable("Micros");
+        self.level1 = ko.observable("level1");
+        self.level2 = ko.observable("level2");
+        self.location = ko.observable("North East");
+
+        self.pageSubNavigation = ko.computed(function() {
+            return self.organizationName() + " | " + self.level1() + " | " + self.level2() + " | " + self.location();
+        }, self);
+
+        var appTabData = [
             {
-                name: 'Charts',
-                id: 'charts',
-                url: '#'
+                name: 'Overview',
+                id: 'overview',
+                url: '#',
+                fileNameJs: 'overview',
+                fileName: 'overview/overview'
             },
             {
-                name: 'Reports',
-                id: 'reports',
-                url: '#'
+                name: 'Employees',
+                id: 'employees',
+                url: '#',
+                fileNameJs: 'employees',
+                fileName: 'employees/employees'
             },
             {
-                name: 'Links',
-                id: 'links',
-                url: '#'
-            },
-            {
-                name: 'iCare',
-                id: 'icare',
-                url: '#'
-            },
-            {
-                name: 'MyInventory',
-                id: 'myinventory',
-                url: '#'
+                name: 'Schedules & Timecards',
+                id: 'schedules-timecards',
+                url: '#',
+                fileNameJs: 'schedules-timecards',
+                fileName: 'schedules-timecards/schedules-timecards'
             },
             {
                 name: 'Forecasting',
                 id: 'forecasting',
-                url: '#'
+                url: '#',
+                fileNameJs: 'forecasting',
+                fileName: 'forecasting/forecasting'
             },
             {
-                name: 'Dashboards',
-                id: 'dashboards',
-                url: '#'
+                name: 'Payroll',
+                id: 'payroll',
+                url: '#',
+                fileNameJs: 'payroll',
+                fileName: 'payroll/payroll'
             },
             {
-                name: 'myLabor',
-                id: 'mylabor',
-                url: '#'
-            },
-            {
-                name: 'Admin',
-                id: 'admin',
-                url: '#'
+                name: 'Analytics',
+                id: 'analytics',
+                url: '#',
+                fileNameJs: 'analytics',
+                fileName: 'analytics/analytics'
             }
-
         ];
-        var appTabData = [
-                    {
-                        name: 'Overview',
-                        id: 'overview',
-                        url: '#'
-                    },
-                    {
-                        name: 'Employees',
-                        id: 'employees',
-                        url: '#'
-                    },
-                    {
-                        name: 'Schedules & Timecards',
-                        id: 'schedulestimecards',
-                        url: '#'
-                    },
-                    {
-                        name: 'Forecasting',
-                        id: 'forecasting',
-                        url: '#'
-                    },
-                    {
-                        name: 'Payroll',
-                        id: 'payroll',
-                        url: '#'
-                    },
-                    {
-                        name: 'Metrics',
-                        id: 'metrics',
-                        url: '#'
-                    }
+        //current visible state of section, either true or false
+        self.sectionsState = ko.observable(false);
 
-        ];
-        this.itemOnly = function(context) {
-            return context['leaf'];
+        //access array for Section display
+        self.dataTabSource = new oj.ArrayTableDataSource(appTabData, {
+            idAttribute: 'id'
+        });
+
+        //Setting default values for currentSection name and currentSectionId Ids
+        self.currentSection = ko.observable('Overview');
+        self.currentSectionId = ko.observable('overview');
+
+        //Toggles visibility of sections
+        self.hideSections = function () {
+            self.sectionsState(!self.sectionsState());
         };
-        this.selectedItem = ko.observable("overview");
-        
-        self.dataSideSource = new oj.ArrayTableDataSource(appSideNavData, {idAttribute: 'id'});
-        self.dataTabSource = new oj.ArrayTableDataSource(appTabData, {idAttribute: 'id'});
-        self.something = ko.observable("Hello World");
 
-        }
-   return laborContentViewModel;
+        self.selectedSection = function () {
+            self.currentSection(this.name);
+            self.currentSectionId(this.id);
+            self.hideSections();
+        };
+
+    }
+    return laborContentViewModel;
 });

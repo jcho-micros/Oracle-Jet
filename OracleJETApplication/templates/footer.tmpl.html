@@ -1,12 +1,16 @@
-<div class="demo-appfooter">
-    <div class="oj-row">
-        <div>
-            <ul>
-                <!-- ko foreach: footerLinks -->  
-                <li> <a data-bind="text : name, attr : {id: linkId, href : linkTarget}"> </a> </li>
-                <!-- /ko -->  
-            </ul>
-                <div class="demo-appfooter-text">Copyright &copy; 2014, 2015 Oracle and/or its affiliates. All rights reserved</div>
-        </div>
+<div class="oj-row">
+    <div class="oj-col">
+        <!--
+    <ul data-bind="foreach: footerLinks">
+        <li> <a data-bind="text : name, attr : {id: linkId, href : linkTarget}"> </a> </li>
+    </ul>
+    -->
+        <span class="page-sub-navigation">
+        <span data-bind="text: $child.pageSubNavigation"></span>
+        <a href="#">change</a>
+        </span>
     </div>
+
+    <div class="oj-col">Copyright &copy; 2014, 2015 Oracle and/or its affiliates. All rights reserved</div>
+
 </div>
