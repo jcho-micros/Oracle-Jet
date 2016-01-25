@@ -2,14 +2,14 @@
     <div class="oj-sm-only-hide oj-md-only-hide oj-lg-2 oj-xl-2 left">
         <div id='sideNavigationContainer'>
             <div class="row" id="login---row">
-                <div class="large-12 medium-12 columns" id="login---wrap">
+                <div class="large-12 mdium-12 columns" id="login---wrap">
                     <div class="login---text">System Admin</div>
                     <div class="login---text">Mike Rose Cafe</div>
                     <div class="login---input">
                         <input type="text" placeholder="My 1st Page">
                     </div>
                 </div>
-                <div class="large-12 medium-12 panel" id="global---sidenav">
+                <div class="large-12 mdium-12 panel" id="global---sidenav">
                     <ul class="side-nav">
                         <!-- ko foreach: dataSideSource -->
                         <li data-bind="attr: {id: name}"> <a data-bind="text: name, href: url"> <span class="sideLink"></span>  </a></li>
@@ -23,12 +23,12 @@
     <div class="oj-sm-12 oj-md-12 oj-lg-10 oj-xl-10 right">
 
         <!-- large template -->
-        <script type="text/html" id="med_lg_xl_template">
+        <script type="text/html" id="md_lg_xl_template">
 
             <div class="oj-row">
                 <!-- Row Content -->
                 <!-- Start of SectionHeader -->
-                <div class="oj-col oj-med-12 oj-lg-12 oj-xl-12 sectionheader">
+                <div class="oj-col oj-md-12 oj-lg-12 oj-xl-12 sectionheader">
                     <div class="left addButton">
                        <button id= "button"
                          data-bind="click: buttonClick, 
@@ -42,7 +42,7 @@
                     </h1>
                 </div>
                 <!-- End of SectionHeader -->
-                    <div class="oj-col oj-med-12 oj-lg-12 oj-xl-12">
+                    <div class="oj-col oj-md-12 oj-lg-12 oj-xl-12">
                          <div id="form-container" class="oj-form">
                             <div class="oj-col oj-lg-8 oj-xl-8 left leftColPeople">
                                 <div class="oj-row">
@@ -83,7 +83,7 @@
 
                                     </div><!-- End of column -->
 
-                                    <div class="oj-med-5 oj-lg-5 oj-xl-5 left">
+                                    <div class="oj-md-5 oj-lg-5 oj-xl-5 left">
                                         <div class="checkboxWrapper">
                                          <label id="mainlabelid">STATUS</label>
                                             <div id="checkboxSetId" aria-labelledby="mainlabelid"
@@ -105,8 +105,8 @@
                                             </div><!-- End of main label id -->
                                         </div><!-- checkBox Wrapper -->
                                     </div><!-- End of Column 1 -->
-                                    <div class="oj-med-1 oj-lg-1 oj-xl-1 left"><div class="divider"></div></div>
-                                    <div class="oj-med-6 oj-lg-6 oj-xl-6 right">
+                                    <div class="oj-md-1 oj-lg-1 oj-xl-1 left"><div class="divider"></div></div>
+                                    <div class="oj-md-6 oj-lg-6 oj-xl-6 right">
                                         <div class="checkboxWrapper">
                                             <label id="mainlabelid">MORE OPTIONS</label>
                                             <div id="checkboxSetId" aria-labelledby="mainlabelid"
@@ -200,7 +200,7 @@
                     </div>
           </div>
         </script>      
-        <div data-bind="template: {name: medium() ? 'med_lg_xl_template' : 'sm_template'}"></div>
+        <div data-bind="template: {name: medium() ? 'md_lg_xl_template' : 'sm_template'}"></div>
             
     </div><!-- end of Right side -->
         

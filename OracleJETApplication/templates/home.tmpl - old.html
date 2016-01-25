@@ -2,13 +2,13 @@
     <div class="oj-sm-12 oj-md-12 oj-lg-10 oj-xl-10 right">
 
         <!-- large template -->
-        <script type="text/html" id="med_lg_xl_template">
+        <script type="text/html" id="md_lg_xl_template">
 
               <div class="oj-row">
-                  <div class="oj-col oj-med-12 oj-lg-12 oj-xl-12 sectionheader">
+                  <div class="oj-col oj-md-12 oj-lg-12 oj-xl-12 sectionheader">
                       <h1><span data-bind="css: iconClass"></span><span data-bind="text: sectionName" class="sectionName"></span></h1>
                   </div>
-                  <div class="oj-col oj-med-12 oj-lg-12 oj-xl-12">
+                  <div class="oj-col oj-md-12 oj-lg-12 oj-xl-12">
                           <div id="tabs" data-bind="ojComponent:{component: 'ojTabs'}">
                               <!-- tab bar -->
                               <ul>
@@ -90,7 +90,7 @@
                     </div>
           </div>
         </script>      
-        <div data-bind="template: {name: medium() ? 'med_lg_xl_template' : 'sm_template'}"></div>
+        <div data-bind="template: {name: medium() ? 'md_lg_xl_template' : 'sm_template'}"></div>
             
     </div><!-- end of Right side -->
         

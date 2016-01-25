@@ -1,6 +1,6 @@
 <!-- large template -->
-<script type="text/html" id="med_lg_xl_template">
-    <div class="oj-col oj-med-12 oj-lg-12 oj-xl-12 page-header">
+<script type="text/html" id="md_lg_xl_template">
+    <div class="oj-col oj-md-12 oj-lg-12 oj-xl-12 page-header">
         <h1>
             <span data-bind="css: pageHeadingIconClass"></span>
             <span data-bind="text: pageHeading"></span>
@@ -8,7 +8,7 @@
         <span data-bind="text: pageSubNavigation"></span>
         <a href="#">change</a>
     </div>
-    <div class="oj-col oj-med-12 oj-lg-12 oj-xl-12">
+    <div class="oj-col oj-md-12 oj-lg-12 oj-xl-12">
         <div id="form-container" class="oj-form">
             <div class="oj-col oj-lg-8 oj-xl-8 left leftColPeople">
                 <div class="oj-row">
@@ -56,7 +56,7 @@
                 </div>
                 <!-- End of column -->
 
-                <div class="oj-med-5 oj-lg-5 oj-xl-5 left">
+                <div class="oj-md-5 oj-lg-5 oj-xl-5 left">
                     <div class="checkboxWrapper">
                         <label id="mainlabelid">STATUS</label>
                         <div id="checkboxSetId" aria-labelledby="mainlabelid" data-bind="ojComponent: {
@@ -80,10 +80,10 @@
                     <!-- checkBox Wrapper -->
                 </div>
                 <!-- End of Column 1 -->
-                <div class="oj-med-1 oj-lg-1 oj-xl-1 left">
+                <div class="oj-md-1 oj-lg-1 oj-xl-1 left">
                     <div class="divider"></div>
                 </div>
-                <div class="oj-med-6 oj-lg-6 oj-xl-6 right">
+                <div class="oj-md-6 oj-lg-6 oj-xl-6 right">
                     <div class="checkboxWrapper">
                         <label id="mainlabelid">MORE OPTIONS</label>
                         <div id="checkboxSetId" aria-labelledby="mainlabelid" data-bind="ojComponent: {
@@ -132,4 +132,4 @@
 
 </script>
 
-<div data-bind="template: {name: $root.medium() ? 'med_lg_xl_template' : 'sm_template'}"></div>
+<div data-bind="template: {name: $root.medium() ? 'md_lg_xl_template' : 'sm_template'}"></div>

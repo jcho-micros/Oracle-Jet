@@ -92,6 +92,9 @@ require(['ojs/ojcore',
             var mdQuery = oj.ResponsiveUtils.getFrameworkQuery(oj.ResponsiveUtils.FRAMEWORK_QUERY_KEY.MD_UP);
             self.medium = oj.ResponsiveKnockoutUtils.createMediaQueryObservable(mdQuery);
 
+            var lgQuery = oj.ResponsiveUtils.getFrameworkQuery(oj.ResponsiveUtils.FRAMEWORK_QUERY_KEY.LG_UP);
+            self.large = oj.ResponsiveKnockoutUtils.createMediaQueryObservable(lgQuery);
+
             var appNavData = [
             {
                 name: 'Home',
@@ -138,7 +141,7 @@ require(['ojs/ojcore',
                     data.value = 'home';
                 }
                 // Only go for user action events
-                if ('ojAppNav2' === event.target.id && event.originalEvent) {
+                if (('app-header-mobile-nav' || 'app-header-desktop-nav') === event.target.id && event.originalEvent) {
                     self.router.go(data.value);
                 }
             };
