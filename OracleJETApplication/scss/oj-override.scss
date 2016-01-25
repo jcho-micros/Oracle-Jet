@@ -108,7 +108,7 @@
 // $background1Color: #ffffff;
 // $background2Color: #f9f9f9;
 // $background3Color: #fcfdfe;
-$background4Color: #0c4a7e; 
+$background4Color: #0c4a7e;
 // $background5Color: #fafafa;
 // $background6Color: #e4e8ea;
 $background7Color: #0572CE;
@@ -139,7 +139,10 @@ $borderHoverBottom: #0572ce;
 // ---------------------------------
 // 
 // font family 
-$fontFamily: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fontFamily: "Helvetica Neue",
+Helvetica,
+Arial,
+sans-serif;
 // 
 // font size
 // 
@@ -327,14 +330,13 @@ $headerLinkTextColor: $highlightColor;
 // 
 // panel defaults:
 // $panelBorderColor: $border1Color;
-$panelBgColor:     $background7Color;
+$panelBgColor: $background7Color;
 // $panelPadding:     .8571rem; // 12px when root is 14px
 // 
 // 
 // panel alternatives
-$panel1BgColor:     $background8Color;
+$panel1BgColor: $background8Color;
 $panel1BorderColor: $background9Color;
-
 $panel2BgColor: $background10Color;
 // 
 // most panels determine their border colors by changing 
@@ -371,7 +373,7 @@ $panel2BgColor: $background10Color;
 // 
 // the background variables below are for a header "container", 
 // like the title bar of a dialog or an accordion header
-$headerBgColor:         $background4Color;
+$headerBgColor: $background4Color;
 $headerNavColorSelected: $background7Color;
 $headerNavHoverBorder: $borderHoverBottom;
 $headerLogoText: $logoText;
@@ -383,7 +385,7 @@ $headerUserIcon: $imageDir + 'vatar_24px.png';
 //IPAD icon text
 $headerNavigationText: $customsmallFontSize;
 //Mobile icon size
-$headerNavigationMobileSize: $customsmallmobileFontSize; 
+$headerNavigationMobileSize: $customsmallmobileFontSize;
 // 
 // WINDOW
 // ---------------------------------------------------------------
@@ -669,15 +671,14 @@ $headerNavigationMobileSize: $customsmallmobileFontSize;
 // 
 // tabs content area
 // ---------------------------------
-$tabsPanelBgColor:      $panelBgColor;
+$tabsPanelBgColor: $panelBgColor;
 // $tabsPanelBorderColor:  $panelBorderColor;
 // 
 // individual tabs
 // ---------------------------------
-$tabsNavTextColor:                 $linkTextColor;
-$customtabsNavTextColor:    $customLinkTextColor;
+$tabsNavTextColor: $linkTextColor;
+$customtabsNavTextColor: $customLinkTextColor;
 $customSelectedtabsNavColor: $selectedtabText;
-
 // $tabsNavBorderRadius:              0;
 // 
 // selected
@@ -1336,14 +1337,16 @@ $vTabsPanelBorderColor: $panel1BorderColor;
 // $borderRadiusGeneration: slowOverride;
 // $boxShadowGeneration: slowOverride;
 // $gradientGeneration: slowOverride;
-// 
-
+//
 // Mobile First Setup
 // Custom Override CSS
 //Header CSS
-@font-face{font-family:'Alta Icon Font'; src:url("fonts/JetFW_iconfont.woff") format("woff");}
+@font-face {
+    font-family: 'Alta Icon Font';
+    src: url("fonts/JetFW_iconfont.woff") format("woff");
+}
 
-.app-header{
+.app-header {
     background-color: $headerBgColor;
 }
 
@@ -1351,13 +1354,13 @@ $vTabsPanelBorderColor: $panel1BorderColor;
     padding-top: 5px;
     padding-left: 10px;
 }
+
 .oj-navigationlist-horizontal:not(.oj-navigationlist-icon-only) .oj-navigationlist-item {
     padding-left: 0.472rem;
     padding-right: 0.472rem;
 }
 
-
-.appheader-logo-oracle{
+.appheader-logo-oracle {
     background-image: url($headerBGLogo);
     background-repeat: no-repeat;
     background-position: 5px 2px;
@@ -1366,7 +1369,8 @@ $vTabsPanelBorderColor: $panel1BorderColor;
     display: inline-block;
     vertical-align: middle;
 }
-.appheader-avatar{
+
+.appheader-avatar {
     background-image: url($headerUserIcon);
     background-repeat: no-repeat;
     width: 100%;
@@ -1374,9 +1378,10 @@ $vTabsPanelBorderColor: $panel1BorderColor;
     margin-right: 50px;
 }
 
-.oj-offcanvas-open{
-    background-color:$headerOffCanvas;
+.oj-offcanvas-open {
+    background-color: $headerOffCanvas;
 }
+
 //.appheader-appname{
 //    color: $headerLogoText;
 //    display: block;
@@ -1384,121 +1389,137 @@ $vTabsPanelBorderColor: $panel1BorderColor;
 //    margin-top: 14px;
 //    margin-left:5px;
 //}
-
 //Header Navigation Icon - Text
-.oj-navigationlist-item-icon{
-    color: $iconColor; 
+.oj-navigationlist-item-icon {
+    color: $iconColor;
 }
-.oj-navigationlist-horizontal .oj-navigationlist-divider{
+
+.oj-navigationlist-horizontal .oj-navigationlist-divider {
     border-color: $borderDivder;
 }
-.oj-navigationlist-item.oj-hover .oj-navigationlist-item-icon{
-    color: $iconColor; 
-}
-.oj-navigationlist-item.oj-selected{
-    background-color:$headerNavColorSelected;
-}
-.oj-button.oj-default.oj-button-half-chrome .oj-button-icon, .oj-button.oj-focus-only.oj-button-half-chrome .oj-button-icon, .oj-button-half-chrome .oj-button.oj-default .oj-button-icon, .oj-button-half-chrome .oj-button.oj-focus-only .oj-button-icon{
+
+.oj-navigationlist-item.oj-hover .oj-navigationlist-item-icon {
     color: $iconColor;
 }
-.oj-navigationlist-item.oj-selected .oj-navigationlist-item-icon{
+
+.oj-navigationlist-item.oj-selected {
+    background-color: $headerNavColorSelected;
+}
+
+.oj-button.oj-default.oj-button-half-chrome .oj-button-icon,
+.oj-button.oj-focus-only.oj-button-half-chrome .oj-button-icon,
+.oj-button-half-chrome .oj-button.oj-default .oj-button-icon,
+.oj-button-half-chrome .oj-button.oj-focus-only .oj-button-icon {
     color: $iconColor;
 }
-a.oj-navigationlist-item-content{
+
+.oj-navigationlist-item.oj-selected .oj-navigationlist-item-icon {
     color: $iconColor;
 }
-.oj-navigationlist-item.oj-hover:not(.oj-selected){
-    background-color:$headerNavColorSelected;
+
+a.oj-navigationlist-item-content {
+    color: $iconColor;
+}
+
+.oj-navigationlist-item.oj-hover:not(.oj-selected) {
+    background-color: $headerNavColorSelected;
     border-color: transparent;
 }
-.side-nav{
-    display: block;
-    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !important;
-    list-style-position: outside;
+
+.sidebar-left-nav {
     list-style-type: none;
     margin: 0;
     padding: 0.77778rem 0;
-    width: 100%;
+    border-top: solid 1px #ccc;
+    margin-top: 15px;
 }
-.side-nav li{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
+
 li {
     display: list-item;
     text-align: -webkit-match-parent;
 }
-.tbd{
+
+.tbd {
     height: 427px;
     width: 350px;
     background-color: #cccccc;
 }
+
 //General Styles
-body, html{
-    height:100%;
+body,
+html {
+    height: 100%;
+}
+
+//helper styles
+.full-height {
+    height: 100%;
 }
 
 //Header styles
-.page-header{
-    h1{
-        display:inline-block;
+.page-header {
+    h1 {
+        display: inline-block;
     }
 }
 
-html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack-icon-label):not(.oj-navigationlist-icon-only) .oj-navigationlist-item-icon{
-    margin-right:0;
+html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack-icon-label):not(.oj-navigationlist-icon-only) .oj-navigationlist-item-icon {
+    margin-right: 0;
 }
+
 //Vertical Tabs
-.oj-tabs.oj-tabs-vertical{
-    display:block !important;
+.oj-tabs.oj-tabs-vertical {
+    display: block !important;
 }
+
 .oj-tabs-vertical > .oj-tabs-nav-root {
     padding: 0;
     background-color: $vTabsPanelBgColor;
-    .oj-tabs-tab-content{
-        border-width:0 0 1px 0;
-        border-color:$vTabsPanelBorderColor;
+    .oj-tabs-tab-content {
+        border-width: 0 0 1px 0;
+        border-color: $vTabsPanelBorderColor;
     }
-    .oj-tabs-tab.oj-selected{
-        background-color:$vTabsPanelBgColor;
+    .oj-tabs-tab.oj-selected {
+        background-color: $vTabsPanelBgColor;
     }
-    li{
-        border:0 !important;
-        span{
-            color:$headerLinkTextColor;
+    li {
+        border: 0 !important;
+        span {
+            color: $headerLinkTextColor;
         }
-        &:active{
-              background-color: $vTabsPanelBgActiveColor;
+        &:active {
+            background-color: $vTabsPanelBgActiveColor;
         }
     }
 }
+
 //iCare
-#selected-title{
+#selected-title {
     background-color: $headerNavColorSelected;
     height: 20px;
     padding: 2%;
     width: 96%;
-    a{
-        color:$headerLinkTextColor;
-        text-decoration:none;
+    a {
+        color: $headerLinkTextColor;
+        text-decoration: none;
     }
 }
-.vertical-tabs > li{
-    border:0 0 1px 0;
+
+.vertical-tabs > li {
+    border: 0 0 1px 0;
 }
 
 //Media Query
 //Medium/ipad (UP)
 @media only screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
-    .page-area{
+    .page-area {
         padding-left: 1.072rem;
+        padding-top: 10px;
     }
     //Header
     .page-header > h1 {
         margin: 0;
     }
-
     .oj-selected {
         .oj-tabs-title {
             color: black;
@@ -1510,102 +1531,114 @@ html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack
     .page-sub-navigation {
         padding-left: 25px;
     }
-    #app-main-area{
-        padding:0 15px;
+    #app-main-area {
+        padding: 0 15px;
     }
-
 }
 
 //large/desktop (UP)
 @media only screen and (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-    .app-header-desktop{
-        padding:15px 10px 0 10px;
+    .app-header-desktop {
+        padding: 15px 10px 0 10px;
     }
-    .appheader-appname{
+    .appheader-appname {
         color: $headerLogoText;
-        font-size:12px;
-        display:inline-block;
+        font-size: 12px;
+        display: inline-block;
     }
-    .appheader-logo-oracle{
-        margin-bottom:10px;
+    .appheader-logo-oracle {
+        margin-bottom: 10px;
+    }
+    // Side Navigation
+    #sidebar-left {
+        border-right: 1px #ccc solid;
+        padding-top: 10px;
+    }
+    .sidebar-left-input {
+        width: 140px;
+    }
+    #sideNavigationContainer > div {
+        padding: 0 0 6px 0;
+    }
+    .sidebar-left-nav li a:not(.button) {
+        color: #0572ce;
+        font-size: 1.05em;
+        padding: 10px 5px 10px 25px;
+        display: block;
     }
 }
 
 //xLarge (UP)
-@media only screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 1) {
-
-}
+@media only screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 1) {}
 
 //Mobile (CAP)
 @media only screen and (min-device-width: 320px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
     //Header
-
     #ui-id-1 > li {
         border-bottom: 1px solid #585959;
     }
-    .oj-navigationlist-item-icon{
+    .oj-navigationlist-item-icon {
         font-size: $headerNavigationMobileSize !important;
     }
-    #mainCol{
-        padding:0;
+    #mainCol {
+        padding: 0;
     }
 }
+
 // MD IPad (CAP)
 @media only screen and (min-width: 768px) and (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1) {
     //Header
     //Icon padding Right to Text
-    html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack-icon-label):not(.oj-navigationlist-icon-only) .oj-navigationlist-item-icon{
-       margin-right:5px;
+    html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack-icon-label):not(.oj-navigationlist-icon-only) .oj-navigationlist-item-icon {
+        margin-right: 5px;
     }
     #ui-id-1 > li {
         border-bottom: 1px solid #585959;
     }
-    .oj-navigationlist-item-label{
+    .oj-navigationlist-item-label {
         font-size: $headerNavigationText;
     }
     //Tabs
-    .oj-tabs-tab{
+    .oj-tabs-tab {
         background-color: $tabsPanelBgColor;
-
     }
-//    .oj-tabs-tab.oj-selected .oj-tabs-title{
-//        color: $customSelectedtabsNavColor;
-//    }
+    //    .oj-tabs-tab.oj-selected .oj-tabs-title{
+    //        color: $customSelectedtabsNavColor;
+    //    }
     //Section Block
-    .sectionName{
-        padding-left:5px;
+    .sectionName {
+        padding-left: 5px;
     }
-    .oj-tabs-panel{
+    .oj-tabs-panel {
         border: 0px solid #cccccc;
         border-top: 1px solid #cccccc;
     }
 }
+
 // LG Desktop (CAP)
 @media only screen and (min-width: 1024px) and (max-width: 1279px) and (-webkit-min-device-pixel-ratio: 1) {
-    .oj-lg-justify-content-center{
+    .oj-lg-justify-content-center {
         width: 90%;
         margin-left: 25px;
     }
-//    .appheader-appname {
-//        color: $headerLogoText;
-//        display: block;
-//        text-align: left;
-//        margin-top: 17px;
-//        margin-left: 5px;
-//        font-size: .875rem;
-//    }
-
-    .navigationlist-item-icon{
+    //    .appheader-appname {
+    //        color: $headerLogoText;
+    //        display: block;
+    //        text-align: left;
+    //        margin-top: 17px;
+    //        margin-left: 5px;
+    //        font-size: .875rem;
+    //    }
+    .navigationlist-item-icon {
         font-size: $mediumFontSize;
     }
-    .oj-tabs-horizontal > .oj-tabs-nav-root .oj-tabs-tab{
-        border-width: 3px 0 0 0 ;
+    .oj-tabs-horizontal > .oj-tabs-nav-root .oj-tabs-tab {
+        border-width: 3px 0 0 0;
     }
     //Header
     .logoWrap {
         margin-top: 5px;
     }
-
     .grid-display.appheader-col {
         height: 50px;
     }
@@ -1613,14 +1646,10 @@ html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack
         margin-top: 17px;
     }
     //Right Side User Area
-    button#menuButton > span.oj-button-text{
+    button#menuButton > span.oj-button-text {
         color: $background1Color;
     }
-
     // Side Navigation
-    #sideNavigationContainer{
-        height:100%;
-    }
     div#login---row {
         border-right: 1px solid #cccccc;
         height: 100%;
@@ -1632,28 +1661,21 @@ html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack
         padding-left: 20px;
         width: 90%;
     }
-    .login---text{
+    .login---text {
         width: 100%;
     }
-    .login---input > input[type="text"]{
+    .login---input > input[type="text"] {
         width: 85%;
     }
-    .side-nav li a:not(.button) {
-        color: #0572ce;
-        font-size: 1.05em;
-        padding: 10px 5px 10px 25px;
-        margin: 0 0 0 0;
+    .sideLink {
         width: 100%;
-        display: block;
-    }
-    .sideLink{
-        width:100%;
     }
     #global---sidenav {
         padding-right: 0;
         border-top: 1px solid #cccccc;
     }
-    #global---sidenav a:hover, #global---sidenav a:focus{
+    #global---sidenav a:hover,
+    #global---sidenav a:focus {
         background-color: #e4f0fa !important;
         border-left: 3px solid #0572ce;
         color: #0572ce !important;
@@ -1661,57 +1683,56 @@ html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack
         width: auto;
     }
     //Tabs
-    .oj-tabs-tab{
+    .oj-tabs-tab {
         background-color: $tabsPanelBgColor;
-
     }
-//    a.oj-tabs-title{
-//        color: $customtabsNavTextColor;
-//    }
-//    .oj-tabs-tab.oj-selected .oj-tabs-title{
-//        color: $customSelectedtabsNavColor;
-//    }
+    //    a.oj-tabs-title{
+    //        color: $customtabsNavTextColor;
+    //    }
+    //    .oj-tabs-tab.oj-selected .oj-tabs-title{
+    //        color: $customSelectedtabsNavColor;
+    //    }
     //Section Block
-    .sectionName{
-        padding-left:5px;
+    .sectionName {
+        padding-left: 5px;
     }
-    .oj-tabs-panel{
+    .oj-tabs-panel {
         border: 0px solid #cccccc;
         border-top: 1px solid #cccccc;
     }
 }
+
 // XL Desktop (CAP)
 @media only screen and (min-width: 1280px) and (max-width: 1900px) and (-webkit-min-device-pixel-ratio: 1) {
     //Icon padding Right to Text
-    html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack-icon-label):not(.oj-navigationlist-icon-only) .oj-navigationlist-item-icon{
-       margin-right:0; 
-       font-size:18px;
+    html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack-icon-label):not(.oj-navigationlist-icon-only) .oj-navigationlist-item-icon {
+        margin-right: 0;
+        font-size: 18px;
     }
-    ul#ui-id-1{
-       background-color: #333333; 
+    ul#ui-id-1 {
+        background-color: #333333;
     }
-//    .demo-appheader-appname {
-//        color: #ffffff;
-//        margin-left: 120px;
-//    }
-//    .demo-appheader-appname-block {
-//        display: none;
-//        margin-left: 4px;
-//        vertical-align: 2px;
-//    }
+    //    .demo-appheader-appname {
+    //        color: #ffffff;
+    //        margin-left: 120px;
+    //    }
+    //    .demo-appheader-appname-block {
+    //        display: none;
+    //        margin-left: 4px;
+    //        vertical-align: 2px;
+    //    }
     //Main Div height
-//    #mainCol{
-//        min-height: 1000px;
-//    }
+    //    #mainCol{
+    //        min-height: 1000px;
+    //    }
     //Router Div
-    .routerDiv{
+    .routerDiv {
         min-height: 1000px;
     }
     //Header
     .logoWrap {
         margin-top: 5px;
     }
-
     .grid-display.appheader-col {
         height: 50px;
     }
@@ -1719,18 +1740,17 @@ html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack
         margin-top: 17px;
     }
     //Right Side User Area
-    button#menuButton > span.oj-button-text{
+    button#menuButton > span.oj-button-text {
         color: $background1Color;
     }
-    .oj-button.oj-hover{
-       background-color: $background7Color;
-       border: 0px solid transparent;
+    .oj-button.oj-hover {
+        background-color: $background7Color;
+        border: 0px solid transparent;
     }
-
     // Side Navigation
-    #sideNavigationContainer{
-        height:100%;
-    }
+    //    #sideNavigationContainer{
+    //        height:100%;
+    //    }
     div#login---row {
         border-right: 1px solid #cccccc;
         height: 100%;
@@ -1743,25 +1763,26 @@ html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack
         padding-left: 20px;
         width: 90%;
     }
-    .login---input > input[type="text"]{
+    .login---input > input[type="text"] {
         width: 85%;
     }
-    .side-nav li a:not(.button) {
-        color: #0572ce;
-        font-size: 1.05em;
-        padding: 10px 5px 10px 25px;
-        margin: 0 0 0 0;
+    //    .sidebar-left-nav li a:not(.button) {
+    //        color: #0572ce;
+    //        font-size: 1.05em;
+    //        padding: 10px 5px 10px 25px;
+    //        margin: 0 0 0 0;
+    //        width: 100%;
+    //        display: block;
+    //    }
+    .sideLink {
         width: 100%;
-        display: block;
-    }
-    .sideLink{
-        width:100%;
     }
     #global---sidenav {
         padding-right: 0;
         border-top: 1px solid #cccccc;
     }
-    #global---sidenav a:hover, #global---sidenav a:focus{
+    #global---sidenav a:hover,
+    #global---sidenav a:focus {
         background-color: #e4f0fa !important;
         border-left: 3px solid #0572ce;
         color: #0572ce !important;
@@ -1769,21 +1790,20 @@ html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack
         width: auto;
     }
     //Tabs
-    .oj-tabs-tab{
+    .oj-tabs-tab {
         background-color: $tabsPanelBgColor;
-
     }
-//    a.oj-tabs-title{
-//        color: $customtabsNavTextColor;
-//    }
-//    .oj-tabs-tab.oj-selected .oj-tabs-title{
-//        color: $customSelectedtabsNavColor;
-//    }
+    //    a.oj-tabs-title{
+    //        color: $customtabsNavTextColor;
+    //    }
+    //    .oj-tabs-tab.oj-selected .oj-tabs-title{
+    //        color: $customSelectedtabsNavColor;
+    //    }
     //Section Block
-    .sectionName{
-        padding-left:5px;
+    .sectionName {
+        padding-left: 5px;
     }
-    .oj-tabs-panel{
+    .oj-tabs-panel {
         border: 0px solid #cccccc;
         border-top: 1px solid #cccccc;
     }
@@ -1793,26 +1813,26 @@ html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack
         margin-top: 10px;
         position: absolute;
     }
-    .searchForm{
-        border-bottom:1px solid #cccccc;
-        padding-bottom:25px;
+    .searchForm {
+        border-bottom: 1px solid #cccccc;
+        padding-bottom: 25px;
         padding-top: 10px;
     }
-    .divider{
+    .divider {
         border-left: 1px solid #cccccc;
         display: block;
         height: 100px;
     }
-    .checkboxWrapper{
+    .checkboxWrapper {
         padding: 10px;
     }
-    .resultWrapper{
+    .resultWrapper {
         width: 100%;
         height: 300px;
-        background-color:#cccccc;
+        background-color: #cccccc;
     }
-    .bottomRow{
-        bottom-border:1px solid #cccccc;
+    .bottomRow {
+        bottom-border: 1px solid #cccccc;
         height: 5px;
     }
 }
