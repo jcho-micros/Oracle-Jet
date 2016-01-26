@@ -76,15 +76,58 @@
 
     </div>
 
-    <div class="submitWrapper left">
-        <input id="submit" type="submit" data-bind="click: buttonClick,
+    <div class="submitWrapper">
+        <input id="submit" type="submit" data-bind="click: toggleSections,
                                                  ojComponent: {component: 'ojButton', label: 'Search', icons: { start: 'fa fa-search'} }" />
 
-        <input id="reset" type="reset" data-bind="click: buttonClick,
+        <input id="reset" type="reset" data-bind="click: toggleSections,
                                               ojComponent: {component: 'ojButton', label: 'Clear'}" />
     </div>
-    <div class="resultWrapper">
+    <div class="resultWrapper" data-bind="visible: sectionsState">
+        <ul id="listview" contextmenu="menu1" data-bind="ojComponent: {component: 'ojListView', data: dataSource, item: {template: 'server_template'}, selectionMode: 'single'}">
+        </ul>
 
+        <script type="text/html" id="server_template">
+            <li data-bind="attr: {id: $data['firstName']}">
+                <div class="oj-row">
+                    <div class="oj-lg-2 oj-md-2 oj-sm-3 oj-col" style="max-width:70px;padding-bottom:5px">
+                        <img data-bind="attr: {src: 'css/images/'+ firstName + '-' + lastName +'.png', alt: firstName + lastName}" />
+                    </div>
+                    <div class="oj-lg-10 oj-md-10 oj-sm-9 oj-col">
+                        <div class="oj-row row">
+                            <div class="oj-lg-4 oj-md-4 oj-sm-12 oj-col">
+                                <span class="data"><span data-bind="text: firstName + ' ' +lastName"></span></span>
+                            </div>
+                            <div class="oj-lg-4 oj-md-4 oj-sm-12 oj-col">
+                                <span class="data"><b>Home Store: </b><span data-bind="text: homeStore"></span></span>
+                            </div>
+                            <div class="oj-lg-4 oj-md-4 oj-sm-12 oj-col">
+                                <span class="data"><b>Hire Date: </b><span data-bind="text: hireDate"></span></span>
+                            </div>
+                        </div>
+                        <div class="oj-row">
+                            <div class="oj-lg-4 oj-md-4 oj-sm-12 oj-col">
+                                <span class="data"><b>Status: </b><span data-bind="text: status"></span></span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </script>
+
+        <div id='menu-container'>
+            <ul id="menu1" style="display:none" data-bind="ojComponent: {component: 'ojMenu', select: menuItemSelect}">
+                <li id="action1">
+                    <a href="#">
+                        <span class="oj-menu-item-icon demo-icon-font"></span> Action
+                    </a>
+                </li>
+            </ul>
+            <p>Last selected menu item:
+                <span id="results" class="italic" style="font-weight:bold" data-bind='text: selectedMenuItem'></span>
+            </p>
+        </div>
 
     </div>
 </div>
