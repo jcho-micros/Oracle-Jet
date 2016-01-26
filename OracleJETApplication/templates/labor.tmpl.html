@@ -4,23 +4,23 @@
         <div id="selected-title" data-bind="click: hideSections">
             <a href="#" data-bind="text:currentSection"></a>
         </div>
+
         <div id="tabs" data-bind="ojComponent:{component: 'ojTabs',  orientation: 'vertical'}">
             <!-- tab bar -->
             <ul class="vertical-tabs" data-bind="visible: sectionsState, foreach: dataTabSource">
                 <li data-bind="attr: {id: id}, click: $parent.selectedSection"><span data-bind="text:name"></span></li>
             </ul>
-            <h2 data-bind="text: currentSection"></h2>
             <!-- tab contents -->
             <!-- ko foreach: dataTabSource -->
-                <div data-bind="attr: {id: 'tab-' + id}">
-                    <div data-bind="ojModule: {
+            <div data-bind="attr: {id: 'tab-' + id}">
+                <h2><span data-bind="text: $parent.location"></span> <span data-bind="text: $parent.currentSection"></span></h2>
+                <div data-bind="ojModule: {
                             name: 'labor/' + fileNameJs,
                             viewName: 'labor/' + fileName + '-small'}">
-                    </div>
                 </div>
+            </div>
             <!-- /ko -->
         </div>
-
     </div>
 </script>
 
@@ -33,7 +33,7 @@
         </h1>
         <span class="page-sub-navigation">
             <span data-bind="text: pageSubNavigation"></span>
-            <a href="#">change</a>
+        <a href="#">change</a>
         </span>
     </div>
     <div id="tabs" data-bind="ojComponent:{component: 'ojTabs'}">
@@ -44,15 +44,16 @@
 
         <!-- tab contents -->
         <!-- ko foreach: dataTabSource -->
-            <div data-bind="attr: {id: 'tab-' + id}">
-                <div data-bind="ojModule: {
+        <div data-bind="attr: {id: 'tab-' + id}">
+            <h2><span data-bind="text: $parent.location"></span> <span data-bind="text: $parent.currentSection"></span></h2>
+            <div data-bind="ojModule: {
                             name: 'labor/' + fileNameJs,
                             viewName: 'labor/' + fileName + '-large'}">
-                </div>
             </div>
-            <!-- /ko -->
+        </div>
+        <!-- /ko -->
     </div>
-    <h2 data-bind="text: currentSection"></h2>
+
 </script>
 
 <div data-bind="template: {name: $root.medium() ? 'md_lg_xl_template' : 'sm_template'}"></div>

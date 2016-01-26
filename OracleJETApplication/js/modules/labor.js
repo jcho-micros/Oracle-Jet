@@ -6,12 +6,11 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojtabs'
         self.pageHeading = ko.observable("Labor");
         self.pageHeadingIconClass = ko.observable('fa fa-briefcase');
         self.organizationName = ko.observable("Micros");
-        self.level1 = ko.observable("level1");
-        self.level2 = ko.observable("level2");
-        self.location = ko.observable("North East");
+        self.region = ko.observable("South East");
+        self.location = ko.observable("Atlanta");
 
         self.pageSubNavigation = ko.computed(function() {
-            return self.organizationName() + " | " + self.level1() + " | " + self.level2() + " | " + self.location();
+            return self.organizationName() + " | " + self.region() + " | " + self.location();
         }, self);
 
         var appTabData = [
