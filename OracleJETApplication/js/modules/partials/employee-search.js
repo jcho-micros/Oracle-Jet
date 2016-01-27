@@ -7,8 +7,7 @@ define([
     'ojs/ojcheckboxset',
     'ojs/ojinputtext',
     'ojs/ojselectcombobox',
-    'ojs/ojradioset',
-    'promise', 'ojs/ojlistview', 'ojs/ojdatacollection-common', 'ojs/ojmenu'
+    'ojs/ojradioset', 'promise', 'ojs/ojlistview'
 ], function (ko, oj) {
 
     function peopleContentViewModel() {
@@ -34,52 +33,6 @@ define([
         self.val = ko.observableArray(["CH"]);
         //Check Box Observable Default
         self.currentStatus = ko.observable();
-
-        var data = [{
-                firstName: 'Kathryn',
-                lastName: 'Jone',
-                homeStore: 'Home Store',
-                hireDate: '4/15/2015',
-                status: 'Active'
-            },
-            {
-                firstName: 'John',
-                lastName: 'Doe',
-                homeStore: 'Home Store',
-                hireDate: '4/15/2015',
-                status: 'Active'
-            },
-            {
-                firstName: 'Eric',
-                lastName: 'Gordon',
-                homeStore: 'Home Store',
-                hireDate: '4/15/2015',
-                status: 'Active'
-            },
-            {
-                firstName: 'Kathryn',
-                lastName: 'Jone',
-                homeStore: 'Home Store',
-                hireDate: '4/15/2015',
-                status: 'Active'
-            },
-            {
-                firstName: 'Kathryn',
-                lastName: 'Jone',
-                homeStore: 'Home Store',
-                hireDate: '4/15/2015',
-                status: 'Active'
-            }
-               ]
-        self.selectedMenuItem = ko.observable("(None selected yet)");
-
-        self.menuItemSelect = function (event, ui) {
-            var item = $('#listview').ojListView('option', "currentItem");
-            self.selectedMenuItem("Action performed on " + item);
-        };
-        self.dataSource = new oj.ArrayTableDataSource(data, {
-            idAttribute: 'name'
-        });
     }
 
     return peopleContentViewModel;
