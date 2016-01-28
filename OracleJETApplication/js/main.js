@@ -63,7 +63,8 @@ require(['ojs/ojcore',
     'ojs/ojnavigationlist',
     'ojs/ojtabs',
     'ojs/ojtable',
-    'ojs/ojbutton'
+    'ojs/ojbutton',
+    'text'
 ], // add additional JET component modules as needed
     function (oj, ko, $) // this callback gets executed when all required modules are loaded
     {
@@ -85,7 +86,7 @@ require(['ojs/ojcore',
             },
             'inventory-management': {
                 label: 'Inventory Management',
-                value: 'Inventory Management'
+                value: 'inventory-management'
             },
             'icare': {
                 label: 'iCare',
@@ -93,7 +94,7 @@ require(['ojs/ojcore',
             },
             'reports-charts': {
                 label: 'Reports & Charts',
-                value: 'Reports & Charts'
+                value: 'reports-charts'
             },
             'enterprise': {
                 label: 'Enterprise',

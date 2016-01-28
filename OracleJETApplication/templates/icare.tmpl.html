@@ -1,24 +1,39 @@
 <!-- small template -->
 <script type="text/html" id="sm_template">
-    <div id="tabs-container">
-        <div id="selected-title" data-bind="click: hideSections">
-            <a href="#" data-bind="text:currentSection"></a>
+     <div class="oj-col oj-md-12 oj-lg-12 oj-xl-12 page-header">
+        <h1>
+            <span data-bind="css: pageHeadingIconClass"></span>
+            <span data-bind="text: pageHeading"></span>
+        </h1>
+        <span class="page-sub-navigation">
+            <span data-bind="text: pageSubNavigation"></span>
+        <a href="#">change</a>
+        </span>
+    </div>
+    <div class="oj-xl-10 oj-lg-10 oj-md-10 oj-sm-12 oj-col" data-bind="if: router.stateId(), click:toggleSections">
+        <div class="oj-panel demo-page-content-area" data-bind="with: router.currentState()">
+            <div id="currentPage" class="oj-header-border" data-bind="text: label"></div>
         </div>
-        <div id="tabs" data-bind="ojComponent:{component: 'ojTabs',  orientation: 'vertical'}">
-            <!-- tab bar -->
-            <ul class="vertical-tabs" data-bind="visible: sectionsState, foreach: dataTabSource">
-                <li data-bind="attr: {id: id}, click: $parent.selectedSection"><span data-bind="text:name"></span></li>
-            </ul>
+    </div>
+    <div class="oj-row">
+        <div class="oj-xl-2 oj-lg-2 oj-md-2 oj-sm-12 oj-col" data-bind="visible: sectionsState">
+            <div id="tabs" data-bind="ojComponent: {component: 'ojNavigationList', selection: router.stateId(), beforeSelect: selectHandler, drillMode: 'none'}">
+                <ul data-bind="foreach: router.states">
+                    <li data-bind="attr: {id: id}, click: $parent.toggleSections">
+                        <a data-bind="text: label"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="oj-xl-10 oj-lg-10 oj-md-10 oj-sm-12 oj-col" data-bind="if: router.stateId()">
+            <div class="oj-panel demo-page-content-area" data-bind="with: router.currentState()">
+                <h2 id="currentPage" class="oj-header-border" data-bind="text: label"></h2>
 
-            <!-- tab contents -->
-            <!-- ko foreach: dataTabSource -->
-                <div data-bind="attr: {id: 'tab-' + id}">
-                    <div data-bind="ojModule: {
-                            name: 'icare/' + fileNameJs,
-                            viewName: 'icare/' + fileName + '-small'}">
-                    </div>
+                <div data-bind="ojModule: {
+                            name: 'icare/' + value,
+                            viewName: 'icare/' + value +'/' + value + '-small'}">
                 </div>
-            <!-- /ko -->
+            </div>
         </div>
     </div>
 </script>
@@ -35,21 +50,27 @@
         <a href="#">change</a>
         </span>
     </div>
-    <div id="tabs" data-bind="ojComponent:{component: 'ojTabs'}">
-        <!-- tab bar -->
-        <ul data-bind="foreach: dataTabSource">
-            <li data-bind="attr: {id: id}, click: $parent.selectedSection"><span data-bind="text:name"></span></li>
-        </ul>
 
-        <!-- tab contents -->
-        <!-- ko foreach: dataTabSource -->
-            <div data-bind="attr: {id: 'tab-' + id}">
+    <div class="oj-row">
+        <div class="oj-xl-2 oj-lg-2 oj-md-2 oj-sm-12 oj-col">
+            <div id="tabs" data-bind="ojComponent: {component: 'ojNavigationList', selection: router.stateId(), beforeSelect: selectHandler, drillMode: 'none'}">
+                <ul data-bind="foreach: router.states">
+                    <li data-bind="attr: {id: id}">
+                        <a data-bind="text: label"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="oj-xl-10 oj-lg-10 oj-md-10 oj-sm-12 oj-col" data-bind="if: router.stateId()">
+            <div class="oj-panel demo-page-content-area" data-bind="with: router.currentState()">
+                <h2 id="currentPage" class="oj-header-border" data-bind="text: label"></h2>
+
                 <div data-bind="ojModule: {
-                            name: 'icare/' + fileNameJs,
-                            viewName: 'icare/' + fileName + '-large'}">
+                            name: 'icare/' + value,
+                            viewName: 'icare/' + value +'/' + value + '-large'}">
                 </div>
             </div>
-        <!-- /ko-->
+        </div>
     </div>
 </script>
 

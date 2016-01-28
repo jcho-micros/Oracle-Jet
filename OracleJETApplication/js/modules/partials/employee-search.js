@@ -21,10 +21,10 @@ define([
             self.sectionsState(!self.sectionsState());
         };
 
-//        self.buttonClick = function (data, event) {
-//            self.clickedButton(event.currentTarget.id);
-//            return true;
-//        }
+        self.buttonClick = function (data, event) {
+            self.clickedButton(event.currentTarget.id);
+            return true;
+        }
 
         self._HELP_SOURCE = "http://www.oracle.com";
         self._HELP_DEF = "your custom help definition here";

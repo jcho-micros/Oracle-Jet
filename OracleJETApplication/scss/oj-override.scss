@@ -115,7 +115,9 @@ $background7Color: #0572CE;
 $background8Color: #333333;
 $background9Color: #000000;
 $background10Color: #666666;
+$background11Color: #045fab;
 $highlightColor: #ffffff;
+
 // 
 // border colors
 // ---------------------------------
@@ -689,6 +691,10 @@ $customSelectedtabsNavColor: $selectedtabText;
 // (or on the start side when the tabs are vertical)
 // $tabsNavAccentBorderColorSelected: $interaction1Color;
 // $tabsNavAccentBorderWidthSelected: 3px;
+//Tabs
+$tabsBgColor: $background7Color;
+$tabsBgColorSelected: $background11Color;
+
 //Vertical Tabs
 $vTabsPanelBgColor: $panel1BgColor;
 $vTabsPanelBgActiveColor: $panel2BgColor;
@@ -1403,7 +1409,7 @@ $vTabsPanelBorderColor: $panel1BorderColor;
 }
 
 .oj-navigationlist-item.oj-selected {
-    background-color: $headerNavColorSelected;
+    background-color: $tabsBgColorSelected;
 }
 
 .oj-button.oj-default.oj-button-half-chrome .oj-button-icon,
@@ -1446,7 +1452,9 @@ html {
      height:100%;
 }
 
-
+#tabs .oj-default{
+    background-color: $background7Color;
+}
 //helper styles
 .full-height {
     height: 100%;
