@@ -1,21 +1,4 @@
 @import "oj/v1.1.2/alta/_oj.alta.variables.scss";
-// 
-// This is the variable file for the Oracle Alta look and feel.
-// 
-// The variables in the file are (imperfectly) organized in some general categories
-// - LOGISTICAL: these variables are more logistical, for example 
-//       you can set the path to your image directory
-// - ABSTRACT: in general these "abstract" variables are not used directly
-//       in the widget files, rather they are referred to by 
-//       other variables.
-// - GENERAL: these variables are used broadly in the widget files. 
-//       Examples are text, link and icon colors.
-// - CATEGORY AND WIDGET: these variables are widget 
-//        or category specific, for example button or form control variables.
-// - OPTIMIZATIONS: these variables are for optimizations, for example they
-//       control things like whether to include certain classes in the output.
-// 
-// 
 // ---------------------------------------------------------------
 //  LOGISTICAL VARIABLES
 // ---------------------------------------------------------------
@@ -105,18 +88,13 @@
 // 
 // background colors
 // ---------------------------------
-// $background1Color: #ffffff;
-// $background2Color: #f9f9f9;
-// $background3Color: #fcfdfe;
-$background4Color: #0c4a7e;
-// $background5Color: #fafafa;
-// $background6Color: #e4e8ea;
-$background7Color: #0572CE;
-$background8Color: #333333;
-$background9Color: #000000;
-$background10Color: #666666;
-$background11Color: #045fab;
-$highlightColor: #ffffff;
+$white: #fff;
+$black: #000;
+$darkBlue: #0c4a7e;
+$lightBlue: #0572CE;
+$darkGray: #333333;
+$gray: #666666;
+$lightGray: #cccccc;
 
 // 
 // border colors
@@ -129,8 +107,9 @@ $highlightColor: #ffffff;
 // $border6Color:       #000000;
 // $border7Color:       #ffffff;
 // $border8Color:       #4f4f4f;
-$borderDivder: #0c4a7e;
-$borderHoverBottom: #0572ce;
+$borderDivder: $darkBlue;
+$borderHoverBottom: $lightBlue;
+
 // 
 // ---------------------------------------------------------------
 // GENERAL STYLING
@@ -180,9 +159,9 @@ $customsmallmobileFontSize: 1.25em;
 // $headerTextColor:       #252525;    
 // $contrastTextColor:     #ffffff;  
 // $textColorDisabled:     #9e9e9e; 
-$logoText: #ffffff;
-$iconColor: #ffffff;
-$tabText: #ffffff;
+$logoText: $white;
+$iconColor: $white;
+//$tabText: #ffffff;
 $selectedtabText: #333333;
 // 
 // link colors
@@ -191,7 +170,7 @@ $selectedtabText: #333333;
 // $linkTextColorVisited:  $linkTextColor; 
 // $linkTextColorDisabled: $textColorDisabled;
 $customLinkTextColor: #ffffff;
-$headerLinkTextColor: $highlightColor;
+$headerLinkTextColor: $white;
 // 
 // 
 // 
@@ -322,7 +301,7 @@ $headerLinkTextColor: $highlightColor;
 // ---------------------------------------------------------------
 // to remove background image use $bodyBgImage: none;
 // $bodyBgImage:   oj-image-url('texture.png');
-// $bodyBgColor:   $background1Color;
+// $bodyBgColor:   $darkBlue;
 // $bodyTextColor: $textColor;
 // 
 // 
@@ -332,14 +311,14 @@ $headerLinkTextColor: $highlightColor;
 // 
 // panel defaults:
 // $panelBorderColor: $border1Color;
-$panelBgColor: $background7Color;
+$panelBgColor: $lightBlue;
 // $panelPadding:     .8571rem; // 12px when root is 14px
 // 
 // 
 // panel alternatives
-$panel1BgColor: $background8Color;
-$panel1BorderColor: $background9Color;
-$panel2BgColor: $background10Color;
+$panel1BgColor: $darkGray;
+$panel1BorderColor: $black;
+$panel2BgColor: $gray;
 // 
 // most panels determine their border colors by changing 
 // the saturation/lightness of their background colors
@@ -375,12 +354,14 @@ $panel2BgColor: $background10Color;
 // 
 // the background variables below are for a header "container", 
 // like the title bar of a dialog or an accordion header
-$headerBgColor: $background4Color;
-$headerNavColorSelected: $background7Color;
+$appHeaderMobileBg:        $lightBlue;
+
+$headerBgColor: $darkBlue;
+$headerNavColorSelected: $lightBlue;
 $headerNavHoverBorder: $borderHoverBottom;
 $headerLogoText: $logoText;
-$headerOffCanvas: $background8Color;
-// $headerBgColorDisabled: $background5Color; 
+$headerOffCanvas: $darkGray;
+// $headerBgColorDisabled: $gray;
 // $headerBgImage:         null;
 $headerBGLogo: $imageDir + 'oracle-logo.png';
 $headerUserIcon: $imageDir + 'vatar_24px.png';
@@ -392,7 +373,7 @@ $headerNavigationMobileSize: $customsmallmobileFontSize;
 // WINDOW
 // ---------------------------------------------------------------
 // $windowBorderColor: $border3Color;
-// $windowBgColor:     $background2Color;
+// $windowBgColor:     $lightBlue;
 // 
 // DIALOG
 // ---------------------------------------------------------------
@@ -412,7 +393,7 @@ $headerNavigationMobileSize: $customsmallmobileFontSize;
 // ---------------------------------------------------------------
 // popups are sometimes called a "dropdown" or "inline selector"
 // $popupBorderColor:  $windowBorderColor;
-// $popupBgColor:      $background1Color;
+// $popupBgColor:      $darkBlue;
 // 
 // 
 // MENU
@@ -483,7 +464,7 @@ $headerNavigationMobileSize: $customsmallmobileFontSize;
 // form control states
 // ---------------------------------
 //default
-// $formControlBgColor:             $background3Color;
+// $formControlBgColor:             $darkGray;
 // $formControlValueColor:          $textColor; 
 // $formControlBorderColor:         $border4Color;
 // 
@@ -579,7 +560,7 @@ $headerNavigationMobileSize: $customsmallmobileFontSize;
 // button states
 // ---------------------------------
 // default
-// $buttonBgColor:                   $background6Color;
+// $buttonBgColor:                   $lightBlue;
 // $buttonTextColor:                 $primaryTextColor;
 // $buttonIconColor:                 $iconColorDefault;
 // $buttonBorderColor:               $border3Color;
@@ -692,17 +673,13 @@ $customSelectedtabsNavColor: $selectedtabText;
 // $tabsNavAccentBorderColorSelected: $interaction1Color;
 // $tabsNavAccentBorderWidthSelected: 3px;
 //Tabs
-$tabsBgColor: $background7Color;
-$tabsBgColorSelected: $background11Color;
+$tabsBgColor: $lightBlue;
+$tabsBgColorSelected: $lightBlue;
 
-//Vertical Tabs
-$vTabsPanelBgColor: $panel1BgColor;
-$vTabsPanelBgActiveColor: $panel2BgColor;
-$vTabsPanelBorderColor: $panel1BorderColor;
 // 
 // PROGRESSBAR
 // ---------------------------------------------------------------
-// $progressbarBgColor:      $background3Color;
+// $progressbarBgColor:      $darkGray;
 // $progressbarValueBgColor: $interaction1Color;
 // $progressbarBorderColor:  $border4Color;
 // 
@@ -726,12 +703,12 @@ $vTabsPanelBorderColor: $panel1BorderColor;
 // $trainBorderColorSelected:  $trainBgColorSelected;
 // 
 // visited
-// $trainBgColorVisited:       $background1Color;
+// $trainBgColorVisited:       $darkBlue;
 // $trainBorderColorVisited:   $trainBorderColorSelected;
 // $trainLabelColorVisited:    #72007C;
 // 
 // Connector
-// $trainConnectorBgColor:    $background4Color;
+// $trainConnectorBgColor:    $darkBlue;
 // $trainConnectorBgColorSelected: $interaction5Color;
 // 
 // the height of the line connector between buttons
@@ -799,8 +776,8 @@ $vTabsPanelBorderColor: $panel1BorderColor;
 // $dataGridCellTextColor:                     $textColor; 
 // Cells - Default
 // $dataGridCellBorderColor:                   $border5Color;
-// $dataGridCellBgColor:                       $background1Color;
-// $dataGridCellBandedBgColor:                 $background2Color;
+// $dataGridCellBgColor:                       $darkBlue;
+// $dataGridCellBandedBgColor:                 $lightBlue;
 // Cells - Hover
 // $dataGridCellBgColorHover:                  $interaction2Color;
 // Cells - Focus 
@@ -846,7 +823,22 @@ $vTabsPanelBorderColor: $panel1BorderColor;
 // 
 // NAVIGATIONLIST
 // ---------------------------------------------------------------
-// 
+$navigationListHeaderMobileBg:             $darkBlue;
+
+$navigationListMobileBg:                   $gray;
+$navigationListMobileBgSelected:           $lightGray;
+
+$navigationListMobileTextColor:            $white;
+$navigationListMobileTextColorSelected:    $white;
+
+$navigationListDesktopBg:                  $lightBlue;
+$navigationListDesktopBgSelected:          $white;
+$navigationListDesktopTextColorSelected:   $black;
+
+$navigationListBgColorHover:               $lightGray;
+
+$navigationListBorderColor:                $lightGray;
+
 // for text/icons navlist directly uses $link* and $iconColor* variables
 // 
 // states
@@ -896,10 +888,10 @@ $vTabsPanelBorderColor: $panel1BorderColor;
 // navigationList uses various $toolbar* and $tree* variables
 // 
 //sliding navigation list toolbar 
-// $navigationListToolbarBgColor:          $background5Color;
+// $navigationListToolbarBgColor:          $gray;
 // 
 //Hierarchical menu
-// $navigationListHierarchicalMenuBgColor: $background2Color;
+// $navigationListHierarchicalMenuBgColor: $lightBlue;
 // 
 // 
 // 
@@ -1065,7 +1057,7 @@ $vTabsPanelBorderColor: $panel1BorderColor;
 // 
 // default
 // $sliderThumbBorderColor:         #b2bcc4;
-// $sliderThumbBgColor: 	           $background1Color;
+// $sliderThumbBgColor: 	           $darkBlue;
 // $sliderBarBgColor:               $interaction5Color;
 // $sliderBarValueBgColor:           $interaction1Color;
 // 
@@ -1082,15 +1074,15 @@ $vTabsPanelBorderColor: $panel1BorderColor;
 //SWITCH
 // ---------------------------------------------------------------
 // DEFAULT
-// $switchTrackBgColor:                     $background3Color;
+// $switchTrackBgColor:                     $darkGray;
 // $switchTrackBorderColor:                 $border3Color;
-// $switchThumbBgColor:                     $background3Color;
+// $switchThumbBgColor:                     $darkGray;
 // $switchThumbBorderColor:                 #b2bcc4;
 // 
 // SELECTED
 // $switchTrackBgColorSelected:             $interaction1Color;
 // $switchTrackBorderColorSelected:         $switchTrackBgColorSelected;
-// $switchThumbBgColorSelected:             $background1Color;
+// $switchThumbBgColorSelected:             $darkBlue;
 // $switchThumbBorderColorSelected:         $switchThumbBgColorSelected;
 // 
 // HOVER
@@ -1171,9 +1163,9 @@ $vTabsPanelBorderColor: $panel1BorderColor;
 // 
 // background
 // ---------------------------------
-// $dvtComponentBgColor: $background1Color;
+// $dvtComponentBgColor: $darkBlue;
 // $dvtComponentBg2Color: #dddddd;
-// $dvtTooltipBgColor: $background2Color;
+// $dvtTooltipBgColor: $lightBlue;
 // 
 // border
 // ---------------------------------
@@ -1197,7 +1189,7 @@ $vTabsPanelBorderColor: $panel1BorderColor;
 // nbox
 // ---------------------------------
 // $dvtNBoxCellBgColor: #e5e5e5;
-// $dvtNBoxCellBgColorMinimized: $background4Color;
+// $dvtNBoxCellBgColorMinimized: $darkBlue;
 // $dvtNBoxDialogBorderColor: $border3Color;
 // 
 // thematic map
@@ -1222,16 +1214,16 @@ $vTabsPanelBorderColor: $panel1BorderColor;
 // $dvtTimelineMajorAxisLabelColor:       $formControlLabelColor;
 // $dvtTimelineMajorAxisSeparatorColor:   #bcc7d2;
 // $dvtTimelineMinorAxisSeparatorColor:   $dvtTimelineMajorAxisSeparatorColor;
-// $dvtTimelineMinorAxisBgColor:          $background2Color;
+// $dvtTimelineMinorAxisBgColor:          $lightBlue;
 // $dvtTimelineMinorAxisBorderColor:      $border2Color;
 // $dvtTimelineMinorAxisLabelColor:       $textColor;
 // 
 // $dvtTimelineOverviewBgColor:           #e6ecf3;
 // $dvtTimelineOverviewLabelColor:        $formControlLabelColor;
-// $dvtTimelineOverviewWindowBgColor:     $background1Color;
+// $dvtTimelineOverviewWindowBgColor:     $darkBlue;
 // $dvtTimelineOverviewWindowBorderColor: $border8Color;
 // 
-// $dvtTimelineSeriesBgColor:             $background2Color;
+// $dvtTimelineSeriesBgColor:             $lightBlue;
 // $dvtTimelineSeriesLabelColor:          $headerTextColor;
 // $dvtTimelineSeriesEmptyTextColor:      $textColor;
 // 
@@ -1361,11 +1353,6 @@ $vTabsPanelBorderColor: $panel1BorderColor;
     padding-left: 10px;
 }
 
-.oj-navigationlist-horizontal:not(.oj-navigationlist-icon-only) .oj-navigationlist-item {
-    padding-left: 0.472rem;
-    padding-right: 0.472rem;
-}
-
 .appheader-logo-oracle {
     background-image: url($headerBGLogo);
     background-repeat: no-repeat;
@@ -1388,28 +1375,56 @@ $vTabsPanelBorderColor: $panel1BorderColor;
     background-color: $headerOffCanvas;
 }
 
-//.appheader-appname{
-//    color: $headerLogoText;
-//    display: block;
-//    text-align: left;
-//    margin-top: 14px;
-//    margin-left:5px;
-//}
-//Header Navigation Icon - Text
-.oj-navigationlist-item-icon {
-    color: $iconColor;
+#app-header-desktop-nav, #app-header-mobile-nav{
+    &.oj-navigationlist-horizontal .oj-navigationlist-divider {
+        border-color: $borderDivder;
+    }
+    .oj-navigationlist-item{
+        &.oj-default{
+            background-color:$navigationListHeaderMobileBg;
+        }
+        &.oj-selected{
+            background-color: $tabsBgColorSelected;
+            border-width: 0 !important;
+        }
+        &.oj-hover:not(.oj-selected) {
+            background-color: $headerNavColorSelected;
+            border-color: transparent;
+        }
+        .oj-navigationlist-item-icon {
+                color: $iconColor;
+            }
+    }
+    a.oj-navigationlist-item-content {
+        color: $iconColor;
+    }
 }
-
-.oj-navigationlist-horizontal .oj-navigationlist-divider {
-    border-color: $borderDivder;
+.app-header-mobile-nav-title{
+    background-color: $appHeaderMobileBg;
+    padding: 0.8571rem !important;
+    color: $navigationListMobileTextColor;
 }
+.oj-navigationlist-item {
+    border-width:0 !important;
+    &.oj-default{
+         background-color: $navigationListMobileBg;
+         a.oj-navigationlist-item-content{
+             color: $navigationListMobileTextColor;
+         }
+    }
+    &.oj-selected {
+        background-color: $navigationListMobileBgSelected;
 
-.oj-navigationlist-item.oj-hover .oj-navigationlist-item-icon {
-    color: $iconColor;
-}
-
-.oj-navigationlist-item.oj-selected {
-    background-color: $tabsBgColorSelected;
+        a.oj-navigationlist-item-content{
+            color: $navigationListMobileTextColorSelected;
+        }
+    }
+    &.oj-hover:not(.oj-selected) {
+        background-color: $navigationListBgColorHover;
+        a.oj-navigationlist-item-content{
+            color: $navigationListMobileTextColorSelected;
+        }
+    }
 }
 
 .oj-button.oj-default.oj-button-half-chrome .oj-button-icon,
@@ -1417,24 +1432,6 @@ $vTabsPanelBorderColor: $panel1BorderColor;
 .oj-button-half-chrome .oj-button.oj-default .oj-button-icon,
 .oj-button-half-chrome .oj-button.oj-focus-only .oj-button-icon {
     color: $iconColor;
-}
-
-.oj-navigationlist-item.oj-selected .oj-navigationlist-item-icon {
-    color: $iconColor;
-}
-
-a.oj-navigationlist-item-content {
-    color: $iconColor;
-}
-
-.oj-navigationlist-item.oj-hover:not(.oj-selected) {
-    background-color: $headerNavColorSelected;
-    border-color: transparent;
-}
-
-li {
-    display: list-item;
-    text-align: -webkit-match-parent;
 }
 
 .tbd {
@@ -1452,9 +1449,6 @@ html {
      height:100%;
 }
 
-#tabs .oj-default{
-    background-color: $background7Color;
-}
 //helper styles
 .full-height {
     height: 100%;
@@ -1477,32 +1471,6 @@ html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack
     margin-right: 0;
 }
 
-//Vertical Tabs
-.oj-tabs.oj-tabs-vertical {
-    display: block !important;
-}
-
-.oj-tabs-vertical > .oj-tabs-nav-root {
-    padding: 0;
-    background-color: $vTabsPanelBgColor;
-    .oj-tabs-tab-content {
-        border-width: 0 0 1px 0;
-        border-color: $vTabsPanelBorderColor;
-    }
-    .oj-tabs-tab.oj-selected {
-        background-color: $vTabsPanelBgColor;
-    }
-    li {
-        border: 0 !important;
-        span {
-            color: $headerLinkTextColor;
-        }
-        &:active {
-            background-color: $vTabsPanelBgActiveColor;
-        }
-    }
-}
-
 //iCare
 #selected-title {
     background-color: $headerNavColorSelected;
@@ -1513,10 +1481,6 @@ html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack
         color: $headerLinkTextColor;
         text-decoration: none;
     }
-}
-
-.vertical-tabs > li {
-    border: 0 0 1px 0;
 }
 
 //Media Query
@@ -1533,19 +1497,34 @@ html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack
             margin: 0;
         }
     }
-    .oj-selected {
-        .oj-tabs-title {
-            color: black;
-        }
-    }
-    .oj-tabs-title {
-        color: $customtabsNavTextColor;
-    }
     .page-sub-navigation {
         padding-left: 25px;
     }
     #app-main-area {
         padding: 0 15px;
+    }
+    .oj-navigationlist-divider{
+        border-color:transparent !important;
+    }
+    .oj-navigationlist-item {
+        border-width: 3px 0 0 0 !important;
+        margin-right: 5px;
+        &:last-child{
+            margin: 0 1px 0 0;
+        }
+        &.oj-default{
+             background-color: $navigationListDesktopBg;
+        }
+        &.oj-selected {
+            background-color: $navigationListDesktopBgSelected;
+            border-width: 3px 1px 0 1px !important;
+            border-right-color: $navigationListBorderColor;
+            border-left-color: $navigationListBorderColor;
+
+            a.oj-navigationlist-item-content{
+                color: $navigationListDesktopTextColorSelected;
+            }
+        }
     }
 }
 
@@ -1596,9 +1575,9 @@ html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack
 //Mobile (CAP)
 @media only screen and (min-device-width: 320px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
     //Header
-    #ui-id-1 > li {
-        border-bottom: 1px solid #585959;
-    }
+//    #ui-id-1 > li {
+//        border-bottom: 1px solid #585959;
+//    }
     .oj-navigationlist-item-icon {
         font-size: $headerNavigationMobileSize !important;
     }
@@ -1614,19 +1593,9 @@ html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack
     html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack-icon-label):not(.oj-navigationlist-icon-only) .oj-navigationlist-item-icon {
         margin-right: 5px;
     }
-    #ui-id-1 > li {
-        border-bottom: 1px solid #585959;
-    }
     .oj-navigationlist-item-label {
         font-size: $headerNavigationText;
     }
-    //Tabs
-    .oj-tabs-tab {
-        background-color: $tabsPanelBgColor;
-    }
-    //    .oj-tabs-tab.oj-selected .oj-tabs-title{
-    //        color: $customSelectedtabsNavColor;
-    //    }
     //Section Block
     .sectionName {
         padding-left: 5px;
@@ -1639,206 +1608,152 @@ html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack
 
 // LG Desktop (CAP)
 @media only screen and (min-width: 1024px) and (max-width: 1279px) and (-webkit-min-device-pixel-ratio: 1) {
-    .oj-lg-justify-content-center {
-        width: 90%;
-        margin-left: 25px;
-    }
-    //    .appheader-appname {
-    //        color: $headerLogoText;
-    //        display: block;
-    //        text-align: left;
-    //        margin-top: 17px;
-    //        margin-left: 5px;
-    //        font-size: .875rem;
-    //    }
-    .navigationlist-item-icon {
-        font-size: $mediumFontSize;
-    }
-    .oj-tabs-horizontal > .oj-tabs-nav-root .oj-tabs-tab {
-        border-width: 3px 0 0 0;
-    }
-    //Header
-    .logoWrap {
-        margin-top: 5px;
-    }
-    .grid-display.appheader-col {
-        height: 50px;
-    }
-    div#ojAppNav2 {
-        margin-top: 17px;
-    }
-    //Right Side User Area
-    button#menuButton > span.oj-button-text {
-        color: $background1Color;
-    }
-    // Side Navigation
-    div#login---row {
-        border-right: 1px solid #cccccc;
-        height: 100%;
-        position: absolute;
-    }
-    div#login---wrap {
-        padding-bottom: 20px;
-        padding-top: 25px;
-        padding-left: 20px;
-        width: 90%;
-    }
-    .login---text {
-        width: 100%;
-    }
-    .login---input > input[type="text"] {
-        width: 85%;
-    }
-    .sideLink {
-        width: 100%;
-    }
-    #global---sidenav {
-        padding-right: 0;
-        border-top: 1px solid #cccccc;
-    }
-    #global---sidenav a:hover,
-    #global---sidenav a:focus {
-        background-color: #e4f0fa !important;
-        border-left: 3px solid #0572ce;
-        color: #0572ce !important;
-        padding-left: 22px !important;
-        width: auto;
-    }
-    //Tabs
-    .oj-tabs-tab {
-        background-color: $tabsPanelBgColor;
-    }
-    //    a.oj-tabs-title{
-    //        color: $customtabsNavTextColor;
-    //    }
-    //    .oj-tabs-tab.oj-selected .oj-tabs-title{
-    //        color: $customSelectedtabsNavColor;
-    //    }
-    //Section Block
-    .sectionName {
-        padding-left: 5px;
-    }
-    .oj-tabs-panel {
-        border: 0px solid #cccccc;
-        border-top: 1px solid #cccccc;
-    }
+
+//    .oj-tabs-horizontal > .oj-tabs-nav-root .oj-tabs-tab {
+//        border-width: 3px 0 0 0;
+//    }
+//    //Header
+//    .grid-display.appheader-col {
+//        height: 50px;
+//    }
+//    div#ojAppNav2 {
+//        margin-top: 17px;
+//    }
+//    //Right Side User Area
+//    button#menuButton > span.oj-button-text {
+//        color: $darkBlue;
+//    }
+//    // Side Navigation
+//    div#login---row {
+//        border-right: 1px solid #cccccc;
+//        height: 100%;
+//        position: absolute;
+//    }
+//    div#login---wrap {
+//        padding-bottom: 20px;
+//        padding-top: 25px;
+//        padding-left: 20px;
+//        width: 90%;
+//    }
+//    .login---text {
+//        width: 100%;
+//    }
+//    .login---input > input[type="text"] {
+//        width: 85%;
+//    }
+//    .sideLink {
+//        width: 100%;
+//    }
+//    #global---sidenav {
+//        padding-right: 0;
+//        border-top: 1px solid #cccccc;
+//    }
+//    #global---sidenav a:hover,
+//    #global---sidenav a:focus {
+//        background-color: #e4f0fa !important;
+//        border-left: 3px solid #0572ce;
+//        color: #0572ce !important;
+//        padding-left: 22px !important;
+//        width: auto;
+//    }
+//
+//    //Section Block
+//    .sectionName {
+//        padding-left: 5px;
+//    }
+//    .oj-tabs-panel {
+//        border: 0px solid #cccccc;
+//        border-top: 1px solid #cccccc;
+//    }
 }
 
 // XL Desktop (CAP)
 @media only screen and (min-width: 1280px) and (max-width: 1900px) and (-webkit-min-device-pixel-ratio: 1) {
     //Icon padding Right to Text
-    html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack-icon-label):not(.oj-navigationlist-icon-only) .oj-navigationlist-item-icon {
-        margin-right: 0;
-        font-size: 18px;
-    }
-    ul#ui-id-1 {
-        background-color: #333333;
-    }
-    //    .demo-appheader-appname {
-    //        color: #ffffff;
-    //        margin-left: 120px;
-    //    }
-    //    .demo-appheader-appname-block {
-    //        display: none;
-    //        margin-left: 4px;
-    //        vertical-align: 2px;
-    //    }
-    //Header
-    .logoWrap {
-        margin-top: 5px;
-    }
-    .grid-display.appheader-col {
-        height: 50px;
-    }
-    div#ojAppNav2 {
-        margin-top: 17px;
-    }
-    //Right Side User Area
-    button#menuButton > span.oj-button-text {
-        color: $background1Color;
-    }
-    .oj-button.oj-hover {
-        background-color: $background7Color;
-        border: 0px solid transparent;
-    }
-    // Side Navigation
-    //    #sideNavigationContainer{
-    //        height:100%;
-    //    }
-    div#login---row {
-        border-right: 1px solid #cccccc;
-        height: 100%;
-        width: 16%;
-        position: absolute;
-    }
-    div#login---wrap {
-        padding-bottom: 20px;
-        padding-top: 25px;
-        padding-left: 20px;
-        width: 90%;
-    }
-    .login---input > input[type="text"] {
-        width: 85%;
-    }
-    .sideLink {
-        width: 100%;
-    }
-    #global---sidenav {
-        padding-right: 0;
-        border-top: 1px solid #cccccc;
-    }
-    #global---sidenav a:hover,
-    #global---sidenav a:focus {
-        background-color: #e4f0fa !important;
-        border-left: 3px solid #0572ce;
-        color: #0572ce !important;
-        padding-left: 22px !important;
-        width: auto;
-    }
-    //Tabs
-    .oj-tabs-tab {
-        background-color: $tabsPanelBgColor;
-    }
-    //    a.oj-tabs-title{
-    //        color: $customtabsNavTextColor;
-    //    }
-    //    .oj-tabs-tab.oj-selected .oj-tabs-title{
-    //        color: $customSelectedtabsNavColor;
-    //    }
-    //Section Block
-    .sectionName {
-        padding-left: 5px;
-    }
-    .oj-tabs-panel {
-        border: 0px solid #cccccc;
-        border-top: 1px solid #cccccc;
-    }
-    //Section People
-    .addButton {
-        margin-left: 121px;
-        margin-top: 10px;
-        position: absolute;
-    }
-    .searchForm {
-        border-bottom: 1px solid #cccccc;
-        padding-bottom: 25px;
-        padding-top: 10px;
-    }
-    .divider {
-        border-left: 1px solid #cccccc;
-        display: block;
-        height: 100px;
-    }
-    .checkboxWrapper {
-        padding: 10px;
-    }
-    .resultWrapper {
-        width: 100%;
-        height: 300px;
-        background-color: #cccccc;
-    }
-    .bottomRow {
-        bottom-border: 1px solid #cccccc;
-        height: 5px;
-    }
+//    html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack-icon-label):not(.oj-navigationlist-icon-only) .oj-navigationlist-item-icon {
+//        margin-right: 0;
+//        font-size: 18px;
+//    }
+//
+//    //Header
+//    .grid-display.appheader-col {
+//        height: 50px;
+//    }
+//    div#ojAppNav2 {
+//        margin-top: 17px;
+//    }
+//    //Right Side User Area
+//    button#menuButton > span.oj-button-text {
+//        color: $darkBlue;
+//    }
+//    .oj-button.oj-hover {
+//        background-color: $lightBlue;
+//        border: 0px solid transparent;
+//    }
+//    div#login---row {
+//        border-right: 1px solid #cccccc;
+//        height: 100%;
+//        width: 16%;
+//        position: absolute;
+//    }
+//    div#login---wrap {
+//        padding-bottom: 20px;
+//        padding-top: 25px;
+//        padding-left: 20px;
+//        width: 90%;
+//    }
+//    .login---input > input[type="text"] {
+//        width: 85%;
+//    }
+//    .sideLink {
+//        width: 100%;
+//    }
+//    #global---sidenav {
+//        padding-right: 0;
+//        border-top: 1px solid #cccccc;
+//    }
+//    #global---sidenav a:hover,
+//    #global---sidenav a:focus {
+//        background-color: #e4f0fa !important;
+//        border-left: 3px solid #0572ce;
+//        color: #0572ce !important;
+//        padding-left: 22px !important;
+//        width: auto;
+//    }
+//    //Section Block
+//    .sectionName {
+//        padding-left: 5px;
+//    }
+//    .oj-tabs-panel {
+//        border: 0px solid #cccccc;
+//        border-top: 1px solid #cccccc;
+//    }
+//    //Section People
+//    .addButton {
+//        margin-left: 121px;
+//        margin-top: 10px;
+//        position: absolute;
+//    }
+//    .searchForm {
+//        border-bottom: 1px solid #cccccc;
+//        padding-bottom: 25px;
+//        padding-top: 10px;
+//    }
+//    .divider {
+//        border-left: 1px solid #cccccc;
+//        display: block;
+//        height: 100px;
+//    }
+//    .checkboxWrapper {
+//        padding: 10px;
+//    }
+//    .resultWrapper {
+//        width: 100%;
+//        height: 300px;
+//        background-color: #cccccc;
+//    }
+//    .bottomRow {
+//        bottom-border: 1px solid #cccccc;
+//        height: 5px;
+//    }
 }
