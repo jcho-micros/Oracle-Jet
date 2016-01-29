@@ -1,85 +1,82 @@
-define(['ojs/ojcore', 'knockout', 'ojs/ojtabs'
-   ], function (oj, ko) {
-    function laborContentViewModel() {
-        var self = this;
+define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', 'ojs/ojnavigationlist'],
+    function (oj, ko, $) {
+        /**
+         * The view model for the iCare Child router.
+         */
 
-        self.pageHeading = ko.observable("Labor");
-        self.pageHeadingIconClass = ko.observable('fa fa-briefcase');
-        self.organizationName = ko.observable("Micros");
-        self.region = ko.observable("South East");
-        self.location = ko.observable("Atlanta");
+        function laborContentViewModel() {
+            var self = this;
 
-        self.pageSubNavigation = ko.computed(function() {
-            return self.organizationName() + " | " + self.region() + " | " + self.location();
-        }, self);
+            //Child Router
+            this.router = undefined;
 
-        var appTabData = [
-            {
-                name: 'Overview',
-                id: 'overview',
-                url: '#',
-                fileNameJs: 'overview',
-                fileName: 'overview/overview'
-            },
-            {
-                name: 'Employees',
-                id: 'employees',
-                url: '#',
-                fileNameJs: 'employees',
-                fileName: 'employees/employees'
-            },
-            {
-                name: 'Schedules & Timecards',
-                id: 'schedules-timecards',
-                url: '#',
-                fileNameJs: 'schedules-timecards',
-                fileName: 'schedules-timecards/schedules-timecards'
-            },
-            {
-                name: 'Forecasting',
-                id: 'forecasting',
-                url: '#',
-                fileNameJs: 'forecasting',
-                fileName: 'forecasting/forecasting'
-            },
-            {
-                name: 'Payroll',
-                id: 'payroll',
-                url: '#',
-                fileNameJs: 'payroll',
-                fileName: 'payroll/payroll'
-            },
-            {
-                name: 'Analytics',
-                id: 'analytics',
-                url: '#',
-                fileNameJs: 'analytics',
-                fileName: 'analytics/analytics'
+            self.handleActivated = function (data) {
+                var parentRouter = data.valueAccessor().params;
+
+                this.router = parentRouter.createChildRouter('labortab').configure({
+                    'overview': {
+                        label: 'Overview',
+                        value: 'overview',
+                        isDefault: true
+                    },
+
+                    'employees': {
+                        label: 'Employees',
+                        value: 'employees'
+                    },
+
+                    'schedules-timecards': {
+                        label: 'Schedules & Timecards',
+                        value: 'schedules-timecards'
+                    },
+
+                    'forecasting': {
+                        label: 'Forecasting',
+                        value: 'forecasting'
+                    },
+
+                    'payroll': {
+                        label: 'Payroll',
+                        value: 'payroll'
+                    },
+
+                    'analytics': {
+                        label: 'Analytics',
+                        value: 'analytics'
+                    }
+                });
+                // Now that the router for this view exist, synchronise it with the URL
+                oj.Router.sync();
             }
-        ];
-        //current visible state of section, either true or false
-        self.sectionsState = ko.observable(false);
+            self.selectHandler = function (event, ui) {
+                if ('tabs' === event.target.id && event.originalEvent) {
+                    // Invoke go() with the selected item.
+                    self.router.go(ui.key);
+                }
+            }
+            self.dispose = function () {
+                this.router.dispose();
+                this.router = null;
+            }
+            self.pageHeading = ko.observable("Labor");
+            self.pageHeadingIconClass = ko.observable('fa fa-briefcase');
+            self.organizationName = ko.observable("Micros");
+            self.region = ko.observable("South East");
+            self.location = ko.observable("Atlanta");
 
-        //access array for Section display
-        self.dataTabSource = new oj.ArrayTableDataSource(appTabData, {
-            idAttribute: 'id'
-        });
+            self.pageSubNavigation = ko.computed(function() {
+                return self.organizationName() + " | " + self.region() + " | " + self.location();
+            }, self);
 
-        //Setting default values for currentSection name and currentSectionId Ids
-        self.currentSection = ko.observable('Overview');
-        self.currentSectionId = ko.observable('overview');
+            //current visible state of section, either true or false
+            self.sectionsState = ko.observable(false);
 
-        //Toggles visibility of sections
-        self.hideSections = function () {
-            self.sectionsState(!self.sectionsState());
+            //Toggles visibility of sections
+            self.toggleSections = function () {
+                self.sectionsState(!self.sectionsState());
+            };
+
         };
 
-        self.selectedSection = function () {
-            self.currentSection(this.name);
-            self.currentSectionId(this.id);
-            self.hideSections();
-        };
-
-    }
-    return laborContentViewModel;
-});
+        return laborContentViewModel;
+    });
