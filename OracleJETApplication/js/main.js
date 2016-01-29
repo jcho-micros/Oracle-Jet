@@ -102,7 +102,18 @@ require(['ojs/ojcore',
             },
             'people': {
                 label: 'People',
-                value: 'People'
+                value: 'People',
+                exit: function () {
+//                    alert('people exit');
+                    var childRouter = router.currentState().value;
+                    childRouter.dispose();
+                },
+                enter: function () {
+//                     alert('people enter');
+                    var childRouter = router.createChildRouter('emp');
+                    childRouter.defaultStateId = '100';
+                    router.currentState().value = childRouter;
+                }
             },
         });
 
