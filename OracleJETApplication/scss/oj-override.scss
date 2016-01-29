@@ -1404,8 +1404,10 @@ $navigationListBorderColor:                $lightGray;
     padding: 0.8571rem !important;
     color: $navigationListMobileTextColor;
 }
+
 .oj-navigationlist-item {
     border-width:0 !important;
+    flex: 0 auto !important;
     &.oj-default{
          background-color: $navigationListMobileBg;
          a.oj-navigationlist-item-content{
@@ -1425,6 +1427,10 @@ $navigationListBorderColor:                $lightGray;
             color: $navigationListMobileTextColorSelected;
         }
     }
+}
+
+.tab-content{
+    border-width: 1px 0 0 0;
 }
 
 .oj-button.oj-default.oj-button-half-chrome .oj-button-icon,
@@ -1458,6 +1464,18 @@ html {
 .page-header {
     h1 {
         display: inline-block;
+    }
+}
+button#menuButton{
+    color: $white;
+    &.oj-button{
+        &.oj-hover{
+            background-color:transparent;
+            border-color:transparent;
+        }
+        &.oj-active{
+            @extend .oj-hover;
+        }
     }
 }
 
