@@ -1376,12 +1376,16 @@ $navigationListBorderColor:                $lightGray;
 }
 
 #app-header-desktop-nav, #app-header-mobile-nav{
+    .oj-navigationlist-element{
+        justify-content: center;
+    }
     &.oj-navigationlist-horizontal .oj-navigationlist-divider {
         border-color: $borderDivder;
     }
     .oj-navigationlist-item{
         &.oj-default{
             background-color:$navigationListHeaderMobileBg;
+            padding: 0.572rem;
         }
         &.oj-selected{
             background-color: $tabsBgColorSelected;
@@ -1503,7 +1507,7 @@ html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack
 
 //Media Query
 //Medium/ipad (UP)
-@media only screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
+@media only screen and (min-width: 768px){
     .page-area {
         padding-left: 1.072rem !important;
         padding-top: 10px;
@@ -1547,7 +1551,7 @@ html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack
 }
 
 //large/desktop (UP)
-@media only screen and (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+@media only screen and (min-width: 1024px){
     .app-header-desktop {
         padding: 15px 10px 0 10px;
     }
@@ -1588,10 +1592,10 @@ html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack
 }
 
 //xLarge (UP)
-@media only screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 1) {}
+@media only screen and (min-width: 1280px){}
 
 //Mobile (CAP)
-@media only screen and (min-device-width: 320px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px){
     //Header
 //    #ui-id-1 > li {
 //        border-bottom: 1px solid #585959;
@@ -1605,7 +1609,7 @@ html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack
 }
 
 // MD IPad (CAP)
-@media only screen and (min-width: 768px) and (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1) {
+@media only screen and (min-width: 768px) and (max-width: 1023px){
     //Header
     //Icon padding Right to Text
     html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack-icon-label):not(.oj-navigationlist-icon-only) .oj-navigationlist-item-icon {
@@ -1625,7 +1629,7 @@ html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack
 }
 
 // LG Desktop (CAP)
-@media only screen and (min-width: 1024px) and (max-width: 1279px) and (-webkit-min-device-pixel-ratio: 1) {
+@media only screen and (min-width: 1024px) and (max-width: 1279px){
 
 //    .oj-tabs-horizontal > .oj-tabs-nav-root .oj-tabs-tab {
 //        border-width: 3px 0 0 0;
@@ -1686,7 +1690,7 @@ html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack
 }
 
 // XL Desktop (CAP)
-@media only screen and (min-width: 1280px) and (max-width: 1900px) and (-webkit-min-device-pixel-ratio: 1) {
+@media only screen and (min-width: 1280px) and (max-width: 1900px){
     //Icon padding Right to Text
 //    html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack-icon-label):not(.oj-navigationlist-icon-only) .oj-navigationlist-item-icon {
 //        margin-right: 0;
