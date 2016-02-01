@@ -1,4 +1,4 @@
-define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', 'ojs/ojnavigationlist'],
+define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', 'ojs/ojnavigationlist', 'ojs/ojconveyorbelt'],
     function (oj, ko, $) {
         /**
          * The view model for the iCare Child router.
@@ -13,7 +13,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', 'o
             self.handleActivated = function (data) {
                 var parentRouter = data.valueAccessor().params;
 
-                this.router = parentRouter.createChildRouter('tab').configure({
+                this.router = parentRouter.createChildRouter('icaretab').configure({
                     'profile': {
                         label: 'Profile',
                         value: 'profile',
