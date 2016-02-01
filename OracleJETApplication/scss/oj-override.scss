@@ -1446,7 +1446,7 @@ $navigationListBorderColor:                $lightGray;
 
 .tbd {
     height: 427px;
-    width: 350px;
+    width: 100%;
     background-color: #cccccc;
 }
 
@@ -1603,9 +1603,9 @@ html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack
     .oj-navigationlist-item-icon {
         font-size: $headerNavigationMobileSize !important;
     }
-    #mainCol {
-        padding: 0;
-    }
+//    #mainCol {
+//        padding: 0;
+//    }
 }
 
 // MD IPad (CAP)
