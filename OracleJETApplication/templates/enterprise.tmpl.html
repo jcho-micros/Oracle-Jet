@@ -57,12 +57,14 @@
 
     <div class="oj-row">
         <div class="oj-md-12 oj-col">
-            <div id="tabs" data-bind="ojComponent: {component: 'ojNavigationList', selection: router.stateId(), beforeSelect: selectHandler, drillMode: 'none', edge: 'top'}">
-                <ul data-bind="foreach: router.states">
-                    <li data-bind="attr: {id: id}">
-                        <a data-bind="text: label"></a>
-                    </li>
-                </ul>
+            <div data-bind="ojComponent: {component: 'ojConveyorBelt'}">  
+                <div id="tabs" data-bind="ojComponent: {component: 'ojNavigationList', selection: router.stateId(), beforeSelect: selectHandler, drillMode: 'none', edge: 'top'}">
+                    <ul data-bind="foreach: router.states">
+                        <li data-bind="attr: {id: id}">
+                            <a data-bind="text: label"></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="oj-md-12 oj-col" data-bind="if: router.stateId()">

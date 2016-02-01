@@ -33,8 +33,8 @@
                     <h2 id="currentPage" data-bind="text: label"></h2>
 
                     <div data-bind="ojModule: {
-                                name: 'labor/' + value,
-                                viewName: 'labor/' + value +'/' + value + '-small'}">
+                                name: 'labor/' + id,
+                                viewName: 'labor/' + id +'/' + id + '-small'}">
                     </div>
                 </div>
             </div>
@@ -57,12 +57,14 @@
 
     <div class="oj-row">
         <div class="oj-md-12 oj-col">
-            <div id="tabs" data-bind="ojComponent: {component: 'ojNavigationList', selection: router.stateId(), beforeSelect: selectHandler, drillMode: 'none', edge: 'top'}">
-                <ul data-bind="foreach: router.states">
-                    <li data-bind="attr: {id: id}">
-                        <a data-bind="text: label"></a>
-                    </li>
-                </ul>
+            <div data-bind="ojComponent: {component: 'ojConveyorBelt'}">  
+                <div id="tabs" data-bind="ojComponent: {component: 'ojNavigationList', selection: router.stateId(), beforeSelect: selectHandler, drillMode: 'none', edge: 'top'}">
+                    <ul data-bind="foreach: router.states">
+                        <li data-bind="attr: {id: id}">
+                            <a data-bind="text: label"></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="oj-md-12 oj-col" data-bind="if: router.stateId()">
@@ -70,8 +72,8 @@
                 <h2 id="currentPage" data-bind="text: label"></h2>
 
                 <div data-bind="ojModule: {
-                            name: 'labor/' + value,
-                            viewName: 'labor/' + value +'/' + value + '-large'}">
+                            name: 'labor/' + id,
+                            viewName: 'labor/' + id +'/' + id + '-large'}">
                 </div>
             </div>
         </div>
