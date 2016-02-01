@@ -31,8 +31,8 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', 'o
                     },
 
                     'menus-receipes': {
-                        label: 'Menus & Receipes',
-                        value: 'menus-receipes'
+                        label: 'Menus & Recipes',
+                        value: 'menus-recipes'
                     },
                     'analytics': {
                         label: 'Analytics',
