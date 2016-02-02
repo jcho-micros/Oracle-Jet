@@ -30,7 +30,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', 'o
                         value: 'store'
                     },
 
-                    'menus-receipes': {
+                    'menus-recipes': {
                         label: 'Menus & Recipes',
                         value: 'menus-recipes'
                     },

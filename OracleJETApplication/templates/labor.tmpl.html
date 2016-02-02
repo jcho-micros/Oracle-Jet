@@ -31,11 +31,7 @@
             <div class="oj-sm-12 oj-col" data-bind="if: router.stateId()">
                 <div class="oj-panel tab-content" data-bind="with: router.currentState()">
                     <h2 id="currentPage" data-bind="text: label"></h2>
-
-                    <div data-bind="ojModule: {
-                                name: 'labor/' + id,
-                                viewName: 'labor/' + id +'/' + id + '-small'}">
-                    </div>
+                    <div data-bind="template: {name: 'labor/' + id +'/' + id + '-small'}"></div>
                 </div>
             </div>
         </div>
@@ -70,11 +66,7 @@
         <div class="oj-md-12 oj-col" data-bind="if: router.stateId()">
             <div class="oj-panel tab-content" data-bind="with: router.currentState()">
                 <h2 id="currentPage" data-bind="text: label"></h2>
-
-                <div data-bind="ojModule: {
-                            name: 'labor/' + id,
-                            viewName: 'labor/' + id +'/' + id + '-large'}">
-                </div>
+                    <div data-bind="template: {name: 'labor/' + id +'/' + id + '-large'}"></div>
             </div>
         </div>
     </div>
