@@ -49,7 +49,7 @@ define([
             }
         };
 
-        self.pageHeading = ko.observable("iCare");
+        self.pageHeading = ko.observable("People");
         self.pageHeadingIconClass = ko.observable('fa fa-gift');
         self.organizationName = ko.observable("Micros");
         self.level1 = ko.observable("level1");
