@@ -6,7 +6,7 @@
 // PATHS
 // ---------------------------------
 // these paths should be relative to the generated css file
-// 
+//  
 // path to alta images 
 // $imageDir: "images/";
 // 
@@ -15,7 +15,7 @@
 // 
 // path to common images (images shared across themes)
 // $commonImageDir: "../common/images/";
-// 
+//  
 // 
 // DIRECTION
 // ---------------------------------
@@ -369,6 +369,9 @@ $headerUserIcon: $imageDir + 'vatar_24px.png';
 $headerNavigationText: $customsmallFontSize;
 //Mobile icon size
 $headerNavigationMobileSize: $customsmallmobileFontSize;
+//Dialog title and background
+$dialogTitlebg: $white;
+$dialogBg: $white;
 // 
 // WINDOW
 // ---------------------------------------------------------------
@@ -1403,6 +1406,7 @@ $navigationListBorderColor:                $lightGray;
     background-color: $appHeaderMobileBg;
     padding: 0.8571rem !important;
     color: $navigationListMobileTextColor;
+    font-size:16px;
 }
 .oj-offcanvas-open {
     background-color: $navigationListMobileBg;
@@ -1505,7 +1509,27 @@ footer{
         text-decoration: none;
     }
 }
-
+//Dialog
+.oj-dialog-header{
+    background-color: $dialogTitlebg;
+}
+.oj-dialog{
+    background: $dialogBg;
+}
+.oj-dialog-body{
+    background: $dialogBg;
+}
+//Dialog Location Area
+.locationCurrentSelection{
+    font-style: italic;
+}
+.locationArea{
+    font-weight: bold;
+}
+//Dialog result list
+.dialogItemHeader{
+    font-weight: bold;
+}
 //Media Query
 //Medium/ipad (UP)
 @media only screen and (min-width: 768px){
@@ -1613,6 +1637,12 @@ footer{
     }
     .oj-navigationlist-item-icon {
         font-size: $headerNavigationMobileSize !important;
+    }
+    .page-header{
+        padding:15px;
+        .page-sub-navigation{
+            padding-left:11px;
+        }
     }
 }
 
