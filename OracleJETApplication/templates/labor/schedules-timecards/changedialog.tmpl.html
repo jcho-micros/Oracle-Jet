@@ -1,0 +1,140 @@
+<!-- small template -->
+<script type="text/html" id="sm_template_dialog">
+<div style="display:none" id="scrollingDialog" title="Select Level or Location" 
+       data-bind="ojComponent:{component: 'ojDialog', initialVisibility: 'hide', 
+		  rootAttributes: { style: 'width: 100%; height: 627px;'},
+                  'position': {'my': 'start bottom', 'at': 'end+14 top'},
+                  resizeBehavior: 'none'
+		  }">
+     <div class="oj-dialog-body">
+         <div class="locationCurrentSelection">Current Selection</div>
+         <div class="locationArea" data-bind="text: pageSubNavigation"></div>
+         <hr>
+         <div class="filterHeader">
+             <span data-bind="css: filterHeadingIconClass"></span>
+             <span data-bind="text: filterHeading"></span>
+         
+         </div>
+    <div class="oj-row">
+      <div class="oj-col">
+       <form id="form1">
+            <label for="combobox">Name</label>
+        <input id="combobox" list="locationList" 
+               data-bind="ojComponent: {component: 'ojCombobox',
+                                        rootAttributes: {style:'max-width:20em'}}"/>
+        <datalist id="locationList">
+         <!-- ko foreach: dataSource -->
+         <option data-bind="value:value, text:label"></option>
+         <!-- /ko -->   
+        </datalist>
+        <p>Or</p>
+        <label for="inputnumber-id">Number</label> 
+        <input id="inputnumber-id"
+               data-bind="ojComponent: {
+                component: 'ojInputNumber'}"/>
+                        
+<button data-bind="click: sortLists, enable: (locationList().length > 0)">Sort Lists</button>
+    </form>
+    </div>
+    <div class="oj-sm-12 oj-col" data-bind="visible: resultState">
+        <ul id="listview" 
+               data-bind="ojComponent: {component: 'ojListView', data: dataSource, item: {template: 'result_template'}, selectionMode: 'multiple'}">
+        </ul>
+    </div>
+
+    <script type="text/html" id="result_template">
+     <li data-bind="attr: {id: id}">
+
+        <div class="oj-row row">
+            <div class="oj-lg-12 oj-col">
+                <span class="dialogItemHeader">Regional:</span> <span class="dialogItem" data-bind="text: regional"></span>
+            </div>
+            <div class="oj-lg-12 oj-col">
+                <span class="dialogItemHeader">Location:</span> <span class="dialogItem" data-bind="text: label"></span>
+            </div>
+        </div>
+
+     </li>
+    </script>
+        
+        
+    </div>
+<!--    <div class="oj-dialog-footer">
+        <button id="okButton" data-bind="ojComponent: {component: 'ojButton', label: 'OK'}, click: handleOKClose"> </button>
+      </div>-->
+</div>
+</script>
+
+
+<!-- large template -->
+<script type="text/html" id="md_lg_xl_template_dialog">
+<div style="display:none" id="scrollingDialog" title="Select Level or Location" 
+       data-bind="ojComponent:{component: 'ojDialog', initialVisibility: 'hide', 
+		  rootAttributes: { style: 'width: 95%; height: auto;'},
+                  'position': {'my': 'start bottom', 'at': 'end+14 top'},
+                  resizeBehavior: 'none'
+		  }">
+     <div class="oj-dialog-body">
+        <span class="locationCurrentSelection">Current Selection:</span> <span class="locationArea" data-bind="text: pageSubNavigation"></span>
+         <hr>
+         <div class="filterHeader">
+             <span data-bind="css: filterHeadingIconClass"></span>
+             <span data-bind="text: filterHeading"></span>
+         
+         </div>
+         <div class="oj-row">
+            <div class="oj-md-4 oj-col">
+        <form id="form1">
+                <label for="combobox">Name</label>
+            <input id="combobox" list="locationList" 
+                   data-bind="ojComponent: {component: 'ojCombobox',
+                                            rootAttributes: {style:'max-width:20em'}}"/>
+            <datalist id="locationList">
+             <!-- ko foreach: $data.locationList -->
+             <option data-bind="value:value, text:label"></option>
+             <!-- /ko -->   
+            </datalist>
+            <p>Or</p>
+            <label for="inputnumber-id">Number</label> 
+            <input id="inputnumber-id"
+                   data-bind="ojComponent: {
+                    component: 'ojInputNumber'}"/>
+            <button data-bind="click: sortLists, enable: (locationList().length > 0)">Sort Lists</button>
+        </form>
+            </div>
+            <div class="oj-md-8 oj-col">
+                <div class="oj-sm-12 oj-col" data-bind="visible: resultState">
+                    <ul id="listview" 
+                           data-bind="ojComponent: {
+                            component: 'ojListView', 
+                            data: dataSource,
+                            item: {template: 'result_template'}, 
+                            selectionMode: 'single'}">
+                    </ul>
+                </div>
+            </div>
+              <script type="text/html" id="result_template">
+
+                <li data-bind="attr: {id: id}">
+               <div class="oj-row row">
+                   <div class="oj-lg-12 oj-col">
+                       <span class="dialogItemHeader">Regional:</span> <span class="dialogItem" data-bind="text: regional"></span>
+                   </div>
+                   <div class="oj-lg-12 oj-col">
+                       <span class="dialogItemHeader">Location:</span> <span class="dialogItem" data-bind="text: label"></span>
+                   </div>
+               </div>
+                </li>
+
+               </script>
+         </div>
+
+
+     </div>
+<!--    <div class="oj-dialog-footer">
+        <button id="okButton" data-bind="ojComponent: {component: 'ojButton', label: 'OK'}, click: handleOKClose"> </button>
+      </div>-->
+</div>
+</script>
+
+<div data-bind="template: {name: $root.medium() ? 'md_lg_xl_template_dialog' : 'sm_template_dialog'}"></div>
