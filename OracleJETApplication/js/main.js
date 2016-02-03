@@ -105,14 +105,14 @@ require(['ojs/ojcore',
             },
             'people': {
                 label: 'People',
-                value: 'people',
+                value: 'people'
+            },
+            'profile': {label: 'Profile',
                 exit: function () {
-//                    alert('people exit');
                     var childRouter = router.currentState().value;
                     childRouter.dispose();
                 },
                 enter: function () {
-//                     alert('people enter');
                     var childRouter = router.createChildRouter('emp');
                     childRouter.defaultStateId = '100';
                     router.currentState().value = childRouter;
@@ -186,6 +186,9 @@ require(['ojs/ojcore',
                     self.router.go(data.value);
                 }
             };
+//            self.dynamicConfig = ko.pureComputed(function () {
+//                return router.moduleConfig;
+//            });
         }
 
         oj.Router.defaults['urlAdapter'] = new oj.Router.urlParamAdapter();

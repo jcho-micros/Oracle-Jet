@@ -1,33 +1,53 @@
-<span data-bind="ojModule: {
-        name: 'partials/employee-search',
-        viewName: 'partials/employee-search/employee-search-large'}">
-</span>
-<!--<div data-bind="click: loadPersonPage">Load Person</div>-->
-<div data-bind="text: personProfile().firstName"></div>
-<!--
-<div data-bind="foreach: allPeople">
-        <div class="oj-lg-4 oj-md-4 oj-sm-12 oj-col">
-               <a data-bind="attr:{href:'index.html?root=people&emp=' + empId}">
-                <span class="data"><span data-bind="text: firstName + ' ' +lastName + empId"></span></span>
-                </a>
+
+<div class="justifyCenter">
+    <div class="oj-row">
+        <div class="oj-col oj-sm-12" style="padding-top: 10px;">
+            <div class="oj-row">
+                <div id="pageTitleContainer" class="oj-col oj-sm-2 oj-lg-1">
+                    <h1>People</h1>
+                </div>
+                <span data-bind="ojModule: {
+                name: 'partials/employee-search',
+                viewName: 'partials/employee-search/employee-search-large'}">
+                </span>
+                <ul id="listview"
+                    data-bind="ojComponent: {component: 'ojListView',
+                        data: listViewDataSource,
+                        item: {template: 'peoplelist_template'},
+                        selectionMode: 'single',
+                        currentItem: '100',
+                        selection: ['100'],
+                        rootAttributes: {style: 'width:100%;height:600px;overflow:auto; margin-top: 5px'},
+                        scrollPolicy: 'loadMoreOnScroll',
+                        scrollPolicyOptions: {fetchSize: 10}}">
+                </ul>
+
+                <script type="text/html" id="peoplelist_template">
+                    <li data-bind="attr: {id: $data['name']}, click: $parent.loadPersonPage">
+                        <div class="oj-row">
+                            <div class="oj-lg-2 oj-md-2 oj-sm-12 oj-col" style="max-width:70px;padding-bottom:5px">
+                                <img data-bind="attr: {src: 'images/listView/'+ name +'.png', alt: name}"/>
+                            </div>
+                            <div class="oj-lg-10 oj-md-10 oj-sm-12 oj-col">
+                                <div class="oj-row row">
+                                    <div class="oj-lg-12 oj-col">
+                                        <span class="header" data-bind="text: firstName + ' ' + lastName"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </script>
+            </div>
         </div>
+    </div>
+
+
+    <!-- there are two different layouts for displaying the people data. The template binding below sets whether it should load the listView template or the cardLayout template -->
+
+    <!-- ko if: ready -->
+    <div id="peoplelistview" class="oj-row">
+        <div data-bind="template: peopleLayoutType()"></div>
+    </div>
+    <!-- /ko -->
 </div>
--->
-
-<ul id="listview"
-    data-bind="ojComponent: {component: 'ojListView',
-        data: listViewDataSource,
-        item: {template: 'peoplelist_template'},
-        selectionMode: 'single',
-        currentItem: '100',
-        selection: ['100'],
-        rootAttributes: {style: 'width:100%;height:600px;overflow:auto; margin-top: 5px'},
-        scrollPolicy: 'loadMoreOnScroll',
-        scrollPolicyOptions: {fetchSize: 10}}">
-</ul>
-<script id="peoplelist_template" type="text/html">
-   <li data-bind="click: $parent.loadPersonPage">
-    <span class="data"><span data-bind="text: firstName + ' ' +lastName + empId"></span></span>
-    </li>
-
-</script>
