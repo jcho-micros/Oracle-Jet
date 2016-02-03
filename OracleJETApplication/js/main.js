@@ -6,6 +6,7 @@ requirejs.config({
     // Path mappings for the logical module names
     paths: {
         'knockout': 'libs/knockout/knockout-3.3.0',
+        'knockout-amd-helpers': 'libs/knockout/knockout-amd-helpers.min',
         'jquery': 'libs/jquery/jquery-2.1.3.min',
         'jqueryui-amd': 'libs/jquery/jqueryui-amd-1.11.4.min',
         'ojs': 'libs/oj/v1.1.2/min',
@@ -55,6 +56,7 @@ require(['ojs/ojcore',
     'knockout',
     'jquery',
     'ojs/ojrouter',
+    'knockout-amd-helpers',
     'ojs/ojknockout',
     'ojs/ojbutton',
     'ojs/ojtoolbar',
@@ -72,37 +74,38 @@ require(['ojs/ojcore',
         oj.ModuleBinding.defaults.modelPath = 'modules/';
         oj.ModuleBinding.defaults.viewPath = 'text!../templates/';
         oj.ModuleBinding.defaults.viewSuffix = '.tmpl.html';
+        ko.amdTemplateEngine.defaultPath = "../templates";
 
         var router = oj.Router.rootInstance;
         router.configure({
             'home': {
                 label: 'Home',
-                value: 'Home',
+                value: 'home',
                 isDefault: true
             },
             'labor': {
                 label: 'Labor',
-                value: 'Labor'
+                value: 'labor'
             },
-            'inventory-management': {
-                label: 'Inventory Management',
-                value: 'inventory-management'
+            'inventory': {
+                label: 'Inventory',
+                value: 'inventory'
             },
-            'icare': {
-                label: 'iCare',
-                value: 'iCare'
+            'gift-loyalty': {
+                label: 'Gift & Loyalty',
+                value: 'gift-loyalty'
             },
             'reports-charts': {
                 label: 'Reports & Charts',
                 value: 'reports-charts'
             },
             'enterprise': {
-                label: 'Enterprise',
-                value: 'Enterprise'
+                label: 'Mike Rose Cafe',
+                value: 'enterprise'
             },
             'people': {
                 label: 'People',
-                value: 'People',
+                value: 'people',
                 exit: function () {
 //                    alert('people exit');
                     var childRouter = router.currentState().value;
@@ -142,13 +145,13 @@ require(['ojs/ojcore',
                     iconClass: 'fa fa-briefcase oj-navigationlist-item-icon'
             },
                 {
-                    name: 'Inventory Management',
-                    id: 'inventory-management',
+                    name: 'Inventory',
+                    id: 'inventory',
                     iconClass: 'fa fa-dropbox oj-navigationlist-item-icon'
             },
                 {
-                    name: 'iCare',
-                    id: 'icare',
+                    name: 'Gift & Loyalty',
+                    id: 'gift-loyalty',
                     iconClass: 'fa fa-gift oj-navigationlist-item-icon'
             },
                 {
@@ -157,7 +160,7 @@ require(['ojs/ojcore',
                     iconClass: 'fa fa-bar-chart oj-navigationlist-item-icon'
             },
                 {
-                    name: 'Enterprise',
+                    name: 'Mike Rose Cafe',
                     id: 'enterprise',
                     iconClass: 'fa fa-building-o oj-navigationlist-item-icon'
             },
