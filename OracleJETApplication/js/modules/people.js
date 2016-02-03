@@ -22,12 +22,11 @@ define([
 
     function peopleContentViewModel() {
         var self = this;
-        self.peopleLayoutType = ko.observable('peopleCardLayout');
 
         //where the all employee info will be stored
         self.allPeople = ko.observableArray([]);
 
-        self.ready = ko.observable(false);
+        //self.ready = ko.observable(false);
         data.fetchData('js/data/employees.json').then(function (people) {
             self.allPeople(people.employees);
         }).fail(function (error) {
@@ -42,7 +41,7 @@ define([
         self.loadPersonPage = function (emp) {
             if (emp.empId) {
                 // Temporary code until go('profile/' + emp.empId); is checked in 1.1.2
-                history.pushState(null, '', 'index.html?root=profile&emp=' + emp.empId);
+                history.pushState('null', '', 'index.html?root=profile&emp=' + emp.empId);
                 oj.Router.sync();
             } else {
                 // Default id for profile is 100 so no need to specify.

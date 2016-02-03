@@ -11,6 +11,7 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'ojs/ojknockout', ],
 
                     // Retrieve the childRouter instance created in main.js
                     self.empRouter = parentRouter.currentState().value;
+                    //Creates the child router for employees
                     self.empRouter.configure(function (stateId) {
                         var state;
                         if (stateId) {
@@ -28,7 +29,15 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'ojs/ojknockout', ],
                         }
                         return state;
                     });
-
+                    //Sets up the Child router for tabs
+                    self.tabRouter = self.empRouter.createChildRouter('tabs').configure({
+                        'profile': {label: 'profile', value: 'profile', isDefault: true},
+                        'schedules-timecards': {label: 'schedules-timecards', value: 'schedules-timecards'},
+                        'jobs-compensation': {label: 'jobs-compensation', value: 'jobs-compensation'},
+                        'payroll': {label: 'payroll', value: 'payroll'},
+                        'analytics': {label: 'analytics', value: 'analytics'},
+                        'permissions': {label: 'permissions', value: 'permissions'}
+                    });
                     // Returns the sync promise to handleActivated. The next
                     // phase of the ojModule lifecycle (attached) will not be
                     // executed until sync is resolved.
@@ -76,6 +85,14 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'ojs/ojknockout', ],
 
                 self.getEmail = function () {
                     return "mailto:" + self.personProfile().email + '@example.net';
+                };
+
+                //Child router for tabs - assigns the URL
+                self.selectTabHandler = function (event, ui) {
+                    if ('profileTabs' === event.target.id && event.originalEvent) {
+                        // Invoke go() with the selected item.
+                        self.tabRouter.go(ui.key);
+                    }
                 };
 
             }

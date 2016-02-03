@@ -1,23 +1,23 @@
 <div class="justifyCenter">
     <div id="personaldetails" class="oj-row" style="margin-bottom:26px;">
         <div class="oj-col oj-md-2 oj-lg-2 demo-employee-photo-person-detail">
-            <img data-bind="attr: {src: getPhoto(personProfile().empId)}" />
+            <img data-bind="attr: {src: $parent.getPhoto($parent.personProfile().empId)}" />
         </div>
         <div class="oj-col oj-md-4 oj-lg-4" style="margin-top: 10px;">
-            <div data-bind="text: personProfile().firstName + ' ' + personProfile().lastName"></div>
-            <div data-bind="text: personProfile().title"></div>
-            <div data-bind="text: personProfile().deptName"></div>
+            <div data-bind="text: $parent.personProfile().firstName + ' ' + $parent.personProfile().lastName"></div>
+            <div data-bind="text: $parent.personProfile().title"></div>
+            <div data-bind="text: $parent.personProfile().deptName"></div>
         </div>
         <div class="oj-col oj-md-4 oj-lg-4" style="margin-top: 10px;">
             <div>
-                <div data-bind="text: personProfile().phone"></div>
+                <div data-bind="text: $parent.personProfile().phone"></div>
             </div>
             <div>
-                <div data-bind="text: personProfile().mobile"></div>
+                <div data-bind="text: $parent.personProfile().mobile"></div>
             </div>
             <div>
                 <div>
-                    <a data-bind="attr:{href: getEmail($data)}, text: personProfile().email+'@example.net'"></a>
+                    <a data-bind="attr:{href: $parent.getEmail($data)}, text: $parent.personProfile().email+'@example.net'"></a>
                 </div>
             </div>
         </div>

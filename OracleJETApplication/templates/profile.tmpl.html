@@ -23,3 +23,22 @@
         </div>
     </div>
 </div>
+<div class="oj-row">
+    <div class="oj-md-12 oj-col">
+        <div data-bind="ojComponent: {component: 'ojConveyorBelt'}">
+            <div id="profileTabs" data-bind="ojComponent: {component: 'ojNavigationList', selection: tabRouter.stateId(), beforeSelect: selectTabHandler, drillMode: 'none', edge: 'top'}">
+                <ul data-bind="foreach: tabRouter.states">
+                    <li data-bind="attr: {id: id}">
+                        <a data-bind="text: label"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="oj-md-12 oj-col" data-bind="if: tabRouter.stateId()">
+        <div class="oj-panel tab-content" data-bind="with: tabRouter.currentState()">
+            <h2 id="currentPage" data-bind="text: label"></h2>
+                <div data-bind="template: {name: 'profile/' + id +'/' + id + '-large'}"></div>
+        </div>
+    </div>
+</div>
