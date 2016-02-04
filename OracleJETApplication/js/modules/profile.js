@@ -31,12 +31,12 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'ojs/ojknockout', ],
                     });
                     //Sets up the Child router for tabs
                     self.tabRouter = self.empRouter.createChildRouter('tabs').configure({
-                        'profile': {label: 'profile', value: 'profile', isDefault: true},
-                        'schedules-timecards': {label: 'schedules-timecards', value: 'schedules-timecards'},
-                        'jobs-compensation': {label: 'jobs-compensation', value: 'jobs-compensation'},
-                        'payroll': {label: 'payroll', value: 'payroll'},
-                        'analytics': {label: 'analytics', value: 'analytics'},
-                        'permissions': {label: 'permissions', value: 'permissions'}
+                        'profile': {label: 'Profile', value: 'profile', isDefault: true},
+                        'schedules-timecards': {label: 'Schedules & Timecards', value: 'schedules-timecards'},
+                        'jobs-compensation': {label: 'Jobs & Compensation', value: 'jobs-compensation'},
+                        'payroll': {label: 'Payroll', value: 'payroll'},
+                        'analytics': {label: 'Analytics', value: 'analytics'},
+                        'permissions': {label: 'Permissions', value: 'permissions'}
                     });
                     // Returns the sync promise to handleActivated. The next
                     // phase of the ojModule lifecycle (attached) will not be

@@ -1,4 +1,5 @@
-<div id="form-container" class="oj-form">
+<!--Linked to people.js through modules and template bindings-->
+   <div id="form-container" class="oj-form">
     <div class="leftColPeople">
         <div class="oj-row">
             <div class="searchTitle">
@@ -77,14 +78,42 @@
     </div>
 
     <div class="submitWrapper left">
-        <input id="submit" type="submit" data-bind="click: buttonClick,
+       <!--temporary toggleSection function applied to these buttons, will need to submit form and return results and then clear results-->
+        <input id="submit" type="submit" data-bind="click: toggleSections,
                                                  ojComponent: {component: 'ojButton', label: 'Search', icons: { start: 'fa fa-search'} }" />
 
-        <input id="reset" type="reset" data-bind="click: buttonClick,
+        <input id="reset" type="reset" data-bind="click: toggleSections,
                                               ojComponent: {component: 'ojButton', label: 'Clear'}" />
-    </div>
-    <div class="resultWrapper">
+       </div>
+    <div class="resultWrapper" data-bind="visible: sectionsState">
 
+        <ul id="listview" data-bind="ojComponent: {component: 'ojListView',
+            data: listViewDataSource,
+            item: {template: 'peoplelist_template'},
+            selectionMode: 'single',
+            currentItem: '100',
+            selection: ['100'],
+            rootAttributes: {style: 'width:100%;height:600px;overflow:auto; margin-top: 5px'},
+            scrollPolicy: 'loadMoreOnScroll',
+            scrollPolicyOptions: {fetchSize: 10}}">
+        </ul>
+
+        <script type="text/html" id="peoplelist_template">
+            <li data-bind="attr: {id: $data['name']}, click: $parent.loadPersonPage">
+                <div class="oj-row">
+                    <div class="oj-lg-2 oj-md-2 oj-sm-12 oj-col" style="max-width:70px;padding-bottom:5px">
+                        <img data-bind="attr: {src: 'images/listView/'+ name +'.png', alt: name}" />
+                    </div>
+                    <div class="oj-lg-10 oj-md-10 oj-sm-12 oj-col">
+                        <div class="oj-row row">
+                            <div class="oj-lg-12 oj-col">
+                                <span class="header" data-bind="text: firstName + ' ' + lastName"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </script>
 
     </div>
 </div>

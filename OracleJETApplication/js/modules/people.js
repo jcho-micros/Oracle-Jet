@@ -73,6 +73,15 @@ define([
         this.val = ko.observableArray(["CH"]);
         //Check Box Observable Default
         self.currentStatus = ko.observable();
+
+        //current visible state of section, either true or false
+        self.sectionsState = ko.observable(false);
+
+        //Toggles visibility of sections
+        self.toggleSections = function () {
+            self.sectionsState(!self.sectionsState());
+        };
+
     }
 
     return peopleContentViewModel;

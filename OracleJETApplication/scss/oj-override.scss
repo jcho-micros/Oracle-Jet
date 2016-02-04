@@ -372,6 +372,8 @@ $headerNavigationMobileSize: $customsmallmobileFontSize;
 //Dialog title and background
 $dialogTitlebg: $white;
 $dialogBg: $white;
+
+$headerH3BgColor: $lightGray;
 // 
 // WINDOW
 // ---------------------------------------------------------------
@@ -1478,6 +1480,13 @@ html {
     h1 {
         display: inline-block;
     }
+}
+h3{
+    background-color: $headerH3BgColor;
+    text-transform: uppercase;
+    padding:10px;
+    font-weight:normal;
+    font-size:13px;
 }
 button#menuButton{
     color: $white;

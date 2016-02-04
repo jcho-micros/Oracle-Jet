@@ -10,35 +10,8 @@
                     <!--Use template when parent js file is associated by default to the tmpl file
                     Ex. below links to partial tmpl file, people tmpl file already associated with people.js file
                     -->
-                     <div data-bind="template: {name: 'partials/employee-search/employee-search-large'}"></div>
+                    <div data-bind="template: {name: 'partials/employee-search/employee-search-small'}"></div>
 
-                    <ul id="listview" data-bind="ojComponent: {component: 'ojListView',
-                        data: listViewDataSource,
-                        item: {template: 'peoplelist_template'},
-                        selectionMode: 'single',
-                        currentItem: '100',
-                        selection: ['100'],
-                        rootAttributes: {style: 'width:100%;height:600px;overflow:auto; margin-top: 5px'},
-                        scrollPolicy: 'loadMoreOnScroll',
-                        scrollPolicyOptions: {fetchSize: 10}}">
-                    </ul>
-
-                    <script type="text/html" id="peoplelist_template">
-                        <li data-bind="attr: {id: $data['name']}, click: $parent.loadPersonPage">
-                            <div class="oj-row">
-                                <div class="oj-lg-2 oj-md-2 oj-sm-12 oj-col" style="max-width:70px;padding-bottom:5px">
-                                    <img data-bind="attr: {src: 'images/listView/'+ name +'.png', alt: name}" />
-                                </div>
-                                <div class="oj-lg-10 oj-md-10 oj-sm-12 oj-col">
-                                    <div class="oj-row row">
-                                        <div class="oj-lg-12 oj-col">
-                                            <span class="header" data-bind="text: firstName + ' ' + lastName"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </script>
                 </div>
             </div>
         </div>
@@ -55,34 +28,7 @@
                         <h1>People</h1>
                     </div>
                     <!--Use template when parent js file is associated by default to the tmpl file -->
-                     <div data-bind="template: {name: 'partials/employee-search/employee-search-large'}"></div>
-                    <ul id="listview" data-bind="ojComponent: {component: 'ojListView',
-                        data: listViewDataSource,
-                        item: {template: 'peoplelist_template'},
-                        selectionMode: 'single',
-                        currentItem: '100',
-                        selection: ['100'],
-                        rootAttributes: {style: 'width:100%;height:600px;overflow:auto; margin-top: 5px'},
-                        scrollPolicy: 'loadMoreOnScroll',
-                        scrollPolicyOptions: {fetchSize: 10}}">
-                    </ul>
-
-                    <script type="text/html" id="peoplelist_template">
-                        <li data-bind="attr: {id: $data['name']}, click: $parent.loadPersonPage">
-                            <div class="oj-row">
-                                <div class="oj-lg-2 oj-md-2 oj-sm-12 oj-col" style="max-width:70px;padding-bottom:5px">
-                                    <img data-bind="attr: {src: 'images/listView/'+ name +'.png', alt: name}" />
-                                </div>
-                                <div class="oj-lg-10 oj-md-10 oj-sm-12 oj-col">
-                                    <div class="oj-row row">
-                                        <div class="oj-lg-12 oj-col">
-                                            <span class="header" data-bind="text: firstName + ' ' + lastName"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </script>
+                    <div data-bind="template: {name: 'partials/employee-search/employee-search-large'}"></div>
                 </div>
             </div>
         </div>
