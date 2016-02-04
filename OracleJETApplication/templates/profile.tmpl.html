@@ -1,27 +1,27 @@
 <!-- small template -->
 <script type="text/html" id="sm_template">
 <div class="justifyCenter">
-    <div id="personaldetails" class="oj-row" style="margin-bottom:26px;">
-        <div class="oj-col oj-md-2 oj-lg-2 demo-employee-photo-person-detail">
+    <div id="personaldetails" class="oj-row">
+        <div class="oj-col oj-md-1 oj-lg-1">
             <img data-bind="attr: {src: getPhoto(personProfile().empId)}" />
         </div>
-        <div class="oj-col oj-md-4 oj-lg-4" style="margin-top: 10px;">
+        <div class="oj-col oj-md-2 oj-lg-2">
             <div data-bind="text: personProfile().firstName + ' ' + personProfile().lastName"></div>
-            <div data-bind="text: personProfile().title"></div>
-            <div data-bind="text: personProfile().deptName"></div>
         </div>
-        <div class="oj-col oj-md-4 oj-lg-4" style="margin-top: 10px;">
-            <div>
-                <div data-bind="text: personProfile().phone"></div>
-            </div>
-            <div>
-                <div data-bind="text: personProfile().mobile"></div>
-            </div>
-            <div>
-                <div>
-                    <a data-bind="attr:{href: getEmail($data)}, text: personProfile().email+'@example.net'"></a>
-                </div>
-            </div>
+        <div class="oj-col oj-md-3 oj-lg-3">
+           <h4>Home Store</h4>
+           <span data-bind="text: personProfile().homeStore"></span>
+           <a href="#">transfer</a>
+        </div>
+        <div class="oj-col oj-md-3 oj-lg-3">
+           <h4>Hire Status</h4>
+           <span data-bind="text: personProfile().hireStatus"></span>
+           <a href="#">update</a>
+        </div>
+        <div class="oj-col oj-md-3 oj-lg-3">
+           <h4>External Payroll ID</h4>
+           <span data-bind="text: personProfile().externalPayrollId"></span>
+           <a href="#">edit</a>
         </div>
     </div>
 </div>
@@ -49,27 +49,27 @@
 <!-- large template -->
 <script type="text/html" id="md_lg_xl_template">
 <div class="justifyCenter">
-    <div id="personaldetails" class="oj-row" style="margin-bottom:26px;">
-        <div class="oj-col oj-md-2 oj-lg-2 demo-employee-photo-person-detail">
+    <div id="personaldetails" class="oj-row">
+        <div class="oj-col oj-md-1 oj-lg-1">
             <img data-bind="attr: {src: getPhoto(personProfile().empId)}" />
         </div>
-        <div class="oj-col oj-md-4 oj-lg-4" style="margin-top: 10px;">
+        <div class="oj-col oj-md-2 oj-lg-2">
             <div data-bind="text: personProfile().firstName + ' ' + personProfile().lastName"></div>
-            <div data-bind="text: personProfile().title"></div>
-            <div data-bind="text: personProfile().deptName"></div>
         </div>
-        <div class="oj-col oj-md-4 oj-lg-4" style="margin-top: 10px;">
-            <div>
-                <div data-bind="text: personProfile().phone"></div>
-            </div>
-            <div>
-                <div data-bind="text: personProfile().mobile"></div>
-            </div>
-            <div>
-                <div>
-                    <a data-bind="attr:{href: getEmail($data)}, text: personProfile().email+'@example.net'"></a>
-                </div>
-            </div>
+        <div class="oj-col oj-md-3 oj-lg-3">
+           <h4>Home Store</h4>
+           <span data-bind="text: personProfile().homeStore"></span>
+           <a href="#">transfer</a>
+        </div>
+        <div class="oj-col oj-md-3 oj-lg-3">
+           <h4>Hire Status</h4>
+           <span data-bind="text: personProfile().hireStatus"></span>
+           <a href="#">update</a>
+        </div>
+        <div class="oj-col oj-md-3 oj-lg-3">
+           <h4>External Payroll ID</h4>
+           <span data-bind="text: personProfile().externalPayrollId"></span>
+           <a href="#">edit</a>
         </div>
     </div>
 </div>
