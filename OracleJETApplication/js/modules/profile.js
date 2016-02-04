@@ -1,5 +1,5 @@
-define(['ojs/ojcore', 'knockout', 'data/data', 'ojs/ojknockout', ],
-        function (oj, ko, jsonData)
+define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout'],
+        function (oj, ko, jsonData, moment)
         {
 
             function PersonViewModel() {
@@ -94,7 +94,39 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'ojs/ojknockout', ],
                         self.tabRouter.go(ui.key);
                     }
                 };
+                self.getDischargeDate = function () {
+                    var dischargeDate = self.personProfile().dischargeDate;
+                    var dateOptions = {formatStyle: 'date', dateFormat: 'medium'};
+                    var dateConverter = oj.Validation.converterFactory("datetime").createConverter(dateOptions);
+                    var startDate = oj.IntlConverterUtils.dateToLocalIso(moment(dischargeDate).toDate());
+                    dischargeDate = dateConverter.format(startDate);
+                    return dischargeDate;
+                };
+                self.formatAddress = function () {
+                    var street = self.personProfile().address1;
+                    var suite = self.personProfile().address2;
+                    var city = self.personProfile().city;
+                    var state = self.personProfile().state;
+                    var postal = self.personProfile().postal;
+                    var country = self.personProfile().country;
+                    if(!suite){
+                        return street + '<br/>' + city + '<br/>' + state + ' ' + postal + ' ' + country;
+                    }else{
+                        return street + '<br/>' + suite + '<br/>' + city + '<br/>' + state + ' ' + postal + ' ' + country;
+                    }
+                };
 
+                self.formatEmergencyContact = function () {
+                    var emergencyName = self.personProfile().emergencyName;
+                    var relationship = self.personProfile().relationship;
+                    var emergencyAddress = self.personProfile().emergencyAddress;
+                    var emergencyCity = self.personProfile().emergencyCity;
+                    var emergencyState = self.personProfile().emergencyState;
+                    var emergencyZipCode = self.personProfile().emergencyZipCode;
+                    var emergencyPhone = self.personProfile().emergencyPhone;
+
+                    return emergencyName + ' (' + relationship + ') ' + '<br/>' + emergencyAddress + '<br/>' + emergencyCity + ' ' + emergencyState + ' ' + emergencyZipCode  + '<br/>' + emergencyPhone;
+                };
             }
 
             return new PersonViewModel();

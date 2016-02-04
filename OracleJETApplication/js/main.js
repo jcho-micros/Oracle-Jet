@@ -16,7 +16,8 @@ requirejs.config({
         'crossroads': 'libs/crossroads/crossroads.min',
         'text': 'libs/require/text',
         'promise': 'libs/es6-promise/promise-1.0.0.min',
-        'hammerjs': 'libs/hammer/hammer-2.0.4.min'
+        'hammerjs': 'libs/hammer/hammer-2.0.4.min',
+        'moment': 'libs/moment/moment.min'
     },
     // Shim configurations for modules that do not expose AMD
     shim: {

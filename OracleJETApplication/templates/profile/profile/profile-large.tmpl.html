@@ -6,17 +6,48 @@
                 <div class="oj-col oj-lg-6">
                     <h4>Name</h4>
                     <div data-bind="text: $parent.personProfile().firstName + ' ' + $parent.personProfile().lastName"></div>
-                    <h4>POS Check Name</h4>
+
+                    <div data-bind="visible: $parent.personProfile().posCheckName">
+                        <h4>POS Check Name</h4>
+                        <div data-bind="text: $parent.personProfile().posCheckName"></div>
+                    </div>
+
                     <h4>Language</h4>
+                    <div data-bind="text: $parent.personProfile().language"></div>
+
                     <h4>Time Zone</h4>
-                    <h4>Ethnicity</h4>
-                    <h4>Gender</h4>
+                    <div data-bind="text: $parent.personProfile().timeZone"></div>
+
+                    <div>
+                        <h4>Ethnicity</h4>
+                        <div data-bind="text: $parent.personProfile().ethnicity"></div>
+                    </div>
+                    <div>
+                        <h4>Gender</h4>
+                        <div data-bind="text: $parent.personProfile().gender"></div>
+                    </div>
                 </div>
                 <div class="oj-col oj-lg-6">
+
                     <h4>Profile Picture</h4>
+                    <img data-bind="attr: {src: $parent.getPhoto($parent.personProfile().empId)}" />
+
                     <h4>Veteran</h4>
-                    <h4>Registered Disable Number</h4>
-                    <h4>Discharge Date</h4>
+                    <div data-bind="text: $parent.personProfile().veteranStatus ? 'yes' : 'no'"></div>
+                    <div data-bind="visible: $parent.personProfile().veteranStatus">
+                        <div data-bind="text: $parent.personProfile().vietnamEra ? 'Vietnam Era' : ''"></div>
+                        <div data-bind="text: $parent.personProfile().otherEligible ? 'Other Eligible' : ''"></div>
+                        <div data-bind="text: $parent.personProfile().otherProtected ? 'Other Protected' : ''"></div>
+                        <div data-bind="text: $parent.personProfile().armedForcesServiceMedal ? 'Armed Forces Service Medal' : ''"></div>
+                        <div data-bind="text: $parent.personProfile().recentlySeparated ? 'Recently Separated' : ''"></div>
+                        <div data-bind="text: $parent.personProfile().specialDisabled ? 'Special Disabled' : ''"></div>
+
+                        <h4>Registered Disable Number</h4>
+                         <div data-bind="text: $parent.personProfile().registeredDisabledNumber"></div>
+
+                        <h4>Discharge Date</h4>
+                         <div data-bind="text: $parent.getDischargeDate()"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -26,17 +57,28 @@
             <h3>Contact</h3>
             <div class="oj-row">
                 <div class="oj-col oj-lg-6">
-                    <h4>Email Address</h4>
-                    <a data-bind="attr:{href: $parent.getEmail($data)}, text: $parent.personProfile().email+'@example.net'"></a>
+                    <div>
+                        <h4>Email Address</h4>
+                        <a data-bind="attr:{href: $parent.getEmail($data)}, text: $parent.personProfile().email+'@example.net'"></a>
+                    </div>
                     <h4>Phone Number</h4>
                     <div data-bind="text: $parent.personProfile().phone"></div>
-                    <h4>Other Phone Number</h4>
-                    <div data-bind="text: $parent.personProfile().mobile"></div>
-                    <h4>FAX Number</h4>
+                    <div>
+                        <h4>Other Phone Number</h4>
+                        <div data-bind="text: $parent.personProfile().mobile"></div>
+                    </div>
+                    <div data-bind="visible: $parent.personProfile().faxNumber">
+                        <h4>FAX Number</h4>
+                        <div data-bind="text: $parent.personProfile().faxNumber"></div>
+                    </div>
                     <h4>Address</h4>
+                    <div data-bind="html: $parent.formatAddress()"></div>
                 </div>
                 <div class="oj-col oj-lg-6">
-                    <h4>Emergency Contact</h4>
+                    <div>
+                        <h4>Emergency Contact</h4>
+                        <div data-bind="html: $parent.formatEmergencyContact()"></div>
+                    </div>
                 </div>
             </div>
         </div>
