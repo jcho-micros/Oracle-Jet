@@ -98,23 +98,43 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                     self.timeZone = ko.observable(self.personProfile().timeZone);
                     self.ethnicity = ko.observable(self.personProfile().ethnicity);
                     self.gender = ko.observable(self.personProfile().gender);
-                    //Still doesn't update when modal is changed
-                    if(self.personProfile().veteranStatus === 1  ){
-                        self.veteranStatus = ko.observable('yes');
-                        self.veteranStatusVisible = ko.observable(1);
-                    }else{
-                        self.veteranStatus = ko.observable('no');
-                        self.veteranStatusVisible = ko.observable(0);
-                    }
 
-                    self.vietnamEra = ko.observable(self.personProfile().vietnamEra);
-                    self.otherEligible = ko.observable(self.personProfile().otherEligible);
-                    self.otherProtected = ko.observable(self.personProfile().otherProtected);
-                    self.armedForcesServiceMedal = ko.observable(self.personProfile().armedForcesServiceMedal);
-                    self.recentlySeparated = ko.observable(self.personProfile().recentlySeparated);
-                    self.specialDisabled = ko.observable(self.personProfile().specialDisabled);
-                    self.registeredDisabledNumber = ko.observable(self.personProfile().registeredDisabledNumber);
-                    self.dischargeDate = ko.observable(self.getDischargeDate());
+                    self.profilePhoto = ko.observable(self.personProfile().gender);
+
+                    //Veteran Info Start
+                        self.veteranStatus = ko.observable(self.personProfile().veteranStatus);
+                        //changes veteranStatus 1/0 to yes/no
+                        self.changeBooleanFormat(self.veteranStatus);
+
+                        self.vietnamEra = ko.observable(self.personProfile().vietnamEra);
+                        //changes veteranStatus 1/0 to text passed to function
+                        self.changeBooleanToText(self.vietnamEra, 'Vietnam Era');
+
+                        self.otherEligible = ko.observable(self.personProfile().otherEligible);
+                        //changes veteranStatus 1/0 to text passed to function
+                        self.changeBooleanToText(self.otherEligible, 'Other Eligible');
+
+                        self.otherProtected = ko.observable(self.personProfile().otherProtected);
+                        //changes veteranStatus 1/0 to text passed to function
+                        self.changeBooleanToText(self.otherProtected, 'Other Protected');
+
+                        self.armedForcesServiceMedal = ko.observable(self.personProfile().armedForcesServiceMedal);
+                        //changes veteranStatus 1/0 to text passed to function
+                        self.changeBooleanToText(self.armedForcesServiceMedal, 'Armed Forces Service Medal');
+
+                        self.recentlySeparated = ko.observable(self.personProfile().recentlySeparated);
+                        //changes veteranStatus 1/0 to text passed to function
+                        self.changeBooleanToText(self.recentlySeparated, 'Recently Separated');
+
+                        self.specialDisabled = ko.observable(self.personProfile().specialDisabled);
+                        //changes veteranStatus 1/0 to text passed to function
+                        self.changeBooleanToText(self.specialDisabled, 'Special Disabled');
+
+                        self.registeredDisabledNumber = ko.observable(self.personProfile().registeredDisabledNumber);
+                        self.dischargeDate = ko.observable(self.getDischargeDate());
+                    //Veteran Info END
+
+                    self.email = ko.observable(self.personProfile().email);
                     self.phone = ko.observable(self.personProfile().phone);
                     self.mobile = ko.observable(self.personProfile().mobile);
                     self.faxNumber = ko.observable(self.personProfile().faxNumber);
@@ -130,6 +150,12 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                     //Emergency Contact Fields
                     self.emergencyName = ko.observable(self.personProfile().emergencyName);
                     self.relationship = ko.observable(self.personProfile().relationship);
+                    //Formats relationship observable
+                    self.formattedRelationship = ko.pureComputed({
+                        read: function(){
+                            return "(" + self.relationship() + ")";
+                        }
+                    });
                     self.emergencyAddress = ko.observable(self.personProfile().emergencyAddress);
                     self.emergencyCity = ko.observable(self.personProfile().emergencyCity);
                     self.emergencyState = ko.observable(self.personProfile().emergencyState);
@@ -148,8 +174,26 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                     return src;
                 };
 
+                //Changes values from 1/0 to yes/no
+                self.changeBooleanFormat = function(property){
+                    if(property() === 1){
+                        property("yes");
+                    }else{
+                        property("no");
+                    }
+                };
+
+                //Changes values from 1/0 to text
+                self.changeBooleanToText = function(property, text){
+                    if(property() === 1){
+                        property(text);
+                    }else{
+                        property("");
+                    }
+                };
+
                 self.getEmail = function () {
-                    return "mailto:" + self.personProfile().email + '@example.net';
+                    return "mailto:" + self.email() + '@example.net';
                 };
 
                 //Child router for tabs - assigns the URL
@@ -176,6 +220,7 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                     var state = self.personProfile().state;
                     var postal = self.personProfile().postal;
                     var country = self.personProfile().country;
+
                     if(!suite){
                         return street + '<br/>' + city + '<br/>' + state + ' ' + postal + ' ' + country;
                     }else{

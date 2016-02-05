@@ -17,7 +17,7 @@
       "phoneExtension" : "x231",
       "faxNumber" : "",
       "address1" : "2014 Main St",
-      "address2" : "",
+      "address2" : "test",
       "city" : "Southlake",
       "state" : "Texas",
       "country" : "US",
