@@ -87,14 +87,7 @@
     </div>
     <div class="oj-md-12 oj-col" data-bind="if: tabRouter.stateId()">
         <div class="oj-panel tab-content" data-bind="with: tabRouter.currentState()">
-            <div class="oj-row">
-                <div class="oj-col oj-lg-10">
-                    <h2 id="currentPage" data-bind="text: label"></h2>
-                </div>
-                <div class="oj-col oj-lg-2 oj-lg-text-align-end">
-                    <div data-bind="click: $parent.handleOpen" style="line-height:39px;">Edit</div>
-                </div>
-            </div>
+
             <div data-bind="template: {name: 'profile/' + id +'/' + id + '-large'}"></div>
         </div>
     </div>

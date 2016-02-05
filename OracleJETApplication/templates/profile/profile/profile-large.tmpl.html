@@ -1,4 +1,12 @@
 <div class="oj-row">
+    <div class="oj-col oj-lg-10">
+        <h2 id="currentPage" data-bind="text: label"></h2>
+    </div>
+    <div class="oj-col oj-lg-2 oj-lg-text-align-end">
+        <div data-bind="click: $parent.handleOpen" style="line-height:39px;">Edit</div>
+    </div>
+</div>
+<div class="oj-row">
     <div class="general-section">
         <div class="oj-col oj-lg-6">
             <h3>General</h3>
@@ -46,10 +54,10 @@
                         <div data-bind="text: $parent.specialDisabled()"></div>
 
                         <h4>Registered Disable Number</h4>
-                         <div data-bind="text: $parent.registeredDisabledNumber()"></div>
+                        <div data-bind="text: $parent.registeredDisabledNumber()"></div>
 
                         <h4>Discharge Date</h4>
-                         <div data-bind="text: $parent.dischargeDate()"></div>
+                        <div data-bind="text: $parent.dischargeDate()"></div>
                     </div>
                 </div>
             </div>
@@ -76,12 +84,12 @@
                         <div data-bind="text: $parent.faxNumber()"></div>
                     </div>
                     <h4>Address</h4>
-                        <div data-bind="text: $parent.address1()"></div>
-                        <div data-bind="text: $parent.address2()"></div>
-                        <span data-bind="text: $parent.city()"></span>
-                        <span data-bind="text: $parent.state()"></span>
-                        <span data-bind="text: $parent.postal()"></span>
-                        <span data-bind="text: $parent.country()"></span>
+                    <div data-bind="text: $parent.address1()"></div>
+                    <div data-bind="text: $parent.address2()"></div>
+                    <span data-bind="text: $parent.city()"></span>
+                    <span data-bind="text: $parent.state()"></span>
+                    <span data-bind="text: $parent.postal()"></span>
+                    <span data-bind="text: $parent.country()"></span>
                 </div>
                 <div class="oj-col oj-lg-6">
                     <div>
@@ -190,4 +198,3 @@
     <h3 class="oj-col oj-lg-12">Custom</h3>
 </div>
 -->
-
