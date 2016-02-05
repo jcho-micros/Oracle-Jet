@@ -36,19 +36,19 @@
                     <h4>Veteran</h4>
                     <div data-bind="text: $parent.veteranStatus"></div>
                     <!--doesn't update on modal change, need to work on this-->
-                    <div data-bind="visible: $parent.veteranStatusVisible">
-                        <div data-bind="text: $parent.vietnamEra ? 'Vietnam Era' : ''"></div>
-                        <div data-bind="text: $parent.personProfile().otherEligible ? 'Other Eligible' : ''"></div>
-                        <div data-bind="text: $parent.personProfile().otherProtected ? 'Other Protected' : ''"></div>
-                        <div data-bind="text: $parent.personProfile().armedForcesServiceMedal ? 'Armed Forces Service Medal' : ''"></div>
-                        <div data-bind="text: $parent.personProfile().recentlySeparated ? 'Recently Separated' : ''"></div>
-                        <div data-bind="text: $parent.personProfile().specialDisabled ? 'Special Disabled' : ''"></div>
+                    <div data-bind="visible: $parent.veteranStatusVisible()">
+                        <div data-bind="text: $parent.vietnamEra"></div>
+                        <div data-bind="text: $parent.otherEligible"></div>
+                        <div data-bind="text: $parent.otherProtected"></div>
+                        <div data-bind="text: $parent.armedForcesServiceMedal"></div>
+                        <div data-bind="text: $parent.recentlySeparated"></div>
+                        <div data-bind="text: $parent.specialDisabled"></div>
 
                         <h4>Registered Disable Number</h4>
-                         <div data-bind="text: $parent.personProfile().registeredDisabledNumber"></div>
+                         <div data-bind="text: $parent.registeredDisabledNumber"></div>
 
                         <h4>Discharge Date</h4>
-                         <div data-bind="text: $parent.getDischargeDate()"></div>
+                         <div data-bind="text: $parent.dischargeDate"></div>
                     </div>
                 </div>
             </div>
@@ -64,22 +64,35 @@
                         <a data-bind="attr:{href: $parent.getEmail($data)}, text: $parent.personProfile().email+'@example.net'"></a>
                     </div>
                     <h4>Phone Number</h4>
-                    <div data-bind="text: $parent.personProfile().phone"></div>
+                    <div data-bind="text: $parent.phone"></div>
                     <div>
                         <h4>Other Phone Number</h4>
-                        <div data-bind="text: $parent.personProfile().mobile"></div>
+                        <div data-bind="text: $parent.mobile"></div>
                     </div>
-                    <div data-bind="visible: $parent.personProfile().faxNumber">
+
+<!--                    NOT Working<div data-bind="visible: $parent.faxNumber">-->
+                    <div>
                         <h4>FAX Number</h4>
-                        <div data-bind="text: $parent.personProfile().faxNumber"></div>
+                        <div data-bind="text: $parent.faxNumber"></div>
                     </div>
                     <h4>Address</h4>
-                    <div data-bind="html: $parent.formatAddress()"></div>
+                        <div data-bind="text: $parent.address1"></div>
+                        <div data-bind="text: $parent.address2"></div>
+                        <span data-bind="text: $parent.city"></span>
+                        <span data-bind="text: $parent.state"></span>
+                        <span data-bind="text: $parent.postal"></span>
+                        <span data-bind="text: $parent.country"></span>
                 </div>
                 <div class="oj-col oj-lg-6">
                     <div>
                         <h4>Emergency Contact</h4>
-                        <div data-bind="html: $parent.formatEmergencyContact()"></div>
+                        <span data-bind="html: $parent.emergencyName"></span>
+                        <span data-bind="html: $parent.relationship"></span>
+                        <div data-bind="html: $parent.emergencyAddress"></div>
+                        <span data-bind="html: $parent.emergencyCity"></span>
+                        <span data-bind="html: $parent.emergencyState"></span>
+                        <span data-bind="html: $parent.emergencyZipCode"></span>
+                        <div data-bind="html: $parent.emergencyPhone"></div>
                     </div>
                 </div>
             </div>
@@ -87,7 +100,7 @@
     </div>
     <h3 class="oj-col oj-lg-12">Custom</h3>
 </div>
-<!--Backup of fields pulled from array-->
+<!--Backup of fields pulled from array no using observables-->
 <!--
 <div class="oj-row">
     <div class="general-section">

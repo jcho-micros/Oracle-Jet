@@ -78,24 +78,7 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                     return new Promise(function(resolve, reject) {
                         jsonData.fetchData(getEmpURL(id)).then(function (person) {
                             self.personProfile(person);
-
-                            //Not sure why above observable array can't be used with InputText binding in KO. Need to look into this.
-                            //Sets up observables to be able to update them only in the view, does not save data.
-                            self.firstName = ko.observable(self.personProfile().firstName);
-                            self.lastName = ko.observable(self.personProfile().lastName);
-                            self.posCheckName = ko.observable(self.personProfile().posCheckName);
-                            self.language = ko.observable(self.personProfile().language);
-                            self.timeZone = ko.observable(self.personProfile().timeZone);
-                            self.ethnicity = ko.observable(self.personProfile().ethnicity);
-                            self.gender = ko.observable(self.personProfile().gender);
-                            //Still doesn't update when modal is changed
-                            if(self.personProfile().veteranStatus === 1 ){
-                                self.veteranStatus = ko.observable('yes');
-                                self.veteranStatusVisible = ko.observable(true);
-                            }else{
-                                self.veteranStatus = ko.observable('no');
-                                self.veteranStatusVisible = ko.observable(false);
-                            }
+                            self.setupObservables();
 
                             resolve(true);
                         }).fail(function (error) {
@@ -105,6 +88,55 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                     });
                 };
 
+                self.setupObservables = function(){
+                    //Not sure why above observable array can't be used with InputText binding in KO. Need to look into this.
+                    //Sets up observables to be able to update them only in the view, does not save data.
+                    self.firstName = ko.observable(self.personProfile().firstName);
+                    self.lastName = ko.observable(self.personProfile().lastName);
+                    self.posCheckName = ko.observable(self.personProfile().posCheckName);
+                    self.language = ko.observable(self.personProfile().language);
+                    self.timeZone = ko.observable(self.personProfile().timeZone);
+                    self.ethnicity = ko.observable(self.personProfile().ethnicity);
+                    self.gender = ko.observable(self.personProfile().gender);
+                    //Still doesn't update when modal is changed
+                    if(self.personProfile().veteranStatus === 1  ){
+                        self.veteranStatus = ko.observable('yes');
+                        self.veteranStatusVisible = ko.observable(1);
+                    }else{
+                        self.veteranStatus = ko.observable('no');
+                        self.veteranStatusVisible = ko.observable(0);
+                    }
+
+                    self.vietnamEra = ko.observable(self.personProfile().vietnamEra);
+                    self.otherEligible = ko.observable(self.personProfile().otherEligible);
+                    self.otherProtected = ko.observable(self.personProfile().otherProtected);
+                    self.armedForcesServiceMedal = ko.observable(self.personProfile().armedForcesServiceMedal);
+                    self.recentlySeparated = ko.observable(self.personProfile().recentlySeparated);
+                    self.specialDisabled = ko.observable(self.personProfile().specialDisabled);
+                    self.registeredDisabledNumber = ko.observable(self.personProfile().registeredDisabledNumber);
+                    self.dischargeDate = ko.observable(self.getDischargeDate());
+                    self.phone = ko.observable(self.personProfile().phone);
+                    self.mobile = ko.observable(self.personProfile().mobile);
+                    self.faxNumber = ko.observable(self.personProfile().faxNumber);
+
+                    //Address Fields
+                    self.address1 = ko.observable(self.personProfile().address1);
+                    self.address2 = ko.observable(self.personProfile().address2);
+                    self.city = ko.observable(self.personProfile().city);
+                    self.state = ko.observable(self.personProfile().state);
+                    self.postal = ko.observable(self.personProfile().postal);
+                    self.country = ko.observable(self.personProfile().country);
+
+                    //Emergency Contact Fields
+                    self.emergencyName = ko.observable(self.personProfile().emergencyName);
+                    self.relationship = ko.observable(self.personProfile().relationship);
+                    self.emergencyAddress = ko.observable(self.personProfile().emergencyAddress);
+                    self.emergencyCity = ko.observable(self.personProfile().emergencyCity);
+                    self.emergencyState = ko.observable(self.personProfile().emergencyState);
+                    self.emergencyZipCode = ko.observable(self.personProfile().emergencyZipCode);
+                    self.emergencyPhone = ko.observable(self.personProfile().emergencyPhone);
+
+                };
                 self.getPhoto = function (id) {
                     var src;
                     // We only have images for employees below 188 for now. Use the nopic avatar for those above 18
@@ -136,6 +168,7 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                     return dischargeDate;
                 };
 
+//              formats the address however doesn't work with observables
                 self.formatAddress = function () {
                     var street = self.personProfile().address1;
                     var suite = self.personProfile().address2;
@@ -150,6 +183,7 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                     }
                 };
 
+//              formats the Emergency Contact however doesn't work with observables
                 self.formatEmergencyContact = function () {
                     var emergencyName = self.personProfile().emergencyName;
                     var relationship = self.personProfile().relationship;
