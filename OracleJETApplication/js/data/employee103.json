@@ -33,6 +33,7 @@
       "ethnicity": "Asian",
       "timeZone" : "US CST",
       "hireDate" : "2006-07-14T00:00:00-07:00",
+      "hireStatus": "Active",
       "profilePicture" : "images/people/103.png",
       "veteranStatus" : 1,
       "vietnamEra" : 1,
