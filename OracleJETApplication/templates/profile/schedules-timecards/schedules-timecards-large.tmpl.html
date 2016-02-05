@@ -1,25 +1,53 @@
 <div class="justifyCenter">
-    <div id="personaldetails" class="oj-row" style="margin-bottom:26px;">
-        <div class="oj-col oj-md-2 oj-lg-2 demo-employee-photo-person-detail">
-            <img data-bind="attr: {src: $parent.getPhoto($parent.personProfile().empId)}" />
+
+    <div class="oj-row">
+        <div class="oj-md-12 scheduleHeaderArea">
+            <span class="scheduleHeader"> Schedule</span><span class="timeOffRequest"><a href="#">Time Off Request</a>
+        </div> 
+        
+    </div>
+    <div class="oj-row">
+        <div class="oj-md-12 currentWeekHeaderArea">
+            <div class="currentWeekHeader">Current Week (8/40) <a href="#" class="shiftPoolLink">Shift Pool</a></div>
         </div>
-        <div class="oj-col oj-md-4 oj-lg-4" style="margin-top: 10px;">
-            <div data-bind="text: $parent.personProfile().firstName + ' ' + $parent.personProfile().lastName"></div>
-            <div data-bind="text: $parent.personProfile().title"></div>
-            <div data-bind="text: $parent.personProfile().deptName"></div>
-        </div>
-        <div class="oj-col oj-md-4 oj-lg-4" style="margin-top: 10px;">
-            <div>
-                <div data-bind="text: $parent.personProfile().phone"></div>
-            </div>
-            <div>
-                <div data-bind="text: $parent.personProfile().mobile"></div>
-            </div>
-            <div>
-                <div>
-                    <a data-bind="attr:{href: $parent.getEmail($data)}, text: $parent.personProfile().email+'@example.net'"></a>
-                </div>
-            </div>
+        <div class="oj-md-12">
+            <div id="filmStripDiv" class="oj-panel" style="margin: '20px';  width='776px'">
+              <div id="filmStrip" aria-label="Set of chemicals" data-bind="ojComponent: {component: 'ojFilmStrip', arrowPlacement: self.currentNavArrowPlacement, arrowVisibility: self.currentNavArrowVisibility}">
+                <!-- ko foreach: $parent.personProfile().currentScheduledDates -->
+                    <div class="oj-panel oj-panel-alt2 demo-filmstrip-item" data-bind="style: {display: getItemInitialDisplay($index())}">
+
+                        <div data-bind="text: location"></div>
+                        <div data-bind="text: revenueCenter"></div>
+                        <div data-bind="text: station"></div>
+                        <div data-bind="text: status"></div>
+                        <div data-bind="text: notes"></div>
+                    </div>
+                <!-- /ko -->
+              </div>
+            </div> <!-- end filmStripDiv -->
         </div>
     </div>
+    <div class="oj-row">
+        <div class="oj-md-12 upcomingWeekHeaderArea">
+            <div class="upcomingWeekHeader">Upcoming Week (8/40) <a href="#" class="shiftPoolLink">Shift Pool</a></div>
+        </div>
+        <div class="oj-md-12">
+            <div id="filmStripDiv" class="oj-panel" style="margin: '20px';  width='776px'">
+              <div id="filmStrip" aria-label="Set of chemicals" data-bind="ojComponent: {component: 'ojFilmStrip', arrowPlacement: self.currentNavArrowPlacement, arrowVisibility: self.currentNavArrowVisibility}">
+                <!-- ko foreach: $parent.personProfile().currentScheduledDates -->
+                    <div class="oj-panel oj-panel-alt2 demo-filmstrip-item" data-bind="style: {display: getItemInitialDisplay($index())}">
+
+                        <div data-bind="text: location"></div>
+                        <div data-bind="text: revenueCenter"></div>
+                        <div data-bind="text: station"></div>
+                        <div data-bind="text: status"></div>
+                        <div data-bind="text: notes"></div>
+                    </div>
+                <!-- /ko -->
+              </div>
+            </div> <!-- end filmStripDiv -->
+        </div>
+    </div>
+
+                
 </div>
