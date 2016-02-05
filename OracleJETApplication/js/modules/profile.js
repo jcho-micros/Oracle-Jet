@@ -212,43 +212,12 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                     return dischargeDate;
                 };
 
-//              formats the address however doesn't work with observables
-                self.formatAddress = function () {
-                    var street = self.personProfile().address1;
-                    var suite = self.personProfile().address2;
-                    var city = self.personProfile().city;
-                    var state = self.personProfile().state;
-                    var postal = self.personProfile().postal;
-                    var country = self.personProfile().country;
-
-                    if(!suite){
-                        return street + '<br/>' + city + '<br/>' + state + ' ' + postal + ' ' + country;
-                    }else{
-                        return street + '<br/>' + suite + '<br/>' + city + '<br/>' + state + ' ' + postal + ' ' + country;
-                    }
-                };
-
-//              formats the Emergency Contact however doesn't work with observables
-                self.formatEmergencyContact = function () {
-                    var emergencyName = self.personProfile().emergencyName;
-                    var relationship = self.personProfile().relationship;
-                    var emergencyAddress = self.personProfile().emergencyAddress;
-                    var emergencyCity = self.personProfile().emergencyCity;
-                    var emergencyState = self.personProfile().emergencyState;
-                    var emergencyZipCode = self.personProfile().emergencyZipCode;
-                    var emergencyPhone = self.personProfile().emergencyPhone;
-
-                    return emergencyName + ' (' + relationship + ') ' + '<br/>' + emergencyAddress + '<br/>' + emergencyCity + ' ' + emergencyState + ' ' + emergencyZipCode  + '<br/>' + emergencyPhone;
-                };
                 /////// JOHN insert for schedule
                 self.currentNavArrowPlacement = ko.observable("adjacent");
                 self.currentNavArrowVisibility = ko.observable("auto");
                 
                 getItemInitialDisplay = function(index){return index < 3 ? '' : 'none';};
-                
-                
-                
-                
+
             }
 
 

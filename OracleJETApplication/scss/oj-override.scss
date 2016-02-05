@@ -1501,6 +1501,13 @@ button#menuButton{
     }
 }
 
+//Profile Styles
+#personaldetails{
+    padding:10px;
+    img{
+        width:100%;
+    }
+}
 //Footer styles
 footer{
     position:absolute;
@@ -1518,6 +1525,24 @@ footer{
         color: $headerLinkTextColor;
         text-decoration: none;
     }
+}
+
+//Employee Dialog Modal
+.empModal-dimensions{
+    height:auto;
+    width:100%;
+    .oj-inputtext{
+        max-width:100%;
+    }
+}
+
+.dialog-field-label{
+    font-weight:bold;
+    font-size: 13px;
+}
+.dialog-section-label{
+    @extend .dialog-field-label;
+    font-size: 15px;
 }
 //Dialog
 .oj-dialog-header{
@@ -1540,6 +1565,7 @@ footer{
 .dialogItemHeader{
     font-weight: bold;
 }
+
 //Media Query
 //Medium/ipad (UP)
 @media only screen and (min-width: 768px){
@@ -1586,6 +1612,10 @@ footer{
                 color: $navigationListDesktopTextColorSelected;
             }
         }
+    }
+    //Employee Dialog Modal
+    .empModal-dimensions{
+        width:50%;
     }
 }
 

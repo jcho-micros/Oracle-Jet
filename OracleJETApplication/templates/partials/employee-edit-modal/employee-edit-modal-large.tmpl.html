@@ -1,148 +1,145 @@
-<div style="display:none;" id="empDialog" title="Edit Employee Information" data-bind="ojComponent:{component: 'ojDialog', initialVisibility: 'hide', rootAttributes: {style: 'width:50%;height:auto;'}}">
+<div style="display:none;" id="empDialog" title="Edit Employee Information" data-bind="ojComponent:{component: 'ojDialog', initialVisibility: 'hide', rootAttributes: {class: 'empModal-dimensions'}}">
     <div class="oj-dialog-body">
         <div class="oj-row">
-            <span class="oj-col oj-lg-5">First Name</span>
-            <div class="oj-col oj-lg-7">
+            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">First Name</div>
+            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
                 <input data-bind="ojComponent: {component: 'ojInputText', value: firstName}" />
             </div>
-        </div>
-        <div class="oj-row">
-            <span class="oj-col oj-lg-5">Last Name</span>
-            <div class="oj-col oj-lg-7">
+
+            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Last Name</div>
+            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
                 <input data-bind="ojComponent: {component: 'ojInputText', value: lastName}" />
             </div>
         </div>
         <div class="oj-row">
-            <span class="oj-col oj-lg-5">POS Check Name</span>
-            <div class="oj-col oj-lg-7">
+            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">POS Check Name</div>
+            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
                 <input data-bind="ojComponent: {component: 'ojInputText', value: posCheckName}" />
             </div>
-        </div>
-        <div class="oj-row">
-            <span class="oj-col oj-lg-5">Language</span>
-            <div class="oj-col oj-lg-7">
+
+             <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Language</div>
+            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
                 <input data-bind="ojComponent: {component: 'ojInputText', value: language}" />
             </div>
         </div>
         <div class="oj-row">
-            <span class="oj-col oj-lg-5">Time Zone</span>
-            <div class="oj-col oj-lg-7">
+            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Time Zone</div>
+            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
                 <input data-bind="ojComponent: {component: 'ojInputText', value: timeZone}" />
             </div>
-        </div>
-        <div class="oj-row">
-            <span class="oj-col oj-lg-5">Ethnicity</span>
-            <div class="oj-col oj-lg-7">
+
+            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Ethnicity</div>
+            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
                 <input data-bind="ojComponent: {component: 'ojInputText', value: ethnicity}" />
             </div>
         </div>
         <div class="oj-row">
-            <span class="oj-col oj-lg-5">Gender</span>
-            <div class="oj-col oj-lg-7">
+            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Gender</div>
+            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
                 <input data-bind="ojComponent: {component: 'ojInputText', value: gender}" />
             </div>
         </div>
         <div class="oj-row">
-            <span class="oj-col oj-lg-5">Veteran Status</span>
-            <div class="oj-col oj-lg-7">
-                <input data-bind="ojComponent: {component: 'ojInputText', value: veteranStatus}" />
-            </div>
+            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-section-label">Veteran Info</div>
         </div>
         <div class="oj-row">
-            <span class="oj-col oj-lg-5">Vietnam Era</span>
-            <div class="oj-col oj-lg-7">
+            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Veteran Status</div>
+            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
+                <input data-bind="ojComponent: {component: 'ojInputText', value: veteranStatus}" />
+            </div>
+
+            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Vietnam Era</div>
+            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
                 <input data-bind="ojComponent: {component: 'ojInputText', value: vietnamEra}" />
             </div>
         </div>
         <div class="oj-row">
-            <span class="oj-col oj-lg-5">Other Eligible</span>
-            <div class="oj-col oj-lg-7">
+            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Other Eligible</div>
+            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
                 <input data-bind="ojComponent: {component: 'ojInputText', value: otherEligible}" />
             </div>
-        </div>
-        <div class="oj-row">
-            <span class="oj-col oj-lg-5">Other Protected</span>
-            <div class="oj-col oj-lg-7">
+
+            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Other Protected</div>
+            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
                 <input data-bind="ojComponent: {component: 'ojInputText', value: otherProtected}" />
             </div>
         </div>
         <div class="oj-row">
-            <span class="oj-col oj-lg-5">Armed Forces Service Medal</span>
-            <div class="oj-col oj-lg-7">
+            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Armed Forces Service Medal</div>
+            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
                 <input data-bind="ojComponent: {component: 'ojInputText', value: armedForcesServiceMedal}" />
             </div>
-        </div>
-        <div class="oj-row">
-            <span class="oj-col oj-lg-5">Recently Separated</span>
-            <div class="oj-col oj-lg-7">
+
+            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Recently Separated</div>
+            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
                 <input data-bind="ojComponent: {component: 'ojInputText', value: recentlySeparated}" />
             </div>
         </div>
         <div class="oj-row">
-            <span class="oj-col oj-lg-5">Special Disabled</span>
-            <div class="oj-col oj-lg-7">
+            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Special Disabled</div>
+            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
                 <input data-bind="ojComponent: {component: 'ojInputText', value: specialDisabled}" />
             </div>
-            <div class="oj-row">
-                <span class="oj-col oj-lg-5">Registered Disabled Number</span>
-                <div class="oj-col oj-lg-7">
-                    <input data-bind="ojComponent: {component: 'ojInputText', value: registeredDisabledNumber}" />
-                </div>
+
+            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Registered Disabled Number</div>
+            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
+                <input data-bind="ojComponent: {component: 'ojInputText', value: registeredDisabledNumber}" />
             </div>
-            <div class="oj-row">
-                <span class="oj-col oj-lg-5">Discharge Date</span>
-                <div class="oj-col oj-lg-7">
-                    <input data-bind="ojComponent: {component: 'ojInputText', value: dischargeDate}" />
-                </div>
+        </div>
+        <div class="oj-row">
+            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Discharge Date</div>
+            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
+                <input data-bind="ojComponent: {component: 'ojInputText', value: dischargeDate}" />
             </div>
-            <div class="oj-row">
-                <span class="oj-col oj-lg-5">Email</span>
-                <div class="oj-col oj-lg-7">
-                    <input data-bind="ojComponent: {component: 'ojInputText', value: email}" />
-                </div>
-            </div>
-            <div class="oj-row">
-                <span class="oj-col oj-lg-5">Phone</span>
-                <div class="oj-col oj-lg-7">
-                    <input data-bind="ojComponent: {component: 'ojInputText', value: phone}" />
-                </div>
-            </div>
-            <div class="oj-row">
-                <span class="oj-col oj-lg-5">Other Phone Number</span>
-                <div class="oj-col oj-lg-7">
-                    <input data-bind="ojComponent: {component: 'ojInputText', value: mobile}" />
-                </div>
-            </div>
-            <div class="oj-row">
-                <span class="oj-col oj-lg-5">Fax Number</span>
-                <div class="oj-col oj-lg-7">
-                    <input data-bind="ojComponent: {component: 'ojInputText', value: faxNumber}" />
-                </div>
-            </div>
-            <div class="oj-row">
-                <span class="oj-col oj-lg-5">Address</span>
-                <div class="oj-col oj-lg-7">
-                    <input data-bind="ojComponent: {component: 'ojInputText', value: address1}" />
-                    <input data-bind="ojComponent: {component: 'ojInputText', value: address2}" />
-                    <input data-bind="ojComponent: {component: 'ojInputText', value: city}" />
-                    <input data-bind="ojComponent: {component: 'ojInputText', value: state}" />
-                    <input data-bind="ojComponent: {component: 'ojInputText', value: postal}" />
-                    <input data-bind="ojComponent: {component: 'ojInputText', value: country}" />
-                </div>
-            </div>
-            <div class="oj-row">
-                <span class="oj-col oj-lg-5">Emergency Contact</span>
-                <div class="oj-col oj-lg-7">
-                    <input data-bind="ojComponent: {component: 'ojInputText', value: emergencyName}" />
-                    <input data-bind="ojComponent: {component: 'ojInputText', value: relationship}" />
-                    <input data-bind="ojComponent: {component: 'ojInputText', value: emergencyAddress}" />
-                    <input data-bind="ojComponent: {component: 'ojInputText', value: emergencyCity}" />
-                    <input data-bind="ojComponent: {component: 'ojInputText', value: emergencyState}" />
-                    <input data-bind="ojComponent: {component: 'ojInputText', value: emergencyZipCode}" />
-                    <input data-bind="ojComponent: {component: 'ojInputText', value: emergencyPhone}" />
-                </div>
+        </div>
+        <div class="oj-row">
+            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-section-label">Contact Info</div>
+        </div>
+        <div class="oj-row">
+            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Email</div>
+            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
+                <input data-bind="ojComponent: {component: 'ojInputText', value: email}" />
             </div>
 
-            <button id="submitButton" data-bind="click:handleClose">Save</button>
+            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Phone</div>
+            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
+                <input data-bind="ojComponent: {component: 'ojInputText', value: phone}" />
+            </div>
         </div>
+        <div class="oj-row">
+            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Other Phone Number</div>
+            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
+                <input data-bind="ojComponent: {component: 'ojInputText', value: mobile}" />
+            </div>
+
+            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Fax Number</div>
+            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
+                <input data-bind="ojComponent: {component: 'ojInputText', value: faxNumber}" />
+            </div>
+        </div>
+        <div class="oj-row">
+            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Address</div>
+            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
+                <input data-bind="ojComponent: {component: 'ojInputText', value: address1}" />
+                <input data-bind="ojComponent: {component: 'ojInputText', value: address2}" />
+                <input data-bind="ojComponent: {component: 'ojInputText', value: city}" />
+                <input data-bind="ojComponent: {component: 'ojInputText', value: state}" />
+                <input data-bind="ojComponent: {component: 'ojInputText', value: postal}" />
+                <input data-bind="ojComponent: {component: 'ojInputText', value: country}" />
+            </div>
+
+            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Emergency Contact</div>
+            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
+                <input data-bind="ojComponent: {component: 'ojInputText', value: emergencyName}" />
+                <input data-bind="ojComponent: {component: 'ojInputText', value: relationship}" />
+                <input data-bind="ojComponent: {component: 'ojInputText', value: emergencyAddress}" />
+                <input data-bind="ojComponent: {component: 'ojInputText', value: emergencyCity}" />
+                <input data-bind="ojComponent: {component: 'ojInputText', value: emergencyState}" />
+                <input data-bind="ojComponent: {component: 'ojInputText', value: emergencyZipCode}" />
+                <input data-bind="ojComponent: {component: 'ojInputText', value: emergencyPhone}" />
+            </div>
+        </div>
+
+        <button id="submitButton" data-bind="click:handleClose">Save</button>
+
     </div>
