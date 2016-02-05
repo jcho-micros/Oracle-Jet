@@ -1,4 +1,4 @@
-define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout'],
+define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/ojdialog', 'ojs/ojinputtext'],
         function (oj, ko, jsonData, moment)
         {
 
@@ -6,7 +6,17 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout'],
                 var self = this;
                 self.personProfile = ko.observableArray([]);
 
+                //Employee Dialog
+                self.handleOpen =  function() {
+                    $("#empDialog").ojDialog("open");
+                };
+
+                self.handleClose =  function() {
+                    $("#empDialog").ojDialog("close");
+                };
+
                 self.handleActivated = function (info) {
+
                     var parentRouter = info.valueAccessor().params;
 
                     // Retrieve the childRouter instance created in main.js
@@ -38,11 +48,15 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout'],
                         'analytics': {label: 'Analytics', value: 'analytics'},
                         'permissions': {label: 'Permissions', value: 'permissions'}
                     });
+
                     // Returns the sync promise to handleActivated. The next
                     // phase of the ojModule lifecycle (attached) will not be
                     // executed until sync is resolved.
                     return oj.Router.sync();
                 };
+
+
+
 
                 function getEmpURL(id) {
                     var url;
@@ -64,6 +78,25 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout'],
                     return new Promise(function(resolve, reject) {
                         jsonData.fetchData(getEmpURL(id)).then(function (person) {
                             self.personProfile(person);
+
+                            //Not sure why above observable array can't be used with InputText binding in KO. Need to look into this.
+                            //Sets up observables to be able to update them only in the view, does not save data.
+                            self.firstName = ko.observable(self.personProfile().firstName);
+                            self.lastName = ko.observable(self.personProfile().lastName);
+                            self.posCheckName = ko.observable(self.personProfile().posCheckName);
+                            self.language = ko.observable(self.personProfile().language);
+                            self.timeZone = ko.observable(self.personProfile().timeZone);
+                            self.ethnicity = ko.observable(self.personProfile().ethnicity);
+                            self.gender = ko.observable(self.personProfile().gender);
+                            //Still doesn't update when modal is changed
+                            if(self.personProfile().veteranStatus === 1 ){
+                                self.veteranStatus = ko.observable('yes');
+                                self.veteranStatusVisible = ko.observable(true);
+                            }else{
+                                self.veteranStatus = ko.observable('no');
+                                self.veteranStatusVisible = ko.observable(false);
+                            }
+
                             resolve(true);
                         }).fail(function (error) {
                             console.log('Error: ' + error.message);
@@ -102,6 +135,7 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout'],
                     dischargeDate = dateConverter.format(startDate);
                     return dischargeDate;
                 };
+
                 self.formatAddress = function () {
                     var street = self.personProfile().address1;
                     var suite = self.personProfile().address2;
@@ -128,6 +162,7 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout'],
                     return emergencyName + ' (' + relationship + ') ' + '<br/>' + emergencyAddress + '<br/>' + emergencyCity + ' ' + emergencyState + ' ' + emergencyZipCode  + '<br/>' + emergencyPhone;
                 };
             }
+
 
             return new PersonViewModel();
         });

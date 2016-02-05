@@ -5,6 +5,97 @@
             <div class="oj-row">
                 <div class="oj-col oj-lg-6">
                     <h4>Name</h4>
+                    <span data-bind="text: $parent.firstName"></span>
+                    <span data-bind="text: $parent.lastName"></span>
+
+                    <div data-bind="visible: $parent.posCheckName">
+                        <h4>POS Check Name</h4>
+                        <div data-bind="text: $parent.posCheckName"></div>
+                    </div>
+
+                    <h4>Language</h4>
+                    <div data-bind="text: $parent.language"></div>
+
+                    <h4>Time Zone</h4>
+                    <div data-bind="text: $parent.timeZone"></div>
+
+                    <div>
+                        <h4>Ethnicity</h4>
+                        <div data-bind="text: $parent.ethnicity"></div>
+                    </div>
+                    <div>
+                        <h4>Gender</h4>
+                        <div data-bind="text: $parent.gender"></div>
+                    </div>
+                </div>
+                <div class="oj-col oj-lg-6">
+
+                    <h4>Profile Picture</h4>
+                    <img data-bind="attr: {src: $parent.getPhoto($parent.personProfile().empId)}" />
+
+                    <h4>Veteran</h4>
+                    <div data-bind="text: $parent.veteranStatus"></div>
+                    <!--doesn't update on modal change, need to work on this-->
+                    <div data-bind="visible: $parent.veteranStatusVisible">
+                        <div data-bind="text: $parent.vietnamEra ? 'Vietnam Era' : ''"></div>
+                        <div data-bind="text: $parent.personProfile().otherEligible ? 'Other Eligible' : ''"></div>
+                        <div data-bind="text: $parent.personProfile().otherProtected ? 'Other Protected' : ''"></div>
+                        <div data-bind="text: $parent.personProfile().armedForcesServiceMedal ? 'Armed Forces Service Medal' : ''"></div>
+                        <div data-bind="text: $parent.personProfile().recentlySeparated ? 'Recently Separated' : ''"></div>
+                        <div data-bind="text: $parent.personProfile().specialDisabled ? 'Special Disabled' : ''"></div>
+
+                        <h4>Registered Disable Number</h4>
+                         <div data-bind="text: $parent.personProfile().registeredDisabledNumber"></div>
+
+                        <h4>Discharge Date</h4>
+                         <div data-bind="text: $parent.getDischargeDate()"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact-section">
+        <div class="oj-col oj-lg-6">
+            <h3>Contact</h3>
+            <div class="oj-row">
+                <div class="oj-col oj-lg-6">
+                    <div>
+                        <h4>Email Address</h4>
+                        <a data-bind="attr:{href: $parent.getEmail($data)}, text: $parent.personProfile().email+'@example.net'"></a>
+                    </div>
+                    <h4>Phone Number</h4>
+                    <div data-bind="text: $parent.personProfile().phone"></div>
+                    <div>
+                        <h4>Other Phone Number</h4>
+                        <div data-bind="text: $parent.personProfile().mobile"></div>
+                    </div>
+                    <div data-bind="visible: $parent.personProfile().faxNumber">
+                        <h4>FAX Number</h4>
+                        <div data-bind="text: $parent.personProfile().faxNumber"></div>
+                    </div>
+                    <h4>Address</h4>
+                    <div data-bind="html: $parent.formatAddress()"></div>
+                </div>
+                <div class="oj-col oj-lg-6">
+                    <div>
+                        <h4>Emergency Contact</h4>
+                        <div data-bind="html: $parent.formatEmergencyContact()"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h3 class="oj-col oj-lg-12">Custom</h3>
+</div>
+<!--Backup of fields pulled from array-->
+<!--
+<div class="oj-row">
+    <div class="general-section">
+        <div class="oj-col oj-lg-6">
+            <h3>General</h3>
+            <div class="oj-row">
+                <div class="oj-col oj-lg-6">
+                    <h4>Name</h4>
                     <div data-bind="text: $parent.personProfile().firstName + ' ' + $parent.personProfile().lastName"></div>
 
                     <div data-bind="visible: $parent.personProfile().posCheckName">
@@ -85,3 +176,5 @@
     </div>
     <h3 class="oj-col oj-lg-12">Custom</h3>
 </div>
+-->
+

@@ -1,0 +1,16 @@
+<div style="display:none;" id="empDialog" title="Edit Employee Information" data-bind="ojComponent:{component: 'ojDialog', initialVisibility: 'hide'
+                                     }">
+    <div class="oj-dialog-body">
+       <input data-bind="ojComponent: {component: 'ojInputText', value: firstName}"/>
+       <input data-bind="ojComponent: {component: 'ojInputText', value: lastName}"/>
+       <input data-bind="ojComponent: {component: 'ojInputText', value: posCheckName}"/>
+       <input data-bind="ojComponent: {component: 'ojInputText', value: language}"/>
+       <input data-bind="ojComponent: {component: 'ojInputText', value: timeZone}"/>
+       <input data-bind="ojComponent: {component: 'ojInputText', value: ethnicity}"/>
+       <input data-bind="ojComponent: {component: 'ojInputText', value: gender}"/>
+       <input data-bind="ojComponent: {component: 'ojInputText', value: veteranStatus}"/>
+       <input data-bind="ojComponent: {component: 'ojInputText', value: vietnamEra}"/>
+
+        <button id="submitButton" data-bind="click:handleClose">Save</button>
+    </div>
+</div>
