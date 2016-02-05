@@ -1,4 +1,4 @@
-define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/ojdialog', 'ojs/ojinputtext'],
+define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/ojdialog', 'ojs/ojinputtext', 'ojs/ojfilmstrip'],
         function (oj, ko, jsonData, moment)
         {
 
@@ -161,6 +161,15 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
 
                     return emergencyName + ' (' + relationship + ') ' + '<br/>' + emergencyAddress + '<br/>' + emergencyCity + ' ' + emergencyState + ' ' + emergencyZipCode  + '<br/>' + emergencyPhone;
                 };
+                /////// JOHN insert for schedule
+                self.currentNavArrowPlacement = ko.observable("adjacent");
+                self.currentNavArrowVisibility = ko.observable("auto");
+                
+                getItemInitialDisplay = function(index){return index < 3 ? '' : 'none';};
+                
+                
+                
+                
             }
 
 
