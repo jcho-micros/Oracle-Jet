@@ -36,6 +36,13 @@ define([
         });
 
         //Search Feature
+
+        //Reset search
+        //Resets only the 'First Name' field in the form
+        self.resetData = function(){
+            self.firstNameSearch('');
+            self.filteredAllPeople();
+        };
         //Search form observables
         self.payrollIdSearch = ko.observable('');
         self.firstNameSearch = ko.observable('');
