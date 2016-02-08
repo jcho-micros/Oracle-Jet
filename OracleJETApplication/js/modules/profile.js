@@ -8,6 +8,7 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
 
                 //Employee Dialog
                 self.handleOpen =  function() {
+                    alert("hi");
                     $("#empDialog").ojDialog("open");
                 };
 
@@ -132,6 +133,7 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
 
                         self.registeredDisabledNumber = ko.observable(self.personProfile().registeredDisabledNumber);
                         self.dischargeDate = ko.observable(self.getDischargeDate());
+
                     //Veteran Info END
 
                     self.email = ko.observable(self.personProfile().email);
@@ -161,6 +163,11 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                     self.emergencyState = ko.observable(self.personProfile().emergencyState);
                     self.emergencyZipCode = ko.observable(self.personProfile().emergencyZipCode);
                     self.emergencyPhone = ko.observable(self.personProfile().emergencyPhone);
+                    
+                    //This variable is for Schedule time  card Current schedule Dates Nested
+                    self.currentScheduledDates = self.personProfile().currentScheduledDates;
+                    self.dayStart = ko.observable(self.getFormattedDate('dayStart'));
+                    self.dayEnd = ko.observable(self.getFormattedDate('dayEnd'));
 
                 };
                 self.getPhoto = function (id) {
@@ -212,10 +219,27 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                     return dischargeDate;
                 };
 
+
                 /////// JOHN insert for schedule
+
+                //this is for Schedules and Timecards format Date
+                self.getFormattedDate = function (oldDate) {
+                    var currentListDate = self.currentScheduledDates;
+                    for(i=0; i < currentListDate.length; i++){
+                        var newDate = currentListDate[i][oldDate];
+                        var dateOptions = {formatStyle: 'date', dateFormat: 'medium'};
+                        var dateConverter = oj.Validation.converterFactory("datetime").createConverter(dateOptions);
+                        var startDate = oj.IntlConverterUtils.dateToLocalIso(moment(newDate).toDate());
+                        newDate = dateConverter.format(startDate);
+                        //Returns the new format back into the original array dayListStart array
+                        currentListDate[i][oldDate] = newDate;
+                    }
+                };
+
+
                 self.currentNavArrowPlacement = ko.observable("adjacent");
                 self.currentNavArrowVisibility = ko.observable("auto");
-                
+
                 getItemInitialDisplay = function(index){return index < 3 ? '' : 'none';};
 
             }
