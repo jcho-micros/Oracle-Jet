@@ -1,50 +1,101 @@
 <div class="justifyCenter">
-    <div class="oj-col oj-sm-10 oj-lg-10">
-        <h2 id="currentPage" data-bind="text: label"></h2>
+    <div class="oj-row">
+        <div class="oj-md-12 oj-col ">
+            <h2 id="currentPage" data-bind="text: label"></h2>
+            <hr>
+        </div>
     </div>
     <div class="oj-row">
-        <div class="oj-md-12 scheduleHeaderArea">
-            <span class="scheduleHeader"> Schedule</span><span class="timeOffRequest"><a href="#">Time Off Request</a>
+        <div class="oj-md-12">
+            <div class="scheduleHeader"> Schedule <span class="timeOffRequest"><a href="#">Time Off Request</a></span></div>
         </div> 
-
     </div>
     <div class="oj-row">
         <div class="oj-md-12 currentWeekHeaderArea">
-            <div class="currentWeekHeader">Current Week (8/40) <a href="#" class="shiftPoolLink">Shift Pool</a></div>
-                                
-                                                       <a data-bind="click:$parent.handleOpen" style="line-height:39px;">    click       </a>  
+            <div class="currentWeekHeader"><strong>Current Week</strong> (8/40) </div>
         </div>
         <div class="oj-md-12">
+            <div class="oj-row">
+                <div class="oj-md-6 oj-col shiftPoolDiv">
+                   <a href="#" class="shiftPoolLink">Shift Pool</a>
+                </div>
+                <div class="oj-md-6 oj-col emailAndPringDiv">
+                    <ul class="scheduleToolArea">
+                        <li id="email"><a href="#"><span class="fa fa-envelope-o"></span> Email</span></a></li>
+                        <li id="print"><a href="#"><span class="fa fa-print""></span> Print</span></a></li>
+                    </ul>
+                </div>
+
+            </div>
             <div id="filmStripDiv" class="oj-panel" style="margin: '20px';  width='776px'">
               <div id="filmStrip" aria-label="Set of chemicals" data-bind="ojComponent: {component: 'ojFilmStrip', arrowPlacement: self.currentNavArrowPlacement, arrowVisibility: self.currentNavArrowVisibility}">
                   <!-- ko foreach: $parent.currentScheduledDates -->
-
-                  <div class="oj-panel oj-panel-alt2 demo-filmstrip-item" data-bind="style: {display: getItemInitialDisplay($index())}">
-
-                      <div data-bind="text: dayStart"></div>
-                      <div data-bind="text: dayEnd"></div>
-                      <div data-bind="text: station"></div>
-                        
+                  
+                  <div class="oj-panel oj-panel-alt2 schedule-filmstrip-item" data-bind="style: {display: getItemInitialDisplay($index())}">
+                      <a data-bind="click:$parents[1].handleOpen">
+                          <div>
+                      <span data-bind="text: currentDayStart"></span> <span data-bind="text: currentDayStartTime"></span> - <span data-bind="text: currentDayEndTime"></span>
+                      <br /><span data-bind="text: location"></span>, <span data-bind="text: revenueCenter"></span>
+                      <br /><span data-bind="text: job"></span>, <span data-bind="text: station"></span>
+                      <br /><span data-bind="text: status"></span>
+                      <br /><span data-bind="text: notes"></span>
+                          </div>
+                        </a>
                     </div>
-
+                      
                 <!-- /ko -->
 
               </div>
             </div> <!-- end filmStripDiv -->
         </div>
     </div>
-    <div class="oj-row">
+    <div class="oj-row futureRow">
         <div class="oj-md-12 upcomingWeekHeaderArea">
-            <div class="upcomingWeekHeader">Upcoming Week (8/40) <a href="#" class="shiftPoolLink">Shift Pool</a></div>
+            <div class="upcomingWeekHeader"><strong>Upcoming Week</strong> (8/40) </div>
         </div>
         <div class="oj-md-12">
+            <div class="oj-row">
+                <div class="oj-md-6 oj-col shiftPoolDiv">
+                   <a href="#" class="shiftPoolLink">Shift Pool</a>
+                </div>
+                <div class="oj-md-6 oj-col emailAndPringDiv">
+                    <ul class="scheduleToolArea">
+                        <li id="email"><a href="#"><span class="fa fa-envelope-o"></span> Email</span></a></li>
+                        <li id="print"><a href="#"><span class="fa fa-print""></span> Print</span></a></li>
+                    </ul>
+                </div>
 
-                                    <div data-bind="text: $parent.personProfile().currentScheduledDates[6].dayStart;"></div>
+            </div>
             <div id="filmStripDiv" class="oj-panel" style="margin: '20px';  width='776px'">
               <div id="filmStrip" aria-label="Set of chemicals" data-bind="ojComponent: {component: 'ojFilmStrip', arrowPlacement: self.currentNavArrowPlacement, arrowVisibility: self.currentNavArrowVisibility}">
+               
+                <!-- ko foreach: $parent.futureScheduledDates -->
 
+                <div class="oj-panel oj-panel-alt2 demo-filmstrip-item" data-bind="style: {display: getItemInitialDisplay($index())}">
+                    <span data-bind="text: futureDayStart"></span> <span data-bind="text: futureDayStartTime"></span> - <span data-bind="text: futureDayEndTime"></span>
+                    <br /><span data-bind="text: location"></span>, <span data-bind="text: revenueCenter"></span>
+                    <br /><span data-bind="text: job"></span>, <span data-bind="text: station"></span>
+                    <br /><span data-bind="text: status"></span>
+                    <br /><span data-bind="text: notes"></span>
+                </div>
+
+                <!-- /ko -->
               </div>
             </div> <!-- end filmStripDiv -->
+        </div>
+    </div>
+    <div class="oj-row">
+        <div class="oj-md-12">
+            <h2>Availablity</h2>
+        </div>
+        <div class="oj-md-4 oj-col">
+            
+        </div>
+        <div class="oj-md-4 oj-col">
+            
+        </div>    
+        <div class="oj-md-4 oj-col">
+            
         </div>
     </div>
 
