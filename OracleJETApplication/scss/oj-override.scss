@@ -6,7 +6,7 @@
 // PATHS
 // ---------------------------------
 // these paths should be relative to the generated css file
-//  
+//   
 // path to alta images 
 // $imageDir: "images/";
 // 
@@ -681,6 +681,9 @@ $customSelectedtabsNavColor: $selectedtabText;
 $tabsBgColor: $lightBlue;
 $tabsBgColorSelected: $lightBlue;
 
+// Film strip content area
+// ---------------------------------
+$filmStripSubHeaderBg: $lightGray;
 // 
 // PROGRESSBAR
 // ---------------------------------------------------------------
@@ -1616,6 +1619,45 @@ footer{
     //Employee Dialog Modal
     .empModal-dimensions{
         width:50%;
+    }
+    
+    //Schedule and Timecard
+    .futureRow{
+        margin-top:20px;
+    }
+    .currentWeekHeaderArea{
+        padding: 10px;
+        background-color: $filmStripSubHeaderBg;
+        width: 98.25%;
+    }
+    .upcomingWeekHeaderArea{
+        padding: 10px;
+        background-color: $filmStripSubHeaderBg;
+        width: 98.25%;
+    }
+    .shiftPoolLinkArea{
+        padding: 10px;
+        width: 100%;
+        display: inline;
+    }
+    .scheduleHeader{
+        padding:5px 0 5px 10px;
+    }
+    .scheduleToolArea{
+        position: relative;
+    }
+    .scheduleToolArea li{
+        display: inline;
+        list-style-type: none;
+    }
+    .shiftPoolDiv{
+       padding: 10px;
+    }
+    .emailAndPringDiv{
+        text-align: right;
+    }
+    .scheduleToolArea li:first-child{
+        padding-right: 20px;
     }
 }
 
