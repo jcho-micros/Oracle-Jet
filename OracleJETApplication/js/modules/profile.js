@@ -165,9 +165,15 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                     
                     //This variable is for Schedule time  card Current schedule Dates Nested
                     self.currentScheduledDates = self.personProfile().currentScheduledDates;
-                    self.dayStart = ko.observable(self.getFormattedDate('dayStart'));
-                    self.dayEnd = ko.observable(self.getFormattedDate('dayEnd'));
-
+                    self.futureScheduledDates = self.personProfile().futureScheduledDates;
+                    self.currentDayStart = ko.observable(self.getFormattedDate('currentDayStart'));
+                    self.currentDayEnd = ko.observable(self.getFormattedDate('currentDayEnd'));
+                    self.currentDayStartTime = ko.observable(self.getFormattedTime('currentDayStartTime'));
+                    self.currentDayEndTime = ko.observable(self.getFormattedTime('currentDayEndTime'));
+                    self.futureDayStart = ko.observable(self.getFutureFormattedDate('futureDayStart'));
+                    self.futureDayEnd = ko.observable(self.getFutureFormattedDate('futureDayEnd'));
+                    self.futureDayStartTime = ko.observable(self.getFutureFormattedTime('futureDayStartTime'));
+                    self.futureDayEndTime = ko.observable(self.getFutureFormattedTime('futureDayEndTime'));
                 };
                 self.getPhoto = function (id) {
                     var src;
@@ -234,8 +240,42 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                         currentListDate[i][oldDate] = newDate;
                     }
                 };
-
-
+                self.getFormattedTime = function (oldTime) {
+                    var currentListTime = self.currentScheduledDates;
+                    for(i=0; i < currentListTime.length; i++){
+                        var newTime = currentListTime[i][oldTime];
+                        var hours24 = parseInt(newTime.substring(0,2));
+                        var hours = ((hours24 + 11) % 12) + 1;
+                        var amPm = hours24 > 11 ? 'pm' : 'am';
+                        var minutes = newTime.substring(2);
+                        newTime = hours + ':' + minutes + amPm;
+                        currentListTime[i][oldTime] = newTime;
+                    }
+                };
+                self.getFutureFormattedDate = function (oldDate) {
+                    var futureListDate = self.futureScheduledDates;
+                    for(i=0; i < futureListDate.length; i++){
+                        var newDate = futureListDate[i][oldDate];
+                        var dateOptions = {formatStyle: 'date', dateFormat: 'medium'};
+                        var dateConverter = oj.Validation.converterFactory("datetime").createConverter(dateOptions);
+                        var startDate = oj.IntlConverterUtils.dateToLocalIso(moment(newDate).toDate());
+                        newDate = dateConverter.format(startDate);
+                        //Returns the new format back into the original array dayListStart array
+                        futureListDate[i][oldDate] = newDate;
+                    }
+                };
+                self.getFutureFormattedTime = function (oldTime) {
+                    var futureListTime = self.futureScheduledDates;
+                    for(i=0; i < futureListTime.length; i++){
+                        var newTime = futureListTime[i][oldTime];
+                        var hours24 = parseInt(newTime.substring(0,2));
+                        var hours = ((hours24 + 11) % 12) + 1;
+                        var amPm = hours24 > 11 ? 'pm' : 'am';
+                        var minutes = newTime.substring(2);
+                        newTime = hours + ':' + minutes + amPm;
+                        futureListTime[i][oldTime] = newTime;
+                    }
+                };
                 self.currentNavArrowPlacement = ko.observable("adjacent");
                 self.currentNavArrowVisibility = ko.observable("auto");
 
