@@ -88,8 +88,10 @@
       "groupTimeOff" : 6,
       "currentScheduledDates" : [ {
          "id" : 1,
-         "dayStart" : "2016-02-21T00:00:00-07:00",
-         "dayEnd" : "2016-02-21T00:00:00-15:00",
+         "currentDayStart" : "2016-02-21T00:00:00-07:00",
+         "currentDayStartTime" : "0600",
+         "currentDayEnd" : "2016-02-21T00:00:00-15:00",
+         "currentDayEndTime" : "1300",
          "location" : "Resturant",
          "revenueCenter" : "In-Dining",
          "job" : "Off",
@@ -98,8 +100,10 @@
          "notes" : "Requested off"
       },{
          "id" : 2,
-         "dayStart" : "2016-02-22T00:00:00-07:00",
-         "dayEnd" : "2016-02-22T00:00:00-15:00",
+         "currentDayStart" : "2016-02-22T00:00:00-07:00",
+         "currentDayStartTime" : "0600",
+         "currentDayEnd" : "2016-02-22T00:00:00-15:00",
+         "currentDayEndTime" : "1300",
          "location" : "Resturant",
          "revenueCenter" : "In-Dining",
          "job" : "Server",
@@ -108,8 +112,10 @@
          "notes" : "N/A"
       },{
          "id" : 3,
-         "dayStart" : "2016-02-23T00:00:00-07:00",
-         "dayEnd" : "2016-02-23T00:00:00-15:00",
+         "currentDayStart" : "2016-02-23T00:00:00-07:00",
+         "currentDayStartTime" : "0600",
+         "currentDayEnd" : "2016-02-23T00:00:00-15:00",
+         "currentDayEndTime" : "1300",
          "location" : "Resturant",
          "revenueCenter" : "In-Dining",
          "job" : "Food Runner",
@@ -118,8 +124,10 @@
          "notes" : "N/A"
       }, {
          "id" : 4,
-         "dayStart" : "2016-02-24T00:00:00-07:00",
-         "dayEnd" : "2016-02-24T00:00:00-15:00",
+         "currentDayStart" : "2016-02-24T00:00:00-07:00",
+         "currentDayStartTime" : "0600",
+         "currentDayEnd" : "2016-02-24T00:00:00-15:00",
+         "currentDayEndTime" : "1300",
          "location" : "Resturant",
          "revenueCenter" : "In-Dining",
          "job" : "Server",
@@ -128,8 +136,10 @@
          "notes" : "N/A"
       },{
          "id" : 5,
-         "dayStart" : "2016-02-25T00:00:00-07:00",
-         "dayEnd" : "2016-02-25T00:00:00-15:00",
+         "currentDayStart" : "2016-02-25T00:00:00-07:00",
+         "currentDayStartTime" : "0600",
+         "currentDayEnd" : "2016-02-25T00:00:00-15:00",
+         "currentDayEndTime" : "1300",
          "location" : "Resturant",
          "revenueCenter" : "In-Dining",
          "job" : "Food Runner",
@@ -138,8 +148,10 @@
          "notes" : "N/A"
       },{
          "id" : 6,
-         "dayStart" : "2016-02-26T00:00:00-07:00",
-         "dayEnd" : "2016-02-26T00:00:00-15:00",
+         "currentDayStart" : "2016-02-26T00:00:00-07:00",
+         "currentDayStartTime" : "0600",
+         "currentDayEnd" : "2016-02-26T00:00:00-15:00",
+         "currentDayEndTime" : "1300",
          "location" : "Resturant",
          "revenueCenter" : "In-Dining",
          "job" : "Off",
@@ -148,8 +160,10 @@
          "notes" : "Standard Off day"
       },{
          "id" : 7,
-         "dayStart" : "2016-02-27T00:00:00-07:00",
-         "dayEnd" : "2016-02-27T00:00:00-15:00",
+         "currentDayStart" : "2016-02-27T00:00:00-07:00",
+         "currentDayStartTime" : "0600",
+         "currentDayEnd" : "2016-02-27T00:00:00-15:00",
+         "currentDayEndTime" : "1300",
          "location" : "Resturant",
          "revenueCenter" : "In-Dining",
          "job" : "Off",
@@ -159,8 +173,10 @@
       }],
       "futureScheduledDates" : [ {
          "id" : 1,
-         "dayStart" : "2016-02-21T00:00:00-07:00",
-         "dayEnd" : "2016-02-21T00:00:00-15:00",
+         "futureDayStart" : "2016-02-21T00:00:00-07:00",
+         "futureDayStartTime" : "0600",
+         "futureDayEnd" : "2016-02-21T00:00:00-15:00",
+         "futureDayEndTime" : "1300",
          "location" : "Resturant",
          "revenueCenter" : "In-Dining",
          "job" : "Off",
@@ -169,8 +185,10 @@
          "notes" : "Requested off"
       },{
          "id" : 2,
-         "dayStart" : "2016-02-22T00:00:00-07:00",
-         "dayEnd" : "2016-02-22T00:00:00-15:00",
+         "futureDayStart" : "2016-02-22T00:00:00-07:00",
+         "futureDayStartTime" : "0600",
+         "futureDayEnd" : "2016-02-22T00:00:00-15:00",
+         "futureDayEndTime" : "1300",
          "location" : "Resturant",
          "revenueCenter" : "In-Dining",
          "job" : "Server",
@@ -179,8 +197,10 @@
          "notes" : "N/A"
       },{
          "id" : 3,
-         "dayStart" : "2016-02-23T00:00:00-07:00",
-         "dayEnd" : "2016-02-23T00:00:00-15:00",
+         "futureDayStart" : "2016-02-23T00:00:00-07:00",
+         "futureDayStartTime" : "0600",
+         "futureDayEnd" : "2016-02-23T00:00:00-15:00",
+         "futureDayEndTime" : "1300",
          "location" : "Resturant",
          "revenueCenter" : "In-Dining",
          "job" : "Food Runner",
@@ -189,8 +209,10 @@
          "notes" : "N/A"
       }, {
          "id" : 4,
-         "dayStart" : "2016-02-24T00:00:00-07:00",
-         "dayEnd" : "2016-02-24T00:00:00-15:00",
+         "futureDayStart" : "2016-02-24T00:00:00-07:00",
+         "futureDayStartTime" : "0600",
+         "futureDayEnd" : "2016-02-24T00:00:00-15:00",
+         "futureDayEndTime" : "1300",
          "location" : "Resturant",
          "revenueCenter" : "In-Dining",
          "job" : "Server",
@@ -199,8 +221,10 @@
          "notes" : "N/A"
       },{
          "id" : 5,
-         "dayStart" : "2016-02-25T00:00:00-07:00",
-         "dayEnd" : "2016-02-25T00:00:00-15:00",
+         "futureDayStart" : "2016-02-25T00:00:00-07:00",
+         "futureDayStartTime" : "0600",
+         "futureDayEnd" : "2016-02-25T00:00:00-15:00",
+         "futureDayEndTime" : "1300",
          "location" : "Resturant",
          "revenueCenter" : "In-Dining",
          "job" : "Food Runner",
@@ -209,8 +233,10 @@
          "notes" : "N/A"
       },{
          "id" : 6,
-         "dayStart" : "2016-02-26T00:00:00-07:00",
-         "dayEnd" : "2016-02-26T00:00:00-15:00",
+         "futureDayStart" : "2016-02-26T00:00:00-07:00",
+         "futureDayStartTime" : "0600",
+         "futureDayEnd" : "2016-02-26T00:00:00-15:00",
+         "futureDayEndTime" : "1300",
          "location" : "Resturant",
          "revenueCenter" : "In-Dining",
          "job" : "Off",
@@ -219,8 +245,10 @@
          "notes" : "Standard Off day"
       },{
          "id" : 7,
-         "dayStart" : "2016-02-27T00:00:00-07:00",
-         "dayEnd" : "2016-02-27T00:00:00-15:00",
+         "futureDayStart" : "2016-02-27T00:00:00-07:00",
+         "futureDayStartTime" : "0600",
+         "futureDayEnd" : "2016-02-27T00:00:00-15:00",
+         "futureDayEndTime" : "1300",
          "location" : "Resturant",
          "revenueCenter" : "In-Dining",
          "job" : "Off",
