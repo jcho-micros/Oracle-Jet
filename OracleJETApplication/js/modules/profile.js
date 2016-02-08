@@ -8,7 +8,6 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
 
                 //Employee Dialog
                 self.handleOpen =  function() {
-                    alert("hi");
                     $("#empDialog").ojDialog("open");
                 };
 
