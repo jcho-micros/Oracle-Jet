@@ -83,6 +83,7 @@
       "groupTrainings" : 89,
       "groupTimeOff" : 82,
       "currentScheduledDates" : [ {
+         "id" : 1,
          "dayStart" : "2016-02-21T00:00:00-07:00",
          "dayEnd" : "2016-02-21T00:00:00-15:00",
          "location" : "Resturant",
@@ -92,7 +93,8 @@
          "status" : "Not Schdeuled",
          "notes" : "Requested off"
       },{
-         "day" : "2016-02-22T00:00:00-07:00",
+         "id" : 2,
+         "dayStart" : "2016-02-22T00:00:00-07:00",
          "dayEnd" : "2016-02-22T00:00:00-15:00",
          "location" : "Resturant",
          "revenueCenter" : "In-Dining",
@@ -101,6 +103,7 @@
          "status" : "Schdeuled",
          "notes" : "N/A"
       },{
+         "id" : 3,
          "dayStart" : "2016-02-23T00:00:00-07:00",
          "dayEnd" : "2016-02-23T00:00:00-15:00",
          "location" : "Resturant",
@@ -110,6 +113,7 @@
          "status" : "Schdeuled",
          "notes" : "N/A"
       }, {
+         "id" : 4,
          "dayStart" : "2016-02-24T00:00:00-07:00",
          "dayEnd" : "2016-02-24T00:00:00-15:00",
          "location" : "Resturant",
@@ -119,6 +123,7 @@
          "status" : "Schdeuled",
          "notes" : "N/A"
       },{
+         "id" : 5,
          "dayStart" : "2016-02-25T00:00:00-07:00",
          "dayEnd" : "2016-02-25T00:00:00-15:00",
          "location" : "Resturant",
@@ -128,6 +133,7 @@
          "status" : "Schdeuled",
          "notes" : "N/A"
       },{
+         "id" : 6,
          "dayStart" : "2016-02-26T00:00:00-07:00",
          "dayEnd" : "2016-02-26T00:00:00-15:00",
          "location" : "Resturant",
@@ -137,6 +143,78 @@
          "status" : "Not Schdeuled",
          "notes" : "Standard Off day"
       },{
+         "id" : 7,
+         "dayStart" : "2016-02-27T00:00:00-07:00",
+         "dayEnd" : "2016-02-27T00:00:00-15:00",
+         "location" : "Resturant",
+         "revenueCenter" : "In-Dining",
+         "job" : "Off",
+         "station" : "Not Assigned",
+         "status" : "Not Schdeuled",
+         "notes" : "Requested Off"
+      }],
+      "futureScheduledDates" : [ {
+         "id" : 1,
+         "dayStart" : "2016-02-21T00:00:00-07:00",
+         "dayEnd" : "2016-02-21T00:00:00-15:00",
+         "location" : "Resturant",
+         "revenueCenter" : "In-Dining",
+         "job" : "Off",
+         "station" : "Not Assigned",
+         "status" : "Not Schdeuled",
+         "notes" : "Requested off"
+      },{
+         "id" : 2,
+         "dayStart" : "2016-02-22T00:00:00-07:00",
+         "dayEnd" : "2016-02-22T00:00:00-15:00",
+         "location" : "Resturant",
+         "revenueCenter" : "In-Dining",
+         "job" : "Server",
+         "station" : "Section 6",
+         "status" : "Schdeuled",
+         "notes" : "N/A"
+      },{
+         "id" : 3,
+         "dayStart" : "2016-02-23T00:00:00-07:00",
+         "dayEnd" : "2016-02-23T00:00:00-15:00",
+         "location" : "Resturant",
+         "revenueCenter" : "In-Dining",
+         "job" : "Food Runner",
+         "station" : "Kitchen",
+         "status" : "Schdeuled",
+         "notes" : "N/A"
+      }, {
+         "id" : 4,
+         "dayStart" : "2016-02-24T00:00:00-07:00",
+         "dayEnd" : "2016-02-24T00:00:00-15:00",
+         "location" : "Resturant",
+         "revenueCenter" : "In-Dining",
+         "job" : "Server",
+         "station" : "Section 3",
+         "status" : "Schdeuled",
+         "notes" : "N/A"
+      },{
+         "id" : 5,
+         "dayStart" : "2016-02-25T00:00:00-07:00",
+         "dayEnd" : "2016-02-25T00:00:00-15:00",
+         "location" : "Resturant",
+         "revenueCenter" : "In-Dining",
+         "job" : "Food Runner",
+         "station" : "Kitchen",
+         "status" : "Schdeuled",
+         "notes" : "N/A"
+      },{
+         "id" : 6,
+         "dayStart" : "2016-02-26T00:00:00-07:00",
+         "dayEnd" : "2016-02-26T00:00:00-15:00",
+         "location" : "Resturant",
+         "revenueCenter" : "In-Dining",
+         "job" : "Off",
+         "station" : "Not Assigned",
+         "status" : "Not Schdeuled",
+         "notes" : "Standard Off day"
+      },{
+         "id" : 7,
          "dayStart" : "2016-02-27T00:00:00-07:00",
          "dayEnd" : "2016-02-27T00:00:00-15:00",
          "location" : "Resturant",
