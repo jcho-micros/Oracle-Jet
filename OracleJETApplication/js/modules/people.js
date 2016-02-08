@@ -7,6 +7,7 @@ define([
     'ojs/ojlistview',
     'ojs/ojmodel',
     'ojs/ojnavigationlist',
+    'ojs/ojpagingcontrol',
     'ojs/ojdatacollection-common',
     'ojs/ojdialog',
     'ojs/ojtabs',
@@ -17,11 +18,12 @@ define([
     'ojs/ojcheckboxset',
     'ojs/ojinputtext',
     'ojs/ojselectcombobox',
-    'ojs/ojradioset',
+    'ojs/ojradioset'
 ], function (oj, ko, data) {
 
     function peopleContentViewModel() {
         var self = this;
+        self.ready = ko.observable(false);
 
         //where the all employee info will be stored
         self.allPeople = ko.observableArray([]);
@@ -33,10 +35,48 @@ define([
             console.log('Error in getting People data: ' + error.message);
         });
 
+        //Search Feature
+        //Search form observables
+        self.payrollIdSearch = ko.observable('');
+        self.firstNameSearch = ko.observable('');
+        self.lastNameSearch = ko.observable('');
+
+        self.filteredAllPeople = ko.computed({
+             read: function(){
+                 var peopleFilter = new Array();
+                 if (self.allPeople().length !== 0) {
+                     if (self.firstNameSearch().length === 0) {
+                         peopleFilter = self.allPeople();
+                     } else {
+                         ko.utils.arrayFilter(self.allPeople(),
+                             function (r) {
+                                 var token = self.firstNameSearch().toLowerCase();
+                                 if (r.firstName.toLowerCase().indexOf(token) === 0) {
+                                     peopleFilter.push(r);
+                                 }
+                             });
+                     }
+                 }
+                 return peopleFilter;
+             },
+             write: function(){
+             }
+        });
+
         //pass all employee data into an array
         self.listViewDataSource = ko.computed(function () {
-            return new oj.ArrayTableDataSource(self.allPeople(), {idAttribute: 'empId'});
+            return new oj.ArrayTableDataSource(self.filteredAllPeople(), {idAttribute: 'empId'});
         });
+
+        self.getPhoto = function (empId) {
+            var src;
+            if (empId < 188) {
+                src = 'css/images/people/' + empId + '.png';
+            } else {
+                src = 'css/images/people/nopic.png';
+            }
+            return src;
+        };
 
         self.loadPersonPage = function (emp) {
             if (emp.empId) {
@@ -81,6 +121,7 @@ define([
         self.toggleSections = function () {
             self.sectionsState(!self.sectionsState());
         };
+
 
     }
 

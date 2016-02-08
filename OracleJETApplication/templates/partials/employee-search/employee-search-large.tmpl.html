@@ -2,122 +2,104 @@
        <div class="oj-row oj-cols-nopad">
         <div class="oj-col oj-sm-12 oj-md-12 oj-lg-12 oj-xl-12">
             <div id="form-container" class="oj-form">
-                <div class="oj-col oj-lg-8 oj-xl-8">
-                    <div class="oj-row">
-                        <div class="searchTitle">
-                            <h4>Search Criteria <a href="#">view all employees</a></h4>
-                        </div>
-                    </div>
-                    <!-- End of Row -->
-                    <div class="oj-md-odd-cols-3 oj-md-even-cols-3 oj-lg-odd-cols-3 oj-lg-even-cols-3 searchForm">
+               <form data-bind="submit: filteredAllPeople">
+                    <div class="oj-col oj-lg-8 oj-xl-8">
                         <div class="oj-row">
-                            <div class="oj-col">
-                                <label for="payrollid">Payroll ID</label>
-                                <input id="payrollid" data-bind="ojComponent: {component: 'ojInputText', value:'',
-                                                         help: {definition: helpDef()}}">
+                            <div class="searchTitle">
+                                <h4>Search Criteria <a href="#">view all employees</a></h4>
                             </div>
-                            <!-- End of Col -->
-                            <div class="oj-col">
-                                <label for="firstname">First Name</label>
-                                <input id="firstname" data-bind="ojComponent: {component: 'ojInputText', value:'',
-                                                      help: {definition: helpDef()}}">
-                            </div>
-                            <!-- End of Col -->
-                            <div class="oj-col">
-                                <label for="lastname">Last Name</label>
-                                <input id="lastname" data-bind="ojComponent: {component: 'ojInputText', value:'',
-                                                      help: {definition: helpDef()}}">
-                            </div>
-                            <!-- End of Col -->
-                            <div class="oj-col">
-                                <label for="basicSelect">Single Select </label>
-                                <select id="basicSelect" data-bind="ojComponent: {component: 'ojSelect',
-                                                                                                      value: val,
-                                                                                                      rootAttributes: {style:'max-width:20em'}}">
-                                    <option value="IE">Internet Explorer</option>
-                                    <option value="FF">Firefox</option>
-                                    <option value="CH">Chrome</option>
-                                    <option value="OP">Opera</option>
-                                    <option value="SA">Safari</option>
-                                </select>
-                            </div>
-                            <!-- End of Col -->
                         </div>
-                        <!-- End of Row -->
 
-                    </div>
-                    <!-- End of column -->
-
-                    <div class="oj-md-5 oj-lg-5 oj-xl-5 left">
-                        <div class="checkboxWrapper">
-                            <label id="mainlabelid">STATUS</label>
-                            <div id="checkboxSetId" aria-labelledby="mainlabelid" data-bind="ojComponent: {
-                                                  component: 'ojCheckboxset',
-                                                  value: currentStatus}">
-                                <span class="oj-choice-row">
-                                                      <input id="active" type="checkbox" value="Active">
-                                                      <label for="active">Active</label>
-                                                    </span>
-                                <span class="oj-choice-row">
-                                                      <input id="inactivesuspended" type="checkbox" value="Inactive-Suspended">
-                                                      <label for="inactivesuspended">Inactive-Suspended</label>
-                                                    </span>
-                                <span class="oj-choice-row">
-                                                      <input id="inactiveterm" type="checkbox" value="Inactive-Terminated">
-                                                      <label for="inactiveterm">Inactive-Terminated</label>
-                                                    </span>
+                        <div class="oj-md-odd-cols-3 oj-md-even-cols-3 oj-lg-odd-cols-3 oj-lg-even-cols-3 searchForm">
+                            <div class="oj-row">
+                                <div class="oj-col">
+                                    <label for="payrollid">Payroll ID</label>
+                                    <input id="payrollid" data-bind="ojComponent: {component: 'ojInputText', value:'', help: {definition: helpDef()}}">
+                                </div>
+                                <!-- End of Col -->
+                                <div class="oj-col">
+                                    <label for="firstname">First Name</label>
+<!--                                    <input id="firstname" data-bind="ojComponent: {component: 'ojInputText', value:'', help: {definition: helpDef()}}">-->
+                                 <input placeholder="search" id="firstname" data-bind="value: firstNameSearch, ojComponent: {component: 'ojInputText'}"/>
+                                </div>
+                                <!-- End of Col -->
+                                <div class="oj-col">
+                                    <label for="lastname">Last Name</label>
+                                    <input id="lastname" data-bind="ojComponent: {component: 'ojInputText', value:'',
+                                                          help: {definition: helpDef()}}">
+                                </div>
+                                <!-- End of Col -->
+                                <div class="oj-col">
+                                    <label for="basicSelect">Single Select </label>
+                                    <select id="basicSelect" data-bind="ojComponent: {component: 'ojSelect', value: val, rootAttributes: {style:'max-width:20em'}}">
+                                        <option value="IE">Internet Explorer</option>
+                                        <option value="FF">Firefox</option>
+                                        <option value="CH">Chrome</option>
+                                        <option value="OP">Opera</option>
+                                        <option value="SA">Safari</option>
+                                    </select>
+                                </div>
+                                <!-- End of Col -->
                             </div>
-                            <!-- End of main label id -->
+
+
                         </div>
-                        <!-- checkBox Wrapper -->
-                    </div>
-                    <!-- End of Column 1 -->
-                    <div class="oj-md-1 oj-lg-1 oj-xl-1 left">
-                        <div class="divider"></div>
-                    </div>
-                    <div class="oj-md-6 oj-lg-6 oj-xl-6 right">
-                        <div class="checkboxWrapper">
-                            <label id="mainlabelid">MORE OPTIONS</label>
-                            <div id="checkboxSetId" aria-labelledby="mainlabelid" data-bind="ojComponent: {
-                                                  component: 'ojCheckboxset',
-                                                  value: currentStatus}">
-                                <span class="oj-choice-row">
-                                                      <input id="minor" type="checkbox" value="Minor">
-                                                      <label for="minor">Minor</label>
-                                                    </span>
-                                <span class="oj-choice-row">
-                                                      <input id="termLOA" type="checkbox" value="Included Terminated & LOA Employees">
-                                                      <label for="termLOA">Included Terminated & LOA Employees</label>
-                                                    </span>
+
+                        <div class="oj-md-5 oj-lg-5 oj-xl-5 left">
+                            <div class="checkboxWrapper">
+                                <label id="mainlabelid">STATUS</label>
+                                <div id="checkboxSetId" aria-labelledby="mainlabelid" data-bind="ojComponent: {
+                                                      component: 'ojCheckboxset',
+                                                      value: currentStatus}">
+                                    <span class="oj-choice-row">
+                                                          <input id="active" type="checkbox" value="Active">
+                                                          <label for="active">Active</label>
+                                                        </span>
+                                    <span class="oj-choice-row">
+                                                          <input id="inactivesuspended" type="checkbox" value="Inactive-Suspended">
+                                                          <label for="inactivesuspended">Inactive-Suspended</label>
+                                                        </span>
+                                    <span class="oj-choice-row">
+                                                          <input id="inactiveterm" type="checkbox" value="Inactive-Terminated">
+                                                          <label for="inactiveterm">Inactive-Terminated</label>
+                                                        </span>
+                                </div>
                             </div>
-                            <!-- End of main label id -->
+
                         </div>
-                        <!-- checkBox Wrapper -->
+
+                        <div class="oj-md-1 oj-lg-1 oj-xl-1 left">
+                            <div class="divider"></div>
+                        </div>
+                        <div class="oj-md-6 oj-lg-6 oj-xl-6 right">
+                            <div class="checkboxWrapper">
+                                <label id="mainlabelid">MORE OPTIONS</label>
+                                <div id="checkboxSetId" aria-labelledby="mainlabelid" data-bind="ojComponent: {
+                                                      component: 'ojCheckboxset',
+                                                      value: currentStatus}">
+                                    <span class="oj-choice-row">
+                                                          <input id="minor" type="checkbox" value="Minor">
+                                                          <label for="minor">Minor</label>
+                                                        </span>
+                                    <span class="oj-choice-row">
+                                                          <input id="termLOA" type="checkbox" value="Included Terminated & LOA Employees">
+                                                          <label for="termLOA">Included Terminated & LOA Employees</label>
+                                                        </span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <!-- End of Column 2 -->
+                    <div class="submitWrapper left">
+                       <!--temporary toggleSection function applied to these buttons, will need to submit form and return results and then clear results-->
+                        <input id="submit" type="submit" data-bind="ojComponent: {component: 'ojButton', label: 'Search', icons: { start: 'fa fa-search'} }" />
 
-
-                </div>
-                <!-- End of Right Column -->
-                <div class="oj-md-only-hide oj-lg-4 oj-xl-4 right">
-                    <div class="resultWrapper"></div>
-                </div>
-                <!-- End of right Column -->
-                <div class="oj-col oj-lg-hide oj-xl-hide">
-                    <div class="resultWrapper"></div>
-                </div>
-                <div class="submitWrapper left">
-                   <!--temporary toggleSection function applied to these buttons, will need to submit form and return results and then clear results-->
-                    <input id="submit" type="submit" data-bind="click: toggleSections,
-                                                     ojComponent: {component: 'ojButton', label: 'Search', icons: { start: 'fa fa-search'} }" />
-
-                    <input id="reset" type="reset" data-bind="click: toggleSections,
-                                                  ojComponent: {component: 'ojButton', label: 'Clear'}" />
-                </div>
+                        <input id="reset" type="reset" data-bind="click: toggleSections,
+                                                      ojComponent: {component: 'ojButton', label: 'Clear'}" />
+                    </div>
+                </form>
             </div>
             <!-- End of Form -->
-           <div class="resultWrapper" data-bind="visible: sectionsState">
-
+           <div class="resultWrapper">
                 <ul id="listview" data-bind="ojComponent: {component: 'ojListView',
                     data: listViewDataSource,
                     item: {template: 'peoplelist_template'},
@@ -133,7 +115,7 @@
                     <li data-bind="attr: {id: $data['name']}, click: $parent.loadPersonPage">
                         <div class="oj-row">
                             <div class="oj-lg-2 oj-md-2 oj-sm-12 oj-col" style="max-width:70px;padding-bottom:5px">
-                                <img data-bind="attr: {src: 'images/listView/'+ name +'.png', alt: name}" />
+                                <img data-bind="attr: {src: $parent.getPhoto($data['empId'])}"/>
                             </div>
                             <div class="oj-lg-10 oj-md-10 oj-sm-12 oj-col">
                                 <div class="oj-row row">
