@@ -7,7 +7,7 @@
     </div>
     <div class="oj-row">
         <div class="oj-md-12">
-            <div class="scheduleHeader"> Schedule <span class="timeOffRequest"><a href="#">Time Off Request</a></span></div>
+            <div class="scheduleHeader"> Schedule <span class="timeOffRequest"><a data-bind="click:$parent.editRequestTimehandleOpen">Time Off Request</a></span></div>
         </div> 
     </div>
     <div class="oj-row">
@@ -32,7 +32,7 @@
                   <!-- ko foreach: $parent.currentScheduledDates -->
                   
                   <div class="oj-panel oj-panel-alt2 schedule-filmstrip-item" data-bind="style: {display: getItemInitialDisplay($index())}">
-                      <a data-bind="click:$parents[1].handleOpen">
+                      <a data-bind="click:$parents[1].timeCardhandleOpen">
                           <div>
                       <span data-bind="text: currentDayStart"></span> <span data-bind="text: currentDayStartTime"></span> - <span data-bind="text: currentDayEndTime"></span>
                       <br /><span data-bind="text: location"></span>, <span data-bind="text: revenueCenter"></span>
@@ -98,6 +98,6 @@
             
         </div>
     </div>
-
-                
+<div data-bind="template: {name: 'partials/schedule-timecard-modal/schedule-timecard-modal-large'}"></div>
+<div data-bind="template: {name: 'partials/schedule-timecard-modal/time-off-requested-modale-large'}"></div>              
 </div>

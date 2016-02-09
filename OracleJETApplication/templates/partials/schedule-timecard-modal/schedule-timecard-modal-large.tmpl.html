@@ -1,0 +1,52 @@
+<div style="display:none" id="scheduleTimeCardDialog" title="" data-bind="ojComponent:{component: 'ojDialog', initialVisibility: 'hide', rootAttributes: {class: 'scheduleModal-dimensions'}, 'position': {'my': 'start bottom', 'at': 'end+14 top'}}">
+     <!-- Note: the user must provide the aria-labelledby attribute for the dialog to be accessible -->
+     <div class="oj-dialog-header oj-helper-clearfix" aria-labelledby="dialogTitleId">
+         <div id="dialogTitleId" class="oj-dialog-title"><h2> <span class="fa fa-clock-o"></span> Timecard for <span data-bind="text: $parent.personProfile().firstName + ' ' + $parent.personProfile().lastName"></span> </h2></div> 
+     </div>
+
+    <div class="oj-dialog-body">
+        <div class="oj-md-12">
+            <ul class="totalHours">
+                <li class="itemsLi">
+                    <div class="hoursHeader">Total Hours</div>
+                    <div data-bind="text: $parent.totalHours"</div>
+                </li>
+                <li class="itemsLi">
+                    <div class="hoursHeader">Regular Hours</div>
+                    <div data-bind="text: $parent.regularHours"</div>
+                </li>
+                <li class="itemsLi">
+                    <div class="hoursHeader">Hours Over 40</div>
+                    <div data-bind="text: $parent.hoursOver"</div>
+                </li>
+                <li class="itemsLi">
+                    <div class="hoursHeader">Overtime 2 Hours</div>
+                    <div data-bind="text: $parent.overtimeHours"</div>
+                </li>
+            </ul>
+        </div>
+        <div class="oj-md-12">
+            <table id="table" summary="Department List" aria-label="Departments Table"
+       data-bind="ojComponent: {component: 'ojTable', 
+                                data: $parent.datasource, 
+                                columnsDefault: {sortable: 'enabled'}, 
+                                columns: [{headerText: 'Status', 
+                                           field: 'id'},
+                                          {headerText: 'Date', 
+                                           field: 'currentDayStart'},
+                                          {headerText: 'Time In', 
+                                           field: 'currentDayStartTime'},
+                                          {headerText: 'Time Out', 
+                                           field: 'currentDayEndTime'},
+                                          {headerText: 'Job Name', 
+                                           field: 'job'},
+                                          {headerText: 'Location', 
+                                           field: 'location'},
+                                          {headerText: 'Station', 
+                                           field: 'station'}]}">
+            </table>
+
+        </div>
+
+    </div>
+</div>

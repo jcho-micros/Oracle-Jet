@@ -1,0 +1,18 @@
+<div style="display:none" id="editTimeOffRequestDialog" title="" data-bind="ojComponent:{component: 'ojDialog', initialVisibility: 'hide', rootAttributes: {class: 'scheduleModal-dimensions'}, 'position': {'my': 'start bottom', 'at': 'end+14 top'}}">
+     <!-- Note: the user must provide the aria-labelledby attribute for the dialog to be accessible -->
+     <div class="oj-dialog-header oj-helper-clearfix" aria-labelledby="dialogTitleId">
+         <div id="dialogTitleId" class="oj-dialog-title"><h2> <span class="fa fa-pencil-square-o"></span> Edit Time Off Request</h2></div> 
+     </div>
+
+     <div class="oj-dialog-body">
+         <div class="oj-row">
+             <div class="oj-md-3">
+                 Employee: <span data-bind="text: $parent.personProfile().firstName + ' ' + $parent.personProfile().lastName"></span> 
+             </div>
+             <div class="oj-md-9">
+                 Dates
+             </div>
+         </div>
+         
+     </div>
+</div>
