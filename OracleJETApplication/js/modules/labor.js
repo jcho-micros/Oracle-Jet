@@ -113,12 +113,7 @@ define([
             self.handleOKClose = function() {
                 $("#scrollingDialog").ojDialog("close"); 
             };
-            ko.components.register("dialogwindow", {
-                viewModel: function(data) {
-                    this.name = (data && data.name) || "none";
-                },
-                template: "<div data-bind=\"text: name\"></div>"
-            });
+
 //            goTodialog: function(product){
 //                router.navigate('product/' + product.ProductId);
 //            }
