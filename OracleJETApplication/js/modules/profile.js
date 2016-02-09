@@ -1,4 +1,4 @@
-define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/ojdialog', 'ojs/ojinputtext', 'ojs/ojfilmstrip'],
+define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/ojdialog', 'ojs/ojinputtext', 'ojs/ojfilmstrip', 'ojs/ojtable'],
         function (oj, ko, jsonData, moment)
         {
 
@@ -6,14 +6,13 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                 var self = this;
                 self.personProfile = ko.observableArray([]);
 
-                //Open/Close Dialog Modals
-                self.handleOpen =  function(dialog) {
-                    $(dialog).ojDialog("open");
+                //Employee Dialog
+                self.handleOpen =  function() {
+                    $("#empDialog").ojDialog("open");
                 };
 
-                self.handleClose =  function(dialog) {
-                    //Will need to add another parameter with data, along with a call to another function which will process the data.
-                    $(dialog).ojDialog("close");
+                self.handleClose =  function() {
+                    $("#empDialog").ojDialog("close");
                 };
 
                 self.handleActivated = function (info) {
@@ -175,6 +174,14 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                     self.futureDayEnd = ko.observable(self.getFutureFormattedDate('futureDayEnd'));
                     self.futureDayStartTime = ko.observable(self.getFutureFormattedTime('futureDayStartTime'));
                     self.futureDayEndTime = ko.observable(self.getFutureFormattedTime('futureDayEndTime'));
+                    self.datasource = new oj.ArrayTableDataSource(self.currentScheduledDates, {idAttribute: 'id'});
+                    
+                    //Schedule Modale
+                    self.totalHours = ko.observable(35.0);
+                    self.regularHours = ko.observable(35.0);
+                    self.hoursOver = ko.observable(0.0);
+                    self.overtimeHours = ko.observable(0.0);
+                    self.val = ko.observableArray(["current"]);
                 };
                 self.getPhoto = function (id) {
                     var src;
@@ -227,6 +234,16 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
 
 
                 /////// JOHN insert for schedule
+                //Employee Dialog
+                self.timeCardhandleOpen =  function() {
+                    $("#scheduleTimeCardDialog").ojDialog("open");
+                };
+                self.editRequestTimehandleOpen =  function() {
+                    $("#editTimeOffRequestDialog").ojDialog("open");
+                };
+                self.timeCardhandleClose =  function() {
+                    $("#scheduleTimeCardDialog").ojDialog("close");
+                };
 
                 //this is for Schedules and Timecards format Date
                 self.getFormattedDate = function (oldDate) {
