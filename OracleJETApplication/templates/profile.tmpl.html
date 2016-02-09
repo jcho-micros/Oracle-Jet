@@ -2,52 +2,6 @@
 <script type="text/html" id="sm_template">
 <div class="justifyCenter">
     <div id="personaldetails" class="oj-row">
-        <div class="oj-col oj-sm-5 oj-md-1 oj-lg-1">
-            <img data-bind="attr: {src: getPhoto(personProfile().empId)}" />
-        </div>
-
-        <div class="oj-col oj-sm-7 oj-md-2 oj-lg-2">
-            <h2 class="employee-name" data-bind="text: personProfile().firstName + ' ' + personProfile().lastName"></h2>
-
-           <h4>Home Store</h4>
-           <span data-bind="text: personProfile().homeStore"></span>
-           <a href="#">transfer</a>
-
-           <h4>Hire Status</h4>
-           <span data-bind="text: personProfile().hireStatus"></span>
-           <a href="#">update</a>
-
-           <h4>External Payroll ID</h4>
-           <span data-bind="text: personProfile().externalPayrollId"></span>
-           <a href="#">edit</a>
-        </div>
-    </div>
-</div>
-<div class="oj-row">
-    <div class="oj-md-12 oj-col">
-        <div data-bind="ojComponent: {component: 'ojConveyorBelt'}">
-            <div id="profileTabs" data-bind="ojComponent: {component: 'ojNavigationList', selection: tabRouter.stateId(), beforeSelect: selectTabHandler, drillMode: 'none', edge: 'top'}">
-                <ul data-bind="foreach: tabRouter.states">
-                    <li data-bind="attr: {id: id}">
-                        <a data-bind="text: label"></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="oj-md-12 oj-col" data-bind="if: tabRouter.stateId()">
-        <div class="oj-panel tab-content" data-bind="with: tabRouter.currentState()">
-            <div data-bind="template: {name: 'profile/' + id +'/' + id + '-small'}"></div>
-        </div>
-    </div>
-</div>
-<div data-bind="template: {name: 'partials/employee-edit-modal/employee-edit-modal-large'}"></div>
-</script>
-
-<!-- large template -->
-<script type="text/html" id="md_lg_xl_template">
-<div class="justifyCenter">
-    <div id="personaldetails" class="oj-row">
         <div class="oj-col oj-md-1 oj-lg-1">
             <img data-bind="attr: {src: getPhoto(personProfile().empId)}" />
         </div>
@@ -57,17 +11,17 @@
         <div class="oj-col oj-md-3 oj-lg-3">
            <h4>Home Store</h4>
            <span data-bind="text: personProfile().homeStore"></span>
-           <a href="#">transfer</a>
+           <a href="#" data-bind="click: function(){handleOpen('#homeStoreDialog')}">transfer</a>
         </div>
         <div class="oj-col oj-md-3 oj-lg-3">
            <h4>Hire Status</h4>
            <span data-bind="text: personProfile().hireStatus"></span>
-           <a href="#">update</a>
+           <a href="#" data-bind="click: function(){handleOpen('#hireStatusDialog')}">update</a>
         </div>
         <div class="oj-col oj-md-3 oj-lg-3">
            <h4>External Payroll ID</h4>
            <span data-bind="text: personProfile().externalPayrollId"></span>
-           <a href="#">edit</a>
+           <a href="#" data-bind="click: function(){handleOpen('#externalPayrollDialog')}">edit</a>
         </div>
     </div>
 </div>
@@ -90,6 +44,75 @@
         </div>
     </div>
 </div>
+
+<!--Home Store dialog modal-->
+<div data-bind="template: {name: 'partials/employee-home-store-modal/employee-home-store-modal-small'}"></div>
+
+<!--Hire Status dialog modal-->
+<div data-bind="template: {name: 'partials/employee-hire-status-modal/employee-hire-status-modal-small'}"></div>
+
+<!--External Payroll ID dialog modal-->
+<div data-bind="template: {name: 'partials/employee-external-payroll-modal/employee-external-payroll-modal-small'}"></div>
 </script>
+
+<!-- large template -->
+<script type="text/html" id="md_lg_xl_template">
+<div class="justifyCenter">
+    <div id="personaldetails" class="oj-row">
+        <div class="oj-col oj-md-1 oj-lg-1">
+            <img data-bind="attr: {src: getPhoto(personProfile().empId)}" />
+        </div>
+        <div class="oj-col oj-md-2 oj-lg-2">
+            <h2 data-bind="text: personProfile().firstName + ' ' + personProfile().lastName"></h2>
+        </div>
+        <div class="oj-col oj-md-3 oj-lg-3">
+           <h4>Home Store</h4>
+           <span data-bind="text: personProfile().homeStore"></span>
+           <a href="#" data-bind="click: function(){handleOpen('#homeStoreDialog')}">transfer</a>
+        </div>
+        <div class="oj-col oj-md-3 oj-lg-3">
+           <h4>Hire Status</h4>
+           <span data-bind="text: personProfile().hireStatus"></span>
+           <a href="#" data-bind="click: function(){handleOpen('#hireStatusDialog')}">update</a>
+        </div>
+        <div class="oj-col oj-md-3 oj-lg-3">
+           <h4>External Payroll ID</h4>
+           <span data-bind="text: personProfile().externalPayrollId"></span>
+           <a href="#" data-bind="click: function(){handleOpen('#externalPayrollDialog')}">edit</a>
+        </div>
+    </div>
+</div>
+<div class="oj-row">
+    <div class="oj-md-12 oj-col">
+        <div data-bind="ojComponent: {component: 'ojConveyorBelt'}">
+            <div id="profileTabs" data-bind="ojComponent: {component: 'ojNavigationList', selection: tabRouter.stateId(), beforeSelect: selectTabHandler, drillMode: 'none', edge: 'top'}">
+                <ul data-bind="foreach: tabRouter.states">
+                    <li data-bind="attr: {id: id}">
+                        <a data-bind="text: label"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="oj-md-12 oj-col" data-bind="if: tabRouter.stateId()">
+        <div class="oj-panel tab-content" data-bind="with: tabRouter.currentState()">
+
+            <div data-bind="template: {name: 'profile/' + id +'/' + id + '-large'}"></div>
+        </div>
+    </div>
+</div>
+
+
+<!--Home Store dialog modal-->
+<div data-bind="template: {name: 'partials/employee-home-store-modal/employee-home-store-modal-large'}"></div>
+
+<!--Hire Status dialog modal-->
+<div data-bind="template: {name: 'partials/employee-hire-status-modal/employee-hire-status-modal-large'}"></div>
+
+<!--External Payroll ID dialog modal-->
+<div data-bind="template: {name: 'partials/employee-external-payroll-modal/employee-external-payroll-modal-large'}"></div>
+</script>
+
+
 
 <div data-bind="template: {name: $root.medium() ? 'md_lg_xl_template' : 'sm_template'}"></div>

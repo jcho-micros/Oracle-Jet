@@ -6,13 +6,14 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                 var self = this;
                 self.personProfile = ko.observableArray([]);
 
-                //Employee Dialog
-                self.handleOpen =  function() {
-                    $("#empDialog").ojDialog("open");
+                //Open/Close Dialog Modals
+                self.handleOpen =  function(dialog) {
+                    $(dialog).ojDialog("open");
                 };
 
-                self.handleClose =  function() {
-                    $("#empDialog").ojDialog("close");
+                self.handleClose =  function(dialog) {
+                    //Will need to add another parameter with data, along with a call to another function which will process the data.
+                    $(dialog).ojDialog("close");
                 };
 
                 self.handleActivated = function (info) {

@@ -162,14 +162,14 @@ $customsmallmobileFontSize: 1.25em;
 $logoText: $white;
 $iconColor: $white;
 //$tabText: #ffffff;
-$selectedtabText: #333333;
+$selectedtabText: $darkGray;
 // 
 // link colors
 // ---------------------------------
 //$linkTextColor:         #045fab;   
 // $linkTextColorVisited:  $linkTextColor; 
 // $linkTextColorDisabled: $textColorDisabled;
-$customLinkTextColor: #ffffff;
+$customLinkTextColor: $white;
 $headerLinkTextColor: $white;
 // 
 // 
@@ -566,8 +566,8 @@ $headerH3BgColor: $lightGray;
 // button states
 // ---------------------------------
 // default
-// $buttonBgColor:                   $lightBlue;
-// $buttonTextColor:                 $primaryTextColor;
+$buttonBgColor:                   $lightBlue;
+$buttonTextColor:                 $white;
 // $buttonIconColor:                 $iconColorDefault;
 // $buttonBorderColor:               $border3Color;
 // $buttonBgImage:                   linear-gradient(to bottom, 
@@ -1504,6 +1504,11 @@ button#menuButton{
         }
     }
 }
+
+.basic-btn{
+    color: $buttonTextColor;
+    background-color:$buttonBgColor;
+}
 //People Styles
 .resultWrapper{
     clear:both;
@@ -1535,7 +1540,7 @@ footer{
 }
 
 //Employee Dialog Modal
-.empModal-dimensions{
+.generalModal-dimensions{
     height:auto;
     width:100%;
     .oj-inputtext{
@@ -1638,7 +1643,7 @@ footer{
         }
     }
     //Employee Dialog Modal
-    .empModal-dimensions{
+    .generalModal-dimensions{
         width:50%;
     }
     
