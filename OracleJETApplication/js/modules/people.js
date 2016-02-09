@@ -32,7 +32,6 @@ define([
         //Employee Basic Info Dialog
         self.empBasicInfoOpen =  function(emp) {
             self.basicEmpInfo(emp);
-            console.log(self.basicEmpInfo());
             $("#empBasicDialog").ojDialog("open");
         };
 
