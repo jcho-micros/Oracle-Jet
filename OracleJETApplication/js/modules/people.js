@@ -84,7 +84,7 @@ define([
 
         //pass all employee data into an array
         self.listViewDataSource = ko.computed(function () {
-            return new oj.ArrayTableDataSource(self.filteredAllPeople(), {idAttribute: 'empId'});
+            return new oj.PagingTableDataSource(new oj.ArrayTableDataSource(self.filteredAllPeople(), {idAttribute: 'empId'}));
         });
 
         self.getPhoto = function (empId) {
