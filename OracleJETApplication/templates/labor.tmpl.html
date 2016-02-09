@@ -11,9 +11,9 @@
     <div class="oj-row">
         <div class="oj-sm-12 oj-col" data-bind="visible: sectionsState">
             <div id="tabs" data-bind="ojComponent: {component: 'ojNavigationList', selection: router.stateId(), beforeSelect: selectHandler, drillMode: 'none'}">
-                <ul data-bind="foreach: router.states">
+                <ul data-bind="foreach: navDataSource">
                     <li data-bind="attr: {id: id}, click: $parent.toggleSections">
-                        <a data-bind="text: label"></a>
+                        <a data-bind="text: name"></a>
                     </li>
                 </ul>
             </div>
