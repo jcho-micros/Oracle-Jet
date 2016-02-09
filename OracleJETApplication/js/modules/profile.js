@@ -7,12 +7,12 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                 self.personProfile = ko.observableArray([]);
 
                 //Employee Dialog
-                self.handleOpen =  function() {
-                    $("#empDialog").ojDialog("open");
+                self.handleOpen =  function(dialog) {
+                    $(dialog).ojDialog("open");
                 };
 
-                self.handleClose =  function() {
-                    $("#empDialog").ojDialog("close");
+                self.handleClose =  function(dialog) {
+                    $(dialog).ojDialog("close");
                 };
 
                 self.handleActivated = function (info) {
@@ -131,7 +131,7 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                         self.changeBooleanToText(self.specialDisabled, 'Special Disabled');
 
                         self.registeredDisabledNumber = ko.observable(self.personProfile().registeredDisabledNumber);
-                        self.dischargeDate = ko.observable(self.getDischargeDate());
+                        self.dischargeDate = ko.observable(self.getBasicFormattedDate('dischargeDate'));
 
                     //Veteran Info END
 
@@ -163,6 +163,9 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                     self.emergencyZipCode = ko.observable(self.personProfile().emergencyZipCode);
                     self.emergencyPhone = ko.observable(self.personProfile().emergencyPhone);
                     
+                    //Hire Status variables
+                    self.hireDate = ko.observable(self.getBasicFormattedDate('hireDate'));
+
                     //This variable is for Schedule time  card Current schedule Dates Nested
                     self.currentScheduledDates = self.personProfile().currentScheduledDates;
                     self.futureScheduledDates = self.personProfile().futureScheduledDates;
@@ -223,13 +226,14 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                         self.tabRouter.go(ui.key);
                     }
                 };
-                self.getDischargeDate = function () {
-                    var dischargeDate = self.personProfile().dischargeDate;
+                self.getBasicFormattedDate = function (oldDate) {
+                    var dischargeDate = self.personProfile()[oldDate];
+                      console.log(dischargeDate);
                     var dateOptions = {formatStyle: 'date', dateFormat: 'medium'};
                     var dateConverter = oj.Validation.converterFactory("datetime").createConverter(dateOptions);
                     var startDate = oj.IntlConverterUtils.dateToLocalIso(moment(dischargeDate).toDate());
-                    dischargeDate = dateConverter.format(startDate);
-                    return dischargeDate;
+                    oldDate = dateConverter.format(startDate);
+                    return oldDate;
                 };
 
 
