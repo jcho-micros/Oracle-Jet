@@ -370,7 +370,8 @@ $headerNavigationText: $customsmallFontSize;
 //Mobile icon size
 $headerNavigationMobileSize: $customsmallmobileFontSize;
 //Dialog title and background
-$dialogTitlebg: $white;
+$dialogTitlebg: $lightBlue;
+$dialogTitleText: $white;
 $dialogBg: $white;
 
 $headerH3BgColor: $lightGray;
@@ -1553,6 +1554,10 @@ footer{
 //Dialog
 .oj-dialog-header{
     background-color: $dialogTitlebg;
+    h2{
+        color: $dialogTitleText;
+        margin:0;
+    }
 }
 .oj-dialog{
     background: $dialogBg;
@@ -1571,7 +1576,20 @@ footer{
 .dialogItemHeader{
     font-weight: bold;
 }
+//Schedule Dialog total hours
+.totalHours{
+    width: 100%;
+    padding-left: 0;
+        .itemsLi{
+            display: inline-block;
+            list-style-type: none;
+            padding-left:10px;
+            padding-right:10px;
+            margin-left:auto;
+            margin-right:auto;
+        }
 
+    }
 //Media Query
 //Medium/ipad (UP)
 @media only screen and (min-width: 768px){
@@ -1706,6 +1724,10 @@ footer{
             display: block;
         }
     }
+    //Schedule and Timecard
+    .scheduleModal-dimensions{
+        width:65%;
+    }
 //    .page-area {
 //         border-left:1px solid #ccc;
 //    }
@@ -1748,6 +1770,10 @@ footer{
     .oj-tabs-panel {
         border: 0px solid #cccccc;
         border-top: 1px solid #cccccc;
+    }
+    //Schedule and Timecard
+    .scheduleModal-dimensions{
+        width:95%;
     }
 }
 
