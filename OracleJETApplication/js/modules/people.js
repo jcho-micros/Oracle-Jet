@@ -27,6 +27,18 @@ define([
 
         //where the all employee info will be stored
         self.allPeople = ko.observableArray([]);
+        self.basicEmpInfo = ko.observableArray([]);
+
+        //Employee Basic Info Dialog
+        self.empBasicInfoOpen =  function(emp) {
+            self.basicEmpInfo(emp);
+            console.log(self.basicEmpInfo());
+            $("#empBasicDialog").ojDialog("open");
+        };
+
+        self.empBasicInfoClose =  function() {
+            $("#empBasicDialog").ojDialog("close");
+        };
 
         //self.ready = ko.observable(false);
         data.fetchData('js/data/employees.json').then(function (people) {
@@ -85,7 +97,8 @@ define([
             return src;
         };
 
-        self.loadPersonPage = function (emp) {
+        self.loadPersonPage = function () {
+            var emp = self.basicEmpInfo();
             if (emp.empId) {
                 // Temporary code until go('profile/' + emp.empId); is checked in 1.1.2
                 history.pushState('null', '', 'index.html?root=profile&emp=' + emp.empId);

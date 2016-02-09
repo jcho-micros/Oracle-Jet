@@ -1,0 +1,17 @@
+<div style="display:none;" id="empBasicDialog" data-bind="ojComponent:{component: 'ojDialog', initialVisibility: 'hide', rootAttributes: {class: 'empModal-dimensions'}}">
+   <div class="oj-dialog-header oj-helper-clearfix" aria-labelledby="dialogTitleId">
+        <span id="dialogTitleId" class="oj-dialog-title">
+            <span data-bind="text: basicEmpInfo().firstName"></span>
+            <span data-bind="text: basicEmpInfo().lastName"></span>
+            <button id="submitButton" data-bind="click:loadPersonPage">Full Details</button>
+        </span>
+     </div>
+    <div class="oj-dialog-body">
+        <div class="oj-row">
+           <!--img not working need to create new function for this image reference-->
+            <img data-bind="attr: {src: getPhoto(basicEmpInfo().empId)}"/>
+            <div data-bind="text: basicEmpInfo().phone"></div>
+            <div data-bind="text: basicEmpInfo().title"></div>
+        </div>
+    </div>
+</div>
