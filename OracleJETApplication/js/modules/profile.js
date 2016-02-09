@@ -228,7 +228,6 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                 };
                 self.getBasicFormattedDate = function (oldDate) {
                     var dischargeDate = self.personProfile()[oldDate];
-                      console.log(dischargeDate);
                     var dateOptions = {formatStyle: 'date', dateFormat: 'medium'};
                     var dateConverter = oj.Validation.converterFactory("datetime").createConverter(dateOptions);
                     var startDate = oj.IntlConverterUtils.dateToLocalIso(moment(dischargeDate).toDate());
