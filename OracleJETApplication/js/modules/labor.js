@@ -30,8 +30,7 @@ define([
                     'schedules-timecards': {label: 'Schedules & Timecards', value: 'schedules-timecards'},
                     'forecasting': {label: 'Forecasting', value: 'forecasting'},
                     'payroll': {label: 'Payroll', value: 'payroll'},
-                    'analytics': {label: 'Analytics', value: 'analytics'},
-                    'dialogwindow': {label: 'Dialog', value: 'dialogwindow'}
+                    'analytics': {label: 'Analytics', value: 'analytics'}
                 });
 
                 // Now that the router for this view exist, synchronise it with the URL
