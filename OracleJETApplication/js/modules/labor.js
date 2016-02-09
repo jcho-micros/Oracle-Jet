@@ -30,13 +30,22 @@ define([
                     'schedules-timecards': {label: 'Schedules & Timecards', value: 'schedules-timecards'},
                     'forecasting': {label: 'Forecasting', value: 'forecasting'},
                     'payroll': {label: 'Payroll', value: 'payroll'},
-                    'analytics': {label: 'Analytics', value: 'analytics'}
+                    'analytics': {label: 'Analytics', value: 'analytics'},
+                    'dialogwindow': {label: 'Dialog', value: 'dialogwindow'}
                 });
 
                 // Now that the router for this view exist, synchronise it with the URL
                 oj.Router.sync();
 
             };
+            var tabsNavData = [
+                {name: 'Overview', id: 'overview'},
+                {name: 'Employees', id: 'employees'},
+                {name: 'Schedules & Timecards',id: 'schedules-timecards'},
+                {name: 'Forecasting', id: 'forecasting'},
+                {name: 'Payroll', id: 'payroll'},
+                {name: 'Analytics', id: 'analytics'}
+            ];
             //dialog header information
             self.filterHeading = ko.observable("Filter");
             self.filterHeadingIconClass = ko.observable('fa fa-filter');
@@ -51,10 +60,11 @@ define([
                {name: 'chicago', id:'7', value: 'chicago', label: 'Chicago', regional: 'Midwest'}
             ]);
             self.sortedlocationList = ko.observableArray();
-            
+            self.navDataSource = new oj.ArrayTableDataSource(tabsNavData, {idAttribute: "id"});
             self.dataSource = new oj.ArrayTableDataSource(this.locationList, {idAttribute: "id"});
             self.listLocationCol = ko.observable('atlanta');
-            
+
+
             
             
             
@@ -104,6 +114,15 @@ define([
             self.handleOKClose = function() {
                 $("#scrollingDialog").ojDialog("close"); 
             };
+            ko.components.register("dialogwindow", {
+                viewModel: function(data) {
+                    this.name = (data && data.name) || "none";
+                },
+                template: "<div data-bind=\"text: name\"></div>"
+            });
+//            goTodialog: function(product){
+//                router.navigate('product/' + product.ProductId);
+//            }
 
         };
 
