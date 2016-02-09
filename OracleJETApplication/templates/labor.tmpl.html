@@ -49,12 +49,12 @@
         </h1>
         <span class="page-sub-navigation">
             <span data-bind="text: pageSubNavigation"></span>
-            <a data-bind="click: handleOpen">change</a>
+            <a data-bind="click: handleOpen()">change</a>
         </span>
     </div>
 <!-- dialog for change location  -->
 <div id="dialogWrapper">
-  <div data-bind="template: {name: 'labor/schedules-timecards/changedialog'}"></div>
+  <div data-bind="template: {name: 'labor/dialogwindow/dialogwindow-large'}"></div>
 </div>
     
     
@@ -63,10 +63,12 @@
         <div class="oj-md-12 oj-col">
             <div data-bind="ojComponent: {component: 'ojConveyorBelt'}">  
                 <div id="tabs" data-bind="ojComponent: {component: 'ojNavigationList', selection: router.stateId(), beforeSelect: selectHandler, drillMode: 'none', edge: 'top'}">
-                    <ul data-bind="foreach: router.states">
+                    <ul data-bind="foreach: navDataSource">
+   
                         <li data-bind="attr: {id: id}">
-                            <a data-bind="text: label"></a>
+                            <a data-bind="text: name"></a>
                         </li>
+                 
                     </ul>
                 </div>
             </div>
