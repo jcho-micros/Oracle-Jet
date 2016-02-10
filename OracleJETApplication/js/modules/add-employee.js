@@ -12,7 +12,9 @@ define([
     'ojs/ojselectcombobox',
      'ojs/ojinputnumber',
     'ojs/ojdialog',
-    'ojs/ojtabs'],
+    'ojs/ojtabs',
+    'ojs/ojtable',
+    'ojs/ojtrain'],
     function (oj, ko, data) {
         function addEmpContentViewModel() {
             var self = this;
@@ -61,12 +63,23 @@ define([
             self.listViewDataSource = ko.computed(function () {
                 return new oj.PagingTableDataSource(new oj.ArrayTableDataSource(self.filteredAllPeople(), {idAttribute: 'empId'}));
             });
+
+            self.loadPersonPage = function (emp) {
+                if (emp.empId) {
+                    // Temporary code until go('profile/' + emp.empId); is checked in 1.1.2
+                    history.pushState('null', '', 'index.html?root=profile&emp=' + emp.empId);
+                    oj.Router.sync();
+                } else {
+                    // Default id for profile is 100 so no need to specify.
+                    oj.Router.rootInstance.go('profile');
+                }
+            };
 //            YPA doesnt work!!
             self.handleAttached = function(){
                     //Adds class to people parent router when profile is active and is removed in the main.js file on exit of the page.
                     $('#people').addClass('oj-selected');
-
-                    console.log($('#people').length);
+//
+//                    console.log($('#people').length);
             };
         };
 

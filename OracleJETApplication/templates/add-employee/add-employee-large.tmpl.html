@@ -5,7 +5,7 @@
             <li id="import-multiple"><span>Import Multiple</span></li>
         </ul>
         <div id="tabs-1">
-            <h2>Getting Started</h2>
+            <h2>Getting Started - Search Existing/Past Employees</h2>
             <form>
                 <label for="firstName">First Name</label>
                 <input data-bind="ojComponent: {component: 'ojInputText', value: firstName}" /><br/>
@@ -21,7 +21,8 @@
 <!--            <span data-bind="text: firstName()"></span>-->
            <div class="resultWrapper">
                 <div data-bind="ojComponent: {component: 'ojPagingControl', data: listViewDataSource, pageSize:10}"></div>
-<!--                Need to change to table component-->
+<!--                Using the ojet listView Component-->
+<!--
                 <ul id="listview" data-bind="ojComponent: {component: 'ojListView',
                     data: listViewDataSource,
                     item: {template: 'empMatchlist_template'},
@@ -45,7 +46,28 @@
                         </div>
                     </li>
                 </script>
+-->
+                <div class="oj-row">
+                    <div class="oj-col oj-sm-12 oj-lg-12">
+                        <table id="tableView"data-bind="ojComponent: {component: 'ojTable',
+                        data: listViewDataSource, columns: [{headerText: 'First Name', sortProperty: 'firstName'}, {headerText: 'Last Name', sortProperty: 'lastName'},{headerText: 'DOB', sortProperty: 'dob'}, {headerText: 'Last Manager Name', sortProperty: 'lastManagerName'}, {headerText: 'SSN Match', sortProperty: 'ssnMatch'}, {headerText: 'Hire Status', sortProperty: 'hireStatus'}, {headerText: 'Edit', sortProperty: 'edit'}], rowTemplate: 'row_tmpl'}">
+                        </table>
+                    </div>
+                </div>
 
+                <script type="text/html" id="row_tmpl">
+                    <tr>
+                        <td data-bind="text: firstName"></td>
+                        <td data-bind="text: lastName"></td>
+                        <td data-bind="text: dob"></td>
+                        <td data-bind="text: mgrFirstName + ' ' + mgrLastName"></td>
+                        <td data-bind="text: ssn"></td>
+                        <td data-bind="text: hireStatus"></td>
+                        <td><a href="#" data-bind="click: $parent.loadPersonPage">Update</a></td>
+                    </tr>
+                </script>
+
+                <a href="index.html?root=add-employee" class="basic-btn-link">Create New Record</a>
             </div>
         </div>
         <div id="tabs-2">
