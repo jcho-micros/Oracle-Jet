@@ -10,8 +10,10 @@
             </button>
             <span role="img" class="appheader-logo-oracle" title="Oracle Logo" alt="Oracle Logo"></span>
             <span data-bind="visible: $parents[0].getStateID()">
-                <span class="locationAreaHd" data-bind="text: $parents[0].locationArea"></span>
-                <span class="arrowLocation fa fa-location-arrow"></span>
+                <a data-bind="click: $parent.handleOpen">
+                    <span class="locationAreaHd" data-bind="text: $parents[0].locationArea"></span>
+                    <span class="arrowLocation fa fa-location-arrow"></span>
+                </a>
             </span>
         </div>
         <div class="oj-sm-2 oj-col oj-helper-text-align-right">
