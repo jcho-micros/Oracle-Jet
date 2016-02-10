@@ -61,7 +61,13 @@ define([
             self.listViewDataSource = ko.computed(function () {
                 return new oj.PagingTableDataSource(new oj.ArrayTableDataSource(self.filteredAllPeople(), {idAttribute: 'empId'}));
             });
+//            YPA doesnt work!!
+            self.handleAttached = function(){
+                    //Adds class to people parent router when profile is active and is removed in the main.js file on exit of the page.
+                    $('#people').addClass('oj-selected');
 
+                    console.log($('#people').length);
+            };
         };
 
         return addEmpContentViewModel;
