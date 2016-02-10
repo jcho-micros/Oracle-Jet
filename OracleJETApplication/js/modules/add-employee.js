@@ -74,12 +74,39 @@ define([
                     oj.Router.rootInstance.go('profile');
                 }
             };
+
+            //train
+            self.selected = ko.observable('stp1');
+            self.stepArray = ko.observableArray([
+                {label:'Employee Search', id:'stp1'},
+                {label:'Profile', id:'stp2'},
+                {label:'Schedule & Timecards', id:'stp3'},
+                {label:'Jobs & Compensation', id:'stp4'},
+                {label:'Payroll', id:'stp5'},
+                {label:'Permissions', id:'stp6'},
+                {label:'Analytics', id:'stp7'}
+            ]);
+
+            self.nextStep = function() {
+              var next = $("#train").ojTrain("nextSelectableStep");
+              if(next!=null)
+                  self.selected(next);
+            };
+
+            self.previousStep = function() {
+              var prev = $("#train").ojTrain("previousSelectableStep");
+              if(prev!=null)
+                  self.selected(prev);
+            };
+
+            self.selectedText = function() {
+                return ($("#train").ojTrain("getStep", self.selected())).id;
+            };
 //            YPA doesnt work!!
             self.handleAttached = function(){
-                    //Adds class to people parent router when profile is active and is removed in the main.js file on exit of the page.
-                    $('#people').addClass('oj-selected');
-//
-//                    console.log($('#people').length);
+                //Adds class to people parent router when profile is active and is removed in the main.js file on exit of the page.
+                $('#people').addClass('oj-selected');
+                //console.log($('#people').length);
             };
         };
 
