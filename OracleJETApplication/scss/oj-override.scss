@@ -95,6 +95,7 @@ $lightBlue: #0572CE;
 $darkGray: #333333;
 $gray: #666666;
 $lightGray: #cccccc;
+$lightGray2: #c4ced7;
 
 // 
 // border colors
@@ -568,6 +569,7 @@ $headerH3BgColor: $lightGray;
 // default
 $buttonBgColor:                   $lightBlue;
 $buttonTextColor:                 $white;
+$buttonBorderColor:               $lightGray2;
 // $buttonIconColor:                 $iconColorDefault;
 // $buttonBorderColor:               $border3Color;
 // $buttonBgImage:                   linear-gradient(to bottom, 
@@ -1485,6 +1487,11 @@ html {
         display: inline-block;
     }
 }
+h1{
+    &.inlineHeader{
+        display:inline-block;
+    }
+}
 h3{
     background-color: $headerH3BgColor;
     text-transform: uppercase;
@@ -1508,6 +1515,30 @@ button#menuButton{
 .basic-btn{
     color: $buttonTextColor;
     background-color:$buttonBgColor;
+}
+
+a.basic-btn-link{
+    @extend .basic-btn;
+    padding: 0 0.857rem;
+    border-color: $buttonBorderColor;
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid;
+    margin-bottom: 4px;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: 2px;
+    box-sizing: border-box;
+    height: 2.286rem;
+    line-height: 2.286rem;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: bold;
+    -webkit-tap-highlight-color: transparent;
+    &:visited, &:active, &:hover, &:focus{
+        color: $buttonTextColor;
+        text-decoration:none;
+    }
 }
 //People Styles
 .resultWrapper{
