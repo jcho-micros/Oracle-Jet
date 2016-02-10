@@ -119,6 +119,10 @@ require(['ojs/ojcore',
                     router.currentState().value = childRouter;
                 }
             },
+            'add-employee': {
+                label: 'Add Employee',
+                value: 'add-employee'
+            }
         });
 
 

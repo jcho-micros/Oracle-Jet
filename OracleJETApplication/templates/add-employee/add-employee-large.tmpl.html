@@ -1,0 +1,54 @@
+<div class="tabs-container">
+    <div id="tabs" data-bind="ojComponent: {component: 'ojTabs'}">
+        <ul>
+            <li><span>Individual</span></li>
+            <li id="import-multiple"><span>Import Multiple</span></li>
+        </ul>
+        <div id="tabs-1">
+            <h2>Getting Started</h2>
+            <form>
+                <label for="firstName">First Name</label>
+                <input data-bind="ojComponent: {component: 'ojInputText', value: firstName}" /><br/>
+
+                <label for="lastName">Last Name</label>
+                <input data-bind="ojComponent: {component: 'ojInputText', value: lastName}" /><br/>
+
+                <label for="dob">Date of Birth</label>
+                <input data-bind="ojComponent: {component: 'ojInputText', value: dob}" /><br/>
+            </form>
+
+            <!--to check observable-->
+<!--            <span data-bind="text: firstName()"></span>-->
+           <div class="resultWrapper">
+                <div data-bind="ojComponent: {component: 'ojPagingControl', data: listViewDataSource, pageSize:10}"></div>
+                <ul id="listview" data-bind="ojComponent: {component: 'ojListView',
+                    data: listViewDataSource,
+                    item: {template: 'empMatchlist_template'},
+                    selectionMode: 'single',
+                    currentItem: '100',
+                    selection: ['100'],
+                    rootAttributes: {style: 'width:100%;overflow:auto; margin-top: 5px'},
+                    scrollPolicyOptions: {fetchSize: 10}}">
+                </ul>
+
+                <script type="text/html" id="empMatchlist_template">
+                    <li data-bind="attr: {id: $data['name']}">
+                        <div class="oj-row">
+                            <div class="oj-lg-10 oj-md-10 oj-sm-12 oj-col">
+                                <div class="oj-row row">
+                                    <div class="oj-lg-12 oj-col">
+                                        <span class="header" data-bind="text: firstName + ' ' + lastName"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </script>
+
+            </div>
+        </div>
+        <div id="tabs-2">
+            <a>Import Multiple</a>
+        </div>
+    </div>
+</div>
