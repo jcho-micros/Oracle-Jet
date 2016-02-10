@@ -1756,6 +1756,22 @@ footer{
             padding-left:11px;
         }
     }
+    .locationAreaHd{
+        font-size:18px;
+        color: $white;
+        position: fixed;
+        margin-top: 11px;
+        margin-left:10px;
+    }
+    .arrowLocation.fa.fa-location-arrow{
+        font-size:14px;
+        vertical-align: top;
+        position: fixed;
+        color:$white;
+        margin-top: 5px;
+        margin-left:65px;
+        
+    }
 }
 
 // MD IPad (CAP)
