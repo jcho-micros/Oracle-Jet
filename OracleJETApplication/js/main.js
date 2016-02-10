@@ -138,50 +138,19 @@ require(['ojs/ojcore',
             self.large = oj.ResponsiveKnockoutUtils.createMediaQueryObservable(lgQuery);
 
             var appNavData = [
-                {
-                    name: 'Home',
-                    id: 'home',
-                    iconClass: 'fa fa-home oj-navigationlist-item-icon'
-
-            },
-                {
-                    name: 'Labor',
-                    id: 'labor',
-                    iconClass: 'fa fa-briefcase oj-navigationlist-item-icon'
-            },
-                {
-                    name: 'Inventory',
-                    id: 'inventory',
-                    iconClass: 'fa fa-dropbox oj-navigationlist-item-icon'
-            },
-                {
-                    name: 'Gift & Loyalty',
-                    id: 'gift-loyalty',
-                    iconClass: 'fa fa-gift oj-navigationlist-item-icon'
-            },
-                {
-                    name: 'Reports & Charts',
-                    id: 'reports-charts',
-                    iconClass: 'fa fa-bar-chart oj-navigationlist-item-icon'
-            },
-                {
-                    name: 'Mike Rose Cafe',
-                    id: 'enterprise',
-                    iconClass: 'fa fa-building-o oj-navigationlist-item-icon'
-            },
-                {
-                    name: 'People',
-                    id: 'people',
-                    iconClass: 'fa fa-users oj-navigationlist-item-icon'
-            }
-
-        ];
-            self.dataSource = new oj.ArrayTableDataSource(appNavData, {
-                idAttribute: 'id'
-            });
+                {name: 'Home', id: 'home', iconClass: 'fa fa-home oj-navigationlist-item-icon'},
+                {name: 'Labor', id: 'labor', iconClass: 'fa fa-briefcase oj-navigationlist-item-icon'},
+                {name: 'Inventory', id: 'inventory', iconClass: 'fa fa-dropbox oj-navigationlist-item-icon'},
+                {name: 'Gift & Loyalty', id: 'gift-loyalty', iconClass: 'fa fa-gift oj-navigationlist-item-icon'},
+                {name: 'Reports & Charts', id: 'reports-charts', iconClass: 'fa fa-bar-chart oj-navigationlist-item-icon'},
+                {name: 'Mike Rose Cafe', id: 'enterprise', iconClass: 'fa fa-building-o oj-navigationlist-item-icon'},
+                {name: 'People', id: 'people', iconClass: 'fa fa-users oj-navigationlist-item-icon'}
+                ];
+            self.dataSource = new oj.ArrayTableDataSource(appNavData, {idAttribute: 'id'});
             self.iconBig = new oj.ArrayTableDataSource(appNavData, {
                 idAttribute: 'iconClass'
             });
+            self.locationArea = ko.observable("Atlanta");
             self.optionChangeHandler = function (event, data) {
                 if (data.value == undefined) {
                     data.value = 'home';
@@ -189,8 +158,19 @@ require(['ojs/ojcore',
                 // Only go for user action events
                 if ('app-header-mobile-nav' || 'app-header-desktop-nav' === event.target.id && event.originalEvent) {
                     self.router.go(data.value);
+                    return (function(){ self.currentSectionState(data.value); });
                 }
+
             };
+            self.getStateID = function (){
+                var currentState = router.stateId();
+                if(currentState == "labor"){         
+                  return true;
+                }
+
+            }
+            self.currentSectionState = ko.observable();
+
 //            self.dynamicConfig = ko.pureComputed(function () {
 //                return router.moduleConfig;
 //            });
