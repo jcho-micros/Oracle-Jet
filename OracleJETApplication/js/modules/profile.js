@@ -297,12 +297,18 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                         futureListTime[i][oldTime] = newTime;
                     }
                 };
+            //current visible state of section, either true or false
+            self.sectionsState = ko.observable(false);
+            //Toggles visibility of sections
+            self.toggleSections = function () {
+                self.sectionsState(!self.sectionsState());
+            };
                 self.currentNavArrowPlacement = ko.observable("adjacent");
                 self.currentNavArrowVisibility = ko.observable("auto");
 
                 getItemInitialDisplay = function(index){return index < 3 ? '' : 'none';};
 
-            }
+            };
 
 
             return new PersonViewModel();
