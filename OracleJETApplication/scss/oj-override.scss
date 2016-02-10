@@ -1803,6 +1803,28 @@ footer{
         margin-left:65px;
         
     }
+    .profileStatusToolArea{
+        list-style-type: none;
+        padding-left: 0px;
+        li{
+            display: inline-block;
+            list-style-type: none;
+            font-size: 12px;
+            padding-right:10px;
+            padding-left:5px;
+            border-right: 1px solid $lightGray;
+            h4{
+                font-size:12px;
+                margin-bottom:2px;
+}
+        }
+        li:last-child{
+           border-right: 0px; 
+        }
+        li:first-child{
+            padding-left:0px;
+        }
+    }
 }
 
 // MD IPad (CAP)
