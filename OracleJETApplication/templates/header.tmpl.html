@@ -87,7 +87,7 @@
 </script>
 <!-- oj-row -->
 <script type="text/html" id="app_nav_template">
-    <li>
+    <li data-bind="attr: {id: $data['id']}">
         <a href="#">
             <span data-bind="css: $data['iconClass']"></span>
             <span data-bind="text: $data['name']" class="oj-sm-only-hide oj-lg-hide"></span>

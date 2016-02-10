@@ -112,6 +112,7 @@ require(['ojs/ojcore',
                 exit: function () {
                     var childRouter = router.currentState().value;
                     childRouter.dispose();
+                    $('#people').removeClass('oj-selected');
                 },
                 enter: function () {
                     var childRouter = router.createChildRouter('emp');
