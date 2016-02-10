@@ -1,9 +1,29 @@
 <!-- small template -->
 <script type="text/html" id="sm_template">
+<div class="oj-row oj-cols-nopad">    
+    <div class="oj-sm-12 oj-col app-header-mobile-nav-title" data-bind="if: tabRouter.stateId(), click:toggleSections">
+        <div data-bind="with: tabRouter.currentState()">
+            <div class="mobileNavTitleArea">
+                <span id="currentPage" data-bind="text: label"></span>
+            </div>
+        </div>
+    </div>
+    <div class="oj-row">
+        <div class="oj-sm-12 oj-col" data-bind="visible: sectionsState">
+            <div id="profileTabs" data-bind="ojComponent: {component: 'ojNavigationList', selection: tabRouter.stateId(), beforeSelect: selectTabHandler, drillMode: 'none'}">
+                <ul data-bind="foreach: tabRouter.states">
+                    <li data-bind="attr: {id: id}, click:$parent.toggleSections">
+                        <a data-bind="text: label"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="justifyCenter">
     <div id="personaldetails" class="oj-row">
         <div class="oj-col oj-md-1 oj-lg-1">
-            <img data-bind="attr: {src: getPhoto(personProfile().empId)}" />
+            <img style="width:75px; height:75px;" data-bind="attr: {src: getPhoto(personProfile().empId)}" />
         </div>
         <div class="oj-col oj-md-2 oj-lg-2">
             <h2 data-bind="text: personProfile().firstName + ' ' + personProfile().lastName"></h2>
@@ -11,7 +31,7 @@
         <div class="oj-col oj-md-3 oj-lg-3">
            <h4>Home Store</h4>
            <span data-bind="text: personProfile().homeStore"></span>
-           <a href="#" data-bind="click: function(){handleOpen('#homeStoreDialog')}">transfer</a>
+           <a data-bind="click: function(){handleOpen('#homeStoreDialog')}">transfer</a>
         </div>
         <div class="oj-col oj-md-3 oj-lg-3">
            <h4>Hire Status</h4>
@@ -26,21 +46,10 @@
     </div>
 </div>
 <div class="oj-row">
-    <div class="oj-md-12 oj-col">
-        <div data-bind="ojComponent: {component: 'ojConveyorBelt'}">
-            <div id="profileTabs" data-bind="ojComponent: {component: 'ojNavigationList', selection: tabRouter.stateId(), beforeSelect: selectTabHandler, drillMode: 'none', edge: 'top'}">
-                <ul data-bind="foreach: tabRouter.states">
-                    <li data-bind="attr: {id: id}">
-                        <a data-bind="text: label"></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="oj-md-12 oj-col" data-bind="if: tabRouter.stateId()">
+    <div class="oj-sm-12 oj-col" data-bind="if: tabRouter.stateId()">
         <div class="oj-panel tab-content" data-bind="with: tabRouter.currentState()">
 
-            <div data-bind="template: {name: 'profile/' + id +'/' + id + '-large'}"></div>
+            <div data-bind="template: {name: 'profile/' + id +'/' + id + '-small'}"></div>
         </div>
     </div>
 </div>
