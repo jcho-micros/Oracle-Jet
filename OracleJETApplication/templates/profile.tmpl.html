@@ -22,26 +22,33 @@
 </div>
 <div class="justifyCenter">
     <div id="personaldetails" class="oj-row">
-        <div class="oj-col oj-md-1 oj-lg-1">
-            <img style="width:75px; height:75px;" data-bind="attr: {src: getPhoto(personProfile().empId)}" />
+        <div class="oj-row">
+            <div class="oj-sm-3 oj-col">
+                <img style="width:50px; height:50px;" data-bind="attr: {src: getPhoto(personProfile().empId)}" />
+            </div>
+            <div class="oj-sm-9 oj-col">
+                <h2 data-bind="text: personProfile().firstName + ' ' + personProfile().lastName"></h2>
+            </div>
         </div>
-        <div class="oj-col oj-md-2 oj-lg-2">
-            <h2 data-bind="text: personProfile().firstName + ' ' + personProfile().lastName"></h2>
-        </div>
-        <div class="oj-col oj-md-3 oj-lg-3">
-           <h4>Home Store</h4>
-           <span data-bind="text: personProfile().homeStore"></span>
-           <a data-bind="click: function(){handleOpen('#homeStoreDialog')}">transfer</a>
-        </div>
-        <div class="oj-col oj-md-3 oj-lg-3">
-           <h4>Hire Status</h4>
-           <span data-bind="text: personProfile().hireStatus"></span>
-           <a href="#" data-bind="click: function(){handleOpen('#hireStatusDialog')}">update</a>
-        </div>
-        <div class="oj-col oj-md-3 oj-lg-3">
-           <h4>External Payroll ID</h4>
-           <span data-bind="text: personProfile().externalPayrollId"></span>
-           <a href="#" data-bind="click: function(){handleOpen('#externalPayrollDialog')}">edit</a>
+        <div class="oj-row">
+            <ul class="profileStatusToolArea">
+                <li>
+                    <h4>Home Store</h4>
+<!--                    <span data-bind="text: personProfile().homeStore"></span>-->                   
+                    <a data-bind="click: $parents[0].handleOpen('#homeStoreDialog')">transfer</a>
+                </li>
+                <li>
+                    <h4>Hire Status</h4>
+                    <span data-bind="text: personProfile().hireStatus"></span>
+                    <a href="#" data-bind="click: $parents[0].handleOpen('#hireStatusDialog')">update</a>
+
+                </li>
+                <li>
+                    <h4>External Payroll ID</h4>
+                    <span data-bind="text: personProfile().externalPayrollId"></span>
+                    <a href="#" data-bind="click: $parents[0].handleOpen('#externalPayrollDialog')">edit</a>
+                </li>
+            </ul>
         </div>
     </div>
 </div>

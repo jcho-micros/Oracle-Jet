@@ -163,9 +163,15 @@ require(['ojs/ojcore',
                 }
 
             };
+            self.handleOpen =  function(dialog) {
+                $(dialog).ojDialog("open");
+            };
             self.getStateID = function (){
                 var currentState = router.stateId();
                 if(currentState == "labor"){         
+                  return true;
+                }
+                if(currentState == "inventory"){         
                   return true;
                 }
 
