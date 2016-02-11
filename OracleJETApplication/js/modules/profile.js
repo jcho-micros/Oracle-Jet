@@ -311,7 +311,15 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                 self.handleAttached = function(){
                     //Adds class to people parent router when profile is active and is removed in the main.js file on exit of the page.
                     $('#people').addClass('oj-selected');
+
                 };
+                //Workaround to load hire Status dialog box when coming from the add-employee section
+                if(document.URL.indexOf("&trueUpdateEmp") > -1){
+                    setTimeout(function() {
+                        self.handleOpen('#hireStatusDialog');
+                    }, 700);
+                }
+
             };
 
             return new PersonViewModel();

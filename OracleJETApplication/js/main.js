@@ -122,7 +122,12 @@ require(['ojs/ojcore',
             },
             'add-employee': {
                 label: 'Add Employee',
-                value: 'add-employee'
+                value: 'add-employee',
+                exit: function(){
+                    //shows side and top menu on exit of page
+                    $('.app-header-desktop').removeClass('hideMenus');
+                    $('#sidebar-left').removeClass('hideMenus');
+                }
             }
         });
 

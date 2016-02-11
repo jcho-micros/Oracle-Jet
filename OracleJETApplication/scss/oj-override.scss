@@ -1552,6 +1552,9 @@ a.basic-btn-link{
     }
 }
 //add-employee styles
+.hideMenus{
+    display:none;
+}
 .add-profile{
     h4{
         text-transform: uppercase;
@@ -1570,6 +1573,10 @@ a.basic-btn-link{
         font-weight:bold;
         padding: 0 10px;
     }
+}
+
+#newEmpAccordionSection{
+    display:none;
 }
 //Footer styles
 footer{
