@@ -1,4 +1,4 @@
-define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/ojdialog', 'ojs/ojinputtext', 'ojs/ojfilmstrip', 'ojs/ojtable'],
+define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/ojdialog', 'ojs/ojinputtext', 'ojs/ojfilmstrip', 'ojs/ojtable','ojs/ojaccordion', 'ojs/ojcollapsible'],
         function (oj, ko, jsonData, moment)
         {
 
