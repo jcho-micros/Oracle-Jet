@@ -40,13 +40,13 @@
                 <li>
                     <h4>Hire Status</h4>
                     <span data-bind="text: personProfile().hireStatus"></span>
-                    <a href="#" data-bind="click: $parents[0].handleOpen('#hireStatusDialog')">update</a>
+                    <a data-bind="click: $parents[0].handleOpen('#hireStatusDialog')">update</a>
 
                 </li>
                 <li>
                     <h4>External Payroll ID</h4>
                     <span data-bind="text: personProfile().externalPayrollId"></span>
-                    <a href="#" data-bind="click: $parents[0].handleOpen('#externalPayrollDialog')">edit</a>
+                    <a data-bind="click: $parents[0].handleOpen('#externalPayrollDialog')">edit</a>
                 </li>
             </ul>
         </div>
@@ -84,17 +84,17 @@
         <div class="oj-col oj-md-3 oj-lg-3">
            <h4>Home Store</h4>
            <span data-bind="text: personProfile().homeStore"></span>
-           <a href="#" data-bind="click: function(){handleOpen('#homeStoreDialog')}">transfer</a>
+           <a data-bind="click: $parents[0].handleOpen('#homeStoreDialog')">transfer</a>
         </div>
         <div class="oj-col oj-md-3 oj-lg-3">
            <h4>Hire Status</h4>
            <span data-bind="text: personProfile().hireStatus"></span>
-           <a href="#" data-bind="click: function(){handleOpen('#hireStatusDialog')}">update</a>
+           <a data-bind="click: $parents[0].handleOpen('#hireStatusDialog')">update</a>
         </div>
         <div class="oj-col oj-md-3 oj-lg-3">
            <h4>External Payroll ID</h4>
            <span data-bind="text: personProfile().externalPayrollId"></span>
-           <a href="#" data-bind="click: function(){handleOpen('#externalPayrollDialog')}">edit</a>
+           <a data-bind="click: $parents[0].handleOpen('#externalPayrollDialog')">edit</a>
         </div>
     </div>
 </div>
