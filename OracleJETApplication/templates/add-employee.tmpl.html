@@ -1,6 +1,20 @@
 <!-- small template -->
 <script type="text/html" id="sm_template">
-
+ <div class="justifyCenter">
+        <div class="oj-row">
+            <div class="oj-col oj-sm-12" style="padding-top: 10px;">
+                <div class="oj-row">
+                    <div id="pageTitleContainer" class="oj-col oj-sm-12">
+                        <h1>
+                            <span data-bind="css: pageHeadingIconClass"></span>
+                            <span data-bind="text: pageHeading"></span>
+                        </h1>
+                    </div>
+                    <div data-bind="template: {name: 'add-employee/add-employee-large'}"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </script>
 
 <!-- large template -->

@@ -14,7 +14,9 @@ define([
     'ojs/ojdialog',
     'ojs/ojtabs',
     'ojs/ojtable',
-    'ojs/ojtrain'],
+    'ojs/ojtrain',
+    'ojs/ojcheckboxset',
+    'ojs/ojselectcombobox'],
     function (oj, ko, data) {
         function addEmpContentViewModel() {
             var self = this;
@@ -28,6 +30,10 @@ define([
             self.firstName = ko.observable('Shelley');
             self.lastName = ko.observable('Jones');
             self.dob = ko.observable('1/2/13');
+            self.language = ko.observableArray([""]);
+
+            //Schedule & Times section
+            self.districts = ko.observableArray(["none"]);
 
             //Featch json data
             data.fetchData('js/data/employees.json').then(function (people) {
@@ -74,7 +80,6 @@ define([
                     oj.Router.rootInstance.go('profile');
                 }
             };
-
             //train
             self.selected = ko.observable('stp1');
             self.stepArray = ko.observableArray([
@@ -102,7 +107,25 @@ define([
             self.selectedText = function() {
                 return ($("#train").ojTrain("getStep", self.selected())).id;
             };
-//            YPA doesnt work!!
+
+            //get photos
+            self.getPhoto = function (id) {
+                var src;
+                // We only have images for employees below 188 for now. Use the nopic avatar for those above 18
+                if (id < 188) {
+                    src = 'css/images/people/' + id + '.png';
+                } else {
+                    src = 'css/images/people/nopic.png';
+                }
+                return src;
+            };
+            //Toggles visibility of Employee listview sections
+            //jquery toggle, there may be a way to use visible ko however not sure how atm
+            self.toggleSections = function (empId, toggleSection) {
+                $('#' + empId).children(toggleSection).toggle();
+            };
+
+            //YPA doesnt work!!
             self.handleAttached = function(){
                 //Adds class to people parent router when profile is active and is removed in the main.js file on exit of the page.
                 $('#people').addClass('oj-selected');

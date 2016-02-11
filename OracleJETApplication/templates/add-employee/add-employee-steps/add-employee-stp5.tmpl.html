@@ -18,3 +18,7 @@
     <!--            <span data-bind="text: firstName()"></span>-->
 
 </div>
+
+<button id="PreviousStep" type="button" style="display:inline-block;vertical-align:top;" data-bind="click: previousStep, ojComponent: { component: 'ojButton', label: 'Back', icons: {start:'oj-fwk-icon-caret-start oj-fwk-icon'}}"></button>
+
+<button id="NextStep" type="button" style="display:inline-block;vertical-align:top;" data-bind="click: nextStep, ojComponent: {component: 'ojButton', label: 'Save and Continue ', icons: {end:'oj-fwk-icon-caret-end oj-fwk-icon'}}"></button>

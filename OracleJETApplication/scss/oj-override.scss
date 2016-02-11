@@ -1560,6 +1560,17 @@ a.basic-btn-link{
         margin-bottom:3px;
     }
 }
+.listViewLabels{
+    padding: 0.8571rem;
+    border-top: 1px solid #eeeeee;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display:none;
+    > div{
+        font-weight:bold;
+        padding: 0 10px;
+    }
+}
 //Footer styles
 footer{
     position:absolute;
@@ -1724,6 +1735,11 @@ footer{
     }
     .scheduleToolArea li:first-child{
         padding-right: 20px;
+    }
+
+    //add-employee styles
+    .listViewLabels{
+        display:block;
     }
 }
 
