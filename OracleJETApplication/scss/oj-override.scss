@@ -110,7 +110,7 @@ $lightGray2: #c4ced7;
 // $border8Color:       #4f4f4f;
 $borderDivder: $darkBlue;
 $borderHoverBottom: $lightBlue;
-
+$highlightInputBorderColor: $black;
 // 
 // ---------------------------------------------------------------
 // GENERAL STYLING
@@ -1492,6 +1492,10 @@ html {
     height: 100%;
 }
 
+.highlightInput{
+    border: 2px solid $highlightInputBorderColor;
+}
+
 //Header styles
 .page-header {
     h1 {
@@ -1554,11 +1558,22 @@ a.basic-btn-link{
 .oj-accordion-collapsible > .oj-collapsible-header{
     color: $accordionPanelHeaderTextColor;
 }
+
+//Custom col sizes
+.custom-col-9{
+    width:11.11111111%;
+}
+.custom9-offset-1{
+    margin-left:11.11111111%;
+}
 //People Styles
 .resultWrapper{
     clear:both;
 }
 //Profile Styles
+.addedNewEmpMessage{
+    display:none;
+}
 #personaldetails, #listview{
     padding:10px;
     img{
@@ -1592,7 +1607,15 @@ a.basic-btn-link{
 #newEmpAccordionSection{
     display:none;
 }
+.addEmpAvailability{
+    .oj-col{
+        text-align:center;
+    }
+}
 
+.availabilityInputTotal{
+    @extend .highlightInput;
+}
 //Text and edit modes
 .editMode{
     display:block;

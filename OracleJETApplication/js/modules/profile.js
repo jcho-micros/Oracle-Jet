@@ -320,6 +320,13 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                     }, 700);
                 }
 
+                //Workaround to show the New Employee Added Message when coming from the add-employee section
+                if(document.URL.indexOf("&trueAddEmp") > -1){
+                     setTimeout(function() {
+                        $(".addedNewEmpMessage").show();
+                    }, 700);
+                }
+
             };
 
             return new PersonViewModel();
