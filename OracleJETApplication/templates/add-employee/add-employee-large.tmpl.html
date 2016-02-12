@@ -22,6 +22,8 @@
                     <form data-bind="submit: gettingStartedSearch">
                         <label for="firstName">First Name</label>
                         <input id="test" data-bind="ojComponent: {component: 'ojInputText', value: firstName}"/>
+                        <!--Option for when user places cursor in field instead of waiting for value in field to change-->
+                        <!--<input id="test" data-bind="ojComponent: {component: 'ojInputText', value: firstName}, hasFocus: resultSectionState(false)"/>-->
                         <br/>
 
                         <label for="lastName">Last Name</label>
@@ -32,11 +34,12 @@
                         <input data-bind="ojComponent: {component: 'ojInputText', value: dob}" />
                         <br/>
 
-                         <input id="submit" type="submit" data-bind="ojComponent: {component: 'ojButton', label: 'Continue', icons: { start: 'fa fa-search'} }" />
+                         <input id="submit" type="submit" data-bind="ojComponent: {component: 'ojButton', label: 'Continue', icons: { start: 'fa fa-search'} }, visible: continueBtnSectionState" />
                     </form>
 
                     <!--Getting Started Results-->
-                    <div class="resultWrapper" data-bind="visible: sectionState">
+                    <div class="resultWrapper" data-bind="visible: resultSectionState">
+                        <a href="#" data-bind="click: function(){gettingStartedStartOver()}" class="float-r">Start Over</a>
                         <div data-bind="ojComponent: {component: 'ojPagingControl', data: listViewDataSource, pageSize:10}"></div>
                         <!-- Using the ojet listView Component-->
                         <div class="listViewLabels">
@@ -108,7 +111,7 @@
                                 <h3>General</h3>
                                 <div class="oj-row">
                                    <div class="oj-col oj-lg-12">
-                                       <a href="#" class="textMode" data-bind="click: function(){toggleSectionMode('#c1', '#c2'), collapseArea('#c2')}">Edit</a>
+                                       <a href="#" class="textMode" data-bind="click: function(){toggleSectionMode('#c1', '#c2'), collapseArea('#c2, #c3, #c4, #c5, #c6')}">Edit</a>
                                    </div>
                                     <div class="oj-col oj-lg-3">
                                         <h4>Name</h4>
@@ -232,7 +235,7 @@
                     <span class="disableAccordion">Schedules &amp; Timecards</span>
                     <form>
                       <div class="oj-col oj-lg-12">
-                           <a href="#" class="textMode" data-bind="click: function(){toggleSectionMode('#c2', '#c3'), collapseArea('#c3')}">Edit</a>
+                           <a href="#" class="textMode" data-bind="click: function(){toggleSectionMode('#c2', '#c3'), collapseArea('#c3, #c4, #c5, #c6')}">Edit</a>
                       </div>
                       <label id="mainlabelid">Colors</label>
                       <div id="radiosetSetBasicDemoId" aria-labelledby="mainlabelid"
@@ -251,93 +254,64 @@
                             <label for="redopt">Red</label>
                         </span>
                       </div>
-                       <div class="editMode">
+                      <div class="editMode">
                              <input id="submit" type="submit" data-bind="ojComponent: {component: 'ojButton', label: 'Continue', icons: { start: 'fa fa-search'} }, click: function(){toggleSectionMode('#c2', '#c3'), expandCollapsedArea('#c3')}" />
-                         </div>
+                      </div>
                     </form>
                   </div>
 
                   <div id="c3" data-bind="ojComponent: {component: 'ojCollapsible'}">
                     <span class="disableAccordion">Jobs &amp; Compensation</span>
-                    <div id="nestedAccordion" data-bind="ojComponent: {component: 'ojAccordion'}" >
-                      <div id="ic1">
-                        <span>Inner Header 1</span>
-                        <p class="oj-p">I'm collapsible inside an inner accordion.</p>
-                      </div>
-                      <div id="ic2" data-bind="ojComponent: {component: 'ojCollapsible'}">
-                        <span>Inner Header 2</span>
-                        <p class="oj-p">Another collapsible inside an inner accordion.</p>
-                      </div>
-                    </div>
+                    <form>
+                        <label id="mainlabelid">Colors</label>
+                        <div class="oj-col oj-lg-12">
+                           <a href="#" class="textMode" data-bind="click: function(){toggleSectionMode('#c3', '#c4'), collapseArea('#c4, #c5, #c6')}">Edit</a>
+                        </div>
+                        <div class="editMode">
+                         <input id="submit" type="submit" data-bind="ojComponent: {component: 'ojButton', label: 'Continue', icons: { start: 'fa fa-search'} }, click: function(){toggleSectionMode('#c3', '#c4'), expandCollapsedArea('#c4')}" />
+                        </div>
+                    </form>
                   </div>
 
                   <div id="c4" data-bind="ojComponent: {component: 'ojCollapsible'}">
                     <span class="disableAccordion">Payroll</span>
-                    <div>
-                      <label id="mainlabelid">Colors</label>
-                      <div id="radiosetSetBasicDemoId" aria-labelledby="mainlabelid"
-                         data-bind="ojComponent: {component: 'ojRadioset',
-                                   value: 'red'}" >
-                        <span class="oj-choice-row">
-                            <input id="blueopt" type="radio" name="rbb" value="blue">
-                            <label for="blueopt">Blue</label>
-                        </span>
-                        <span class="oj-choice-row">
-                            <input id="greenopt" type="radio" name="rbb" value="green">
-                            <label for="greenopt">Green</label>
-                        </span>
-                        <span class="oj-choice-row">
-                            <input id="redopt" type="radio" name="rbb" value="red">
-                            <label for="redopt">Red</label>
-                        </span>
-                      </div>
-                    </div>
+                    <form>
+                        <label id="mainlabelid">Colors</label>
+                        <div class="oj-col oj-lg-12">
+                           <a href="#" class="textMode" data-bind="click: function(){toggleSectionMode('#c4', '#c5'), collapseArea('#c5, #c6')}">Edit</a>
+                        </div>
+                        <div class="editMode">
+                         <input id="submit" type="submit" data-bind="ojComponent: {component: 'ojButton', label: 'Continue', icons: { start: 'fa fa-search'} }, click: function(){toggleSectionMode('#c4', '#c5'), expandCollapsedArea('#c5')}" />
+                        </div>
+                    </form>
                   </div>
 
                   <div id="c5" data-bind="ojComponent: {component: 'ojCollapsible'}">
                     <span class="disableAccordion">Permissions</span>
-                    <div>
-                      <label id="mainlabelid">Colors</label>
-                      <div id="radiosetSetBasicDemoId" aria-labelledby="mainlabelid"
-                         data-bind="ojComponent: {component: 'ojRadioset',
-                                   value: 'red'}" >
-                        <span class="oj-choice-row">
-                            <input id="blueopt" type="radio" name="rbb" value="blue">
-                            <label for="blueopt">Blue</label>
-                        </span>
-                        <span class="oj-choice-row">
-                            <input id="greenopt" type="radio" name="rbb" value="green">
-                            <label for="greenopt">Green</label>
-                        </span>
-                        <span class="oj-choice-row">
-                            <input id="redopt" type="radio" name="rbb" value="red">
-                            <label for="redopt">Red</label>
-                        </span>
-                      </div>
-                    </div>
+                    <form>
+                        <label id="mainlabelid">Colors</label>
+                        <div class="oj-col oj-lg-12">
+                           <a href="#" class="textMode" data-bind="click: function(){toggleSectionMode('#c5', '#c6'), collapseArea('#c6')}">Edit</a>
+                        </div>
+                        <div class="editMode">
+                         <input id="submit" type="submit" data-bind="ojComponent: {component: 'ojButton', label: 'Continue', icons: { start: 'fa fa-search'} }, click: function(){toggleSectionMode('#c5', '#c6'), expandCollapsedArea('#c6')}" />
+                        </div>
+                    </form>
                   </div>
 
                   <div id="c6" data-bind="ojComponent: {component: 'ojCollapsible'}">
                     <span class="disableAccordion">Analytics</span>
-                    <div>
-                      <label id="mainlabelid">Colors</label>
-                      <div id="radiosetSetBasicDemoId" aria-labelledby="mainlabelid"
-                         data-bind="ojComponent: {component: 'ojRadioset',
-                                   value: 'red'}" >
-                        <span class="oj-choice-row">
-                            <input id="blueopt" type="radio" name="rbb" value="blue">
-                            <label for="blueopt">Blue</label>
-                        </span>
-                        <span class="oj-choice-row">
-                            <input id="greenopt" type="radio" name="rbb" value="green">
-                            <label for="greenopt">Green</label>
-                        </span>
-                        <span class="oj-choice-row">
-                            <input id="redopt" type="radio" name="rbb" value="red">
-                            <label for="redopt">Red</label>
-                        </span>
-                      </div>
-                    </div>
+                    <form>
+                        <label id="mainlabelid">Colors</label>
+                        <div class="oj-col oj-lg-12">
+                           <a href="#" class="textMode" data-bind="click: function(){toggleSectionMode('#c6')}">Edit</a>
+                        </div>
+                        <div class="editMode">
+                            <!--hardcoded employee link-->
+                            <a href="index.html?root=profile&emp=205" class="basic-btn-link">Finish</a>
+                        </div>
+                    </form>
+
                   </div>
                 </div>
             </div>

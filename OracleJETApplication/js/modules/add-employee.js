@@ -29,12 +29,13 @@ define([
             $('#sidebar-left').addClass('hideMenus');
 
             //Setup Observables
-            self.sectionState = ko.observable(false);
+            self.resultSectionState = ko.observable(false);
+            self.continueBtnSectionState = ko.observable(true);
 
             self.allPeople = ko.observableArray([]);
 
             self.pageHeading = ko.observable("Add Employee");
-            self.pageHeadingIconClass = ko.observable('fa fa-briefcase');
+            self.pageHeadingIconClass = ko.observable('fa fa-plus');
 
             self.firstName = ko.observable('');
             self.lastName = ko.observable('');
@@ -87,6 +88,7 @@ define([
             });
 
             self.loadPersonPage = function (emp) {
+                console.log(emp);
                 if (emp.empId) {
                     // Temporary code until go('profile/' + emp.empId); is checked in 1.1.2
                     //Add in &trueUpdateEmp to url to use work around to load Hire Status modal
@@ -150,10 +152,20 @@ define([
 
             //Resets observable fields for Getting started section
             self.resetSearchFields = function(){
-                self.sectionState(false);
+                self.resultSectionState(false);
+                self.continueBtnSectionState(true);
                 self.firstName('');
                 self.lastName('');
                 self.dob('');
+            };
+            //Don't like this because something happens without user understanding why the area has been hidden
+            //Watches the First name field and hides the results section when value is changed
+//            self.firstName.subscribe(function(newValue){
+//                self.resultSectionState(false);
+//            });
+            //function for start over link on Getting Started area
+            self.gettingStartedStartOver = function(){
+                self.resetSearchFields();
             };
 
             //function for start over link
@@ -165,8 +177,9 @@ define([
 
             //for the search button under Getting Started form
             self.gettingStartedSearch = function(){
+                self.continueBtnSectionState(false);
                 self.filteredAllPeople();
-                self.sectionState(true);
+                self.resultSectionState(true);
             };
 
             //Expands collapsed ID
@@ -174,6 +187,7 @@ define([
                 $(accordionId).ojCollapsible("option", "expanded", true);
             };
 
+            //Collapse a specific area
             self.collapseArea = function(accordionId){
                 $(accordionId).ojCollapsible("option", "expanded", false);
             };
