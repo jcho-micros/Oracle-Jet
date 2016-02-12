@@ -116,47 +116,58 @@
                                         <input placeholder="First Name" data-bind="value: firstName, ojComponent: {component: 'ojInputText'}" class="editMode"/>
                                         <span data-bind="text: firstName" class="textMode"></span>
                                         <h5>Last Name</h5>
-                                        <input placeholder="Last Name" data-bind="value: lastName, ojComponent: {component: 'ojInputText'}"/>
+                                        <input placeholder="Last Name" data-bind="value: lastName, ojComponent: {component: 'ojInputText'}" class="editMode"/>
+                                        <span data-bind="text: lastName" class="textMode"></span>
 
                                         <h5>POS Check Name</h5>
                                          <div id="checkboxSetAgreeId" aria-labelledby="POS Check name" data-bind=
                                                "ojComponent: {
                                                 component: 'ojCheckboxset',
-                                                value: posCheckNameSelected}" >
+                                                value: posCheckNameSelected}" class="editMode">
                                           <span class="oj-choice-row">
                                             <input id="agree" type="checkbox" value="true">
                                             <label for="agree">Inherit from profile</label>
                                           </span>
                                         </div>
+                                        <span data-bind="text: posCheckNameSelected" class="textMode"></span>
                                     </div>
                                     <div class="oj-col oj-lg-3">
                                         <h4>Other</h4>
                                         <h5>Language</h5>
-                                        <select data-bind="ojComponent: {component: 'ojSelect', value: language, rootAttributes: {style:'max-width:20em'}}">
-                                            <option value="english">English</option>
-                                            <option value="spanish">Spanish</option>
-                                            <option value="french">French</option>
-                                        </select>
+                                        <div class="editMode">
+                                            <select data-bind="ojComponent: {component: 'ojSelect', value: language, rootAttributes: {style:'max-width:20em'}}">
+                                                <option value="english">English</option>
+                                                <option value="spanish">Spanish</option>
+                                                <option value="french">French</option>
+                                            </select>
+                                        </div>
+                                        <span data-bind="text: language" class="textMode"></span>
 
                                         <h5>Time Zone</h5>
-                                        <select data-bind="ojComponent: {component: 'ojSelect', value: timeZone, rootAttributes: {style:'max-width:20em'}}">
-                                            <option value="EST">Eastern Standard Time</option>
-                                            <option value="CST">Centeral Standard Time</option>
-                                            <option value="PST">Pacific Standard Time</option>
-                                        </select>
+                                        <div class="editMode">
+                                            <select data-bind="ojComponent: {component: 'ojSelect', value: timeZone, rootAttributes: {style:'max-width:20em'}}">
+                                                <option value="EST">Eastern Standard Time</option>
+                                                <option value="CST">Centeral Standard Time</option>
+                                                <option value="PST">Pacific Standard Time</option>
+                                            </select>
+                                        </div>
+                                        <span data-bind="text: timeZone" class="textMode"></span>
 
                                         <h5>Ethnicity</h5>
-                                        <select data-bind="ojComponent: {component: 'ojSelect', value: ethnicity, rootAttributes: {style:'max-width:20em'}}">
-                                            <option value="white">White</option>
-                                            <option value="hispanic">Hispanic</option>
-                                            <option value="asian">Asian</option>
-                                        </select>
+                                        <div class="editMode">
+                                            <select data-bind="ojComponent: {component: 'ojSelect', value: ethnicity, rootAttributes: {style:'max-width:20em'}}">
+                                                <option value="white">White</option>
+                                                <option value="hispanic">Hispanic</option>
+                                                <option value="asian">Asian</option>
+                                            </select>
+                                        </div>
+                                        <span data-bind="text: ethnicity" class="textMode"></span>
 
                                         <h4>Gender</h4>
                                         <div id="radiosetBasicDemoId" aria-labelledby="mainlabelid"
                                              data-bind="ojComponent: {
                                               component: 'ojRadioset',
-                                              value: genderCurrentSelected}" >
+                                              value: genderCurrentSelected}" class="editMode">
                                             <span class="oj-choice-row">
                                                 <input id="Male" type="radio" name="rbb" value="male">
                                                 <label for="male">Male</label>
@@ -166,13 +177,14 @@
                                                 <label for="female">Female</label>
                                             </span>
                                         </div>
+                                        <span data-bind="text: genderCurrentSelected" class="textMode"></span>
                                     </div>
                                     <div class="oj-col oj-lg-3">
                                         <h4>Veteran</h4>
                                         <div aria-labelledby="mainlabelid"
                                                  data-bind="ojComponent: {
                                                   component: 'ojRadioset',
-                                                  value: veteranCurrentSelected}" >
+                                                  value: veteranCurrentSelected}" class="editMode">
                                                 <span class="oj-choice-row">
                                                     <input id="no" type="radio" name="rbb" value="no">
                                                     <label for="no">No</label>
@@ -182,10 +194,12 @@
                                                     <label for="yes">Yes</label>
                                                 </span>
                                         </div>
+                                        <span data-bind="text: veteranCurrentSelected" class="textMode"></span>
                                     </div>
                                     <div class="oj-col oj-lg-3">
                                         <h4>Profile Picture</h4>
-                                        <button id="addNewEmployeePicture" type="button" style="display:inline-block;vertical-align:top;" data-bind="click: function(){}, ojComponent: {component: 'ojButton', label: 'Add ', icons: {start:'fa fa-plus'}}"></button>
+                                        <button id="addNewEmployeePicture" type="button" style="display:inline-block;vertical-align:top;" data-bind="click: function(){}, ojComponent: {component: 'ojButton', label: 'Add ', icons: {start:'fa fa-plus'}}" class="editMode"></button>
+                                        <img src="css/images/people/nopic.png" class="textMode"/>
                                     </div>
                                 </div>
                             </div>

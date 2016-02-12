@@ -39,7 +39,7 @@ define([
             self.firstName = ko.observable('');
             self.lastName = ko.observable('');
             self.dob = ko.observable('');
-            self.posCheckNameSelected = ko.observable("");
+            self.posCheckNameSelected = ko.observable("false");
             self.language = ko.observableArray(["english"]);
             self.timeZone = ko.observableArray(["CST"]);
             self.ethnicity = ko.observableArray(["white"]);
