@@ -1,4 +1,4 @@
-define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/ojdialog', 'ojs/ojinputtext', 'ojs/ojfilmstrip', 'ojs/ojtable','ojs/ojaccordion', 'ojs/ojcollapsible'],
+define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/ojdialog', 'ojs/ojinputtext', 'ojs/ojfilmstrip', 'ojs/ojtable','ojs/ojaccordion', 'ojs/ojcollapsible', 'ojs/ojcheckboxset', 'ojs/ojdatetimepicker'],
         function (oj, ko, jsonData, moment)
         {
 
@@ -164,7 +164,9 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                     self.emergencyPhone = ko.observable(self.personProfile().emergencyPhone);
                     
                     //Hire Status variables
-                    self.hireDate = ko.observable(self.getBasicFormattedDate('hireDate'));
+                    self.hireDate = ko.observable('');
+                    self.hireType = ko.observable('');
+                    self.reHireDate = ko.observable('');
 
                     //This variable is for Schedule time  card Current schedule Dates Nested
                     self.currentScheduledDates = self.personProfile().currentScheduledDates;

@@ -20,21 +20,30 @@
                 <div>
                     <h2>Getting Started - Search Existing/Past Employees</h2>
                     <form data-bind="submit: gettingStartedSearch">
-                        <label for="firstName">First Name</label>
-                        <input id="test" data-bind="ojComponent: {component: 'ojInputText', value: firstName}"/>
-                        <!--Option for when user places cursor in field instead of waiting for value in field to change-->
-                        <!--<input id="test" data-bind="ojComponent: {component: 'ojInputText', value: firstName}, hasFocus: resultSectionState(false)"/>-->
-                        <br/>
+                        <div class="oj-row">
+                            <div class="oj-col oj-sm-3">
+                                <label for="firstName">First Name</label>
+                                <input id="startFirstName" data-bind="ojComponent: {component: 'ojInputText', value: firstName}"/>
+                            </div>
 
-                        <label for="lastName">Last Name</label>
-                        <input data-bind="ojComponent: {component: 'ojInputText', value: lastName}" />
-                        <br/>
+                            <div class="oj-col oj-sm-3">
+                               <label for="lastName">Last Name</label>
+                               <input id="startLastName" data-bind="ojComponent: {component: 'ojInputText', value: lastName}" />
+                            </div>
 
-                        <label for="dob">Date of Birth</label>
-                        <input data-bind="ojComponent: {component: 'ojInputText', value: dob}" />
-                        <br/>
+                            <div class="oj-col oj-sm-3">
+                                <label for="dob">Date of Birth</label>
+                                <input id="startDob" data-bind="ojComponent: {component: 'ojInputDate', value: dob}" />
+                            </div>
 
-                         <input id="submit" type="submit" data-bind="ojComponent: {component: 'ojButton', label: 'Continue', icons: { start: 'fa fa-search'} }, visible: continueBtnSectionState" />
+                            <div class="oj-col oj-sm-3">
+                                <label>Enterprise Level</label>
+                                <br/>
+                                <input data-bind="ojComponent: {component: 'ojInputText', value: enterpriseLevel, readOnly: true}" />
+                            </div>
+
+                            <input id="submit" type="submit" data-bind="ojComponent: {component: 'ojButton', label: 'Continue', icons: { start: 'fa fa-search'} }, visible: continueBtnSectionState" />
+                        </div>
                     </form>
 
                     <!--Getting Started Results-->
@@ -88,7 +97,7 @@
                             </li>
                         </script>
 
-                        <button id="addNewEmployee" type="button" style="display:inline-block;vertical-align:top;" data-bind="click: function(){toggleSection('#newEmpAccordionSection'), toggleSection('#searchEmpSection') }, ojComponent: {component: 'ojButton', label: 'Add New Employee ', icons: {end:'oj-fwk-icon-caret-end oj-fwk-icon'}}"></button>
+                        <button id="addNewEmployee" type="button" style="display:inline-block;vertical-align:top;" data-bind="click: function(){toggleSection('#newEmpAccordionSection, #searchEmpSection') }, ojComponent: {component: 'ojButton', label: 'Add New Employee ', icons: {end:'oj-fwk-icon-caret-end oj-fwk-icon'}}"></button>
                     </div>
                 </div>
             </div>
@@ -99,7 +108,7 @@
                      <h4>Getting Started</h4>
                          <span data-bind="text: firstName"></span>
                          <span data-bind="text: lastName"></span>
-                         <span data-bind="text: dob"></span>
+                         <span data-bind="text: dobFormatted"></span>
                          <a href="#" data-bind="click: function(){startOver()}" class="float-r">Start Over</a>
                 </div>
                 <div id="accordionSection" data-bind="ojComponent: {component: 'ojAccordion', multiple: true}">
@@ -108,11 +117,11 @@
                     <form>
                         <div class="oj-row add-profile">
                             <div class="oj-col oj-lg-12">
+                               <a href="#" class="textMode" data-bind="click: function(){editSectionMode('#c1, #c2, #c3, #c4, #c5, #c6'), collapseArea('#c2, #c3, #c4, #c5, #c6')}">Edit</a>
+                           </div>
+                            <div class="oj-col oj-lg-12">
                                 <h3>General</h3>
                                 <div class="oj-row">
-                                   <div class="oj-col oj-lg-12">
-                                       <a href="#" class="textMode" data-bind="click: function(){toggleSectionMode('#c1', '#c2'), collapseArea('#c2, #c3, #c4, #c5, #c6')}">Edit</a>
-                                   </div>
                                     <div class="oj-col oj-lg-3">
                                         <h4>Name</h4>
                                         <h5>First Name</h5>
@@ -226,7 +235,7 @@
                             </div>
                         </div>
                          <div class="editMode">
-                             <input id="submit" type="submit" data-bind="ojComponent: {component: 'ojButton', label: 'Continue', icons: { start: 'fa fa-search'} }, click: function(){toggleSectionMode('#c1', '#c2'), expandCollapsedArea('#c2')}" />
+                             <input id="submit" type="submit" data-bind="ojComponent: {component: 'ojButton', label: 'Continue', icons: { start: 'fa fa-search'} }, click: function(){textSectionMode('#c1'), expandCollapsedArea('#c2')}" />
                          </div>
                     </form>
                   </div>
@@ -235,27 +244,91 @@
                     <span class="disableAccordion">Schedules &amp; Timecards</span>
                     <form>
                       <div class="oj-col oj-lg-12">
-                           <a href="#" class="textMode" data-bind="click: function(){toggleSectionMode('#c2', '#c3'), collapseArea('#c3, #c4, #c5, #c6')}">Edit</a>
+                           <a href="#" class="textMode" data-bind="click: function(){editSectionMode('#c2, #c3, #c4, #c5, #c6'), collapseArea('#c3, #c4, #c5, #c6')}">Edit</a>
                       </div>
-                      <label id="mainlabelid">Colors</label>
-                      <div id="radiosetSetBasicDemoId" aria-labelledby="mainlabelid"
-                         data-bind="ojComponent: {component: 'ojRadioset',
-                                   value: 'red'}" >
-                        <span class="oj-choice-row">
-                            <input id="blueopt" type="radio" name="rbb" value="blue">
-                            <label for="blueopt">Blue</label>
-                        </span>
-                        <span class="oj-choice-row">
-                            <input id="greenopt" type="radio" name="rbb" value="green">
-                            <label for="greenopt">Green</label>
-                        </span>
-                        <span class="oj-choice-row">
-                            <input id="redopt" type="radio" name="rbb" value="red">
-                            <label for="redopt">Red</label>
-                        </span>
+                      <h5>Availability</h5>
+                      <h3>Total Weekly Hours</h3>
+                      <div class="addEmpAvailability">
+                            <div class="oj-row">
+                              <div class="custom-col-9 custom9-offset-1 oj-col"><strong>Week Total</strong></div>
+                              <div class="oj-col custom-col-9">Sunday</div>
+                              <div class="oj-col custom-col-9">Monday</div>
+                              <div class="oj-col custom-col-9">Tuesday</div>
+                              <div class="oj-col custom-col-9">Wednesday</div>
+                              <div class="oj-col custom-col-9">Thursday</div>
+                              <div class="oj-col custom-col-9">Friday</div>
+                              <div class="oj-col custom-col-9">Saturday</div>
+                          </div>
+                          <div class="oj-row timeInputs">
+                              <div class="oj-col custom-col-9">Minimum</div>
+                              <div class="oj-col custom-col-9">
+                                  <input class="availabilityInputTotal" data-bind="value: minWeekTotal, ojComponent: {component: 'ojInputText', readOnly: true}"/>
+                              </div>
+                              <div class="oj-col custom-col-9">
+                                  <input data-bind="value: minSun, ojComponent: {component: 'ojInputText', converter: {type: 'number', options:{style:'decimal', minimumIntegerDigits: 1, minimumFractionDigits:1, maximumFractionDigits: 1}}}"/>
+                              </div>
+                              <div class="oj-col custom-col-9">
+                                  <input data-bind="value: minMon, ojComponent: {component: 'ojInputText', converter: {type: 'number', options:{style:'decimal', minimumIntegerDigits: 1, minimumFractionDigits:1, maximumFractionDigits: 1}}}"/>
+                              </div>
+                              <div class="oj-col custom-col-9">
+                                  <input data-bind="value: minTues, ojComponent: {component: 'ojInputText', converter: {type: 'number', options:{style:'decimal', minimumIntegerDigits: 1, minimumFractionDigits:1, maximumFractionDigits: 1}}}"/>
+                              </div>
+                              <div class="oj-col custom-col-9">
+                                  <input data-bind="value: minWed, ojComponent: {component: 'ojInputText', converter: {type: 'number', options:{style:'decimal', minimumIntegerDigits: 1, minimumFractionDigits:1, maximumFractionDigits: 1}}}"/>
+                              </div>
+                              <div class="oj-col custom-col-9">
+                                  <input data-bind="value: minThurs, ojComponent: {component: 'ojInputText', converter: {type: 'number', options:{style:'decimal', minimumIntegerDigits: 1, minimumFractionDigits:1, maximumFractionDigits: 1}}}"/>
+                              </div>
+                              <div class="oj-col custom-col-9">
+                                  <input data-bind="value: minFri, ojComponent: {component: 'ojInputText', converter: {type: 'number', options:{style:'decimal', minimumIntegerDigits: 1, minimumFractionDigits:1, maximumFractionDigits: 1}}}"/>
+                              </div>
+                              <div class="oj-col custom-col-9">
+                                  <input data-bind="value: minSat, ojComponent: {component: 'ojInputText', converter: {type: 'number', options:{style:'decimal', minimumIntegerDigits: 1, minimumFractionDigits:1, maximumFractionDigits: 1}}}"/>
+                              </div>
+                          </div>
+                          <div class="oj-row timeInputs">
+                              <div class="oj-col custom-col-9">Maximum</div>
+                              <div class="oj-col custom-col-9">
+                                  <input class="availabilityInputTotal" data-bind="value: maxWeekTotal, ojComponent: {component: 'ojInputText', readOnly: true}"/>
+                              </div>
+                              <div class="oj-col custom-col-9">
+                                  <input data-bind="value: maxSun, ojComponent: {component: 'ojInputText', converter: {type: 'number', options:{style:'decimal', minimumIntegerDigits: 1, minimumFractionDigits:1, maximumFractionDigits: 1}}}"/>
+                              </div>
+                              <div class="oj-col custom-col-9">
+                                  <input data-bind="value: maxMon, ojComponent: {component: 'ojInputText', converter: {type: 'number', options:{style:'decimal', minimumIntegerDigits: 1, minimumFractionDigits:1, maximumFractionDigits: 1}}}"/>
+                              </div>
+                              <div class="oj-col custom-col-9">
+                                  <input data-bind="value: maxTues, ojComponent: {component: 'ojInputText', converter: {type: 'number', options:{style:'decimal', minimumIntegerDigits: 1, minimumFractionDigits:1, maximumFractionDigits: 1}}}"/>
+                              </div>
+                              <div class="oj-col custom-col-9">
+                                  <input data-bind="value: maxWed, ojComponent: {component: 'ojInputText', converter: {type: 'number', options:{style:'decimal', minimumIntegerDigits: 1, minimumFractionDigits:1, maximumFractionDigits: 1}}}"/>
+                              </div>
+                              <div class="oj-col custom-col-9">
+                                  <input data-bind="value: maxThurs, ojComponent: {component: 'ojInputText', converter: {type: 'number', options:{style:'decimal', minimumIntegerDigits: 1, minimumFractionDigits:1, maximumFractionDigits: 1}}}"/>
+                              </div>
+                              <div class="oj-col custom-col-9">
+                                  <input data-bind="value: maxFri, ojComponent: {component: 'ojInputText', converter: {type: 'number', options:{style:'decimal', minimumIntegerDigits: 1, minimumFractionDigits:1, maximumFractionDigits: 1}}}"/>
+                              </div>
+                              <div class="oj-col custom-col-9">
+                                  <input data-bind="value: maxSat, ojComponent: {component: 'ojInputText', converter: {type: 'number', options:{style:'decimal', minimumIntegerDigits: 1, minimumFractionDigits:1, maximumFractionDigits: 1}}}"/>
+                              </div>
+                          </div>
                       </div>
+                      <h3>Days and Times</h3>
+                      <button class="fa fa-plus"></button><span> Add Time Segment</span>
+
+                      <h3>School District</h3>
                       <div class="editMode">
-                             <input id="submit" type="submit" data-bind="ojComponent: {component: 'ojButton', label: 'Continue', icons: { start: 'fa fa-search'} }, click: function(){toggleSectionMode('#c2', '#c3'), expandCollapsedArea('#c3')}" />
+                        <select data-bind="ojComponent: {component: 'ojSelect', value: districts, rootAttributes: {style:'max-width:20em'}}">
+                            <option value="none">None</option>
+                            <option value="district1">District 1</option>
+                            <option value="district2">District 2</option>
+                            <option value="district3">District 3</option>
+                        </select>
+                      </div>
+                      <div class="textMode" data-bind="text: districts"></div>
+                      <div class="editMode">
+                             <input id="submit" type="submit" data-bind="ojComponent: {component: 'ojButton', label: 'Continue', icons: { start: 'fa fa-search'} }, click: function(){textSectionMode('#c2'), expandCollapsedArea('#c3')}" />
                       </div>
                     </form>
                   </div>
@@ -263,12 +336,12 @@
                   <div id="c3" data-bind="ojComponent: {component: 'ojCollapsible'}">
                     <span class="disableAccordion">Jobs &amp; Compensation</span>
                     <form>
-                        <label id="mainlabelid">Colors</label>
                         <div class="oj-col oj-lg-12">
-                           <a href="#" class="textMode" data-bind="click: function(){toggleSectionMode('#c3', '#c4'), collapseArea('#c4, #c5, #c6')}">Edit</a>
+                           <a href="#" class="textMode" data-bind="click: function(){editSectionMode('#c3, #c4, #c5, #c6'), collapseArea('#c4, #c5, #c6')}">Edit</a>
                         </div>
+                        <div class="tbd"></div>
                         <div class="editMode">
-                         <input id="submit" type="submit" data-bind="ojComponent: {component: 'ojButton', label: 'Continue', icons: { start: 'fa fa-search'} }, click: function(){toggleSectionMode('#c3', '#c4'), expandCollapsedArea('#c4')}" />
+                         <input id="submit" type="submit" data-bind="ojComponent: {component: 'ojButton', label: 'Continue', icons: { start: 'fa fa-search'} }, click: function(){textSectionMode('#c3'), expandCollapsedArea('#c4')}" />
                         </div>
                     </form>
                   </div>
@@ -276,12 +349,12 @@
                   <div id="c4" data-bind="ojComponent: {component: 'ojCollapsible'}">
                     <span class="disableAccordion">Payroll</span>
                     <form>
-                        <label id="mainlabelid">Colors</label>
                         <div class="oj-col oj-lg-12">
-                           <a href="#" class="textMode" data-bind="click: function(){toggleSectionMode('#c4', '#c5'), collapseArea('#c5, #c6')}">Edit</a>
+                           <a href="#" class="textMode" data-bind="click: function(){editSectionMode('#c4, #c5, #c6'), collapseArea('#c5, #c6')}">Edit</a>
                         </div>
+                        <div class="tbd"></div>
                         <div class="editMode">
-                         <input id="submit" type="submit" data-bind="ojComponent: {component: 'ojButton', label: 'Continue', icons: { start: 'fa fa-search'} }, click: function(){toggleSectionMode('#c4', '#c5'), expandCollapsedArea('#c5')}" />
+                         <input id="submit" type="submit" data-bind="ojComponent: {component: 'ojButton', label: 'Continue', icons: { start: 'fa fa-search'} }, click: function(){textSectionMode('#c4'), expandCollapsedArea('#c5')}" />
                         </div>
                     </form>
                   </div>
@@ -289,12 +362,12 @@
                   <div id="c5" data-bind="ojComponent: {component: 'ojCollapsible'}">
                     <span class="disableAccordion">Permissions</span>
                     <form>
-                        <label id="mainlabelid">Colors</label>
                         <div class="oj-col oj-lg-12">
-                           <a href="#" class="textMode" data-bind="click: function(){toggleSectionMode('#c5', '#c6'), collapseArea('#c6')}">Edit</a>
+                           <a href="#" class="textMode" data-bind="click: function(){editSectionMode('#c5, #c6'), collapseArea('#c6')}">Edit</a>
                         </div>
+                        <div class="tbd"></div>
                         <div class="editMode">
-                         <input id="submit" type="submit" data-bind="ojComponent: {component: 'ojButton', label: 'Continue', icons: { start: 'fa fa-search'} }, click: function(){toggleSectionMode('#c5', '#c6'), expandCollapsedArea('#c6')}" />
+                         <input id="submit" type="submit" data-bind="ojComponent: {component: 'ojButton', label: 'Continue', icons: { start: 'fa fa-search'} }, click: function(){textSectionMode('#c5'), expandCollapsedArea('#c6')}" />
                         </div>
                     </form>
                   </div>
@@ -302,13 +375,13 @@
                   <div id="c6" data-bind="ojComponent: {component: 'ojCollapsible'}">
                     <span class="disableAccordion">Analytics</span>
                     <form>
-                        <label id="mainlabelid">Colors</label>
                         <div class="oj-col oj-lg-12">
-                           <a href="#" class="textMode" data-bind="click: function(){toggleSectionMode('#c6')}">Edit</a>
+                           <a href="#" class="textMode" data-bind="click: function(){editSectionMode('#c6')}">Edit</a>
                         </div>
+                        <div class="tbd"></div>
                         <div class="editMode">
                             <!--hardcoded employee link-->
-                            <a href="index.html?root=profile&emp=205" class="basic-btn-link">Finish</a>
+                            <a href="index.html?root=profile&emp=205&trueAddEmp" class="basic-btn-link">Finish</a>
                         </div>
                     </form>
 

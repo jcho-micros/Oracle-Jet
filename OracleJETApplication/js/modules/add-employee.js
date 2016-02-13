@@ -1,16 +1,11 @@
-define([
-    'ojs/ojcore',
-    'knockout',
-    'data/data',
-    'jquery',
-    'ojs/ojknockout',
+define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'jquery', 'ojs/ojknockout',
     'ojs/ojrouter',
     'ojs/ojnavigationlist',
     'ojs/ojpagingcontrol',
     'ojs/ojbutton',
     'ojs/ojinputtext',
     'ojs/ojselectcombobox',
-     'ojs/ojinputnumber',
+    'ojs/ojinputnumber',
     'ojs/ojdialog',
     'ojs/ojtabs',
     'ojs/ojtable',
@@ -19,8 +14,9 @@ define([
     'ojs/ojselectcombobox',
     'ojs/ojaccordion',
     'ojs/ojcollapsible',
-    'ojs/ojradioset'],
-    function (oj, ko, data) {
+    'ojs/ojradioset',
+    'ojs/ojdatetimepicker'],
+    function (oj, ko, data, moment) {
         function addEmpContentViewModel() {
             var self = this;
 
@@ -37,9 +33,18 @@ define([
             self.pageHeading = ko.observable("Add Employee");
             self.pageHeadingIconClass = ko.observable('fa fa-plus');
 
+            self.enterpriseLevel = ko.observable('Mike Rose Cafe');
             self.firstName = ko.observable('');
             self.lastName = ko.observable('');
             self.dob = ko.observable('');
+            //Formats the date for text display
+            self.dobFormatted = ko.pureComputed(function(){
+                if(self.dob() !== ''){
+                    var date = new Date(self.dob());
+                    var newDate = ((date.getMonth() + 1) + '/' + date.getDate() + '/' + date.getFullYear());
+                }
+                return newDate;
+            });
             self.posCheckNameSelected = ko.observable("false");
             self.language = ko.observableArray(["english"]);
             self.timeZone = ko.observableArray(["CST"]);
@@ -51,6 +56,30 @@ define([
 
             //Schedule & Times section
             self.districts = ko.observableArray(["none"]);
+
+            //add-employee Availaibilty fields
+            self.minSun = ko.observable(0);
+            self.minMon = ko.observable(0);
+            self.minTues = ko.observable(0);
+            self.minWed = ko.observable(0);
+            self.minThurs = ko.observable(0);
+            self.minFri = ko.observable(0);
+            self.minSat = ko.observable(0);
+
+            self.maxSun = ko.observable(0);
+            self.maxMon = ko.observable(0);
+            self.maxTues = ko.observable(0);
+            self.maxWed = ko.observable(0);
+            self.maxThurs = ko.observable(0);
+            self.maxFri = ko.observable(0);
+            self.maxSat = ko.observable(0);
+
+            self.minWeekTotal = ko.computed(function(){
+                return Math.max(Math.round((Number(self.minSun()) + Number(self.minMon()) + Number(self.minTues()) + Number(self.minWed()) + Number(self.minThurs()) + Number(self.minFri()) + Number(self.minSat())) * 10) / 10).toFixed(1);;
+            });
+            self.maxWeekTotal = ko.computed(function(){
+                return Math.max(Math.round((Number(self.maxSun()) + Number(self.maxMon()) + Number(self.maxTues()) + Number(self.maxWed()) + Number(self.maxThurs()) + Number(self.maxFri()) + Number(self.maxSat())) * 10) / 10).toFixed(1);;
+            });
 
             //Featch json data
             data.fetchData('js/data/employees.json').then(function (people) {
@@ -158,26 +187,33 @@ define([
                 self.lastName('');
                 self.dob('');
             };
-            //Don't like this because something happens without user understanding why the area has been hidden
-            //Watches the First name field and hides the results section when value is changed
-//            self.firstName.subscribe(function(newValue){
-//                self.resultSectionState(false);
-//            });
+
             //function for start over link on Getting Started area
             self.gettingStartedStartOver = function(){
                 self.resetSearchFields();
+                $('#startFirstName, #startLastName').ojInputText({"disabled": false});
+                $('#startDob').ojInputDate({"disabled": false});
             };
 
             //function for start over link
             self.startOver = function(){
                 self.resetSearchFields();
+                $('#startFirstName, #startLastName').ojInputText({"disabled": false});
+                $('#startDob').ojInputDate({"disabled": false});
                 self.toggleSection('#newEmpAccordionSection');
                 self.toggleSection('#searchEmpSection');
+
+                //Resets New employee form
+                $('#accordionSection').find('.editMode').show();
+                $('#accordionSection').find('.textMode').hide();
+                self.collapseArea('#c2, #c3, #c4, #c5, #c6');
             };
 
             //for the search button under Getting Started form
             self.gettingStartedSearch = function(){
                 self.continueBtnSectionState(false);
+                $('#startFirstName, #startLastName').ojInputText({"disabled": true});
+                $('#startDob').ojInputDate({"disabled": true});
                 self.filteredAllPeople();
                 self.resultSectionState(true);
             };
@@ -193,14 +229,14 @@ define([
             };
 
             //Toggles visibility for a section from edit to text mode
-            self.toggleSectionMode = function(accordionId, nextAccordionId){
-                $(accordionId).find('.editMode').toggle();
-                $(accordionId).find('.textMode').toggle();
+            self.editSectionMode = function(accordionId){
+                $(accordionId).find('.editMode').show();
+                $(accordionId).find('.textMode').hide();
+            };
 
-                //disables and enables the accordion headers
-                //Not needed ATM
-                //$(nextAccordionId).find('.oj-collapsible-header').toggleClass('disableAccordion');
-
+            self.textSectionMode = function(accordionId){
+                $(accordionId).find('.editMode').hide();
+                $(accordionId).find('.textMode').show();
             };
 
         };
