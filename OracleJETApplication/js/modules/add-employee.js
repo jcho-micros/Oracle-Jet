@@ -239,6 +239,12 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'jquery', 'ojs/ojknocko
                 $(accordionId).find('.textMode').show();
             };
 
+            self.scrollToPosition = function(ypos){
+                $('html, body').animate({
+                    scrollTop: $(window).scrollTop() + ypos
+                }, 500);
+            };
+
         };
 
         return addEmpContentViewModel;
