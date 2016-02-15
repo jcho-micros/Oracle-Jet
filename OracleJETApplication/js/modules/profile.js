@@ -240,6 +240,34 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
 
                 /////// JOHN insert for schedule
                 //Employee Dialog
+                //
+                //General function to  auto popup modal based on URL param string and dialog ID
+                self.autoDialog = function(param, dialogId){
+                    if(document.URL.indexOf(param) > -1){
+                        setTimeout(function() {
+                            self.handleOpen(dialogId);
+                        }, 500);
+                    }
+                };
+
+                //Workaround to load ID first then Modify Time Card dialog box when coming from another page
+                //exmaple ?root=profile&emp=205&tabs=schedules-timecards&trueModifyTimeCard
+                self.autoDialog("&trueModifyTimeCard", "#scheduleTimeCardDialog");
+                //Workaround to load ID first then Time off Request card dialog box when coming from another page
+                //example ?root=profile&emp=205&tabs=schedules-timecards&trueTimeOffRequest
+                self.autoDialog("&trueTimeOffRequest", "#editTimeOffRequestDialog");
+                //Workaround to load ID first then Edit Home Store dialog box when coming from another page
+                //example ?root=profile&emp=103&trueHomeStoreEdit
+                self.autoDialog("&trueHomeStoreEdit", "#hireStatusDialog");
+                //Workaround to load ID first then Hire Status Edit dialog box when coming from another page
+                //example ?root=profile&emp=103&trueHireStatusEdit
+                self.autoDialog("&trueHireStatusEdit", "#hireStatusDialog");
+                //Workaround to load ID first then Time off Request card dialog box when coming from another page
+                //example ?root=profile&emp=103&trueExternalPayroll
+                self.autoDialog("&trueExternalPayroll", "#externalPayrollDialog");
+                
+                
+                
                 self.timeCardhandleOpen =  function() {
                     $("#scheduleTimeCardDialog").ojDialog("open");
                 };
