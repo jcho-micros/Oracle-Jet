@@ -39,7 +39,7 @@ define([
             $("#empBasicDialog").ojDialog("close");
         };
 
-        //Employee Dialog
+        //General Dialog Reusable
         self.handleOpen =  function(dialog) {
             $(dialog).ojDialog("open");
         };
@@ -48,12 +48,17 @@ define([
             $(dialog).ojDialog("close");
         };
 
-         //Workaround to load dialog box when coming from another page
-        if(document.URL.indexOf("&trueAddEmp") > -1){
-            setTimeout(function() {
-                self.handleOpen('#addEmpStatusDialog');
-            }, 700);
-        }
+        //General function to  auto popup modal based on URL param string and dialog ID
+        self.autoDialog = function(param, dialogId){
+            if(document.URL.indexOf(param) > -1){
+                setTimeout(function() {
+                    self.handleOpen(dialogId);
+                }, 500);
+            }
+        };
+
+        //Workaround to load dialog box when coming from another page
+        self.autoDialog("&trueAddEmp", "#addEmpStatusDialog");
 
         //self.ready = ko.observable(false);
         data.fetchData('js/data/employees.json').then(function (people) {

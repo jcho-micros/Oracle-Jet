@@ -315,6 +315,8 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                     $('#people').addClass('oj-selected');
 
                 };
+
+                //General function to  auto popup modal based on URL param string and dialog ID
                 self.autoDialog = function(param, dialogId){
                     if(document.URL.indexOf(param) > -1){
                         setTimeout(function() {
