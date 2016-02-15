@@ -329,6 +329,14 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                     }, 700);
                 }
 
+                 //Workaround to load dialog box for Editing Modal
+                if(document.URL.indexOf("&editEmp") > -1){
+                    setTimeout(function() {
+                        self.handleOpen('#empDialog');
+                    }, 700);
+                }
+
+
             };
 
             return new PersonViewModel();
