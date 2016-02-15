@@ -245,6 +245,10 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'jquery', 'ojs/ojknocko
                 }, 500);
             };
 
+            self.scrollTop = function(){
+                $(window).scrollTop(0)
+            };
+
         };
 
         return addEmpContentViewModel;
