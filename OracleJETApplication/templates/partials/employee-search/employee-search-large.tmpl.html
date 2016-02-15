@@ -115,7 +115,6 @@
 
     <script type="text/html" id="peoplelist_template">
         <li data-bind="attr: {id: $data['name']}, click: $parent.empBasicInfoOpen">
-            <a data-bind="click: function(){console.log($parent);}">Parent Check</a>
             <div class="oj-row">
                 <div class="oj-lg-2 oj-md-2 oj-sm-12 oj-col" style="max-width:70px;padding-bottom:5px">
                     <img data-bind="attr: {src: $parent.getPhoto($data['empId'])}"/>
