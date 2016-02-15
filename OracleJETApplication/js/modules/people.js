@@ -80,7 +80,17 @@ define([
              write: function(){
              }
         });
-
+        var searchHistory = [
+            {id: 1, searchname: 'John Smith', datehire: '01/28/14', hirestatus: 'terminated'},
+            {id: 2, searchname: 'Patty Smith', datehire: '02/28/14', hirestatus: 'terminated'},
+            {id: 3, searchname: 'Bob Smith', datehire: '03/28/14', hirestatus: 'terminated'},
+            {id: 4, searchname: 'Jim Smith', datehire: '04/28/14', hirestatus: 'terminated'},
+            {id: 5, searchname: 'Jane Smith', datehire: '05/28/14', hirestatus: 'terminated'},
+            {id: 6, searchname: 'Larry Smith', datehire: '06/28/14', hirestatus: 'terminated'},
+            {id: 7, searchname: 'Fish Smith', datehire: '07/28/14', hirestatus: 'terminated'},
+            {id: 8, searchname: 'Brian Smith', datehire: '08/28/14', hirestatus: 'terminated'},
+        ];
+        self.resultSearchHistory = ko.observableArray(searchHistory);
         //pass all employee data into an array
         self.listViewDataSource = ko.computed(function () {
             return new oj.PagingTableDataSource(new oj.ArrayTableDataSource(self.filteredAllPeople(), {idAttribute: 'empId'}));
