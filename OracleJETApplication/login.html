@@ -15,8 +15,67 @@
     <link href="css/libs/fa/font-awesome.min.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body id="globalBody">
-    <h1>Login Page</h1>
+<body bgcolor="#FFFFFF" text="#000000" id="loginPage">
+	<div class="topbackground">
+		<div class="w-container container" style="color:#666;">
+			<div class="circle_1"></div>
+			<div class="circle_2"></div>
+			<div class="circle_3"></div>
+			<h2>Sign In</h2>
+			<div class="logo_container">
+				<img src="css/images/logo_oracle.png" class="logo" width="190px"> Hospitality
+			</div>
+			<h1>Reporting and Analytics</h1>
+
+			<p class="textlg" style="padding-bottom: 0px; padding-left: 345px; padding-right: 0px; padding-top: 40px;">
+				<em style="color:#fff">formerly mymicros.net</em>
+			</p>
+
+			<div class="formcontainer">
+				<div class="w-form">
+
+					<div id="messagesDivId"  class="text error">
+						 <p>This web page has detected that you are using an uncertified browser. The page is best viewed with Microsoft Internet Explorer 9, 10, 11, or Mozilla Firefox.</p>
+					</div>
+
+					<form name="login"  action="/index.html" method="POST" id="login">
+						<input type="hidden" name="LOGIN"/>
+						<input type="hidden" name="action"/>
+
+						<input type="Text" name="usr" id="usr" class="textfield text" style="width:250px; height:30px; margin-bottom:10px;" value="" maxlength="25" placeholder="User Name"  >
+						<br>
+						<input type="Text" name="cpny" id="cpny" class="textfield text" style="width:250px; height:30px; margin-bottom:10px;" value="" maxlength="32" placeholder="Company" >
+						<br>
+						<input type="Password" maxlength="20" autocomplete="off" style="width:250px; height:30px; margin-bottom:10px;" name="pwd" id="pwd" placeholder="Password" >
+						<br>
+						<a href="index.html" class="btn_primary buttonclass" style="margin-bottom:10px;" id="Login">Sign In</a><br>
+						<br>
+						<a href="#"  onclick="mymicrosPasswordHint()" class="text">Forgot your password?</a>
+
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="w-container footer" style="margin-left:25.5%">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:75px;">
+			<tbody>
+				<tr>
+					<td style="width:50%" class="textlg" align="left" valign="bottom" width="50%">
+					</td>
+					<td style="width:50%" class="text" align="right" valign="middle" width="50%">
+						Get InMotion Mobile
+						&nbsp;<a href="#" onClick="onclick_inMotion(1)"><img src="css/images/apple.png" width="43" height="43" class="icon"></a>
+						&nbsp;<a href="#" onClick="onclick_inMotion(2)"><img src="css/images/android.png" width="43" height="43" class="icon"></a>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+			<div class="hr"></div>
+		</div>
+	</div>
+
+<div class="lowerbar"></div>
 </body>
 
 </html>
