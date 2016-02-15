@@ -315,27 +315,26 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                     $('#people').addClass('oj-selected');
 
                 };
+                self.autoDialog = function(param, dialogId){
+                    if(document.URL.indexOf(param) > -1){
+                        setTimeout(function() {
+                            self.handleOpen(dialogId);
+                        }, 500);
+                    }
+                };
+
                 //Workaround to load hire Status dialog box when coming from the add-employee section
-                if(document.URL.indexOf("&trueUpdateEmp") > -1){
-                    setTimeout(function() {
-                        self.handleOpen('#hireStatusDialog');
-                    }, 700);
-                }
+                self.autoDialog("&trueUpdateEmp", "#hireStatusDialog");
+
+                //Workaround to load dialog box for Editing Modal
+                self.autoDialog("&editEmp", "#empDialog");
 
                 //Workaround to show the New Employee Added Message when coming from the add-employee section
                 if(document.URL.indexOf("&trueAddEmp") > -1){
                      setTimeout(function() {
                         $(".addedNewEmpMessage").show();
-                    }, 700);
+                    }, 500);
                 }
-
-                 //Workaround to load dialog box for Editing Modal
-                if(document.URL.indexOf("&editEmp") > -1){
-                    setTimeout(function() {
-                        self.handleOpen('#empDialog');
-                    }, 700);
-                }
-
 
             };
 
