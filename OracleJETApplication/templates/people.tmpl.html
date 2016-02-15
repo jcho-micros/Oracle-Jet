@@ -6,6 +6,7 @@
                 <div class="oj-row">
                     <div id="pageTitleContainer" class="oj-col oj-sm-2 oj-lg-1">
                         <h1>People</h1>
+                        <a href="" data-bind="click: function(){handleOpen('#addEmpStatusDialog');}" class="basic-btn-link">Add</a>
                     </div>
                     <!--Use template when parent js file is associated by default to the tmpl file
                     Ex. below links to partial tmpl file, people tmpl file already associated with people.js file
@@ -15,6 +16,10 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div data-bind="ojModule: {
+                name: 'add-employee',
+                viewName: 'add-employee/add-employee-small'}">
     </div>
 </script>
 
@@ -39,6 +44,7 @@
                     name: 'add-employee',
                     viewName: 'add-employee/add-employee-large'}">
     </div>
+
 </script>
 
 <div data-bind="template: {name: $root.medium() ? 'md_lg_xl_template' : 'sm_template'}"></div>
