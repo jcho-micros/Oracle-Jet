@@ -1,12 +1,45 @@
 <div style="display:none;" id="homeStoreDialog" data-bind="ojComponent:{component: 'ojDialog', initialVisibility: 'hide', rootAttributes: {class: 'generalModal-dimensions'}}">
    <div class="oj-dialog-header oj-helper-clearfix" aria-labelledby="dialogTitleId">
         <span id="dialogTitleId" class="oj-dialog-title">
-           <div>Home Store Modal</div>
+           <div>Location Assignments for <span data-bind="text: personProfile().firstName + ' ' + personProfile().lastName"></span></div>
         </span>
      </div>
     <div class="oj-dialog-body">
         <div class="oj-row">
-
+            <div>Choose a Location</div>
+            <div class="oj-col oj-sm-4">
+                <div><strong>Make Rose Cafe</strong></div>
+                <em>Select a level to view options</em><em style="float:right;">4 total</em>
+                <select id="basicSelect" data-bind="ojComponent: {component: 'ojSelect', value: enterpriseName, rootAttributes: {style:'max-width:20em'}}">
+                    <option value="NE">Northeast (7)</option>
+                    <option value="S">South (4)</option>
+                    <option value="SE">Southeast (9)</option>
+                    <option value="W">West (8)</option>
+                </select>
+            </div>
+            <div class="oj-col oj-sm-4">
+                <div><strong>West</strong></div>
+                <em>Select a level to view options</em><em style="float:right;">8 total</em>
+                <select id="basicSelect" data-bind="ojComponent: {component: 'ojSelect', value: location1Name, rootAttributes: {style:'max-width:20em'}}">
+                    <option value="AZ">Arizona (3)</option>
+                    <option value="CA">California (3)</option>
+                    <option value="CO">Colorado (4)</option>
+                    <option value="NV">Nevada (2)</option>
+                    <option value="OR">Oregon (4)</option>
+                    <option value="SD">South Dakota (1)</option>
+                    <option value="WA">Washington (3)</option>
+                    <option value="WY">Wyoming (3)</option>
+                </select>
+            </div>
+            <div class="oj-col oj-sm-4">
+                <div><strong>California</strong></div>
+                <em>Select a level to view options</em><em style="float:right;">3 total</em>
+                <select id="basicSelect" data-bind="ojComponent: {component: 'ojSelect', value: location2Name, rootAttributes: {style:'max-width:20em'}}">
+                    <option value="mexican">Mexican</option>
+                    <option value="chinese">Chinese</option>
+                    <option value="italian">Italian</option>
+                </select>
+            </div>
         </div>
         <button id="submitButton" class="basic-btn" data-bind="click: function(){handleClose('#homeStoreDialog')}">Save</button>
     </div>

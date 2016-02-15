@@ -1,4 +1,4 @@
-define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/ojdialog', 'ojs/ojinputtext', 'ojs/ojfilmstrip', 'ojs/ojtable','ojs/ojaccordion', 'ojs/ojcollapsible', 'ojs/ojcheckboxset', 'ojs/ojdatetimepicker'],
+define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/ojdialog', 'ojs/ojinputtext', 'ojs/ojfilmstrip', 'ojs/ojtable','ojs/ojaccordion', 'ojs/ojcollapsible', 'ojs/ojcheckboxset', 'ojs/ojdatetimepicker', 'ojs/ojselectcombobox'],
         function (oj, ko, jsonData, moment)
         {
 
@@ -187,6 +187,11 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                     self.hoursOver = ko.observable(0.0);
                     self.overtimeHours = ko.observable(0.0);
                     self.val = ko.observableArray(["current"]);
+
+                    //Home Store Modal
+                    self.enterpriseName = ko.observable("W");
+                    self.location1Name = ko.observable("CA");
+                    self.location2Name = ko.observable('');
                 };
                 self.getPhoto = function (id) {
                     var src;
