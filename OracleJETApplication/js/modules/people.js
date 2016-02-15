@@ -39,6 +39,22 @@ define([
             $("#empBasicDialog").ojDialog("close");
         };
 
+        //Employee Dialog
+        self.handleOpen =  function(dialog) {
+            $(dialog).ojDialog("open");
+        };
+
+        self.handleClose =  function(dialog) {
+            $(dialog).ojDialog("close");
+        };
+
+         //Workaround to load dialog box when coming from another page
+        if(document.URL.indexOf("&trueAddEmp") > -1){
+            setTimeout(function() {
+                self.handleOpen('#addEmpStatusDialog');
+            }, 700);
+        }
+
         //self.ready = ko.observable(false);
         data.fetchData('js/data/employees.json').then(function (people) {
             self.allPeople(people.employees);
@@ -150,6 +166,7 @@ define([
         self.toggleSections = function () {
             self.sectionsState(!self.sectionsState());
         };
+
 
 
     }

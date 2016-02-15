@@ -1,4 +1,11 @@
-<div class="tabs-container">
+<div style="display:none;" id="addEmpStatusDialog" data-bind="ojComponent:{component: 'ojDialog', initialVisibility: 'hide', rootAttributes: {class: 'generalModal-dimensions'}, 'position': {'at': 'top'}}">
+   <div class="oj-dialog-header oj-helper-clearfix" aria-labelledby="dialogTitleId">
+        <span id="dialogTitleId" class="oj-dialog-title">
+           <div>Hire Status Modal</div>
+        </span>
+     </div>
+      <div class="oj-dialog-body">
+        <div class="tabs-container">
     <div id="tabs" data-bind="ojComponent: {component: 'ojTabs'}">
         <ul>
             <li><span>Individual</span></li>
@@ -394,3 +401,6 @@
         </div>
     </div>
 </div>
+    </div>
+</div>
+

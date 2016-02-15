@@ -26,13 +26,18 @@
                 <div class="oj-row">
                     <div id="pageTitleContainer" class="oj-col oj-sm-12 oj-lg-12">
                         <h1 class="inlineHeader">People</h1>
-                        <a href="index.html?root=add-employee" class="basic-btn-link">Add</a>
+<!--                        <a href="index.html?root=add-employee" class="basic-btn-link">Add</a>-->
+                            <a href="" data-bind="click: function(){handleOpen('#addEmpStatusDialog');}" class="basic-btn-link">Add</a>
                     </div>
                     <!--Use template when parent js file is associated by default to the tmpl file -->
                     <div data-bind="template: {name: 'partials/employee-search/employee-search-large'}"></div>
                 </div>
             </div>
         </div>
+    </div>
+    <div data-bind="ojModule: {
+                    name: 'add-employee',
+                    viewName: 'add-employee/add-employee-large'}">
     </div>
 </script>
 

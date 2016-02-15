@@ -21,8 +21,8 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'jquery', 'ojs/ojknocko
             var self = this;
 
             //hides side and top menu
-            $('.app-header-desktop').addClass('hideMenus');
-            $('#sidebar-left').addClass('hideMenus');
+//            $('.app-header-desktop').addClass('hideMenus');
+//            $('#sidebar-left').addClass('hideMenus');
 
             //Setup Observables
             self.resultSectionState = ko.observable(false);
