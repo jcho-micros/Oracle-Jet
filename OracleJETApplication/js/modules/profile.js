@@ -1,4 +1,4 @@
-define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/ojdialog', 'ojs/ojinputtext', 'ojs/ojfilmstrip', 'ojs/ojtable','ojs/ojaccordion', 'ojs/ojcollapsible'],
+define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/ojdialog', 'ojs/ojinputtext', 'ojs/ojfilmstrip', 'ojs/ojtable','ojs/ojaccordion', 'ojs/ojcollapsible', 'ojs/ojcheckboxset', 'ojs/ojdatetimepicker'],
         function (oj, ko, jsonData, moment)
         {
 
@@ -164,7 +164,9 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                     self.emergencyPhone = ko.observable(self.personProfile().emergencyPhone);
                     
                     //Hire Status variables
-                    self.hireDate = ko.observable(self.getBasicFormattedDate('hireDate'));
+                    self.hireDate = ko.observable('');
+                    self.hireType = ko.observable('');
+                    self.reHireDate = ko.observable('');
 
                     //This variable is for Schedule time  card Current schedule Dates Nested
                     self.currentScheduledDates = self.personProfile().currentScheduledDates;
@@ -311,7 +313,22 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                 self.handleAttached = function(){
                     //Adds class to people parent router when profile is active and is removed in the main.js file on exit of the page.
                     $('#people').addClass('oj-selected');
+
                 };
+                //Workaround to load hire Status dialog box when coming from the add-employee section
+                if(document.URL.indexOf("&trueUpdateEmp") > -1){
+                    setTimeout(function() {
+                        self.handleOpen('#hireStatusDialog');
+                    }, 700);
+                }
+
+                //Workaround to show the New Employee Added Message when coming from the add-employee section
+                if(document.URL.indexOf("&trueAddEmp") > -1){
+                     setTimeout(function() {
+                        $(".addedNewEmpMessage").show();
+                    }, 700);
+                }
+
             };
 
             return new PersonViewModel();

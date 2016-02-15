@@ -110,7 +110,7 @@ $lightGray2: #c4ced7;
 // $border8Color:       #4f4f4f;
 $borderDivder: $darkBlue;
 $borderHoverBottom: $lightBlue;
-
+$highlightInputBorderColor: $black;
 // 
 // ---------------------------------------------------------------
 // GENERAL STYLING
@@ -656,7 +656,7 @@ $buttonBorderColor:               $lightGray2;
 // -----------------------
 // $accordionPanelBgColor:               $panelBgColor;
 // $accordionPanelBorderColor:           $panelBorderColor;
-// 
+   $accordionPanelHeaderTextColor:       $white;
 // TABS
 // ---------------------------------------------------------------
 // 
@@ -1477,8 +1477,23 @@ html {
 }
 
 //helper styles
+.float-r{
+    float:right;
+}
+
+.float-l{
+    float:left;
+}
+
+.clearAll{
+    clear:both;
+}
 .full-height {
     height: 100%;
+}
+
+.highlightInput{
+    border: 2px solid $highlightInputBorderColor !important;
 }
 
 //Header styles
@@ -1540,11 +1555,25 @@ a.basic-btn-link{
         text-decoration:none;
     }
 }
+.oj-accordion-collapsible > .oj-collapsible-header{
+    color: $accordionPanelHeaderTextColor;
+}
+
+//Custom col sizes
+.custom-col-9{
+    width:11.11111111%;
+}
+.custom9-offset-1{
+    margin-left:11.11111111%;
+}
 //People Styles
 .resultWrapper{
     clear:both;
 }
 //Profile Styles
+.addedNewEmpMessage{
+    display:none;
+}
 #personaldetails, #listview{
     padding:10px;
     img{
@@ -1552,6 +1581,9 @@ a.basic-btn-link{
     }
 }
 //add-employee styles
+.hideMenus{
+    display:none;
+}
 .add-profile{
     h4{
         text-transform: uppercase;
@@ -1570,6 +1602,31 @@ a.basic-btn-link{
         font-weight:bold;
         padding: 0 10px;
     }
+}
+
+#newEmpAccordionSection{
+    display:none;
+}
+.addEmpAvailability{
+    .oj-col{
+        text-align:center;
+    }
+}
+
+.availabilityInputTotal{
+    @extend .highlightInput;
+}
+//Text and edit modes
+.editMode{
+    display:block;
+}
+
+.textMode{
+    display:none;
+}
+
+.disableAccordion{
+    pointer-events: none !important;
 }
 //Footer styles
 footer{

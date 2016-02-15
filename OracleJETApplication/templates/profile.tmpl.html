@@ -74,6 +74,11 @@
 <!-- large template -->
 <script type="text/html" id="md_lg_xl_template">
 <div class="justifyCenter">
+   <div class="oj-row addedNewEmpMessage">
+        <div class="oj-md-12 oj-col">
+            <span data-bind="text: personProfile().firstName + ' ' + personProfile().lastName"></span> has been successfully added!
+        </div>
+    </div>
     <div id="personaldetails" class="oj-row">
         <div class="oj-col oj-md-1 oj-lg-1">
             <img data-bind="attr: {src: getPhoto(personProfile().empId)}" />
