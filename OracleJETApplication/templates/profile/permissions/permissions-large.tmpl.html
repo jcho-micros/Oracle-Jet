@@ -1,25 +1,57 @@
 <div class="justifyCenter">
-    <div id="personaldetails" class="oj-row" style="margin-bottom:26px;">
-        <div class="oj-col oj-md-2 oj-lg-2 demo-employee-photo-person-detail">
-            <img data-bind="attr: {src: $parent.getPhoto($parent.personProfile().empId)}" />
+    <div class="oj-row">
+        <div class="oj-col oj-md-10">
+            <h2 id="currentPage" data-bind="text: label"></h2>
         </div>
-        <div class="oj-col oj-md-4 oj-lg-4" style="margin-top: 10px;">
-            <div data-bind="text: $parent.personProfile().firstName + ' ' + $parent.personProfile().lastName"></div>
-            <div data-bind="text: $parent.personProfile().title"></div>
-            <div data-bind="text: $parent.personProfile().deptName"></div>
+        <div class="oj-col oj-md-2 oj-lg-text-align-end">
+<!--            <div data-bind="click: function(){$parent.handleOpen('#empDialog')}" style="line-height:39px;">Edit</div>-->
         </div>
-        <div class="oj-col oj-md-4 oj-lg-4" style="margin-top: 10px;">
-            <div>
-                <div data-bind="text: $parent.personProfile().phone"></div>
-            </div>
-            <div>
-                <div data-bind="text: $parent.personProfile().mobile"></div>
-            </div>
-            <div>
-                <div>
-                    <a data-bind="attr:{href: $parent.getEmail($data)}, text: $parent.personProfile().email+'@example.net'"></a>
+    </div>
+
+    <hr class="oj-col oj-md-12" />
+    <div class="oj-row">
+        <div class="oj-col oj-md-6">
+            <h3>SYSTEM</h3>
+            <div class="oj-col oj-md-12">
+                <div class="permissionRoleHeader">
+                    Role
+                </div>
+                <div class="permissionRole">
+                    Employee
                 </div>
             </div>
+        </div>
+        <div class="oj-col oj-md-6">
+            <h3>PROFILE</h3>
+            <div class="oj-col oj-md-12">
+                <div class="profileItems">Allow user to update their contact information</div>
+                <div class="profileItems">Allow user to maintain their notifications</div>
+                <div class="profileItems">Allow user to view schedule</div>
+                <div class="profileItems">Allow user to access to the shift pool</div>
+            </div>
+        </div>
+    </div>
+    <div class="oj-row">
+        <div class="oj-col oj-md-12">
+            <h3>PORTAL USER</h3>
+        </div>
+        <div class="oj-col oj-md-6">
+            <div class="oj-col oj-md-6">
+                <div class="portalItemHeaders">Username</div>
+                <div class="portalItems" data-bind="text: $parent.email"></div>
+                <div class="portalItemHeaders">Display Name</div>
+                <div class="portalItems"><span data-bind="text: $parent.firstName"></span> <span data-bind="text: $parent.lastName"></span></div>
+            </div>
+            <div class="oj-col oj-md-6">
+                <div class="portalItemHeaders">Role</div>
+                <div class="portalItems">System User</div>
+                <div class="portalItemHeaders">POS Language</div>
+                <div class="portalItems">System User</div>          
+            </div>
+        </div>
+        <div class="oj-col oj-md-6">
+            <div class="portalRevenueCenterHeader">Revenue Centers</div>
+            
         </div>
     </div>
 </div>
