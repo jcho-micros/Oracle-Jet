@@ -1,22 +1,22 @@
 <div class="oj-row">
     <div class="oj-col oj-sm-10">
-        <h2 id="currentPage" data-bind="text: label"></h2>
+        <h2> <span id="currentPage" data-bind="text: label"></span> <a href="#"><i class="fa fa-question-circle"></i></a></h2>
     </div>
     <div class="oj-col oj-sm-2 oj-lg-text-align-end">
-        <div data-bind="click: function(){$parent.handleOpen('#empDialog')}" style="line-height:39px;">Edit</div>
+        <a data-bind="click: function(){$parent.handleOpen('#empDialog')}" style="line-height:39px;">Edit <i class="fa fa-pencil-square-o"></i></a>
     </div>
 </div>
 <div class="oj-row">
-    <div class="oj-col oj-md-6">
+    <div class="oj-col oj-md-6 noLeftPadding">
         <h3>General</h3>
-        <div class="oj-row">
-            <div class="oj-col oj-md-6">
+        <div class="oj-row leftPadding">
+            <div class="oj-md-6 oj-col">
                 <h4>Name</h4>
                 <span data-bind="text: $parent.firstName()"></span>
                 <span data-bind="text: $parent.lastName()"></span>
 
                 <div data-bind="visible: $parent.posCheckName()">
-                    <h4>POS Check Name</h4>
+                    <h4>POS Check Name <a href="#"><i class="fa fa-question-circle"></i></a></h4>
                     <div data-bind="text: $parent.posCheckName()"></div>
                 </div>
 
@@ -35,22 +35,23 @@
                     <div data-bind="text: $parent.gender()"></div>
                 </div>
             </div>
-            <div class="oj-col oj-md-6">
+            <div class="oj-md-6 oj-col ">
 
                 <h4>Profile Picture</h4>
                 <!--Not hooked up to an observable this may need to be an upload feature-->
                 <img data-bind="attr: {src: $parent.getPhoto($parent.personProfile().empId)}" />
 
-                <h4>Veteran</h4>
-                <div data-bind="text: $parent.veteranStatus()"></div>
+
                 <!--doesn't update on modal change, need to work on this-->
                 <div data-bind="visible: $parent.veteranStatus() == 'yes'">
-                    <div data-bind="text: $parent.vietnamEra()"></div>
-                    <div data-bind="text: $parent.otherEligible()"></div>
-                    <div data-bind="text: $parent.otherProtected()"></div>
-                    <div data-bind="text: $parent.armedForcesServiceMedal()"></div>
-                    <div data-bind="text: $parent.recentlySeparated()"></div>
-                    <div data-bind="text: $parent.specialDisabled()"></div>
+                 <h4>Veteran</h4>
+<!--                <div><span class="veteranStatus">A Veteran?</span> <span data-bind="text: $parent.veteranStatus()"></span></div>-->
+                    <div><i class="fa fa-check"></i> <span data-bind="text: $parent.vietnamEra()"></span></div>
+                    <div><i class="fa fa-check"></i> <span data-bind="text: $parent.otherEligible()"></span></div>
+                    <div><i class="fa fa-check"></i> <span data-bind="text: $parent.otherProtected()"></span></div>
+                    <div><i class="fa fa-check"></i> <span data-bind="text: $parent.armedForcesServiceMedal()"></span></div>
+                    <div><i class="fa fa-check"></i> <span data-bind="text: $parent.recentlySeparated()"></span></div>
+                    <div><i class="fa fa-check"></i> <span data-bind="text: $parent.specialDisabled()"></span></div>
 
                     <h4>Registered Disable Number</h4>
                     <div data-bind="text: $parent.registeredDisabledNumber()"></div>
@@ -63,14 +64,25 @@
     </div>
     <div class="oj-col oj-md-6">
         <h3>Contact</h3>
-        <div class="oj-row">
+        <div class="oj-row leftPadding">
             <div class="oj-col oj-md-6">
                 <div>
                     <h4>Email Address</h4>
-                    <a data-bind="attr:{href: $parent.getEmail($data)}, text: $parent.email() + '@example.net'"></a>
+                    <a style="font-weight: bold;" data-bind="attr:{href: $parent.getEmail($data)}, text: $parent.email() + '@example.net'"></a>
+                    <div data-bind="visible: $parent.receiveEmailNotification() == 1">
+                        <div><i class="fa fa-check"></i> Receive email notifications</div>
+                    </div>
+                    
+                    
                 </div>
                 <h4>Phone Number</h4>
                 <div data-bind="text: $parent.phone()"></div>
+                <div data-bind="visible: $parent.receiveTextNotification() == 1">
+                    <div><i class="fa fa-check"></i> Receive text notifications</div>
+                </div>
+                <div data-bind="visible: $parent.publishInCompanyDirectory() == 1">
+                    <div><i class="fa fa-check"></i> Publish in company directory</div>
+                </div>
                 <div>
                     <h4>Other Phone Number</h4>
                     <div data-bind="text: $parent.mobile()"></div>
@@ -87,12 +99,15 @@
                 <span data-bind="text: $parent.state()"></span>
                 <span data-bind="text: $parent.postal()"></span>
                 <span data-bind="text: $parent.country()"></span>
+                <div data-bind="visible: $parent.inCityLimits() == 1">
+                    <div><i class="fa fa-check"></i> In city limits</div>
+                </div>
             </div>
             <div class="oj-col oj-md-6">
                 <div>
                     <h4>Emergency Contact</h4>
-                    <span data-bind="html: $parent.emergencyName()"></span>
-                    <span data-bind="html: $parent.formattedRelationship()"></span>
+                    <div data-bind="html: $parent.emergencyName()"></div>
+                    <div data-bind="html: $parent.formattedRelationship()"></div>
                     <div data-bind="html: $parent.emergencyAddress()"></div>
                     <span data-bind="html: $parent.emergencyCity()"></span>
                     <span data-bind="html: $parent.emergencyState()"></span>

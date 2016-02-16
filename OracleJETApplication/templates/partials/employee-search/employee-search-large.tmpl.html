@@ -73,8 +73,12 @@
     <div class="oj-lg-4 oj-col oj-md-only-hide">
         <h3>Last 30 Day Search </h3>
         <div class="resultWrapper">
-            <ul data-bind="foreach: resultSearchHistory">
-                <li><div data-bind="text: searchname"></div></li>
+            <ul class="searchHistory" data-bind="foreach: resultSearchHistory">
+                <li>
+                    <span class="searchNameHeader">Name:</span> <span data-bind="text: searchname"></span> | 
+                    <span class="searchHireDate">Hire Date:</span> <span data-bind="text: datehire"></span><br />
+                    <span class="searchStatus">Status:</span> <span data-bind="text: hirestatus"></span> 
+                </li>
             </ul>
         </div>
     </div>
@@ -83,12 +87,16 @@
 <div class="oj-row">
     <div class="oj-md-12 oj-col oj-lg-hide">
         <div id="employee-search-accordion" data-bind="ojComponent: {component: 'ojAccordion'}">
-               <div id="c1">
-                   <span>Last 30 Day Search <span class="fa fa-plus"></span></span>
-            <ul data-bind="foreach: resultSearchHistory">
-                <li><div data-bind="text: searchname"></div></li>
-            </ul>
-               </div>
+            <div>
+                <span>Last 30 Day Search <span class="fa fa-plus"></span></span>
+                <ul class="searchHistory" data-bind="foreach: resultSearchHistory">
+                    <li>
+                        <span class="searchNameHeader">Name:</span> <span data-bind="text: searchname"></span> | 
+                        <span class="searchHireDate">Hire Date:</span> <span data-bind="text: datehire"></span> | 
+                        <span class="searchStatus">Status:</span> <span data-bind="text: hirestatus"></span> 
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>

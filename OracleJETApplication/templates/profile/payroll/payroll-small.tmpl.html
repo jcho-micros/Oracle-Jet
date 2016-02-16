@@ -1,0 +1,56 @@
+<div class="justifyCenter">
+    <div class="oj-row">
+        <div class="oj-col oj-sm-10">
+            <h2 id="currentPage" data-bind="text: label"></h2>
+        </div>
+        <div class="oj-col oj-sm-2 oj-lg-text-align-end">
+            <div data-bind="click: function(){$parent.handleOpen('#empDialog')}" style="line-height:39px;">Edit</div>
+        </div>
+    </div>
+    <div class="oj-row">
+    <h3>General</h3>
+        <div class="oj-col oj-sm-12">
+            <div class="oj-col oj-sm-8">External payroll ID</div>
+            <div class="oj-col oj-sm-4">
+                <div class="payrollItems" data-bind="text: $parent.extPayrollId"></div>
+            </div>
+        </div>
+        <div class="oj-col oj-sm-12">Options</div>
+        <div class="oj-col oj-sm-12">
+             <div id="checkboxOptionsWages" aria-labelledby="mainlabelid" data-bind="ojComponent: {component: 'ojCheckboxset', value: ''}">
+               <span class="oj-choice-row" data-bind="visible: $parent.minimumwage() == 1">
+      <!--                    <input id="temp" type="checkbox"  value="$parent.minimumwage">
+                 <label>Allow sub minimum wage</label>-->
+                 <i class="fa fa-check"></i><span>Allow sub minimum wage</span>
+               </span>
+               <span class="oj-choice-row" data-bind="visible: $parent.overtimeexempt() == 1">
+      <!--                    <input id="partTime" type="checkbox" value="overtime">
+                 <label>Overtime exempt</label>-->
+                 <i class="fa fa-check"></i><span>Overtime exempt</span>
+               </span>
+             </div>
+        </div>
+    </div>
+    <div class="oj-row">
+        <h3>I9 Information</h3>
+        <div class="oj-col oj-sm-12">
+            <div class="oj-col oj-sm-6">Date of Birth</div>
+        <!--                <input data-bind="ojComponent: {component: 'ojInputDate', value: $parent.reHireDate}" />-->
+            <div class="oj-col oj-sm-6" data-bind="text: $parent.birthDate()"></div>
+            <div class="oj-col oj-sm-12">Child Labor Law Requirements (Age 16)</div>
+        </div>
+
+        <div class="oj-col oj-sm-12">
+            <div class="oj-col oj-sm-12">Admission Number</div>
+            <div class="oj-col oj-sm-12">
+<!--                    <input data-bind="ojComponent: {component: 'ojInputText', value: ''}" />-->
+                <div data-bind="text: $parent.admissionnumber"></div>
+            </div>
+            <div class="oj-col oj-sm-12">INS Expiration Date</div>
+            <div class="oj-col oj-sm-12">
+<!--                    <input data-bind="ojComponent: {component: 'ojInputText', value: ''}" />-->
+                <div data-bind="text: $parent.insexpirationdate()"></div>
+            </div>
+        </div>
+    </div>
+</div>

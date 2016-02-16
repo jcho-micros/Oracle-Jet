@@ -1,4 +1,19 @@
-define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/ojdialog', 'ojs/ojinputtext', 'ojs/ojfilmstrip', 'ojs/ojtable','ojs/ojaccordion', 'ojs/ojcollapsible', 'ojs/ojcheckboxset', 'ojs/ojdatetimepicker', 'ojs/ojselectcombobox'],
+define([
+    'ojs/ojcore', 
+    'knockout', 
+    'data/data', 
+    'moment', 
+    'ojs/ojknockout', 
+    'ojs/ojdialog', 
+    'ojs/ojinputtext', 
+    'ojs/ojfilmstrip', 
+    'ojs/ojtable', 
+    'ojs/ojaccordion', 
+    'ojs/ojcollapsible', 
+    'ojs/ojcheckboxset', 
+    'ojs/ojradioset',
+    'ojs/ojdatetimepicker', 
+    'ojs/ojselectcombobox'],
         function (oj, ko, jsonData, moment)
         {
 
@@ -136,8 +151,13 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                     //Veteran Info END
 
                     self.email = ko.observable(self.personProfile().email);
+                    self.receiveEmailNotification = ko.observable(self.personProfile().receiveEmailNotification);
+                    self.receiveTextNotification = ko.observable(self.personProfile().receiveTextNotification);
+                    self.publishInCompanyDirectory = ko.observable(self.personProfile().publishInCompanyDirectory);
                     self.phone = ko.observable(self.personProfile().phone);
                     self.mobile = ko.observable(self.personProfile().mobile);
+                    
+                    
                     self.faxNumber = ko.observable(self.personProfile().faxNumber);
 
                     //Address Fields
@@ -147,6 +167,8 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                     self.state = ko.observable(self.personProfile().state);
                     self.postal = ko.observable(self.personProfile().postal);
                     self.country = ko.observable(self.personProfile().country);
+                    self.inCityLimits = ko.observable(self.personProfile().inCityLimits);
+                    
 
                     //Emergency Contact Fields
                     self.emergencyName = ko.observable(self.personProfile().emergencyName);
@@ -192,6 +214,38 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                     self.enterpriseName = ko.observable("W");
                     self.location1Name = ko.observable("CA");
                     self.location2Name = ko.observable('');
+                    
+                    self.val = ko.observableArray([""]);
+                    self.socialnumber = ko.observable("12345678945");
+                    
+                    //payroll 
+                    self.extPayrollId = ko.observable(self.personProfile().externalPayrollId);
+                    self.minimumwage = ko.observable(self.personProfile().subminimumwage);
+                    self.overtimeexempt = ko.observable(self.personProfile().overtimeexempt);
+                    self.birthDate = ko.observable(self.getBasicFormattedDate('dateofbirth'));
+                    self.admissionnumber = ko.observable(self.personProfile().admissionnumber);
+                    self.insexpirationdate = ko.observable(self.personProfile().insexpirationdate);
+                    self.socialsecuritynumber = ko.observable(self.personProfile().socialsecuritynumber);
+                    self.identifydocumenttype = ko.observable(self.personProfile().identifydocumenttype);
+                    //Disable the selection view
+                    self.disabledState = ko.observable(true);
+                    self.bi9documenttype = ko.observable(self.personProfile().bi9documenttype);
+                    self.bi9documentid = ko.observable(self.personProfile().bi9documentid);
+                    self.bi9documentexpiration = ko.observable(self.getBasicFormattedDate('bi9documentexpiration'));
+                    self.bi9documentupload = ko.observable(self.personProfile().bi9documentupload);
+                    self.ci9documenttype = ko.observable(self.personProfile().ci9documenttype);
+                    self.ci9documentid = ko.observable(self.personProfile().ci9documentid);
+                    self.ci9documentexpiration = ko.observable(self.getBasicFormattedDate('ci9documentexpiration'));
+                    self.ci9documentupload = ko.observable(self.personProfile().ci9documentupload);
+                    self.agecertification = ko.observable(self.personProfile().agecertification);
+                    self.certificationnumber = ko.observable(self.personProfile().certificationnumber);
+                    self.certificationexpiration = ko.observable(self.getBasicFormattedDate('certificationexpiration'));
+                    self.agecertupload = ko.observable(self.personProfile().agecertupload);
+                    self.workpermit = ko.observable(self.personProfile().workpermit);
+                    self.workpermitnumber = ko.observable(self.personProfile().workpermitnumber);
+                    self.workpermitexpiration = ko.observable(self.getBasicFormattedDate('workpermitexpiration'));
+                    self.workpermitupload = ko.observable(self.personProfile().workpermitupload);
+
                 };
                 self.getPhoto = function (id) {
                     var src;
@@ -221,7 +275,6 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                         property("");
                     }
                 };
-
                 self.getEmail = function () {
                     return "mailto:" + self.email() + '@example.net';
                 };
@@ -251,7 +304,7 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'ojs/ojknockout', 'ojs/
                     if(document.URL.indexOf(param) > -1){
                         setTimeout(function() {
                             self.handleOpen(dialogId);
-                        }, 500);
+                        }, 700);
                     }
                 };
 

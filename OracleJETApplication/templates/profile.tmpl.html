@@ -83,23 +83,25 @@
         <div class="oj-col oj-md-1 oj-lg-1">
             <img data-bind="attr: {src: getPhoto(personProfile().empId)}" />
         </div>
-        <div class="oj-col oj-md-2 oj-lg-2">
-            <h2 data-bind="text: personProfile().firstName + ' ' + personProfile().lastName"></h2>
+        <div class="oj-col oj-md-2 oj-lg-2 profileToolBar">
+            
+            <h2><span data-bind="text: personProfile().firstName + ' ' + personProfile().lastName"></span> <a href="#"><i class="profileHelpIcon fa fa-book"></i></a></h2> 
         </div>
-        <div class="oj-col oj-md-3 oj-lg-3">
+        <div class="oj-col oj-md-3 oj-lg-3 profileToolBar">
            <h4>Home Store</h4>
            <span data-bind="text: personProfile().homeStore"></span>
-           <a data-bind="click: $parents[0].handleOpen('#homeStoreDialog')">transfer</a>
+           <a data-bind="click: $parents[0].handleOpen('#homeStoreDialog')">transfer <i class="fa fa-share"></i>
+</a>
         </div>
-        <div class="oj-col oj-md-3 oj-lg-3">
+        <div class="oj-col oj-md-3 oj-lg-3 profileToolBar">
            <h4>Hire Status</h4>
            <span data-bind="text: personProfile().hireStatus"></span>
            <a data-bind="click: $parents[0].handleOpen('#hireStatusDialog')">update</a>
         </div>
-        <div class="oj-col oj-md-3 oj-lg-3">
+        <div class="oj-col oj-md-3 oj-lg-3 profileToolBar">
            <h4>External Payroll ID</h4>
            <span data-bind="text: personProfile().externalPayrollId"></span>
-           <a data-bind="click: $parents[0].handleOpen('#externalPayrollDialog')">edit</a>
+           <a data-bind="click: $parents[0].handleOpen('#externalPayrollDialog')">edit <i class="fa fa-pencil-square-o"></i></a>
         </div>
     </div>
 </div>
