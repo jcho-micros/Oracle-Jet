@@ -11,6 +11,7 @@
       "posCheckNameCheckbox" : 1,
       "posCheckName" : "test",
       "email" : "DGRANT",
+      "receiveEmailNotification" : 1,
       "receiveTextNotification" : 1,
       "publishInCompanyDirectory" : 1,
       "optOut" : 1,
