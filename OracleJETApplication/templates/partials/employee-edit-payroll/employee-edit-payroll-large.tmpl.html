@@ -1,0 +1,257 @@
+<div class="justifyCenter">
+    <div class="oj-row">
+        <div class="oj-col oj-md-10">
+            <h2 id="currentPage" data-bind="text: label"></h2>
+        </div>
+        <div class="oj-col oj-md-2 oj-lg-text-align-end">
+            <div data-bind="click: function(){$parent.handleOpen('#empDialog')}" style="line-height:39px;">Edit</div>
+        </div>
+    </div>
+    <div class="oj-row">
+        <div class="oj-col oj-md-3">
+        <h3>General</h3>
+        </div>
+        <div class="oj-col oj-md-9">
+            <h3>I9 Information</h3>
+        </div>
+    </div>
+    <div class="oj-row">
+        <div class="oj-col oj-md-3">
+            <div class="oj-col oj-md-12">External payroll ID</div>
+               <div class="oj-col oj-md-12">
+                   <input data-bind="ojComponent: {component: 'ojInputText', value: ''}" />
+               </div>
+             <div class="oj-col oj-md-12">
+                <div>Options</div>
+                <div id="checkboxOptionsWages" aria-labelledby="mainlabelid" data-bind="ojComponent: {component: 'ojCheckboxset', value: ''}">
+                  <span class="oj-choice-row">
+                    <input id="temp" type="checkbox" value="minimum-wage">
+                    <label>Allow sub minimum wage</label>
+                  </span>
+                  <span class="oj-choice-row">
+                    <input id="partTime" type="checkbox" value="overtime">
+                    <label>Overtime exempt</label>
+                  </span>
+                </div>
+            </div>
+        </div>
+        <div class="oj-col oj-md-9">
+            <div class="oj-col oj-md-4">
+                <div>Date of Birth</div>
+                <input data-bind="ojComponent: {component: 'ojInputDate', value: $parent.reHireDate}" />
+                <div>MM/DD/YYYY</div>
+                <div>Child Labor Law Requirements (Age 16)</div>
+            </div>
+            <div class="oj-col oj-md-4">
+                <div class="oj-col oj-md-12">Admission Number</div>
+                <div class="oj-col oj-md-12">
+                    <input data-bind="ojComponent: {component: 'ojInputText', value: ''}" />
+                </div>
+                <div class="oj-col oj-md-12">INS Expiration Date</div>
+                <div class="oj-col oj-md-12">
+                    <input data-bind="ojComponent: {component: 'ojInputText', value: ''}" />
+                </div>
+            </div>
+            <div class="oj-col oj-md-4">
+                <div class="oj-col oj-md-12">Social Security Number</div>
+                <div class="oj-col oj-md-12">
+                    <input type="password" id="password" data-bind="ojComponent: {component: 'ojInputPassword', value: self.socialnumber}"/>
+                </div>
+                <div class="oj-col oj-md-12">Confirm Social Security Number</div>
+                <div class="oj-col oj-md-12">
+                    <input data-bind="ojComponent: {component: 'ojInputText', value: ''}" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="oj-row">
+        <div class="oj-col oj-md-12">
+            <h3>Identity Documents</h3>
+        </div>
+        <div class="oj-col oj-md-12">
+            <div class="oj-col" id="radiosetIdentifyDoc" aria-labelledby="mainlabelid" data-bind="ojComponent: {component: 'ojRadioset', value: ''}">
+              <span class="oj-choice-row">
+                <input id="temp" type="radio" value="none">
+                <label>None</label>
+              </span>
+              <span class="oj-choice-row">
+                <input id="partTime" type="radio" value="list-a">
+                <label>List A</label>
+              </span>
+              <span class="oj-choice-row">
+                <input id="partTime" type="radio" value="list-b-c">
+                <label>ist B and List C </label>
+              </span>
+            </div>
+        </div>
+        <hr class="oj-col oj-md-12" />
+        <div class="oj-col oj-md-8">
+            <div class="oj-col oj-md-12">
+                List B I9 Document Type 
+            </div>
+            <div class="oj-col oj-md-4">
+                <label for="basicSelect">Document Type</label>
+                <select id="basicSelect" data-bind="ojComponent: {component: 'ojSelect',
+                                                                  value: self.val,
+                                                                  rootAttributes: {style:'max-width:20em'}}">
+                  <option value="">Please Select</option>
+                  <option value="cdl">Canadian Driver's License</option>
+                  <option value="cdhr">Clinic, Doctor, or Hospital Record</option>
+                  <option value="dnsr">Daycare or Nursery School Record</option>
+                  <option value="dl">Driver's License</option>
+                  <option value="fslidcard">Federal, State, or Local ID Card</option>
+                  <option value="mdidcard">Military Dependents ID Card</option>
+                  <option value="natd">Native American Tribal Document</option>
+                  <option value="sidcard">School ID Card</option>
+                  <option value="src">School Record/Report Card</option>
+                  <option value="uscgm">US Coast Guard merchant</option>
+                  <option value="eadidcard">Employment Authorization Document ID Card</option>
+                </select>
+
+            </div>
+            <div class="oj-col oj-md-3">
+                <div class="oj-col oj-md-12">Document ID</div>
+                <div class="oj-col oj-md-12">
+                    <input data-bind="ojComponent: {component: 'ojInputText', value: ''}" />
+                </div>
+            </div>
+            <div class="oj-col oj-md-3">
+                <div class="oj-col oj-md-12">Expiration Date</div>
+                <div class="oj-col oj-md-12">
+                    <input data-bind="ojComponent: {component: 'ojInputDate', value: $parent.reHireDate}" />
+                </div>
+            </div>
+            <div class="oj-col oj-md-2"></div>
+            
+        </div>
+        <div class="oj-col oj-md-4">
+                <div class="oj-col oj-md-12">Upload Document Image</div>
+                <div class="oj-col oj-md-8">
+                    <input data-bind="ojComponent: {component: 'ojInputText', value: ''}" />
+                </div>
+                <div class="oj-col oj-md-4">
+                        <button id="buttonIcon2" data-bind="ojComponent: {component:'ojButton', 
+                            icons: {start:'oj-fwk-icon-caret-start oj-fwk-icon'}, 
+                            label: 'Browse' }"></button>
+                </div>
+            
+        </div>
+    </div>
+    
+    <hr class="oj-col oj-md-12" />
+            
+    <div class="oj-col oj-md-8">
+        <div class="oj-col oj-md-12">
+            List C I9 Document Type 
+        </div>
+        <div class="oj-col oj-md-4">
+            <label for="basicSelect">Document Type</label>
+            <select id="basicSelect" data-bind="ojComponent: {component: 'ojSelect',
+                                                              value: self.val,
+                                                              rootAttributes: {style:'max-width:20em'}}">
+              <option value="">Please Select</option>
+              <option value="cba">Certificate of Birth Abroad</option>
+              <option value="eadidcard">Employment Authorization Document ID Card</option>
+              <option value="natd">Native American Tribal Document</option>
+              <option value="usbc">US Birth Certificate</option>
+              <option value="uscidcard">US Citizen ID Card</option>
+              <option value="ussscard">US Social Security Card</option>
+            </select>
+
+        </div>
+        <div class="oj-col oj-md-3">
+            <div class="oj-col oj-md-12">Document ID</div>
+            <div class="oj-col oj-md-12">
+                <input data-bind="ojComponent: {component: 'ojInputText', value: ''}" />
+            </div>
+        </div>
+        <div class="oj-col oj-md-3">
+            <div class="oj-col oj-md-12">Expiration Date</div>
+            <div class="oj-col oj-md-12">
+                <input data-bind="ojComponent: {component: 'ojInputDate', value: $parent.reHireDate}" />
+            </div>
+        </div>
+        <div class="oj-col oj-md-2"></div>
+
+    </div>
+    <div class="oj-col oj-md-4">
+        <div class="oj-col oj-md-12">Upload Document Image</div>
+        <div class="oj-col oj-md-8">
+            <input data-bind="ojComponent: {component: 'ojInputText', value: ''}" />
+        </div>
+        <div class="oj-col oj-md-4">
+                <button id="buttonIcon2" data-bind="ojComponent: {component:'ojButton', 
+                    icons: {start:'oj-fwk-icon-caret-start oj-fwk-icon'}, 
+                    label: 'Browse'
+        }"></button>
+        </div>
+    </div>
+    
+    <hr class="oj-col oj-md-12" />
+    
+    <div class="oj-col oj-md-12">
+        <span class="oj-choice-row">
+          <input id="temp" type="checkbox" value="agecertification">
+          <label>Age Certification</label>
+        </span>
+    </div>
+    <div class="oj-col oj-md-4">
+
+        <div class="oj-col oj-md-12">Certification Number</div>
+        <div class="oj-col oj-md-12">
+            <input data-bind="ojComponent: {component: 'ojInputText', value: ''}" />
+        </div>
+    </div>
+    <div class="oj-col oj-md-4">
+        <div class="oj-col oj-md-12">Expiration Date</div>
+        <div class="oj-col oj-md-12">
+            <input data-bind="ojComponent: {component: 'ojInputDate', value: $parent.reHireDate}" />
+        </div>
+    </div>
+    <div class="oj-col oj-md-4">
+        <div class="oj-col oj-md-12">Upload Document Image</div>
+        <div class="oj-col oj-md-8">
+            <input data-bind="ojComponent: {component: 'ojInputText', value: ''}" />
+        </div>
+        <div class="oj-col oj-md-4">
+                <button id="buttonIcon2" data-bind="ojComponent: {component:'ojButton', 
+                    icons: {start:'oj-fwk-icon-caret-start oj-fwk-icon'}, 
+                    label: 'Browse'
+        }"></button>
+        </div>
+    </div>
+    
+    <hr class="oj-col oj-md-12" />
+
+     <div class="oj-col oj-md-12">
+        <span class="oj-choice-row">
+          <input id="temp" type="checkbox" value="agecertification">
+          <label>Work Permit</label>
+        </span>
+    </div>
+    <div class="oj-col oj-md-4">
+
+        <div class="oj-col oj-md-12">Permit Number</div>
+        <div class="oj-col oj-md-12">
+            <input data-bind="ojComponent: {component: 'ojInputText', value: ''}" />
+        </div>
+    </div>
+    <div class="oj-col oj-md-4">
+        <div class="oj-col oj-md-12">Expiration Date</div>
+        <div class="oj-col oj-md-12">
+            <input data-bind="ojComponent: {component: 'ojInputDate', value: $parent.reHireDate}" />
+        </div>
+    </div>
+    <div class="oj-col oj-md-4">
+        <div class="oj-col oj-md-12">Upload Document Image</div>
+        <div class="oj-col oj-md-8">
+            <input data-bind="ojComponent: {component: 'ojInputText', value: ''}" />
+        </div>
+        <div class="oj-col oj-md-4">
+                <button id="buttonIcon2" data-bind="ojComponent: {component:'ojButton', 
+                    icons: {start:'oj-fwk-icon-caret-start oj-fwk-icon'}, 
+                    label: 'Browse'
+        }"></button>
+        </div>
+    </div>
+</div>
