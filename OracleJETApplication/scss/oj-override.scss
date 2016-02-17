@@ -164,6 +164,8 @@ $logoText: $black;
 //$iconColor: $white;
 $iconColor: $darkBlue;
 $iconSelectedColor: $white;
+$customIconBckgColor: $lightBlue;
+$customIconFontColor: $white;
 //$tabText: #ffffff;
 $selectedtabText: $darkGray;
 // 
@@ -1363,6 +1365,17 @@ html{
 a{
     cursor: pointer;
 }
+
+//Custom icons
+.custom-question-icon{
+    color:$customIconFontColor;
+    border-radius: 50%;
+    background-color: $customIconBckgColor;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    line-height: 25px !important;
+}
 .app-header {
     background-color: $headerBgColor;
 }
@@ -1420,6 +1433,7 @@ a{
         .oj-navigationlist-item-icon {
                 color: $iconColor;
                 margin-right: 0;
+                font-size:16px;
             }
     }
     a.oj-navigationlist-item-content {
@@ -1714,6 +1728,11 @@ html {
         display: inline-block;
     }
 }
+.searchTitle {
+    h2{
+        display:inline-block;
+    }
+}
 h1{
     &.inlineHeader{
         display:inline-block;
@@ -1782,6 +1801,15 @@ a.basic-btn-link{
     margin-left:11.11111111%;
 }
 //People Styles
+#peopleSearchForm{
+    .oj-row{
+        border-bottom:1px solid $lightGray;
+        padding:15px;
+    }
+}
+.button-row{
+    padding:10px 0;
+}
 .resultWrapper{
     clear:both;
 }
@@ -2077,6 +2105,7 @@ footer{
     #sidebar-left {
         border-right: 1px #ccc solid;
         padding-top: 10px;
+        padding-left:10px;
     }
     .sidebar-left-input {
         width: 140px;

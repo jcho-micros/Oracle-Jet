@@ -1,12 +1,10 @@
 <!--Linked to people.js through modules and template bindings-->
 <div class="oj-row">
-     <div class="oj-md-12">
-         <div class="searchTitle">
-            <h4>Search Criteria <a href="#">view all employees</a></h4>
-        </div>
-    </div>
     <div class="oj-md-12 oj-lg-8 oj-col">
-        <form data-bind="submit: filteredAllPeople">
+        <div class="searchTitle">
+            <h2>Search Criteria</h2> <a href="">view all employees</a>
+        </div>
+        <form data-bind="submit: filteredAllPeople" id="peopleSearchForm">
             <div class="oj-row">
                 <div class="oj-md-3 oj-col">
                     <label for="payrollid">Payroll ID</label>
@@ -14,7 +12,6 @@
                 </div>
                 <div class="oj-md-3 oj-col">
                     <label for="firstname">First Name</label>
-    <!--            <input id="firstname" data-bind="ojComponent: {component: 'ojInputText', value:'', help: {definition: helpDef()}}">-->
                     <input placeholder="search" id="firstname" data-bind="value: firstNameSearch, ojComponent: {component: 'ojInputText'}"/>
                 </div>
                 <div class="oj-md-3 oj-col">
@@ -69,6 +66,11 @@
                 </div>
             </div>
         </form>
+        <div class="button-row">
+              <!--temporary toggleSection function applied to these buttons, will need to submit form and return results and then clear results-->
+             <input id="submit" type="submit" data-bind="ojComponent: {component: 'ojButton', label: 'Search', icons: { start: 'fa fa-search'} }" />
+             <input id="reset" type="reset" data-bind="click: resetData, ojComponent: {component: 'ojButton', label: 'Clear'}" />
+         </div>
     </div>
     <div class="oj-lg-4 oj-col oj-md-only-hide">
         <h3>Last 30 Day Search </h3>
@@ -100,17 +102,11 @@
         </div>
     </div>
 </div>
-<div class="oj-row">
-    <div class="oj-md-12 oj-col">
-        <!--temporary toggleSection function applied to these buttons, will need to submit form and return results and then clear results-->
-         <input id="submit" type="submit" data-bind="ojComponent: {component: 'ojButton', label: 'Search', icons: { start: 'fa fa-search'} }" />
-         <input id="reset" type="reset" data-bind="click: resetData, ojComponent: {component: 'ojButton', label: 'Clear'}" />
-    </div> 
-</div>
 <!-- Start of the Result template -->
 
 <div class="resultWrapper">
-    <div data-bind="ojComponent: {component: 'ojPagingControl', data: listViewDataSource, pageSize:10}"></div>
+    <h2 class="float-l">Search Results</h2>
+    <div data-bind="ojComponent: {component: 'ojPagingControl', data: listViewDataSource, pageSize:10}" class="float-r"></div>
     <ul id="listview" data-bind="ojComponent: {component: 'ojListView',
         data: listViewDataSource,
         item: {template: 'peoplelist_template'},
@@ -127,12 +123,20 @@
                 <div class="oj-lg-2 oj-md-2 oj-sm-12 oj-col" style="max-width:70px;padding-bottom:5px">
                     <img data-bind="attr: {src: $parent.getPhoto($data['empId'])}"/>
                 </div>
-                <div class="oj-lg-10 oj-md-10 oj-sm-12 oj-col">
-                    <div class="oj-row row">
-                        <div class="oj-lg-12 oj-col">
-                            <span class="header" data-bind="text: firstName + ' ' + lastName"></span>
-                        </div>
-                    </div>
+                <div class="oj-lg-1 oj-md-10 oj-sm-12 oj-col">
+                    <span data-bind="text: payrollId"></span>
+                </div>
+                <div class="oj-lg-2 oj-md-10 oj-sm-12 oj-col">
+                    <span class="header" data-bind="text: firstName + ' ' + lastName"></span>
+                </div>
+                <div class="oj-lg-2 oj-md-10 oj-sm-12 oj-col">
+                    <span data-bind="text: homeStore"></span>
+                </div>
+                <div class="oj-lg-2 oj-md-10 oj-sm-12 oj-col">
+                    <span data-bind="text: hireDate"></span>
+                </div>
+                <div class="oj-lg-3 oj-md-10 oj-sm-12 oj-col">
+                    <span data-bind="text: status"></span>
                 </div>
             </div>
         </li>

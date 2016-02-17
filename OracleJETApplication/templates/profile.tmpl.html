@@ -27,7 +27,10 @@
                 <img style="width:50px; height:50px;" data-bind="attr: {src: getPhoto(personProfile().empId)}" />
             </div>
             <div class="oj-sm-9 oj-col">
-                <h2> <span data-bind="text: personProfile().firstName + ' ' + personProfile().lastName"></span> <a href="#"><i class="profileHelpIcon fa fa-book"></i></a></h2>
+                <h2>
+                <span data-bind="text: firstName()"></span>
+                <span data-bind="text: lastName()"></span>
+                <a href="#"><i class="profileHelpIcon fa fa-book"></i></a></h2>
             </div>
         </div>
         <div class="oj-row">
@@ -85,7 +88,11 @@
         </div>
         <div class="oj-col oj-md-2 oj-lg-2 profileToolBar">
             
-            <h2><span data-bind="text: personProfile().firstName + ' ' + personProfile().lastName"></span> <a href="#"><i class="profileHelpIcon fa fa-book"></i></a></h2> 
+            <h2>
+                <span data-bind="text: firstName()"></span>
+                <span data-bind="text: lastName()"></span>
+                <a href="#"><i class="profileHelpIcon fa fa-book"></i></a>
+            </h2>
         </div>
         <div class="oj-col oj-md-3 oj-lg-3 profileToolBar">
            <h4>Home Store</h4>

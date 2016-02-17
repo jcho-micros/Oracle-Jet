@@ -83,18 +83,17 @@
 
                             </div>
                         </div>
-                    </div>
-                    <div class="submitWrapper left">
-                       <!--temporary toggleSection function applied to these buttons, will need to submit form and return results and then clear results-->
-                        <input id="submit" type="submit" data-bind="ojComponent: {component: 'ojButton', label: 'Search', icons: { start: 'fa fa-search'} }" />
-
-                        <input id="reset" type="reset" data-bind="click: resetData,
-                                                      ojComponent: {component: 'ojButton', label: 'Clear'}" />
+                        <div class="button-row">
+                              <!--temporary toggleSection function applied to these buttons, will need to submit form and return results and then clear results-->
+                             <input id="submit" type="submit" data-bind="ojComponent: {component: 'ojButton', label: 'Search', icons: { start: 'fa fa-search'} }" />
+                             <input id="reset" type="reset" data-bind="click: resetData, ojComponent: {component: 'ojButton', label: 'Clear'}" />
+                        </div>
                     </div>
                 </form>
             </div>
             <!-- End of Form -->
-           <div class="resultWrapper">
+           <div class="resultWrapper oj-col">
+                <h2 class="float-l">Search Results</h2>
                 <div data-bind="ojComponent: {component: 'ojPagingControl', data: listViewDataSource, pageSize:10}"></div>
                 <ul id="listview" data-bind="ojComponent: {component: 'ojListView',
                     data: listViewDataSource,
@@ -112,12 +111,20 @@
                             <div class="oj-lg-2 oj-md-2 oj-sm-12 oj-col" style="max-width:70px;padding-bottom:5px">
                                 <img data-bind="attr: {src: $parent.getPhoto($data['empId'])}"/>
                             </div>
-                            <div class="oj-lg-10 oj-md-10 oj-sm-12 oj-col">
-                                <div class="oj-row row">
-                                    <div class="oj-lg-12 oj-col">
-                                        <span class="header" data-bind="text: firstName + ' ' + lastName"></span>
-                                    </div>
-                                </div>
+                            <div class="oj-lg-1 oj-md-10 oj-sm-12 oj-col">
+                                <span data-bind="text: payrollId"></span>
+                            </div>
+                            <div class="oj-lg-2 oj-md-10 oj-sm-12 oj-col">
+                                <span class="header" data-bind="text: firstName + ' ' + lastName"></span>
+                            </div>
+                            <div class="oj-lg-2 oj-md-10 oj-sm-12 oj-col">
+                                <span data-bind="text: homeStore"></span>
+                            </div>
+                            <div class="oj-lg-2 oj-md-10 oj-sm-12 oj-col">
+                                <span data-bind="text: hireDate"></span>
+                            </div>
+                            <div class="oj-lg-3 oj-md-10 oj-sm-12 oj-col">
+                                <span data-bind="text: status"></span>
                             </div>
                         </div>
                     </li>
