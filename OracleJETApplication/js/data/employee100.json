@@ -26,7 +26,7 @@
       "country" : "US",
       "postal" : "98102",
       "language": "English",
-      "inCityLimits" : 0,
+      "inCityLimits" : 1,
       "livesOnProperty" : 0,
       "twitter" : "Steven",
       "facebook" : "Steven",
