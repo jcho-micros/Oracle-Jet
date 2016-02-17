@@ -1371,10 +1371,10 @@ a{
     color:$customIconFontColor;
     border-radius: 50%;
     background-color: $customIconBckgColor;
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
     text-align: center;
-    line-height: 25px !important;
+    line-height: 20px !important;
 }
 .app-header {
     background-color: $headerBgColor;
@@ -1429,6 +1429,9 @@ a{
         &.oj-hover:not(.oj-selected) {
             background-color: $headerNavColorSelected;
             border-color: transparent;
+            .oj-navigationlist-item-icon{
+                color:$iconSelectedColor;
+            }
         }
         .oj-navigationlist-item-icon {
                 color: $iconColor;
@@ -1836,6 +1839,26 @@ a.basic-btn-link{
     }
 }
 //add-employee styles
+#addEmpStatusDialog{
+    .oj-listview-empty-text::after{
+        content:'Review your entered criteria above. These fields cannot be modified after the add employee process begins. If correct, please continue to add a new employee.';
+        display:block;
+        font-style:italic;
+    }
+}
+
+.tmp-data{
+    height: 70px;
+    display: block;
+    background-color: $lightGray;
+    text-align: center;
+    line-height: 70px;
+}
+#add-emp-modal-listview{
+    .oj-row{
+        padding:10px 0;
+    }
+}
 .hideMenus{
     display:none;
 }
@@ -1858,9 +1881,12 @@ a.basic-btn-link{
         padding: 0 10px;
     }
 }
-
 #newEmpAccordionSection{
     display:none;
+
+    .oj-component-icon::before{
+        content:'' !important;
+    }
 }
 .addEmpAvailability{
     .oj-col{
@@ -2008,7 +2034,7 @@ footer{
     }
     //Employee Dialog Modal
     .generalModal-dimensions{
-        width:50%;
+        width:70%;
     }
     //Profile ToolBar
     .profileToolBar{

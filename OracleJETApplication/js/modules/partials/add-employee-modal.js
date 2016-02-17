@@ -34,6 +34,12 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'jquery', 'ojs/ojknocko
             self.pageHeadingIconClass = ko.observable('fa fa-plus');
 
             self.enterpriseLevel = ko.observable('Mike Rose Cafe');
+            self.enterpriseLevelFormatted =  ko.pureComputed(function(){
+                if(self.enterpriseLevel() !== '' && self.firstName() !== ''){
+                    var newVal = ', (' + self.enterpriseLevel() + ')';
+                }
+                return newVal;
+            });
             self.firstName = ko.observable('');
             self.lastName = ko.observable('');
             self.dob = ko.observable('');
