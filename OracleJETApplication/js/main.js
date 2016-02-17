@@ -120,15 +120,16 @@ require(['ojs/ojcore',
                     router.currentState().value = childRouter;
                 }
             },
-            'add-employee': {
-                label: 'Add Employee',
-                value: 'add-employee',
-                exit: function(){
-                    //shows side and top menu on exit of page
-                    $('.app-header-desktop').removeClass('hideMenus');
-                    $('#sidebar-left').removeClass('hideMenus');
-                }
-            }
+            //Not being used, only when add-employee section is suppose to be a stand alone page
+//            'add-employee': {
+//                label: 'Add Employee',
+//                value: 'add-employee',
+//                exit: function(){
+//                    //shows side and top menu on exit of page
+//                    $('.app-header-desktop').removeClass('hideMenus');
+//                    $('#sidebar-left').removeClass('hideMenus');
+//                }
+//            }
         });
 
 
