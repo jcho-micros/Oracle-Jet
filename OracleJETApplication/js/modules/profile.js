@@ -13,7 +13,8 @@ define([
     'ojs/ojcheckboxset', 
     'ojs/ojradioset',
     'ojs/ojdatetimepicker', 
-    'ojs/ojselectcombobox'],
+    'ojs/ojselectcombobox',
+    'ojs/ojchart'],
         function (oj, ko, jsonData, moment)
         {
 
@@ -94,7 +95,7 @@ define([
                         jsonData.fetchData(getEmpURL(id)).then(function (person) {
                             self.personProfile(person);
                             self.setupObservables();
-
+                            loadPerfandPotenialData();
                             resolve(true);
                         }).fail(function (error) {
                             console.log('Error: ' + error.message);
@@ -217,7 +218,18 @@ define([
                     
                     self.val = ko.observableArray([""]);
                     self.socialnumber = ko.observable("12345678945");
-                    
+                    //Analytics
+                    self.orientationValue = ko.observable('vertical');
+                    self.stackValue = ko.observable('off');
+                    self.barSeriesValue = ko.observableArray();
+                    self.barGroupsValue = ko.observableArray();
+                    self.comboSeriesValue = ko.observableArray();
+                    self.comboGroupsValue = ko.observableArray();
+                    self.barSeriesValue = ko.observableArray();
+                    self.barGroupsValue = ko.observableArray();
+                    self.pieSeriesValue = ko.observableArray();
+                    self.directReports = ko.observableArray([]);
+                    self.infoTiles = ko.observableArray();
                     //payroll 
                     self.extPayrollId = ko.observable(self.personProfile().externalPayrollId);
                     self.minimumwage = ko.observable(self.personProfile().subminimumwage);
@@ -297,6 +309,65 @@ define([
 
 
                 /////// JOHN insert for schedule
+                //Analytics
+                function loadPerfandPotenialData() {
+                    
+                    var ratcount = [], potcount = [], specyear = [], payyear = [], salcount = [], data = self.personProfile();
+                    
+                    ko.utils.arrayForEach(data.perfs, function (item) {
+                        ratcount.push(item.rating);
+                        potcount.push(item.potential);
+                        specyear.push(new Date(item.effective).getFullYear());
+                    });
+                    ko.utils.arrayForEach(data.comps, function (item) {
+                        salcount.push(item.compSalary);
+                        payyear.push(new Date(item.effective).getFullYear());
+                    });
+                    self.comboSeriesValue(
+                            [{name: "Rating", items: ratcount},
+                                {name: "Potential", items: potcount}]
+                            );
+                    self.comboGroupsValue(specyear);
+                    self.barSeriesValue(
+                            [{name: "Salary", items: salcount}]
+                            );
+                    self.barGroupsValue(payyear);
+                    self.pieSeriesValue = ko.observableArray(
+                            [{name: "Bonus", items: [data.comps[0].bonus]},
+                                {name: "Comission", items: [data.comps[0].comission]},
+                                {name: "Salary", items: [data.comps[0].compSalary]}]
+                            );
+                    console.log(loadTeamData(data));
+                    loadTeamData(data);
+                }
+
+                function loadTeamData(data) {
+
+                    self.infoTiles([
+                        {"sid": "1", "name": "Item1", "title": "About", "infolable1": "Skills", "infolable1value": data.skills.length, "infolable2": "Tenure", "infolable2value": self.getTenure(data)},
+                        {"sid": "2", "name": "Item2", "title": "Performance", "infolable1": "Rating", "infolable1value": data.rating, "infolable2": "Potential", "infolable2value": data.potential},
+                        {"sid": "3", "name": "Item3", "title": "Compensation", "infolable1": "Salary", "infolable1value": "$" + (data.salary > 999) ? (data.salary / 1000).toFixed(0) + 'k' : data.salary, "infolable2": "Ratio", "infolable2value": data.compRatio},
+                        {"sid": "4", "name": "Item4", "title": "Team", "infolable1": "Group", "infolable1value": data.skills.length, "infolable2": "Directs", "infolable2value": self.directReports().length}
+                    ]);
+                }
+
+                self.getSkills = function () {
+                    var skills = [];
+                    ko.utils.arrayForEach(self.personProfile().skills, function (item) {
+                        skills.push({id: item.skill.skillId,
+                            label: item.skill.skill,
+                            value: item.empskillassignRating,
+                            shortDesc: 'Rating for ' + item.skill.skill + ': ' + item.empskillassignRating});
+                    });
+                    return skills;
+                };
+
+                self.getTenure = function (data) {
+                    var now = new Date().getFullYear();
+                    var hired = new Date(data.hireDate).getFullYear();
+                    var diff = now - hired;
+                    return diff;
+                };
                 //Employee Dialog
                 //
                 //General function to  auto popup modal based on URL param string and dialog ID
