@@ -2129,6 +2129,16 @@ footer{
             padding-left:11px;
         }
     }
+    //Modal Sizing
+    //Employee Dialog Modal
+    .generalModal-dimensions{
+        height:627px;
+        width:100%;
+        .oj-inputtext{
+            max-width:100%;
+            min-width:100%;
+        }
+    }
     .locationAreaHd{
         font-size:18px;
         color: $white;
