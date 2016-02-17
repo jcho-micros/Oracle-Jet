@@ -95,6 +95,7 @@ define([
                         jsonData.fetchData(getEmpURL(id)).then(function (person) {
                             self.personProfile(person);
                             self.setupObservables();
+                            self.directReports(self.personProfile().reports);
                             loadPerfandPotenialData();
                             resolve(true);
                         }).fail(function (error) {
