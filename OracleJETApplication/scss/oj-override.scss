@@ -1803,6 +1803,9 @@ a.basic-btn-link{
 .custom9-offset-1{
     margin-left:11.11111111%;
 }
+.custom-sm-offset-4{
+    margin-left:33.33333%;
+}
 //People Styles
 #peopleSearchForm{
     .oj-row{
@@ -1819,6 +1822,7 @@ a.basic-btn-link{
 //Profile Styles
 .addedNewEmpMessage{
     display:none;
+    margin:10px 0;
 }
 #personaldetails, #listview{
     padding:10px;
@@ -1884,7 +1888,7 @@ a.basic-btn-link{
 #newEmpAccordionSection{
     display:none;
 
-    .oj-component-icon::before{
+    .oj-component-icon.oj-collapsible-header-icon::before{
         content:'' !important;
     }
 }
@@ -1932,7 +1936,7 @@ footer{
 .generalModal-dimensions{
     height:auto;
     width:100%;
-    .oj-inputtext{
+    .oj-inputtext, .oj-inputdatetime, .oj-inputdatetime-date-time, .oj-inputdatetime-date-only, .oj-inputdatetime-time-only{
         max-width:100%;
         min-width:100%;
     }
@@ -1991,6 +1995,13 @@ footer{
     .page-area {
         padding-left: 1.072rem !important;
         padding-top: 10px;
+    }
+    //Custom col sizes
+    .custom-col-9{
+        width:11.11111111%;
+    }
+    .custom9-offset-1{
+        margin-left:11.11111111%;
     }
     //Header
     .page-header {
