@@ -3,8 +3,8 @@
         <div class="oj-col oj-md-10">
             <h2 id="currentPage" data-bind="text: label"></h2>
         </div>
-        <div class="oj-col oj-md-2 oj-lg-text-align-end">
-            <div data-bind="click: function(){$parent.handleOpen('#empDialog')}" style="line-height:39px;">Edit</div>
+        <div class="oj-col oj-sm-2 oj-lg-text-align-end">
+            <a data-bind="click: function(){$parent.handleOpen('#empPayrollDialog')}" style="line-height:39px;">Edit <i class="fa fa-pencil-square-o"></i></a>
         </div>
     </div>
     <div class="oj-row">
@@ -261,3 +261,4 @@
         </div>
     </div>
 </div>
+<div data-bind="template: {name: 'partials/employee-payroll-edit-modal/employee-payroll-edit-modal-large'}"></div>
