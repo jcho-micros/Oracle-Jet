@@ -46,14 +46,15 @@
         <div id="veteran">
             <h3>Veteran</h3>
             <div>
-                <div data-bind="text: $parent.veteranStatus()"></div>
                 <div data-bind="visible: $parent.veteranStatus() == 'yes'">
-                    <div data-bind="text: $parent.vietnamEra()"></div>
-                    <div data-bind="text: $parent.otherEligible()"></div>
-                    <div data-bind="text: $parent.otherProtected()"></div>
-                    <div data-bind="text: $parent.armedForcesServiceMedal()"></div>
-                    <div data-bind="text: $parent.recentlySeparated()"></div>
-                    <div data-bind="text: $parent.specialDisabled()"></div>
+                 <h4>Veteran</h4>
+<!--                <div><span class="veteranStatus">A Veteran?</span> <span data-bind="text: $parent.veteranStatus()"></span></div>-->
+                    <div><i class="fa fa-check"></i> <span data-bind="text: $parent.vietnamEra()"></span></div>
+                    <div><i class="fa fa-check"></i> <span data-bind="text: $parent.otherEligible()"></span></div>
+                    <div><i class="fa fa-check"></i> <span data-bind="text: $parent.otherProtected()"></span></div>
+                    <div><i class="fa fa-check"></i> <span data-bind="text: $parent.armedForcesServiceMedal()"></span></div>
+                    <div><i class="fa fa-check"></i> <span data-bind="text: $parent.recentlySeparated()"></span></div>
+                    <div><i class="fa fa-check"></i> <span data-bind="text: $parent.specialDisabled()"></span></div>
 
                     <h4>Registered Disable Number</h4>
                     <div data-bind="text: $parent.registeredDisabledNumber()"></div>
@@ -70,10 +71,19 @@
             <div>
                 <h4>Email Address</h4>
                 <a data-bind="attr:{href: $parent.getEmail($data)}, text: $parent.email() + '@example.net'"></a>
-
+                <div data-bind="visible: $parent.receiveEmailNotification() == 1">
+                    <div><i class="fa fa-check"></i> Receive email notifications</div>
+                </div>
+                
                 <h4>Phone Number</h4>
                 <div data-bind="text: $parent.phone()"></div>
-
+                <div data-bind="visible: $parent.receiveTextNotification() == 1">
+                    <div><i class="fa fa-check"></i> Receive text notifications</div>
+                </div>
+                <div data-bind="visible: $parent.publishInCompanyDirectory() == 1">
+                    <div><i class="fa fa-check"></i> Publish in company directory</div>
+                </div>
+                
                 <h4>Other Phone Number</h4>
                 <div data-bind="text: $parent.mobile()"></div>
 
@@ -88,7 +98,10 @@
                 <span data-bind="text: $parent.state()"></span>
                 <span data-bind="text: $parent.postal()"></span>
                 <span data-bind="text: $parent.country()"></span>
-
+                <div data-bind="visible: $parent.inCityLimits() == 1">
+                    <div><i class="fa fa-check"></i> In city limits</div>
+                </div>
+                
                 <h4>Emergency Contact</h4>
                 <span data-bind="html: $parent.emergencyName()"></span>
                 <span data-bind="html: $parent.formattedRelationship()"></span>

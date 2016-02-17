@@ -1482,6 +1482,7 @@ a{
     width: 100%;
     background-color: #cccccc;
 }
+
 //Login Styles
 #loginPage{
     * {
@@ -1794,6 +1795,18 @@ a.basic-btn-link{
         width:100%;
     }
 }
+.oj-accordion-collapsible{
+    .oj-collapsible-header{
+        background-color: $lightGray;
+        color:$black;
+       
+    }
+}
+.oj-collapsible {
+    .oj-accordion-collapsible{
+        margin:10px;
+    }
+}
 //add-employee styles
 .hideMenus{
     display:none;
@@ -2104,6 +2117,9 @@ footer{
     html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack-icon-label):not(.oj-navigationlist-icon-only) .oj-navigationlist-item-icon {
         margin-right: 0;
     }
+    h2{
+        font-size: 18px;
+    }
     .oj-navigationlist-item-icon {
         font-size: $headerNavigationMobileSize !important;
     }
@@ -2143,17 +2159,19 @@ footer{
             padding-right:10px;
             padding-left:5px;
             border-right: 1px solid $lightGray;
-
+            width:28%;
             h4{
                 font-size:12px;
                 margin-bottom:2px;
             }
         }
         li:last-child{
-           border-right: 0px; 
+           border-right: 0px;
+           width:30%;
         }
         li:first-child{
             padding-left:0px;
+            width:25%;
         }
 
     }

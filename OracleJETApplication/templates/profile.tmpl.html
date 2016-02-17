@@ -27,7 +27,7 @@
                 <img style="width:50px; height:50px;" data-bind="attr: {src: getPhoto(personProfile().empId)}" />
             </div>
             <div class="oj-sm-9 oj-col">
-                <h2 data-bind="text: personProfile().firstName + ' ' + personProfile().lastName"></h2>
+                <h2> <span data-bind="text: personProfile().firstName + ' ' + personProfile().lastName"></span> <a href="#"><i class="profileHelpIcon fa fa-book"></i></a></h2>
             </div>
         </div>
         <div class="oj-row">
@@ -35,7 +35,7 @@
                 <li>
                     <h4>Home Store</h4>
 <!--                    <span data-bind="text: personProfile().homeStore"></span>-->                   
-                    <a data-bind="click: $parents[0].handleOpen('#homeStoreDialog')">transfer</a>
+                    <a data-bind="click: $parents[0].handleOpen('#homeStoreDialog')">transfer <i class="fa fa-share"></i></a>
                 </li>
                 <li>
                     <h4>Hire Status</h4>
@@ -46,7 +46,7 @@
                 <li>
                     <h4>External Payroll ID</h4>
                     <span data-bind="text: personProfile().externalPayrollId"></span>
-                    <a data-bind="click: $parents[0].handleOpen('#externalPayrollDialog')">edit</a>
+                    <a data-bind="click: $parents[0].handleOpen('#externalPayrollDialog')">edit <i class="fa fa-pencil-square-o"></i></a>
                 </li>
             </ul>
         </div>
