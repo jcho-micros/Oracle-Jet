@@ -109,7 +109,7 @@ $lightGray2: #c4ced7;
 // $border6Color:       #000000;
 // $border7Color:       #ffffff;
 // $border8Color:       #4f4f4f;
-$borderDivder: $darkBlue;
+$borderDivder: $lightTan;
 $borderHoverBottom: $lightBlue;
 $highlightInputBorderColor: $black;
 // 
@@ -146,7 +146,7 @@ sans-serif;
 // $mediumFontSize:  1.143rem;  // 16px when root 14px
 // $largeFontSize:   1.286rem;  // 18px when root 14px
 // $largestFontSize: 1.429rem;  // 20px when root 14px
-$customsmallFontSize: 14px;
+$customsmallFontSize: 12px;
 $customsmallmobileFontSize: 1.25em;
 // 
 // 
@@ -1356,6 +1356,9 @@ $navigationListBorderColor:                $lightGray;
 @font-face {
     font-family: 'Alta Icon Font';
     src: url("fonts/JetFW_iconfont.woff") format("woff");
+}
+html{
+    font-size:12px;
 }
 a{
     cursor: pointer;
