@@ -1,8 +1,7 @@
 <!-- small template -->
 <script type="text/html" id="sm_template">
-<div class="justifyCenter">
         <div class="oj-row">
-            <div class="oj-col oj-sm-12" style="padding-top: 10px;">
+            <div class="oj-col oj-sm-12">
                 <div class="oj-row">
                     <div id="pageTitleContainer" class="oj-col oj-sm-12">
                          <h1 class="inlineHeader"><span class="fa fa-users"></span> People <span class="fa fa-question custom-question-icon"></span> </h1>
@@ -18,7 +17,6 @@
                 </div>
             </div>
         </div>
-    </div>
     <!--Using large template until mobile is provided-->
     <div data-bind="ojModule: {
                     name: 'partials/add-employee-modal',
@@ -28,11 +26,11 @@
 
 <!-- large template -->
 <script type="text/html" id="md_lg_xl_template">
-    <div class="justifyCenter">
+  
         <div class="oj-row">
-            <div class="oj-col oj-sm-12" style="padding-top: 10px;">
+            <div class="oj-col oj-md-12">
                 <div class="oj-row">
-                    <div id="pageTitleContainer" class="oj-col oj-sm-12 oj-lg-12">
+                    <div id="pageTitleContainer" class="oj-col oj-md-12">
                         <h1 class="inlineHeader"><span class="fa fa-users"></span> People <span class="fa fa-question custom-question-icon"></span> </h1>
 <!--                        <a href="index.html?root=add-employee" class="basic-btn-link">Add</a>-->
                             <a href="" data-bind="click: function(){handleOpen('#addEmpStatusDialog');}" class="basic-btn-link"><span class="fa fa-plus"></span> Add</a>
@@ -43,12 +41,16 @@
                 </div>
             </div>
         </div>
-    </div>
+ 
     <div data-bind="ojModule: {
                     name: 'partials/add-employee-modal',
                     viewName: 'partials/add-employee-modal/add-employee-modal-large'}">
     </div>
 
 </script>
+
+
+
+
 
 <div data-bind="template: {name: $root.medium() ? 'md_lg_xl_template' : 'sm_template'}"></div>
