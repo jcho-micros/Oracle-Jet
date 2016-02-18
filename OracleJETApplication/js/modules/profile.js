@@ -96,7 +96,6 @@ define([
                             self.personProfile(person);
                             self.setupObservables();
                             self.directReports(self.personProfile().reports);
-                            console.log(self.personProfile());
                             loadPerfandPotenialData();
                             resolve(true);
                         }).fail(function (error) {
@@ -337,7 +336,6 @@ define([
                                 {name: "Comission", items: [data.comps[0].comission]},
                                 {name: "Salary", items: [data.comps[0].compSalary]}]
                             );
-                    console.log(loadTeamData(data));
                     loadTeamData(data);
                 }
 
