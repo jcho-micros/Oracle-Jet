@@ -11,11 +11,14 @@
         <a href="#">change</a>
         </span>
     </div>
--->
+-->            
+
     <div class="oj-row oj-cols-nopad">
         <div class="oj-sm-12 oj-col app-header-mobile-nav-title" data-bind="if: router.stateId(), click:toggleSections">
             <div data-bind="with: router.currentState()">
-                <div id="currentPage"><span data-bind="text: label"></span><span data-bind="css: value"></span></div>
+                <div class="mobileNavTitleArea">
+                    <div id="currentPage"><span class="oj-sm-11 oj-col"><span data-bind="text: label"></span> <span data-bind="css: value"></span></span> <span class="oj-sm-1 oj-col"></span><i class="fa fa-chevron-down"></i></span></div>
+                </div>
             </div>
         </div>
         <div class="oj-row">

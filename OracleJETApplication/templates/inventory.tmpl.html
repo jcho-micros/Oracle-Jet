@@ -15,7 +15,9 @@
     <div class="oj-row oj-cols-nopad">
         <div class="oj-sm-12 oj-col app-header-mobile-nav-title" data-bind="if: router.stateId(), click:toggleSections">
             <div data-bind="with: router.currentState()">
-                <div id="currentPage" data-bind="text: label"></div>
+                <div class="mobileNavTitleArea">
+                    <span class="oj-sm-11 oj-col" id="currentPage" data-bind="text: label"></span><span class="oj-sm-1 oj-col"><i class="fa fa-chevron-down"></i></span>
+                </div>
             </div>
         </div>
         <div class="oj-row">

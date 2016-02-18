@@ -105,6 +105,13 @@ define([
             //Toggles visibility of sections
             self.toggleSections = function () {
                 self.sectionsState(!self.sectionsState());
+                if(self.sectionsState()==true){
+                    $('.mobileNavTitleArea .fa-chevron-down').addClass('fa-chevron-up').removeClass('fa-chevron-down');
+                }else if(self.sectionsState()==false){
+                    $('.mobileNavTitleArea .fa-chevron-up').addClass('fa-chevron-down').removeClass('fa-chevron-up');
+
+                }
+
             };
             self.handleOpen =  function() {
                 $("#scrollingDialog").ojDialog("open"); 
