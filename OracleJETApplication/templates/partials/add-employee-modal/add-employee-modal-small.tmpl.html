@@ -1,5 +1,5 @@
 <div style="display:none;" id="addEmpStatusDialog" data-bind="ojComponent:{component: 'ojDialog', initialVisibility: 'hide', 
-            rootAttributes: {style: 'width: 375px; height: 600px;'}, 
+            rootAttributes: {style: 'height: 600px;', class: 'generalModal-dimensions'},
             'position': {'my': 'right center', 'at': 'left center'}}">
     <div class="oj-dialog-header oj-helper-clearfix" aria-labelledby="dialogTitleId">
         <span id="dialogTitleId" class="oj-dialog-title">
@@ -110,7 +110,7 @@
                                 </script>
 
                                <div class="button-row">
-                                     <button id="addNewEmployee" type="button" style="display:inline-block;vertical-align:top;" data-bind="click: function(){toggleSection('#newEmpAccordionSection, #searchEmpSection'), scrollTop() }, ojComponent: {component: 'ojButton', label: 'Add New Employee ', icons: {start:'fa fa-plus'}}"></button>
+                                     <button id="addNewEmployee" type="button" style="display:inline-block;vertical-align:top;" data-bind="click: function(){toggleSection('#newEmpAccordionSection, #searchEmpSection'), scrollToPositionMobile('0') }, ojComponent: {component: 'ojButton', label: 'Add New Employee ', icons: {start:'fa fa-plus'}}"></button>
                                 </div>
                             </div>
                         </div>
@@ -247,7 +247,7 @@
                                         </div>
                                     </div>
                                     <div class="editMode button-row">
-                                        <button id="submit" type="submit" data-bind="ojComponent: {component: 'ojButton', label: 'Continue', icons: { end: 'oj-fwk-icon-caret-end oj-fwk-icon'} }, click: function(){textSectionMode('#c1'), expandCollapsedArea('#c2'), scrollToPosition('500');}"></button>
+                                        <button id="submit" type="submit" data-bind="ojComponent: {component: 'ojButton', label: 'Continue', icons: { end: 'oj-fwk-icon-caret-end oj-fwk-icon'} }, click: function(){textSectionMode('#c1'), expandCollapsedArea('#c2'), scrollToPositionMobile('900');}"></button>
                                     </div>
                                 </form>
                             </div>
@@ -362,7 +362,7 @@
                                     </div>
                                     <div class="textMode" data-bind="text: districts"></div>
                                     <div class="editMode button-row">
-                                        <button id="submit" type="submit" data-bind="ojComponent: {component: 'ojButton', label: 'Continue', icons: { end: 'oj-fwk-icon-caret-end oj-fwk-icon'} }, click: function(){textSectionMode('#c2'), expandCollapsedArea('#c3'), scrollToPosition('500');}"></button>
+                                        <button id="submit" type="submit" data-bind="ojComponent: {component: 'ojButton', label: 'Continue', icons: { end: 'oj-fwk-icon-caret-end oj-fwk-icon'} }, click: function(){textSectionMode('#c2'), expandCollapsedArea('#c3'), scrollToPositionMobile('1462');}"></button>
                                     </div>
                                 </form>
                             </div>
@@ -375,7 +375,7 @@
                                     </div>
                                     <div class="tbd"></div>
                                     <div class="editMode button-row">
-                                        <button id="submit" type="submit" data-bind="ojComponent: {component: 'ojButton', label: 'Continue', icons: { end: 'oj-fwk-icon-caret-end oj-fwk-icon'} }, click: function(){textSectionMode('#c3'), expandCollapsedArea('#c4'), scrollToPosition('500');}"></button>
+                                        <button id="submit" type="submit" data-bind="ojComponent: {component: 'ojButton', label: 'Continue', icons: { end: 'oj-fwk-icon-caret-end oj-fwk-icon'} }, click: function(){textSectionMode('#c3'), expandCollapsedArea('#c4'), scrollToPositionMobile('1936');}"></button>
                                     </div>
                                 </form>
                             </div>
@@ -388,7 +388,7 @@
                                     </div>
                                     <div class="tbd"></div>
                                     <div class="editMode button-row">
-                                        <button id="submit" type="submit" data-bind="ojComponent: {component: 'ojButton', label: 'Continue', icons: { end: 'oj-fwk-icon-caret-end oj-fwk-icon'} }, click: function(){textSectionMode('#c4'), expandCollapsedArea('#c5'), scrollToPosition('500');}"></button>
+                                        <button id="submit" type="submit" data-bind="ojComponent: {component: 'ojButton', label: 'Continue', icons: { end: 'oj-fwk-icon-caret-end oj-fwk-icon'} }, click: function(){textSectionMode('#c4'), expandCollapsedArea('#c5'), scrollToPositionMobile('2418');}"></button>
                                     </div>
                                 </form>
                             </div>
@@ -401,7 +401,7 @@
                                     </div>
                                     <div class="tbd"></div>
                                     <div class="editMode button-row">
-                                        <button id="submit" type="submit" data-bind="ojComponent: {component: 'ojButton', label: 'Continue', icons: { end: 'oj-fwk-icon-caret-end oj-fwk-icon'} }, click: function(){textSectionMode('#c5'), expandCollapsedArea('#c6'), scrollToPosition('500');}"></button>
+                                        <button id="submit" type="submit" data-bind="ojComponent: {component: 'ojButton', label: 'Continue', icons: { end: 'oj-fwk-icon-caret-end oj-fwk-icon'} }, click: function(){textSectionMode('#c5'), expandCollapsedArea('#c6'), scrollToPositionMobile('2900');}"></button>
                                     </div>
                                 </form>
                             </div>

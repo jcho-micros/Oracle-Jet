@@ -251,6 +251,13 @@ define(['ojs/ojcore', 'knockout', 'data/data', 'moment', 'jquery', 'ojs/ojknocko
                 }, 500);
             };
 
+
+            self.scrollToPositionMobile = function(ypos){
+                 setTimeout(function() {
+                     $('#addEmpStatusDialog').scrollTop(ypos)
+                 }, 500);
+            };
+
             self.scrollTop = function(){
                 $(window).scrollTop(0)
             };
