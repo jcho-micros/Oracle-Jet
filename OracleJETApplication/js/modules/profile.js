@@ -236,6 +236,7 @@ define([
                     self.birthDate = ko.observable(self.getBasicFormattedDate('dateofbirth'));
                     self.admissionnumber = ko.observable(self.personProfile().admissionnumber);
                     self.insexpirationdate = ko.observable(self.personProfile().insexpirationdate);
+                    self.insstatus = ko.observableArray([self.personProfile().insstatus]);
                     self.socialsecuritynumber = ko.observable(self.personProfile().socialsecuritynumber);
                     self.identifydocumenttype = ko.observable(self.personProfile().identifydocumenttype);
                     //Disable the selection view

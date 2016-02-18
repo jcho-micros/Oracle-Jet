@@ -1,149 +1,262 @@
 <div style="display:none;" id="empPayrollDialog" title="Edit Employee Payroll Information" data-bind="ojComponent:{component: 'ojDialog', initialVisibility: 'hide', rootAttributes: {class: 'generalModal-dimensions'}}">
     <div class="oj-dialog-body">
-       <div class="oj-row">
-           <strong>HELLO FROM PAYROLL MODAL</strong>
-       </div>
         <div class="oj-row">
-            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">First Name</div>
-            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
-                <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.firstName}" />
+            <strong>HELLO FROM PAYROLL MODAL</strong>
+        </div>
+        <div class="oj-row">
+            <div class="oj-col oj-md-3">
+                <h3>General</h3>
+            </div>
+            <div class="oj-col oj-md-9">
+                <h3>I9 Information</h3>
+            </div>
+        </div>
+        <div class="oj-row">
+            <div class="oj-col oj-md-3">
+                <div class="oj-col oj-md-12">External payroll ID</div>
+                <div class="oj-col oj-md-12">
+                    <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.extPayrollId}" />
+                </div>
+                <div class="oj-col oj-md-12">
+                    <div><strong>Options</strong></div>
+                    <div id="checkboxOptionsWages" aria-labelledby="mainlabelid" data-bind="ojComponent: {component: 'ojCheckboxset', value: ''}">
+                        <span class="oj-choice-row">
+                            <input id="temp" type="checkbox" value="minimum-wage">
+                            <label>Allow sub minimum wage</label>
+                          </span>
+                        <span class="oj-choice-row">
+                            <input id="partTime" type="checkbox" value="overtime">
+                            <label>Overtime exempt</label>
+                          </span>
+                    </div>
+                </div>
+            </div>
+            <div class="oj-col oj-md-9">
+                <div class="oj-col oj-md-4">
+                    <div>Date of Birth</div>
+                    <input data-bind="ojComponent: {component: 'ojInputDate', value: ''}" />
+                    <div><em>MM/DD/YYYY</em></div>
+                    <div>Child Labor Law Requirements (Age 16)</div>
+                </div>
+                <div class="oj-col oj-md-4">
+                   <div class="oj-col oj-md-12">INS Status</div>
+                   <div class="oj-col oj-md-12">
+                       <select id="basicSelect" data-bind="ojComponent: {component: 'ojSelect', value: $parent.insstatus, rootAttributes: {style:'max-width:20em'}}">
+                            <option value="">Please Select</option>
+                            <option value="alien">Alien</option>
+                            <option value="citizen">Citizen</option>
+                            <option value="permanentresident">Permanent Resident</option>
+                        </select>
+                    </div>
+                    <div class="oj-col oj-md-12">Admission Number</div>
+                    <div class="oj-col oj-md-12">
+                        <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.admissionnumber()}" />
+                    </div>
+                    <div class="oj-col oj-md-12">INS Expiration Date</div>
+                    <div class="oj-col oj-md-12">
+                        <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.insexpirationdate()}" />
+                    </div>
+                </div>
+                <div class="oj-col oj-md-4">
+                    <div class="oj-col oj-md-12">Social Security Number</div>
+                    <div class="oj-col oj-md-12">
+                        <input type="password" id="password" data-bind="ojComponent: {component: 'ojInputPassword', value: $parent.socialsecuritynumber()}" />
+                    </div>
+                    <div class="oj-col oj-md-12">Confirm Social Security Number</div>
+                    <div class="oj-col oj-md-12">
+                        <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.socialsecuritynumber()}" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="oj-row">
+            <div class="oj-col oj-md-12">
+                <h3>Identity Documents</h3>
+            </div>
+            <div class="oj-col oj-md-12">
+               <div><strong>Identify Document Type</strong></div>
+                <div class="oj-col" id="radiosetIdentifyDoc" aria-labelledby="mainlabelid" data-bind="ojComponent: {component: 'ojRadioset', value: ''}">
+                    <span class="oj-choice-row">
+                        <input id="temp" type="radio" value="none">
+                        <label>None</label>
+                      </span>
+                    <span class="oj-choice-row">
+                        <input id="partTime" type="radio" value="list-a">
+                        <label>List A</label>
+                      </span>
+                    <span class="oj-choice-row">
+                        <input id="partTime" type="radio" value="list-b-c">
+                        <label>ist B and List C </label>
+                      </span>
+                </div>
+            </div>
+            <hr class="oj-col oj-md-12" />
+        </div>
+        <div class="oj-row">
+            <div class="oj-col oj-md-12">
+                <strong>List B I9 Document Type</strong>
+            </div>
+            <div class="oj-col oj-md-3">
+                <label for="basicSelect">Document Type</label>
+                <select id="basicSelect" data-bind="ojComponent: {component: 'ojSelect',
+                                                                          value: self.val,
+                                                                          rootAttributes: {style:'max-width:20em'}}">
+                    <option value="">Please Select</option>
+                    <option value="cdl">Canadian Driver's License</option>
+                    <option value="cdhr">Clinic, Doctor, or Hospital Record</option>
+                    <option value="dnsr">Daycare or Nursery School Record</option>
+                    <option value="dl">Driver's License</option>
+                    <option value="fslidcard">Federal, State, or Local ID Card</option>
+                    <option value="mdidcard">Military Dependents ID Card</option>
+                    <option value="natd">Native American Tribal Document</option>
+                    <option value="sidcard">School ID Card</option>
+                    <option value="src">School Record/Report Card</option>
+                    <option value="uscgm">US Coast Guard merchant</option>
+                    <option value="eadidcard">Employment Authorization Document ID Card</option>
+                </select>
+
+            </div>
+            <div class="oj-col oj-md-3">
+                <div class="oj-col oj-md-12">Document ID</div>
+                <div class="oj-col oj-md-12">
+                    <input data-bind="ojComponent: {component: 'ojInputText', value: ''}" />
+                </div>
+            </div>
+            <div class="oj-col oj-md-2">
+                <div class="oj-col oj-md-12">Expiration Date</div>
+                <div class="oj-col oj-md-12">
+                    <input data-bind="ojComponent: {component: 'ojInputDate', value: $parent.reHireDate}" />
+                </div>
+            </div>
+            <div class="oj-col oj-md-4">
+                <div class="oj-col oj-md-12">Upload Document Image</div>
+                <div class="oj-col oj-md-8">
+                    <input data-bind="ojComponent: {component: 'ojInputText', value: ''}" />
+                </div>
+                <div class="oj-col oj-md-4">
+                    <button id="buttonIcon2" data-bind="ojComponent: {component:'ojButton',
+                                        icons: {start:'oj-fwk-icon-caret-start oj-fwk-icon'},
+                                        label: 'Browse' }"></button>
+                </div>
+
+            </div>
+            <hr class="oj-col oj-md-12" />
+        </div>
+        <div class="oj-row">
+            <div class="oj-col oj-md-12">
+               <strong> List C I9 Document Type</strong>
+            </div>
+            <div class="oj-col oj-md-3">
+                <label for="basicSelect">Document Type</label>
+                <select id="basicSelect" data-bind="ojComponent: {component: 'ojSelect',
+                                                                      value: self.val,
+                                                                      rootAttributes: {style:'max-width:20em'}}">
+                    <option value="">Please Select</option>
+                    <option value="cba">Certificate of Birth Abroad</option>
+                    <option value="eadidcard">Employment Authorization Document ID Card</option>
+                    <option value="natd">Native American Tribal Document</option>
+                    <option value="usbc">US Birth Certificate</option>
+                    <option value="uscidcard">US Citizen ID Card</option>
+                    <option value="ussscard">US Social Security Card</option>
+                </select>
+
+            </div>
+            <div class="oj-col oj-md-3">
+                <div class="oj-col oj-md-12">Document ID</div>
+                <div class="oj-col oj-md-12">
+                    <input data-bind="ojComponent: {component: 'ojInputText', value: ''}" />
+                </div>
+            </div>
+            <div class="oj-col oj-md-2">
+                <div class="oj-col oj-md-12">Expiration Date</div>
+                <div class="oj-col oj-md-12">
+                    <input data-bind="ojComponent: {component: 'ojInputDate', value: $parent.reHireDate}" />
+                </div>
+            </div>
+            <div class="oj-col oj-md-4">
+                <div class="oj-col oj-md-12">Upload Document Image</div>
+                <div class="oj-col oj-md-8">
+                    <input data-bind="ojComponent: {component: 'ojInputText', value: ''}" />
+                </div>
+                <div class="oj-col oj-md-4">
+                    <button id="buttonIcon2" data-bind="ojComponent: {component:'ojButton',
+                                icons: {start:'oj-fwk-icon-caret-start oj-fwk-icon'},
+                                label: 'Browse'
+                    }"></button>
+                </div>
+            </div>
+            <hr class="oj-col oj-md-12" />
+        </div>
+
+        <div class="oj-row">
+            <div class="oj-col oj-md-12">
+                <span class="oj-choice-row">
+                      <input id="temp" type="checkbox" value="agecertification">
+                       <label><strong>Age Certification</strong></label>
+                    </span>
+            </div>
+            <div class="oj-col oj-md-4">
+                <div class="oj-col oj-md-12">Certification Number</div>
+                <div class="oj-col oj-md-12">
+                    <input data-bind="ojComponent: {component: 'ojInputText', value: ''}" />
+                </div>
+            </div>
+            <div class="oj-col oj-md-4">
+                <div class="oj-col oj-md-12">Expiration Date</div>
+                <div class="oj-col oj-md-12">
+                    <input data-bind="ojComponent: {component: 'ojInputDate', value: $parent.reHireDate}" />
+                </div>
+            </div>
+            <div class="oj-col oj-md-4">
+                <div class="oj-col oj-md-12">Upload Document Image</div>
+                <div class="oj-col oj-md-8">
+                    <input data-bind="ojComponent: {component: 'ojInputText', value: ''}" />
+                </div>
+                <div class="oj-col oj-md-4">
+                    <button id="buttonIcon2" data-bind="ojComponent: {component:'ojButton',
+                                icons: {start:'oj-fwk-icon-caret-start oj-fwk-icon'},
+                                label: 'Browse'
+                    }"></button>
+                </div>
             </div>
 
-            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Last Name</div>
-            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
-                <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.lastName}" />
-            </div>
-        </div>
-        <div class="oj-row">
-            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">POS Check Name</div>
-            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
-                <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.posCheckName}" />
-            </div>
-
-             <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Language</div>
-            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
-                <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.language}" />
-            </div>
-        </div>
-        <div class="oj-row">
-            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Time Zone</div>
-            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
-                <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.timeZone}" />
-            </div>
-
-            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Ethnicity</div>
-            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
-                <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.ethnicity}" />
-            </div>
-        </div>
-        <div class="oj-row">
-            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Gender</div>
-            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
-                <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.gender}" />
-            </div>
-        </div>
-        <div class="oj-row">
-            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-section-label">Veteran Info</div>
-        </div>
-        <div class="oj-row">
-            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Veteran Status</div>
-            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
-                <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.veteranStatus}" />
-            </div>
-
-            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Vietnam Era</div>
-            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
-                <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.vietnamEra}" />
-            </div>
-        </div>
-        <div class="oj-row">
-            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Other Eligible</div>
-            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
-                <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.otherEligible}" />
-            </div>
-
-            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Other Protected</div>
-            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
-                <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.otherProtected}" />
-            </div>
-        </div>
-        <div class="oj-row">
-            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Armed Forces Service Medal</div>
-            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
-                <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.armedForcesServiceMedal}" />
-            </div>
-
-            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Recently Separated</div>
-            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
-                <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.recentlySeparated}" />
-            </div>
-        </div>
-        <div class="oj-row">
-            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Special Disabled</div>
-            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
-                <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.specialDisabled}" />
-            </div>
-
-            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Registered Disabled Number</div>
-            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
-                <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.registeredDisabledNumber}" />
-            </div>
-        </div>
-        <div class="oj-row">
-            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Discharge Date</div>
-            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
-                <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.dischargeDate}" />
-            </div>
-        </div>
-        <div class="oj-row">
-            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-section-label">Contact Info</div>
-        </div>
-        <div class="oj-row">
-            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Email</div>
-            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
-                <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.email}" />
-            </div>
-
-            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Phone</div>
-            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
-                <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.phone}" />
-            </div>
-        </div>
-        <div class="oj-row">
-            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Other Phone Number</div>
-            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
-                <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.mobile}" />
-            </div>
-
-            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Fax Number</div>
-            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
-                <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.faxNumber}" />
-            </div>
-        </div>
-        <div class="oj-row">
-            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Address</div>
-            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
-                <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.address1}" />
-                <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.address2}" />
-                <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.city}" />
-                <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.state}" />
-                <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.postal}" />
-                <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.country}" />
-            </div>
-
-            <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">Emergency Contact</div>
-            <div class="oj-col oj-sm-12 oj-md-7 oj-lg-3">
-                <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.emergencyName}" />
-                <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.relationship}" />
-                <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.emergencyAddress}" />
-                <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.emergencyCity}" />
-                <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.emergencyState}" />
-                <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.emergencyZipCode}" />
-                <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.emergencyPhone}" />
-            </div>
+            <hr class="oj-col oj-md-12" />
         </div>
 
-        <button id="submitButton" class="basic-btn" data-bind="click: function(){$parent.handleClose('#empDialog')}">Save</button>
-
+        <div class="oj-row">
+            <div class="oj-col oj-md-12">
+                <span class="oj-choice-row">
+                      <input id="temp" type="checkbox" value="agecertification">
+                      <label><strong>Work Permit</strong></label>
+                    </span>
+            </div>
+            <div class="oj-col oj-md-4">
+                <div class="oj-col oj-md-12">Permit Number</div>
+                <div class="oj-col oj-md-12">
+                    <input data-bind="ojComponent: {component: 'ojInputText', value: ''}" />
+                </div>
+            </div>
+            <div class="oj-col oj-md-4">
+                <div class="oj-col oj-md-12">Expiration Date</div>
+                <div class="oj-col oj-md-12">
+                    <input data-bind="ojComponent: {component: 'ojInputDate', value: $parent.reHireDate}" />
+                </div>
+            </div>
+            <div class="oj-col oj-md-4">
+                <div class="oj-col oj-md-12">Upload Document Image</div>
+                <div class="oj-col oj-md-8">
+                    <input data-bind="ojComponent: {component: 'ojInputText', value: ''}" />
+                </div>
+                <div class="oj-col oj-md-4">
+                    <button id="buttonIcon2" data-bind="ojComponent: {component:'ojButton',
+                                icons: {start:'oj-fwk-icon-caret-start oj-fwk-icon'},
+                                label: 'Browse'
+                    }"></button>
+                </div>
+            </div>
+        </div>
+        <div class="button-row">
+            <button id="submitButton" class="basic-btn" data-bind="click: function(){$parent.handleClose('#empPayrollDialog')}">Save</button>
+        </div>
     </div>
 </div>
