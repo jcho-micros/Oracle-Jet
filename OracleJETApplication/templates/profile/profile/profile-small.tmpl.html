@@ -1,4 +1,4 @@
-<div class="oj-row">
+<div class="oj-row subToolRow">
     <div class="oj-col oj-sm-10">
 <!--        <h2 id="currentPage" data-bind="text: label"></h2>-->
 
@@ -6,14 +6,14 @@
 
     </div>
     <div class="oj-col oj-sm-2">
-        <div data-bind="click: $parent.handleOpen('#empDialog')" style="line-height:39px;">Edit</div>
+        <div data-bind="click: $parent.handleOpen('#empDialog')" style="line-height:39px;">Edit <i class="fa fa-pencil-square-o"></i></div>
     </div>
 </div>
 <div class="oj-row">
     <div id="accordionPage" data-bind="ojComponent: {component: 'ojAccordion'}">
         <!-- Start of Section 1 --->
         <div id="general" data-bind="ojComponent: {component: 'ojCollapsible', expanded:true}">
-             <h3>General</h3>
+            <h3>General</h3>
                 <div>
                     <h4>Name</h4>
                     <span data-bind="text: $parent.firstName()"></span>
@@ -38,36 +38,28 @@
                         <h4>Gender</h4>
                         <div data-bind="text: $parent.gender()"></div>
                     </div>
+                    <div>
+                    <h4>Profile Picture</h4>
+                       <img data-bind="attr: {src: $parent.getPhoto($parent.personProfile().empId)}" />
+                    </div>
+                    <div data-bind="visible: $parent.veteranStatus() == 'yes'">
+                    
+                        <h4>Veteran</h4>
+       <!--                <div><span class="veteranStatus">A Veteran?</span> <span data-bind="text: $parent.veteranStatus()"></span></div>-->
+                           <div><i class="fa fa-check"></i> <span data-bind="text: $parent.vietnamEra()"></span></div>
+                           <div><i class="fa fa-check"></i> <span data-bind="text: $parent.otherEligible()"></span></div>
+                           <div><i class="fa fa-check"></i> <span data-bind="text: $parent.otherProtected()"></span></div>
+                           <div><i class="fa fa-check"></i> <span data-bind="text: $parent.armedForcesServiceMedal()"></span></div>
+                           <div><i class="fa fa-check"></i> <span data-bind="text: $parent.recentlySeparated()"></span></div>
+                           <div><i class="fa fa-check"></i> <span data-bind="text: $parent.specialDisabled()"></span></div>
+
+                           <h4>Registered Disable Number</h4>
+                           <div data-bind="text: $parent.registeredDisabledNumber()"></div>
+
+                           <h4>Discharge Date</h4>
+                           <div data-bind="text: $parent.dischargeDate()"></div>
+                    </div>
                 </div>
-        </div>
-        <div id="profile">
-            <h3>Profile Picture</h3>
-             <div>
-                <img data-bind="attr: {src: $parent.getPhoto($parent.personProfile().empId)}" />
-             </div>
-        </div>
-        <div id="veteran">
-            <h3>Veteran</h3>
-            <div>
-                <div data-bind="visible: $parent.veteranStatus() == 'yes'">
-                 <h4>Veteran</h4>
-<!--                <div><span class="veteranStatus">A Veteran?</span> <span data-bind="text: $parent.veteranStatus()"></span></div>-->
-                    <div><i class="fa fa-check"></i> <span data-bind="text: $parent.vietnamEra()"></span></div>
-                    <div><i class="fa fa-check"></i> <span data-bind="text: $parent.otherEligible()"></span></div>
-                    <div><i class="fa fa-check"></i> <span data-bind="text: $parent.otherProtected()"></span></div>
-                    <div><i class="fa fa-check"></i> <span data-bind="text: $parent.armedForcesServiceMedal()"></span></div>
-                    <div><i class="fa fa-check"></i> <span data-bind="text: $parent.recentlySeparated()"></span></div>
-                    <div><i class="fa fa-check"></i> <span data-bind="text: $parent.specialDisabled()"></span></div>
-
-                    <h4>Registered Disable Number</h4>
-                    <div data-bind="text: $parent.registeredDisabledNumber()"></div>
-
-                    <h4>Discharge Date</h4>
-                    <div data-bind="text: $parent.dischargeDate()"></div>
-                </div>
-                
-            </div>
-
         </div>
         <div id="veteran">
             <h3>Contact</h3>
@@ -114,6 +106,9 @@
                 <span data-bind="html: $parent.emergencyZipCode()"></span>
                 <div data-bind="html: $parent.emergencyPhone()"></div>
             </div>
+        </div>
+        <div id="Custom">
+            <h3>Custom</h3>
         </div>
     </div>
 

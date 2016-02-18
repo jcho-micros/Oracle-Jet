@@ -2186,6 +2186,19 @@ footer{
     h2{
         font-size: 18px;
     }
+    #mainCol{
+        background-color: #e7edf2;
+    }
+    #personaldetails{
+        background-color: $white;
+        margin-top:10px;
+        margin-bottom:10px;
+        padding-bottom:0px;
+        width:95%;
+    }
+    .tab-content{
+        border-width: 0 0 0 0;
+    }
     .oj-navigationlist-item-icon {
         font-size: $headerNavigationMobileSize !important;
     }
@@ -2194,6 +2207,9 @@ footer{
         .page-sub-navigation{
             padding-left:11px;
         }
+    }
+    .mobileNavTitle{
+        width:95%;
     }
     //Modal Sizing
     //Employee Dialog Modal
@@ -2223,6 +2239,7 @@ footer{
     }
     .oj-panel.tab-content{
         padding:0;
+        background-color: transparent;
     }
    
     .profileStatusToolArea{
@@ -2243,7 +2260,7 @@ footer{
         }
         li:last-child{
            border-right: 0px;
-           width:30%;
+           width:33%;
         }
         li:first-child{
             padding-left:0px;
