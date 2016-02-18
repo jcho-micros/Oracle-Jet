@@ -2178,7 +2178,7 @@ footer{
 @media only screen and (min-width: 1280px){}
 
 //Mobile (CAP)
-@media only screen and (min-device-width: 320px) and (max-device-width: 767px){
+@media only screen and (min-width: 320px) and (max-width: 767px){
     //Header
     html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack-icon-label):not(.oj-navigationlist-icon-only) .oj-navigationlist-item-icon {
         margin-right: 0;
