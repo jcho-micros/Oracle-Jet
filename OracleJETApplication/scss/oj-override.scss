@@ -1501,19 +1501,19 @@ a{
     background-color: #cccccc;
 }
 .imageOverlay{
-    display:block;
-    position:absolute;
-    top:-6%;
-    left:2%;
-    width:92px;
-    height:82px;
-    z-index: 100;
-    background:url(images/thumb-overlay.png);
+display:block;
+position:absolute;
+top:-18%;
+left:0;
+width:72px;
+height:72px;
+z-index: 100;
+background:url(images/thumb-overlay.png);
 }
 #empImg{
-    position:relative;
-    display:block;
-    float:left;
+position:relative;
+display:block;
+float:left;
 }
 //Login Styles
 #loginPage{
@@ -2358,6 +2358,16 @@ footer{
     }
     .mobileNavTitle{
         width:95%;
+    }
+    .imageOverlay{
+        display:block;
+        position:absolute;
+        top:-6%;
+        left:2%;
+        width:92px;
+        height:82px;
+        z-index: 100;
+        background:url(images/thumb-overlay-mobile.png);
     }
     //Modal Sizing
     //Employee Dialog Modal
