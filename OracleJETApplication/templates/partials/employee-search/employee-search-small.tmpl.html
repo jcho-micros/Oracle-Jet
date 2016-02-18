@@ -93,8 +93,10 @@
             </div>
             <!-- End of Form -->
            <div class="resultWrapper oj-col">
-                <h2 class="float-l">Search Results</h2>
-                <div data-bind="ojComponent: {component: 'ojPagingControl', data: listViewDataSource, pageSize:10}"></div>
+               <div class="oj-row">
+                    <div class="oj-sm-12"><h2 class="float-l">Search Results</h2></div>
+               </div>
+               <div style="margin-top:0px; position: relative;" data-bind="ojComponent: {component: 'ojPagingControl', data: listViewDataSource, pageSize:10}"></div>
                 <ul id="listview" data-bind="ojComponent: {component: 'ojListView',
                     data: listViewDataSource,
                     item: {template: 'peoplelist_template'},
