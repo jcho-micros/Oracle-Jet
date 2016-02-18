@@ -1,6 +1,9 @@
 <div class="oj-row">
     <div class="oj-col oj-sm-10">
 <!--        <h2 id="currentPage" data-bind="text: label"></h2>-->
+
+         <a style="line-height:39px;" data-bind="attr:{href: 'index.html?root=people'}">Back to Search</a>
+
     </div>
     <div class="oj-col oj-sm-2">
         <div data-bind="click: $parent.handleOpen('#empDialog')" style="line-height:39px;">Edit</div>
@@ -112,8 +115,10 @@
                 <div data-bind="html: $parent.emergencyPhone()"></div>
             </div>
         </div>
-    </div>  
+    </div>
+
 </div>
+
 <div data-bind="template: {name: 'partials/employee-edit-modal/employee-edit-modal-small'}"></div>
 
 

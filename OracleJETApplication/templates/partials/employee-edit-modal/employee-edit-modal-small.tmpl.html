@@ -1,5 +1,7 @@
 <!--Not being used, only use when mobile template is very different from ipad/desktop template-->
-<div style="display:none;" id="empDialog" title="Edit Employee Information" data-bind="ojComponent:{component: 'ojDialog', initialVisibility: 'hide', rootAttributes: {class: 'generalModal-dimensions'}}">
+<div style="display:none;" id="empDialog" title="Edit Employee Information" data-bind="ojComponent:{component: 'ojDialog', initialVisibility: 'hide', dragAffordance: 'none',
+            rootAttributes: {style: 'width: 375px; height: 600px;'},
+            'position': {'my': 'right center', 'at': 'left center'}}">
     <div class="oj-dialog-body">
         <div class="oj-row">
             <div class="oj-col oj-sm-12 oj-md-5 oj-lg-3 dialog-field-label">First Name</div>
