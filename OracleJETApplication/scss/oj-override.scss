@@ -370,6 +370,7 @@ $headerOffCanvas: $darkGray;
 // $headerBgImage:         null;
 $headerBGLogo: $imageDir + 'logo_oracle_sm.png';
 $headerUserIcon: $imageDir + 'vatar_24px.png';
+
 //IPAD icon text
 $headerNavigationText: $customsmallFontSize;
 //Mobile icon size
@@ -1499,7 +1500,21 @@ a{
     width: 100%;
     background-color: #cccccc;
 }
-
+.imageOverlay{
+    display:block;
+    position:absolute;
+    top:-6%;
+    left:2%;
+    width:92px;
+    height:82px;
+    z-index: 100;
+    background:url(images/thumb-overlay.png);
+}
+#empImg{
+    position:relative;
+    display:block;
+    float:left;
+}
 //Login Styles
 #loginPage{
     * {
@@ -2319,7 +2334,7 @@ footer{
     h2{
         font-size: 18px;
     }
-    #mainCol{
+    #app-main-area{
         background-color: #e7edf2;
     }
     #personaldetails{

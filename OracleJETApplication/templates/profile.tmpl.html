@@ -24,13 +24,15 @@
 <div class="justifyCenter">
    <div class="oj-row addedNewEmpMessage">
         <div class="oj-md-12 oj-col">
+
             <span data-bind="text: personProfile().firstName + ' ' + personProfile().lastName"></span> has been successfully added!
         </div>
     </div>
     <div id="personaldetails" class="oj-row">
         <div class="oj-row">
             <div class="oj-sm-3 oj-col">
-                <img style="width:50px; height:50px;" data-bind="attr: {src: getPhoto(personProfile().empId)}" />
+                <span class="imageOverlay"></span>
+                <img id="empImg" style="width:75px; height:75px;" data-bind="attr: {src: getPhoto(personProfile().empId)}" />
             </div>
             <div class="oj-sm-9 oj-col">
                 <h2>
@@ -85,12 +87,14 @@
 <div class="justifyCenter">
    <div class="oj-row addedNewEmpMessage">
         <div class="oj-md-12 oj-col">
+           
             <span data-bind="text: personProfile().firstName + ' ' + personProfile().lastName"></span> has been successfully added!
         </div>
     </div>
     <div id="personaldetails" class="oj-row">
         <div class="oj-col oj-md-1 oj-lg-1">
-            <img data-bind="attr: {src: getPhoto(personProfile().empId)}" />
+             <span class="imageOverlay"></span>
+            <img id="empImg" data-bind="attr: {src: getPhoto(personProfile().empId)}" />
         </div>
         <div class="oj-col oj-md-2 oj-lg-2 profileToolBar">
             
