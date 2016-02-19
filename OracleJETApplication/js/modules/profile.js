@@ -235,16 +235,13 @@ define([
                     self.minimumwage = ko.observable(self.personProfile().subminimumwage);
                     self.overtimeexempt = ko.observable(self.personProfile().overtimeexempt);
                     self.birthDate = ko.observable(self.personProfile().dateofbirth);
-                    self.birthDateFormatted = ko.pureComputed(function(){
-                        if(self.birthDate() !== ''){
-                            var date = new Date(self.birthDate() + ' 00:00:00');
-                            var newDate = ((date.getMonth() + 1) + '/' + date.getDate() + '/' + date.getFullYear());
-                        }
-                        return newDate;
-                    });
+                    self.birthDateFormatted = ko.pureComputed(function(){return self.basicCalDateFormat(self.birthDate());});
 
                     self.admissionnumber = ko.observable(self.personProfile().admissionnumber);
+
                     self.insexpirationdate = ko.observable(self.personProfile().insexpirationdate);
+                    self.insexpirationdateFormatted = ko.pureComputed(function(){return self.basicCalDateFormat(self.insexpirationdate());});
+
                     self.insstatus = ko.observableArray([self.personProfile().insstatus]);
                     self.socialsecuritynumber = ko.observable(self.personProfile().socialsecuritynumber);
                     self.identifydocumenttype = ko.observable(self.personProfile().identifydocumenttype);
@@ -253,19 +250,31 @@ define([
                     self.disabledState = ko.observable(true);
                     self.bi9documenttype = ko.observable(self.personProfile().bi9documenttype);
                     self.bi9documentid = ko.observable(self.personProfile().bi9documentid);
-                    self.bi9documentexpiration = ko.observable(self.getBasicFormattedDate('bi9documentexpiration'));
+
+                    self.bi9documentexpiration = ko.observable(self.personProfile().bi9documentexpiration);
+                    self.bi9documentexpirationFormatted = ko.pureComputed(function(){return self.basicCalDateFormat(self.bi9documentexpiration());});
+
                     self.bi9documentupload = ko.observable(self.personProfile().bi9documentupload);
                     self.ci9documenttype = ko.observable(self.personProfile().ci9documenttype);
                     self.ci9documentid = ko.observable(self.personProfile().ci9documentid);
-                    self.ci9documentexpiration = ko.observable(self.getBasicFormattedDate('ci9documentexpiration'));
+
+                    self.ci9documentexpiration = ko.observable(self.personProfile().ci9documentexpiration);
+                    self.ci9documentexpirationFormatted = ko.pureComputed(function(){return self.basicCalDateFormat(self.ci9documentexpiration());});
+
                     self.ci9documentupload = ko.observable(self.personProfile().ci9documentupload);
-                    self.agecertification = ko.observable(self.personProfile().agecertification);
+                    self.agecertification = ko.observable([self.personProfile().agecertification]);
                     self.certificationnumber = ko.observable(self.personProfile().certificationnumber);
-                    self.certificationexpiration = ko.observable(self.getBasicFormattedDate('certificationexpiration'));
+
+                    self.certificationexpiration = ko.observable(self.personProfile().certificationexpiration);
+                    self.certificationexpirationFormatted = ko.pureComputed(function(){return self.basicCalDateFormat(self.certificationexpiration());});
+
                     self.agecertupload = ko.observable(self.personProfile().agecertupload);
-                    self.workpermit = ko.observable(self.personProfile().workpermit);
+                    self.workpermit = ko.observable([self.personProfile().workpermit]);
                     self.workpermitnumber = ko.observable(self.personProfile().workpermitnumber);
-                    self.workpermitexpiration = ko.observable(self.getBasicFormattedDate('workpermitexpiration'));
+
+                    self.workpermitexpiration = ko.observable(self.personProfile().workpermitexpiration);
+                    self.workpermitexpirationFormatted = ko.pureComputed(function(){return self.basicCalDateFormat(self.workpermitexpiration());});
+
                     self.workpermitupload = ko.observable(self.personProfile().workpermitupload);
                     self.selectedSchedule = ko.observableArray([]);
 
@@ -334,6 +343,14 @@ define([
                     return oldDate;
                 };
 
+                //This is a basic format when using the ojInputDate component
+                self.basicCalDateFormat = function(value){
+                    if(value !== ''){
+                        var date = new Date(value + ' 00:00:00');
+                        var newDate = ((date.getMonth() + 1) + '/' + date.getDate() + '/' + date.getFullYear());
+                    }
+                    return newDate;
+                };
 
                 /////// JOHN insert for schedule
                 //Analytics
