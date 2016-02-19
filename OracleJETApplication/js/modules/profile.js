@@ -194,6 +194,7 @@ define([
 
                     //This variable is for Schedule time  card Current schedule Dates Nested
                     self.currentScheduledDates = self.personProfile().currentScheduledDates;
+               
                     self.futureScheduledDates = self.personProfile().futureScheduledDates;
                     self.currentDayStart = ko.observable(self.getFormattedDate('currentDayStart'));
                     self.currentDayEnd = ko.observable(self.getFormattedDate('currentDayEnd'));
@@ -257,8 +258,20 @@ define([
                     self.workpermitnumber = ko.observable(self.personProfile().workpermitnumber);
                     self.workpermitexpiration = ko.observable(self.getBasicFormattedDate('workpermitexpiration'));
                     self.workpermitupload = ko.observable(self.personProfile().workpermitupload);
+                    self.selectedSchedule = ko.observable();
 
                 };
+
+                self.showItemIndex = function () {
+                        var context = ko.contextFor(event.target);
+                        if (context) {
+                            self.selectedSchedule=context.$data;
+                            console.log(self.selectedSchedule);
+                            
+                        }
+                        $('#currentWeekModal').ojDialog("open");
+
+                    };
                 self.getPhoto = function (id) {
                     var src;
                     // We only have images for employees below 188 for now. Use the nopic avatar for those above 18

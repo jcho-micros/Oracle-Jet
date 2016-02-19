@@ -1,10 +1,22 @@
-<div style="display:none;" id="hireStatusDialog" data-bind="ojComponent:{component: 'ojDialog', initialVisibility: 'hide', rootAttributes: {class: 'generalModal-dimensions'},'position': {'my': 'start bottom', 'at': 'end+14 top'}}">
+<div style="display:none" id="currentWeekModal" title="" data-bind="ojComponent:{component: 'ojDialog', initialVisibility: 'hide', rootAttributes: {class: 'scheduleModal-dimensions'}, 'position': {'my': 'start bottom', 'at': 'end+14 top'}}">
     <div class="oj-dialog-header oj-helper-clearfix" aria-labelledby="dialogTitleId">
         <span id="dialogTitleId" class="oj-dialog-title">
-           <div>Hire Status Modal</div>
+           <div>Current Week</div>
         </span>
     </div>
     <div class="oj-dialog-body">
 
+                       <div data-bind="click:function(){alert($parent.selectedSchedule.currentDayEnd);}">hello</div>   
+  
+
+        <div data-bind="text:$parent.selectedSchedule['id']"></div>
+
+
+
+                       
+                       
+             
+                      
+         
     </div>
 </div>
