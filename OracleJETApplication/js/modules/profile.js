@@ -285,6 +285,7 @@ define([
                     $('#currentWeekModal').ojDialog("open");
 
                 };
+
                 self.getPhoto = function (id) {
                     var src;
                     // We only have images for employees below 188 for now. Use the nopic avatar for those above 18
@@ -527,6 +528,30 @@ define([
                         $(".addedNewEmpMessage").show();
                     }, 600);
                 }
+
+                //For Schedules and Timecards tab
+                //searches for specified param string and returns the value after the equal symbol
+                self.findURLParam = function(param){
+                     var query = window.location.search.substring(1);
+                     var vars = query.split("&");
+                     for(i=0; i< vars.length; i++){
+                         var pair = vars[i].split("=");
+                         if(pair[0] == param){return pair[1];}
+                     }
+                     return(false);
+                };
+
+                //Workaround to call schedules and timecards modal
+                setTimeout(function() {
+                    if(document.URL.indexOf('currentWeekDay') > -1){
+                        var data = self.personProfile().currentScheduledDates[self.findURLParam('currentWeekDay')];
+                        if (data) {
+                            self.selectedSchedule(data);
+                        }
+                        $('#currentWeekModal').ojDialog("open");
+                    }
+                }, 600);
+
 
             };
 
