@@ -63,7 +63,7 @@
       "admissionnumber" : "1234567890",
       "insexpirationdate" : "",
       "socialsecuritynumber" : "123557894",
-      "identifydocumenttype" : "list-a",
+      "identifydocumenttype" : "List A",
       "bi9documenttype" : "fslidcard",
       "bi9documentid" : "0001112223333",
       "bi9documentexpiration" : "2016-04-22T00:00:00-08:00",

@@ -34,7 +34,7 @@
             <div class="oj-col oj-md-9">
                 <div class="oj-col oj-md-4">
                     <div>Date of Birth</div>
-                    <input data-bind="ojComponent: {component: 'ojInputDate', value: ''}" />
+                    <input data-bind="ojComponent: {component: 'ojInputDate', value: $parent.birthDate}" />
                     <div><em>MM/DD/YYYY</em></div>
                     <div>Child Labor Law Requirements (Age 16)</div>
                 </div>
@@ -64,7 +64,7 @@
                     </div>
                     <div class="oj-col oj-md-12">Confirm Social Security Number</div>
                     <div class="oj-col oj-md-12">
-                        <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.socialsecuritynumber()}" />
+                        <input type="password" id="password" data-bind="ojComponent: {component: 'ojInputPassword', value: $parent.socialsecuritynumber()}" />
                     </div>
                 </div>
             </div>
@@ -75,19 +75,19 @@
             </div>
             <div class="oj-col oj-md-12">
                <div><strong>Identify Document Type</strong></div>
-                <div class="oj-col" id="radiosetIdentifyDoc" aria-labelledby="mainlabelid" data-bind="ojComponent: {component: 'ojRadioset', value: ''}">
+                <div aria-labelledby="mainlabelid" data-bind="ojComponent: {component: 'ojRadioset', value: $parent.identifydocumenttype}">
                     <span class="oj-choice-row">
-                        <input id="temp" type="radio" value="none">
-                        <label>None</label>
-                      </span>
+                        <input id="none" type="radio" name="rbb" value="None">
+                        <label for="none">None</label>
+                    </span>
                     <span class="oj-choice-row">
-                        <input id="partTime" type="radio" value="list-a">
-                        <label>List A</label>
-                      </span>
+                        <input id="list-a" type="radio" name="rbb" value="List A">
+                        <label for="list-a">List A</label>
+                    </span>
                     <span class="oj-choice-row">
-                        <input id="partTime" type="radio" value="list-b-c">
-                        <label>ist B and List C </label>
-                      </span>
+                        <input id="list-b-c" type="radio" name="rbb" value="List B and List C">
+                        <label for="list-b-c">List B and List C</label>
+                    </span>
                 </div>
             </div>
             <hr class="oj-col oj-md-12" />

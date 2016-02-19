@@ -38,7 +38,7 @@
             <div class="oj-col oj-md-6 oj-lg-4">
                 <div>Date of Birth</div>
 <!--                <input data-bind="ojComponent: {component: 'ojInputDate', value: $parent.reHireDate}" />-->
-                    <div data-bind="text: $parent.birthDate()"></div>
+                    <div data-bind="text: $parent.birthDateFormatted()"></div>
                 <div>Child Labor Law Requirements (Age 16)</div>
             </div>
             <div class="oj-col oj-md-6 oj-lg-4">
@@ -75,20 +75,7 @@
             <h3>Identity Documents</h3>
         </div>
         <div class="oj-col oj-md-12">
-            <div class="oj-col" id="radiosetIdentifyDoc" aria-labelledby="mainlabelid" data-bind="ojComponent: {component: 'ojRadioset', disabled: $parent.disabledState, value: $parent.identifydocumenttype}">
-              <span class="oj-choice-row">
-                <input id="none" type="radio" value="none">
-                <label>None</label>
-              </span>
-              <span class="oj-choice-row">
-                <input id="listA" type="radio" value="list-a">
-                <label>List A</label>
-              </span>
-              <span class="oj-choice-row">
-                <input id="listBC" type="radio" value="list-b-c">
-                <label>List B and List C </label>
-              </span>
-            </div>
+            <div data-bind="text: $parent.identifydocumenttype()"></div>
         </div>
         <hr class="oj-col oj-md-12" />
         <div class="oj-col oj-md-12">
