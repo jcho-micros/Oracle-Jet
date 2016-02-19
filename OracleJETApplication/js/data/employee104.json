@@ -55,7 +55,7 @@
       "externalPayrollId": "12358479",
       "subminimumwage" : 0,
       "overtimeexempt" : 0,
-      "dateofbirth" : "1965-04-22T00:00:00-08:00",
+      "dateofbirth" : "1965-04-22",
       "insstatus" : "permanentresident",
       "admissionnumber" : "1234567890",
       "insexpirationdate" : "",
