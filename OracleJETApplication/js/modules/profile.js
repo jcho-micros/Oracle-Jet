@@ -511,7 +511,7 @@ define([
                     if(document.URL.indexOf(param) > -1){
                         setTimeout(function() {
                             self.handleOpen(dialogId);
-                        }, 500);
+                        }, 600);
                     }
                 };
 
@@ -525,7 +525,7 @@ define([
                 if(document.URL.indexOf("&trueAddEmp") > -1){
                      setTimeout(function() {
                         $(".addedNewEmpMessage").show();
-                    }, 500);
+                    }, 600);
                 }
 
             };
