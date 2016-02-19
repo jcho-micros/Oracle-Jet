@@ -29,20 +29,21 @@
             </div>
             <div id="filmStripDiv" class="oj-panel" style="margin: '20px';  width='776px'">
               <div id="filmStrip" aria-label="Set of chemicals" data-bind="ojComponent: {component: 'ojFilmStrip', arrowPlacement: self.currentNavArrowPlacement, arrowVisibility: self.currentNavArrowVisibility}">
+
+                              <a data-bind="click: function(){ $parent.showItemIndex()}">Event click</a>
                   <!-- ko foreach: $parent.currentScheduledDates -->
                   
                   <div class="oj-panel oj-panel-alt2 schedule-filmstrip-item" data-bind="style: {display: getItemInitialDisplay($index())}">
-                      <div data-bind="text: $index"></div>
-                      <div data-bind="text: $index() +1"></div>
-                      <div data-bind="text: $data.currentDayStart"></div>
                           <div>
-                              <a data-bind="click: $parents[1].showItemIndex()">Event click</a>
-                              <a data-bind="click:function(){$parents[1].handleOpen('#currentWeekModal')}">
+                              <a data-bind="click: function(){ $parents[1].showItemIndex()}">Event click</a>
+<!--
+                              <a data-bind="click:function(){$parent.handleOpen('#currentWeekModal')}">
                       <span data-bind="text: currentDayStart"></span> <span data-bind="text: currentDayStartTime"></span> - <span data-bind="text: currentDayEndTime"></span> </a>
                       <br /><span data-bind="text: location"></span>, <span data-bind="text: revenueCenter"></span>
                       <br /><span data-bind="text: job"></span>, <span data-bind="text: station"></span>
                       <br /><span data-bind="text: status"></span>
                       <br /><span data-bind="text: notes"></span>
+-->
                           </div> 
                        
                     </div>

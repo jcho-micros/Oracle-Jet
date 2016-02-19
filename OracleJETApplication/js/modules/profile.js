@@ -258,19 +258,18 @@ define([
                     self.workpermitnumber = ko.observable(self.personProfile().workpermitnumber);
                     self.workpermitexpiration = ko.observable(self.getBasicFormattedDate('workpermitexpiration'));
                     self.workpermitupload = ko.observable(self.personProfile().workpermitupload);
-                    self.selectedSchedule = ko.observable();
+                    self.selectedSchedule = ko.observableArray([]);
 
                 };
                 self.showItemIndex = function () {
-                        var context = ko.contextFor(event.target);
-                        console.log(context);
-                        if (context) {
-                            self.selectedSchedule=context.$data;
-                            console.log(self.selectedSchedule);
-                        }
-                        $('#currentWeekModal').ojDialog("open");
+                    var data = ko.dataFor(event.target);
+                    if (data) {
+                        self.selectedSchedule(data);
+                        console.log(self.selectedSchedule());
+                    }
+                    $('#currentWeekModal').ojDialog("open");
 
-                    };
+                };
                 self.getPhoto = function (id) {
                     var src;
                     // We only have images for employees below 188 for now. Use the nopic avatar for those above 18
