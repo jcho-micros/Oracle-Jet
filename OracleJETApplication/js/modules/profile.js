@@ -234,12 +234,21 @@ define([
                     self.extPayrollId = ko.observable(self.personProfile().externalPayrollId);
                     self.minimumwage = ko.observable(self.personProfile().subminimumwage);
                     self.overtimeexempt = ko.observable(self.personProfile().overtimeexempt);
-                    self.birthDate = ko.observable(self.getBasicFormattedDate('dateofbirth'));
+                    self.birthDate = ko.observable(self.personProfile().dateofbirth);
+                    self.birthDateFormatted = ko.pureComputed(function(){
+                        if(self.birthDate() !== ''){
+                            var date = new Date(self.birthDate() + ' 00:00:00');
+                            var newDate = ((date.getMonth() + 1) + '/' + date.getDate() + '/' + date.getFullYear());
+                        }
+                        return newDate;
+                    });
+
                     self.admissionnumber = ko.observable(self.personProfile().admissionnumber);
                     self.insexpirationdate = ko.observable(self.personProfile().insexpirationdate);
                     self.insstatus = ko.observableArray([self.personProfile().insstatus]);
                     self.socialsecuritynumber = ko.observable(self.personProfile().socialsecuritynumber);
                     self.identifydocumenttype = ko.observable(self.personProfile().identifydocumenttype);
+
                     //Disable the selection view
                     self.disabledState = ko.observable(true);
                     self.bi9documenttype = ko.observable(self.personProfile().bi9documenttype);
