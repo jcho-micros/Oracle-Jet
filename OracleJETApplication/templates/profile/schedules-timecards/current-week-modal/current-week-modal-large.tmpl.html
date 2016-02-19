@@ -6,6 +6,6 @@
     </div>
     <div class="oj-dialog-body">
 <!--        <div data-bind="click:function(){console.log($parent.selectedSchedule);}">hello</div>-->
-        <div data-bind="text: $parent.selectedSchedule"></div>
+        <div data-bind="text: $parents[0].selectedSchedule().currentDayEnd"></div>
     </div>
 </div>
