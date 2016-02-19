@@ -272,7 +272,6 @@ define([
                     var data = ko.dataFor(event.target);
                     if (data) {
                         self.selectedSchedule(data);
-                        console.log(self.selectedSchedule());
                     }
                     $('#currentWeekModal').ojDialog("open");
 
