@@ -32,15 +32,14 @@
                   <!-- ko foreach: $parent.currentScheduledDates -->
                   
                   <div class="oj-panel oj-panel-alt2 schedule-filmstrip-item" data-bind="style: {display: getItemInitialDisplay($index())}">
-                          <div>
-                              <a data-bind="click: function(){ $parents[1].showItemIndex()}">Event click</a>
-                              <a data-bind="click:function(){$parent.handleOpen('#currentWeekModal')}">
-                      <span data-bind="text: currentDayStart"></span> <span data-bind="text: currentDayStartTime"></span> - <span data-bind="text: currentDayEndTime"></span> </a>
-                      <br /><span data-bind="text: location"></span>, <span data-bind="text: revenueCenter"></span>
-                      <br /><span data-bind="text: job"></span>, <span data-bind="text: station"></span>
-                      <br /><span data-bind="text: status"></span>
-                      <br /><span data-bind="text: notes"></span>
-                          </div> 
+                    <div>
+                       <a data-bind="click:function(){$parents[1].showItemIndex()}">
+                       <span data-bind="text: currentDayStart"></span> <span data-bind="text: currentDayStartTime"></span> - <span data-bind="text: currentDayEndTime"></span> </a>
+                       <br /><span data-bind="text: location"></span>, <span data-bind="text: revenueCenter"></span>
+                       <br /><span data-bind="text: job"></span>, <span data-bind="text: station"></span>
+                       <br /><span data-bind="text: status"></span>
+                       <br /><span data-bind="text: notes"></span>
+                    </div> 
                        
                     </div>
                       

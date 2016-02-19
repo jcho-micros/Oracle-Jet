@@ -261,6 +261,13 @@ define([
                     self.selectedSchedule = ko.observableArray([]);
 
                 };
+                var breakDetails = [
+                    {id: 1, breakStart: '9:00 AM', breakEnd: '9:15 AM', totalBreak: '15 minutes'},
+                    {id: 2, breakStart: '11:00 AM', breakEnd: '11:30 AM', totalBreak: '30 minutes'},
+                    {id: 3, breakStart: '1:00 PM', breakEnd: '1:15 PM', totalBreak: '15 minutes'},
+
+                ];
+                self.breakDetails = ko.observableArray(breakDetails);
                 self.showItemIndex = function () {
                     var data = ko.dataFor(event.target);
                     if (data) {
