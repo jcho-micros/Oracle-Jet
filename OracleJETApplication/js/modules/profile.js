@@ -261,13 +261,13 @@ define([
                     self.selectedSchedule = ko.observable();
 
                 };
-
+ 
                 self.showItemIndex = function () {
                         var context = ko.contextFor(event.target);
+                        console.log(context);
                         if (context) {
                             self.selectedSchedule=context.$data;
                             console.log(self.selectedSchedule);
-                            
                         }
                         $('#currentWeekModal').ojDialog("open");
 

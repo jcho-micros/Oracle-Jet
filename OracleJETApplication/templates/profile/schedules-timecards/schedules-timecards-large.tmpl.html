@@ -32,15 +32,19 @@
                   <!-- ko foreach: $parent.currentScheduledDates -->
                   
                   <div class="oj-panel oj-panel-alt2 schedule-filmstrip-item" data-bind="style: {display: getItemInitialDisplay($index())}">
-                      <a data-bind="click:$parents[1].timeCardhandleOpen">
+                      <div data-bind="text: $index"></div>
+                      <div data-bind="text: $index() +1"></div>
+                      <div data-bind="text: $data.currentDayStart"></div>
                           <div>
-                      <span data-bind="text: currentDayStart"></span> <span data-bind="text: currentDayStartTime"></span> - <span data-bind="text: currentDayEndTime"></span>
+                              <a data-bind="click: $parents[1].showItemIndex()">Event click</a>
+                              <a data-bind="click:function(){$parents[1].handleOpen('#currentWeekModal')}">
+                      <span data-bind="text: currentDayStart"></span> <span data-bind="text: currentDayStartTime"></span> - <span data-bind="text: currentDayEndTime"></span> </a>
                       <br /><span data-bind="text: location"></span>, <span data-bind="text: revenueCenter"></span>
                       <br /><span data-bind="text: job"></span>, <span data-bind="text: station"></span>
                       <br /><span data-bind="text: status"></span>
                       <br /><span data-bind="text: notes"></span>
-                          </div>
-                        </a>
+                          </div> 
+                       
                     </div>
                       
                 <!-- /ko -->
@@ -89,7 +93,7 @@
             <h2>Availablity</h2>
         </div>
         <div class="oj-md-4 oj-col">
-            
+    
         </div>
         <div class="oj-md-4 oj-col">
             
@@ -98,6 +102,7 @@
             
         </div>
     </div>
+<div data-bind="template: {name: 'profile/schedules-timecards/current-week-modal/current-week-modal-large'}"></div>
 <div data-bind="template: {name: 'partials/schedule-timecard-modal/schedule-timecard-modal-large'}"></div>
 <div data-bind="template: {name: 'partials/schedule-timecard-modal/time-off-requested-modale-large'}"></div>              
 </div>
