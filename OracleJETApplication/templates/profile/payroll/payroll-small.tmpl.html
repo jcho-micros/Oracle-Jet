@@ -12,7 +12,6 @@
         <div id="accordionPage" data-bind="ojComponent: {component: 'ojAccordion'}">
             <div id="general" data-bind="ojComponent: {component: 'ojCollapsible', expanded:true}">
                  <h3>General</h3>
-              
                  <div>
                         <div class="oj-col oj-sm-8">External payroll ID</div>
                         <div class="oj-col oj-sm-4 payrollItems"data-bind="text: $parent.extPayrollId"></div>
@@ -35,139 +34,99 @@
                    
                 </div>
             </div>
-            <div id="i9information">
+            <div id="i9information" data-bind="ojComponent: {component: 'ojCollapsible'}">
                <h3>I9 Information</h3>
                <div>
+                    <div>Date of Birth</div><div data-bind="text: $parent.birthDate()"></div>
+                    <em>Child Labor Law Requirements (Age 16)</em>
 
-                        <div>Date of Birth</div><div data-bind="text: $parent.birthDate()"></div>
-                        <em>Child Labor Law Requirements (Age 16)</em>
-   
-                        <div>Admission Number: </div><div data-bind="text: $parent.admissionnumber"></div>
+                    <div>Admission Number: </div><div data-bind="text: $parent.admissionnumber"></div>
 <!--                        <span class="oj-sm-6">INS Expiration Date: </span> <span class="oj-sm-6" data-bind="text: $parent.insexpirationdate()"></span>-->
-         
-                   
                </div>
             </div>
-            <div id="i9information">
+            <div id="identitydocuments" data-bind="ojComponent: {component: 'ojCollapsible'}">
                 <h3>Identity Documents</h3>
-                    <div>
-                                <div id="radiosetIdentifyDoc" aria-labelledby="mainlabelid" data-bind="ojComponent: {component: 'ojRadioset', disabled: $parent.disabledState, value: $parent.identifydocumenttype}">
-                                  <span class="oj-choice-row">
-                                    <input id="none" type="radio" value="none">
-                                    <label>None</label>
-                                  </span>
-                                  <span class="oj-choice-row">
-                                    <input id="listA" type="radio" value="list-a">
-                                    <label>List A</label>
-                                  </span>
-                                  <span class="oj-choice-row">
-                                    <input id="listBC" type="radio" value="list-b-c">
-                                    <label>List B and List C </label>
-                                  </span>
-                                </div>
+                <div>
+                    <div id="radiosetIdentifyDoc" aria-labelledby="mainlabelid" data-bind="ojComponent: {component: 'ojRadioset', disabled: $parent.disabledState, value: $parent.identifydocumenttype}">
+                      <span class="oj-choice-row">
+                        <input id="none" type="radio" value="none">
+                        <label>None</label>
+                      </span>
+                      <span class="oj-choice-row">
+                        <input id="listA" type="radio" value="list-a">
+                        <label>List A</label>
+                      </span>
+                      <span class="oj-choice-row">
+                        <input id="listBC" type="radio" value="list-b-c">
+                        <label>List B and List C </label>
+                      </span>
+                    </div>
+
+                    <div id="bi9information" data-bind="visible: $parent.identifydocumenttype()=='list-b-c' ">
+                        <h3>List B I9 Document Type </h3>
+                        <div>
+                            <div>
+                                <div class="oj-col">Document Type</div>
+                                <div class="oj-col" data-bind="text: $parent.bi9TypeSelected"></div>
                             </div>
-            </div>
-            
-            <div id="bi9information" data-bind="visible: $parent.identifydocumenttype()=='list-b-c' ">
-                <h3>List B I9 Document Type </h3>
-                <div>
-                    <div>
-                        <label for="basicSelect">Document Type</label>
-                        <select id="basicSelect" data-bind="ojComponent: {component: 'ojSelect', disabled: true,
-                                                                              value: $parent.bi9documenttype,
-                                                                              rootAttributes: {style:'max-width:400px'}}">
-                              <option value="">Please Select</option>
-                              <option value="calicense">Canadian Driver's License</option>
-                              <option value="cdhrecords">Clinic, Doctor, or Hospital Record</option>
-                              <option value="dnschoolrecord">Daycare or Nursery School Record</option>
-                              <option value="driverlicense">Driver's License</option>
-                              <option value="fslidcard">Federal, State, or Local ID Card</option>
-                              <option value="mildepidcard">Military Dependents ID Card</option>
-                              <option value="natamericandoc">Native American Tribal Document</option>
-                              <option value="driverlicense">School ID Card</option>
-                              <option value="recordreportcard">School Record/Report Card</option>
-                              <option value="driverlicense">US Coast Guard merchant</option>
-                              <option value="documentidcard">Employment Authorization Document ID Card</option>
-                            </select>
+                            <div>Document ID</div>
+                            <div>
+                                <div data-bind="text: $parent.bi9documentid"></div>
+                            </div>
+                            <div>
+                                <span>Expiration Date:</span> <span data-bind="text: $parent.bi9documentexpiration"></span>
+                            </div>
+                            <div>Upload Document Image</div>
+                            <div>
+                                <div data-bind="text: $parent.bi9documentupload"></div>
+                            </div>
+                        </div>
 
                     </div>
-                    <div>Document ID</div>
-                    <div>
-                        <input data-bind="ojComponent: {component: 'ojInputText', disabled: true, value: $parent.bi9documentid}" />
+                    <div id="ci9information" data-bind="visible: $parent.identifydocumenttype()=='list-b-c' ">
+                        <h3>List C I9 Document Type </h3>
+                        <div>
+                            <div>
+                                <div class="oj-col">Document Type</div>
+                                <div class="oj-col" data-bind="text: $parent.ci9TypeSelected"></div>
+                            </div>
+                            <div>Document ID</div>
+                            <div>
+                                <div data-bind="text: $parent.ci9documentid"></div>
+                            </div>
+                            <div>
+                                <span>Expiration Date:</span> <span data-bind="text: $parent.ci9documentexpiration"></span>
+                            </div>
+                            <div>Upload Document Image</div>
+                            <div>
+                                <div data-bind="text: $parent.ci9documentupload"></div>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <span>Expiration Date:</span> <span data-bind="text: $parent.bi9documentexpiration"></span>
-                    </div>
-                    <div>Upload Document Image</div>
-                    <div>
-                        <input data-bind="ojComponent: {component: 'ojInputText', disabled: true, value: $parent.bi9documentupload}" />
-                    </div>
-                </div>
-                
-            </div>
-            <div id="ci9information" data-bind="visible: $parent.identifydocumenttype()=='list-b-c' ">
-                <h3>List C I9 Document Type </h3>
-                <div>
-                    <div>
-                        <label for="basicSelect">Document Type</label>
-                        <select id="basicSelect" data-bind="ojComponent: {component: 'ojSelect', disabled: true,
-                                                                          value: $parent.ci9documenttype,
-                                                                          rootAttributes: {style:'max-width:400px'}}">
-                          <option value="">Please Select</option>
-                          <option value="calicense">Certificate of Birth Abroad</option>
-                          <option value="cdhrecords">Employment Authorization Document ID Card</option>
-                          <option value="dnschoolrecord">Native American Tribal Document</option>
-                          <option value="driverlicense">US Birth Certificate</option>
-                          <option value="fslidcard">US Citizen ID Card</option>
-                          <option value="ussscard">US Social Security Card</option>
-                        </select>
+                    <div id="agecertification" data-bind="visible: $parent.agecertification()== 1">
+                        <h3>Age Certification</h3>
+                        <div>
+                            <div>Certification Number</div>
+                            <div data-bind="text: $parent.certificationnumber"></div>
+                            <div>Expiration Date</div>
+                            <div data-bind="text: $parent.certificationexpiration"></div>
 
+                            <div>Upload Document Image</div>
+                            <div data-bind="text: $parent.agecertupload"></div>
+                        </div>
                     </div>
-                    <div>Document ID</div>
-                    <div>
-                        <input data-bind="ojComponent: {component: 'ojInputText', disabled: true, value: $parent.ci9documentid}" />
-                    </div>
-                    <div>
-                        <span>Expiration Date:</span> <span data-bind="text: $parent.ci9documentexpiration"></span>
-                    </div>
-                    <div>Upload Document Image</div>
-                    <div>
-                        <input data-bind="ojComponent: {component: 'ojInputText', disabled: true, value: $parent.ci9documentupload}" />
-                    </div>
-                </div>
-            </div>
-            <div id="agecertification" data-bind="visible: $parent.agecertification()== 1">
-                <h3>Age Certification</h3>
-                <div>
-                    <div>Certification Number</div>
-                    <div>
-                        <input data-bind="ojComponent: {component: 'ojInputText', disabled: true, value: $parent.certificationnumber}" />
-                    </div> 
-                    <div>Expiration Date</div>
-                    <div data-bind="text: $parent.certificationexpiration"></div>
+                    <div id="workpermit" data-bind="visible: $parent.workpermit()== 1">
+                        <h3>Work Permit</h3>
+                            <div>Permit Number</div>
+                            <div data-bind="text: $parent.workpermitnumber"></div>
+                            <div>Expiration Date</div>
+                            <div data-bind="text: $parent.workpermitexpiration"></div>
 
-                    <div>Upload Document Image</div>
-                    <div>
-                         <input data-bind="ojComponent: {component: 'ojInputText', disabled: true, value: $parent.agecertupload}" />
+                            <div>Upload Document Image</div>
+                            <div data-bind="text: $parent.workpermitupload"></div>
                     </div>
                 </div>
-            </div>
-            <div id="workpermit" data-bind="visible: $parent.workpermit()== 1">
-                <h3>Work Permit</h3>
-                <div>
-                    <div>Permit Number</div>
-                    <div>
-                        <input data-bind="ojComponent: {component: 'ojInputText', disabled: true, value: $parent.workpermitnumber}" />
-                    </div> 
-                    <div>Expiration Date</div>
-                    <div data-bind="text: $parent.workpermitexpiration"></div>
-
-                    <div>Upload Document Image</div>
-                    <div>
-                         <input data-bind="ojComponent: {component: 'ojInputText', disabled: true, value: $parent.workpermitupload}" />
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </div>
+<div data-bind="template: {name: 'partials/employee-payroll-edit-modal/employee-payroll-edit-modal-small'}"></div>

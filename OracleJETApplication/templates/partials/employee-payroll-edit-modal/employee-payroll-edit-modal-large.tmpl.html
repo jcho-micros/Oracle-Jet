@@ -76,18 +76,12 @@
             <div class="oj-col oj-md-12">
                <div><strong>Identify Document Type</strong></div>
                 <div aria-labelledby="mainlabelid" data-bind="ojComponent: {component: 'ojRadioset', value: $parent.identifydocumenttype}">
+                <!-- ko foreach: $parent.identityTypes -->
                     <span class="oj-choice-row">
-                        <input id="none" type="radio" name="rbb" value="None">
-                        <label for="none">None</label>
+                        <input data-bind="name: name, value: value" id="none" type="radio" >
+                        <label for="none" data-bind="text: name"></label>
                     </span>
-                    <span class="oj-choice-row">
-                        <input id="list-a" type="radio" name="rbb" value="List A">
-                        <label for="list-a">List A</label>
-                    </span>
-                    <span class="oj-choice-row">
-                        <input id="list-b-c" type="radio" name="rbb" value="List B and List C">
-                        <label for="list-b-c">List B and List C</label>
-                    </span>
+                <!-- /ko -->
                 </div>
             </div>
             <hr class="oj-col oj-md-12" />
@@ -98,20 +92,10 @@
             </div>
             <div class="oj-col oj-md-3">
                 <label for="basicSelect">Document Type</label>
-                <select id="basicSelect" data-bind="ojComponent: {component: 'ojSelect',
-                                                                      value: $parent.bi9documenttype}">
-                      <option value="">Please Select</option>
-                      <option value="calicense">Canadian Driver's License</option>
-                      <option value="cdhrecords">Clinic, Doctor, or Hospital Record</option>
-                      <option value="dnschoolrecord">Daycare or Nursery School Record</option>
-                      <option value="driverlicense">Driver's License</option>
-                      <option value="fslidcard">Federal, State, or Local ID Card</option>
-                      <option value="mildepidcard">Military Dependents ID Card</option>
-                      <option value="natamericandoc">Native American Tribal Document</option>
-                      <option value="driverlicense">School ID Card</option>
-                      <option value="recordreportcard">School Record/Report Card</option>
-                      <option value="driverlicense">US Coast Guard merchant</option>
-                      <option value="documentidcard">Employment Authorization Document ID Card</option>
+                <select id="basicSelect" data-bind="ojComponent: {component: 'ojSelect', value: $parent.bi9documenttype}">
+                <!-- ko foreach: $parent.bi9DocTypes -->
+                <option data-bind="value: value, text: name"></option>
+                <!-- /ko -->
                     </select>
 
             </div>
@@ -124,7 +108,7 @@
             <div class="oj-col oj-md-2">
                 <div class="oj-col oj-md-12">Expiration Date</div>
                 <div class="oj-col oj-md-12">
-                    <input data-bind="ojComponent: {component: 'ojInputDate', value: $parent.bi9documentexpiration}" />
+<!--                    <input data-bind="ojComponent: {component: 'ojInputDate', value: $parent.bi9documentexpiration}" />-->
                 </div>
             </div>
             <div class="oj-col oj-md-4">
@@ -147,16 +131,10 @@
             </div>
             <div class="oj-col oj-md-3">
                 <label for="basicSelect">Document Type</label>
-                <select id="basicSelect" data-bind="ojComponent: {component: 'ojSelect',
-                                                              value: $parent.ci9documenttype,
-                                                              rootAttributes: {style:'max-width:400px'}}">
-              <option value="">Please Select</option>
-              <option value="calicense">Certificate of Birth Abroad</option>
-              <option value="cdhrecords">Employment Authorization Document ID Card</option>
-              <option value="dnschoolrecord">Native American Tribal Document</option>
-              <option value="driverlicense">US Birth Certificate</option>
-              <option value="fslidcard">US Citizen ID Card</option>
-              <option value="ussscard">US Social Security Card</option>
+                <select id="basicSelect" data-bind="ojComponent: {component: 'ojSelect', value: $parent.ci9documenttype}">
+                <!-- ko foreach: $parent.ci9DocTypes -->
+                <option data-bind="value: value, text: name"></option>
+                <!-- /ko -->
             </select>
 
             </div>
@@ -169,7 +147,7 @@
             <div class="oj-col oj-md-2">
                 <div class="oj-col oj-md-12">Expiration Date</div>
                 <div class="oj-col oj-md-12">
-                    <input data-bind="ojComponent: {component: 'ojInputDate', value: $parent.ci9documentexpiration}" />
+<!--                    <input data-bind="ojComponent: {component: 'ojInputDate', value: $parent.ci9documentexpiration}" />-->
                 </div>
             </div>
             <div class="oj-col oj-md-4">
@@ -209,7 +187,7 @@
             <div class="oj-col oj-md-4">
                 <div class="oj-col oj-md-12">Expiration Date</div>
                 <div class="oj-col oj-md-12">
-                    <input data-bind="ojComponent: {component: 'ojInputDate', value: $parent.certificationexpiration}" />
+<!--                    <input data-bind="ojComponent: {component: 'ojInputDate', value: $parent.certificationexpiration}" />-->
                 </div>
             </div>
             <div class="oj-col oj-md-4">
@@ -250,7 +228,7 @@
             <div class="oj-col oj-md-4">
                 <div class="oj-col oj-md-12">Expiration Date</div>
                 <div class="oj-col oj-md-12">
-                    <input data-bind="ojComponent: {component: 'ojInputDate', value: $parent.workpermitexpiration}" />
+<!--                    <input data-bind="ojComponent: {component: 'ojInputDate', value: $parent.workpermitexpiration}" />-->
                 </div>
             </div>
             <div class="oj-col oj-md-4">

@@ -248,10 +248,12 @@ define([
 
                     self.admissionnumber = ko.observable(self.personProfile().admissionnumber);
                     self.insexpirationdate = ko.observable(self.personProfile().insexpirationdate);
+                    self.insexpirationdateFormatted = ko.pureComputed(function(){return self.basicCalDateFormat(self.insexpirationdate());});
+
                     self.insstatus = ko.observableArray([self.personProfile().insstatus]);
                     self.socialsecuritynumber = ko.observable(self.personProfile().socialsecuritynumber);
                     self.identifydocumenttype = ko.observable(self.personProfile().identifydocumenttype);
-
+                    self.identityTypes = ko.observableArray(identityTypes);
                     //Disable the selection view
                     self.disabledState = ko.observable(true);
                     self.bi9documenttype = ko.observable(self.personProfile().bi9documenttype, 'pleaseselect');
@@ -278,6 +280,17 @@ define([
 
                 };
                 //Loops throught the array to match the value to json value and return the nameas
+                self.identityfilterSelectedType = function() {
+                        type = self.identityTypes();
+                        selectedType = self.identifydocumenttype();
+                        for(i=0; i< type.length; i++){
+                            if(selectedType === type[i].value){
+                                var selectedName = type[i].name;
+                                return selectedName;
+                            }
+                        }
+                       
+                    };
                 self.bi9filterSelectedType = function() {
                         type = self.bi9DocTypes();
                         selectedType = self.bi9documenttype();
@@ -300,6 +313,11 @@ define([
                         }
                        
                     };
+                var identityTypes = [
+                    {name: 'None',  value: 'none'},
+                    {name: 'List A',  value: 'list-a'},
+                    {name: 'List B and List C',  value: 'list-b-c'},
+                ];
                 var bi9DocTypes = [
                     {name: 'Please Select',  value: 'pleaseselect'},
                     {name: 'Canadian Drivers License',  value: 'calicense'},
@@ -331,10 +349,8 @@ define([
                 self.breakDetails = ko.observableArray(breakDetails);
                 self.showItemIndex = function (dialog) {
                     var data = ko.dataFor(event.target);
-                    console.log(data);
                     if (data) {
                         self.selectedSchedule(data);
-                        console.log(self.selectedSchedule);
                     }
                     $(dialog).ojDialog("open");
                 };
@@ -387,6 +403,14 @@ define([
                     return oldDate;
                 };
 
+                //This is a basic format when using the ojInputDate component
+                self.basicCalDateFormat = function(value){
+                    if(value !== ''){
+                        var date = new Date(value + ' 00:00:00');
+                        var newDate = ((date.getMonth() + 1) + '/' + date.getDate() + '/' + date.getFullYear());
+                    }
+                    return newDate;
+                };
 
                 /////// JOHN insert for schedule
                 //Analytics
