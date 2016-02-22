@@ -1,9 +1,6 @@
 <div class="oj-row subToolRow">
     <div class="oj-col oj-sm-10">
-<!--        <h2 id="currentPage" data-bind="text: label"></h2>-->
-
          <a style="line-height:39px;" data-bind="attr:{href: 'index.html?root=people'}">Back to Search</a>
-
     </div>
     <div class="oj-col oj-sm-2">
         <div data-bind="click: $parent.handleOpen('#empDialog')" style="line-height:39px;">Edit <i class="fa fa-pencil-square-o"></i></div>
@@ -109,6 +106,24 @@
         </div>
         <div id="Custom">
             <h3>Custom</h3>
+            <div>
+                <div class="textbold">History</div>
+            <div id="barChart" data-bind="ojComponent: {
+                    component: 'ojChart', 
+                    type: 'bar', 
+                    selectionMode: 'none',
+                    dataCursor: 'on',
+                    orientation: 'vertical',
+                    stack: 'off',
+                    series: $parent.barSeriesValue, 
+                    groups: $parent.barGroupsValue, 
+                    animationOnDisplay: 'auto',
+                    animationOnDataChange: 'auto',
+                    hoverBehavior: 'dim'
+                }"
+                 style="max-width:500px;width:100%;height:350px;">
+            </div>
+            </div>
         </div>
     </div>
 
