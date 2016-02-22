@@ -55,8 +55,8 @@
       "emergencyState" : "State",
       "emergencyZipCode" : "60111",
       "emergencyPhone" : "312-411-2225",
-      "homeStore": "Home Store",
-      "externalPayrollId": "12358479",
+      "homeStore": "Atlanta",
+      "externalPayrollId": "1235",
       "subminimumwage" : 0,
       "overtimeexempt" : 0,
       "dateofbirth" : "1965-04-22",
@@ -278,6 +278,58 @@
          "status" : "Not Schdeuled",
          "notes" : "Requested Off"
       }],
+        "availability" : [{
+        "day" : "Sunday",
+        "hoursavailablefrom" : 0,
+        "hoursavailableto" : 0
+      },{
+        "day" : "Monday",
+        "hoursavailablefrom" : 4,
+        "hoursavailableto" : 6
+      },{
+        "day" : "Tuesday",
+        "hoursavailablefrom" : 0,
+        "hoursavailableto" : 2
+      },{
+        "day" : "Wednesday",
+        "hoursavailablefrom" : 4,
+        "hoursavailableto" : 12
+      },{
+        "day" : "Thursday",
+        "hoursavailablefrom" : 0,
+        "hoursavailableto" : 0
+      },{
+        "day" : "Friday",
+        "hoursavailablefrom" : 2,
+        "hoursavailableto" : 4
+      },{
+        "day" : "Saturday",
+        "hoursavailablefrom" : 4,
+        "hoursavailableto" : 12
+      }],
+      "unavailable" : [{
+        "day" : "Monday",
+        "allday" : 1,
+        "starttime" : "",
+        "endtime" : ""
+      },{
+        "day" : "Tuesday",
+        "allday" : 0,
+        "starttime" : "3:00 p.m.",
+        "endtime" : "11:00 p.m."
+      }],
+      "preferred" : [{
+        "day" : "Wednesday",
+        "allday" : 1,
+        "starttime" : "",
+        "endtime" : ""
+      },{
+        "day" : "Saturday",
+        "allday" : 0,
+        "starttime" : "3:00 p.m.",
+        "endtime" : "11:00 p.m."
+      }],
+      "schooldistrict" : "None",
       "comps" : [ {
          "bonus" : 1750,
          "comission" : 1500,
