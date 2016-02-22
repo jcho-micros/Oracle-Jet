@@ -205,7 +205,10 @@ define([
                     self.futureDayStartTime = ko.observable(self.getFutureFormattedTime('futureDayStartTime'));
                     self.futureDayEndTime = ko.observable(self.getFutureFormattedTime('futureDayEndTime'));
                     self.datasource = new oj.ArrayTableDataSource(self.currentScheduledDates, {idAttribute: 'id'});
-                    
+                    self.availability = self.personProfile().availability;
+                    self.unavailable = self.personProfile().unavailable;
+                    self.preferred = self.personProfile().preferred;
+                    self.schooldistrict = self.personProfile().schooldistrict;
                     //Schedule Modale
                     self.totalHours = ko.observable(35.0);
                     self.regularHours = ko.observable(35.0);
@@ -235,50 +238,90 @@ define([
                     self.minimumwage = ko.observable(self.personProfile().subminimumwage);
                     self.overtimeexempt = ko.observable(self.personProfile().overtimeexempt);
                     self.birthDate = ko.observable(self.personProfile().dateofbirth);
-                    self.birthDateFormatted = ko.pureComputed(function(){return self.basicCalDateFormat(self.birthDate());});
+                    self.birthDateFormatted = ko.pureComputed(function(){
+                        if(self.birthDate() !== ''){
+                            var date = new Date(self.birthDate() + ' 00:00:00');
+                            var newDate = ((date.getMonth() + 1) + '/' + date.getDate() + '/' + date.getFullYear());
+                        }
+                        return newDate;
+                    });
 
                     self.admissionnumber = ko.observable(self.personProfile().admissionnumber);
-
                     self.insexpirationdate = ko.observable(self.personProfile().insexpirationdate);
-                    self.insexpirationdateFormatted = ko.pureComputed(function(){return self.basicCalDateFormat(self.insexpirationdate());});
-
                     self.insstatus = ko.observableArray([self.personProfile().insstatus]);
                     self.socialsecuritynumber = ko.observable(self.personProfile().socialsecuritynumber);
                     self.identifydocumenttype = ko.observable(self.personProfile().identifydocumenttype);
 
                     //Disable the selection view
                     self.disabledState = ko.observable(true);
-                    self.bi9documenttype = ko.observable(self.personProfile().bi9documenttype);
+                    self.bi9documenttype = ko.observable(self.personProfile().bi9documenttype, 'pleaseselect');
+                    self.bi9DocTypes = ko.observableArray(bi9DocTypes);
+                    self.bi9TypeSelected = ko.observable(self.bi9filterSelectedType());
                     self.bi9documentid = ko.observable(self.personProfile().bi9documentid);
-
-                    self.bi9documentexpiration = ko.observable(self.personProfile().bi9documentexpiration);
-                    self.bi9documentexpirationFormatted = ko.pureComputed(function(){return self.basicCalDateFormat(self.bi9documentexpiration());});
-
+                    self.bi9documentexpiration = ko.observable(self.getBasicFormattedDate('bi9documentexpiration'));
                     self.bi9documentupload = ko.observable(self.personProfile().bi9documentupload);
-                    self.ci9documenttype = ko.observable(self.personProfile().ci9documenttype);
+                    self.ci9documenttype = ko.observable(self.personProfile().ci9documenttype, 'pleaseselect');
+                    self.ci9DocTypes = ko.observableArray(ci9DocTypes);
+                    self.ci9TypeSelected = ko.observable(self.ci9filterSelectedType());
                     self.ci9documentid = ko.observable(self.personProfile().ci9documentid);
-
-                    self.ci9documentexpiration = ko.observable(self.personProfile().ci9documentexpiration);
-                    self.ci9documentexpirationFormatted = ko.pureComputed(function(){return self.basicCalDateFormat(self.ci9documentexpiration());});
-
+                    self.ci9documentexpiration = ko.observable(self.getBasicFormattedDate('ci9documentexpiration'));
                     self.ci9documentupload = ko.observable(self.personProfile().ci9documentupload);
-                    self.agecertification = ko.observable([self.personProfile().agecertification]);
+                    self.agecertification = ko.observable(self.personProfile().agecertification);
                     self.certificationnumber = ko.observable(self.personProfile().certificationnumber);
-
-                    self.certificationexpiration = ko.observable(self.personProfile().certificationexpiration);
-                    self.certificationexpirationFormatted = ko.pureComputed(function(){return self.basicCalDateFormat(self.certificationexpiration());});
-
+                    self.certificationexpiration = ko.observable(self.getBasicFormattedDate('certificationexpiration'));
                     self.agecertupload = ko.observable(self.personProfile().agecertupload);
-                    self.workpermit = ko.observable([self.personProfile().workpermit]);
+                    self.workpermit = ko.observable(self.personProfile().workpermit);
                     self.workpermitnumber = ko.observable(self.personProfile().workpermitnumber);
-
-                    self.workpermitexpiration = ko.observable(self.personProfile().workpermitexpiration);
-                    self.workpermitexpirationFormatted = ko.pureComputed(function(){return self.basicCalDateFormat(self.workpermitexpiration());});
-
+                    self.workpermitexpiration = ko.observable(self.getBasicFormattedDate('workpermitexpiration'));
                     self.workpermitupload = ko.observable(self.personProfile().workpermitupload);
                     self.selectedSchedule = ko.observableArray([]);
 
                 };
+                //Loops throught the array to match the value to json value and return the nameas
+                self.bi9filterSelectedType = function() {
+                        type = self.bi9DocTypes();
+                        selectedType = self.bi9documenttype();
+                        for(i=0; i< type.length; i++){
+                            if(selectedType === type[i].value){
+                                var selectedName = type[i].name;
+                                return selectedName;
+                            }
+                        }
+                       
+                    };
+                self.ci9filterSelectedType = function() {
+                        type = self.ci9DocTypes();
+                        selectedType = self.ci9documenttype();
+                        for(i=0; i< type.length; i++){
+                            if(selectedType === type[i].value){
+                                var selectedName = type[i].name;
+                                return selectedName;
+                            }
+                        }
+                       
+                    };
+                var bi9DocTypes = [
+                    {name: 'Please Select',  value: 'pleaseselect'},
+                    {name: 'Canadian Drivers License',  value: 'calicense'},
+                    {name: 'Clinic, Doctor, or Hospital Record',  value: 'cdhrecords'},
+                    {name: 'Drivers License',  value: 'driverlicense'},
+                    {name: 'Federal, State, or Local ID Card',  value: 'fslidcard'},
+                    {name: 'Military Dependents ID Card',  value: 'mildepidcard'},
+                    {name: 'Native American Tribal Document',  value: 'natamericandoc'},
+                    {name: 'School ID Card',  value: 'schoolidcard'},
+                    {name: 'School Record/Report Card',  value: 'recordreportcard'},
+                    {name: 'US Coast Guard merchant',  value: 'uscoastguard'},
+                    {name: 'Employment Authorization Document ID Card',  value: 'documentidcard'}
+                ];
+                var ci9DocTypes = [
+                    {name: 'Please Select',  value: 'pleaseselect'},
+                    {name: 'Certificate of Birth Abroad',  value: 'calicense'},
+                    {name: 'Employment Authorization Document ID Card',  value: 'cdhrecords'},
+                    {name: 'Native American Tribal Document',  value: 'dnschoolrecord'},
+                    {name: 'US Birth Certificate',  value: 'driverlicense'},
+                    {name: 'US Citizen ID Card',  value: 'fslidcard'},
+                    {name: 'US Social Security Card',  value: 'ussscard'}
+                ];
                 var breakDetails = [
                     {id: 1, breakStart: '9:00 AM', breakEnd: '9:15 AM', totalBreak: '15 minutes'},
                     {id: 2, breakStart: '11:00 AM', breakEnd: '11:30 AM', totalBreak: '30 minutes'},
@@ -286,13 +329,14 @@ define([
 
                 ];
                 self.breakDetails = ko.observableArray(breakDetails);
-                self.showItemIndex = function () {
+                self.showItemIndex = function (dialog) {
                     var data = ko.dataFor(event.target);
+                    console.log(data);
                     if (data) {
                         self.selectedSchedule(data);
+                        console.log(self.selectedSchedule);
                     }
-                    $('#currentWeekModal').ojDialog("open");
-
+                    $(dialog).ojDialog("open");
                 };
 
                 self.getPhoto = function (id) {
@@ -343,14 +387,6 @@ define([
                     return oldDate;
                 };
 
-                //This is a basic format when using the ojInputDate component
-                self.basicCalDateFormat = function(value){
-                    if(value !== ''){
-                        var date = new Date(value + ' 00:00:00');
-                        var newDate = ((date.getMonth() + 1) + '/' + date.getDate() + '/' + date.getFullYear());
-                    }
-                    return newDate;
-                };
 
                 /////// JOHN insert for schedule
                 //Analytics
@@ -556,9 +592,12 @@ define([
                          if(pair[0] == param){return pair[1];}
                      }
                      return(false);
+                     //create a mapping for friend url parameter like monday = 1
                 };
 
                 //Workaround to call schedules and timecards modal
+                //example ?root=profile&emp=103&tabs=schedules-timecards&currentWeekDay=0
+                //the zero thur 6 is the index of the 
                 setTimeout(function() {
                     if(document.URL.indexOf('currentWeekDay') > -1){
                         var data = self.personProfile().currentScheduledDates[self.findURLParam('currentWeekDay')];
