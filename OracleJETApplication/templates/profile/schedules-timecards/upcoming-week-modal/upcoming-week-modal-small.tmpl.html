@@ -1,0 +1,89 @@
+<div style="display:none" id="upcomingWeekModal" title="" data-bind="ojComponent:{component: 'ojDialog', initialVisibility: 'hide', rootAttributes: {style: 'width: 375px; height: 600px;'}, 'position': {'my': 'start bottom', 'at': 'end+14 top'}}">
+    <div class="oj-dialog-header oj-helper-clearfix" aria-labelledby="dialogTitleId">
+        <span id="dialogTitleId" class="oj-dialog-title">
+            <h2>Upcoming Shift Detail <br /><span data-bind="text: $parent.firstName() + ' ' + $parent.lastName()"></span></h2>
+        </span>
+    </div>
+    <div class="oj-dialog-body">
+        <div class="oj-row">
+            <div class="oj-col">
+                <span data-bind="text: $parents[0].selectedSchedule().futureDayDayEnd"></span> 
+                <span data-bind="text: '(' + $parents[0].selectedSchedule().futureDayStartTime + ' - ' + $parents[0].selectedSchedule().futureDayEndTime + ')'"></span>
+                <div data-bind="text: $parents[0].selectedSchedule().location + ', ' + $parents[0].selectedSchedule().revenueCenter"></div>
+                <div data-bind="text: $parents[0].selectedSchedule().job + ', ' + $parents[0].selectedSchedule().station"></div>
+                <div data-bind="text:$parents[0].selectedSchedule().status"></div>
+            </div>
+        </div>
+        <div class="oj-row">
+            <div class="oj-col">
+                <h4>Break Details</h4>
+                <!-- ko foreach: $parent.breakDetails -->
+                <div data-bind="text: breakStart + ' - ' + breakEnd + ' <' + totalBreak + '> '"></div>
+                <!-- /ko -->
+            </div>
+        </div>
+        <div class="oj-row">
+            <div class="oj-col">
+                <a id="anchor" href="#" data-bind="ojComponent: { component: 'ojButton' }">Clock In</a>
+            </div>
+            <div class="oj-col">
+                <a id="anchor" href="#" data-bind="ojComponent: { component: 'ojButton' }">Request Change</a>
+            </div>
+            <div class="oj-col">
+                <a id="anchor" href="#" data-bind="ojComponent: { component: 'ojButton' }">Move to Shift Pool</a>
+            </div>
+        </div>
+        <div class="oj-row">
+            <div class="oj-col">
+                <div id="accordionPage" data-bind="ojComponent: {component: 'ojAccordion'}">
+                    <div id="shiftNotes" data-bind="ojComponent: {component: 'ojCollapsible'}">
+                        <h3>Shift Notes From managers</h3>
+                        <div>
+                            hello
+                        </div>
+                    </div>
+                    <div id="redbookEntry" data-bind="ojComponent: {component: 'ojCollapsible'}">            
+                        <h3>Redbook Entry</h3>
+                        <div>
+                            hello
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="oj-row">
+            <div class="oj-col">
+                <div id="tabs" data-bind="ojComponent:{component: 'ojTabs'}">
+                    <!-- tab bar -->
+                    <ul>
+                        <li><span>Servers</span></li>
+                        <li><span>Bar Tenders</span></li>
+                        <li><span>Managers</span></li>
+                        <li><span>Role</span></li>
+                    </ul>
+                    <div id="tabs-1">
+                        <h4>Servers</h4>
+                    </div>
+                    <div id="tabs-2">
+                        <h4>Bar Tenders</h4>
+                    </div>
+                    <div id="tabs-3">
+                       <h4>Managers</h4>
+                    </div>
+                    <div id="tabs-4">
+                        <h4>Role</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="oj-col">
+                <div id="accordionPage" data-bind="ojComponent: {component: 'ojAccordion'}">
+                    <div id="shiftNotes" data-bind="ojComponent: {component: 'ojCollapsible'}">
+                        <h3>Reservations</h3>
+                        <div>
+                            hello
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>

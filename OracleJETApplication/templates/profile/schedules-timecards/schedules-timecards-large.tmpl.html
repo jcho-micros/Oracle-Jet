@@ -1,8 +1,10 @@
 <div class="justifyCenter">
     <div class="oj-row">
-        <div class="oj-md-12 oj-col ">
-            <h2 id="currentPage" data-bind="text: label"></h2>
-            <hr>
+        <div class="oj-col oj-sm-10">
+            <h2> <span id="currentPage" data-bind="text: label"></span> <a href="#"><i class="fa fa-question-circle"></i></a></h2>
+        </div>
+        <div class="oj-col oj-sm-2 oj-lg-text-align-end">
+            <a data-bind="click: function(){$parent.handleOpen('#empDialog')}" style="line-height:39px;">Edit <i class="fa fa-pencil-square-o"></i></a>
         </div>
     </div>
     <div class="oj-row">
@@ -33,7 +35,7 @@
                   
                   <div class="oj-panel oj-panel-alt2 schedule-filmstrip-item" data-bind="style: {display: getItemInitialDisplay($index())}">
                     <div>
-                       <a data-bind="click:function(){$parents[1].showItemIndex()}">
+                       <a data-bind="click:function(){$parents[1].showItemIndex('#currentWeekModal')}">
                        <span data-bind="text: currentDayStart"></span> <span data-bind="text: currentDayStartTime"></span> - <span data-bind="text: currentDayEndTime"></span> </a>
                        <br /><span data-bind="text: location"></span>, <span data-bind="text: revenueCenter"></span>
                        <br /><span data-bind="text: job"></span>, <span data-bind="text: station"></span>
@@ -72,7 +74,9 @@
                 <!-- ko foreach: $parent.futureScheduledDates -->
 
                 <div class="oj-panel oj-panel-alt2 demo-filmstrip-item" data-bind="style: {display: getItemInitialDisplay($index())}">
+                    <a data-bind="click:function(){$parents[1].showItemIndex('#upcomingWeekModal')}">    
                     <span data-bind="text: futureDayStart"></span> <span data-bind="text: futureDayStartTime"></span> - <span data-bind="text: futureDayEndTime"></span>
+                    </a>
                     <br /><span data-bind="text: location"></span>, <span data-bind="text: revenueCenter"></span>
                     <br /><span data-bind="text: job"></span>, <span data-bind="text: station"></span>
                     <br /><span data-bind="text: status"></span>
@@ -85,20 +89,18 @@
         </div>
     </div>
     <div class="oj-row">
-        <div class="oj-md-12">
-            <h2>Availablity</h2>
-        </div>
-        <div class="oj-md-4 oj-col">
-    
-        </div>
-        <div class="oj-md-4 oj-col">
-            
-        </div>    
-        <div class="oj-md-4 oj-col">
-            
-        </div>
+            <div class="oj-md-4 oj-col">
+                <h3>Availablity</h3>
+            </div>
+            <div class="oj-md-4 oj-col">
+                <h3>Days and Times</h3>
+            </div>
+            <div class="oj-md-4 oj-col">
+                <h3>School District</h3>
+            </div>  
     </div>
 <div data-bind="template: {name: 'profile/schedules-timecards/current-week-modal/current-week-modal-large'}"></div>
-<div data-bind="template: {name: 'partials/schedule-timecard-modal/schedule-timecard-modal-large'}"></div>
-<div data-bind="template: {name: 'partials/schedule-timecard-modal/time-off-requested-modale-large'}"></div>              
+<div data-bind="template: {name: 'profile/schedules-timecards/upcoming-week-modal/upcoming-week-modal-large'}"></div>
+<div data-bind="template: {name: 'profile/schedules-timecards/schedule-timecard-modal/schedule-timecard-modal-large'}"></div>
+<div data-bind="template: {name: 'profile/schedules-timecards/time-off-requested-modal/time-off-requested-modale-large'}"></div>             
 </div>

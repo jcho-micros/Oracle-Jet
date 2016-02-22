@@ -6,7 +6,7 @@
     </div>
     <div class="oj-dialog-body">
         <div class="oj-row">
-            <div class="oj-md-4 oj-col">
+            <div class="oj-md-5 oj-col">
                 <div class="oj-row">
                     <span data-bind="text: $parents[0].selectedSchedule().currentDayEnd"></span> 
                     <span data-bind="text: '(' + $parents[0].selectedSchedule().currentDayStartTime + ' - ' + $parents[0].selectedSchedule().currentDayEndTime + ')'"></span>
@@ -21,18 +21,18 @@
                     <!-- /ko -->
                 </div>
                 <div class="oj-row">
-                    <div class="oj-md-4">
+                    <div class="oj-md-3 oj-col">
                         <a id="anchor" href="#" data-bind="ojComponent: { component: 'ojButton' }">Clock In</a>
                     </div>
-                    <div class="oj-md-4">
+                    <div class="oj-md-5 oj-col">
                         <a id="anchor" href="#" data-bind="ojComponent: { component: 'ojButton' }">Request Change</a>
                     </div>
-                    <div class="oj-md-4">
+                    <div class="oj-md-4 oj-col">
                         <a id="anchor" href="#" data-bind="ojComponent: { component: 'ojButton' }">Move to Shift Pool</a>
                     </div>
                 </div>
             </div>
-            <div class="oj-md-8 oj-col">
+            <div class="oj-md-7 oj-col">
                 <div class="oj-md-6 oj-col">
                     <h3>Shift Notes From managers</h3>
                 </div>
@@ -42,10 +42,30 @@
             </div>
         </div>
         <div class="oj-row">
-            <div class="oj-md-8">
-
+            <div class="oj-md-8 oj-col">
+                <div id="tabs" data-bind="ojComponent:{component: 'ojTabs'}">
+                    <!-- tab bar -->
+                    <ul>
+                        <li><span>Servers</span></li>
+                        <li><span>Bar Tenders</span></li>
+                        <li><span>Managers</span></li>
+                        <li><span>Role</span></li>
+                    </ul>
+                    <div id="tabs-1">
+                        <h4>Servers</h4>
+                    </div>
+                    <div id="tabs-2">
+                        <h4>Bar Tenders</h4>
+                    </div>
+                    <div id="tabs-3">
+                       <h4>Managers</h4>
+                    </div>
+                    <div id="tabs-4">
+                        <h4>Role</h4>
+                    </div>
+                </div>
             </div>
-            <div class="oj-md-4">
+            <div class="oj-md-4 oj-col">
                 <h3>Reservations</h3>
             </div>
         </div>

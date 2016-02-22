@@ -1,12 +1,19 @@
 <div class="justifyCenter">
+    <div class="oj-row subToolRow">
+        <div class="oj-col oj-sm-10">
+             <a style="line-height:39px;" data-bind="attr:{href: 'index.html?root=people'}">Back to Search</a>
+        </div>
+        <div class="oj-col oj-sm-2">
+            <div data-bind="click: $parent.handleOpen('#empDialog')" style="line-height:39px;">Edit <i class="fa fa-pencil-square-o"></i></div>
+        </div>
+    </div>
         <div class="oj-row">
         <div class="oj-col oj-sm-8">
-<!--            <h2 id="currentPage" data-bind="text: label"></h2>-->
-            <a style="line-height:39px;" data-bind="attr:{href: 'index.html?root=people'}">Back to Search</a>
+            <a style="line-height:39px;" data-bind="click:$parent.editRequestTimehandleOpen">Time Off Request</a>
 
         </div>
         <div class="oj-col oj-sm-4 oj-lg-text-align-end">
-            <a style="line-height:39px;" data-bind="click:$parent.editRequestTimehandleOpen">Time Off Request</a>
+            
         </div>
     </div>
     <div class="oj-row">
@@ -31,13 +38,15 @@
                   <!-- ko foreach: $parent.currentScheduledDates -->
                   
                   <div class="oj-panel oj-panel-alt2 schedule-filmstrip-item" data-bind="style: {display: getItemInitialDisplay($index())}">
-                      <a data-bind="click:$parents[1].timeCardhandleOpen">
+                      
                           <div>
-                      <span data-bind="text: currentDayStart"></span> <span data-bind="text: currentDayStartTime"></span> - <span data-bind="text: currentDayEndTime"></span>
-                      <br /><span data-bind="text: location"></span>, <span data-bind="text: revenueCenter"></span>
-                      <br /><span data-bind="text: job"></span>, <span data-bind="text: station"></span>
-                      <br /><span data-bind="text: status"></span>
-                      <br /><span data-bind="text: notes"></span>
+                            <a data-bind="click:function(){$parents[1].showItemIndex('#currentWeekModal')}">        
+                            <span data-bind="text: currentDayStart"></span> <span data-bind="text: currentDayStartTime"></span> - <span data-bind="text: currentDayEndTime"></span>
+                            </a>
+                            <br /><span data-bind="text: location"></span>, <span data-bind="text: revenueCenter"></span>
+                            <br /><span data-bind="text: job"></span>, <span data-bind="text: station"></span>
+                            <br /><span data-bind="text: status"></span>
+                            <br /><span data-bind="text: notes"></span>
                           </div>
                         </a>
                     </div>
@@ -71,7 +80,9 @@
                 <!-- ko foreach: $parent.futureScheduledDates -->
 
                 <div class="oj-panel oj-panel-alt2 schedule-filmstrip-item" data-bind="style: {display: getItemInitialDisplay($index())}">
+                    <a data-bind="click:function(){$parents[1].showItemIndex('#upcomingWeekModal')}">    
                     <span data-bind="text: futureDayStart"></span> <span data-bind="text: futureDayStartTime"></span> - <span data-bind="text: futureDayEndTime"></span>
+                    </a>
                     <br /><span data-bind="text: location"></span>, <span data-bind="text: revenueCenter"></span>
                     <br /><span data-bind="text: job"></span>, <span data-bind="text: station"></span>
                     <br /><span data-bind="text: status"></span>
@@ -84,19 +95,53 @@
         </div>
     </div>
         <div class="oj-row">
-            <div class="oj-col">
-                <h2>Availablity</h2>
-            </div>
-            <div class="oj-col">
-
-            </div>
-            <div class="oj-col">
-
-            </div>    
-            <div class="oj-col">
-
+            <div id="accordionPage" data-bind="ojComponent: {component: 'ojAccordion'}">
+                <div id="availability" data-bind="ojComponent: {component: 'ojCollapsible'}">
+                    <h3>Availability</h3>
+                    <div class="oj-sm-12">
+                        <h4>Minimum - Maximum Hours by Day</h4>
+                        <div data-bind="foreach: $parent.availability">
+                            <div>
+                                <span data-bind="text: day "></span> (<span data-bind="text: hoursavailablefrom"></span><span data-bind="visible: hoursavailableto > 0"><span data-bind="text: ' - ' + hoursavailableto"></span></span>)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="availablity" data-bind="ojComponent: {component: 'ojCollapsible'}">
+                    <h3>Days and Times</h3>
+                    <div>
+                        <h4>Unavailable</h4>
+                        <div data-bind="foreach: $parent.unavailable">
+                            <div>
+                                <span data-bind="text: day"></span>
+                                <span data-bind="visible: allday == 1">all day</span>
+                                <span data-bind="visible: allday == 0">
+                                    <span data-bind="text: starttime"></span> - <span data-bind="text: endtime"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <h4>Preferred</h4>
+                        <div data-bind="foreach: $parent.preferred">
+                            <div>
+                                <span data-bind="text: day"></span>
+                                <span data-bind="visible: allday == 1">all day</span>
+                                <span data-bind="visible: allday == 0">
+                                    <span data-bind="text: starttime"></span> - <span data-bind="text: endtime"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="schooldistrict" data-bind="ojComponent: {component: 'ojCollapsible'}">
+                    <h3>School District</h3>
+                    <div>
+                        <div data-bind="text: $parent.schooldistrict"></div>
+                    </div>
+                </div>
             </div>
     </div>
-<div data-bind="template: {name: 'partials/schedule-timecard-modal/schedule-timecard-modal-large'}"></div>
-<div data-bind="template: {name: 'partials/schedule-timecard-modal/time-off-requested-modale-large'}"></div>     
+<div data-bind="template: {name: 'profile/schedules-timecards/current-week-modal/current-week-modal-small'}"></div>
+<div data-bind="template: {name: 'profile/schedules-timecards/upcoming-week-modal/upcoming-week-modal-small'}"></div>
+<div data-bind="template: {name: 'profile/schedules-timecards/schedule-timecard-modal/schedule-timecard-modal-small'}"></div>
+<div data-bind="template: {name: 'profile/schedules-timecards/time-off-requested-modal/time-off-requested-modale-small'}"></div>     
 </div>

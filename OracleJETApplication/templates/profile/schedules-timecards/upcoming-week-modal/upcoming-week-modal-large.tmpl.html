@@ -1,0 +1,73 @@
+<div style="display:none" id="upcomingWeekModal" title="" data-bind="ojComponent:{component: 'ojDialog', initialVisibility: 'hide', rootAttributes: {class: 'scheduleModal-dimensions'}, 'position': {'my': 'start bottom', 'at': 'end+14 top'}}">
+    <div class="oj-dialog-header oj-helper-clearfix" aria-labelledby="dialogTitleId">
+        <span id="dialogTitleId" class="oj-dialog-title">
+            <h2>Shift Detail <span data-bind="text: $parent.firstName() + ' ' + $parent.lastName()"></span></h2>
+        </span>
+    </div>
+    <div class="oj-dialog-body">
+        <div class="oj-row">
+            <div class="oj-md-5 oj-col">
+                <div class="oj-row">
+                    <span data-bind="text: $parents[0].selectedSchedule().futureDayEnd"></span> 
+                    <span data-bind="text: '(' + $parents[0].selectedSchedule().futureDayStartTime + ' - ' + $parents[0].selectedSchedule().futureDayEndTime + ')'"></span>
+                    <div data-bind="text: $parents[0].selectedSchedule().location + ', ' + $parents[0].selectedSchedule().revenueCenter"></div>
+                    <div data-bind="text: $parents[0].selectedSchedule().job + ', ' + $parents[0].selectedSchedule().station"></div>
+                    <div data-bind="text:$parents[0].selectedSchedule().status"></div>
+                </div>
+                <div class="oj-row">
+                    <h4>Break Details</h4>
+                    <!-- ko foreach: $parent.breakDetails -->
+                    <div data-bind="text: breakStart + ' - ' + breakEnd + ' <' + totalBreak + '> '"></div>
+                    <!-- /ko -->
+                </div>
+                <div class="oj-row">
+                    <div class="oj-md-3 oj-col">
+                        <a id="anchor" href="#" data-bind="ojComponent: { component: 'ojButton' }">Clock In</a>
+                    </div>
+                    <div class="oj-md-5 oj-col">
+                        <a id="anchor" href="#" data-bind="ojComponent: { component: 'ojButton' }">Request Change</a>
+                    </div>
+                    <div class="oj-md-4 oj-col">
+                        <a id="anchor" href="#" data-bind="ojComponent: { component: 'ojButton' }">Move to Shift Pool</a>
+                    </div>
+                </div>
+            </div>
+            <div class="oj-md-7 oj-col">
+                <div class="oj-md-6 oj-col">
+                    <h3>Shift Notes From managers</h3>
+                </div>
+                <div class="oj-md-6 oj-col">
+                    <h3>Redbook Enttry</h3>
+                </div>
+            </div>
+        </div>
+        <div class="oj-row">
+            <div class="oj-md-8 oj-col">
+                <div id="tabs" data-bind="ojComponent:{component: 'ojTabs'}">
+                    <!-- tab bar -->
+                    <ul>
+                        <li><span>Servers</span></li>
+                        <li><span>Bar Tenders</span></li>
+                        <li><span>Managers</span></li>
+                        <li><span>Role</span></li>
+                    </ul>
+                    <div id="tabs-1">
+                        <h4>Servers</h4>
+                    </div>
+                    <div id="tabs-2">
+                        <h4>Bar Tenders</h4>
+                    </div>
+                    <div id="tabs-3">
+                       <h4>Managers</h4>
+                    </div>
+                    <div id="tabs-4">
+                        <h4>Role</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="oj-md-4 oj-col">
+                <h3>Reservations</h3>
+            </div>
+        </div>
+    </div>
+</div>
