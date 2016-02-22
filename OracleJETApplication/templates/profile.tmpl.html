@@ -45,7 +45,7 @@
             <ul class="profileStatusToolArea">
                 <li>
                     <h4>Home Store</h4>
-<!--                    <span data-bind="text: personProfile().homeStore"></span>-->                   
+                    <span data-bind="text: personProfile().homeStore"></span>                   
                     <a data-bind="click: handleOpen('#homeStoreDialog')">transfer <i class="fa fa-share"></i></a>
                     
                 <li>
@@ -155,4 +155,4 @@
 
 
 
-<div data-bind="template: {name: $root.medium() ? 'md_lg_xl_template' : 'sm_template'}"></div>
+<div class="templateArea" data-bind="template: {name: $root.medium() ? 'md_lg_xl_template' : 'sm_template'}"></div>
