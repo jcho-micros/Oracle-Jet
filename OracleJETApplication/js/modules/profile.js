@@ -12,7 +12,8 @@ define([
     'ojs/ojcollapsible', 
     'ojs/ojcheckboxset', 
     'ojs/ojradioset',
-    'ojs/ojdatetimepicker', 
+    'ojs/ojdatetimepicker',
+    'ojs/ojinputnumber',
     'ojs/ojselectcombobox',
     'ojs/ojchart'],
         function (oj, ko, jsonData, moment)
@@ -215,7 +216,30 @@ define([
                     self.hoursOver = ko.observable(0.0);
                     self.overtimeHours = ko.observable(0.0);
                     self.val = ko.observableArray(["current"]);
+                    //Schedule Profile Detail 
+                    //Schedule & Times section
+                    self.districts = ko.observableArray(["none"]);
+                    self.employeeAvailabilityList = ko.observable(self.personProfile().availability);
+                    self.timeList = ko.observableArray(timeSegment);
+                    self.timeSegment = ko.observable(self.timeList());
+                    self.tabSelected = ko.observable('oj-selected');
+                    self.weekList = ko.observableArray(weekOfDay);
+                    self.weekOfDay = ko.observable(self.weekList());
+                    self.daysAndTimesList = ko.observableArray(self.personProfile().daysandtimes);
+                    self.value = ko.observable(oj.IntlConverterUtils.dateToLocalIso(new Date(2016, 0, 1)));
+                    self.incrementValue = ko.observable(["00:30:00:00"]);
+                    //numeric iput
+                    self.hrMax = ko.observable(12);
+                    self.hrMin = ko.observable(00);
+                    self.hrStep = ko.observable(1);
+                    self.minMax = ko.observable(60);
+                    self.minMin = ko.observable(00);
+                    self.minStep = ko.observable(10);
 
+                    //add-employee Availaibilty fields
+                    
+                    self.minWeekTotal = ko.observable(self.minDateNumberSelection('hoursavailablefrom'));
+                    self.maxWeekTotal = ko.observable(self.minDateNumberSelection('hoursavailableto'));
                     //Home Store Modal
                     self.enterpriseName = ko.observable("W");
                     self.location1Name = ko.observable("CA");
@@ -277,9 +301,42 @@ define([
                     self.workpermitexpiration = ko.observable(self.getBasicFormattedDate('workpermitexpiration'));
                     self.workpermitupload = ko.observable(self.personProfile().workpermitupload);
                     self.selectedSchedule = ko.observableArray([]);
+                    
 
                 };
+                //Add item to Time Segment
+                self.addSegmentTime = function() {
+                  self.daysAndTimesList.push(
+                          {
+                            timesegment : "unavailable",
+                            day : "sunday",
+                            allday : "no",
+                            starttime : "T11:00:00-05:00",
+                            endtime : "T16:00:00-05:00"
+                          }
+                    )
+                };
+                //Removes item from Time Segment
+                self.removeSegmentTime = function(daysAndTimesList){
+                  self.daysAndTimesList.remove(daysAndTimesList);  
+                };
+                
                 //Loops throught the array to match the value to json value and return the nameas
+                self.minDateNumberSelection = function(timeRange){
+                    type = self.employeeAvailabilityList();
+                    var sum = 0;
+                        if(timeRange == 'hoursavailablefrom'){
+                            for(i=0; i< type.length; i++){
+                                sum += parseInt(type[i].hoursavailablefrom);
+                            }
+                        }
+                        if(timeRange == 'hoursavailableto'){
+                            for(i=0; i< type.length; i++){
+                                sum += parseInt(type[i].hoursavailableto);
+                            }
+                        }
+                    return sum;
+                };
                 self.identityfilterSelectedType = function() {
                         type = self.identityTypes();
                         selectedType = self.identifydocumenttype();
@@ -313,6 +370,20 @@ define([
                         }
                        
                     };
+                var timeSegment = [
+                    {name: 'Unavailable', value: 'unavailable'},
+                    {name: 'Preferred', value: 'preferred'},
+                    {name: 'On-Call', value: 'oncall'}
+                ];
+                var weekOfDay = [
+                    {name: 'Sunday', value: 'sunday'},
+                    {name: 'Monday', value: 'monday'},
+                    {name: 'Tuesday', value: 'tuesday'},
+                    {name: 'Wednesday', value: 'wednesday'},
+                    {name: 'Thursday', value: 'thursday'},
+                    {name: 'Friday', value: 'friday'},
+                    {name: 'Saturday', value: 'saturday'},
+                ];
                 var identityTypes = [
                     {name: 'None',  value: 'none'},
                     {name: 'List A',  value: 'list-a'},

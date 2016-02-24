@@ -274,57 +274,37 @@
          "status" : "Not Schdeuled",
          "notes" : "Requested Off"
       }],
-        "availability" : [{
-        "day" : "Sunday",
-        "hoursavailablefrom" : 0,
-        "hoursavailableto" : 0
-      },{
-        "day" : "Monday",
-        "hoursavailablefrom" : 4,
-        "hoursavailableto" : 6
-      },{
-        "day" : "Tuesday",
-        "hoursavailablefrom" : 0,
-        "hoursavailableto" : 2
-      },{
-        "day" : "Wednesday",
-        "hoursavailablefrom" : 4,
-        "hoursavailableto" : 12
-      },{
-        "day" : "Thursday",
-        "hoursavailablefrom" : 0,
-        "hoursavailableto" : 0
-      },{
-        "day" : "Friday",
-        "hoursavailablefrom" : 2,
-        "hoursavailableto" : 4
-      },{
-        "day" : "Saturday",
-        "hoursavailablefrom" : 4,
-        "hoursavailableto" : 12
-      }],
-      "unavailable" : [{
-        "day" : "Monday",
-        "allday" : 1,
-        "starttime" : "",
-        "endtime" : ""
-      },{
-        "day" : "Tuesday",
-        "allday" : 0,
-        "starttime" : "3:00 p.m.",
-        "endtime" : "11:00 p.m."
-      }],
-      "preferred" : [{
-        "day" : "Wednesday",
-        "allday" : 1,
-        "starttime" : "",
-        "endtime" : ""
-      },{
-        "day" : "Saturday",
-        "allday" : 0,
-        "starttime" : "3:00 p.m.",
-        "endtime" : "11:00 p.m."
-      }],
+      "daysandtimes" : [{
+            "timesegment" : "unavailable",
+            "day" : "monday",
+            "allday" : "yes",
+            "starttime" : "",
+            "endtime" : ""
+            },{
+            "timesegment" : "unavailable",
+            "day" : "tuesday",
+            "allday" : "no",
+            "starttime" : "T15:00:00-05:00",
+            "endtime" : "T23:00:00-05:00"
+            },{
+            "timesegment" : "preferred",
+            "day" : "wednesday",
+            "allday" : "yes",
+            "starttime" : "",
+            "endtime" : ""
+            },{
+            "timesegment" : "preferred",
+            "day" : "thursday",
+            "allday" : "yes",
+            "starttime" : "",
+            "endtime" : ""
+            },{
+            "timesegment" : "preferred",
+            "day" : "saturday",
+            "allday" : "no",
+            "starttime" : "T14:00:00-05:00",
+            "endtime" : "T23:00:00-05:00"
+        }],
       "schooldistrict" : "None",
       "comps" : [ {
          "bonus" : 900,

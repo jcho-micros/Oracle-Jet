@@ -96,9 +96,9 @@ require(['ojs/ojcore',
                 label: 'Gift & Loyalty',
                 value: 'gift-loyalty'
             },
-            'reports-charts': {
-                label: 'Reports & Charts',
-                value: 'reports-charts'
+            'reports-analytics': {
+                label: 'Reporting & Analytics',
+                value: 'reports-analytics'
             },
             'enterprise': {
                 label: 'Mike Rose Cafe',
@@ -149,7 +149,7 @@ require(['ojs/ojcore',
                 {name: 'Labor', id: 'labor', iconClass: 'fa fa-briefcase oj-navigationlist-item-icon'},
                 {name: 'Inventory', id: 'inventory', iconClass: 'fa fa-dropbox oj-navigationlist-item-icon'},
                 {name: 'Gift & Loyalty', id: 'gift-loyalty', iconClass: 'fa fa-gift oj-navigationlist-item-icon'},
-                {name: 'Reports & Charts', id: 'reports-charts', iconClass: 'fa fa-bar-chart oj-navigationlist-item-icon'},
+                {name: 'Reporting & Analytics', id: 'reports-analytics', iconClass: 'fa fa-bar-chart oj-navigationlist-item-icon'},
                 {name: 'Mike Rose Cafe', id: 'enterprise', iconClass: 'fa fa-building-o oj-navigationlist-item-icon'},
                 {name: 'People', id: 'people', iconClass: 'fa fa-users oj-navigationlist-item-icon'}
                 ];

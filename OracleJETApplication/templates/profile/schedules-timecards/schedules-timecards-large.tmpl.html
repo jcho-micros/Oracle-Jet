@@ -4,7 +4,7 @@
             <h2> <span id="currentPage" data-bind="text: label"></span> <a href="#"><i class="fa fa-question-circle"></i></a></h2>
         </div>
         <div class="oj-col oj-sm-2 oj-lg-text-align-end">
-            <a data-bind="click: function(){$parent.handleOpen('#empDialog')}" style="line-height:39px;">Edit <i class="fa fa-pencil-square-o"></i></a>
+            <a data-bind="click: function(){$parent.handleOpen('#scheduleDetailDialog')}" style="line-height:39px;">edit <i class="fa fa-pencil-square-o"></i></a>
         </div>
     </div>
     <div class="oj-row">
@@ -23,8 +23,8 @@
                 </div>
                 <div class="oj-md-6 oj-col emailAndPringDiv">
                     <ul class="scheduleToolArea">
-                        <li id="email"><a href="#"><span class="fa fa-envelope-o"> Email</span></a></li>
-                        <li id="print"><a href="#"><span class="fa fa-print"> Print</span></a></li>
+                        <li id="email"><a href="#"><span class="fa fa-envelope-o"></span> email</a></li>
+                        <li id="print"><a href="#"><span class="fa fa-print"></span> print</a></li>
                     </ul>
                 </div>
 
@@ -62,8 +62,8 @@
                 </div>
                 <div class="oj-md-6 oj-col emailAndPringDiv">
                     <ul class="scheduleToolArea"> 
-                        <li id="email"><a href="#"><span class="fa fa-envelope-o"> Email</span></a></li>
-                        <li id="print"><a href="#"><span class="fa fa-print"> Print</span></a></li>
+                        <li id="email"><a href="#"><span class="fa fa-envelope-o"></span> email</a></li>
+                        <li id="print"><a href="#"><span class="fa fa-print"></span> print</a></li>
                     </ul>
                 </div>
 
@@ -130,6 +130,7 @@
                     </div>
             </div>  
     </div>
+<div data-bind="template: {name: 'partials/employee-schdeule-detail-edit/employee-schedule-detail-large'}"></div>
 <div data-bind="template: {name: 'profile/schedules-timecards/current-week-modal/current-week-modal-large'}"></div>
 <div data-bind="template: {name: 'profile/schedules-timecards/upcoming-week-modal/upcoming-week-modal-large'}"></div>
 <div data-bind="template: {name: 'profile/schedules-timecards/schedule-timecard-modal/schedule-timecard-modal-large'}"></div>
