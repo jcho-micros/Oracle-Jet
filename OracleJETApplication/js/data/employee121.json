@@ -308,31 +308,33 @@
             "day" : "monday",
             "allday" : "yes",
             "starttime" : "",
-            "endtime" : ""
+            "fullstarttime" : "",
+            "endtime" : "",
+            "fullendtime" : ""
             },{
             "timesegment" : "unavailable",
             "day" : "tuesday",
             "allday" : "no",
             "starttime" : "T15:00:00-05:00",
-            "endtime" : "T23:00:00-05:00"
-            },{
-            "timesegment" : "preferred",
-            "day" : "wednesday",
-            "allday" : "yes",
-            "starttime" : "",
-            "endtime" : ""
+            "fullstarttime" : "2016-02-26T15:23:00-05:00",
+            "endtime" : "T23:00:00-05:00",
+            "fullendtime" : "2016-02-26T23:00:00-05:00"
             },{
             "timesegment" : "preferred",
             "day" : "thursday",
             "allday" : "yes",
             "starttime" : "",
-            "endtime" : ""
+            "fullstarttime" : "",
+            "endtime" : "",
+            "fullendtime" : ""
             },{
             "timesegment" : "preferred",
             "day" : "saturday",
             "allday" : "no",
             "starttime" : "T14:00:00-05:00",
-            "endtime" : "T23:00:00-05:00"
+            "fullstarttime" : "2016-02-26T14:00:00-05:00",
+            "endtime" : "T23:00:00-05:00",
+            "fullendtime" : "2016-02-26T23:00:00-05:00"
         }],
       "schooldistrict" : "None",
       "comps" : [ {
