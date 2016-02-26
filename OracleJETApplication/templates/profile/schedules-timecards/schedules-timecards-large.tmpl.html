@@ -103,25 +103,25 @@
             <div class="oj-md-4 oj-col">
                 <h3>Days and Times</h3>
                        <h4>Unavailable</h4>
-                        <div data-bind="foreach: $parent.unavailable">
-                            <div>
+                       <div data-bind="foreach: $parent.daysAndTimeDisplay">
+                           <div data-bind="visible: timesegment == 'unavailable'">
                                 <span data-bind="text: day"></span>
-                                <span data-bind="visible: allday == 1">all day</span>
-                                <span data-bind="visible: allday == 0">
-                                    <span data-bind="text: starttime"></span> - <span data-bind="text: endtime"></span>
+                                <span data-bind="visible: allday == 'yes'">all day</span>
+                                <span data-bind="visible: allday == 'no'">
+                                    <span data-bind="text: $parents[1].basicTimeFormat(fullstarttime)"></span> - <span data-bind="text: $parents[1].basicTimeFormat(fullendtime)"></span>
                                 </span>
                             </div>
-                        </div>
+                       </div>
                         <h4>Preferred</h4>
-                        <div data-bind="foreach: $parent.preferred">
-                            <div>
+                            <div data-bind="foreach: $parent.daysAndTimeDisplay">
+                                <div data-bind="visible: timesegment == 'preferred'">
                                 <span data-bind="text: day"></span>
-                                <span data-bind="visible: allday == 1">all day</span>
-                                <span data-bind="visible: allday == 0">
-                                    <span data-bind="text: starttime"></span> - <span data-bind="text: endtime"></span>
-                                </span>
+                                    <span data-bind="visible: allday == 'yes'">all day</span>
+                                    <span data-bind="visible: allday == 'no'">
+                                        <span data-bind="text: $parents[1].basicTimeFormat(fullstarttime)"></span> - <span data-bind="text: $parents[1].basicTimeFormat(fullendtime)"></span>
+                                    </span>
+                                 </div>
                             </div>
-                        </div>
             </div>
             <div class="oj-md-4 oj-col">
                 <h3>School District</h3>

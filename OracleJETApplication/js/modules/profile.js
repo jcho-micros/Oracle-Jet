@@ -202,7 +202,6 @@ define([
 
                     //This variable is for Schedule time  card Current schedule Dates Nested
                     self.currentScheduledDates = self.personProfile().currentScheduledDates;
-               
                     self.futureScheduledDates = self.personProfile().futureScheduledDates;
                     self.currentDayStart = ko.observable(self.getFormattedDate('currentDayStart'));
                     self.currentDayEnd = ko.observable(self.getFormattedDate('currentDayEnd'));
@@ -234,9 +233,11 @@ define([
                     self.weekList = ko.observableArray(weekOfDay);
                     self.weekOfDay = ko.observable(self.weekList());
                     self.daysAndTimesList = ko.observableArray(self.personProfile().daysandtimes);
+                    self.daysAndTimeDisplay = ko.observableArray(self.personProfile().daysandtimes);
                     self.value = ko.observable(oj.IntlConverterUtils.dateToLocalIso(new Date(2016, 0, 1)));
                     self.incrementValue = ko.observable(["00:30:00:00"]);
-                    self.allDay = ko.observable();
+//                    self.allDay = ko.observable();
+
 
 
                     //numeric iput
@@ -311,7 +312,7 @@ define([
                     self.workpermitnumber = ko.observable(self.personProfile().workpermitnumber);
                     self.workpermitexpiration = ko.observable(self.getBasicFormattedDate('workpermitexpiration'));
                     self.workpermitupload = ko.observable(self.personProfile().workpermitupload);
-                    self.selectedSchedule = ko.observableArray([]););
+                    self.selectedSchedule = ko.observableArray([]);
 
                 };
                 //Find the Tab State if allday is true or false to display the correc tab selection
@@ -525,7 +526,15 @@ define([
                     }
                     return newDate;
                 };
-
+                //this converts the date function format to a display time to hh:mm AM/PM
+                self.basicTimeFormat = function(time){
+                    var date =  new Date(time);
+                    var hour = date.getHours() - (date.getHours() >= 12 ? 12 : 0);
+                    var minutes = date.getMinutes();
+                    var period = date.getHours() >= 12 ? 'PM' : 'AM';
+                    if (minutes == 0) minutes = '0'+minutes;
+                    return hour + ':' + minutes + ' ' +period;
+                };
                 /////// JOHN insert for schedule
                 //Analytics
                 function loadPerfandPotenialData() {
