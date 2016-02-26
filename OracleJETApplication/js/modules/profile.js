@@ -25,7 +25,14 @@ define([
 
                 //Employee Dialog
                 self.handleOpen =  function(dialog) {
-                    $(dialog).ojDialog("open");
+                    if(dialog == "#scheduleDetailDialog"){
+                        //self.optionChangeHandler();
+                        $(dialog).ojDialog("open");
+                    }else{
+                        $(dialog).ojDialog("open");
+                    }
+                    
+                    
                 };
 
                 self.handleClose =  function(dialog) {
@@ -222,12 +229,16 @@ define([
                     self.employeeAvailabilityList = ko.observable(self.personProfile().availability);
                     self.timeList = ko.observableArray(timeSegment);
                     self.timeSegment = ko.observable(self.timeList());
-                    self.tabSelected = ko.observable('oj-selected');
+                    self.tab1Selected = ko.observableArray(false);
+                    self.tab2Selected = ko.observableArray(false);
                     self.weekList = ko.observableArray(weekOfDay);
                     self.weekOfDay = ko.observable(self.weekList());
                     self.daysAndTimesList = ko.observableArray(self.personProfile().daysandtimes);
                     self.value = ko.observable(oj.IntlConverterUtils.dateToLocalIso(new Date(2016, 0, 1)));
                     self.incrementValue = ko.observable(["00:30:00:00"]);
+                    self.allDay = ko.observable();
+
+
                     //numeric iput
                     self.hrMax = ko.observable(12);
                     self.hrMin = ko.observable(00);
@@ -300,9 +311,33 @@ define([
                     self.workpermitnumber = ko.observable(self.personProfile().workpermitnumber);
                     self.workpermitexpiration = ko.observable(self.getBasicFormattedDate('workpermitexpiration'));
                     self.workpermitupload = ko.observable(self.personProfile().workpermitupload);
-                    self.selectedSchedule = ko.observableArray([]);
-                    
+                    self.selectedSchedule = ko.observableArray([]););
 
+                };
+                //Find the Tab State if allday is true or false to display the correc tab selection
+                self.tabStatusResult = function(status){
+                    var statusSelected = [status];
+                    for(var i=0; i < statusSelected.length; i++){
+                        if(statusSelected[i] == 'yes'){
+                            return true;
+                        }else{
+                            return false;
+                        }
+                    }
+                };
+                //Finds the current State to return yes or no
+                self.allDayStatusResult = function(status){
+                    var statusSelected = [status];
+                    for(var i=0; i < statusSelected.length; i++){
+                        return statusSelected[i];
+                    }
+                };
+                //Finds the Week of day to apply value to the Select pulldown
+                self.weekCompleteListResult = function(day) {
+                    var daySelected = [day];
+                    for(var index=0; index < daySelected.length; index++){
+                        return daySelected[index];
+                    };
                 };
                 //Add item to Time Segment
                 self.addSegmentTime = function() {
@@ -317,8 +352,15 @@ define([
                     )
                 };
                 //Removes item from Time Segment
-                self.removeSegmentTime = function(daysAndTimesList){
-                  self.daysAndTimesList.remove(daysAndTimesList);  
+                self.toggleTabsSections = function () {
+                    self.sectionsState(!self.sectionsState());
+                    if(self.sectionsState()==true){
+                        $('.mobileNavTitleArea .fa-chevron-down').addClass('fa-chevron-up').removeClass('fa-chevron-down');
+                    }else if(self.sectionsState()==false){
+                        $('.mobileNavTitleArea .fa-chevron-up').addClass('fa-chevron-down').removeClass('fa-chevron-up');
+                        
+                    }
+                    
                 };
                 
                 //Loops throught the array to match the value to json value and return the nameas
@@ -418,6 +460,7 @@ define([
 
                 ];
                 self.breakDetails = ko.observableArray(breakDetails);
+                
                 self.showItemIndex = function (dialog) {
                     var data = ko.dataFor(event.target);
                     if (data) {
@@ -568,6 +611,13 @@ define([
                 //Workaround to load ID first then Time off Request card dialog box when coming from another page
                 //example ?root=profile&emp=103&trueExternalPayroll
                 self.autoDialog("&trueExternalPayroll", "#externalPayrollDialog");
+                //Workaround to load ID first then Time off Request card dialog box when coming from another page
+                //example ?root=profile&emp=103&trueExternalPayroll
+                self.autoDialog("&trueScheduleDetail", "#scheduleDetailDialog");
+                //Workaround to load ID first then Time off Request card dialog box when coming from another page
+                //example ?root=profile&emp=103&trueExternalPayroll
+                self.autoDialog("&trueCurrentWeekSchedule", "#currentWeekModal");
+                
                 
                 
                 
