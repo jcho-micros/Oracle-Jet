@@ -237,6 +237,7 @@ define([
                     self.value = ko.observable(oj.IntlConverterUtils.dateToLocalIso(new Date(2016, 0, 1)));
                     self.incrementValue = ko.observable(["00:30:00:00"]);
 //                    self.allDay = ko.observable();
+                    self.filterWeek = ko.observable(oj.IntlConverterUtils.dateToLocalIso(new Date(2013, 0, 1)));
 
 
 
@@ -626,6 +627,9 @@ define([
                 //Workaround to load ID first then Time off Request card dialog box when coming from another page
                 //example ?root=profile&emp=103&trueExternalPayroll
                 self.autoDialog("&trueCurrentWeekSchedule", "#currentWeekModal");
+                //Workaround to load ID first then Time off Request card dialog box when coming from another page
+                //example ?root=profile&emp=103&trueExternalPayroll
+                self.autoDialog("&trueScheduleEdit", "#scheduleDetailDialog");
                 
                 
                 

@@ -19,7 +19,7 @@
         <div class="oj-md-12">
             <div class="oj-row">
                 <div class="oj-md-6 oj-col shiftPoolDiv">
-                   <a href="#" class="shiftPoolLink">Shift Pool</a>
+                   <a data-bind="click: $parent.handleOpen('#shiftPoolModal')" class="shiftPoolLink">Shift Pool</a>
                 </div>
                 <div class="oj-md-6 oj-col emailAndPringDiv">
                     <ul class="scheduleToolArea">
@@ -58,7 +58,7 @@
         <div class="oj-md-12">
             <div class="oj-row">
                 <div class="oj-md-6 oj-col shiftPoolDiv">
-                   <a href="#" class="shiftPoolLink">Shift Pool</a>
+                   <a data-bind="click: $parent.handleOpen('#shiftPoolModal')" class="shiftPoolLink">Shift Pool</a>
                 </div>
                 <div class="oj-md-6 oj-col emailAndPringDiv">
                     <ul class="scheduleToolArea"> 
@@ -130,6 +130,7 @@
                     </div>
             </div>  
     </div>
+<div data-bind="template: {name: 'profile/schedules-timecards/shift-pool-modal/shift-pool-modal-large'}"></div>
 <div data-bind="template: {name: 'partials/employee-schdeule-detail-edit/employee-schedule-detail-large'}"></div>
 <div data-bind="template: {name: 'profile/schedules-timecards/current-week-modal/current-week-modal-large'}"></div>
 <div data-bind="template: {name: 'profile/schedules-timecards/upcoming-week-modal/upcoming-week-modal-large'}"></div>

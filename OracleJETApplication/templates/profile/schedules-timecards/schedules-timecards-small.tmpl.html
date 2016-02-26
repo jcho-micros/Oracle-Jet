@@ -4,7 +4,7 @@
              <a style="line-height:39px;" data-bind="attr:{href: 'index.html?root=people'}">Back to Search</a>
         </div>
         <div class="oj-col oj-sm-2">
-            <div data-bind="click: $parent.handleOpen('#empDialog')" style="line-height:39px;">Edit <i class="fa fa-pencil-square-o"></i></div>
+            <div data-bind="click: $parent.handleOpen('#scheduleDetailDialog')" style="line-height:39px;">Edit <i class="fa fa-pencil-square-o"></i></div>
         </div>
     </div>
         <div class="oj-row">
@@ -140,6 +140,8 @@
                 </div>
             </div>
     </div>
+<div data-bind="template: {name: 'profile/schedules-timecards/shift-pool-modal/shift-pool-modal-small'}"></div>
+<div data-bind="template: {name: 'partials/employee-schdeule-detail-edit/employee-schedule-detail-small'}"></div>
 <div data-bind="template: {name: 'profile/schedules-timecards/current-week-modal/current-week-modal-small'}"></div>
 <div data-bind="template: {name: 'profile/schedules-timecards/upcoming-week-modal/upcoming-week-modal-small'}"></div>
 <div data-bind="template: {name: 'profile/schedules-timecards/schedule-timecard-modal/schedule-timecard-modal-small'}"></div>

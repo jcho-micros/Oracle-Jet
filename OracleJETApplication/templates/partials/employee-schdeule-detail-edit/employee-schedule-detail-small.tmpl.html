@@ -1,13 +1,161 @@
-<div style="display:none" id="scheduleDetailDialog" title="" data-bind="ojComponent:{component: 'ojDialog', initialVisibility: 'hide', rootAttributes: {class: 'scheduleModal-dimensions'}, 'position': {'my': 'start bottom', 'at': 'end+14 top'}}">
+<div style="display:none" id="scheduleDetailDialog" title="" data-bind="ojComponent:{
+        component: 'ojDialog', 
+        initialVisibility: 'hide', 
+        rootAttributes: {style: 'width: 375px; height: 627px;'}, 
+        'position': {'my': 'start bottom', 'at': 'end+14 top'}}">
      <!-- Note: the user must provide the aria-labelledby attribute for the dialog to be accessible -->
      <div class="oj-dialog-header oj-helper-clearfix" aria-labelledby="dialogTitleId">
         <span id="dialogTitleId" class="oj-dialog-title">
+            <h2>
+            Edit Availablity, Days & Times, and School District for 
             <span data-bind="text: $parent.firstName"></span>
             <span data-bind="text: $parent.lastName"></span>
+            </h2>
 
         </span>
      </div>
     <div class="oj-dialog-body">
-        hello
+        <div class="oj-row">
+            <div class="oj-sm-12 oj-col">
+                <h3>Total Hours</h3>
+            </div>
+        </div>
+        <div class="oj-row">
+            <div class="oj-sm-4 oj-col">
+                &nbsp;
+            </div>
+            <div class="oj-sm-4 oj-col">
+                <strong>Minimum</strong>
+            </div>
+            <div class="oj-sm-4 oj-col">
+                <strong>Maximum</strong>
+            </div>
+        </div>
+        <div class="oj-row">
+            <div class="oj-sm-4 oj-col">
+                <strong>Week Total</strong>
+            </div>
+            <div class="oj-sm-4 oj-col">
+                <input class="availabilityInputTotal" data-bind="value: $parent.minWeekTotal, ojComponent: {component: 'ojInputText',  readOnly: true}" />
+            </div>
+            <div class="oj-sm-4 oj-col">
+                <input class="availabilityInputTotal" data-bind="value: $parent.maxWeekTotal, ojComponent: {component: 'ojInputText', readOnly: true}" />
+            </div>
+        </div>
+        <div class="oj-row">
+        <!-- ko foreach: $parent.employeeAvailabilityList -->
+            <div class="oj-sm-4 oj-col">
+                <div data-bind="text: day"></div>
+            </div>
+            <div class="oj-sm-4 oj-col">
+                <input data-bind="value: hoursavailablefrom, ojComponent: {component: 'ojInputText', converter: {type: 'number', options:{style:'decimal', minimumIntegerDigits: 1, minimumFractionDigits:1, maximumFractionDigits: 1}}}" />
+            </div>
+            <div class="oj-sm-4 oj-col">
+                <input data-bind="value: hoursavailableto, ojComponent: {component: 'ojInputText', converter: {type: 'number', options:{style:'decimal', minimumIntegerDigits: 1, minimumFractionDigits:1, maximumFractionDigits: 1}}}" />
+            </div>
+        <!-- /ko -->
+        </div>
+        <div class="oj-row">
+            <div class="oj-sm-12">
+                <h4>Days and Times</h4>
+            </div>
+            <hr class="oj-sm-12" />
+        </div>
+        <div class="oj-row">
+<!-- ko foreach: $parent.daysAndTimesList -->
+        <div class="oj-sm-12">
+            <div class="oj-sm-12 oj-col vertical-align-items-stretch">
+                <label for="basicSelect">Time Segment</label>
+                <select id="basicSelect" data-bind="ojComponent: {component: 'ojSelect', value: timesegment}">
+                <!-- ko foreach: $parents[1].timeList() -->
+                <option data-bind="value: value, text: name"></option>
+                <!-- /ko -->
+                </select>
+            </div>
+            <div class="oj-row">
+                <div class="oj-sm-12">
+                    <div id="tabs" data-bind="ojComponent:{component: 'ojTabs', selected: $parents[1].tabStatusResult(allday) ? 'tabs-1' : 'tabs-2'}">
+                        <ul>
+                            <li id="day"><span>Day</span></li>
+                            <li id="partial"><span>Partial</span></li>
+                        </ul>
+
+                        <div id="tabs-1">
+                            <div class="oj-sm-12">
+                                <label>Day of Week</label><br />
+                                <select id="alldayweek" data-bind="ojComponent: {component: 'ojSelect', value: $parents[1].weekCompleteListResult(day)}">
+                                <!-- ko foreach: $parents[1].weekOfDay() -->
+                                <option data-bind="value: value, text: name"></option>
+                                <!-- /ko -->
+                                </select>
+                            </div>
+                        </div>
+                        <div id="tabs-2">
+                            <div class="oj-sm-12">
+                                <div class="oj-row">
+                                    <div class="oj-sm-12">
+                                        <div class="oj-sm-12">
+                                            <label>Start of Week</label>
+                                        </div>
+                                        <div class="oj-sm-12">
+                                            <select id="startWeekSelect" data-bind="ojComponent: {component: 'ojSelect', value: $parents[1].weekCompleteListResult(day)}">
+                                            <!-- ko foreach: $parents[1].weekOfDay() -->
+                                            <option data-bind="value: value, text: name"></option>
+                                            <!-- /ko -->
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="oj-sm-12">
+                                    <div class="oj-sm-12">
+                                        <label>Start Time</label>
+                                    </div>
+                                    <div class="oj-sm-12">
+                                        <input id="starttime" data-bind="ojComponent: {component: 'ojInputTime', 
+                                              value: starttime, 
+                                              timePicker: {
+                                              timeIncrement: $parents[1].incrementValue()[0]}}"/>
+                                    </div>
+                                </div>
+                                <div class="oj-sm-12">&nbsp; </div>
+                                <div class="oj-sm-12">
+                                    <div class="oj-sm-12">
+                                        <label>End of Week</label>
+                                    </div>
+                                    <div class="oj-sm-12">
+                                        <select id="startWeekSelect" data-bind="ojComponent: {component: 'ojSelect', value: $parents[1].weekCompleteListResult(day)}">
+                                        <!-- ko foreach: $parents[1].weekOfDay() -->
+                                        <option data-bind="value: value, text: name"></option>
+                                        <!-- /ko -->
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="oj-sm-12">
+                                    <div class="oj-sm-12">
+                                        <label>Finish Time</label>
+                                    </div>
+                                    <div class="oj-sm-12">
+                                        <input id="starttime" data-bind="ojComponent: {component: 'ojInputTime', 
+                                              value: endtime, 
+                                              timePicker: {
+                                              timeIncrement: $parents[1].incrementValue()[0]}}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<hr class="oj-sm-12" />
+<!-- /ko -->
+        </div>
+        
+        
+        
+        
+        
+        
     </div>
 </div>
