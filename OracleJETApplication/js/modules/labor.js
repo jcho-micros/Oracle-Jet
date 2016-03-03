@@ -88,7 +88,7 @@ define([
                 this.router.dispose();
                 this.router = null;
             };
-            self.pageHeading = ko.observable("Labor");
+            self.pageHeading = ko.observable("Labor Management");
             self.pageHeadingIconClass = ko.observable('fa fa-briefcase');
             self.organizationName = ko.observable("Micros");
             self.region = ko.observable("South East");

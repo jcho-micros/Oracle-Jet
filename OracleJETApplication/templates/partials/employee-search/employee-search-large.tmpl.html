@@ -1,22 +1,24 @@
 <!--Linked to people.js through modules and template bindings-->
 <div class="oj-row">
-    <div class="oj-md-12 oj-lg-8 oj-col">
+    <div class="oj-md-12 oj-lg-8 oj-col searchWrapper">
         <div class="searchTitle">
             <h2>Search Criteria</h2> <a href="">view all employees</a>
         </div>
         <form data-bind="submit: filteredAllPeople" id="peopleSearchForm">
             <div class="oj-row">
                 <div class="oj-md-3 oj-col">
-                    <label for="payrollid">Payroll ID</label>
-                    <input id="payrollid" data-bind="ojComponent: {component: 'ojInputText', value:'', help: {definition: helpDef()}}">
-                </div>
-                <div class="oj-md-3 oj-col">
-                    <label for="firstname">First Name</label>
+                    <label for="firstname">Employee Name</label>
                     <input placeholder="search" id="firstname" data-bind="value: firstNameSearch, ojComponent: {component: 'ojInputText'}"/>
                 </div>
                 <div class="oj-md-3 oj-col">
-                    <label for="lastname">Last Name</label>
-                    <input id="lastname" data-bind="ojComponent: {component: 'ojInputText', value:'', help: {definition: helpDef()}}">
+                    <label for="basicSelect">Location</label>
+                    <select id="basicSelect" data-bind="ojComponent: {component: 'ojSelect', value: val, rootAttributes: {style:'max-width:20em'}}">
+                        <option value="IE">Internet Explorer</option>
+                        <option value="FF">Firefox</option>
+                        <option value="CH">Chrome</option>
+                        <option value="OP">Opera</option>
+                        <option value="SA">Safari</option>
+                    </select>
                 </div>
                 <div class="oj-md-3 oj-col">
                     <label for="basicSelect">Home Store</label>
@@ -28,40 +30,35 @@
                         <option value="SA">Safari</option>
                     </select>
                 </div>
+                <div class="oj-md-3 oj-col">
+                    &nbsp;
+                </div>
             </div>
             <div class="oj-row">
                  <div class="oj-md-6 oj-col checkboxWrapper">
-                    <label id="mainlabelid">STATUS</label>
-                    <div id="checkboxSetId" aria-labelledby="mainlabelid" data-bind="ojComponent: {
-                                          component: 'ojCheckboxset',
-                                          value: currentStatus}">
-                        <span class="oj-choice-row">
-                                              <input id="active" type="checkbox" value="Active">
-                                              <label for="active">Active</label>
-                                            </span>
-                        <span class="oj-choice-row">
-                                              <input id="inactivesuspended" type="checkbox" value="Inactive-Suspended">
-                                              <label for="inactivesuspended">Inactive-Suspended</label>
-                                            </span>
-                        <span class="oj-choice-row">
-                                              <input id="inactiveterm" type="checkbox" value="Inactive-Terminated">
-                                              <label for="inactiveterm">Inactive-Terminated</label>
-                                            </span>
+                     <label id="formatset">STATUS</label>
+                    <div id="formatset" 
+                       data-bind="ojComponent: {component: 'ojButtonset', checked: formats(), 
+                                                optionChange: handleFormatChange}"
+                       aria-controls="formattedText">
+                      <label for="active">Active</label>
+                      <input type="checkbox" value="active" id="active"/>
+                      <label for="inactive-suspended">Inactive-Suspended</label>
+                      <input type="checkbox" value="inactive-suspended" id="inactive-suspended"/>
+                      <label for="inactive-terminated">Inactive-Terminated</label>
+                      <input type="checkbox" value="inactive-terminated" id="inactive-terminated"/>
                     </div>
                 </div>
                 <div class="oj-md-6 oj-col checkboxWrapper">
-                    <label id="mainlabelid">MORE OPTIONS</label>
-                    <div id="checkboxSetId" aria-labelledby="mainlabelid" data-bind="ojComponent: {
-                                          component: 'ojCheckboxset',
-                                          value: currentStatus}">
-                        <span class="oj-choice-row">
-                                              <input id="minor" type="checkbox" value="Minor">
-                                              <label for="minor">Minor</label>
-                                            </span>
-                        <span class="oj-choice-row">
-                                              <input id="termLOA" type="checkbox" value="Included Terminated & LOA Employees">
-                                              <label for="termLOA">Included Terminated & LOA Employees</label>
-                                            </span>
+                     <label id="formatsetoptions">MORE OPTIONS</label>
+                    <div id="formatsetoptions" 
+                       data-bind="ojComponent: {component: 'ojButtonset', checked: formats(), 
+                                                optionChange: handleFormatChange}"
+                       aria-controls="formattedText">
+                      <label for="minor">Minor</label>
+                      <input type="checkbox" value="minor" id="minor"/>
+                      <label for="tloaemployees">Terminated & LOA Employees</label>
+                      <input type="checkbox" value="tloaemployees" id="tloaemployees"/>
                     </div>
                 </div>
             </div>
@@ -74,13 +71,19 @@
     </div>
     <div class="oj-lg-4 oj-col oj-md-only-hide">
         <h3>Last 30 Day Search </h3>
-        <div class="resultWrapper">
-            <ul class="searchHistory" data-bind="foreach: resultSearchHistory">
-                <li>
-                    <span class="searchNameHeader">Name:</span> <span data-bind="text: searchname"></span> | 
-                    <span class="searchHireDate">Hire Date:</span> <span data-bind="text: datehire"></span><br />
-                    <span class="searchStatus">Status:</span> <span data-bind="text: hirestatus"></span> 
+        <div class="historyLogResult">
+            <ul class="searchHistory">
+                <!-- ko foreach: resultSearchHistory -->
+                <li class="oj-md-12 oj-col">
+                    <div class="oj-md-12 oj-col">
+                        <a data-bind="click: $parents[0].handleOpen('#hireStatusDialog')"><span data-bind="text: datehire"></span></a>
+                    </div>
+                    <div class="oj-md-12 oj-col">
+                        <span class="searchNameHeader">Name:</span> <span class="searchNameHeader" data-bind="text: searchname"></span> | 
+                        <span class="searchStatus">Status:</span> <span data-bind="text: hirestatus"></span> 
+                    </div>
                 </li>
+                <!--/ko-->
             </ul>
         </div>
     </div>
@@ -93,9 +96,11 @@
                 <span>Last 30 Day Search <span class="fa fa-plus"></span></span>
                 <ul class="searchHistory" data-bind="foreach: resultSearchHistory">
                     <li>
-                        <span class="searchNameHeader">Name:</span> <span data-bind="text: searchname"></span> | 
-                        <span class="searchHireDate">Hire Date:</span> <span data-bind="text: datehire"></span> | 
-                        <span class="searchStatus">Status:</span> <span data-bind="text: hirestatus"></span> 
+                        <div class="oj-md-12 oj-col" data-bind="text: datehire"></div>
+                        <div class="oj-md-12 oj-col">
+                            <span class="searchNameHeader">Name:</span> <span data-bind="text: searchname"></span> | 
+                            <span class="searchStatus">Status:</span> <span data-bind="text: hirestatus"></span> 
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -120,23 +125,20 @@
     <script type="text/html" id="peoplelist_template">
         <li data-bind="attr: {id: $data['name']}, click: $parent.empBasicInfoOpen">
             <div class="oj-row">
-                <div class="oj-lg-2 oj-md-2 oj-sm-12 oj-col" style="max-width:70px;padding-bottom:5px">
-                    <img data-bind="attr: {src: $parent.getPhoto($data['empId'])}"/>
+                <div class="oj-lg-2 oj-md-2 oj-col">
+                    <span class="imageOverlay"></span>
+                    <img style="width:75px; height:75px;" data-bind="attr: {src: $parent.getPhoto($data['empId'])}"/>
                 </div>
-                <div class="oj-lg-1 oj-md-10 oj-sm-12 oj-col">
-                    <span data-bind="text: payrollId"></span>
+                <div class="oj-lg-3 oj-md-3 oj-col">
+                   
+                    <div class="payrollId">Employee ID: <span data-bind="text: payrollId"></div>
+                    <div class="headerFirstLastName" data-bind="text: firstName + ' ' + lastName"></div>
+                    <div class="userTitle" data-bind="text: title"></div>
                 </div>
-                <div class="oj-lg-2 oj-md-10 oj-sm-12 oj-col">
-                    <span class="header" data-bind="text: firstName + ' ' + lastName"></span>
-                </div>
-                <div class="oj-lg-2 oj-md-10 oj-sm-12 oj-col">
-                    <span data-bind="text: homeStore"></span>
-                </div>
-                <div class="oj-lg-2 oj-md-10 oj-sm-12 oj-col">
-                    <span data-bind="text: hireDate"></span>
-                </div>
-                <div class="oj-lg-3 oj-md-10 oj-sm-12 oj-col">
-                    <span data-bind="text: status"></span>
+                <div class="oj-lg-7 oj-md-7 oj-col">
+                    <div class="homeStoreListView"><strong>Home Store: </strong><span data-bind="text: homeStore"></span></div>
+                    <div class="hireDateListview"><strong>Hire Date</strong> <span data-bind="text: $parents[0].getBasicFormattedDate(hireDate)"></span></div>
+                    <div class="employeeStatusListView"><strong>Hire Status</strong> <span data-bind="text: status"></span></div>
                 </div>
             </div>
         </li>
@@ -145,4 +147,5 @@
 </div>
 
 <!-- Start of Modal for templates -->
+<div data-bind="template: {name: 'partials/employee-hire-status-modal/employee-hire-status-modal-large'}"></div>
 <div data-bind="template: {name: 'partials/employee-basic-info-modal/employee-basic-info-modal-large'}"></div>

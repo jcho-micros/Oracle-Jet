@@ -7,7 +7,6 @@
                          <h1 class="inlineHeader"><span class="fa fa-users"></span> People <span class="fa fa-question custom-question-icon"></span> </h1>
 <!--                        <a href="index.html?root=add-employee" class="basic-btn-link">Add</a>-->
                             <a href="" data-bind="click: function(){handleOpen('#addEmpStatusDialog');}" class="basic-btn-link"><span class="fa fa-plus"></span> Add</a>
-                            <hr/>
                     </div>
                     <!--Use template when parent js file is associated by default to the tmpl file
                     Ex. below links to partial tmpl file, people tmpl file already associated with people.js file
@@ -22,31 +21,47 @@
                     name: 'partials/add-employee-modal',
                     viewName: 'partials/add-employee-modal/add-employee-modal-small'}">
     </div>
+        <div class="oj-row">
+        <div class="oj-sm-12 oj-col" id="footCol">
+            <footer role="contentinfo">
+              <div id='appfooterDiv' data-bind="ojModule: {
+                                                    name: 'footer', 
+                                                    viewName: 'footer'}">
+              </div>
+            </footer>
+        </div>
+    </div>
 </script>
 
 <!-- large template -->
 <script type="text/html" id="md_lg_xl_template">
   
-        <div class="oj-row">
-            <div class="oj-col oj-md-12">
-                <div class="oj-row">
-                    <div id="pageTitleContainer" class="oj-col oj-md-12">
-                        <h1 class="inlineHeader"><span class="fa fa-users"></span> People <span class="fa fa-question custom-question-icon"></span> </h1>
+        <div class="oj-md-12 oj-col peopleWrapper">
+            <div id="peopleSection" class="oj-col oj-md-12 page-header">
+                <h1 class="inlineHeader">People <span class="fa fa-question custom-question-icon"></span> </h1>
 <!--                        <a href="index.html?root=add-employee" class="basic-btn-link">Add</a>-->
-                            <a href="" data-bind="click: function(){handleOpen('#addEmpStatusDialog');}" class="basic-btn-link"><span class="fa fa-plus"></span> Add</a>
-                            <hr/>
-                    </div>
-                    <!--Use template when parent js file is associated by default to the tmpl file -->
-                    <div data-bind="template: {name: 'partials/employee-search/employee-search-large'}"></div>
-                </div>
+                <a href="" data-bind="click: function(){handleOpen('#addEmpStatusDialog');}" class="basic-btn-link"><span class="fa fa-plus"></span> Add</a>
             </div>
         </div>
- 
+    <div class="oj-row">
+        <div class="oj-md-12 oj-col">
+            <div data-bind="template: {name: 'partials/employee-search/employee-search-large'}"></div>
+        </div>
+    </div>
     <div data-bind="ojModule: {
                     name: 'partials/add-employee-modal',
                     viewName: 'partials/add-employee-modal/add-employee-modal-large'}">
     </div>
-
+    <div class="oj-row">
+        <div class="oj-sm-12 oj-col" id="footCol">
+            <footer role="contentinfo">
+              <div id='appfooterDiv' data-bind="ojModule: {
+                                                    name: 'footer', 
+                                                    viewName: 'footer'}">
+              </div>
+            </footer>
+        </div>
+    </div>
 </script>
 
 <div class="templateArea"  data-bind="template: {name: $root.medium() ? 'md_lg_xl_template' : 'sm_template'}"></div>

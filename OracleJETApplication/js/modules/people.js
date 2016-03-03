@@ -2,6 +2,7 @@ define([
     'ojs/ojcore',
     'knockout',
     'data/data',
+    'moment',
     'ojs/ojrouter',
     'ojs/ojknockout',
     'ojs/ojlistview',
@@ -47,6 +48,16 @@ define([
         self.handleClose =  function(dialog) {
             $(dialog).ojDialog("close");
         };
+        // illustrates the app setting the computed observable:
+        self.toggleBold = function() {
+            this.bold(!this.bold());
+        };
+        self.handleFormatChange = function(event, ui) {
+            if (ui.option === "checked") {
+                // do stuff...
+            }
+        };
+
 
         //General function to  auto popup modal based on URL param string and dialog ID
         self.autoDialog = function(param, dialogId){
@@ -116,7 +127,6 @@ define([
         self.listViewDataSource = ko.computed(function () {
             return new oj.PagingTableDataSource(new oj.ArrayTableDataSource(self.filteredAllPeople(), {idAttribute: 'empId'}));
         });
-
         self.getPhoto = function (empId) {
             var src;
             if (empId < 188) {
@@ -138,14 +148,21 @@ define([
                 oj.Router.rootInstance.go('profile');
             }
         };
-
+        self.getBasicFormattedDate = function (oldDate) {
+            var dischargeDate = [oldDate];
+            var dateOptions = {formatStyle: 'date', dateFormat: 'medium'};
+            var dateConverter = oj.Validation.converterFactory("datetime").createConverter(dateOptions);
+            var startDate = oj.IntlConverterUtils.dateToLocalIso(moment(dischargeDate).toDate());
+            oldDate = dateConverter.format(startDate);
+            return oldDate;
+        };
         self.pageHeading = ko.observable("People");
         self.pageHeadingIconClass = ko.observable('fa fa-gift');
         self.organizationName = ko.observable("Micros");
         self.level1 = ko.observable("level1");
         self.level2 = ko.observable("level2");
         self.location = ko.observable("North East");
-
+        self.formats = ko.observableArray();
         self.pageSubNavigation = ko.computed(function () {
             return self.organizationName() + " | " + self.level1() + " | " + self.level2() + " | " + self.location();
         }, self);

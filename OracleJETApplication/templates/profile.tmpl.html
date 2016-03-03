@@ -4,8 +4,10 @@
     <div class="oj-sm-12 oj-col app-header-mobile-nav-title" data-bind="if: tabRouter.stateId(), click:toggleSections">
         <div data-bind="with: tabRouter.currentState()">
             <div class="mobileNavTitleArea">
-                <span class="oj-sm-11 oj-col" id="currentPage" data-bind="text: label"></span><span class="oj-sm-1 oj-col"><i class="fa fa-chevron-down"></i></span>
-
+                <span class="oj-sm-11 oj-col" id="currentPage" data-bind="text: label"></span>
+                <span data-bind="visible: id == 'schedules-timecards'"><a data-bind="click: function(){alert('Helllllllooooo');}"><i class="fa fa-question-circle"></i></a></span>
+                <span class="oj-sm-1 oj-col"><i class="fa fa-chevron-down"></i></span>
+                
             </div>
         </div>
     </div>
@@ -15,6 +17,7 @@
                 <ul data-bind="foreach: tabRouter.states">
                     <li data-bind="attr: {id: id}, click:$parent.toggleSections">
                         <a data-bind="text: label"></a>
+                        
                     </li>
                 </ul>
             </div>
@@ -34,33 +37,31 @@
                 <span class="imageOverlay"></span>
                 <img id="empImg" style="width:75px; height:75px;" data-bind="attr: {src: getPhoto(personProfile().empId)}" />
             </div>
-            <div class="oj-sm-9 oj-col">
+            <div class="oj-sm-9 oj-col profileNameHeader">
                 <h2>
                 <span data-bind="text: firstName()"></span>
                 <span data-bind="text: lastName()"></span>
-                <a href="#"><i class="profileHelpIcon fa fa-book"></i></a></h2>
+                <a data-bind="click: handleOpen('#employeeLogModal')"><i class="profileHelpIcon fa fa-book"></i></a></h2>
+
+                <ul class="profileStatusToolArea">
+                    <li>
+                        <h4>Home Store</h4>
+                        <span data-bind="text: personProfile().homeStore"></span>                   
+                        <a data-bind="click: handleOpen('#homeStoreDialog')">transfer <i class="fa fa-share"></i></a>
+
+                    <li>
+                        <h4>Hire Status</h4>
+                        <span data-bind="text: personProfile().hireStatus"></span>
+                        <a data-bind="click: handleOpen('#hireStatusDialog')">update <i class="fa fa-refresh"></i></a>
+
+                    </li>
+                </ul>
+            
             </div>
         </div>
-        <div class="oj-row">
-            <ul class="profileStatusToolArea">
-                <li>
-                    <h4>Home Store</h4>
-                    <span data-bind="text: personProfile().homeStore"></span>                   
-                    <a data-bind="click: handleOpen('#homeStoreDialog')">transfer <i class="fa fa-share"></i></a>
-                    
-                <li>
-                    <h4>Hire Status</h4>
-                    <span data-bind="text: personProfile().hireStatus"></span>
-                    <a data-bind="click: handleOpen('#hireStatusDialog')">update</a>
 
-                </li>
-                <li>
-                    <h4>External Payroll ID</h4>
-                    <span data-bind="text: personProfile().externalPayrollId"></span>
-                    <a data-bind="click: handleOpen('#externalPayrollDialog')">edit <i class="fa fa-pencil-square-o"></i></a>
-                </li>
-            </ul>
-        </div>
+
+
     </div>
 </div>
 <div class="oj-row">
@@ -71,6 +72,18 @@
         </div>
     </div>
 </div>
+    <div class="oj-row">
+        <div class="oj-sm-12 oj-col" id="footCol">
+            <footer role="contentinfo">
+              <div id='appfooterDiv' data-bind="ojModule: {
+                                                    name: 'footer', 
+                                                    viewName: 'footer'}">
+              </div>
+            </footer>
+        </div>
+    </div>
+<!--Employee dialog modal-->
+<div data-bind="template: {name: 'profile/profile/employee-log/employee-log-modal-small'}"></div>
 
 <!--Home Store dialog modal-->
 <div data-bind="template: {name: 'partials/employee-home-store-modal/employee-home-store-modal-small'}"></div>
@@ -85,63 +98,71 @@
 <!-- large template -->
 <script type="text/html" id="md_lg_xl_template">
 <div class="justifyCenter">
-   <div class="oj-row addedNewEmpMessage">
-        <div class="oj-md-12 oj-col">
-           
-            <span data-bind="text: personProfile().firstName + ' ' + personProfile().lastName"></span> has been successfully added!
-        </div>
-    </div>
-    <div id="personaldetails" class="oj-row">
-        <div class="oj-col oj-md-1 oj-lg-1">
+    <div class="oj-md-10 oj-col profileWrapper">
+        <div id="profileSection" class="oj-col oj-md-12 page-header">
 
-            <img id="empImg" data-bind="attr: {src: getPhoto(personProfile().empId)}" />
+            <div class="oj-col oj-md-2 oj-lg-5">
+                <h1>
+                    <span data-bind="text: firstName()"></span>
+                    <span data-bind="text: lastName()"></span>
+                    <a data-bind="click: handleOpen('#employeeLogModal')"><i class="profileHelpIcon fa fa-book"></i></a>
+                </h1>
+            </div>
+            <div class="oj-md-7 oj-col">
+                <div class="oj-col profileToolBar">
+                   <h4>Home Store</h4>
+                   <span data-bind="text: personProfile().homeStore"></span>
+                   <a data-bind="click: handleOpen('#homeStoreDialog')">transfer <i class="fa fa-share"></i></a>
+                </div>
+                <div class="oj-col profileToolBar">
+                   <h4>Hire Status</h4>
+                   <span data-bind="text: personProfile().hireStatus"></span>
+                   <a data-bind="click: handleOpen('#hireStatusDialog')">update <i class="fa fa-refresh"></i></a>
+                </div>
+
+            </div>
+
         </div>
-        <div class="oj-col oj-md-2 oj-lg-2 profileToolBar">
-            
-            <h2>
-                <span data-bind="text: firstName()"></span>
-                <span data-bind="text: lastName()"></span>
-                <a href="#"><i class="profileHelpIcon fa fa-book"></i></a>
-            </h2>
-        </div>
-        <div class="oj-col oj-md-3 oj-lg-3 profileToolBar">
-           <h4>Home Store</h4>
-           <span data-bind="text: personProfile().homeStore"></span>
-           <a data-bind="click: handleOpen('#homeStoreDialog')">transfer <i class="fa fa-share"></i>
-</a>
-        </div>
-        <div class="oj-col oj-md-3 oj-lg-3 profileToolBar">
-           <h4>Hire Status</h4>
-           <span data-bind="text: personProfile().hireStatus"></span>
-           <a data-bind="click: handleOpen('#hireStatusDialog')">update</a>
-        </div>
-        <div class="oj-col oj-md-3 oj-lg-3 profileToolBar">
-           <h4>External Payroll ID</h4>
-           <span data-bind="text: personProfile().externalPayrollId"></span>
-           <a data-bind="click: handleOpen('#externalPayrollDialog')">edit <i class="fa fa-pencil-square-o"></i></a>
-        </div>
-    </div>
-</div>
-<div class="oj-row">
-    <div class="oj-md-12 oj-col">
-        <div data-bind="ojComponent: {component: 'ojConveyorBelt'}">
-            <div id="profileTabs" data-bind="ojComponent: {component: 'ojNavigationList', selection: tabRouter.stateId(), beforeSelect: selectTabHandler, drillMode: 'none', edge: 'top'}">
-                <ul data-bind="foreach: tabRouter.states">
-                    <li data-bind="attr: {id: id}">
-                        <a data-bind="text: label"></a>
-                    </li>
-                </ul>
+
+        <div id="profileSectionTabs" class="oj-md-12 oj-col">
+            <div data-bind="ojComponent: {component: 'ojConveyorBelt'}">
+                <div id="profileTabs" data-bind="ojComponent: {component: 'ojNavigationList', selection: tabRouter.stateId(), beforeSelect: selectTabHandler, drillMode: 'none', edge: 'top'}">
+                    <ul data-bind="foreach: tabRouter.states">
+                        <li data-bind="attr: {id: id}">
+                            <a data-bind="text: label"></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
+
     </div>
+    <div class="oj-col profilePhotoArea oj-md-2">
+    <span class="profileMask"></span>
+        <span class="profileMaskImage" data-bind="style: {'backgroundImage': 'url('+ getPhoto(personProfile().empId) +')'}"></span>
+<!--    <img id="empImg" data-bind="attr: {src: getPhoto(personProfile().empId)}" />-->
+    </div>
+</div>
+<div class="oj-row addedNewEmpMessage">
+     <div class="oj-md-12 oj-col">
+         <span data-bind="text: personProfile().firstName + ' ' + personProfile().lastName"></span> has been successfully added!
+     </div>
+ </div>
+<div class="oj-row">
     <div class="oj-md-12 oj-col" data-bind="if: tabRouter.stateId()">
         <div class="oj-panel tab-content" data-bind="with: tabRouter.currentState()">
 
             <div data-bind="template: {name: 'profile/' + id +'/' + id + '-large'}"></div>
+                
+        </div>
+        <div class="float-r">
+            <button class="editButton" data-bind="click: function(){$parent.handleOpen('#empDialog')}">edit <i class="fa fa-pencil-square-o"></i></button>
         </div>
     </div>
 </div>
 
+<!--Employee dialog modal-->
+<div data-bind="template: {name: 'profile/profile/employee-log/employee-log-modal-large'}"></div>
 
 <!--Home Store dialog modal-->
 <div data-bind="template: {name: 'partials/employee-home-store-modal/employee-home-store-modal-large'}"></div>

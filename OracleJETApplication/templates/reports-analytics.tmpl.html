@@ -1,0 +1,23 @@
+<div class="oj-md-12 oj-col reportsAnalyticsWrapper">
+        <div id="reports-AnalyticsSection" class="oj-col oj-md-12 page-header">
+      <h1>
+                 <!--     <span data-bind="css: pageHeadingIconClass"></span>-->
+                <span>Reports and Charts</span>
+            </h1>
+<!--            <span class="page-sub-navigation">
+                <span data-bind="text: pageSubNavigation"></span>
+            <a href="#">change</a>
+            </span>-->
+        </div>
+        <div id="reports-AnalyticsSectionTabs" class="oj-md-12 oj-col">
+            <div data-bind="ojComponent: {component: 'ojConveyorBelt'}">  
+                <div id="tabs" data-bind="ojComponent: {component: 'ojNavigationList', selection: router.stateId(), beforeSelect: selectHandler, drillMode: 'none', edge: 'top'}">
+                    <ul data-bind="foreach: router.states">
+                        <li id="id" data-bind="attr: {id: id}">
+                            <a data-bind="text: label"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>

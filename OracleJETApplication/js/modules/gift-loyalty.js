@@ -58,7 +58,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', 'o
                 this.router.dispose();
                 this.router = null;
             }
-            self.pageHeading = ko.observable("iCare");
+            self.pageHeading = ko.observable("Gift & Loyalty");
             self.pageHeadingIconClass = ko.observable('fa fa-gift');
             self.organizationName = ko.observable("Micros");
             self.level1 = ko.observable("level1");

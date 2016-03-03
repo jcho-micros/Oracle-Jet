@@ -125,6 +125,7 @@ $highlightInputBorderColor: $black;
 $fontFamily: "Helvetica Neue",
 Arial,
 sans-serif;
+
 // 
 // font size
 // 
@@ -1360,6 +1361,22 @@ $navigationListBorderColor:                $lightGray;
     font-family: 'Alta Icon Font';
     src: url("fonts/JetFW_iconfont.woff") format("woff");
 }
+@font-face {
+    font-family: 'Helvetica Neue Medium';
+//    src: url('fontname.eot');
+//    src: url('fontname.eot?#iefix') format('embedded-opentype'),
+//         url('fontname.woff') format('woff'),
+         src: url('fonts/HelveticaNeue-Medium.ttf') format('truetype');
+//         url('fontname.svg#fontname') format('svg');
+}
+@font-face {
+    font-family: 'Helvetica Neue Light';
+//    src: url('fontname.eot');
+//    src: url('fontname.eot?#iefix') format('embedded-opentype'),
+//         url('fontname.woff') format('woff'),
+         src: url('fonts/HelveticaNeue-Light.ttf') format('truetype');
+//         url('fontname.svg#fontname') format('svg');
+}
 html{
     font-size:12px;
 }
@@ -1417,7 +1434,49 @@ a{
             background-color:$navigationListHeaderMobileBg;
         }
         &.oj-selected{
-            background-color: $tabsBgColorSelected;
+//            background-color: $tabsBgColorSelected;
+                &#home{
+                    background-color: #309fdb;
+                    .fa.fa-briefcase.oj-navigationlist-item-icon {
+                        color: $white;
+                    }
+                }
+                &#labor{
+                    background-color: #ED813E;
+                    .fa.fa-briefcase.oj-navigationlist-item-icon {
+                        color: $white;
+                    }
+                }
+                &#inventory{
+                    background-color: #81bb5f;
+                    .fa.fa-briefcase.oj-navigationlist-item-icon {
+                        color: $white;
+                    }
+                }
+                &#gift-loyalty{
+                    background-color: #854e9b;
+                    .fa.fa-briefcase.oj-navigationlist-item-icon {
+                        color: $white;
+                    }
+                }
+                &#reports-analytics{
+                    background-color: #13b6cf;
+                    .fa.fa-briefcase.oj-navigationlist-item-icon {
+                        color: $white;
+                    }
+                }
+                &#enterprise{
+                    background-color: #fbce4a;
+                    .fa.fa-briefcase.oj-navigationlist-item-icon {
+                        color: $white;
+                    }
+                }
+                &#people{
+                    background-color: #3caf85;
+                    .fa.fa-briefcase.oj-navigationlist-item-icon {
+                        color: $white;
+                    }
+                }
             border-width: 0 !important;
             .oj-navigationlist-item-icon{
                 color:$iconSelectedColor;
@@ -1434,16 +1493,22 @@ a{
                 color:$iconSelectedColor;
             }
         }
+
         .oj-navigationlist-item-icon {
+            
                 color: $iconColor;
                 margin-right: 0;
                 font-size:16px;
             }
+
     }
     a.oj-navigationlist-item-content {
         color: $iconColor;
 
     }
+}
+.oj-navigationlist-listview-container{
+    margin-top:2px;
 }
 .app-header-mobile-nav-title{
     background-color: $appHeaderMobileBg;
@@ -1457,7 +1522,7 @@ a{
 .oj-navigationlist-item {
     border-width:0 !important;
     &.oj-default{
-         background-color: $navigationListMobileBg;
+//         background-color: $navigationListMobileBg;
          a.oj-navigationlist-item-content{
              color: $navigationListMobileTextColor;
          }
@@ -1498,23 +1563,9 @@ a{
 .tbd {
     height: 427px;
     width: 100%;
-    background-color: #cccccc;
+//    background-color: #cccccc;
 }
-.imageOverlay{
-display:block;
-position:absolute;
-top:-18%;
-left:0;
-width:72px;
-height:72px;
-z-index: 100;
-background:url(images/thumb-overlay.png);
-}
-#empImg{
-position:relative;
-display:block;
-float:left;
-}
+
 //Login Styles
 #loginPage{
     * {
@@ -1641,6 +1692,7 @@ float:left;
     .lowerbar {
        display:none;
     }
+
     @media only screen and (min-width: 768px){
         .container {
             margin: 0 auto;
@@ -1809,11 +1861,12 @@ h1{
     }
 }
 h3{
-    background-color: $headerH3BgColor;
-    text-transform: uppercase;
+//    background-color: $headerH3BgColor;
+//    text-transform: capitalize;
     padding:10px;
-    font-weight:normal;
-    font-size:13px;
+    font-weight:bold;
+    font-size:14px;
+    border-bottom: 1px solid $lightBlue;
 }
 h4{
     margin-bottom:0px;
@@ -1880,11 +1933,30 @@ a.basic-btn-link{
         padding:15px;
     }
 }
+//Profile Tab border Top
+.tab-content{
+    border: 0px solid transparent !important;
+}
 .button-row{
     padding:10px 0;
 }
-.resultWrapper{
+.historyLogResult{
     clear:both;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 180px;
+    background-color:$lightGray;
+    ul.searchHistory{
+        list-style-type: none;
+        padding-left:10px;
+        li{
+            margin-bottom: 10px;
+            padding:0px;
+        }
+    }
+}
+.searchNameHeader{
+    font-weight: bold;
 }
 //Profile Styles
 .addedNewEmpMessage{
@@ -1982,9 +2054,9 @@ a.basic-btn-link{
 }
 //Footer styles
 footer{
-    position:absolute;
     bottom:0;
     padding:10px;
+
 }
 
 //iCare
@@ -2060,8 +2132,8 @@ footer{
 //Medium/ipad (UP)
 @media only screen and (min-width: 768px){
     .page-area {
-        padding-left: 1.072rem !important;
-        padding-top: 10px;
+//        padding-left: 1.072rem !important;
+//        padding-top: 10px;
     }
     //Custom col sizes
     .custom-col-9{
@@ -2070,6 +2142,7 @@ footer{
     .custom9-offset-1{
         margin-left:11.11111111%;
     }
+
     //Header
     .page-header {
         padding: 10px 0;
@@ -2081,7 +2154,7 @@ footer{
         padding-left: 25px;
     }
     #app-main-area {
-        padding: 0 15px;
+/*        padding: 0 15px;*/
     }
     .oj-navigationlist-divider{
         border-color:transparent !important;
@@ -2096,10 +2169,11 @@ footer{
         &:last-child{
             margin: 0 1px 0 0;
         }
-        &.oj-default{
-             background-color: $navigationListDesktopBg;
-        }
+//        &.oj-default{
+//             background-color: $navigationListDesktopBg;
+//        }
         &.oj-selected {
+            
             background-color: $navigationListDesktopBgSelected;
             border-width: 3px 1px 0 1px !important;
             border-right-color: $navigationListBorderColor;
@@ -2110,31 +2184,358 @@ footer{
             }
         }
     }
+    //Left Side Nav
+    #sidebar-left{
+        background-color:#333333;
+    }
     //Employee Dialog Modal
     .generalModal-dimensions{
         width:70%;
     }
     //Profile ToolBar
-    .profileToolBar{
-        width:150px;
-        font-size: 12px;
-        border-left: 1px solid #cccccc;
-        vertical-align: middle;
+    .leftPadding{
+        color:#7d7d7d;
+        font-size: 14px;
+        font-weight:300;
         h4{
-            margin-bottom: 0px;
-        }
-        a{
-            font-weight:bold;
+            font-weight: 600;
+            color:#7d7d7d;
+            font-size: 14px;
+            
         }
     }
+    
     .profileToolBar:nth-child(2){
         border-left: 0px solid transparent;
-        width:200px;
+        width:300px;
     }
-
+    .imageOverlay{
+        display:block;
+        position:absolute;
+        top:0%;
+        left:0;
+        width:95px;
+        height:75px;
+        z-index: 100;
+        background:url(images/thumb-overlay.png);
+    }
+    #empImg{
+        position:relative;
+        display:block;
+        float:left;
+    }
     .profileHelpIcon{
     }
     //Profile and Tabs
+    .profileWrapper{
+         background-repeat: no-repeat;
+         background-size: 225px 184px;
+         background-position:100% 30%;
+         background-color: #3caf85;
+         height:110px;
+    }
+    #profileSection{
+        padding-top:3px;
+        h1{
+            font-size:36px;
+            font-family: 'Helvetica Neue Light';
+            font-weight: normal;
+            color: $white;
+        }
+        .page-sub-navigation{
+            color:$white;
+        }
+        .profileToolBar{
+            width:150px;
+            font-size: 12px;
+            border-left: 1px solid #cccccc;
+            vertical-align: middle;
+            margin-top:13px;
+            color:$white;
+            h4{
+                margin-bottom: 0px;
+                color:$white;
+            }
+            h2{
+                font-size:24px;
+                font-weight: 400;
+            }
+            a{
+                font-weight:bold;
+                color:$white;
+                text-decoration: underline;
+            }
+            .fa{
+                font-size:12px;
+            }
+        }
+    }
+    .profilePhotoArea{
+        img{
+        width:110px;
+        height: 110px;
+        left:35%;
+        }
+        .profileMask{
+            display:block;
+            position:absolute;
+            top:0%;
+            left:0%;
+            width:195px;
+            height:110px;
+            z-index: 100;
+            background:url(images/profile-Large-mask.png);
+        }
+        .profileMaskImage{
+            background-repeat: no-repeat;
+            background-size: 151px 151px;
+            background-position:35px -15px;
+            width: 200px;
+            height: 110px;
+            display: block;
+            top:0;
+            left:0;
+        }
+    }
+    #profileSectionTabs{
+        a{
+            color:#444444;
+        }
+        .oj-navigationlist-item{
+            
+                &.oj-default{
+                    background-color: #89c7ad;
+               }
+               &.oj-selected {
+                   a{
+                   color:#444;
+                   }
+               }
+        }
+    }
+    .peopleWrapper{
+         background:url(images/people-icon.png);
+         background-repeat: no-repeat;
+         background-size: 225px 184px;
+         background-position:100% 30%;
+         background-color: #3caf85;
+         height:110px;
+    }
+    #peopleSection{
+        padding:15px;
+        h1{
+            font-size:36px;
+            font-family: 'Helvetica Neue Light';
+            font-weight: normal;
+            color: $white;
+        }
+        .page-sub-navigation{
+            color:$white;
+        }
+    }
+
+    .enterpriseWrapper{
+/*         background:url(images/reportsCharts-icon.png);*/
+         background-repeat: no-repeat;
+         background-size: 225px 184px;
+         background-position:100% 30%;
+         background-color: #fbce4a;
+         height:110px;
+    }
+    #enterpriseSection{
+        padding:15px;
+        h1{
+            font-size:36px;
+            font-family: 'Helvetica Neue Light';
+            font-weight: normal;
+            color: $white;
+        }
+        .page-sub-navigation{
+            color:$white;
+        }
+    }
+    #enterpriseTabs{
+        a{
+            color:#444444;
+        }
+        .oj-navigationlist-item{
+            
+                &.oj-default{
+                    background-color: #fcde8a;
+               }
+               &.oj-selected {
+                   a{
+                   color:#444;
+                   }
+               }
+        }
+    }
+    .reportsAnalyticsWrapper{
+         background:url(images/reportsCharts-icon.png);
+         background-repeat: no-repeat;
+         background-size: 225px 184px;
+         background-position:100% 30%;
+         background-color: #13b6cf;
+         height:110px;
+    }
+    #reports-AnalyticsSection{
+        padding:15px;
+        h1{
+            font-size:36px;
+            font-family: 'Helvetica Neue Light';
+            font-weight: normal;
+            color: $white;
+        }
+        .page-sub-navigation{
+            color:$white;
+        }
+    }
+    .giftLoyaltyWrapper{
+         background:url(images/gift-loyalty-Icon.png);
+         background-repeat: no-repeat;
+         background-size: 225px 184px;
+         background-position:100% 30%;
+         background-color: #854e9b;
+    }
+    #giftLoyaltySection{
+        padding:15px;
+        h1{
+            font-size:36px;
+            font-family: 'Helvetica Neue Light';
+            font-weight: normal;
+            color: $white;
+        }
+        .page-sub-navigation{
+            color:$white;
+        }
+    }
+    #giftLoyaltySectionTabs{
+        a{
+            color:#444444;
+        }
+        .oj-navigationlist-item{
+            
+            &.oj-default{
+                background-color: #a984b8;
+            }
+            &.oj-selected {
+                a{
+                color:#444;
+                }
+            }
+        }
+    }
+    .inventoryWrapper{
+         background:url(images/inventory-icon.png);
+         background-repeat: no-repeat;
+         background-size: 225px 184px;
+         background-position:100% 30%;
+         background-color: #81bb5f;
+    }
+    #inventorySection{
+        padding:15px;
+        h1{
+            font-size:36px;
+            font-family: 'Helvetica Neue Light';
+            font-weight: normal;
+            color: $white;
+        }
+        .page-sub-navigation{
+            color:$white;
+        }
+    }
+    #inventorySectionTabs{
+        a{
+            color:#444444;
+        }
+        .oj-navigationlist-item{
+                &.oj-default{
+                    background-color: #aed292;
+               }
+               &.oj-selected {
+                   a{
+                   color:#444;
+                   }
+               }
+        }
+    }
+    .laborWrapper{
+         background:url(images/labor-briefCase-bg.png);
+         background-repeat: no-repeat;
+         background-size: 225px 184px;
+         background-position:100% 30%;
+         background-color: #ED813E;
+    }
+    #laborSection{
+        padding:15px;
+        h1{
+            font-size:36px;
+            font-family: 'Helvetica Neue Light';
+            font-weight: normal;
+            color: $white;
+            
+        }
+        .page-sub-navigation{
+            color:$white;
+        }
+    }
+    #laborSectionTabs{
+        //background-color: #ED813E;
+        a{
+            color:#444444;
+        }
+        .oj-navigationlist-item{
+            
+                &.oj-default{
+                    background-color: #F3AC7A;
+               }
+               &.oj-selected {
+                   a{
+                   color:#444;
+                   }
+
+               }
+        }
+    }
+    .homeWrapper{
+         background:url(images/home-icon.png);
+         background-repeat: no-repeat;
+         background-size: 225px 184px;
+         background-position:100% 30%;
+         background-color: #309fdb;
+         height:110px;
+    }
+    #homeSection{
+        padding:15px;
+        h1{
+            font-size:36px;
+            font-family: 'Helvetica Neue Light';
+            font-weight: normal;
+            color: $white;
+            
+        }
+        .page-sub-navigation{
+            color:$white;
+        }
+    }
+    .payrollId{
+        color:#cccccc;
+    }
+    .headerFirstLastName{
+        color:#1d6594;
+        font-size:18px;
+    }
+    .userTitle{
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+    .homeStoreListView, .hireDateListview, .employeeStatusListView{
+        color:#7d7d7d;
+        font-size:12px;
+        strong{
+            color:#7d7d7d;
+        }
+    }
     .tab-content{
         padding: 0.8571rem 0;
     }
@@ -2147,6 +2548,7 @@ footer{
     //Schedule and Timecard
     .futureRow{
         margin-top:20px;
+        margin-bottom:20px;
     }
     .currentWeekHeaderArea{
         padding: 10px;
@@ -2249,6 +2651,7 @@ footer{
         border-right: 1px #ccc solid;
         padding-top: 10px;
         padding-left:10px;
+        height:100%;
     }
     .sidebar-left-input {
         width: 140px;
@@ -2270,6 +2673,10 @@ footer{
             padding: 10px 5px 10px 25px;
             display: block;
         }
+    }
+    //Footer
+    #footCol, #appfooterDiv{
+        position: relative;
     }
     //Schedule and Timecard
     .scheduleModal-dimensions{
@@ -2293,13 +2700,22 @@ footer{
     h2{
         font-size: 18px;
     }
+    //Footer styles
+    footer{
+        position:relative;
+        bottom:0;
+        padding:10px;
+        margin-right: 0px;
+    }
     #app-main-area{
-        background-color: #e7edf2;
+         background-color: #e7edf2;  
+    }
+    .templateArea{
+         background-color: #e7edf2;
     }
     #personaldetails{
         background-color: $white;
         margin-top:10px;
-        margin-bottom:10px;
         padding-bottom:0px;
         width:95%;
     }
@@ -2327,6 +2743,103 @@ footer{
         height:82px;
         z-index: 100;
         background:url(images/thumb-overlay-mobile.png);
+    }
+    //Profile
+    .profileNameHeader{
+        margin-top:15px;
+        h2{
+            font-size:24px;
+            margin-bottom: 0px;
+        }
+    }
+    .disableNumberArea{
+        margin-top:10px;
+    }
+    .generalArea{
+        margin-top:10px;
+        .indentDiv{
+            margin-left:10px;
+        }
+    }
+    .employeeName{
+        font-size: 12px;
+    }
+    .contactArea:first-child{
+        margin-top:0px;
+    }
+    .contactArea{
+        margin-top:10px;
+        .indentDiv{
+            margin-left:10px;
+        }
+        .fa-envelope{
+            color: $lightBlue;
+        }
+        
+    }
+    //People Search
+    .searchWindow{
+        background-color: $white;
+        width:95%;
+        margin-left:10px;
+    }
+    .viewAllEmployee{
+        margin-top:15px;
+    }
+    a.oj-clickable-icon-nocontext{
+        color:$lightBlue;
+    }
+    .peopleSearch{
+        .oj-inputtext-input{
+            width: 325px;
+            height:35px;
+        }
+        .oj-select-choice{
+            width: 325px;
+            height:35px;
+        }
+    }
+
+    #listview li{
+        width:100%;
+        padding-left:0px;
+        padding-right:0px;
+    }
+    input.oj-pagingcontrol-nav-input{
+        background-color:#c8e0f5;
+    }
+    .oj-pagingcontrol-nav-arrow .oj-pagingcontrol-nav-next .oj-enabled{
+        color:$lightBlue !important; 
+    }
+    .accordionRow{
+        margin-top:10px;
+    }
+    //Schedule and Timecards
+    .subToolRow{
+        background-color: $white;
+        margin-bottom: 10px;
+        position: relative;
+            
+        
+    }
+    .scheduleTimecardsWindow{
+        background-color: $white;
+        width:100%;
+    }
+    .scheduleIconBar{
+        text-align: right;
+    }
+    .currentFilmStrip{
+        padding: 0px;
+    }
+    span.fa.fa-envelope-o, span.fa.fa-print{
+        font-size: 18px;
+    }
+    #filmStripDiv{
+        padding: 0px;
+    }
+    .indentDiv{
+        margin-left:10px;
     }
     //Modal Sizing
     //Employee Dialog Modal
@@ -2362,34 +2875,43 @@ footer{
     .profileStatusToolArea{
         list-style-type: none;
         padding-left: 0px;
+        padding-top: 0px;
+        margin-top:8px;
         li{
             display: inline-block;
             list-style-type: none;
             font-size: 12px;
-            padding-right:10px;
+            padding-right:5px;
             padding-left:5px;
             border-right: 1px solid $lightGray;
-            width:28%;
+            width:45%;
             h4{
                 font-size:12px;
                 margin-bottom:2px;
             }
         }
-        li:last-child{
-           border-right: 0px;
-           width:33%;
-        }
         li:first-child{
             padding-left:0px;
-            width:25%;
+            width:48%;
+        }
+        li:last-child{
+           border-right: 0px;
+           width:45%;
         }
 
+
+    }
+    .oj-filmstrip-content-container{
+        padding: 10px 0;
+    }
+    .oj-panel.oj-panel-alt2{
+        width:85%;
     }
     .currentWeekHeaderArea{
         padding: 10px;
         margin-top:10px;
         background-color: $filmStripSubHeaderBg;
-        width: 98.25%;
+        width: 100%;
     }
     .upcomingWeekHeaderArea{
         padding: 10px;
@@ -2407,13 +2929,15 @@ footer{
     }
     .scheduleToolArea{
         position: relative;
-        padding-left:0px;
+        margin: 0;
         li{
             display: inline;
             list-style-type: none;
         }
     }
-
+    #accordionPage{
+        margin-top:10px;
+    }
     .shiftPoolDiv{
        padding: 10px;
     }
@@ -2427,6 +2951,13 @@ footer{
 
 // MD IPad (CAP)
 @media only screen and (min-width: 768px) and (max-width: 1023px){
+    //Footer styles
+    footer{
+        position:absolute;
+        bottom:0;
+        padding:10px;
+        margin-right: 0px;
+    }
     //Header
     //Icon padding Right to Text
     html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack-icon-label):not(.oj-navigationlist-icon-only) .oj-navigationlist-item-icon {
@@ -2448,6 +2979,14 @@ footer{
         width:95%;
     }
     //Profile ToolBar
+    .laborWrapper{
+
+         background:url(images/labor-briefCase-bg.png);
+         background-repeat: no-repeat;
+         background-size: 185px 151px;
+         background-position:100% 30%;
+         background-color: #ED813E;
+    }
     .profileToolBar{
         width:150px;
         font-size: 12px;

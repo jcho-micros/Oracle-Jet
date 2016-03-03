@@ -196,7 +196,7 @@ define([
                     self.emergencyPhone = ko.observable(self.personProfile().emergencyPhone);
                     
                     //Hire Status variables
-                    self.hireDate = ko.observable('');
+                    self.hireDate = ko.observable(self.personProfile().hireDate);
                     self.hireType = ko.observable('');
                     self.reHireDate = ko.observable('');
 

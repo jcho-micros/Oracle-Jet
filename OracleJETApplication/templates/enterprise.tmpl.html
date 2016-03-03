@@ -43,19 +43,19 @@
 
 <!-- large template -->
 <script type="text/html" id="md_lg_xl_template">
-    <div class="oj-col oj-md-12 page-header">
-        <h1>
-            <span data-bind="css: pageHeadingIconClass"></span>
-            <span data-bind="text: pageHeading"></span>
-        </h1>
-<!--        <span class="page-sub-navigation">
-            <span data-bind="text: pageSubNavigation"></span>
-        <a href="#">change</a>-->
-        </span>
-    </div>
+    <div class="oj-md-12 oj-col enterpriseWrapper">
+        <div id="enterpriseSection" class="oj-col oj-md-12 page-header">
+            <h1>
+<!--                <span data-bind="css: pageHeadingIconClass"></span>-->
+                <span data-bind="text: pageHeading"></span>
+            </h1>
+    <!--        <span class="page-sub-navigation">
+                <span data-bind="text: pageSubNavigation"></span>
+            <a href="#">change</a>-->
+            </span>
+        </div>
 
-    <div class="oj-row">
-        <div class="oj-md-12 oj-col">
+        <div id="enterpriseTabs" class="oj-md-12 oj-col">
             <div data-bind="ojComponent: {component: 'ojConveyorBelt'}">  
                 <div id="tabs" data-bind="ojComponent: {component: 'ojNavigationList', selection: router.stateId(), beforeSelect: selectHandler, drillMode: 'none', edge: 'top'}">
                     <ul data-bind="foreach: router.states">
@@ -66,13 +66,14 @@
                 </div>
             </div>
         </div>
-        <div class="oj-md-12 oj-col" data-bind="if: router.stateId()">
-            <div class="oj-panel tab-content" data-bind="with: router.currentState()">
-                <h2 id="currentPage"><span data-bind="text: label"></span> <span data-bind="css: value"></span></h2>
-                    <div data-bind="template: {name: 'enterprise/' + id +'/' + id + '-large'}"></div>
-            </div>
+    </div>
+    <div class="oj-md-12 oj-col" data-bind="if: router.stateId()">
+        <div class="oj-panel tab-content" data-bind="with: router.currentState()">
+            <h2 id="currentPage"><span data-bind="text: label"></span> <span data-bind="css: value"></span></h2>
+                <div data-bind="template: {name: 'enterprise/' + id +'/' + id + '-large'}"></div>
         </div>
     </div>
+
 </script>
 
 <div class="templateArea" data-bind="template: {name: $root.medium() ? 'md_lg_xl_template' : 'sm_template'}"></div>

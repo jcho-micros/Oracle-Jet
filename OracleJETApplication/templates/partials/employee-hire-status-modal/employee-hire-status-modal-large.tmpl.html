@@ -17,11 +17,11 @@
                     <div class="oj-row">
                         <div class="oj-col oj-sm-4">
                             <div>Hire Date</div>
-                            <input data-bind="ojComponent: {component: 'ojInputDate', value: hireDate}" />
+<!--                            <input data-bind="ojComponent: {component: 'ojInputDate', value: $parent.hireDate()}" />-->
                         </div>
                         <div class="oj-col oj-sm-4">
                             <div>Type</div>
-                            <div id="checkboxSetHireType" aria-labelledby="mainlabelid" data-bind="ojComponent: {component: 'ojCheckboxset', value: hireType}">
+                            <div id="checkboxSetHireType" aria-labelledby="mainlabelid" data-bind="ojComponent: {component: 'ojCheckboxset', value: ''}">
                               <span class="oj-choice-row">
                                 <input id="temp" type="checkbox" value="temporary">
                                 <label>Temporary</label>
@@ -34,7 +34,7 @@
                         </div>
                         <div class="oj-col oj-sm-4">
                             <div>Re-hire Date</div>
-                            <input data-bind="ojComponent: {component: 'ojInputDate', value: reHireDate}" />
+<!--                            <input data-bind="ojComponent: {component: 'ojInputDate', value: reHireDate}" />-->
                         </div>
                     </div>
                 </div>
