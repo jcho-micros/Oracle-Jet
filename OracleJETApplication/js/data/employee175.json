@@ -36,7 +36,7 @@
       "gender" : "Male",
       "ethnicity": "caucasian",
       "timeZone" : "US CST",
-      "hireDate" : "2008-02-14T00:00:00-08:00",
+      "hireDate" : "2008-02-14T00:00:00",
       "hireStatus": "Active",
       "profilePicture" : "images/people/1758.png",
       "veteranStatus" : 1,

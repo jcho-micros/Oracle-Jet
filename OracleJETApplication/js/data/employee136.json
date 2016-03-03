@@ -35,7 +35,7 @@
       "gender" : "Female",
       "ethnicity": "caucasian",
       "timeZone" : "US CST",
-      "hireDate" : "2010-01-01T00:00:00-08:00",
+      "hireDate" : "2010-01-01T00:00:00",
       "hireStatus": "Active",
       "profilePicture" : "images/people/136.png",
       "veteranStatus" : 1,

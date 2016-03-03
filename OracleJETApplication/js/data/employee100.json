@@ -35,7 +35,7 @@
       "gender" : "Male",
       "ethnicity": "caucasian",
       "timeZone" : "US CST",
-      "hireDate" : "2009-03-01T00:00:00-08:00",
+      "hireDate" : "2009-03-01T00:00:00",
       "hireStatus": "Active",
       "profilePicture" : "images/kathryn_jones.png",
       "veteranStatus" : 1,
