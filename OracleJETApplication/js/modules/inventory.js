@@ -11,7 +11,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', 'o
             this.router = undefined;
 
             self.handleActivated = function (data) {
-                var parentRouter = data.valueAccessor().params;
+                var parentRouter = oj.Router.rootInstance;
 
                 this.router = parentRouter.createChildRouter('inventorytab').configure({
                     'overview': {

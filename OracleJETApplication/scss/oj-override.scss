@@ -1,4 +1,4 @@
-@import "oj/v1.1.2/alta/_oj.alta.variables.scss";
+@import "oj/v2.0.0/alta/_oj.alta.variables.scss"; 
 // ---------------------------------------------------------------
 //  LOGISTICAL VARIABLES
 // ---------------------------------------------------------------
@@ -92,12 +92,28 @@ $white: #fff;
 $black: #000;
 $darkBlue: #0c4a7e;
 $lightBlue: #0572CE;
+$sideNavLinksBlue: #85bbe7;
 $lightTan: #f5f5f5;
 $darkGray: #444444;
+$offCanvasGray: #454545;
+$sideNavLinkGray:#616365;
 $gray: #666666;
 $lightGray: #cccccc;
 $lightGray2: #c4ced7;
-
+$primaryLightBlue: #309fdb;
+$secondaryLightBlue: #84bbe6;
+$primaryOrange: #ED813E;
+$secondaryOrange: #F3AC7A;
+$primaryGreen: #81bb5f;
+$secondaryGreen: #aed292;
+$primaryPurple: #854e9b;
+$secondaryPurple: #a984b8;
+$primaryTurquoise: #13b6cf;
+$secondaryTurquoise: #83cdde;
+$primaryYellow:#fbce4a;
+$secondaryYellow: #fcde8a;
+$primaryLightGreen: #3caf85;
+$secondaryLightGreen: #89c7ad;
 // 
 // border colors
 // ---------------------------------
@@ -122,9 +138,7 @@ $highlightInputBorderColor: $black;
 // ---------------------------------
 // 
 // font family 
-$fontFamily: "Helvetica Neue",
-Arial,
-sans-serif;
+$fontFamily: Helvetica Neue,Arial,sans-serif;
 
 // 
 // font size
@@ -167,6 +181,24 @@ $iconColor: $darkBlue;
 $iconSelectedColor: $white;
 $customIconBckgColor: $lightBlue;
 $customIconFontColor: $white;
+$sideNavText: $white;
+$sideNavLinkColor:$sideNavLinksBlue;
+$sideNavLinkBckColor:$sideNavLinkGray;
+$homeIconBckColor: $primaryLightBlue;
+$homeTabBckColor: $secondaryLightBlue;
+$homeIconColor: $white;
+$laborIconBckColor: $primaryOrange;
+$laborIconColor: $white;
+$inventoryIconBckColor: $primaryGreen;
+$inventoryIconColor: $white;
+$giftLoyaltyIconBckColor: $primaryPurple;
+$giftLoyaltyIconColor: $white;
+$reportsChartsIconBckColor: $primaryTurquoise;
+$reportsChartsIcon: $white;
+$enterpriseIconBckColor: $primaryYellow;
+$enterpriseIconColor: $white;
+$peopleIconBckColor: $primaryLightGreen;
+$peopleIconColor: $white;
 //$tabText: #ffffff;
 $selectedtabText: $darkGray;
 // 
@@ -369,9 +401,10 @@ $headerLogoText: $logoText;
 $headerOffCanvas: $darkGray;
 // $headerBgColorDisabled: $gray;
 // $headerBgImage:         null;
-$headerBGLogo: $imageDir + 'logo_oracle_sm.png';
+$headerBGLogo: $imageDir + 'oracle_logo_sm_black.png';
 $headerUserIcon: $imageDir + 'vatar_24px.png';
-
+$listSelectMask: $imageDir + 'thumb-overlay-selected.png';
+$listHoverMask: $imageDir + 'thumb-overlay-hover.png';
 //IPAD icon text
 $headerNavigationText: $customsmallFontSize;
 //Mobile icon size
@@ -1378,6 +1411,12 @@ $navigationListBorderColor:                $lightGray;
 //         url('fontname.svg#fontname') format('svg');
 }
 html{
+    height: 100vh;
+}
+html,body{
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
     font-size:12px;
 }
 a{
@@ -1424,57 +1463,61 @@ a{
 #app-header-desktop-nav, #app-header-mobile-nav{
     .oj-navigationlist-element{
         justify-content: center;
+        margin:0;
     }
     &.oj-navigationlist-horizontal .oj-navigationlist-divider {
         border-color: $borderDivder;
     }
     .oj-navigationlist-item{
         margin-right:0;
+        &.oj-focus{
+            outline-color:transparent;
+        }
         &.oj-default{
             background-color:$navigationListHeaderMobileBg;
         }
         &.oj-selected{
 //            background-color: $tabsBgColorSelected;
                 &#home{
-                    background-color: #309fdb;
+                    background-color: $homeIconBckColor;
                     .fa.fa-briefcase.oj-navigationlist-item-icon {
-                        color: $white;
+                        color: $homeIconColor;
                     }
                 }
                 &#labor{
-                    background-color: #ED813E;
+                    background-color: $laborIconBckColor;
                     .fa.fa-briefcase.oj-navigationlist-item-icon {
-                        color: $white;
+                        color: $laborIconColor;
                     }
                 }
                 &#inventory{
-                    background-color: #81bb5f;
+                    background-color: $inventoryIconBckColor;
                     .fa.fa-briefcase.oj-navigationlist-item-icon {
-                        color: $white;
+                        color: $inventoryIconColor;
                     }
                 }
                 &#gift-loyalty{
-                    background-color: #854e9b;
+                    background-color: $giftLoyaltyIconBckColor;
                     .fa.fa-briefcase.oj-navigationlist-item-icon {
-                        color: $white;
+                        color: $giftLoyaltyIconColor;
                     }
                 }
                 &#reports-analytics{
-                    background-color: #13b6cf;
+                    background-color: $reportsChartsIconBckColor;
                     .fa.fa-briefcase.oj-navigationlist-item-icon {
-                        color: $white;
+                        color: $reportsChartsIcon;
                     }
                 }
                 &#enterprise{
-                    background-color: #fbce4a;
+                    background-color: $enterpriseIconBckColor;
                     .fa.fa-briefcase.oj-navigationlist-item-icon {
-                        color: $white;
+                        color: $enterpriseIconBckColor;
                     }
                 }
                 &#people{
-                    background-color: #3caf85;
+                    background-color: $peopleIconBckColor;
                     .fa.fa-briefcase.oj-navigationlist-item-icon {
-                        color: $white;
+                        color: $peopleIconColor;
                     }
                 }
             border-width: 0 !important;
@@ -1487,29 +1530,69 @@ a{
 
         }
         &.oj-hover:not(.oj-selected) {
-            background-color: $headerNavColorSelected;
-            border-color: transparent;
+            &#home{
+                background-color: $homeIconBckColor;
+                .fa.fa-briefcase.oj-navigationlist-item-icon {
+                    color: $homeIconColor;
+                }
+            }
+            &#labor{
+                background-color: $laborIconBckColor;
+                .fa.fa-briefcase.oj-navigationlist-item-icon {
+                    color: $laborIconColor;
+                }
+            }
+            &#inventory{
+                background-color: $inventoryIconBckColor;
+                .fa.fa-briefcase.oj-navigationlist-item-icon {
+                    color: $inventoryIconColor;
+                }
+            }
+            &#gift-loyalty{
+                background-color: $giftLoyaltyIconBckColor;
+                .fa.fa-briefcase.oj-navigationlist-item-icon {
+                    color: $giftLoyaltyIconColor;
+                }
+            }
+            &#reports-analytics{
+                background-color: $reportsChartsIconBckColor;
+                .fa.fa-briefcase.oj-navigationlist-item-icon {
+                    color: $reportsChartsIcon;
+                }
+            }
+            &#enterprise{
+                background-color: $enterpriseIconBckColor;
+                .fa.fa-briefcase.oj-navigationlist-item-icon {
+                    color: $enterpriseIconBckColor;
+                }
+            }
+            &#people{
+                background-color: $peopleIconBckColor;
+                .fa.fa-briefcase.oj-navigationlist-item-icon {
+                    color: $peopleIconColor;
+                }
+            }
             .oj-navigationlist-item-icon{
                 color:$iconSelectedColor;
             }
         }
-
         .oj-navigationlist-item-icon {
             
                 color: $iconColor;
                 margin-right: 0;
                 font-size:16px;
             }
-
     }
     a.oj-navigationlist-item-content {
         color: $iconColor;
-
     }
 }
-.oj-navigationlist-listview-container{
-    margin-top:2px;
-}
+    .oj-navigationlist-listview-container{
+        margin-top:2px;
+    }
+    .oj-navigationlist-element {
+        margin:0px !important;
+    }
 .app-header-mobile-nav-title{
     background-color: $appHeaderMobileBg;
     padding: 0.8571rem !important;
@@ -1589,7 +1672,7 @@ a{
         height: 40px;
         width: 100%;
         min-width: 100px !important;
-        font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+        font-family: Helvetica Neue, helvetica, arial, sans-serif;
         font-size: 16px;
         font-weight: 500;
         background-color: #e4e8ea;
@@ -1604,7 +1687,7 @@ a{
     }
     h1 {
         margin: 0px;
-        font-family: 'Helvetica Neue Bold', sans-serif;
+        font-family: Helvetica Neue Bold, sans-serif;
         font-size: 17px;
         line-height: 17px;
         font-weight: 600;
@@ -1639,7 +1722,7 @@ a{
         padding:10px;
     }
     .logo_container {
-        font-family: 'Helvetica Neue Light', sans-serif;
+        font-family: Helvetica Neue Light, sans-serif;
         font-size: 20px;
         font-weight: 500;
     }
@@ -1648,7 +1731,7 @@ a{
         max-width:115px;
     }
      .textlg {
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-family: Helvetica Neue Light, Helvetica, Arial, sans-serif;
         font-size: 15px;
         color: #666;
         font-weight:400;
@@ -1716,7 +1799,7 @@ a{
         h1 {
             margin-top: 0px;
             margin-bottom: 10px;
-            font-family: 'Helvetica Neue Bold', sans-serif;
+            font-family: Helvetica Neue Light, sans-serif;
             font-size: 24px;
             line-height: 44px;
             font-weight: 600;
@@ -1724,7 +1807,7 @@ a{
         }
         h2 {
             display:block;
-            font-family: 'Helvetica Neue Light', sans-serif;
+            font-family: Helvetica Neue Light, sans-serif;
             font-size: 18px;
             line-height: 36px;
             font-weight: 600;
@@ -1816,12 +1899,11 @@ a{
 }
 
 //General Styles
-body,
-html {
-    height: 100%;
-}
 .page-area {
      height:100%;
+     padding-left:0px;
+     padding-right:0px;
+     background-color:$white;
 }
 
 //helper styles
@@ -1832,12 +1914,16 @@ html {
 .float-l{
     float:left;
 }
-
+.self_clear:after {
+  content: "";
+  clear: both;
+  display: table;
+}
 .clearAll{
     clear:both;
 }
 .full-height {
-    height: 100%;
+    height: 100vh;
 }
 
 .highlightInput{
@@ -1861,8 +1947,6 @@ h1{
     }
 }
 h3{
-//    background-color: $headerH3BgColor;
-//    text-transform: capitalize;
     padding:10px;
     font-weight:bold;
     font-size:14px;
@@ -1930,8 +2014,13 @@ a.basic-btn-link{
 #peopleSearchForm{
     .oj-row{
         border-bottom:1px solid $lightGray;
-        padding:15px;
+        padding:5px;
     }
+}
+.resultWrapper{
+    position: relative;
+
+    
 }
 //Profile Tab border Top
 .tab-content{
@@ -1941,14 +2030,13 @@ a.basic-btn-link{
     padding:10px 0;
 }
 .historyLogResult{
-    clear:both;
     overflow-y: auto;
     overflow-x: hidden;
-    height: 180px;
-    background-color:$lightGray;
+    height: 150px;
+    background-color:$secondaryLightGreen;
     ul.searchHistory{
         list-style-type: none;
-        padding-left:10px;
+        padding-left:0px;
         li{
             margin-bottom: 10px;
             padding:0px;
@@ -1964,9 +2052,35 @@ a.basic-btn-link{
     margin:10px 0;
 }
 #personaldetails, #listview{
-    padding:10px;
+    padding:10px
     img{
         width:100%;
+    }
+}
+#listview{
+    height:100%;
+    li{
+        padding: 5px 10px;;
+        .activeStatusCheck{
+            background:url(images/active-check.png);
+            display: block;
+            position: absolute;
+            top: 60%;
+            left: 0%;
+            width: 29px;
+            height: 29px;
+            z-index: 200;
+        }
+        .inActiveStatusCheck{
+            background:url(images/nonactive-status.png);
+            display: block;
+            position: absolute;
+            top: 60%;
+            left: 0%;
+            width: 29px;
+            height: 29px;
+            z-index: 200; 
+        }
     }
 }
 .oj-accordion-collapsible{
@@ -2131,10 +2245,7 @@ footer{
 //Media Query
 //Medium/ipad (UP)
 @media only screen and (min-width: 768px){
-    .page-area {
-//        padding-left: 1.072rem !important;
-//        padding-top: 10px;
-    }
+
     //Custom col sizes
     .custom-col-9{
         width:11.11111111%;
@@ -2163,7 +2274,6 @@ footer{
         background-color: $navigationListDesktopBg;
     }
     .oj-navigationlist-item {
-        padding:0.572rem !important;
         border-width: 3px 0 0 0 !important;
         margin-right: 5px;
         &:last-child{
@@ -2173,9 +2283,8 @@ footer{
 //             background-color: $navigationListDesktopBg;
 //        }
         &.oj-selected {
-            
             background-color: $navigationListDesktopBgSelected;
-            border-width: 3px 1px 0 1px !important;
+            border-width: 1px 1px 0 1px !important;
             border-right-color: $navigationListBorderColor;
             border-left-color: $navigationListBorderColor;
 
@@ -2184,10 +2293,46 @@ footer{
             }
         }
     }
-    //Left Side Nav
+    //Left Side Navigation
     #sidebar-left{
-        background-color:#333333;
-    }
+        height: inherit;
+        min-height: 100vh;
+        background-color:$offCanvasGray;
+        border-right: 1px $lightGray solid;
+        padding-top: 10px;
+        padding-left:10px;
+            #sideNavigationContainer{
+                margin-top:16px;
+                color:$sideNavText;
+                padding-left:0px;
+                    .sidebar-left-input {
+                        width: 110px;
+                        margin-left:40px;
+                    }
+                    div{
+                        padding: 0 0 6px 0;
+                        margin-left:40px;
+                    }
+            }
+        .sidebar-left-nav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0.77778rem 0;
+        margin-top: 15px;
+            li a:not(.button) {
+                color: $sideNavLinkColor;
+                font-size: 1.05em;
+                padding: 10px 5px 10px 40px;
+                display: block;
+            }
+            li a:hover{
+                color: $white;
+                text-decoration: none;
+                background-color: $sideNavLinkBckColor;
+            }
+        
+        }    
+    }  
     //Employee Dialog Modal
     .generalModal-dimensions{
         width:70%;
@@ -2204,10 +2349,51 @@ footer{
             
         }
     }
-    
+    .checkboxWrapper:nth-child(2){
+        width: 310px;
+        margin-left:15px;
+    }
     .profileToolBar:nth-child(2){
         border-left: 0px solid transparent;
         width:300px;
+    }
+    .oj-listview-focused-element{
+        &.oj-selected{
+            &.oj-hover{
+                .imageOverlay{
+                    display:block;
+                    position:absolute;
+                    top:0%;
+                    left:0;
+                    width:95px;
+                    height:75px;
+                    z-index: 100;
+                    background:url($listSelectMask);
+                }
+            }
+        .imageOverlay{
+            display:block;
+            position:absolute;
+            top:0%;
+            left:0;
+            width:95px;
+            height:75px;
+            z-index: 100;
+            background:url($listSelectMask);
+        }
+        }
+        &.oj-hover{
+            .imageOverlay{
+                display:block;
+                position:absolute;
+                top:0%;
+                left:0;
+                width:95px;
+                height:75px;
+                z-index: 100;
+                background:url($listHoverMask);
+            }
+        }
     }
     .imageOverlay{
         display:block;
@@ -2227,6 +2413,11 @@ footer{
     .profileHelpIcon{
     }
     //Profile and Tabs
+    .templateArea{
+        height:100%;
+        display: block;
+        position: relative;
+    }
     .profileWrapper{
          background-repeat: no-repeat;
          background-size: 225px 184px;
@@ -2238,12 +2429,15 @@ footer{
         padding-top:3px;
         h1{
             font-size:36px;
-            font-family: 'Helvetica Neue Light';
+            font-family: Helvetica Neue Light;
             font-weight: normal;
             color: $white;
         }
         .page-sub-navigation{
             color:$white;
+        }
+        .profileToolBar:last-child{
+            width:200px;
         }
         .profileToolBar{
             width:150px;
@@ -2281,7 +2475,7 @@ footer{
             position:absolute;
             top:0%;
             left:0%;
-            width:195px;
+            width:175px;
             height:110px;
             z-index: 100;
             background:url(images/profile-Large-mask.png);
@@ -2289,8 +2483,8 @@ footer{
         .profileMaskImage{
             background-repeat: no-repeat;
             background-size: 151px 151px;
-            background-position:35px -15px;
-            width: 200px;
+            background-position:29px -15px;
+            width: 165px;
             height: 110px;
             display: block;
             top:0;
@@ -2302,15 +2496,20 @@ footer{
             color:#444444;
         }
         .oj-navigationlist-item{
-            
-                &.oj-default{
-                    background-color: #89c7ad;
+            &.oj-focus{
+                outline-color:transparent;
+            }
+            &.oj-default{
+                background-color: #89c7ad;
+                .oj-navigationlist-item-label{
+                    color:$white;
+                }
+           }
+           &.oj-selected {
+               a{
+               color:#444;
                }
-               &.oj-selected {
-                   a{
-                   color:#444;
-                   }
-               }
+           }
         }
     }
     .peopleWrapper{
@@ -2325,7 +2524,7 @@ footer{
         padding:15px;
         h1{
             font-size:36px;
-            font-family: 'Helvetica Neue Light';
+            font-family: Helvetica Neue Light;
             font-weight: normal;
             color: $white;
         }
@@ -2335,10 +2534,10 @@ footer{
     }
 
     .enterpriseWrapper{
-/*         background:url(images/reportsCharts-icon.png);*/
+         background:url(images/enterprise-icon.png);
          background-repeat: no-repeat;
-         background-size: 225px 184px;
-         background-position:100% 30%;
+         background-size: 245px 204px;
+         background-position:100% 80%;
          background-color: #fbce4a;
          height:110px;
     }
@@ -2346,7 +2545,7 @@ footer{
         padding:15px;
         h1{
             font-size:36px;
-            font-family: 'Helvetica Neue Light';
+            font-family: Helvetica Neue Light;
             font-weight: normal;
             color: $white;
         }
@@ -2359,15 +2558,33 @@ footer{
             color:#444444;
         }
         .oj-navigationlist-item{
-            
-                &.oj-default{
-                    background-color: #fcde8a;
+            &.oj-focus{
+                outline-color:transparent;
+            }
+            &.oj-hover:not(.oj-selected){
+                background-color:$white;
+                border-color:$secondaryYellow;
+                    .oj-navigationlist-item-label{
+                        color:$primaryYellow;
+                    }
+            }
+            &.oj-default{
+                background-color: $secondaryYellow;
+                    .oj-navigationlist-item-label{
+                        color:$white;
+                        font-weight:300;
+                    }
+           }
+           &.oj-selected {
+               border-color: $secondaryYellow;
+               a{
+               color:#444;
+                    .oj-navigationlist-item-label{
+                         font-weight:300;
+                         color:#000;
+                    }
                }
-               &.oj-selected {
-                   a{
-                   color:#444;
-                   }
-               }
+           }
         }
     }
     .reportsAnalyticsWrapper{
@@ -2414,15 +2631,33 @@ footer{
             color:#444444;
         }
         .oj-navigationlist-item{
-            
+            &.oj-focus{
+                outline-color:transparent;
+            }
+            &.oj-hover:not(.oj-selected){
+                background-color:$white;
+                border-color:$secondaryPurple;
+                    .oj-navigationlist-item-label{
+                        color:$primaryPurple;
+                    }
+            }
             &.oj-default{
-                background-color: #a984b8;
-            }
-            &.oj-selected {
-                a{
-                color:#444;
-                }
-            }
+                background-color: $secondaryPurple;
+                    .oj-navigationlist-item-label{
+                        color:$white;
+                        font-weight:300;
+                    }
+            } 
+           &.oj-selected {
+               border-color: $secondaryPurple;
+               a{
+               color:#444;
+                    .oj-navigationlist-item-label{
+                         font-weight:300;
+                         color:#000;
+                    }
+               }
+           }
         }
     }
     .inventoryWrapper{
@@ -2449,14 +2684,33 @@ footer{
             color:#444444;
         }
         .oj-navigationlist-item{
-                &.oj-default{
-                    background-color: #aed292;
+            &.oj-focus{
+                outline-color:transparent;
+            }
+            &.oj-hover:not(.oj-selected){
+                background-color:$white;
+                border-color:$secondaryGreen;
+                    .oj-navigationlist-item-label{
+                        color:$primaryGreen;
+                    }
+            }
+            &.oj-default{
+                background-color: #aed292;
+                    .oj-navigationlist-item-label{
+                        color:$white;
+                        font-weight:300;
+                    }
+           }
+           &.oj-selected {
+               border-color: $secondaryGreen;
+               a{
+               color:#444;
+                    .oj-navigationlist-item-label{
+                         font-weight:300;
+                         color:#000;
+                    }
                }
-               &.oj-selected {
-                   a{
-                   color:#444;
-                   }
-               }
+           }
         }
     }
     .laborWrapper{
@@ -2480,28 +2734,45 @@ footer{
         }
     }
     #laborSectionTabs{
-        //background-color: #ED813E;
         a{
             color:#444444;
         }
         .oj-navigationlist-item{
-            
-                &.oj-default{
-                    background-color: #F3AC7A;
+            &.oj-focus{
+                outline-color:transparent;
+            }
+            &.oj-hover:not(.oj-selected){
+                background-color:$white;
+                border-color:$secondaryOrange;
+                    .oj-navigationlist-item-label{
+                        color:$primaryOrange;
+                    }
+            }
+            &.oj-default{
+                background-color: #F3AC7A;
+                    .oj-navigationlist-item-label{
+                        color:$white;
+                        font-weight:300;
+                    }
+           }
+           &.oj-selected {
+               border-color: $secondaryOrange;
+               a{
+               color:#444;
+                    .oj-navigationlist-item-label{
+                         font-weight:300;
+                         color:#000;
+                    }
                }
-               &.oj-selected {
-                   a{
-                   color:#444;
-                   }
 
-               }
+           }
         }
     }
     .homeWrapper{
          background:url(images/home-icon.png);
          background-repeat: no-repeat;
          background-size: 225px 184px;
-         background-position:100% 30%;
+         background-position:100% 70%;
          background-color: #309fdb;
          height:110px;
     }
@@ -2632,46 +2903,34 @@ footer{
 
 //large/desktop (UP)
 @media only screen and (min-width: 1024px){
+    #mainCol{
+        width: 100% !important;
+        max-width: 100% !important;
+        position: relative;
+        display: inline-flex;
+    }
     .app-header-desktop {
         padding: 15px 10px 0 10px;
     }
     .app-header-logo-wrap{
         white-space: nowrap;
-        .appheader-appname {
-            color: $headerLogoText;
-            font-size:12px;
-            display: inline-block;
-        }
+        padding-left:0px;
+            .appheader-appname {
+                color: $headerLogoText;
+                font-size:12px;
+                display: inline-block;
+            }
         .appheader-logo-oracle {
             margin-bottom: 10px;
         }
+        div:first-child{
+            padding-left:0px;
+        }
     }
-    // Side Navigation
-    #sidebar-left {
-        border-right: 1px #ccc solid;
-        padding-top: 10px;
-        padding-left:10px;
-        height:100%;
-    }
-    .sidebar-left-input {
-        width: 140px;
-    }
-    #sideNavigationContainer > div {
-        padding: 0 0 6px 0;
-    }
-
-    .sidebar-left-nav {
-        list-style-type: none;
-        margin: 0;
-        padding: 0.77778rem 0;
-        border-top: solid 1px #ccc;
-        margin-top: 15px;
-
-        li a:not(.button) {
-            color: #0572ce;
-            font-size: 1.05em;
-            padding: 10px 5px 10px 25px;
-            display: block;
+    
+    .topLocationLink{
+        &:after{
+            content: ' |';
         }
     }
     //Footer
@@ -2718,6 +2977,27 @@ footer{
         margin-top:10px;
         padding-bottom:0px;
         width:95%;
+    }
+    #profileSection{
+        padding-top:3px;
+
+        h1{
+            font-size:36px;
+            font-family: Helvetica Neue Light;
+            font-weight: normal;
+            color: $white;
+        }
+        .page-sub-navigation{
+            color:$white;
+        }
+        .profileToolBar{
+            width:130px !important;
+        }
+        .profileToolBar:last-child{
+            width:180px !important;
+            padding-right:0 !important;
+        }
+        
     }
     .tab-content{
         border-width: 0 0 0 0;
@@ -2775,7 +3055,6 @@ footer{
         .fa-envelope{
             color: $lightBlue;
         }
-        
     }
     //People Search
     .searchWindow{
@@ -2802,6 +3081,7 @@ footer{
 
     #listview li{
         width:100%;
+        height:100px;
         padding-left:0px;
         padding-right:0px;
     }
@@ -2966,9 +3246,19 @@ footer{
     .oj-navigationlist-item-label {
         font-size: $headerNavigationText;
     }
+    .templateArea {
+        height: 100%;
+        display: block;
+        position: relative;
+        background-color:$white;
+    }
     //Section Block
     .sectionName {
         padding-left: 5px;
+    }
+    //Main Template
+    #mainCol{
+        display:block;
     }
     .oj-tabs-panel {
         border: 0px solid #cccccc;
@@ -2988,7 +3278,7 @@ footer{
          background-color: #ED813E;
     }
     .profileToolBar{
-        width:150px;
+        width:130px !important;
         font-size: 12px;
         border-left: 1px solid #cccccc;
         vertical-align: middle;
@@ -2999,15 +3289,132 @@ footer{
             font-weight:bold;
         }
     }
-    .profileToolBar:nth-child(2){
-        width:215px;
+
+
+    #profileSectionTabs{
+        &.oj-navigationlist-item-element{
+            padding-left:2px;
+            padding-right:2px;
+
+        }
+        a{
+            padding-left:8px;
+            padding-right:8px;
+        }
     }
-    .profileToolBar:nth-child(4){
-        width:124px;
+    .profilePhotoArea{
+        img{
+        width:110px;
+        height: 110px;
+        left:35%;
+        }
+        .profileMask{
+            display:block;
+            position:absolute;
+            top:0%;
+            left:-15%;
+            width:175px;
+            height:110px;
+            z-index: 100;
+            background:url(images/profile-Large-mask.png);
+        }
+        .profileMaskImage{
+            background-repeat: no-repeat;
+            background-size: 151px 151px;
+            background-position:3px -15px;
+            width: 165px;
+            height: 110px;
+            display: block;
+            top:0;
+            left:0;
+        }
     }
+    //profile
+    #inventorySectionTabs{
+        a{
+            color:#444444;
+        }
+        .oj-navigationlist-item{
+            &.oj-focus{
+                outline-color:transparent;
+            }
+            &.oj-hover:not(.oj-selected){
+                background-color:$white;
+                border-color:$secondaryGreen;
+                    .oj-navigationlist-item-label{
+                        color:$primaryGreen;
+                    }
+            }
+            &.oj-default{
+                background-color: #aed292;
+                    .oj-navigationlist-item-label{
+                        color:$white;
+                        font-weight:300;
+                    }
+           }
+           &.oj-selected {
+               border-color: $secondaryGreen;
+               a{
+               color:#444;
+                    .oj-navigationlist-item-label{
+                         font-weight:300;
+                         color:#000;
+                    }
+               }
+           }
+        }
+    }
+    //labor section
+    #profileTabs{
+        a{
+            color:#444444;
+        }
+        .oj-navigationlist-item{
+            &.oj-focus{
+                outline-color:transparent;
+            }
+            &.oj-hover:not(.oj-selected){
+                background-color:$white;
+                border-color:$secondaryLightGreen;
+                    .oj-navigationlist-item-label{
+                        color:$primaryLightGreen;
+                    }
+            }
+            &.oj-default{
+                background-color: #aed292;
+                    .oj-navigationlist-item-label{
+                        color:$white;
+                        font-weight:300;
+                    }
+           }
+           &.oj-selected {
+               border-color: $secondaryLightGreen;
+               a{
+               color:#444;
+                    .oj-navigationlist-item-label{
+                         font-weight:300;
+                         color:#000;
+                    }
+               }
+           }
+        }
+    }
+    //profile section
      //Top Icon tool bar
     .oj-navigationlist-item-label{
         margin-left:4px;
+    }
+    #appDrawer{
+        background-color: #454545;
+        width:200px;
+        .oj-navigationlist-element{
+            .oj-default{
+                .oj-navigationlist-item-label{
+                    color:$white;
+                    font-weight:300;
+                }
+            }
+        }
     }
 
 }

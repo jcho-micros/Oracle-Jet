@@ -1,7 +1,7 @@
 <!-- small template -->
 <script type="text/html" id="sm_md_header_template">
     <div class="oj-row oj-cols-nopad app-header-mobile">
-        <div class="oj-sm-10 oj-col">
+        <div class="oj-sm-9 oj-col">
             <button class='oj-button-half-chrome' data-bind="click:toggleAppDrawer,
 			     ojComponent: {component:'ojButton',
                                     label: offScreenButtonLabel, 
@@ -16,7 +16,7 @@
                 </a>
             </span>
         </div>
-        <div class="oj-sm-2 oj-col oj-helper-text-align-right">
+        <div class="oj-sm-3 oj-col oj-helper-text-align-right">
             <button class='oj-button-half-chrome' data-bind="ojComponent: { component: 'ojButton',
                              label: 'Avatar', 
                              display: 'icons',
@@ -43,7 +43,7 @@
                               drillMode: 'none', 
                               edge: 'top', 
                               selection: $root.router.stateId(),
-                              data: $root.dataSource,
+                              data: dataSource,
                               optionChange: $root.optionChangeHandler,
                               item: { template: 'app_nav_template' }
                               }" aria-label="Choose only one navigation element">
@@ -54,6 +54,7 @@
 <script type="text/html" id="lg_xl_header_template">
     <div class="oj-row app-header-desktop">
         <div class="oj-lg-4 oj-xl-4 oj-col app-header-logo-wrap">
+            <div class="oj-md-1 oj-col"><a data-bind="click: toggleSideNav"><i class="fa fa-bars"></i></a></div>
                 <div role="img" class="oj-icon appheader-logo-oracle" title="Oracle Logo" alt="Oracle Logo"></div>
                 <div class="appheader-appname" data-bind="text: appName"></div>
         </div>
@@ -63,7 +64,7 @@
                               drillMode: 'none',
                               edge: 'top',
                               selection: $root.router.stateId(),
-                              data: $root.dataSource,
+                              data: dataSource,
                               optionChange: $root.optionChangeHandler,
                               item: { template: 'app_nav_template' }
                               }" aria-label="Choose only one navigation element">
@@ -72,6 +73,8 @@
 
         <div class="oj-lg-3 oj-xl-3 oj-helper-text-align-right oj-col">
             <!-- This pulldown menu is used for wider screens -->
+            
+            <span class="topLocationLink" data-bind="text: $parent.locationArea"></span>
             <button id="menuButton" class='oj-button-half-chrome' data-bind="ojComponent: { component: 'ojButton', label: userName, menu: '#appheaderGlobalNavMenuId'}">
             </button>
             <ul id="appheaderGlobalNavMenuId" data-bind="ojComponent: {component: 'ojMenu', select: menuItemSelect}" style="display:none">

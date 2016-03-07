@@ -23,53 +23,34 @@ define(['knockout', 'ojs/ojcore', 'ojs/ojknockout', 'ojs/ojnavigationlist', 'ojs
                 "selector": "#appDrawer",
                 "selection": "selectedItem"
             };
-
+            var appNavData = [
+                {name: 'Home', id: 'home', iconClass: 'fa fa-home oj-navigationlist-item-icon'},
+                {name: 'Labor', id: 'labor', iconClass: 'fa fa-briefcase oj-navigationlist-item-icon'},
+                {name: 'Inventory', id: 'inventory', iconClass: 'fa fa-dropbox oj-navigationlist-item-icon'},
+                {name: 'Gift & Loyalty', id: 'gift-loyalty', iconClass: 'fa fa-gift oj-navigationlist-item-icon'},
+                {name: 'Reporting & Analytics', id: 'reports-analytics', iconClass: 'fa fa-bar-chart oj-navigationlist-item-icon'},
+                {name: 'Mike Rose Cafe', id: 'enterprise', iconClass: 'fa fa-building-o oj-navigationlist-item-icon'},
+                {name: 'People', id: 'people', iconClass: 'fa fa-users oj-navigationlist-item-icon'}
+                ];
+        self.handleActivated = function () {
+            self.dataSource = new oj.ArrayTableDataSource(appNavData, {idAttribute: 'id'});
+            self.iconBig = new oj.ArrayTableDataSource(appNavData, {idAttribute: 'iconClass'});
+        };
         var appSideNavData = [
-            {
-                name: 'System Admin\n\ Mike Rose Cafe',
-                id: 'home'
-            },            {
-                name: 'Charts',
-                id: 'charts'
-            },
-            {
-                name: 'Reports',
-                id: 'reports'
-            },
-            {
-                name: 'Links',
-                id: 'links'
-            },
-            {
-                name: 'iCare',
-                id: 'icare'
-            },
-            {
-                name: 'myInventory',
-                id: 'myinventory'
-            },
-            {
-                name: 'Forecasting',
-                id: 'forecasting'
-            },
-            {
-                name: 'Dashboards',
-                id: 'dashboards'
-            },
-            {
-                name: 'myLabor',
-                id: 'mylabor'
-            },
-            {
-                name: 'Admin',
-                id: 'admin'
-            }
-            
+            {name: 'Charts', id: 'charts'},
+            {name: 'Reports', id: 'reports'},
+            {name: 'Links', id: 'links'},
+            {name: 'iCare', id: 'icare'},
+            {name: 'myInventory', id: 'myinventory'},
+            {name: 'Forecasting', id: 'forecasting'},
+            {name: 'Dashboards', id: 'dashboards'},
+            {name: 'myLabor', id: 'mylabor'},
+            {name: 'Admin', id: 'admin'}   
         ];
         // Data for application name
         var appName = {
             "id": "qs",
-            "name": "Hospitality | Enterprise Back Office"
+            "name": "Hospitality"
         };
         
                // 
@@ -111,6 +92,19 @@ define(['knockout', 'ojs/ojcore', 'ojs/ojknockout', 'ojs/ojnavigationlist', 'ojs
         self.globalNavItems = toolbarData.global_nav_dropdown_items;
 //var customQuery = oj.ResponsiveKnockoutUtils.createMediaQueryObservable('(min-width: 378px)');
 //alert(customQuery);
+        self.toggleSideNav = function(){
+            if($('#sidebar-left').is(':visible')){
+                $('#sidebar-left').toggle();
+                $('.page-area').removeClass('oj-lg-10');
+                $('.page-area').addClass('oj-lg-12');
+                $('#mainCol').css({'display' : 'block'});
+            }else{
+                $('#sidebar-left').toggle();
+                $('.page-area').removeClass('oj-lg-12');
+                $('.page-area').addClass('oj-lg-10');
+                $('#mainCol').css({'display' : 'inline-flex'});
+            }
+        };
         self.toggleAppDrawer = function ()
         {
             return oj.OffcanvasUtils.toggle(this.appDrawer);
@@ -124,7 +118,9 @@ define(['knockout', 'ojs/ojcore', 'ojs/ojknockout', 'ojs/ojnavigationlist', 'ojs
             oj.OffcanvasUtils.close(self.appDrawer);
         };
         query.addListener(mqListener);  
+
     }
+    
     return HeaderViewModel;
     
 });

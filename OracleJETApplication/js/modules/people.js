@@ -2,9 +2,13 @@ define([
     'ojs/ojcore',
     'knockout',
     'data/data',
+    'jquery', 
+    'hammerjs',
     'moment',
     'ojs/ojrouter',
     'ojs/ojknockout',
+    'ojs/ojjquery-hammer', 
+    'ojs/ojswipetoreveal',
     'ojs/ojlistview',
     'ojs/ojmodel',
     'ojs/ojnavigationlist',
@@ -19,8 +23,9 @@ define([
     'ojs/ojcheckboxset',
     'ojs/ojinputtext',
     'ojs/ojselectcombobox',
-    'ojs/ojradioset'
-], function (oj, ko, data) {
+    'ojs/ojradioset',
+    'ojs/ojmenu'
+], function (oj, ko, data, $, Hammer) {
 
     function peopleContentViewModel() {
         var self = this;
@@ -57,8 +62,119 @@ define([
                 // do stuff...
             }
         };
+        self.handleReady = function()
+        {
+            // register swipe to reveal for all new list items
+            $("#listview").find(".item-marker").each(function(index)
+            {
+                var id = $(this).prop("id");
+                var startOffcanvas = $(this).find(".oj-offcanvas-start").first();
+                var endOffcanvas = $(this).find(".oj-offcanvas-end").first();     
 
+                // setup swipe actions               
+                oj.SwipeToRevealUtils.setupSwipeActions(startOffcanvas);
+                oj.SwipeToRevealUtils.setupSwipeActions(endOffcanvas);
 
+                // make sure listener only registered once
+                endOffcanvas.off("ojdefaultaction");
+                endOffcanvas.on("ojdefaultaction", function() 
+                {
+                    self.handleDefaultAction({"id": id});
+                });
+            });
+        };
+
+        self.handleDestroy = function()
+        {
+            // register swipe to reveal for all new list items
+            $("#listview").find(".item-marker").each(function(index)
+            {
+                var startOffcanvas = $(this).find(".oj-offcanvas-start").first();                    
+                var endOffcanvas = $(this).find(".oj-offcanvas-end").first();                    
+
+                oj.SwipeToRevealUtils.tearDownSwipeActions(startOffcanvas);
+                oj.SwipeToRevealUtils.tearDownSwipeActions(endOffcanvas);
+            });
+        };
+        self.handleMenuItemSelect = function(event, ui)
+        {
+            var id = ui.item.prop("id");
+            if (id == "read")
+                self.handleRead();
+            else if (id == "more1" || id == "more2")
+                self.handleMore();
+            else if (id == "tag")
+                self.handleFlag();
+        };
+        self.closeToolbar = function(which, item)
+        {
+            var toolbarId = "#"+which+"_toolbar_"+item.prop("id");
+            var drawer = {"displayMode": "push", "selector": toolbarId};
+
+            oj.OffcanvasUtils.close(drawer);
+        };
+
+        self.handleAction = function(which, action, model)
+        {
+            var id;
+            if (model != null && model.id)
+            {
+                // offcanvas won't be open for default action case
+                if (action != "default")
+                    self.closeToolbar(which, $(model));
+                id = model.id;
+            }
+            else
+            {
+                id = $("#listview").ojListView("option", "currentItem");
+            }
+            
+            self.action("Handle "+action+" action on: "+empId);
+        };
+
+        self.handleRead = function(model)
+        {
+            self.handleAction("first", "read", model);
+           alert("hello");
+        };
+
+        self.handleMore = function(model)
+        {
+            self.handleAction("second", "more", model);
+        };
+
+        self.handleFlag = function(model)
+        {
+            self.handleAction("second", "flag", model);
+        };
+
+        self.handleTrash = function(model)
+        {
+            self.handleAction("second", "trash", model);
+            self.removeModel(model);
+        };
+
+        self.handleDefaultAction = function(model)
+        {
+            self.handleAction("second", "default", model);
+            self.removeModel(model);
+        };
+
+        this.removeModel = function(model)
+        {
+            // unregister swipe to reveal for removed item
+            var item = $("#"+model.id);
+            var startOffcanvas = item.find(".oj-offcanvas-start").first();                    
+            var endOffcanvas = item.find(".oj-offcanvas-end").first();                    
+
+            oj.SwipeToRevealUtils.tearDownSwipeActions(startOffcanvas);
+            oj.SwipeToRevealUtils.tearDownSwipeActions(endOffcanvas);
+
+            self.allItems.remove(function(item)
+            {
+                return (item.id == model.id);
+            });            
+        };
         //General function to  auto popup modal based on URL param string and dialog ID
         self.autoDialog = function(param, dialogId){
             if(document.URL.indexOf(param) > -1){
@@ -188,9 +304,6 @@ define([
         self.toggleSections = function () {
             self.sectionsState(!self.sectionsState());
         };
-
-
-
     }
 
     return peopleContentViewModel;

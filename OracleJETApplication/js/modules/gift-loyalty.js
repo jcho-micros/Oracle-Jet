@@ -11,39 +11,15 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', 'o
             this.router = undefined;
 
             self.handleActivated = function (data) {
-                var parentRouter = data.valueAccessor().params;
+                var parentRouter = oj.Router.rootInstance;
 
                 this.router = parentRouter.createChildRouter('icaretab').configure({
-                    'profile': {
-                        label: 'Profile',
-                        value: 'profile',
-                        isDefault: true
-                    },
-
-                    'schedules-timecards': {
-                        label: 'Schedules & Timecards',
-                        value: 'schedules-timecards'
-                    },
-
-                    'jobs-compensation': {
-                        label: 'Jobs & Compensation',
-                        value: 'jobs-compensation'
-                    },
-
-                    'payroll': {
-                        label: 'Payroll',
-                        value: 'payroll'
-                    },
-
-                    'metrics': {
-                        label: 'Metrics',
-                        value: 'metrics'
-                    },
-
-                    'permissions': {
-                        label: 'Permissions',
-                        value: 'permissions'
-                    }
+                    'profile': {label: 'Profile', value: 'profile', isDefault: true},
+                    'schedules-timecards': {label: 'Schedules & Timecards', value: 'schedules-timecards'},
+                    'jobs-compensation': {label: 'Jobs & Compensation', value: 'jobs-compensation'},
+                    'payroll': {label: 'Payroll', value: 'payroll'},
+                    'metrics': {label: 'Metrics', value: 'metrics'},
+                    'permissions': {label: 'Permissions', value: 'permissions'}
                 });
                 // Now that the router for this view exist, synchronise it with the URL
                 oj.Router.sync();

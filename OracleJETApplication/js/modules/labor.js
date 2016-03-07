@@ -23,8 +23,8 @@ define([
             this.router = undefined;
 
             self.handleActivated = function (data) {
-                var parentRouter = data.valueAccessor().params;
-                this.router = parentRouter.createChildRouter('labortab').configure({
+                var parentRouter = oj.Router.rootInstance;
+                self.router = parentRouter.createChildRouter('labortab').configure({
                     'overview': {label: 'Overview', value: 'overview', isDefault: true},
                     'employees': {label: 'Employees', value: 'employees'},
                     'schedules-timecards': {label: 'Schedules & Timecards', value: 'schedules-timecards'},
@@ -62,20 +62,11 @@ define([
             self.navDataSource = new oj.ArrayTableDataSource(tabsNavData, {idAttribute: "id"});
             self.dataSource = new oj.ArrayTableDataSource(this.locationList, {idAttribute: "id"});
             self.listLocationCol = ko.observable('atlanta');
-
-
-            
-            
-            
             self.sortLists = function () {
                 self.locationList.sort(function (left, right) {
                     return left.name == right.name ? 0 : (left.name < right.name ? -1 : 1);
                 });
             }
-//console.log(self.locationList.sort(function (left, right) {
-//                    return left.name == right.name ? 0 : (left.name < right.name ? -1 : 1);
-//                }));
-
             self.currentValue = ko.observable(0);
             
             self.selectHandler = function (event, ui) {

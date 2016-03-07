@@ -100,40 +100,91 @@
                         <div class="oj-sm-12 oj-col"><h2>Search Results</h2></div>
                    </div>
                         <div style="margin-top:0px; position: relative;" data-bind="ojComponent: {component: 'ojPagingControl', data: listViewDataSource, pageSize:10}"></div>
-                         <ul id="listview" data-bind="ojComponent: {component: 'ojListView',
-                             data: listViewDataSource,
-                             item: {template: 'peoplelist_template'},
-                             selectionMode: 'single',
-                             currentItem: '100',
-                             selection: ['100'],
-                             rootAttributes: {style: 'overflow:auto; margin-top: 5px'},
-                             scrollPolicyOptions: {fetchSize: 10}}">
-                         </ul>
-
+                        <ul id="listview" data-bind="ojComponent: {component: 'ojListView',
+                            data: listViewDataSource,
+                            item: {template: 'peoplelist_template'},
+                            ready: handleReady,
+                            destroy: handleDestroy,
+                            selectionMode: 'single',
+                            currentItem: '100',
+                            selection: ['100'],
+                            rootAttributes: {style: 'overflow:auto; margin-top: 5px'},
+                            scrollPolicyOptions: {fetchSize: 10}}">
+                        </ul>
+                        <ui id="itemMenu" style="display:none" aria-label="Swipe Actions" data-bind="ojComponent: {component: 'ojMenu', select: handleMenuItemSelect}">
+                            <li id="read"><a href="#">Offline</a></li>
+                            <li id="more1"><a href="#">More Action 1</a></li>
+                            <li id="more2"><a href="#">More Action 2</a></li>
+                            <li id="tag"><a href="#">Tag</a></li>
+                        </ul>
                          <script type="text/html" id="peoplelist_template">
-                             <li data-bind="attr: {id: $data['name']}, click: $parent.empBasicInfoOpen">
-                                 <div class="oj-row">
-                                     <div class="oj-sm-3 oj-col">
-                                         <span class="imageOverlay"></span>
-                                         <img style="width:75px; height:75px;" data-bind="attr: {src: $parent.getPhoto($data['empId'])}"/>
-                                     </div>
-                                     <div class="oj-sm-8 oj-col">
-                                         <div class="oj-sm-12 oj-col">
-                                             <span data-bind="text: payrollId"></span>
-                                         </div>
-                                         <div class="oj-sm-12 oj-col">
-                                             <strong><span class="header" data-bind="text: firstName + ' ' + lastName"></span></strong>, 
-                                             <span data-bind="text: homeStore"></span>
+                             <li data-bind="attr: {id: $data['name']}, click: $parent.empBasicInfoOpen" class="item-marker">
+                                <div class="oj-offcanvas-outer-wrapper">
+                                  <div class="oj-offcanvas-inner-wrapper"> 
+                                        <div class="oj-row">
+                                            <div class="oj-sm-3 oj-col">
+                                                <span class="inActiveStatusCheck" data-bind="visible: status == 'Inactive-Terminated'"></span>
+                                                <span class="activeStatusCheck" data-bind="visible: status == 'Active'"></span>
+                                                <span class="imageOverlay"></span>
+                                                <img style="width:75px; height:75px;" data-bind="attr: {src: $parent.getPhoto($data['empId'])}"/>
+                                            </div>
+                                            <div class="oj-sm-8 oj-col">
+                                                <div class="oj-sm-12 oj-col">
+                                                    <span data-bind="text: payrollId"></span>
+                                                </div>
+                                                <div class="oj-sm-12 oj-col">
+                                                    <strong><span class="header" data-bind="text: firstName + ' ' + lastName"></span></strong>, 
+                                                    <span data-bind="text: homeStore"></span>
 
-                                         </div>
-                                         <div class="oj-sm-12 oj-col">
-                                             <span data-bind="text: hireDate"></span>
-                                         </div>
-                                         <div class="oj-sm-12 oj-col">
-                                             <strong><span data-bind="text: status"></span></strong>
-                                         </div>
-                                     </div>
-                                 </div>
+                                                </div>
+                                                <div class="oj-sm-12 oj-col">
+                                                    <span data-bind="text: hireDate"></span>
+                                                </div>
+                                                <div class="oj-sm-12 oj-col">
+                                                    <div class="employeeStatusListView" data-bind="style:{color: status == 'Inactive-Terminated' ? '#e80023' : '#81bb5f'}"><strong>Hire Status</strong> <span data-bind="text: status"></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      
+                                       <div tabIndex="-1" data-bind="attr: {id: 'first_toolbar_'+empId}" class="oj-offcanvas-start" style="width:75px">
+                                            <div data-bind="click: $parent.empBasicInfoOpen">
+                                                <div class="oj-flex-bar" style="height:100%">
+                                                    <div class="oj-flex-bar-center-absolute">
+                                                        <div class="oj-flex oj-sm-flex-direction-column">
+                                                            <div title=".demo-library-icon-24" role="img" class="fa fa-car"></div>
+                                                            <div style="padding-top: 10px" class="oj-flex-item">Detail</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div tabIndex="-1" data-bind="attr: {id: 'second_toolbar_'+empId}" class="oj-offcanvas-end" style="width:225px">
+                                            <div data-bind="click: $parent.handleMore" class="oj-swipetoreveal-more">
+                                                <div class="oj-flex-bar" style="height:100%">
+                                                    <div class="oj-flex-bar-center-absolute">
+                                                        <div class="oj-flex oj-sm-flex-direction-column">
+                                                            <div title=".demo-library-icon-24" role="img" class="fa fa-car"></div>
+                                                            <div style="padding-top: 10px" class="oj-flex-item">More</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div data-bind="click: $parent.handleFlag" class="oj-swipetoreveal-flag">
+                                                <div class="oj-flex-bar" style="height:100%">
+                                                    <div class="oj-flex-bar-center-absolute">
+                                                        <div class="oj-flex oj-sm-flex-direction-column">
+                                                            <div title=".demo-library-icon-24" role="img" class="fa fa-car"></div>
+                                                            <div style="padding-top: 10px" class="oj-flex-item">Flag</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      
+                                  </div>
+                                </div>
+                                 
                              </li>
                          </script>
 

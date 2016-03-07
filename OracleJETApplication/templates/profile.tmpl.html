@@ -72,16 +72,17 @@
         </div>
     </div>
 </div>
-    <div class="oj-row">
-        <div class="oj-sm-12 oj-col" id="footCol">
-            <footer role="contentinfo">
-              <div id='appfooterDiv' data-bind="ojModule: {
-                                                    name: 'footer', 
-                                                    viewName: 'footer'}">
-              </div>
-            </footer>
-        </div>
+<div class="oj-row">
+    <div class="oj-sm-12 oj-col" id="footCol">
+        <footer role="contentinfo">
+          <div id='appfooterDiv' data-bind="ojModule: {
+                                                name: 'footer', 
+                                                viewName: 'footer'}">
+          </div>
+        </footer>
     </div>
+</div>
+    
 <!--Employee dialog modal-->
 <div data-bind="template: {name: 'profile/profile/employee-log/employee-log-modal-small'}"></div>
 
@@ -101,14 +102,14 @@
     <div class="oj-md-10 oj-col profileWrapper">
         <div id="profileSection" class="oj-col oj-md-12 page-header">
 
-            <div class="oj-col oj-md-2 oj-lg-5">
+            <div class="oj-col oj-md-6 oj-lg-5">
                 <h1>
                     <span data-bind="text: firstName()"></span>
                     <span data-bind="text: lastName()"></span>
                     <a data-bind="click: handleOpen('#employeeLogModal')"><i class="profileHelpIcon fa fa-book"></i></a>
                 </h1>
             </div>
-            <div class="oj-md-7 oj-col">
+            <div class="oj-md-6 oj-col">
                 <div class="oj-col profileToolBar">
                    <h4>Home Store</h4>
                    <span data-bind="text: personProfile().homeStore"></span>
@@ -160,7 +161,13 @@
         </div>
     </div>
 </div>
-
+<div class="oj-row">
+    <div class="oj-md-12 oj-col" id="footCol">
+        <footer role="contentinfo">
+          <div id='appfooterDiv' data-bind="ojModule: {name: 'footer', viewName: 'footer'}"></div>
+        </footer>
+    </div>
+</div>
 <!--Employee dialog modal-->
 <div data-bind="template: {name: 'profile/profile/employee-log/employee-log-modal-large'}"></div>
 

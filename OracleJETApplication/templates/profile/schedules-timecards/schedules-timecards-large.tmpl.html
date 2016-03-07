@@ -1,16 +1,12 @@
 <div class="justifyCenter">
     <div class="oj-row">
-        <div class="oj-col oj-sm-10">
-            <h2> <span id="currentPage" data-bind="text: label"></span> <a href="#"><i class="fa fa-question-circle"></i></a></h2>
-        </div>
-        <div class="oj-col oj-sm-2 oj-lg-text-align-end">
-            <a data-bind="click: function(){$parent.handleOpen('#scheduleDetailDialog')}" style="line-height:39px;">edit <i class="fa fa-pencil-square-o"></i></a>
-        </div>
-    </div>
-    <div class="oj-row">
-        <div class="oj-md-12">
+        <div class="oj-md-10 oj-col">
             <div class="scheduleHeader"> <h2>Schedule</h2> <span class="timeOffRequest"><a data-bind="click:$parent.editRequestTimehandleOpen">Time Off Request</a></span></div>
         </div> 
+        <div class="oj-md-2 oj-col">
+            <a data-bind="click: function(){$parent.handleOpen('#scheduleDetailDialog')}" style="line-height:39px;">edit <i class="fa fa-pencil-square-o"></i></a>
+        </div>
+        </div>
     </div>
     <div class="oj-row">
         <div class="oj-md-12 currentWeekHeaderArea">

@@ -11,60 +11,18 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', 'o
             this.router = undefined;
 
             self.handleActivated = function (data) {
-                var parentRouter = data.valueAccessor().params;
-
+                var parentRouter = oj.Router.rootInstance;
                 this.router = parentRouter.createChildRouter('enterprisetab').configure({
-                    'overview': {
-                        label: 'Overview',
-                        value: 'fa fa-cogs',
-                        isDefault: true
-                    },
-
-                    'locations': {
-                        label: 'Locations',
-                        value: 'fa fa-crosshairs'
-                    },
-
-                    'levels': {
-                        label: 'Levels',
-                        value: 'fa fa-sitemap'
-                    },
-
-                    'labor': {
-                        label: 'Labor',
-                        value: 'fa fa-briefcase'
-                    },
-
-                    'inventory-management': {
-                        label: 'Inventory Management',
-                        value: 'fa fa-dropbox'
-                    },
-
-                    'icare': {
-                        label: 'iCare',
-                        value: 'fa fa-gift'
-                    },
-
-                    'reports': {
-                        label: 'Reports',
-                        value: 'fa fa-bar-chart'
-                    },
-
-                    'roles': {
-                        label: 'Roles',
-                        value: 'fa fa-users'
-                    },
-
-                    'users': {
-                        label: 'Users',
-                        value: 'fa fa-user'
-                    },
-
-                    'portlets': {
-                        label: 'Portlets',
-                        value: 'fa fa-desktop'
-                    }
-                    
+                    'overview': {label: 'Overview', value: 'fa fa-cogs', isDefault: true},
+                    'locations': {label: 'Locations', value: 'fa fa-crosshairs'},
+                    'levels': {label: 'Levels',value: 'fa fa-sitemap'},
+                    'labor': {label: 'Labor', value: 'fa fa-briefcase'},
+                    'inventory-management': {label: 'Inventory Management', value: 'fa fa-dropbox'},
+                    'icare': {label: 'iCare', value: 'fa fa-gift'},
+                    'reports': {label: 'Reports', value: 'fa fa-bar-chart'},
+                    'roles': {label: 'Roles', value: 'fa fa-users'},
+                    'users': {label: 'Users', value: 'fa fa-user'},
+                    'portlets': {label: 'Portlets', value: 'fa fa-desktop'} 
                 });
                 // Now that the router for this view exist, synchronise it with the URL
                 oj.Router.sync();

@@ -41,7 +41,7 @@ define([
 
                 self.handleActivated = function (info) {
 
-                    var parentRouter = info.valueAccessor().params;
+                    var parentRouter = oj.Router.rootInstance;
 
                     // Retrieve the childRouter instance created in main.js
                     self.empRouter = parentRouter.currentState().value;
@@ -123,7 +123,7 @@ define([
                     self.timeZone = ko.observable(self.personProfile().timeZone);
                     self.ethnicity = ko.observable(self.personProfile().ethnicity);
                     self.gender = ko.observable(self.personProfile().gender);
-
+                    self.location = ko.observable(self.personProfile().homeStore);
                     self.profilePhoto = ko.observable(self.personProfile().gender);
 
                     //Veteran Info Start

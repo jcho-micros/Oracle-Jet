@@ -21,7 +21,7 @@
                     name: 'partials/add-employee-modal',
                     viewName: 'partials/add-employee-modal/add-employee-modal-small'}">
     </div>
-        <div class="oj-row">
+    <div class="oj-row">
         <div class="oj-sm-12 oj-col" id="footCol">
             <footer role="contentinfo">
               <div id='appfooterDiv' data-bind="ojModule: {
@@ -35,7 +35,10 @@
 
 <!-- large template -->
 <script type="text/html" id="md_lg_xl_template">
-  
+        <div data-bind="ojModule: {
+                        name: 'partials/add-employee-modal',
+                        viewName: 'partials/add-employee-modal/add-employee-modal-large'}">
+        </div>
         <div class="oj-md-12 oj-col peopleWrapper">
             <div id="peopleSection" class="oj-col oj-md-12 page-header">
                 <h1 class="inlineHeader">People <span class="fa fa-question custom-question-icon"></span> </h1>
@@ -47,18 +50,13 @@
         <div class="oj-md-12 oj-col">
             <div data-bind="template: {name: 'partials/employee-search/employee-search-large'}"></div>
         </div>
+
     </div>
-    <div data-bind="ojModule: {
-                    name: 'partials/add-employee-modal',
-                    viewName: 'partials/add-employee-modal/add-employee-modal-large'}">
-    </div>
+
     <div class="oj-row">
-        <div class="oj-sm-12 oj-col" id="footCol">
+        <div class="oj-md-12 oj-col" id="footCol">
             <footer role="contentinfo">
-              <div id='appfooterDiv' data-bind="ojModule: {
-                                                    name: 'footer', 
-                                                    viewName: 'footer'}">
-              </div>
+              <div id='appfooterDiv' data-bind="ojModule: {name: 'footer', viewName: 'footer'}"></div>
             </footer>
         </div>
     </div>

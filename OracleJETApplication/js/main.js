@@ -5,18 +5,19 @@
 requirejs.config({
     // Path mappings for the logical module names
     paths: {
-        'knockout': 'libs/knockout/knockout-3.3.0',
+        'knockout': 'libs/knockout/knockout-3.4.0',
         'knockout-amd-helpers': 'libs/knockout/knockout-amd-helpers.min',
         'jquery': 'libs/jquery/jquery-2.1.3.min',
         'jqueryui-amd': 'libs/jquery/jqueryui-amd-1.11.4.min',
-        'ojs': 'libs/oj/v1.1.2/min',
-        'ojL10n': 'libs/oj/v1.1.2/ojL10n',
-        'ojtranslations': 'libs/oj/v1.1.2/resources',
+        'ojs': 'libs/oj/v2.0.0/min',
+        'ojL10n': 'libs/oj/v2.0.0/ojL10n',
+        'ojtranslations': 'libs/oj/v2.0.0/resources',
         'signals': 'libs/js-signals/signals.min',
         'crossroads': 'libs/crossroads/crossroads.min',
         'text': 'libs/require/text',
         'promise': 'libs/es6-promise/promise-1.0.0.min',
         'hammerjs': 'libs/hammer/hammer-2.0.4.min',
+        'ojdnd': 'libs/dnd-polyfill/dnd-polyfill-1.0.0.min',
         'moment': 'libs/moment/moment.min'
     },
     // Shim configurations for modules that do not expose AMD
@@ -79,35 +80,13 @@ require(['ojs/ojcore',
 
         var router = oj.Router.rootInstance;
         router.configure({
-            'home': {
-                label: 'Home',
-                value: 'home',
-                isDefault: true
-            },
-            'labor': {
-                label: 'Labor',
-                value: 'labor'
-            },
-            'inventory': {
-                label: 'Inventory',
-                value: 'inventory'
-            },
-            'gift-loyalty': {
-                label: 'Gift & Loyalty',
-                value: 'gift-loyalty'
-            },
-            'reports-analytics': {
-                label: 'Reporting & Analytics',
-                value: 'reports-analytics'
-            },
-            'enterprise': {
-                label: 'Mike Rose Cafe',
-                value: 'enterprise'
-            },
-            'people': {
-                label: 'People',
-                value: 'people'
-            },
+            'home': {label: 'Home', value: 'home', isDefault: true},
+            'labor': {label: 'Labor', value: 'labor'},
+            'inventory': {label: 'Inventory', value: 'inventory'},
+            'gift-loyalty': {label: 'Gift & Loyalty', value: 'gift-loyalty'},
+            'reports-analytics': {label: 'Reporting & Analytics', value: 'reports-analytics'},
+            'enterprise': {label: 'Mike Rose Cafe', value: 'enterprise'},
+            'people': {label: 'People', value: 'people'},
             'profile': {label: 'Profile',
                 exit: function () {
                     var childRouter = router.currentState().value;
@@ -136,7 +115,14 @@ require(['ojs/ojcore',
         function RootViewModel() {
             var self = this;
             self.router = router;
-
+            self.heightCheck = function(){
+                var height = $('.page-area').height();
+                var documentHeight = $( document).height();
+                var header = $('.peopleWrapper').height();
+                var totalHeight = height + documentHeight + header;
+                console.log(height + documentHeight);
+                $('#sidebar-left').height(totalHeight);
+            }
             //Knockout js detect for lgQuery to return true or false
             var mdQuery = oj.ResponsiveUtils.getFrameworkQuery(oj.ResponsiveUtils.FRAMEWORK_QUERY_KEY.MD_UP);
             self.medium = oj.ResponsiveKnockoutUtils.createMediaQueryObservable(mdQuery);
@@ -144,19 +130,7 @@ require(['ojs/ojcore',
             var lgQuery = oj.ResponsiveUtils.getFrameworkQuery(oj.ResponsiveUtils.FRAMEWORK_QUERY_KEY.LG_UP);
             self.large = oj.ResponsiveKnockoutUtils.createMediaQueryObservable(lgQuery);
 
-            var appNavData = [
-                {name: 'Home', id: 'home', iconClass: 'fa fa-home oj-navigationlist-item-icon'},
-                {name: 'Labor', id: 'labor', iconClass: 'fa fa-briefcase oj-navigationlist-item-icon'},
-                {name: 'Inventory', id: 'inventory', iconClass: 'fa fa-dropbox oj-navigationlist-item-icon'},
-                {name: 'Gift & Loyalty', id: 'gift-loyalty', iconClass: 'fa fa-gift oj-navigationlist-item-icon'},
-                {name: 'Reporting & Analytics', id: 'reports-analytics', iconClass: 'fa fa-bar-chart oj-navigationlist-item-icon'},
-                {name: 'Mike Rose Cafe', id: 'enterprise', iconClass: 'fa fa-building-o oj-navigationlist-item-icon'},
-                {name: 'People', id: 'people', iconClass: 'fa fa-users oj-navigationlist-item-icon'}
-                ];
-            self.dataSource = new oj.ArrayTableDataSource(appNavData, {idAttribute: 'id'});
-            self.iconBig = new oj.ArrayTableDataSource(appNavData, {
-                idAttribute: 'iconClass'
-            });
+
             self.locationArea = ko.observable("Atlanta");
             self.optionChangeHandler = function (event, data) {
                 if (data.value == undefined) {
