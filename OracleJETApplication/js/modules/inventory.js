@@ -43,7 +43,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', 'o
                 oj.Router.sync();
             }
             self.selectHandler = function (event, ui) {
-                if ('tabs' === event.target.id && event.originalEvent) {
+                if ('inventoryTabs' === event.target.id && event.originalEvent) {
                     // Invoke go() with the selected item.
                     self.router.go(ui.key);
                 }

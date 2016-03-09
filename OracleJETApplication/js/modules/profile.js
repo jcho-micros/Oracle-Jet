@@ -78,10 +78,6 @@ define([
                     // executed until sync is resolved.
                     return oj.Router.sync();
                 };
-
-
-
-
                 function getEmpURL(id) {
                     var url;
                     if (id) {

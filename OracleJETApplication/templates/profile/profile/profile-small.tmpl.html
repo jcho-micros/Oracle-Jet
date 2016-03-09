@@ -7,44 +7,32 @@
                 <h3>General</h3>
                     <div>
                         <div class="oj-row">
-                            <div class="oj-sm-6 oj-col">
+                            <div class="oj-sm-12 profileNameDisplay">
                                 <h4>Name</h4>
-                                <span class="employeeName" data-bind="text: $parent.firstName() + ' ' + $parent.lastName()"></span>
-
-    <!--                            <div data-bind="visible: $parent.posCheckName()">
-                                <div class="oj-sm-12 oj-col">
-                                    <span><strong>POS Check Name: </strong></span>
-                                    <div data-bind="text: $parent.posCheckName()"></div>
-                                </div>-->
-                                <div class="oj-sm-12 oj-col generalArea">
-                                    <span><strong>Ethnicity: </strong></span>
-                                    <span data-bind="text: $parent.ethnicity()"></span>
-                                </div>
-                                <div class="oj-sm-12 oj-col generalArea">
-                                    <span><strong>Gender: </strong></span>
-                                    <span data-bind="text: $parent.gender()"></span>
-                                </div>
-                                <div class="oj-sm-12 oj-col generalArea">
-                                    <span><strong>Language: </strong></span>
-                                    <span data-bind="text: $parent.language()"></span>
-                                </div>
-                                <div class="oj-sm-12 oj-col generalArea">
-                                    <span><strong>Time Zone: </strong></span>
-                                    <span data-bind="text: $parent.timeZone()"></span>
-                                </div>
-                            </div>
-
-                            <div class="oj-sm-6 oj-col">
-                            <h4>Profile Picture</h4>
-                               <img data-bind="attr: {src: $parent.getPhoto($parent.personProfile().empId)}" />
-                            </div>
-                        </div>
-                        <div class="oj-sm-12">
-                            <div data-bind="visible: $parent.veteranStatus() == 'yes'">
-                                <div class="oj-row">
-                                    <div class="oj-sm-12 oj-col">
-                                        <h4>Veteran</h4>
+                                <div class="employeeName" data-bind="text: $parent.firstName() + ' ' + $parent.lastName()"></div>
+                                <div class="oj-sm-6 oj-col">
+                                    <div class="oj-sm-12 oj-col generalArea">
+                                        <span><strong>Ethnicity: </strong></span>
+                                        <span data-bind="text: $parent.ethnicity()"></span>
                                     </div>
+                                    <div class="oj-sm-12 oj-col generalArea">
+                                        <span><strong>Gender: </strong></span>
+                                        <span data-bind="text: $parent.gender()"></span>
+                                    </div>
+                                </div>
+                                <div class="oj-sm-6 oj-col">
+                                    <div class="oj-sm-12 oj-col generalArea">
+                                        <span><strong>Language: </strong></span>
+                                        <span data-bind="text: $parent.language()"></span>
+                                    </div>
+                                    <div class="oj-sm-12 oj-col generalArea">
+                                        <span><strong>Time Zone: </strong></span>
+                                        <span data-bind="text: $parent.timeZone()"></span>
+                                    </div>
+                                </div>
+
+                                <div data-bind="visible: $parent.veteranStatus() == 'yes'">
+                                <h4>Veteran</h4>
                                     <div class="oj-sm-5 oj-col generalArea">
                                        <div class="indentDiv"><i class="fa fa-check"></i> <span data-bind="text: $parent.vietnamEra()"></span></div>
                                        <div class="indentDiv"><i class="fa fa-check"></i> <span data-bind="text: $parent.otherEligible()"></span></div>
@@ -55,22 +43,20 @@
                                        <div><i class="fa fa-check"></i> <span data-bind="text: $parent.recentlySeparated()"></span></div>
                                        <div><i class="fa fa-check"></i> <span data-bind="text: $parent.specialDisabled()"></span></div>
                                     </div>
-                                </div>
-                                <div class="oj-row">
                                     <div class="oj-sm-12 oj-col disableNumberArea">
                                         <span><strong>Registered Disable Number: </strong></span>
-                                         <span data-bind="text: $parent.registeredDisabledNumber()"></span>
+                                        <span data-bind="text: $parent.registeredDisabledNumber()"></span>
                                     </div>
                                     <div class="oj-sm-12 oj-col disableNumberArea">
-                                   <span><strong>Discharge Date: </strong></span>
-                                   <span data-bind="text: $parent.dischargeDate()"></span>
+                                        <span><strong>Discharge Date: </strong></span>
+                                        <span data-bind="text: $parent.dischargeDate()"></span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
             </div>
-            <div id="veteran">
+            <div id="contact">
                 <h3>Contact</h3>
                 <div>
                     <div class="oj-row">
@@ -138,10 +124,10 @@
         </div>
     <div class="oj-row subToolRow">
         <hr class="oj-sm-12" />
-        <div class="oj-col oj-sm-10">
+        <div class="oj-col oj-sm-9">
              <a style="line-height:39px;" data-bind="attr:{href: 'index.html?root=people'}"><i class="fa fa-arrow-circle-left"></i> back to search</a>
         </div>
-        <div class="oj-col oj-sm-2">
+        <div class="oj-col oj-sm-3">
             <a data-bind="click: $parent.handleOpen('#empDialog')" style="line-height:39px;">edit <i class="fa fa-pencil-square-o"></i></a>
         </div>
     </div>

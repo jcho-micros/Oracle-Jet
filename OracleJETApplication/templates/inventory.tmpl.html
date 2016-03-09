@@ -1,19 +1,7 @@
 <!-- small template -->
 <script type="text/html" id="sm_template">
-<!--
-     <div class="oj-col oj-md-12 oj-lg-12 oj-xl-12 page-header">
-        <h1>
-            <span data-bind="css: pageHeadingIconClass"></span>
-            <span data-bind="text: pageHeading"></span>
-        </h1>
-        <span class="page-sub-navigation">
-            <span data-bind="text: pageSubNavigation"></span>
-        <a href="#">change</a>
-        </span>
-    </div>
--->
     <div class="oj-row oj-cols-nopad">
-        <div class="oj-sm-12 oj-col app-header-mobile-nav-title" data-bind="if: router.stateId(), click:toggleSections">
+        <div id="inventoryNavList" class="oj-sm-12 oj-col app-header-mobile-nav-title" data-bind="if: router.stateId(), click:toggleSections">
             <div data-bind="with: router.currentState()">
                 <div class="mobileNavTitleArea">
                     <span class="oj-sm-11 oj-col" id="currentPage" data-bind="text: label"></span><span class="oj-sm-1 oj-col"><i class="fa fa-chevron-down"></i></span>
@@ -22,7 +10,7 @@
         </div>
         <div class="oj-row">
             <div class="oj-sm-12 oj-col" data-bind="visible: sectionsState">
-                <div id="tabs" data-bind="ojComponent: {component: 'ojNavigationList', selection: router.stateId(), beforeSelect: selectHandler, drillMode: 'none'}">
+                <div id="inventoryTabs" data-bind="ojComponent: {component: 'ojNavigationList', selection: router.stateId(), beforeSelect: selectHandler, drillMode: 'none'}">
                     <ul data-bind="foreach: router.states">
                         <li data-bind="attr: {id: id}, click: $parent.toggleSections">
                             <a data-bind="text: label"></a>
@@ -44,18 +32,14 @@
 <script type="text/html" id="md_lg_xl_template">
     <div class="oj-md-12 oj-col inventoryWrapper">
         <div id="inventorySection" class="oj-col oj-md-12 page-header">
-      <h1>
-            <!--     <span data-bind="css: pageHeadingIconClass"></span>-->
-           <span data-bind="text: pageHeading"></span>
-       </h1>
-<!--            <span class="page-sub-navigation">
-                <span data-bind="text: pageSubNavigation"></span>
-            <a href="#">change</a>
-            </span>-->
+            <h1>
+                 <span data-bind="text: pageHeading"></span>
+             </h1>
+
         </div>
         <div id="inventorySectionTabs" class="oj-md-12 oj-col">
             <div data-bind="ojComponent: {component: 'ojConveyorBelt'}">  
-                <div id="tabs" data-bind="ojComponent: {component: 'ojNavigationList', selection: router.stateId(), beforeSelect: selectHandler, drillMode: 'none', edge: 'top'}">
+                <div id="inventoryTabs" data-bind="ojComponent: {component: 'ojNavigationList', selection: router.stateId(), beforeSelect: selectHandler, drillMode: 'none', edge: 'top'}">
                     <ul data-bind="foreach: router.states">
                         <li id="id" data-bind="attr: {id: id}">
                             <a data-bind="text: label"></a>

@@ -4,7 +4,6 @@
         <div class="oj-row">
             <div class="oj-col oj-sm-8">
                 <a style="line-height:39px;" data-bind="click:$parent.editRequestTimehandleOpen">Time Off Request</a>
-
             </div>
             <div class="oj-col oj-sm-4 oj-lg-text-align-end">
 
@@ -89,7 +88,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="availablity" data-bind="ojComponent: {component: 'ojCollapsible'}">
+                    <div id="daysAndTimes" data-bind="ojComponent: {component: 'ojCollapsible'}">
                         <h3>Days and Times</h3>
                         <div>
                             <h3>Days and Times</h3>
@@ -124,10 +123,10 @@
                 </div>
             <div class="oj-row subToolRow">
                 <hr class="oj-sm-12" />
-                <div class="oj-col oj-sm-10">
+                <div class="oj-col oj-sm-9">
                      <a style="line-height:39px;" data-bind="attr:{href: 'index.html?root=people'}"><i class="fa fa-arrow-circle-left"></i> Back to Search</a>
                 </div>
-                <div class="oj-col oj-sm-2">
+                <div class="oj-col oj-sm-3">
                     <a data-bind="click: $parent.handleOpen('#scheduleDetailDialog')" style="line-height:39px;">edit <i class="fa fa-pencil-square-o"></i></a>
                 </div>
             </div>

@@ -70,7 +70,7 @@ define([
             self.currentValue = ko.observable(0);
             
             self.selectHandler = function (event, ui) {
-                if ('tabs' === event.target.id && event.originalEvent) {
+                if ('laborTabs' === event.target.id && event.originalEvent) {
                     // Invoke go() with the selected item.
                     self.router.go(ui.key);
                 }

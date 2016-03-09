@@ -1,20 +1,15 @@
 <!-- small template -->
 <script type="text/html" id="sm_template">
-        <div class="oj-row">
-            <div class="oj-col oj-sm-12">
-                <div class="oj-row">
-                    <div id="pageTitleContainer" class="oj-col oj-sm-12">
-                         <h1 class="inlineHeader"><span class="fa fa-users"></span> People <span class="fa fa-question custom-question-icon"></span> </h1>
-<!--                        <a href="index.html?root=add-employee" class="basic-btn-link">Add</a>-->
-                            <a href="" data-bind="click: function(){handleOpen('#addEmpStatusDialog');}" class="basic-btn-link"><span class="fa fa-plus"></span> Add</a>
-                    </div>
-                    <!--Use template when parent js file is associated by default to the tmpl file
-                    Ex. below links to partial tmpl file, people tmpl file already associated with people.js file
-                    -->
-                    <div data-bind="template: {name: 'partials/employee-search/employee-search-small'}"></div>
-
-                </div>
+    <div class="oj-row oj-cols-nopad">
+            <div id="peopleNavList" class="oj-sm-12 oj-col">
+                <h1 class="inlineHeader"><span class="fa fa-users"></span> People <span class="fa fa-question custom-question-icon"></span> </h1>
+    <!--                        <a href="index.html?root=add-employee" class="basic-btn-link">Add</a>-->
+                <a href="" data-bind="click: function(){handleOpen('#addEmpStatusDialog');}" class="basic-btn-link"><span class="fa fa-plus"></span> Add</a>
             </div>
+            <!--Use template when parent js file is associated by default to the tmpl file
+            Ex. below links to partial tmpl file, people tmpl file already associated with people.js file
+            -->
+            <div data-bind="template: {name: 'partials/employee-search/employee-search-small'}"></div>
         </div>
     <!--Using large template until mobile is provided-->
     <div data-bind="ojModule: {
