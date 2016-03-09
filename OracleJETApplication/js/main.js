@@ -98,7 +98,7 @@ require(['ojs/ojcore',
                     childRouter.defaultStateId = '100';
                     router.currentState().value = childRouter;
                 }
-            },
+            }
             //Not being used, only when add-employee section is suppose to be a stand alone page
 //            'add-employee': {
 //                label: 'Add Employee',
@@ -115,22 +115,11 @@ require(['ojs/ojcore',
         function RootViewModel() {
             var self = this;
             self.router = router;
-            self.heightCheck = function(){
-                var height = $('.page-area').height();
-                var documentHeight = $( document).height();
-                var header = $('.peopleWrapper').height();
-                var totalHeight = height + documentHeight + header;
-                console.log(height + documentHeight);
-                $('#sidebar-left').height(totalHeight);
-            }
             //Knockout js detect for lgQuery to return true or false
             var mdQuery = oj.ResponsiveUtils.getFrameworkQuery(oj.ResponsiveUtils.FRAMEWORK_QUERY_KEY.MD_UP);
             self.medium = oj.ResponsiveKnockoutUtils.createMediaQueryObservable(mdQuery);
-
             var lgQuery = oj.ResponsiveUtils.getFrameworkQuery(oj.ResponsiveUtils.FRAMEWORK_QUERY_KEY.LG_UP);
             self.large = oj.ResponsiveKnockoutUtils.createMediaQueryObservable(lgQuery);
-
-
             self.locationArea = ko.observable("Atlanta");
             self.optionChangeHandler = function (event, data) {
                 if (data.value == undefined) {

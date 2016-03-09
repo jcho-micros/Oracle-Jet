@@ -1612,6 +1612,10 @@ a{
 .oj-offcanvas-open {
     background-color: $navigationListMobileBg;
 }
+#offCanvasScope{
+    height:100px;
+    color:$white;
+}
 .oj-navigationlist-item {
     border-width:0 !important;
     &.oj-default{
@@ -2268,6 +2272,18 @@ footer{
     }
 
     //Header
+    .scopeLink{
+        background-color: #454545;
+        height: 100%;
+        display: block;
+        float: left;
+        line-height: 40px;
+        color: #fff;
+        width: 53px;
+        margin-left: 39px;
+        margin-top: -3%;
+        position: relative;
+    }
     .page-header {
         padding: 10px 0;
         > h1 {
@@ -2941,7 +2957,7 @@ footer{
         display: inline-flex;
     }
     .app-header-desktop {
-        padding: 15px 10px 0 10px;
+        padding: 8px 10px 0 10px;
     }
     .app-header-logo-wrap{
         white-space: nowrap;
@@ -2956,12 +2972,6 @@ footer{
         }
         div:first-child{
             padding-left:0px;
-        }
-    }
-    
-    .topLocationLink{
-        &:after{
-            content: ' |';
         }
     }
     //Footer
