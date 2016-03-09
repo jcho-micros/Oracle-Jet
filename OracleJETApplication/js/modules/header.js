@@ -23,14 +23,21 @@ define(['knockout', 'ojs/ojcore', 'ojs/ojknockout', 'ojs/ojnavigationlist', 'ojs
                 "selector": "#appDrawer",
                 "selection": "selectedItem"
             };
+        self.topDrawer =
+            {
+                "edge": "top",
+                "displayMode": "push",
+                "selector": "#topDrawer",
+                "selection": "selectedItem"
+            };
             var appNavData = [
-                {name: 'Home', id: 'home', iconClass: 'fa fa-home oj-navigationlist-item-icon'},
-                {name: 'Labor', id: 'labor', iconClass: 'fa fa-briefcase oj-navigationlist-item-icon'},
-                {name: 'Inventory', id: 'inventory', iconClass: 'fa fa-dropbox oj-navigationlist-item-icon'},
-                {name: 'Gift & Loyalty', id: 'gift-loyalty', iconClass: 'fa fa-gift oj-navigationlist-item-icon'},
-                {name: 'Reporting & Analytics', id: 'reports-analytics', iconClass: 'fa fa-bar-chart oj-navigationlist-item-icon'},
-                {name: 'Mike Rose Cafe', id: 'enterprise', iconClass: 'fa fa-building-o oj-navigationlist-item-icon'},
-                {name: 'People', id: 'people', iconClass: 'fa fa-users oj-navigationlist-item-icon'}
+                {name: 'Home', id: 'home', value: ' ', iconClass: 'fa fa-home oj-navigationlist-item-icon'},
+                {name: 'Labor', id: 'labor', value: ' ',  iconClass: 'fa fa-briefcase oj-navigationlist-item-icon'},
+                {name: 'Inventory', id: 'inventory', value: ' ',  iconClass: 'fa fa-dropbox oj-navigationlist-item-icon'},
+                {name: 'Gift & Loyalty', id: 'gift-loyalty', value: ' ',  iconClass: 'fa fa-gift oj-navigationlist-item-icon'},
+                {name: 'Reporting & Analytics', id: 'reports-analytics', value: ' ',  iconClass: 'fa fa-bar-chart oj-navigationlist-item-icon'},
+                {name: 'Mike Rose Cafe', id: 'enterprise', value: ' ',  iconClass: 'fa fa-building-o oj-navigationlist-item-icon'},
+                {name: 'People', id: 'people', value: ' ',  iconClass: 'fa fa-users oj-navigationlist-item-icon'}
                 ];
         self.handleActivated = function () {
             self.dataSource = new oj.ArrayTableDataSource(appNavData, {idAttribute: 'id'});
@@ -63,19 +70,19 @@ define(['knockout', 'ojs/ojcore', 'ojs/ojknockout', 'ojs/ojnavigationlist', 'ojs
                 {
                     "label": "toolbar_search_button",
                     "iconClass": "oj-fwk-icon-magnifier oj-fwk-icon",
-                    "url": "#"
+                    "url": " "
                 }
             ],
             // Data for global nav dropdown menu embedded in toolbar.
             "global_nav_dropdown_items": [
                 {"label": "Preferences",
-                    "url": "#"
+                    "url": " "
                 },
                 {"label": "Help",
-                    "url": "#"
+                    "url": " "
                 },
                 {"label": "Sign Out",
-                    "url": "#"
+                    "url": " "
                 }
             ]
         };
@@ -104,6 +111,10 @@ define(['knockout', 'ojs/ojcore', 'ojs/ojknockout', 'ojs/ojnavigationlist', 'ojs
                 $('.page-area').addClass('oj-lg-10');
                 $('#mainCol').css({'display' : 'inline-flex'});
             }
+        };
+        self.toggleDrawer = function ()
+        {
+            return oj.OffcanvasUtils.toggle(this.topDrawer);
         };
         self.toggleAppDrawer = function ()
         {

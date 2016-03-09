@@ -71,10 +71,10 @@
             </div>
         </div>
 
-        <div class="oj-lg-3 oj-xl-3 oj-helper-text-align-right oj-col">
+        <div class="oj-lg-3 oj-xl-3 oj-helper-text-align-center oj-col">
             <!-- This pulldown menu is used for wider screens -->
             
-            <span class="topLocationLink" data-bind="text: $parent.locationArea"></span>
+            <a class="scopeLink" data-bind="click: $module.toggleDrawer"><span class="topLocationLink" data-bind="text: $parent.locationArea"></span></a>
             <button id="menuButton" class='oj-button-half-chrome' data-bind="ojComponent: { component: 'ojButton', label: userName, menu: '#appheaderGlobalNavMenuId'}">
             </button>
             <ul id="appheaderGlobalNavMenuId" data-bind="ojComponent: {component: 'ojMenu', select: menuItemSelect}" style="display:none">

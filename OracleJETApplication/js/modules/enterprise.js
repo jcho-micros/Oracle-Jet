@@ -13,24 +13,23 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', 'o
             self.handleActivated = function (data) {
                 var parentRouter = oj.Router.rootInstance;
                 this.router = parentRouter.createChildRouter('enterprisetabs').configure({
-                    'overview': {label: 'Overview', value: 'fa fa-cogs', isDefault: true},
-                    'locations': {label: 'Locations', value: 'fa fa-crosshairs'},
-                    'levels': {label: 'Levels',value: 'fa fa-sitemap'},
-                    'labor': {label: 'Labor', value: 'fa fa-briefcase'},
-                    'inventory': {label: 'Inventory Management', value: 'fa fa-dropbox'},
-                    'gift-loyalty': {label: 'Gift & Loyalty', value: 'fa fa-gift'},
-                    'reports': {label: 'Reports', value: 'fa fa-bar-chart'},
-                    'roles': {label: 'Roles', value: 'fa fa-users'},
-                    'users': {label: 'Users', value: 'fa fa-user'}
+                    'overview': {label: 'Overview', value: 'overview', isDefault: true},
+                    'labormanagement': {label: 'Labor Management', value: 'labormanagement'},
+                    'inventorymanagement': {label: 'Inventory Management', value: 'inventorymanagement'},
+                    'gift-loyalties': {label: 'Gift & Loyalty', value: 'gift-loyalty'},
+                    'reportinganalytics': {label: 'Reporting & Analytics', value: 'reportinganalytics'},
+                    'locations': {label: 'Location',value: 'locations'},
+                    'levels': {label: 'Levels', value: 'levels'},
+                    'roles': {label: 'Roles', value: 'roles'},
+                    'users': {label: 'Users', value: 'users'}
                 });
                 // Now that the router for this view exist, synchronise it with the URL
                 oj.Router.sync();
+                console.debug(oj.Router.sync());
             }
             self.selectHandler = function (event, ui) {
                 if ('enterpriseTabs' === event.target.id && event.originalEvent) {
                     // Invoke go() with the selected item.
-                    console.log(event.target.id);
-                    console.log(ui.key);
                     self.router.go(ui.key);
                 }
             }
@@ -38,7 +37,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', 'o
                 this.router.dispose();
                 this.router = null;
             }
-            self.pageHeading = ko.observable("Enterprise Configuration");
+            self.pageHeading = ko.observable('Enterprise Configuration');
             self.pageHeadingIconClass = ko.observable('fa fa-gift');
             self.sectionsState = ko.observable(false);
 

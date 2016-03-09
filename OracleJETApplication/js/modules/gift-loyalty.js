@@ -13,7 +13,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', 'o
             self.handleActivated = function (data) {
                 var parentRouter = oj.Router.rootInstance;
 
-                this.router = parentRouter.createChildRouter('icaretab').configure({
+                this.router = parentRouter.createChildRouter('giftloyaltytab').configure({
                     'profile': {label: 'Profile', value: 'profile', isDefault: true},
                     'schedules-timecards': {label: 'Schedules & Timecards', value: 'schedules-timecards'},
                     'jobs-compensation': {label: 'Jobs & Compensation', value: 'jobs-compensation'},
