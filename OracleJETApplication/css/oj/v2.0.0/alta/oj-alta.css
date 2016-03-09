@@ -1009,7 +1009,8 @@ a.oj-disabled.oj-clickable-icon-nocontext,
   box-sizing: border-box;
   overflow: hidden;
   padding: 0.8571rem;
-  position: relative; }
+  position: relative;
+  }
   html.oj-slow-borderradius .oj-panel {
     border-radius: 0; }
 
