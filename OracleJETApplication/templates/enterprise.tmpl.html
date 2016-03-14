@@ -35,8 +35,6 @@
             <h1>
                 <span data-bind="text: pageHeading"></span>
             </h1>
-
-            </span>
         </div>
         <div id="enterpriseSectionTabs" class="oj-md-12 oj-col">
             <div data-bind="ojComponent: {component: 'ojConveyorBelt'}">  
@@ -50,7 +48,7 @@
             </div>
         </div>
     </div>
-    <div class="oj-md-12 oj-col" data-bind="if: router.stateId()">
+    <div id="enterpriseTabWrapper" class="oj-md-12 oj-col" data-bind="if: router.stateId()">
         <div class="oj-panel tab-content" data-bind="with: router.currentState()">
             <h2 id="currentPage"><span data-bind="text: label"></span></span></h2>
                 <div data-bind="template: {name: 'enterprise/' + id +'/' + id + '-large'}"></div>
@@ -59,4 +57,4 @@
 
 </script>
 
-<div class="templateArea" data-bind="template: {name: $root.medium() ? 'md_lg_xl_template' : 'sm_template'}"></div>
+<div id="templateWrapper" class="templateArea" data-bind="template: {name: $root.medium() ? 'md_lg_xl_template' : 'sm_template'}"></div>

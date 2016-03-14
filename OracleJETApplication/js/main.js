@@ -6,6 +6,7 @@ requirejs.config({
     // Path mappings for the logical module names
     paths: {
         'knockout': 'libs/knockout/knockout-3.4.0',
+        'knockout-postbox': 'libs/knockout-postbox/knockout-postbox',
         'knockout-amd-helpers': 'libs/knockout/knockout-amd-helpers.min',
         'jquery': 'libs/jquery/jquery-2.1.3.min',
         'jqueryui-amd': 'libs/jquery/jqueryui-amd-1.11.4.min',
@@ -56,6 +57,7 @@ requirejs.config({
  */
 require(['ojs/ojcore',
     'knockout',
+   'data/data',
     'jquery',
     'ojs/ojrouter',
     'knockout-amd-helpers',
@@ -70,7 +72,7 @@ require(['ojs/ojcore',
     'ojs/ojbutton',
     'text'
 ], // add additional JET component modules as needed
-    function (oj, ko, $) // this callback gets executed when all required modules are loaded
+    function (oj, ko, data, $) // this callback gets executed when all required modules are loaded
     {
         // this is the global linking the JS files and tmpl file 
         oj.ModuleBinding.defaults.modelPath = 'modules/';
@@ -80,10 +82,54 @@ require(['ojs/ojcore',
 
         var router = oj.Router.rootInstance;
         router.configure({
-            'home': {label: 'Home', value: 'home', isDefault: true},
-            'labor': {label: 'Labor', value: 'labor'},
-            'inventory': {label: 'Inventory', value: 'inventory'},
-            'gift-loyalty': {label: 'Gift & Loyalty', value: 'gift-loyalty'},
+            'home': {label: 'Home', isDefault: true,
+                exit: function () {
+                    var childRouter = router.currentState().value;
+                    childRouter.dispose();
+
+                },
+                enter: function () {
+                    var childRouter = router.createChildRouter('loc');
+                    childRouter.defaultStateId = '10';
+                    router.currentState().value = childRouter;
+                }
+            },
+            'labor': {label: 'Labor', value: 'labor',
+                exit: function () {
+                    var childRouter = router.currentState().value;
+                    childRouter.dispose();
+
+                },
+                enter: function () {
+                    var childRouter = router.createChildRouter('loc');
+                    childRouter.defaultStateId = '10';
+                    router.currentState().value = childRouter;
+                }
+            },
+            'inventory': {label: 'Inventory', value: 'inventory',
+                exit: function () {
+                    var childRouter = router.currentState().value;
+                    childRouter.dispose();
+
+                },
+                enter: function () {
+                    var childRouter = router.createChildRouter('loc');
+                    childRouter.defaultStateId = '10';
+                    router.currentState().value = childRouter;
+                }
+            },
+            'gift-loyalty': {label: 'Gift & Loyalty', value: 'gift-loyalty',
+                exit: function () {
+                    var childRouter = router.currentState().value;
+                    childRouter.dispose();
+
+                },
+                enter: function () {
+                    var childRouter = router.createChildRouter('loc');
+                    childRouter.defaultStateId = '10';
+                    router.currentState().value = childRouter;
+                }
+            },
             'reports-analytics': {label: 'Reporting & Analytics', value: 'reports-analytics'},
             'enterprise': {label: 'Mike Rose Cafe', value: 'enterprise'},
             'people': {label: 'People', value: 'people'},
@@ -99,6 +145,7 @@ require(['ojs/ojcore',
                     router.currentState().value = childRouter;
                 }
             }
+
             //Not being used, only when add-employee section is suppose to be a stand alone page
 //            'add-employee': {
 //                label: 'Add Employee',
@@ -114,24 +161,59 @@ require(['ojs/ojcore',
 
         function RootViewModel() {
             var self = this;
+            //var rootViewModel = ko.dataFor(document.getElementById('mainContent'));
             self.router = router;
             //Knockout js detect for lgQuery to return true or false
             var mdQuery = oj.ResponsiveUtils.getFrameworkQuery(oj.ResponsiveUtils.FRAMEWORK_QUERY_KEY.MD_UP);
             self.medium = oj.ResponsiveKnockoutUtils.createMediaQueryObservable(mdQuery);
             var lgQuery = oj.ResponsiveUtils.getFrameworkQuery(oj.ResponsiveUtils.FRAMEWORK_QUERY_KEY.LG_UP);
             self.large = oj.ResponsiveKnockoutUtils.createMediaQueryObservable(lgQuery);
-            self.locationArea = ko.observable("Atlanta");
+            self.scopeId = ko.observable();
             self.optionChangeHandler = function (event, data) {
                 if (data.value == undefined) {
                     data.value = 'home';
                 }
                 // Only go for user action events
                 if ('app-header-mobile-nav' || 'app-header-desktop-nav' === event.target.id && event.originalEvent) {
-                    self.router.go(data.value);
-                    return (function(){ self.currentSectionState(data.value); });
+                        var root = location.protocol + '//' + location.host;
+                        var q = document.URL.split('?')[1];
+                        var url = window.location.href;
+                        var targetValue = data.value;
+                        var previousValue = data.previousValue;
+                        var loc = self.getUrlParameter('loc');
+                        var qs = "&loc=" + encodeURIComponent(loc);
+                        var pathLink = 'index.html?' +q.replace(previousValue,targetValue);
+                       self.scopeId(encodeURIComponent(loc));
+                        console.log(encodeURIComponent(loc));
+    
+                        
+                        if(targetValue == 'people'){
+                            self.router.go(data.value);
+                            return (function(){ self.currentSectionState(data.value); });
+                        }else{
+
+                            window.location = pathLink;
+                        }
+
+//                    self.router.go(data.value + 'loc' );
+//                    return (function(){ self.currentSectionState(data.value); });
                 }
 
             };
+        self.getUrlParameter = function getUrlParameter(sParam) {
+            var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+                sURLVariables = sPageURL.split('&'),
+                sParameterName,
+                i;
+
+            for (i = 0; i < sURLVariables.length; i++) {
+                sParameterName = sURLVariables[i].split('=');
+
+                if (sParameterName[0] === sParam) {
+                    return sParameterName[1] === undefined ? true : sParameterName[1];
+                }
+            }
+        };
             self.handleOpen =  function(dialog) {
                 $(dialog).ojDialog("open");
             };
@@ -145,11 +227,22 @@ require(['ojs/ojcore',
                 }
 
             }
+            self.handleActivated = function (info) {
+                self.globalLocationInfo = ko.dataFor(document.getElementById('templateWrapper'));
+                self.globalRegion = ko.observable(self.globalLocationInfo.region, "North East");
+                self.globalCityName = ko.observable(self.globalLocationInfo.cityName, "Boston");
+                self.globalCityNameId = ko.observable(self.globalLocationInfo.locID, "1");
+                self.globalstoreName = ko.observable(self.globalLocationInfo.storeName, "Beacon Hill");
+                self.urlParameter = ko.observable('');
+
+            };
             self.currentSectionState = ko.observable();
+
 
 //            self.dynamicConfig = ko.pureComputed(function () {
 //                return router.moduleConfig;
 //            });
+            
         }
 
         oj.Router.defaults['urlAdapter'] = new oj.Router.urlParamAdapter();

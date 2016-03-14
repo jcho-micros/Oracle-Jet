@@ -71,13 +71,22 @@
             </div>
         </div>
 
-        <div class="oj-lg-3 oj-xl-3 oj-helper-text-align-center oj-col">
+        <div class="oj-lg-3 oj-xl-3 oj-col userMenuWrap">
             <!-- This pulldown menu is used for wider screens -->
             
-            <a class="scopeLink" data-bind="click: $module.toggleDrawer"><span class="topLocationLink" data-bind="text: $parent.locationArea"></span></a>
-            <button id="menuButton" class='oj-button-half-chrome' data-bind="ojComponent: { component: 'ojButton', label: userName, menu: '#appheaderGlobalNavMenuId'}">
+
+            <button id="userMenu" class='oj-button-half-chrome' data-bind="ojComponent: { component: 'ojButton',
+                             label: 'Avatar', 
+                             display: 'icons',
+                             icons: {start:'oj-icon fa fa-user'},
+                             menu: '#appheaderGlobalNavMenuId'
+                             }">
             </button>
             <ul id="appheaderGlobalNavMenuId" data-bind="ojComponent: {component: 'ojMenu', select: menuItemSelect}" style="display:none">
+
+                <li data-bind="attr: {label: userName}">
+                    <a data-bind="text: userName, href: url"></a>
+                </li>
 
                 <!-- ko foreach: globalNavItems -->
                 <li data-bind="attr: {id: label}">
@@ -85,6 +94,8 @@
                 </li>
                 <!-- /ko -->
             </ul>
+                        <a class="scopeLink" data-bind="click: $module.changeClass, css:{scopeLinkActive: $module.newClass() == true}"><span class="arrowLocation fa fa-location-arrow"></span>
+                            <span class="topLocationLink" data-bind="text: globalCityName()? globalCityName() : 'Beacon Hill'"></span></a>
             </div>
     </div>
 </script>
@@ -92,8 +103,8 @@
 <script type="text/html" id="app_nav_template">
     <li data-bind="attr: {id: $data['id']}">
         <a href="#">
-            <span data-bind="css: $data['iconClass']"></span>
-            <span data-bind="text: $data['name']" class="oj-sm-only-hide oj-lg-hide"></span>
+            <span class="topNavImgIcon" width="24px" height="22px"></span>
+            <span class="oj-sm-only-hide oj-lg-hide topNavText" data-bind="text: $data['name']" class="oj-sm-only-hide oj-lg-hide"></span>
         </a>
     </li>
 </script>

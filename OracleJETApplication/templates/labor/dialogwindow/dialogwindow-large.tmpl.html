@@ -1,0 +1,52 @@
+<div style="display:none" id="scrollingDialog" title="Select Level or Location" 
+       data-bind="ojComponent:{component: 'ojDialog', initialVisibility: 'hide', 
+		  rootAttributes: { style: 'width: 95%; height: auto;'},
+                  'position': {'my': 'start bottom', 'at': 'end+14 top'},
+                  resizeBehavior: 'none'
+		  }">
+     <div class="oj-dialog-body">
+        <span class="locationCurrentSelection">Current Selection:</span> 
+         <hr>
+         <div class="filterHeader">
+             <span data-bind="css: filterHeadingIconClass"></span>
+             <span data-bind="text: filterHeading"></span>
+         
+         </div>
+         <div class="oj-row">
+            <div class="oj-md-4 oj-col">
+        <form id="form1">
+                <label for="combobox">Name</label>
+
+             
+            </datalist>
+            <p>Or</p>
+
+        </form>
+            </div>
+            <div class="oj-md-8 oj-col">
+                <div class="oj-sm-12 oj-col" data-bind="visible: resultState">
+
+                </div>
+            </div>
+              <script type="text/html" id="result_template">
+
+                <li data-bind="attr: {id: id}">
+               <div class="oj-row row">
+                   <div class="oj-lg-12 oj-col">
+                       <span class="dialogItemHeader">Regional:</span> <span class="dialogItem" data-bind="text: regional"></span>
+                   </div>
+                   <div class="oj-lg-12 oj-col">
+                       <span class="dialogItemHeader">Location:</span> <span class="dialogItem" data-bind="text: label"></span>
+                   </div>
+               </div>
+                </li>
+
+               </script>
+         </div>
+
+
+     </div>
+<!--    <div class="oj-dialog-footer">
+        <button id="okButton" data-bind="ojComponent: {component: 'ojButton', label: 'OK'}, click: handleOKClose"> </button>
+      </div>-->
+</div>

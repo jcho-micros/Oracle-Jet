@@ -45,9 +45,11 @@ define([
 
                     // Retrieve the childRouter instance created in main.js
                     self.empRouter = parentRouter.currentState().value;
+                                          console.log(self.empRouter);
                     //Creates the child router for employees
                     self.empRouter.configure(function (stateId) {
                         var state;
+                                        console.log(stateId);
                         if (stateId) {
                             var data = stateId.toString();
                             state = new oj.RouterState(data, {

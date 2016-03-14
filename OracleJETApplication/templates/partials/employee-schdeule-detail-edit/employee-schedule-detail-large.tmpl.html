@@ -6,13 +6,13 @@
      <div class="oj-dialog-header oj-helper-clearfix" aria-labelledby="dialogTitleId">
         <span id="dialogTitleId" class="oj-dialog-title">
             <h2>
-            Edit Availablity, Days & Times, and School District for 
-            <span data-bind="text: $parent.firstName"></span>
-            <span data-bind="text: $parent.lastName"></span>
+                Edit Availablity, Days & Times, and School District for 
+                <span data-bind="text: $parent.firstName"></span>
+                <span data-bind="text: $parent.lastName"></span>
             </h2>
-
         </span>
      </div>
+    <!-- Start of the Dialog Body -->
     <div class="oj-dialog-body">
         <div class="oj-row">
             <div class="oj-md-12 oj-col">
@@ -108,8 +108,8 @@
                                     </div>
                                     <div class="oj-md-2"> </div>
                                     <div class="oj-md-2 weekStartColumn">
-                                        <label>End of Week</label>
-                                        <select id="startWeekSelect" data-bind="ojComponent: {component: 'ojSelect', value: $parents[1].weekCompleteListResult(day)}">
+                                        <label for="endWeekSelect">End of Week</label>
+                                        <select id="endWeekSelect" data-bind="ojComponent: {component: 'ojSelect', value: $parents[1].weekCompleteListResult(day)}">
                                         <!-- ko foreach: $parents[1].weekOfDay() -->
                                         <option data-bind="value: value, text: name"></option>
                                         <!-- /ko -->

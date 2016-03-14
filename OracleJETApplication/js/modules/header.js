@@ -1,9 +1,34 @@
-define(['knockout', 'ojs/ojcore', 'ojs/ojknockout', 'ojs/ojnavigationlist', 'ojs/ojoffcanvas', 'ojs/ojdatacollection-common', 'ojs/ojdialog'
-], function (ko, oj) {
+define([
+    'knockout', 
+    'ojs/ojcore', 
+    'data/data', 
+    'jquery', 
+    'ojs/ojknockout', 
+    'ojs/ojnavigationlist', 
+    'ojs/ojoffcanvas', 
+    'ojs/ojdatacollection-common', 
+    'ojs/ojdialog',
+    'ojs/ojjsontreedatasource',
+    'ojs/ojtabs', 
+    'ojs/ojconveyorbelt'
+], function (ko, oj, data, $) {
     function HeaderViewModel() {
         var self = this;
         
         var customQuery = oj.ResponsiveKnockoutUtils.createMediaQueryObservable('(max-width: 372px)');
+        //where the all employee info will be stored
+        //self.allregions = ko.observableArray([]);
+        self.allregions = ko.observableArray([]);
+
+        self.selectedListItem = ko.observable("None");
+        //self.ready = ko.observable(false);
+
+//        var dataTreeList = $.getJSON( "js/data/test.json", function(data) {
+//            data = new oj.JsonTreeDataSource(data);
+//            console.log( "success" );
+//        });
+//        self.dataAllRegions = ko.observable(dataTreeList);
+
 
         //Required for the Drop down
         self.menuItemSelect = function (event, ui) {
@@ -29,20 +54,29 @@ define(['knockout', 'ojs/ojcore', 'ojs/ojknockout', 'ojs/ojnavigationlist', 'ojs
                 "displayMode": "push",
                 "selector": "#topDrawer",
                 "selection": "selectedItem"
+                
             };
             var appNavData = [
-                {name: 'Home', id: 'home', value: ' ', iconClass: 'fa fa-home oj-navigationlist-item-icon'},
-                {name: 'Labor', id: 'labor', value: ' ',  iconClass: 'fa fa-briefcase oj-navigationlist-item-icon'},
-                {name: 'Inventory', id: 'inventory', value: ' ',  iconClass: 'fa fa-dropbox oj-navigationlist-item-icon'},
-                {name: 'Gift & Loyalty', id: 'gift-loyalty', value: ' ',  iconClass: 'fa fa-gift oj-navigationlist-item-icon'},
-                {name: 'Reporting & Analytics', id: 'reports-analytics', value: ' ',  iconClass: 'fa fa-bar-chart oj-navigationlist-item-icon'},
-                {name: 'Mike Rose Cafe', id: 'enterprise', value: ' ',  iconClass: 'fa fa-building-o oj-navigationlist-item-icon'},
-                {name: 'People', id: 'people', value: ' ',  iconClass: 'fa fa-users oj-navigationlist-item-icon'}
+                {name: 'Home', id: 'home', value: ' ', img: 'home-default.png'},
+                {name: 'Labor', id: 'labor', value: ' ',  img: 'labor-default.png'},
+                {name: 'Inventory', id: 'inventory', value: ' ',  img: 'inventory-default.png'},
+                {name: 'Gift & Loyalty', id: 'gift-loyalty', value: ' ',  img: 'gift-loyalty-default.png'},
+                {name: 'Reporting & Analytics', id: 'reports-analytics', value: ' ',  img: 'reporting-analytics-default.png'},
+                {name: 'Mike Rose Cafe', id: 'enterprise', value: ' ',  img: 'enterprise-default.png'},
+                {name: 'People', id: 'people', value: ' ',  img: 'people-default.png'}
                 ];
-        self.handleActivated = function () {
+        self.handleActivated = function (info) {
+
             self.dataSource = new oj.ArrayTableDataSource(appNavData, {idAttribute: 'id'});
-            self.iconBig = new oj.ArrayTableDataSource(appNavData, {idAttribute: 'iconClass'});
+            self.globalLocationInfo = ko.dataFor(document.getElementById('templateWrapper'));
+            self.globalRegion = ko.observable(self.globalLocationInfo.region, "North East");
+            self.globalCityName = ko.observable(self.globalLocationInfo.cityName, "Boston");
+            self.globalCityNameId = ko.observable(self.globalLocationInfo.locID, "1");
+            self.globalstoreName = ko.observable(self.globalLocationInfo.storeName, "Beacon Hill");
+            
         };
+ 
+        
         var appSideNavData = [
             {name: 'Charts', id: 'charts'},
             {name: 'Reports', id: 'reports'},
@@ -86,7 +120,7 @@ define(['knockout', 'ojs/ojcore', 'ojs/ojknockout', 'ojs/ojnavigationlist', 'ojs
                 }
             ]
         };
-
+        
         self.appId = appName.id;
         self.appName = appName.name;
 
@@ -97,6 +131,11 @@ define(['knockout', 'ojs/ojcore', 'ojs/ojknockout', 'ojs/ojnavigationlist', 'ojs
         self.userName = ko.observable(toolbarData.userName);
         self.toolbarButtons = toolbarData.toolbar_buttons;
         self.globalNavItems = toolbarData.global_nav_dropdown_items;
+        self.newClass = ko.observable(false);
+        self.changeClass = function() {
+            self.newClass(true);
+            self.toggleDrawer();
+        }
 //var customQuery = oj.ResponsiveKnockoutUtils.createMediaQueryObservable('(min-width: 378px)');
 //alert(customQuery);
         self.toggleSideNav = function(){
@@ -114,7 +153,8 @@ define(['knockout', 'ojs/ojcore', 'ojs/ojknockout', 'ojs/ojnavigationlist', 'ojs
         };
         self.toggleDrawer = function ()
         {
-            return oj.OffcanvasUtils.toggle(this.topDrawer);
+                return oj.OffcanvasUtils.toggle(this.topDrawer);
+
         };
         self.toggleAppDrawer = function ()
         {

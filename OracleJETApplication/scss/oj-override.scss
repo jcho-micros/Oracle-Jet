@@ -407,6 +407,21 @@ $listSelectMask: $imageDir + 'thumb-overlay-selected.png';
 $listHoverMask: $imageDir + 'thumb-overlay-hover.png';
 $listCheckedBckIcon: $imageDir + 'active-check.png';
 $listXBckIcon: $imageDir + 'nonactive-status.png';
+//Top Navigation Default Icons
+$homeIconDefault: $imageDir + 'icon/home-default.png';
+$homeIconHover: $imageDir + 'icon/home-hover.png';
+$laborIconDefault: $imageDir + 'icon/labor-default.png';
+$laborIconHover: $imageDir + 'icon/labor-hover.png';
+$inventoryIconDefault: $imageDir + 'icon/inventory-default.png';
+$inventoryIconHover: $imageDir + 'icon/inventory-hover.png';
+$giftLoyaltyIconDefault: $imageDir + 'icon/gift-loyalty-default.png';
+$giftLoyaltyIconHover: $imageDir + 'icon/gift-loyalty-hover.png';
+$reportingAnalyticsIconDefault: $imageDir + 'icon/reporting-analytics-default.png';
+$reportingAnalyticsIconHover: $imageDir + 'icon/reporting-analytics-hover.png';
+$enterpriseIconDefault: $imageDir + 'icon/enterprise-default.png';
+$enterpriseIconHover: $imageDir + 'icon/enterprise-hover.png';
+$peopleIconDefault: $imageDir + 'icon/people-default.png';
+$peopleIconHover: $imageDir + 'icon/people-hover.png';
 //IPAD icon text
 $headerNavigationText: $customsmallFontSize;
 //Mobile icon size
@@ -1424,6 +1439,76 @@ html,body{
 a{
     cursor: pointer;
 }
+//Top Off Canvas
+#topDrawer{
+    background-color:#616365;
+    &:active{
+        outline-color:transparent;
+    }
+    #offCanvasScope{
+            height:225px;
+        color:$white;
+            [data-bind*="ojComponent"]:not(.oj-component-initnode){
+                visibility: visible;
+            }
+            .oj-tabs-selected{
+                background-color:#454545;
+            }
+            .regionReportUl{
+                margin-left:10px;
+                .regionReportLi{
+                    background-color:#878C90;
+                    margin-bottom:2px;
+                        a{
+                            .oj-tabs-title{
+                                color:#f5f5f5;
+                                font-family: Helvetica Neue Light;
+                                font-size: 16px;
+                            }
+                        }
+                        &.oj-focus{
+                            outline-color:transparent;
+                            background-color:#f5f5f5;
+                            border-width: 0 0 0 0;
+                            a{
+                                .oj-tabs-title{
+                                    color:#707070;
+                                    font-family: Helvetica Neue Light;
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                        &.oj-selected{
+                            background-color:#f5f5f5;
+                            border-width: 0 0 0 0;
+                            a{
+                                .oj-tabs-title{
+                                    color:#454545;
+                                    font-family: Helvetica Neue Light;
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                        &.oj-hover{
+                            border-width: 0 0 0 0;
+                            a{
+                                .oj-tabs-title{
+                                    text-decoration: none;
+                                    font-family: Helvetica Neue Light;
+                                    font-size: 16px;
+                                }
+
+                            }
+                        }
+                }
+
+            }
+            .regionTabSections{
+                background-color:#616365;
+                border-color:transparent;
+            }
+    }
+}
 
 //Custom icons
 .custom-question-icon{
@@ -1474,52 +1559,309 @@ a{
         margin-right:0;
         &.oj-focus{
             outline-color:transparent;
+                &#home{
+                    a{
+                        .topNavImgIcon{
+                            margin-top:3px;
+                            background-image: url($homeIconDefault);
+                            display:block;
+                            position:relative;
+                            top:0;
+                            left:0;
+                            width:24px;
+                            height:22px;
+                        }
+                    }
+                }
+                &#labor{
+                    a{
+                        .topNavImgIcon{
+                            margin-top:3px;
+                            background-image: url($laborIconDefault);
+                            display:block;
+                            position:relative;
+                            top:0;
+                            left:0;
+                            width:24px;
+                            height:22px;
+                        }
+                    }
+                }
+                &#inventory{
+                    a{
+                        .topNavImgIcon{
+                            margin-top:3px;
+                            background-image: url($inventoryIconDefault);
+                            display:block;
+                            position:relative;
+                            top:0;
+                            left:0;
+                            width:24px;
+                            height:22px;
+                        }
+                    }
+                }
+               &#gift-loyalty{
+                    a{
+                        .topNavImgIcon{
+                            margin-top:3px;
+                            background-image: url($giftLoyaltyIconDefault);
+                            display:block;
+                            position:relative;
+                            top:0;
+                            left:0;
+                            width:24px;
+                            height:22px;
+                        }
+                    }
+                }
+                &#reports-analytics{
+                    a{
+                        .topNavImgIcon{
+                            margin-top:3px;
+                            background-image: url($reportingAnalyticsIconDefault);
+                            display:block;
+                            position:relative;
+                            top:0;
+                            left:0;
+                            width:24px;
+                            height:22px;
+                        }
+                    }
+                }
+                &#enterprise{
+                    a{
+                        .topNavImgIcon{
+                            margin-top:3px;
+                            background-image: url($enterpriseIconDefault);
+                            display:block;
+                            position:relative;
+                            top:0;
+                            left:0;
+                            width:24px;
+                            height:22px;
+                        }
+                    }
+                }
+                &#people{
+                    a{
+                        .topNavImgIcon{
+                            margin-top:3px;
+                            background-image: url($peopleIconDefault);
+                            display:block;
+                            position:relative;
+                            top:0;
+                            left:0;
+                            width:24px;
+                            height:22px;
+                        }
+                    }
+                }
         }
         &.oj-default{
-            background-color:$navigationListHeaderMobileBg;
+                &#home{
+                    a{
+                        .topNavImgIcon{
+                            margin-top:3px;
+                            background-image: url($homeIconDefault);
+                            display:block;
+                            position:relative;
+                            top:0;
+                            left:0;
+                            width:24px;
+                            height:22px;
+                        }
+                    }
+                }
+                &#labor{
+                    a{
+                        .topNavImgIcon{
+                            margin-top:3px;
+                            background-image: url($laborIconDefault);
+                            display:block;
+                            position:relative;
+                            top:0;
+                            left:0;
+                            width:24px;
+                            height:22px;
+                        }
+                    }
+                }
+                &#inventory{
+                    a{
+                        .topNavImgIcon{
+                            margin-top:3px;
+                            background-image: url($inventoryIconDefault);
+                            display:block;
+                            position:relative;
+                            top:0;
+                            left:0;
+                            width:24px;
+                            height:22px;
+                        }
+                    }
+                }
+               &#gift-loyalty{
+                    a{
+                        .topNavImgIcon{
+                            margin-top:3px;
+                            background-image: url($giftLoyaltyIconDefault);
+                            display:block;
+                            position:relative;
+                            top:0;
+                            left:0;
+                            width:24px;
+                            height:22px;
+                        }
+                    }
+                }
+                &#reports-analytics{
+                    a{
+                        .topNavImgIcon{
+                            margin-top:3px;
+                            background-image: url($reportingAnalyticsIconDefault);
+                            display:block;
+                            position:relative;
+                            top:0;
+                            left:0;
+                            width:24px;
+                            height:22px;
+                        }
+                    }
+                }
+                &#enterprise{
+                    a{
+                        .topNavImgIcon{
+                            margin-top:3px;
+                            background-image: url($enterpriseIconDefault);
+                            display:block;
+                            position:relative;
+                            top:0;
+                            left:0;
+                            width:24px;
+                            height:22px;
+                        }
+                    }
+                }
+                &#people{
+                    a{
+                        .topNavImgIcon{
+                            margin-top:3px;
+                            background-image: url($peopleIconDefault);
+                            display:block;
+                            position:relative;
+                            top:0;
+                            left:0;
+                            width:24px;
+                            height:22px;
+                        }
+                    }
+                }
         }
         &.oj-selected{
-//            background-color: $tabsBgColorSelected;
                 &#home{
                     background-color: $homeIconBckColor;
-                    .fa.fa-briefcase.oj-navigationlist-item-icon {
-                        color: $homeIconColor;
+                    a{
+                        .topNavImgIcon{
+                            margin-top:3px;
+                            background-image: url($homeIconHover);
+                            display:block;
+                            position:relative;
+                            top:0;
+                            left:0;
+                            width:24px;
+                            height:22px;
+                        }
                     }
                 }
                 &#labor{
                     background-color: $laborIconBckColor;
-                    .fa.fa-briefcase.oj-navigationlist-item-icon {
-                        color: $laborIconColor;
+                    a{
+                        .topNavImgIcon{
+                            margin-top:3px;
+                            background-image: url($laborIconHover);
+                            display:block;
+                            position:relative;
+                            top:0;
+                            left:0;
+                            width:24px;
+                            height:22px;
+                        }
                     }
                 }
                 &#inventory{
                     background-color: $inventoryIconBckColor;
-                    .fa.fa-briefcase.oj-navigationlist-item-icon {
-                        color: $inventoryIconColor;
+                    a{
+                        .topNavImgIcon{
+                            margin-top:3px;
+                            background-image: url($inventoryIconHover);
+                            display:block;
+                            position:relative;
+                            top:0;
+                            left:0;
+                            width:24px;
+                            height:22px;
+                        }
                     }
                 }
                 &#gift-loyalty{
                     background-color: $giftLoyaltyIconBckColor;
-                    .fa.fa-briefcase.oj-navigationlist-item-icon {
-                        color: $giftLoyaltyIconColor;
+                    a{
+                        .topNavImgIcon{
+                            margin-top:3px;
+                            background-image: url($giftLoyaltyIconHover);
+                            display:block;
+                            position:relative;
+                            top:0;
+                            left:0;
+                            width:24px;
+                            height:22px;
+                        }
                     }
                 }
                 &#reports-analytics{
                     background-color: $reportsChartsIconBckColor;
-                    .fa.fa-briefcase.oj-navigationlist-item-icon {
-                        color: $reportsChartsIcon;
+                    a{
+                        .topNavImgIcon{
+                            margin-top:3px;
+                            background-image: url($reportingAnalyticsIconHover);
+                            display:block;
+                            position:relative;
+                            top:0;
+                            left:0;
+                            width:24px;
+                            height:22px;
+                        }
                     }
                 }
                 &#enterprise{
                     background-color: $enterpriseIconBckColor;
-                    .fa.fa-briefcase.oj-navigationlist-item-icon {
-                        color: $enterpriseIconBckColor;
+                    a{
+                        .topNavImgIcon{
+                            margin-top:3px;
+                            background-image: url($enterpriseIconHover);
+                            display:block;
+                            position:relative;
+                            top:0;
+                            left:0;
+                            width:24px;
+                            height:22px;
+                        }
                     }
                 }
                 &#people{
                     background-color: $peopleIconBckColor;
-                    .fa.fa-briefcase.oj-navigationlist-item-icon {
-                        color: $peopleIconColor;
+                    a{
+                        .topNavImgIcon{
+                            margin-top:3px;
+                            background-image: url($peopleIconHover);
+                            display:block;
+                            position:relative;
+                            top:0;
+                            left:0;
+                            width:24px;
+                            height:22px;
+                        }
                     }
                 }
             border-width: 0 !important;
@@ -1535,52 +1877,114 @@ a{
             &#home{
                 background-color: $homeIconBckColor;
                 border-color:$lightTan;
-                .fa.fa-briefcase.oj-navigationlist-item-icon {
-                    color: $homeIconColor;
+                a{
+                    .topNavImgIcon{
+                        margin-top:3px;
+                        background-image: url($homeIconHover);
+                        display:block;
+                        position:relative;
+                        top:0;
+                        left:0;
+                        width:24px;
+                        height:22px;
+                    }
                 }
-                
             }
             &#labor{
                 background-color: $laborIconBckColor;
                 border-color:$lightTan;
-                .fa.fa-briefcase.oj-navigationlist-item-icon {
-                    color: $laborIconColor;
-                }
+                    a{
+                        .topNavImgIcon{
+                            margin-top:3px;
+                            background-image: url($laborIconHover);
+                            display:block;
+                            position:relative;
+                            top:0;
+                            left:0;
+                            width:24px;
+                            height:22px;
+                        }
+                    }
             }
             &#inventory{
                 background-color: $inventoryIconBckColor;
                 border-color:$lightTan;
-                .fa.fa-briefcase.oj-navigationlist-item-icon {
-                    color: $inventoryIconColor;
-                }
+                    a{
+                        .topNavImgIcon{
+                            margin-top:3px;
+                            background-image: url($inventoryIconHover);
+                            display:block;
+                            position:relative;
+                            top:0;
+                            left:0;
+                            width:24px;
+                            height:22px;
+                        }
+                    }
             }
             &#gift-loyalty{
                 background-color: $giftLoyaltyIconBckColor;
                 border-color:$lightTan;
-                .fa.fa-briefcase.oj-navigationlist-item-icon {
-                    color: $giftLoyaltyIconColor;
-                }
+                    a{
+                        .topNavImgIcon{
+                            margin-top:3px;
+                            background-image: url($giftLoyaltyIconHover);
+                            display:block;
+                            position:relative;
+                            top:0;
+                            left:0;
+                            width:24px;
+                            height:22px;
+                        }
+                    }
             }
             &#reports-analytics{
                 background-color: $reportsChartsIconBckColor;
                 border-color:$lightTan;
-                .fa.fa-briefcase.oj-navigationlist-item-icon {
-                    color: $reportsChartsIcon;
-                }
+                    a{
+                        .topNavImgIcon{
+                            margin-top:3px;
+                            background-image: url($reportingAnalyticsIconHover);
+                            display:block;
+                            position:relative;
+                            top:0;
+                            left:0;
+                            width:24px;
+                            height:22px;
+                        }
+                    }
             }
             &#enterprise{
                 background-color: $enterpriseIconBckColor;
                 border-color:$lightTan;
-                .fa.fa-briefcase.oj-navigationlist-item-icon {
-                    color: $enterpriseIconBckColor;
-                }
+                    a{
+                        .topNavImgIcon{
+                            margin-top:3px;
+                            background-image: url($enterpriseIconHover);
+                            display:block;
+                            position:relative;
+                            top:0;
+                            left:0;
+                            width:24px;
+                            height:22px;
+                        }
+                    }
             }
             &#people{
                 background-color: $peopleIconBckColor;
                 border-color:$lightTan;
-                .fa.fa-briefcase.oj-navigationlist-item-icon {
-                    color: $peopleIconColor;
-                }
+                    a{
+                        .topNavImgIcon{
+                            margin-top:3px;
+                            background-image: url($peopleIconHover);
+                            display:block;
+                            position:relative;
+                            top:0;
+                            left:0;
+                            width:24px;
+                            height:22px;
+                        }
+                    }
             }
             .oj-navigationlist-item-icon{
                 color:$iconSelectedColor;
@@ -1612,9 +2016,13 @@ a{
 .oj-offcanvas-open {
     background-color: $navigationListMobileBg;
 }
-#offCanvasScope{
-    height:100px;
+
+#offCanvasUserProfile{
+    width:250px;
     color:$white;
+    #appheaderGlobalNavMenuId{
+        display: block;
+    }
 }
 .oj-navigationlist-item {
     border-width:0 !important;
@@ -1622,6 +2030,7 @@ a{
 //         background-color: $navigationListMobileBg;
          a.oj-navigationlist-item-content{
              color: $navigationListMobileTextColor;
+             
          }
     }
     &.oj-selected {
@@ -1790,7 +2199,7 @@ a{
        display:none;
     }
 
-    @media only screen and (min-width: 768px){
+@media only screen and (min-width: 768px){
         .container {
             margin: 0 auto;
             width: 85%;
@@ -1971,6 +2380,7 @@ h4{
 }
 button#menuButton{
     color: $black;
+    margin-left:3px;
     &.oj-button{
         &.oj-hover{
             background-color:transparent;
@@ -2040,9 +2450,7 @@ a.basic-btn-link{
     
 }
 //Profile Tab border Top
-.tab-content{
-    border: 0px solid transparent !important;
-}
+
 .button-row{
     padding:10px 0;
 }
@@ -2272,21 +2680,72 @@ footer{
     }
 
     //Header
-    .scopeLink{
-        background-color: #454545;
-        height: 100%;
-        display: block;
-        float: left;
-        line-height: 40px;
-        color: #fff;
-        width: 53px;
-        margin-left: 39px;
-        margin-top: -3%;
-        position: relative;
+    .userMenuWrap{
+        text-align: right;
+        .scopeLinkActive{
+            background-color: blue;
+        }
+        .scopeLink{
+            background-color: #ffffff;
+            height: 100%;
+            display: block;
+            float:right;
+            line-height: 40px;
+            color: #454545;
+            padding:0px 10px;
+            margin-left: 39px;
+            margin-top: -3%;
+            position: relative;
+            text-align: center;
+            vertical-align: bottom;
+            border-width: 0px 0px 1px 1px;
+            border-style: solid;
+            border-color: #d5d7d6;
+                .topLocationLink{
+                   position: relative;
+                   padding-left:2px;
+                }
+                .fa{
+                    font-size:12px;
+                }
+                &:active{
+                    font-weight:normal;
+                }
+                &:hover{
+                    color:$white;
+                    background-color:#616365;
+                    height:100%;
+                    display: block;
+                    line-height: 40px;
+                    text-decoration: none;
+                }
+        }
+        html:not([dir="rtl"]) .oj-button-icons-only .oj-button-icon.oj-start{
+            padding-left:5px;
+        }
+        #userMenu{
+            float: right;
+            display: block;
+            background-color: #ffffff;
+            background-image: none;
+            border-color: #d5d7d6;
+            height: 100%;
+            line-height: 40px;
+            margin-top: -10px;
+            border-radius: 0;
+                .fa{
+                    color: #616365;
+                }
+            
+            
+        }
+    }
+    html:not([dir="rtl"]) .oj-button-icons-only .oj-button-icon.oj-start{
+        margin:0px 5px 0px 10px;
     }
     .page-header {
         padding: 10px 0;
-        > h1 {
+        h1 {
             margin: 0;
         }
     }
@@ -2301,26 +2760,6 @@ footer{
     }
     .oj-offcanvas-open {
         background-color: $navigationListDesktopBg;
-    }
-    .oj-navigationlist-item {
-        border-width: 3px 0 0 0 !important;
-        margin-right: 5px;
-        &:last-child{
-            margin: 0 1px 0 0;
-        }
-//        &.oj-default{
-//             background-color: $navigationListDesktopBg;
-//        }
-        &.oj-selected {
-            background-color: $navigationListDesktopBgSelected;
-            border-width: 1px 1px 0 1px !important;
-            border-right-color: $navigationListBorderColor;
-            border-left-color: $navigationListBorderColor;
-
-            a.oj-navigationlist-item-content{
-                color: $navigationListDesktopTextColorSelected;
-            }
-        }
     }
     //Left Side Navigation
     #sidebar-left{
@@ -2400,16 +2839,16 @@ footer{
                     background:url($listSelectMask);
                 }
             }
-        .imageOverlay{
-            display:block;
-            position:absolute;
-            top:0%;
-            left:0;
-            width:95px;
-            height:75px;
-            z-index: 100;
-            background:url($listSelectMask);
-        }
+            .imageOverlay{
+                display:block;
+                position:absolute;
+                top:0%;
+                left:0;
+                width:95px;
+                height:75px;
+                z-index: 100;
+                background:url($listSelectMask);
+            }
         }
         &.oj-hover{
             .imageOverlay{
@@ -2446,6 +2885,9 @@ footer{
         height:100%;
         display: block;
         position: relative;
+            .tab-content{
+                border-width: 0 0 0 0;
+            }
     }
     .profileWrapper{
          background-repeat: no-repeat;
@@ -2453,6 +2895,23 @@ footer{
          background-position:100% 30%;
          background-color: #3caf85;
          height:110px;
+    }
+    .oj-navigationlist-item {
+        border-width: 3px 0 0 0;
+        margin-right: 5px;
+            &:last-child{
+                margin: 0 1px 0 0;
+            }
+        &.oj-selected {
+            background-color: $navigationListDesktopBgSelected;
+            border-width: 1px 1px 0 1px;
+            border-right-color: $navigationListBorderColor;
+            border-left-color: $navigationListBorderColor;
+
+            a.oj-navigationlist-item-content{
+                color: $navigationListDesktopTextColorSelected;
+            }
+        }
     }
     #profileSection{
         padding-top:3px;
@@ -2549,7 +3008,6 @@ footer{
                     .oj-navigationlist-item-label{
                          font-weight:300;
                          color:#000;
-                         margin-top:2px;
                     }
                }
            }
@@ -2625,7 +3083,6 @@ footer{
                     .oj-navigationlist-item-label{
                          font-weight:300;
                          color:#000;
-                         margin-top:2px;
                     }
                }
            }
@@ -2699,7 +3156,6 @@ footer{
                     .oj-navigationlist-item-label{
                          font-weight:300;
                          color:#000;
-                         margin-top:2px;
                     }
                }
            }
@@ -2753,7 +3209,6 @@ footer{
                     .oj-navigationlist-item-label{
                          font-weight:300;
                          color:#000;
-                         margin-top:2px;
                     }
                }
            }
@@ -2808,7 +3263,6 @@ footer{
                     .oj-navigationlist-item-label{
                          font-weight:300;
                          color:#000;
-                         margin-top:2px;
                     }
                }
 
@@ -2960,6 +3414,11 @@ footer{
         padding: 8px 10px 0 10px;
     }
     .app-header-logo-wrap{
+        a{
+            .fa{
+                color: $offCanvasGray;
+            }
+        }
         white-space: nowrap;
         padding-left:0px;
             .appheader-appname {
@@ -2974,6 +3433,30 @@ footer{
             padding-left:0px;
         }
     }
+    //Top Navigation
+    .oj-navigationlist-item{
+        &.oj-hover:not(.oj-selected) {
+            a{
+                .topNavText{
+                    display: none;
+                }
+            }
+        }
+        &.oj-selected{
+            a{
+                .topNavText{
+                    display: none;
+                }
+            }
+        }
+        &.oj-default{
+            a{
+                .topNavText{
+                    display: none;
+                }
+            }
+        }
+    }
     //Footer
     #footCol, #appfooterDiv{
         position: relative;
@@ -2983,9 +3466,7 @@ footer{
         width:85%;
         height:600px;
     }
-//    .page-area {
-//         border-left:1px solid #ccc;
-//    }
+
 }
 
 //xLarge (UP)
@@ -3016,6 +3497,15 @@ footer{
     .oj-navigationlist-listview-container{
         margin-top:0px;
     }
+    .oj-navigationlist-item{
+        &.oj-selected{
+            a{
+                .topNavImgIcon{
+                    margin-top:0px !important;
+                }
+            }
+        }
+    }    
     .mobileNavTitleArea{
         .fa{
             font-size: 12px;
@@ -3070,12 +3560,10 @@ footer{
                         color:$white;
                     }
                 }
-
             }
             &.oj-selected{
 
             }
-
         }
     }
     #profileSection{
@@ -3198,9 +3686,6 @@ footer{
     }
     .tab-content{
         border-width: 0 0 0 0;
-    }
-    .oj-navigationlist-item-icon {
-        font-size: $headerNavigationMobileSize !important;
     }
     .page-header{
         padding:15px;
@@ -3382,20 +3867,21 @@ footer{
             .fa{
                 font-size:12px;
                 color: #444444;
-            }profileStatusToolArea
-            h4{
-                font-size:11px;
-                margin-bottom:2px;
             }
-            a{
-                font-size:12px;
-                .fa{
-                    color:#045fab;
+            .profileStatusToolArea{
+                h4{
+                    font-size:11px;
+                    margin-bottom:2px;
+                }
+                a{
+                    font-size:12px;
+                    .fa{
+                        color:#045fab;
+                    }
                 }
             }
+
         }
-
-
     }
     .oj-filmstrip-content-container{
         padding: 10px 0;
@@ -3599,7 +4085,6 @@ footer{
         padding-right: 20px;
     }
 }
-
 // MD IPad (CAP)
 @media only screen and (min-width: 768px) and (max-width: 1023px){
     //Footer styles
@@ -3613,6 +4098,45 @@ footer{
     //Icon padding Right to Text
     html:not([dir="rtl"]) .oj-navigationlist-horizontal:not(.oj-navigationlist-stack-icon-label):not(.oj-navigationlist-icon-only) .oj-navigationlist-item-icon {
         margin-right: 5px;
+    }
+        //Top Navigation
+    .oj-navigationlist-item{
+        a{
+            padding: 3px 5px 4px  !important;
+            .oj-navigationlist-item-label{
+                display: inline-block;
+                vertical-align: middle;
+                    .topNavImgIcon{
+                        float: left;
+                    }
+                    .topNavText{
+                        margin-top: 9px;
+                        float: right;
+                    }
+            }
+        }
+        &.oj-hover:not(.oj-selected) {
+            a{
+                .topNavText{
+
+                }
+            }
+        }
+        &.oj-selected{
+            a{
+                .topNavText{
+                    color:$white;
+
+                }
+            }
+        }
+        &.oj-default{
+            a{
+                .topNavText{
+     
+                }
+            }
+        }
     }
     .oj-navigationlist-item-label {
         font-size: $headerNavigationText;
@@ -3640,13 +4164,20 @@ footer{
         width:95%;
     }
     //Profile ToolBar
-    .laborWrapper{
-
-         background:url(images/labor-briefCase-bg.png);
+    .enterpriseWrapper{
+        background-image:none;
+    }
+    #enterpriseTabWrapper{
+         background:url(images/enterprise-ipad-bg.png);
          background-repeat: no-repeat;
-         background-size: 185px 151px;
-         background-position:100% 30%;
-         background-color: #ED813E;
+         background-position:250px -41px;
+  
+         top:0%;
+         left:0%;
+         .tab-content{
+             background-color: transparent;
+         }
+
     }
     .profileToolBar{
         width:130px !important;
@@ -3660,8 +4191,6 @@ footer{
             font-weight:bold;
         }
     }
-
-
     #profileSectionTabs{
         &.oj-navigationlist-item-element{
             padding-left:2px;

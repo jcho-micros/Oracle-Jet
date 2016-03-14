@@ -1,0 +1,83 @@
+{
+"location" : [ {
+            "locID" : 1,    
+            "name" : "Beacon Hill",
+            "cityname" : "Boston",
+            "region" : "North East"
+         },{
+            "locID" : 2,    
+            "name" : "Cambridge",
+            "cityname" : "Boston",
+            "region" : "North East"
+         },{
+            "locID" : 3,    
+            "name" : "Cambridge",
+            "cityname" : "Boston",
+            "region" : "North East"
+         },{
+           "locID" : 4,    
+           "name" : "Time Square",
+           "cityname" : "New York City",
+           "region" : "North East"
+         },{
+           "locID" : 5,    
+           "name" : "Rockefeller Center",
+           "cityname" : "New York City",
+           "region" : "North East"
+         },{
+           "locID" : 6,    
+           "name" : "Theater District",
+           "cityname" : "New York City",
+           "region" : "North East"
+         },{
+            "locID" : 7,    
+            "name" : "Peachtree Center",
+            "cityname" : "Atlanta",
+            "region" : "South East"
+         },{
+            "locID" : 8,    
+            "name" : "Marietta",
+            "cityname" : "Atlanta",
+            "region" : "South East"
+         },{
+            "locID" : 9,    
+            "name" : "South Beach",
+            "cityname" : "Miami",
+            "region" : "South East"
+         },{
+            "locID" : 10,    
+            "name" : "Coral Gables",
+            "cityname" : "Miami",
+            "region" : "South East"
+         },{
+            "locID" : 11,    
+            "name" : "Malibu",
+            "cityname" : "Los Angles",
+            "region" : "West Coast"
+         },{
+            "locID" : 12,    
+            "name" : "Santa Monica",
+            "cityname" : "Los Angles",
+            "region" : "West Coast"
+         },{
+            "locID" : 13,    
+            "name" : "West Hollywood",
+            "cityname" : "Los Angles",
+            "region" : "West Coast"
+         },{
+            "locID" : 14,    
+            "name" : "Oakland",
+            "cityname" : "San Francisco",
+            "region" : "West Coast"
+         },{
+            "locID" : 15,    
+            "name" : "Berkley",
+            "cityname" : "San Francisco",
+            "region" : "West Coast"
+         },{
+            "locID" : 16,    
+            "name" : "Pacific Heights",
+            "cityname" : "San Francisco",
+            "region" : "West Coast"
+      }]
+}

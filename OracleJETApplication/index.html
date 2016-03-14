@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>My App</title>
     <meta charset="UTF-8">
@@ -21,7 +20,15 @@
                         viewName: 'off-canvas-template-left'}">
         </div>
     </div>
+
     <header data-bind="ojModule: { name: 'header'}" class="app-header"></header>
+    <div id="topDrawer" class="oj-offcanvas-top">
+        <div data-bind="ojModule: {
+                        name: 'header',
+                        viewName: 'off-canvas-template-top'}">
+        </div>
+    </div>
+
         <div class="oj-row" id="app-main-area">
             <div class="oj-sm-12 oj-md-12 oj-lg-12" id="mainCol">
                 <div id="sidebar-left" class="oj-sm-only-hide oj-md-only-hide oj-lg-2 oj-xl-2 oj-col">
@@ -36,6 +43,7 @@
               
             </div>
         </div>
+    </div>
 </body>
 
 </html>

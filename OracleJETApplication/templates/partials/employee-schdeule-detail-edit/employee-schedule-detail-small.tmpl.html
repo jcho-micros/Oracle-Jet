@@ -7,13 +7,13 @@
      <div class="oj-dialog-header oj-helper-clearfix" aria-labelledby="dialogTitleId">
         <span id="dialogTitleId" class="oj-dialog-title">
             <h2>
-            Edit Availablity, Days & Times, and School District for 
-            <span data-bind="text: $parent.firstName"></span>
-            <span data-bind="text: $parent.lastName"></span>
+                Edit Availablity, Days & Times, and School District for 
+                <span data-bind="text: $parent.firstName"></span>
+                <span data-bind="text: $parent.lastName"></span>
             </h2>
-
         </span>
      </div>
+    <!-- Start of the Dialog Body -->
     <div class="oj-dialog-body">
         <div class="oj-row">
             <div class="oj-sm-12 oj-col">
@@ -61,20 +61,20 @@
             </div>
             <hr class="oj-sm-12" />
         </div>
-        <div class="oj-row">
-<!-- ko foreach: $parent.daysAndTimesList -->
+    <div class="oj-row">
+        <!-- ko foreach: $parent.daysAndTimesList -->
         <div class="oj-sm-12">
             <div class="oj-sm-12 oj-col vertical-align-items-stretch">
                 <label for="basicSelect">Time Segment</label>
                 <select id="basicSelect" data-bind="ojComponent: {component: 'ojSelect', value: timesegment}">
-                <!-- ko foreach: $parents[1].timeList() -->
+                <!-- ko foreach: $module.timeList() -->
                 <option data-bind="value: value, text: name"></option>
                 <!-- /ko -->
                 </select>
             </div>
             <div class="oj-row">
                 <div class="oj-sm-12">
-                    <div id="tabs" data-bind="ojComponent:{component: 'ojTabs', selected: $parents[1].tabStatusResult(allday) ? 'tabs-1' : 'tabs-2'}">
+                    <div id="tabs" data-bind="ojComponent:{component: 'ojTabs', selected: $module.tabStatusResult(allday) ? 'tabs-1' : 'tabs-2'}">
                         <ul>
                             <li id="day"><span>Day</span></li>
                             <li id="partial"><span>Partial</span></li>
@@ -83,8 +83,8 @@
                         <div id="tabs-1">
                             <div class="oj-sm-12">
                                 <label>Day of Week</label><br />
-                                <select id="alldayweek" data-bind="ojComponent: {component: 'ojSelect', value: $parents[1].weekCompleteListResult(day)}">
-                                <!-- ko foreach: $parents[1].weekOfDay() -->
+                                <select id="alldayweek" data-bind="ojComponent: {component: 'ojSelect', value: $module.weekCompleteListResult(day)}">
+                                <!-- ko foreach: $module.weekOfDay() -->
                                 <option data-bind="value: value, text: name"></option>
                                 <!-- /ko -->
                                 </select>
@@ -98,11 +98,7 @@
                                             <label>Start of Week</label>
                                         </div>
                                         <div class="oj-sm-12">
-                                            <select id="startWeekSelect" data-bind="ojComponent: {component: 'ojSelect', value: $parents[1].weekCompleteListResult(day)}">
-                                            <!-- ko foreach: $parents[1].weekOfDay() -->
-                                            <option data-bind="value: value, text: name"></option>
-                                            <!-- /ko -->
-                                            </select>
+                 
                                         </div>
                                     </div>
                                 </div>
@@ -114,7 +110,7 @@
                                         <input id="starttime" data-bind="ojComponent: {component: 'ojInputTime', 
                                               value: starttime, 
                                               timePicker: {
-                                              timeIncrement: $parents[1].incrementValue()[0]}}"/>
+                                              timeIncrement: $module.incrementValue()[0]}}"/>
                                     </div>
                                 </div>
                                 <div class="oj-sm-12">&nbsp; </div>
@@ -123,11 +119,8 @@
                                         <label>End of Week</label>
                                     </div>
                                     <div class="oj-sm-12">
-                                        <select id="startWeekSelect" data-bind="ojComponent: {component: 'ojSelect', value: $parents[1].weekCompleteListResult(day)}">
-                                        <!-- ko foreach: $parents[1].weekOfDay() -->
-                                        <option data-bind="value: value, text: name"></option>
-                                        <!-- /ko -->
-                                        </select>
+                                        <label for="endWeekSelect">End of Week</label>
+ \
                                     </div>
                                 </div>
 
@@ -139,7 +132,7 @@
                                         <input id="starttime" data-bind="ojComponent: {component: 'ojInputTime', 
                                               value: endtime, 
                                               timePicker: {
-                                              timeIncrement: $parents[1].incrementValue()[0]}}"/>
+                                              timeIncrement: $module.incrementValue()[0]}}"/>
                                     </div>
                                 </div>
                             </div>
@@ -148,9 +141,9 @@
                 </div>
             </div>
         </div>
-<hr class="oj-sm-12" />
-<!-- /ko -->
-        </div>
+    <hr class="oj-sm-12" />
+    <!-- /ko -->
+    </div>
         
         
         
