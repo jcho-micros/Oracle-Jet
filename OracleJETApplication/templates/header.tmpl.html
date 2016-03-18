@@ -10,10 +10,10 @@
             </button>
             <span role="img" class="appheader-logo-oracle" title="Oracle Logo" alt="Oracle Logo"></span>
             <span data-bind="visible: $parents[0].getStateID()">
-                <a data-bind="click: $parent.handleOpen">
-                    <span class="locationAreaHd" data-bind="text: $parents[0].locationArea"></span>
-                    <span class="arrowLocation fa fa-location-arrow"></span>
-                </a>
+                        <a class="scopeLink" data-bind="click: topDrawerToggleClick">
+                            <span class="arrowLocation fa fa-location-arrow"></span>
+                            <span class="topLocationLink" data-bind="text: 'Beacon Hill'"></span>
+                        </a>
             </span>
         </div>
         <div class="oj-sm-3 oj-col oj-helper-text-align-right">
@@ -94,8 +94,10 @@
                 </li>
                 <!-- /ko -->
             </ul>
-                        <a class="scopeLink" data-bind="click: $module.changeClass, css:{scopeLinkActive: $module.newClass() == true}"><span class="arrowLocation fa fa-location-arrow"></span>
-                            <span class="topLocationLink" data-bind="text: globalCityName()? globalCityName() : 'Beacon Hill'"></span></a>
+                        <a class="scopeLink" data-bind="click: topDrawerToggleClick">
+                            <span class="arrowLocation fa fa-location-arrow"></span>
+                            <span class="topLocationLink" data-bind="text: 'Beacon Hill'"></span>
+                        </a>
             </div>
     </div>
 </script>
@@ -117,4 +119,4 @@
         </a>
     </li>
 </script>
-<div data-bind="template: {name: $root.large() ? 'lg_xl_header_template' : 'sm_md_header_template'}"></div>
+<div id="headerTemplate" data-bind="template: {name: $root.large() ? 'lg_xl_header_template' : 'sm_md_header_template'}"></div>

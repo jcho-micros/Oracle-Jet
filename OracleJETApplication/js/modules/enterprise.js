@@ -25,7 +25,6 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', 'o
                 });
                 // Now that the router for this view exist, synchronise it with the URL
                 oj.Router.sync();
-                console.debug(oj.Router.sync());
             }
             self.selectHandler = function (event, ui) {
                 if ('enterpriseTabs' === event.target.id && event.originalEvent) {

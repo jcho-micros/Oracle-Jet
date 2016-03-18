@@ -3,4 +3,16 @@
     "name" : "Marietta",
     "cityname" : "Atlanta",
     "region" : "South East"
+    "schedule" : [{
+            "role" : "Host"
+            },{
+            "role" : "Server"
+            },{
+            "role" : "Bar Tender"
+            },{
+            "role" : "Kitchen Cook"
+            },{
+            "role" : "Kitchen Dishwaher"
+            }
+    ]
  }

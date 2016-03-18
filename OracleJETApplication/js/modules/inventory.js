@@ -16,6 +16,11 @@ define([
         function inventoryContentViewModel() {
             var self = this;
             self.locationCity = ko.observableArray([]);
+            self.pageHeading = ko.observable("Inventory Management");
+            self.pageHeadingIconClass = ko.observable('fa fa-dropbox');
+
+            //current visible state of section, either true or false
+            self.sectionsState = ko.observable(false);
             
             //Child Router
             this.router = undefined;
@@ -23,28 +28,7 @@ define([
             self.handleActivated = function (data) {
                 var parentRouter = oj.Router.rootInstance;
 
-                // Retrieve the childRouter instance created in main.js
-                self.locRouter = parentRouter.currentState().value;
-                //Creates the child router for employees
-                self.locRouter.configure(function (stateId) {
-                    var state;
-                    if (stateId) {
-                        var data = stateId.toString();
-                        state = new oj.RouterState(data, {
-                            value: data,
-                            // For each state, before entering the state,
-                            // make sure the data for it is loaded.
-                            canEnter: function () {
-                                // The state transition will be on hold
-                                // until loadData is resolved.
-                                return self.loadData(data);
-                            }
-                        });
-                    }
-                    return state;
-                });
-
-                this.router = self.locRouter.createChildRouter('inventorytab').configure({
+                this.router = parentRouter.createChildRouter('inventorytab').configure({
                     'overview': {label: 'Overview', value: 'overview', isDefault: true},
                     'ordering-receiving': {label: 'Ordering & Receiving', value: 'ordering-receiving'},
                     'store': {label: 'Store', value: 'store'},
@@ -98,12 +82,7 @@ define([
                 this.router.dispose();
                 this.router = null;
             };
-            self.pageHeading = ko.observable("Inventory Management");
-            self.pageHeadingIconClass = ko.observable('fa fa-dropbox');
 
-
-            //current visible state of section, either true or false
-            self.sectionsState = ko.observable(false);
 
             //Toggles visibility of sections
             self.toggleSections = function () {

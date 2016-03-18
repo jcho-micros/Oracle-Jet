@@ -85,7 +85,7 @@
 // $interaction6Color: #dae9f5;  
 // 
 // 
-// 
+//  
 // background colors
 // ---------------------------------
 $white: #fff;
@@ -1442,6 +1442,7 @@ a{
 //Top Off Canvas
 #topDrawer{
     background-color:#616365;
+    outline-color: transparent;
     &:active{
         outline-color:transparent;
     }
@@ -1506,6 +1507,55 @@ a{
             .regionTabSections{
                 background-color:#616365;
                 border-color:transparent;
+                .bodyText{
+                    color:$white;
+                }
+                a{
+                    color:$white;
+                }
+                #sanFranciscoAnalytics, #miamiAnalytics, #bostonAnalytics, #nycAnalytics, #atlantaAnalytics, #losAnglesAnalytics{
+                    .mainWrapper{
+                                                    display:inline-block;
+                        .analyticsSection{
+
+                        margin-right:10px;
+                            .analyticsWrapper{
+                                background-color:$white;
+                                padding:10px;
+                                width:200px;
+                                .analyticsCity{
+
+                                }
+                                .analyticsRegion{
+                                    font-size:11px;
+                                }
+                                .analyticsStore{
+                                    font-size:20px;
+                                }
+                                .analyticsTotalgreen{
+                                    .dailySalesLabel{
+                                        font-weight: 600;
+                                    }
+                                    .fa{
+                                        color:green;
+                                    }
+                                }
+                                .analyticsTotalred{
+                                    .dailyLaborCostLabel{
+                                        font-weight: 600;
+                                    }
+                                    .fa{
+                                        color:red;
+                                    }
+                                }
+
+                            }  
+                        }
+                    }
+                    
+
+                }
+
             }
     }
 }
@@ -2282,7 +2332,6 @@ a{
           background-image: url('images/icon.png');
           background-position: 50% 50%;
           background-repeat: no-repeat;
-
             -moz-border-radius: 50%;
             -webkit-border-radius: 50%;
             border-radius: 50%;
@@ -2296,7 +2345,6 @@ a{
           margin-left: 20px;
           background-color: #c5d9ee;
           opacity: 0.5;
-
             -moz-border-radius: 50%;
             -webkit-border-radius: 50%;
             border-radius: 50%;
@@ -2310,7 +2358,6 @@ a{
           margin-left: -37px;
           background-color: #c5d9ee;
           opacity: 0.75;
-
             -moz-border-radius: 50%;
             -webkit-border-radius: 50%;
             border-radius: 50%;
@@ -2628,14 +2675,7 @@ footer{
     @extend .dialog-field-label;
     font-size: 15px;
 }
-//Dialog
-.oj-dialog-header{
-    background-color: $dialogTitlebg;
-    h2{
-        color: $dialogTitleText;
-        margin:0;
-    }
-}
+
 .oj-dialog{
     background: $dialogBg;
 }
@@ -2682,8 +2722,12 @@ footer{
     //Header
     .userMenuWrap{
         text-align: right;
-        .scopeLinkActive{
-            background-color: blue;
+        .scopeLink{
+            &.active{
+                background-color: #616365;
+                color:$white;
+            }
+            
         }
         .scopeLink{
             background-color: #ffffff;
@@ -2698,7 +2742,7 @@ footer{
             position: relative;
             text-align: center;
             vertical-align: bottom;
-            border-width: 0px 0px 1px 1px;
+            border-width: 0px 1px 1px 1px;
             border-style: solid;
             border-color: #d5d7d6;
                 .topLocationLink{
@@ -2726,9 +2770,9 @@ footer{
         #userMenu{
             float: right;
             display: block;
-            background-color: #ffffff;
+            background-color: transparent;
             background-image: none;
-            border-color: #d5d7d6;
+            border-color: transparent;
             height: 100%;
             line-height: 40px;
             margin-top: -10px;
@@ -2998,7 +3042,6 @@ footer{
                 background-color: $secondaryLightGreen;
                     .oj-navigationlist-item-label{
                         color:$white;
-                        font-weight:300;
                     }
            }
            &.oj-selected {
@@ -3073,7 +3116,6 @@ footer{
                 background-color: $secondaryYellow;
                     .oj-navigationlist-item-label{
                         color:$white;
-                        font-weight:300;
                     }
            }
            &.oj-selected {
@@ -3146,7 +3188,6 @@ footer{
                 background-color: $secondaryPurple;
                     .oj-navigationlist-item-label{
                         color:$white;
-                        font-weight:300;
                     }
             } 
            &.oj-selected {
@@ -3199,7 +3240,6 @@ footer{
                 background-color: #aed292;
                     .oj-navigationlist-item-label{
                         color:$white;
-                        font-weight:300;
                     }
            }
            &.oj-selected {
@@ -3253,7 +3293,6 @@ footer{
                 background-color: #F3AC7A;
                     .oj-navigationlist-item-label{
                         color:$white;
-                        font-weight:300;
                     }
            }
            &.oj-selected {
@@ -3288,6 +3327,168 @@ footer{
         }
         .page-sub-navigation{
             color:$white;
+        }
+    }
+    //Dialog Window Style
+    
+    //Labor Dialog Window
+    #ojDialogWrapper-laborDialogWindow{
+        .oj-dialog-header{
+            height: 50px;
+            padding:0px;
+            background-color:#e39154;
+            .oj-dialog-header-close-wrapper{
+                width:40px;
+                height:35px;
+                margin:0;
+                padding:0;
+                background-color: #e06d1c;
+                &.oj-hover{
+                    margin-top:0px;
+                    background-color:#e06d1c;
+                    .oj-dialog-close-icon{
+                        height:45px;
+                        border-color:transparent;
+                        background-color:transparent;
+                        margin-top:7px;
+                    }
+                }
+                .oj-dialog-close-icon{
+                    width:40px;
+                    height:35px;
+                    color:$white;
+                    margin-top: 7px;
+                }
+            }
+            .oj-dialog-title {
+                padding:0px;
+                .leftSideTitleDialog{
+                    width:40px;
+                    height:35px;
+                    background-color: #e06d1c;
+                }
+                .centerTitleDialog{
+                    &.oj-md-9{
+                        width: 81%;
+                        max-width: 82%;
+                        flex: 81%;
+                    }
+                    height:35px;
+                    background-color:#e08541;
+                    h2{
+                        color:$white;
+                        font-size: 21px;
+                        font-weight: normal;
+                        font-family: Helvetica Neue Light;
+                        margin-top:4px;
+                        .h2Text{
+                            margin-top: 3px;
+                            position: absolute;
+                        }
+                    }
+                    .dialogPageToolBarWrapper{
+                        
+                        .dialogPageToolBar{
+                            text-align: center;
+                            color:$white;
+                            margin-top:13px;
+                            .fa{
+                                font-size: 12px;
+                            }
+                            .pageNumber{
+                                font-weight: normal;
+                                font-family: Helvetica Neue Light;
+                            }
+                        }
+                    }
+                }
+                .rightSideToolBar{
+                    width: 141px;
+                    max-width: 141px;
+                    height:35px; 
+                    display: inherit;
+                    .dialogToolBar{
+                        height:35px; 
+                        width:46px;
+                        border-right:1px solid #e08541;
+                        display:block;
+                        a{
+                        
+
+                        }
+
+                    }
+                }
+            }  
+        }
+        .oj-dialog-body{
+            .modificationTag{
+                font-style: italic;
+                padding-right:10px;
+            }
+            .showAllLink{
+                .fa{
+                    font-size:12px;
+                }
+            }
+            .orderDetailsWrapper{
+                width:100%;
+                border: 1px solid #e1e1e1;
+                text-align: center;
+                padding:10px 0px;
+                margin-top:15px;
+                .comments{
+                    text-transform: uppercase;
+                }
+                p{
+                    margin:0 0 4px 0
+                }
+            }
+            .alertMessage{
+                width:100%;
+                text-align: center;
+                padding: 10px 0px;
+                margin-top: 20px;
+                background-color: #000000;
+                color: #66f91a;
+                .fa{
+                    font-size:12px;
+                }
+            }
+            #tabs-container{
+                padding:25px 0px;
+                ul{
+                    .oj-tabs-tab{
+                        background-color:#e9ae7b;
+                        border-width: 1px 0 0 0;
+                        .oj-tabs-tab-content{
+                            a{
+                               width:67%; 
+                            }
+                        }
+
+                        &.oj-selected{
+                            background-color:$white;
+                            border-color:#d6dfe6;
+                            border-width: 1px 0 0 0;
+                            a{
+                                .oj-tabs-title{
+                                  color:#000000;  
+                                }
+
+                            }
+                        }
+                    }
+                }
+
+                .oj-tabs-panel{
+                    height: 213px;
+                    &.oj-tabs-selected{
+
+                    }
+                }
+
+            }
         }
     }
     .payrollId{
@@ -3427,7 +3628,7 @@ footer{
                 display: inline-block;
             }
         .appheader-logo-oracle {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
         div:first-child{
             padding-left:0px;
@@ -3463,7 +3664,7 @@ footer{
     }
     //Schedule and Timecard
     .scheduleModal-dimensions{
-        width:85%;
+        width:1024px;
         height:600px;
     }
 
@@ -3705,6 +3906,174 @@ footer{
         height:82px;
         z-index: 100;
         background:url(images/thumb-overlay-mobile-profile.png);
+    }
+    //Dialog Window Style
+    
+    //Labor Dialog Window
+    #ojDialogWrapper-laborDialogWindow{
+        .oj-dialog-header{
+            height: 70px;
+            padding:0px;
+            background-color:#e39154;
+            .oj-dialog-header-close-wrapper{
+                width:40px;
+                height:35px;
+                margin:0;
+                padding:0;
+                background-color: #e06d1c;
+                &.oj-hover{
+                    margin-top:0px;
+                    background-color:#e06d1c;
+                    .oj-dialog-close-icon{
+                        height:45px;
+                        border-color:transparent;
+                        background-color:transparent;
+                        margin-top:7px;
+                    }
+                }
+                .oj-dialog-close-icon{
+                    width:40px;
+                    height:35px;
+                    color:$white;
+                    margin-top: 7px;
+                }
+            }
+            .oj-dialog-title {
+                padding:0px;
+                .leftSideTitleDialog{
+                    width:40px;
+                    height:35px;
+                    background-color: #e06d1c;
+                }
+                .centerTitleDialog{
+                    &.oj-md-9{
+                        width: 81%;
+                        max-width: 82%;
+                        flex: 81%;
+                    }
+                    height:35px;
+                    background-color:#e08541;
+                    h2{
+                        color:$white;
+                        font-size: 21px;
+                        font-weight: normal;
+                        font-family: Helvetica Neue Light;
+                        margin-top:4px;
+                        .h2Text{
+                            margin-top: 0px;
+                            position: absolute;
+                            margin-left: 29px;
+                        }
+                        .hdImg{
+                            position: absolute;
+                            display: block;
+                            margin-top: -2px;
+                        }
+                    }
+                    .dialogPageToolBarWrapper{
+                        
+                        .dialogPageToolBar{
+
+                            color:$white;
+        
+                            .fa{
+                                font-size: 12px;
+                            }
+                            .pageNumber{
+                                font-weight: normal;
+                                font-family: Helvetica Neue Light;
+                            }
+                        }
+                    }
+                }
+                .rightSideToolBar{
+                    width: 40px;
+                    max-width: 40px;
+                    height:35px; 
+                    display: inherit;
+                    .dialogToolBar{
+                        height:35px; 
+                        width:46px;
+                        border-right:1px solid #e08541;
+                        display:block;
+                        a{
+                        
+
+                        }
+
+                    }
+                }
+            }  
+        }
+        .oj-dialog-body{
+            .modificationTag{
+                font-style: italic;
+                padding-right:10px;
+            }
+            .showAllLink{
+                .fa{
+                    font-size:12px;
+                }
+            }
+            .orderDetailsWrapper{
+                width:100%;
+                border: 1px solid #e1e1e1;
+                text-align: center;
+                padding:10px 0px;
+                margin-top:15px;
+                .comments{
+                    text-transform: uppercase;
+                }
+                p{
+                    margin:0 0 4px 0
+                }
+            }
+            .alertMessage{
+                width:100%;
+                text-align: center;
+                padding: 10px 0px;
+                margin-top: 20px;
+                background-color: #000000;
+                color: #66f91a;
+                .fa{
+                    font-size:12px;
+                }
+            }
+            #tabs-container{
+                padding:25px 0px;
+                ul{
+                    .oj-tabs-tab{
+                        background-color:#e9ae7b;
+                        border-width: 1px 0 0 0;
+                        .oj-tabs-tab-content{
+                            a{
+                               width:67%; 
+                            }
+                        }
+
+                        &.oj-selected{
+                            background-color:$white;
+                            border-color:#d6dfe6;
+                            border-width: 1px 0 0 0;
+                            a{
+                                .oj-tabs-title{
+                                  color:#000000;  
+                                }
+
+                            }
+                        }
+                    }
+                }
+
+                .oj-tabs-panel{
+                    height: 213px;
+                    &.oj-tabs-selected{
+
+                    }
+                }
+
+            }
+        }
     }
     //Profile
     .profileNameHeader{
@@ -4307,6 +4676,7 @@ footer{
     #appDrawer{
         background-color: #454545;
         width:200px;
+        outline-color: transparent;
         .oj-navigationlist-element{
             .oj-default{
                 .oj-navigationlist-item-label{

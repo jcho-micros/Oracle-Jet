@@ -7,7 +7,300 @@
           <li class="regionReportLi"><span>Search</span></li>
         </ul>
         <div id="tabs-1" class="regionTabSections">
-            <p>Vertical Tab 1.</p>
+            <div data-bind="text: "></div>
+
+            <div id="losAnglesAnalytics" data-bind="visible: visibleCity() == 'Los Angles'">
+                <div class="oj-row">
+                    <div class="oj-md-12 oj-col">
+                        <span class="bodyText" data-bind="text: visibleCity() + ': '"></span>
+                        <a class="offCanvasLink" data-bind="click: linkUrlAppend('index.html?root=' + $root.router.currentState().id +'&loc=11')">Malibu</a> | <a class="offCanvasLink" data-bind="attr: {href: 'index.html?root=' + $root.router.currentState().id +'&loc=12'}">Santa Monica</a> | <a class="offCanvasLink" data-bind="attr: {href: 'index.html?root=' + $root.router.currentState().id +'&loc=13'}">West Hollywood</a>
+                    </div>
+                    <div class="oj-md-12 mainWrapper">
+                        <div class="oj-md-3 oj-col analyticsSection">
+                                <div class="oj-md-12 analyticsWrapper">
+                                    <div class="analyticsRegion" data-bind="text: globalRegion()"></div>
+                                    <div class="analyticsStore">Malibu</div>
+                                    <div class="analyticsCity" data-bind="text: globalCityName()"></div>
+                                    <div class="analyticsTotalgreen oj-md-12">
+                                            <span class="dailySalesLabel">Daily Sales:</span> $123,234
+                                            <i class="fa fa-arrow-circle-o-up"></i>
+                                    </div>
+                                    <div class="analyticsTotalred oj-md-12">
+                                            <span class="dailyLaborCostLabel">Daily Labor Cost:</span> $32,542
+                                            <i class="fa fa-arrow-circle-o-down"></i>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="oj-md-3 oj-col analyticsSection">
+                                <div class="oj-md-12 analyticsWrapper">
+                                    <div class="analyticsRegion" data-bind="text: globalRegion()"></div>
+                                    <div class="analyticsStore">Santa Monica</div>
+                                    <div class="analyticsCity" data-bind="text: globalCityName()"></div>
+                                    <div class="analyticsTotalgreen oj-md-12">
+                                            <span class="dailySalesLabel">Daily Sales:</span> $123,234
+                                            <i class="fa fa-arrow-circle-o-up"></i>
+                                    </div>
+                                    <div class="analyticsTotalred oj-md-12">
+                                            <span class="dailyLaborCostLabel">Daily Labor Cost:</span> $32,542
+                                            <i class="fa fa-arrow-circle-o-down"></i>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="oj-md-3 oj-col analyticsSection">
+                                <div class="oj-md-12 analyticsWrapper">
+                                    <div class="analyticsRegion" data-bind="text: globalRegion()"></div>
+                                    <div class="analyticsStore">West Hollywood</div>
+                                    <div class="analyticsCity" data-bind="text: globalCityName()"></div>
+                                    <div class="analyticsTotalgreen oj-md-12">
+                                            <span class="dailySalesLabel">Daily Sales:</span> $123,234
+                                            <i class="fa fa-arrow-circle-o-up"></i>
+                                    </div>
+                                    <div class="analyticsTotalred oj-md-12">
+                                            <span class="dailyLaborCostLabel">Daily Labor Cost:</span> $32,542
+                                            <i class="fa fa-arrow-circle-o-down"></i>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="atlantaAnalytics" data-bind="visible: visibleCity() == 'Atlanta'">
+                <div class="oj-row">
+                    <div class="oj-md-12 oj-col">
+                        <span class="bodyText" data-bind="text: visibleCity() + ': '"></span>
+                        <a class="offCanvasLink" data-bind="attr: {href: 'index.html?root=' + $root.router.currentState().id +'&loc=07'}">Peachtree Center</a> | <a class="offCanvasLink" data-bind="attr: {href: 'index.html?root=' + $root.router.currentState().id +'&loc=08'}">Marietta</a>
+                    </div>
+                    <div class="oj-md-12 mainWrapper">
+                        <div class="oj-md-3 oj-col analyticsSection">
+                                <div class="oj-md-12 analyticsWrapper">
+                                    <div class="analyticsRegion" data-bind="text: globalRegion()"></div>
+                                    <div class="analyticsStore">Peachtree Center</div>
+                                    <div class="analyticsCity" data-bind="text: globalCityName()"></div>
+                                    <div class="analyticsTotalgreen oj-md-12">
+                                            <span class="dailySalesLabel">Daily Sales:</span> $123,234
+                                            <i class="fa fa-arrow-circle-o-up"></i>
+                                    </div>
+                                    <div class="analyticsTotalred oj-md-12">
+                                            <span class="dailyLaborCostLabel">Daily Labor Cost:</span> $32,542
+                                            <i class="fa fa-arrow-circle-o-down"></i>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="oj-md-3 oj-col analyticsSection">
+                                <div class="oj-md-12 analyticsWrapper">
+                                    <div class="analyticsRegion" data-bind="text: globalRegion()"></div>
+                                    <div class="analyticsStore">Marietta</div>
+                                    <div class="analyticsCity" data-bind="text: globalCityName()"></div>
+                                    <div class="analyticsTotalgreen oj-md-12">
+                                            <span class="dailySalesLabel">Daily Sales:</span> $123,234
+                                            <i class="fa fa-arrow-circle-o-up"></i>
+                                    </div>
+                                    <div class="analyticsTotalred oj-md-12">
+                                            <span class="dailyLaborCostLabel">Daily Labor Cost:</span> $32,542
+                                            <i class="fa fa-arrow-circle-o-down"></i>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            
+            
+            
+            
+            
+            
+            </div>
+            <div id="nycAnalytics" data-bind="visible: visibleCity() == 'New York City'">
+                <div class="oj-row">
+                    <div class="oj-md-12 oj-col">
+                        <span class="bodyText" data-bind="text: visibleCity() + ': '"></span>
+                        <a class="offCanvasLink" data-bind="attr: {href: 'index.html?root=' + $root.router.currentState().id +'&loc=04'}">Time Square</a> | <a class="offCanvasLink" data-bind="attr: {href: 'index.html?root=' + $root.router.currentState().id +'&loc=05'}">Rockefeller Center</a>  | <a class="offCanvasLink" data-bind="attr: {href: 'index.html?root=' + $root.router.currentState().id +'&loc=06'}">Theater District</a>
+                    </div>
+                    <div class="oj-md-12 mainWrapper">
+                        <div class="oj-md-3 oj-col analyticsSection">
+                                <div class="oj-md-12 analyticsWrapper">
+                                    <div class="analyticsRegion" data-bind="text: globalRegion()"></div>
+                                    <div class="analyticsStore">  Time Square </div>
+                                    <div class="analyticsCity" data-bind="text: globalCityName()"></div>
+                                    <div class="analyticsTotalgreen oj-md-12">
+                                            <span class="dailySalesLabel">Daily Sales:</span> $123,234
+                                            <i class="fa fa-arrow-circle-o-up"></i>
+                                    </div>
+                                    <div class="analyticsTotalred oj-md-12">
+                                            <span class="dailyLaborCostLabel">Daily Labor Cost:</span> $32,542
+                                            <i class="fa fa-arrow-circle-o-down"></i>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="oj-md-3 oj-col analyticsSection">
+                                <div class="oj-md-12 analyticsWrapper">
+                                    <div class="analyticsRegion" data-bind="text: globalRegion()"></div>
+                                    <div class="analyticsStore">  Rockefeller Center</div>
+                                    <div class="analyticsCity" data-bind="text: globalCityName()"></div>
+                                    <div class="analyticsTotalgreen oj-md-12">
+                                            <span class="dailySalesLabel">Daily Sales:</span> $123,234
+                                            <i class="fa fa-arrow-circle-o-up"></i>
+                                    </div>
+                                    <div class="analyticsTotalred oj-md-12">
+                                            <span class="dailyLaborCostLabel">Daily Labor Cost:</span> $32,542
+                                            <i class="fa fa-arrow-circle-o-down"></i>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="oj-md-3 oj-col analyticsSection">
+                                <div class="oj-md-12 analyticsWrapper">
+                                    <div class="analyticsRegion" data-bind="text: globalRegion()"></div>
+                                    <div class="analyticsStore">Theater District</div>
+                                    <div class="analyticsCity" data-bind="text: globalCityName()"></div>
+                                    <div class="analyticsTotalgreen oj-md-12">
+                                            <span class="dailySalesLabel">Daily Sales:</span> $123,234
+                                            <i class="fa fa-arrow-circle-o-up"></i>
+                                    </div>
+                                    <div class="analyticsTotalred oj-md-12">
+                                            <span class="dailyLaborCostLabel">Daily Labor Cost:</span> $32,542
+                                            <i class="fa fa-arrow-circle-o-down"></i>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="bostonAnalytics" data-bind="visible: visibleCity() == 'Boston'">
+                <div class="oj-row">
+                    <div class="oj-md-12 oj-col">
+                        <span class="bodyText" data-bind="text: visibleCity() + ': '"></span>
+                        <a class="offCanvasLink" data-bind="attr: {href: 'index.html?root=' + $root.router.currentState().id +'&loc=01'}">Beacon Hill</a> | <a class="offCanvasLink" data-bind="attr: {href: 'index.html?root=' + $root.router.currentState().id +'&loc=02'}">Cambridge</a>
+                    </div>
+                    <div class="oj-md-12 mainWrapper">
+                        <div class="oj-md-3 oj-col analyticsSection">
+                                <div class="oj-md-12 analyticsWrapper">
+                                    <div class="analyticsRegion" data-bind="text: globalRegion()"></div>
+                                    <div class="analyticsStore">  Beacon Hill </div>
+                                    <div class="analyticsCity" data-bind="text: globalCityName()"></div>
+                                    <div class="analyticsTotalgreen oj-md-12">
+                                            <span class="dailySalesLabel">Daily Sales:</span> $123,234
+                                            <i class="fa fa-arrow-circle-o-up"></i>
+                                    </div>
+                                    <div class="analyticsTotalred oj-md-12">
+                                            <span class="dailyLaborCostLabel">Daily Labor Cost:</span> $32,542
+                                            <i class="fa fa-arrow-circle-o-down"></i>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="oj-md-3 oj-col analyticsSection">
+                                <div class="oj-md-12 analyticsWrapper">
+                                    <div class="analyticsRegion" data-bind="text: globalRegion()"></div>
+                                    <div class="analyticsStore">  Cambridge</div>
+                                    <div class="analyticsCity" data-bind="text: globalCityName()"></div>
+                                    <div class="analyticsTotalgreen oj-md-12">
+                                            <span class="dailySalesLabel">Daily Sales:</span> $123,234
+                                            <i class="fa fa-arrow-circle-o-up"></i>
+                                    </div>
+                                    <div class="analyticsTotalred oj-md-12">
+                                            <span class="dailyLaborCostLabel">Daily Labor Cost:</span> $32,542
+                                            <i class="fa fa-arrow-circle-o-down"></i>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="miamiAnalytics" data-bind="visible: visibleCity() == 'Miami'">
+                <div class="oj-row">
+                    <div class="oj-md-12 oj-col">
+                        <span class="bodyText" data-bind="text: visibleCity() + ': '"></span>
+                        <a class="offCanvasLink" data-bind="attr: {href: 'index.html?root=' + $root.router.currentState().id +'&loc=09'}">South Beach</a> | <a class="offCanvasLink" data-bind="attr: {href: 'index.html?root=' + $root.router.currentState().id +'&loc=10'}">Coral Gables</a>                    
+                    </div>
+                    <div class="oj-md-12 mainWrapper">
+                        <div class="oj-md-3 oj-col analyticsSection">
+                                <div class="oj-md-12 analyticsWrapper">
+                                    <div class="analyticsRegion" data-bind="text: globalRegion()"></div>
+                                    <div class="analyticsStore">  South Beach </div>
+                                    <div class="analyticsCity" data-bind="text: globalCityName()"></div>
+                                    <div class="analyticsTotalgreen oj-md-12">
+                                            <span class="dailySalesLabel">Daily Sales:</span> $123,234
+                                            <i class="fa fa-arrow-circle-o-up"></i>
+                                    </div>
+                                    <div class="analyticsTotalred oj-md-12">
+                                            <span class="dailyLaborCostLabel">Daily Labor Cost:</span> $32,542
+                                            <i class="fa fa-arrow-circle-o-down"></i>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="oj-md-3 oj-col analyticsSection">
+                                <div class="oj-md-12 analyticsWrapper">
+                                    <div class="analyticsRegion" data-bind="text: globalRegion()"></div>
+                                    <div class="analyticsStore"> Coral Gables</div>
+                                    <div class="analyticsCity" data-bind="text: globalCityName()"></div>
+                                    <div class="analyticsTotalgreen oj-md-12">
+                                            <span class="dailySalesLabel">Daily Sales:</span> $123,234
+                                            <i class="fa fa-arrow-circle-o-up"></i>
+                                    </div>
+                                    <div class="analyticsTotalred oj-md-12">
+                                            <span class="dailyLaborCostLabel">Daily Labor Cost:</span> $32,542
+                                            <i class="fa fa-arrow-circle-o-down"></i>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sanFranciscoAnalytics" data-bind="visible: visibleCity() == 'San Francisco'">
+                <div class="oj-row">
+                    <div class="oj-md-12 oj-col">
+                        <span class="bodyText" data-bind="text: visibleCity() + ': '"></span>
+                        <a class="offCanvasLink" data-bind="attr: {href: 'index.html?root=' + $root.router.currentState().id +'&loc=14'}">Oakland</a> | <a class="offCanvasLink" data-bind="attr: {href: 'index.html?root=' + $root.router.currentState().id +'&loc=15'}">Berkley</a> | <a class="offCanvasLink" data-bind="attr: {href: 'index.html?root=' + $root.router.currentState().id +'&loc=16'}">Pacific Heights</a>
+                    </div>
+                    <div class="oj-md-12 mainWrapper">
+                        <div class="oj-md-3 oj-col analyticsSection">
+                                <div class="oj-md-12 analyticsWrapper">
+                                    <div class="analyticsRegion" data-bind="text: globalRegion()"></div>
+                                    <div class="analyticsStore">  Oakland </div>
+                                    <div class="analyticsCity" data-bind="text: globalCityName()"></div>
+                                    <div class="analyticsTotalgreen oj-md-12">
+                                            <span class="dailySalesLabel">Daily Sales:</span> $123,234
+                                            <i class="fa fa-arrow-circle-o-up"></i>
+                                    </div>
+                                    <div class="analyticsTotalred oj-md-12">
+                                            <span class="dailyLaborCostLabel">Daily Labor Cost:</span> $32,542
+                                            <i class="fa fa-arrow-circle-o-down"></i>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="oj-md-3 oj-col analyticsSection">
+                                <div class="oj-md-12 analyticsWrapper">
+                                    <div class="analyticsRegion" data-bind="text: globalRegion()"></div>
+                                    <div class="analyticsStore"> Berkley</div>
+                                    <div class="analyticsCity" data-bind="text: globalCityName()"></div>
+                                    <div class="analyticsTotalgreen oj-md-12">
+                                            <span class="dailySalesLabel">Daily Sales:</span> $123,234
+                                            <i class="fa fa-arrow-circle-o-up"></i>
+                                    </div>
+                                    <div class="analyticsTotalred oj-md-12">
+                                            <span class="dailyLaborCostLabel">Daily Labor Cost:</span> $32,542
+                                            <i class="fa fa-arrow-circle-o-down"></i>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="oj-md-3 oj-col analyticsSection">
+                                <div class="oj-md-12 analyticsWrapper">
+                                    <div class="analyticsRegion" data-bind="text: globalRegion()"></div>
+                                    <div class="analyticsStore">Pacific Heights</div>
+                                    <div class="analyticsCity" data-bind="text: globalCityName()"></div>
+                                    <div class="analyticsTotalgreen oj-md-12">
+                                            <span class="dailySalesLabel">Daily Sales:</span> $123,234
+                                            <i class="fa fa-arrow-circle-o-up"></i>
+                                    </div>
+                                    <div class="analyticsTotalred oj-md-12">
+                                            <span class="dailyLaborCostLabel">Daily Labor Cost:</span> $32,542
+                                            <i class="fa fa-arrow-circle-o-down"></i>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </div>
 
         <div id="tabs-2" class="regionTabSections">

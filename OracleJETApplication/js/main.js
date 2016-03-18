@@ -82,54 +82,10 @@ require(['ojs/ojcore',
 
         var router = oj.Router.rootInstance;
         router.configure({
-            'home': {label: 'Home', isDefault: true,
-                exit: function () {
-                    var childRouter = router.currentState().value;
-                    childRouter.dispose();
-
-                },
-                enter: function () {
-                    var childRouter = router.createChildRouter('loc');
-                    childRouter.defaultStateId = '10';
-                    router.currentState().value = childRouter;
-                }
-            },
-            'labor': {label: 'Labor', value: 'labor',
-                exit: function () {
-                    var childRouter = router.currentState().value;
-                    childRouter.dispose();
-
-                },
-                enter: function () {
-                    var childRouter = router.createChildRouter('loc');
-                    childRouter.defaultStateId = '10';
-                    router.currentState().value = childRouter;
-                }
-            },
-            'inventory': {label: 'Inventory', value: 'inventory',
-                exit: function () {
-                    var childRouter = router.currentState().value;
-                    childRouter.dispose();
-
-                },
-                enter: function () {
-                    var childRouter = router.createChildRouter('loc');
-                    childRouter.defaultStateId = '10';
-                    router.currentState().value = childRouter;
-                }
-            },
-            'gift-loyalty': {label: 'Gift & Loyalty', value: 'gift-loyalty',
-                exit: function () {
-                    var childRouter = router.currentState().value;
-                    childRouter.dispose();
-
-                },
-                enter: function () {
-                    var childRouter = router.createChildRouter('loc');
-                    childRouter.defaultStateId = '10';
-                    router.currentState().value = childRouter;
-                }
-            },
+            'home': {label: 'Home', isDefault: true},
+            'labor': {label: 'Labor', value: 'labor'},
+            'inventory': {label: 'Inventory', value: 'inventory'},
+            'gift-loyalty': {label: 'Gift & Loyalty', value: 'gift-loyalty'},
             'reports-analytics': {label: 'Reporting & Analytics', value: 'reports-analytics'},
             'enterprise': {label: 'Mike Rose Cafe', value: 'enterprise'},
             'people': {label: 'People', value: 'people'},
@@ -168,38 +124,19 @@ require(['ojs/ojcore',
             self.medium = oj.ResponsiveKnockoutUtils.createMediaQueryObservable(mdQuery);
             var lgQuery = oj.ResponsiveUtils.getFrameworkQuery(oj.ResponsiveUtils.FRAMEWORK_QUERY_KEY.LG_UP);
             self.large = oj.ResponsiveKnockoutUtils.createMediaQueryObservable(lgQuery);
-            self.scopeId = ko.observable();
+                            self.scopeId = ko.observable('');
+
             self.optionChangeHandler = function (event, data) {
                 if (data.value == undefined) {
                     data.value = 'home';
                 }
                 // Only go for user action events
                 if ('app-header-mobile-nav' || 'app-header-desktop-nav' === event.target.id && event.originalEvent) {
-                        var root = location.protocol + '//' + location.host;
-                        var q = document.URL.split('?')[1];
-                        var url = window.location.href;
-                        var targetValue = data.value;
-                        var previousValue = data.previousValue;
-                        var loc = self.getUrlParameter('loc');
-                        var qs = "&loc=" + encodeURIComponent(loc);
-                        var pathLink = 'index.html?' +q.replace(previousValue,targetValue);
-                       self.scopeId(encodeURIComponent(loc));
-                        console.log(encodeURIComponent(loc));
-    
-                        
-                        if(targetValue == 'people'){
-                            self.router.go(data.value);
-                            return (function(){ self.currentSectionState(data.value); });
-                        }else{
-
-                            window.location = pathLink;
-                        }
-
-//                    self.router.go(data.value + 'loc' );
-//                    return (function(){ self.currentSectionState(data.value); });
+                    self.router.go(data.value);
+                    return (function(){ self.currentSectionState(data.value); });
                 }
-
             };
+
         self.getUrlParameter = function getUrlParameter(sParam) {
             var sPageURL = decodeURIComponent(window.location.search.substring(1)),
                 sURLVariables = sPageURL.split('&'),
@@ -255,6 +192,7 @@ require(['ojs/ojcore',
             function (error) {
                 oj.Logger.error('Error in root start: ' + error.message);
             });
+
 
     }
 );

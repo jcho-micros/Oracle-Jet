@@ -5,7 +5,7 @@
     <title>Login</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/oj/v1.1.2/alta/oj-alta.css" rel="stylesheet" type="text/css" />
+     <link href="css/oj/v2.0.0/alta/oj-alta.css" rel="stylesheet" type="text/css" />
     <!--        Once completed remove override.css from file-->
     <link href="css/oj-override.css" rel="stylesheet" type="text/css" />
 <!--    <script data-main="js/main" src="js/libs/require/require.js">
@@ -18,17 +18,24 @@
 
 <body bgcolor="#FFFFFF" text="#000000" id="loginPage">
     <script type="text/javascript">
+        $(function(){
+           $('#usr').val('john.hancock@oracle.com');
+           $('#cpny').val('mrs');
+           $('#pwd').val('micros2011');
+        });
 
         $(function() {
             $('#loginBtn').on('click', function(){
+                var selectId = $('#locationId option:selected').val();
+
                 var url = window.location.pathname;
                 var root = location.protocol + '//' + location.host;
                 var q = document.URL.split('?')[1];
                 var fullLink = root + url.replace('login', 'index') + '?' + q;
                 if(q == undefined){
-                    window.location.href = root + url.replace('login', 'index');
+                    window.location.href = root + url.replace('login', 'index') + '?root=home&loc='+selectId;
                 }else{    
-                    window.location.href = fullLink;
+                    window.location = fullLink;
                 }
             });
 
@@ -73,6 +80,25 @@
                             <input type="Text" name="cpny" id="cpny" class="textfield" value="" maxlength="32" placeholder="Company" >
 
                             <input type="Password" maxlength="20" autocomplete="off" name="pwd" id="pwd" placeholder="Password" >
+                            <div>
+                                <select id="locationId" name="locationSelect">
+                                    <option value="01">Beacon Hill</option>
+                                    <option value="02">Saab</option>
+                                    <option value="04">Time Square</option>
+                                    <option value="05">Rockefeller Center</option>
+                                    <option value="06">Theater District</option>
+                                    <option value="07">Peachtree Center</option>
+                                    <option value="08">Marietta</option>
+                                    <option value="09">South Beach</option>
+                                    <option value="10">Coral Gables</option>
+                                    <option value="11">Malibu</option>
+                                    <option value="12">Santa Monica</option>
+                                    <option value="13">West Hollywood</option>
+                                    <option value="14">Oakland</option>
+                                    <option value="15">Berkley</option>
+                                    <option value="16">Pacific Heights</option>
+                                </select>
+                            </div>
 
                             <a class="btn_primary buttonclass" style="margin-bottom:10px;" id="loginBtn">Log In</a>
                             <div class="fgp-container">

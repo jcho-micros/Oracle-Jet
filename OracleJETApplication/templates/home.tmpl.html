@@ -12,12 +12,12 @@
         <div id="homeSection" class="oj-col oj-med-12 oj-lg-12 oj-xl-12 page-header">
             <h1>
                 <span data-bind="text: pageHeading"></span>
-                <div id="city" data-bind="text: storeName"></div>
+                <div id="city" data-bind="text: $root.globalstoreName ? $root.globalstoreName : $parent.storeName"></div>
             </h1>
         </div>
-        <div data-bind="text: region"></div>
-        <div data-bind="text: locID"></div>
-        <div data-bind="text: cityName"></div>
+<!--        <div data-bind="text: $root.globalRegion ? $root.globalRegion : $parent.region "></div>
+        <div data-bind="text: $root.globalCityNameId ? $root.globalCityNameId : $parent.locID"></div>
+        <div data-bind="text: $root.globalstoreName ? $root.globalstoreName : $parent.storeName"></div>-->
     </div>
     <div>
         
