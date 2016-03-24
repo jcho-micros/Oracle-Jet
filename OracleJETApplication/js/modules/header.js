@@ -1,7 +1,10 @@
 define([
-    'knockout', 
-    'ojs/ojcore', 
+    'ojs/ojcore',
+    'knockout',
+    'data/data',
     'jquery', 
+    'hammerjs',
+    'moment',
     'ojs/ojknockout', 
     'ojs/ojnavigationlist', 
     'ojs/ojoffcanvas', 
@@ -11,9 +14,10 @@ define([
     'ojs/ojtabs',
     'ojs/ojfilmstrip',
     'ojs/ojconveyorbelt'
-], function (ko, oj, $) {
+], function (oj, ko, data, $, Hammer) {
     function HeaderViewModel() {
         var self = this;
+        self.allCityList = ko.observableArray([]);
         self.handleActivated = function (info) {
 
             self.dataSource = new oj.ArrayTableDataSource(appNavData, {idAttribute: 'id'});
@@ -27,17 +31,39 @@ define([
 
 
         };
+        self.serviceURL = 'js/data/listofcityies.json';
+        self.parseDept = function(response) {
+            console.log(response);
+            return {locID: response['locID'],
+                    name: response['name'],
+                    locID:response['locID'],
+                    cityname:response['cityname'],
+                    region:response['region']};
+        };
+        // Think of this as a single database record or a single table row.
+        var Department = oj.Model.extend({
+            urlRoot: self.serviceURL,
+            parse: self.parseDept,
+            idAttribute: 'locID'
+        });
+ 
+        var myDept = new Department();
+       console.log(myDept);
+
+
         var customQuery = oj.ResponsiveKnockoutUtils.createMediaQueryObservable('(max-width: 372px)');
         //where the all employee info will be stored
 
         //Required for the Drop down
         self.menuItemSelect = function (event, ui) {
-//            switch (ui.item.attr("id")) {
-//                case "About":
-//                    $("#aboutDialog").ojDialog("open");
-//                    break;
-//                default:
-//            }
+            console.log(location.name);
+            switch (ui.item.attr("id")) {
+                
+                case "Preferences":
+                    $("#preferenceDialogWindow").ojDialog("open");
+                    break;
+                default:
+            }
         };
         self.offScreenButtonIconClass = "fa fa-bars fa-lg";
         self.offScreenButtonLabel = "MENU";
@@ -121,7 +147,7 @@ define([
                 // Data for global nav dropdown menu embedded in toolbar.
                 "global_nav_dropdown_items": [
                     {"label": "Preferences",
-                        "url": " "
+                        "url": "preference"
                     },
                     {"label": "Help",
                         "url": " "
@@ -169,6 +195,10 @@ define([
             return oj.OffcanvasUtils.toggle(this.topDrawer);
 
         }
+        //General Dialog Reusable
+        self.handleOpen =  function(dialog) {
+            $(dialog).ojDialog("open");
+        };
         self.toggleDrawer = function ()
         {
                 return oj.OffcanvasUtils.toggle(this.topDrawer);

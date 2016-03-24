@@ -25,8 +25,7 @@ define([
             this.router = undefined;
 
             self.handleActivated = function (data) {
-                 var parentRouter = oj.Router.rootInstance;
-                // Retrieve the childRouter instance created in main.js
+                var parentRouter = oj.Router.rootInstance;
                 
                 self.router = parentRouter.createChildRouter('giftloyaltytab').configure({
                     'profile': {label: 'Profile', value: 'profile', isDefault: true},
@@ -46,8 +45,10 @@ define([
                     self.router.go(ui.key);
                 }
             };
-
-
+            self.dispose = function () {
+                this.router.dispose();
+                this.router = null;
+            };
 
             //Toggles visibility of sections
             self.toggleSections = function () {
