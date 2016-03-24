@@ -17,51 +17,7 @@
 // $commonImageDir: "../common/images/";
 //  
 // 
-// DIRECTION
-// ---------------------------------
-// 
-// Accepted values of $textDirection are null, ltr, rtl
-//    - null means ouput for both directions (default)
-//    - ltr means output left to right only 
-//    - rtl means output right to left only
-//
-// By default we support right to left without 
-// switching out the css file as long as dir="rtl"
-// is set on the html tag. However if you'd prefer 
-// to generate one css file per direction you can 
-// also set "$textDirection" to either "rtl" or "ltr".
-// $textDirection: null;
-// 
-// 
-// COMPATIBILITY
-// ---------------------------------
-// 
-// when $allowTagSelectors is true JET directly styles certain tags like 
-// <p> <a> <h1>, etc. However for developers trying to mix JET with other 
-// technologies styling these tags directly could cause issues on other parts of the page. 
-// In that case set $allowTagSelectors: false;.
-// See the "compatibility" section of the theming documentation for more information
-// $allowTagSelectors: true;
-// 
-// 
-// 
-// INITIAL VISIBILITY
-// ---------------------------------
-// 
-// when $initialVisiblity is hidden then visibility: hidden is set on the dom until the
-// component is initialized. This reduces the unstyled dom seen by the user during page load.
-// $initialVisibility: hidden;
-// 
-// 
-// 
-// ---------------------------------------------------------------
-// "ABSTRACT" STYLING 
-//     in general these "abstract" variables are not used directly
-//     in the widget files, rather they are referred to by 
-//     other variables.
-// ---------------------------------------------------------------
-// 
-// 
+
 // interaction state colors 
 // ---------------------------------
 // 
@@ -91,29 +47,35 @@
 $white: #fff;
 $black: #000;
 $darkBlue: #0c4a7e;
-$lightBlue: #0572CE;
-$sideNavLinksBlue: #85bbe7;
+$lightBlue: #0572ce;
+$sideNavLinksBlue: #224882;
 $lightTan: #f5f5f5;
 $darkGray: #444444;
+$darkerGray: #454545;
 $offCanvasGray: #454545;
-$sideNavLinkGray:#616365;
+$offCanvasGrayLi: #f5f5f5;
+$sideNavBckColor:#f5f5f5;
+$sideNavLinkHover: #454545;
+$topOffCanvasBack: #616365;
+$scopeButtonActive:#616365;
 $gray: #666666;
 $lightGray: #cccccc;
 $lightGray2: #c4ced7;
-$primaryLightBlue: #309fdb;
+$navListSelected: #454545;
+$primaryLightBlue: #346fd4;
 $secondaryLightBlue: #84bbe6;
-$primaryOrange: #ED813E;
-$secondaryOrange: #F3AC7A;
-$primaryGreen: #81bb5f;
-$secondaryGreen: #aed292;
-$primaryPurple: #854e9b;
-$secondaryPurple: #a984b8;
-$primaryTurquoise: #13b6cf;
-$secondaryTurquoise: #83cdde;
-$primaryYellow:#fbce4a;
-$secondaryYellow: #fcde8a;
-$primaryLightGreen: #3caf85;
-$secondaryLightGreen: #89c7ad;
+$primaryOrange: #ea5801;
+$secondaryOrange: #ec7743;
+$primaryGreen: #3e9850;
+$secondaryGreen: #55ac74;
+$primaryPurple: #4c1889;
+$secondaryPurple: #6f46a2;
+$primaryBlueGray: #546e84;
+$secondaryBlueGray: #768b9d;
+$primaryDarkGray:#2c3141;
+$secondaryDarkGray: #565a67;
+$primaryLightGreen: #427b9d;
+$secondaryLightGreen: #5e8fac;
 // 
 // border colors
 // ---------------------------------
@@ -183,7 +145,10 @@ $customIconBckgColor: $lightBlue;
 $customIconFontColor: $white;
 $sideNavText: $white;
 $sideNavLinkColor:$sideNavLinksBlue;
-$sideNavLinkBckColor:$sideNavLinkGray;
+$sideNavLinkColorHover:$white;
+$sideNavLinkBckBgHover: $sideNavLinkHover;
+$sideNavLinkBckColor:$sideNavBckColor;
+$headerScopebutton: $scopeButtonActive;
 $homeIconBckColor: $primaryLightBlue;
 $homeTabBckColor: $secondaryLightBlue;
 $homeIconColor: $white;
@@ -193,9 +158,9 @@ $inventoryIconBckColor: $primaryGreen;
 $inventoryIconColor: $white;
 $giftLoyaltyIconBckColor: $primaryPurple;
 $giftLoyaltyIconColor: $white;
-$reportsChartsIconBckColor: $primaryTurquoise;
+$reportsChartsIconBckColor: $primaryBlueGray;
 $reportsChartsIcon: $white;
-$enterpriseIconBckColor: $primaryYellow;
+$enterpriseIconBckColor: $primaryDarkGray;
 $enterpriseIconColor: $white;
 $peopleIconBckColor: $primaryLightGreen;
 $peopleIconColor: $white;
@@ -234,39 +199,6 @@ $headerLinkTextColor: $white;
 // $borderColorWarning: #ffd699;
 // $helpBorderColor: lighten($formControlLabelColor, 1%); // = #525252
 // 
-// 
-// messaging
-// ---------------------------------
-// 
-// We want to keep the background colors as they are in the UX spec and not
-// derive them from border colors since bg colors need to pass high contrast
-// mode - that is, the bg color needs to be light enough 
-// so the text on them can be read easily.
-// 
-// we want the same lightness adjustment for all msg types, and 4% is
-// a good compromise that works for all. The calculated border-color doesn't
-// exactly match the ux alta spec as it is today.
-// $messageInlineBorderColorLightnessAdjustment: 4%;
-// 
-// ux alta spec for error: background-color: #FFF3F3; border-color: #ffe6e6;
-// $messageInlineBgColorError: #FFF3F3;       
-// $messageInlineBorderColorError: 
-//   darken($messageInlineBgColorError, $messageInlineBorderColorLightnessAdjustment);                        
-// 
-// ux alta spec for warning: background-color: #fff2de; border-color: #ffdfae;
-// $messageInlineBgColorWarning: #fff2de;
-// $messageInlineBorderColorWarning:  
-//   darken($messageInlineBgColorWarning, $messageInlineBorderColorLightnessAdjustment);
-// 
-// ux alta spec for confirmation: background-color: #E5F6EA;border-color:#ddf7e5;
-// $messageInlineBgColorConfirmation: #E5F6EA;
-// $messageInlineBorderColorConfirmation: 
-//   darken($messageInlineBgColorConfirmation, $messageInlineBorderColorLightnessAdjustment);
-// 
-// ux alta spec for info: background-color: #EAF5FB;border-color: #D6EFFB;
-// $messageInlineBgColorInfo: #EAF5FB;
-// $messageInlineBorderColorInfo:  
-//   darken($messageInlineBgColorInfo, $messageInlineBorderColorLightnessAdjustment);
 // 
 // drag and drop
 // ---------------------------------
@@ -357,33 +289,7 @@ $panelBgColor: $lightBlue;
 $panel1BgColor: $darkGray;
 $panel1BorderColor: $black;
 $panel2BgColor: $gray;
-// 
-// most panels determine their border colors by changing 
-// the saturation/lightness of their background colors
-// $panelBorderColorSaturationAdjustment: 5%;
-// $panelBorderColorLightnessAdjustment: -5%;
-// 
-// $panel2BgColor:     #e8f2fb;
-// $panel2BorderColor: adjust-color($panel2BgColor,
-//                                  $lightness: $panelBorderColorLightnessAdjustment, 
-//                                  $saturation: $panelBorderColorSaturationAdjustment);
-// 
-// $panel3BgColor:     #fef9e8;
-// $panel3BorderColor: adjust-color($panel3BgColor,
-//                                  $lightness: $panelBorderColorLightnessAdjustment, 
-//                                  $saturation: $panelBorderColorSaturationAdjustment);
-// 
-// $panel4BgColor:     #ffe4e1;
-// $panel4BorderColor: adjust-color($panel4BgColor,
-//                                  $lightness: $panelBorderColorLightnessAdjustment, 
-//                                  $saturation: $panelBorderColorSaturationAdjustment);
-// 
-// $panel5BgColor:     #fce8fe;
-// $panel5BorderColor: adjust-color($panel5BgColor,
-//                                  $lightness: $panelBorderColorLightnessAdjustment, 
-//                                  $saturation: $panelBorderColorSaturationAdjustment);
-// 
-// 
+
 // HEADERS
 // ---------------------------------------------------------------
 // header text color defined above, look for "text colors"
@@ -402,26 +308,35 @@ $headerOffCanvas: $darkGray;
 // $headerBgColorDisabled: $gray;
 // $headerBgImage:         null;
 $headerBGLogo: $imageDir + 'oracle_logo_sm_black.png';
-$headerUserIcon: $imageDir + 'vatar_24px.png';
+$headerUserIcon: $imageDir + 'default-user-icon.png';
 $listSelectMask: $imageDir + 'thumb-overlay-selected.png';
 $listHoverMask: $imageDir + 'thumb-overlay-hover.png';
 $listCheckedBckIcon: $imageDir + 'active-check.png';
 $listXBckIcon: $imageDir + 'nonactive-status.png';
-//Top Navigation Default Icons
+//Top Navigation Default Icons & Header Background 
 $homeIconDefault: $imageDir + 'icon/home-default.png';
 $homeIconHover: $imageDir + 'icon/home-hover.png';
+$homeBckHeader: $imageDir + 'header-icon-header.png';
 $laborIconDefault: $imageDir + 'icon/labor-default.png';
 $laborIconHover: $imageDir + 'icon/labor-hover.png';
+$laborBckHeader: $imageDir + 'header-icon-labor.png';
 $inventoryIconDefault: $imageDir + 'icon/inventory-default.png';
 $inventoryIconHover: $imageDir + 'icon/inventory-hover.png';
+$inventoryBckHeader: $imageDir + 'header-icon-inventory.png';
 $giftLoyaltyIconDefault: $imageDir + 'icon/gift-loyalty-default.png';
 $giftLoyaltyIconHover: $imageDir + 'icon/gift-loyalty-hover.png';
+$giftLoyaltyBckHeader: $imageDir + 'header-icon-giftloyalty.png';
 $reportingAnalyticsIconDefault: $imageDir + 'icon/reporting-analytics-default.png';
 $reportingAnalyticsIconHover: $imageDir + 'icon/reporting-analytics-hover.png';
+$reportingAnalyticsBckHeader: $imageDir + 'header-icon-reporting.png';
 $enterpriseIconDefault: $imageDir + 'icon/enterprise-default.png';
 $enterpriseIconHover: $imageDir + 'icon/enterprise-hover.png';
+$enterpriseBckHeader: $imageDir + 'header-icon-enterprise.png';
 $peopleIconDefault: $imageDir + 'icon/people-default.png';
 $peopleIconHover: $imageDir + 'icon/people-hover.png';
+$peopleBckHeader: $imageDir + 'header-icon-people.png';
+$profileOverLayImg: $imageDir +  'profile-Large-mask.png';
+$profileOverlayImgMobile: $imageDir + 'thumb-overlay-mobile-profile.png';
 //IPAD icon text
 $headerNavigationText: $customsmallFontSize;
 //Mobile icon size
@@ -566,24 +481,6 @@ $headerH3BgColor: $lightGray;
 // distance is to align the label text with an input's text.
 // Note that there is an additional inline label var $formLayoutLabelInlineMarginTop
 // $formControlLabelInlineMarginTop:  .55em;
-// 
-// form layout
-// ---------------------------------
-// 
-// These variables are used to set the column-width property
-// in .oj-form-cols and .oj-form-cols-labels-inline.
-// These classes use css multi column layout, see:
-// http://dev.w3.org/csswg/css-multicol/ 
-// $formLayoutColumnWidth:             1.025 * $formControlLargeMaxWidth;
-// $formLayoutLabelsInlineColumnWidth: 22rem;
-// 
-// In a form layout this is the space expected between 
-// form controls in different rows
-// $formLayoutMarginBottom: 10px;
-// 
-// inline label in a oj-row > oj-col; we do not float, thus we need line-height
-// to maintain label's height, and we need a different top margin for this case.
-// $formLayoutLabelInlineMarginTop: .4em;
 // 
 // BUTTONS 
 // ---------------------------------------------------------------
@@ -1441,7 +1338,7 @@ a{
 }
 //Top Off Canvas
 #topDrawer{
-    background-color:#616365;
+    background-color:$topOffCanvasBack;
     outline-color: transparent;
     &:active{
         outline-color:transparent;
@@ -1453,7 +1350,7 @@ a{
                 visibility: visible;
             }
             .oj-tabs-selected{
-                background-color:#454545;
+                background-color:$darkerGray;
             }
             .regionReportUl{
                 margin-left:10px;
@@ -1462,14 +1359,14 @@ a{
                     margin-bottom:2px;
                         a{
                             .oj-tabs-title{
-                                color:#f5f5f5;
+                                color:$offCanvasGrayLi;
                                 font-family: Helvetica Neue Light;
                                 font-size: 16px;
                             }
                         }
                         &.oj-focus{
                             outline-color:transparent;
-                            background-color:#f5f5f5;
+                            background-color:$offCanvasGrayLi;
                             border-width: 0 0 0 0;
                             a{
                                 .oj-tabs-title{
@@ -1480,11 +1377,11 @@ a{
                             }
                         }
                         &.oj-selected{
-                            background-color:#f5f5f5;
+                            background-color:$offCanvasGrayLi;
                             border-width: 0 0 0 0;
                             a{
                                 .oj-tabs-title{
-                                    color:#454545;
+                                    color:$darkerGray;
                                     font-family: Helvetica Neue Light;
                                     font-size: 16px;
                                 }
@@ -1515,47 +1412,42 @@ a{
                 }
                 #sanFranciscoAnalytics, #miamiAnalytics, #bostonAnalytics, #nycAnalytics, #atlantaAnalytics, #losAnglesAnalytics{
                     .mainWrapper{
-                                                    display:inline-block;
+                        display:inline-block;
                         .analyticsSection{
-
-                        margin-right:10px;
+                            margin-right:10px;
                             .analyticsWrapper{
                                 background-color:$white;
                                 padding:10px;
                                 width:200px;
-                                .analyticsCity{
+                                    .analyticsCity{
 
-                                }
-                                .analyticsRegion{
-                                    font-size:11px;
-                                }
-                                .analyticsStore{
-                                    font-size:20px;
-                                }
-                                .analyticsTotalgreen{
-                                    .dailySalesLabel{
-                                        font-weight: 600;
                                     }
-                                    .fa{
-                                        color:green;
+                                    .analyticsRegion{
+                                        font-size:11px;
                                     }
-                                }
-                                .analyticsTotalred{
-                                    .dailyLaborCostLabel{
-                                        font-weight: 600;
+                                    .analyticsStore{
+                                        font-size:20px;
                                     }
-                                    .fa{
-                                        color:red;
+                                    .analyticsTotalgreen{
+                                        .dailySalesLabel{
+                                            font-weight: 600;
+                                        }
+                                        .fa{
+                                            color:green;
+                                        }
                                     }
-                                }
-
+                                    .analyticsTotalred{
+                                        .dailyLaborCostLabel{
+                                            font-weight: 600;
+                                        }
+                                        .fa{
+                                            color:red;
+                                        }
+                                    }
                             }  
                         }
                     }
-                    
-
                 }
-
             }
     }
 }
@@ -1607,13 +1499,60 @@ a{
     }
     .oj-navigationlist-item{
         margin-right:0;
-        &.oj-focus{
-            outline-color:transparent;
-                &#home{
+        @each $section, $backGroundImg in (home, $homeIconDefault), 
+                                          (labor, $laborIconDefault),
+                                          (inventory, $inventoryIconDefault),
+                                          (gift-loyalty, $giftLoyaltyIconDefault),
+                                          (reports-analytics, $reportingAnalyticsIconDefault),
+                                          (enterprise, $enterpriseIconDefault),
+                                          (people, $peopleIconDefault){
+                    &.oj-focus{
+                        &##{$section}{
+                            a{
+                                .topNavImgIcon{
+                                    margin-top:3px;
+                                    background-image: url($backGroundImg);
+                                    display:block;
+                                    position:relative;
+                                    top:0;
+                                    left:0;
+                                    width:24px;
+                                    height:22px;
+                                }
+                            }
+                        }
+                    }
+                    &.oj-default{
+                        &##{$section}{
+                            a{
+                                .topNavImgIcon{
+                                    margin-top:3px;
+                                    background-image: url($backGroundImg);
+                                    display:block;
+                                    position:relative;
+                                    top:0;
+                                    left:0;
+                                    width:24px;
+                                    height:22px;
+                                }
+                            }
+                        }
+                    }
+                }
+        @each $section, $color, $backGroundImg in (home, $homeIconBckColor, $homeIconHover), 
+                                          (labor, $laborIconBckColor, $laborIconHover),
+                                          (inventory, $inventoryIconBckColor, $inventoryIconHover),
+                                          (gift-loyalty, $giftLoyaltyIconBckColor, $giftLoyaltyIconHover),
+                                          (reports-analytics, $reportsChartsIconBckColor,$reportingAnalyticsIconHover),
+                                          (enterprise, $enterpriseIconBckColor, $enterpriseIconHover),
+                                          (people, $peopleIconBckColor, $peopleIconHover){
+            &.oj-selected{
+                 &##{$section}{
+                    background-color: $color;
                     a{
                         .topNavImgIcon{
                             margin-top:3px;
-                            background-image: url($homeIconDefault);
+                            background-image: url($backGroundImg);
                             display:block;
                             position:relative;
                             top:0;
@@ -1623,330 +1562,23 @@ a{
                         }
                     }
                 }
-                &#labor{
-                    a{
-                        .topNavImgIcon{
-                            margin-top:3px;
-                            background-image: url($laborIconDefault);
-                            display:block;
-                            position:relative;
-                            top:0;
-                            left:0;
-                            width:24px;
-                            height:22px;
-                        }
-                    }
+                border-width: 0 !important;
+                .oj-navigationlist-item-icon{
+                    color:$iconSelectedColor;
                 }
-                &#inventory{
-                    a{
-                        .topNavImgIcon{
-                            margin-top:3px;
-                            background-image: url($inventoryIconDefault);
-                            display:block;
-                            position:relative;
-                            top:0;
-                            left:0;
-                            width:24px;
-                            height:22px;
-                        }
-                    }
-                }
-               &#gift-loyalty{
-                    a{
-                        .topNavImgIcon{
-                            margin-top:3px;
-                            background-image: url($giftLoyaltyIconDefault);
-                            display:block;
-                            position:relative;
-                            top:0;
-                            left:0;
-                            width:24px;
-                            height:22px;
-                        }
-                    }
-                }
-                &#reports-analytics{
-                    a{
-                        .topNavImgIcon{
-                            margin-top:3px;
-                            background-image: url($reportingAnalyticsIconDefault);
-                            display:block;
-                            position:relative;
-                            top:0;
-                            left:0;
-                            width:24px;
-                            height:22px;
-                        }
-                    }
-                }
-                &#enterprise{
-                    a{
-                        .topNavImgIcon{
-                            margin-top:3px;
-                            background-image: url($enterpriseIconDefault);
-                            display:block;
-                            position:relative;
-                            top:0;
-                            left:0;
-                            width:24px;
-                            height:22px;
-                        }
-                    }
-                }
-                &#people{
-                    a{
-                        .topNavImgIcon{
-                            margin-top:3px;
-                            background-image: url($peopleIconDefault);
-                            display:block;
-                            position:relative;
-                            top:0;
-                            left:0;
-                            width:24px;
-                            height:22px;
-                        }
-                    }
-                }
-        }
-        &.oj-default{
-                &#home{
-                    a{
-                        .topNavImgIcon{
-                            margin-top:3px;
-                            background-image: url($homeIconDefault);
-                            display:block;
-                            position:relative;
-                            top:0;
-                            left:0;
-                            width:24px;
-                            height:22px;
-                        }
-                    }
-                }
-                &#labor{
-                    a{
-                        .topNavImgIcon{
-                            margin-top:3px;
-                            background-image: url($laborIconDefault);
-                            display:block;
-                            position:relative;
-                            top:0;
-                            left:0;
-                            width:24px;
-                            height:22px;
-                        }
-                    }
-                }
-                &#inventory{
-                    a{
-                        .topNavImgIcon{
-                            margin-top:3px;
-                            background-image: url($inventoryIconDefault);
-                            display:block;
-                            position:relative;
-                            top:0;
-                            left:0;
-                            width:24px;
-                            height:22px;
-                        }
-                    }
-                }
-               &#gift-loyalty{
-                    a{
-                        .topNavImgIcon{
-                            margin-top:3px;
-                            background-image: url($giftLoyaltyIconDefault);
-                            display:block;
-                            position:relative;
-                            top:0;
-                            left:0;
-                            width:24px;
-                            height:22px;
-                        }
-                    }
-                }
-                &#reports-analytics{
-                    a{
-                        .topNavImgIcon{
-                            margin-top:3px;
-                            background-image: url($reportingAnalyticsIconDefault);
-                            display:block;
-                            position:relative;
-                            top:0;
-                            left:0;
-                            width:24px;
-                            height:22px;
-                        }
-                    }
-                }
-                &#enterprise{
-                    a{
-                        .topNavImgIcon{
-                            margin-top:3px;
-                            background-image: url($enterpriseIconDefault);
-                            display:block;
-                            position:relative;
-                            top:0;
-                            left:0;
-                            width:24px;
-                            height:22px;
-                        }
-                    }
-                }
-                &#people{
-                    a{
-                        .topNavImgIcon{
-                            margin-top:3px;
-                            background-image: url($peopleIconDefault);
-                            display:block;
-                            position:relative;
-                            top:0;
-                            left:0;
-                            width:24px;
-                            height:22px;
-                        }
-                    }
-                }
-        }
-        &.oj-selected{
-                &#home{
-                    background-color: $homeIconBckColor;
-                    a{
-                        .topNavImgIcon{
-                            margin-top:3px;
-                            background-image: url($homeIconHover);
-                            display:block;
-                            position:relative;
-                            top:0;
-                            left:0;
-                            width:24px;
-                            height:22px;
-                        }
-                    }
-                }
-                &#labor{
-                    background-color: $laborIconBckColor;
-                    a{
-                        .topNavImgIcon{
-                            margin-top:3px;
-                            background-image: url($laborIconHover);
-                            display:block;
-                            position:relative;
-                            top:0;
-                            left:0;
-                            width:24px;
-                            height:22px;
-                        }
-                    }
-                }
-                &#inventory{
-                    background-color: $inventoryIconBckColor;
-                    a{
-                        .topNavImgIcon{
-                            margin-top:3px;
-                            background-image: url($inventoryIconHover);
-                            display:block;
-                            position:relative;
-                            top:0;
-                            left:0;
-                            width:24px;
-                            height:22px;
-                        }
-                    }
-                }
-                &#gift-loyalty{
-                    background-color: $giftLoyaltyIconBckColor;
-                    a{
-                        .topNavImgIcon{
-                            margin-top:3px;
-                            background-image: url($giftLoyaltyIconHover);
-                            display:block;
-                            position:relative;
-                            top:0;
-                            left:0;
-                            width:24px;
-                            height:22px;
-                        }
-                    }
-                }
-                &#reports-analytics{
-                    background-color: $reportsChartsIconBckColor;
-                    a{
-                        .topNavImgIcon{
-                            margin-top:3px;
-                            background-image: url($reportingAnalyticsIconHover);
-                            display:block;
-                            position:relative;
-                            top:0;
-                            left:0;
-                            width:24px;
-                            height:22px;
-                        }
-                    }
-                }
-                &#enterprise{
-                    background-color: $enterpriseIconBckColor;
-                    a{
-                        .topNavImgIcon{
-                            margin-top:3px;
-                            background-image: url($enterpriseIconHover);
-                            display:block;
-                            position:relative;
-                            top:0;
-                            left:0;
-                            width:24px;
-                            height:22px;
-                        }
-                    }
-                }
-                &#people{
-                    background-color: $peopleIconBckColor;
-                    a{
-                        .topNavImgIcon{
-                            margin-top:3px;
-                            background-image: url($peopleIconHover);
-                            display:block;
-                            position:relative;
-                            top:0;
-                            left:0;
-                            width:24px;
-                            height:22px;
-                        }
-                    }
-                }
-            border-width: 0 !important;
-            .oj-navigationlist-item-icon{
-                color:$iconSelectedColor;
-            }
-            a{
-                 color: $white;
-            }
-
-        }
-        &.oj-hover:not(.oj-selected) {
-            &#home{
-                background-color: $homeIconBckColor;
-                border-color:$lightTan;
                 a{
-                    .topNavImgIcon{
-                        margin-top:3px;
-                        background-image: url($homeIconHover);
-                        display:block;
-                        position:relative;
-                        top:0;
-                        left:0;
-                        width:24px;
-                        height:22px;
-                    }
+                     color: $white;
+                     outline-color: transparent;
                 }
             }
-            &#labor{
-                background-color: $laborIconBckColor;
+            &.oj-hover:not(.oj-selected){
+                &##{$section}{
+                background-color: $color;
                 border-color:$lightTan;
                     a{
                         .topNavImgIcon{
                             margin-top:3px;
-                            background-image: url($laborIconHover);
+                            background-image: url($backGroundImg);
                             display:block;
                             position:relative;
                             top:0;
@@ -1955,97 +1587,17 @@ a{
                             height:22px;
                         }
                     }
-            }
-            &#inventory{
-                background-color: $inventoryIconBckColor;
-                border-color:$lightTan;
-                    a{
-                        .topNavImgIcon{
-                            margin-top:3px;
-                            background-image: url($inventoryIconHover);
-                            display:block;
-                            position:relative;
-                            top:0;
-                            left:0;
-                            width:24px;
-                            height:22px;
-                        }
-                    }
-            }
-            &#gift-loyalty{
-                background-color: $giftLoyaltyIconBckColor;
-                border-color:$lightTan;
-                    a{
-                        .topNavImgIcon{
-                            margin-top:3px;
-                            background-image: url($giftLoyaltyIconHover);
-                            display:block;
-                            position:relative;
-                            top:0;
-                            left:0;
-                            width:24px;
-                            height:22px;
-                        }
-                    }
-            }
-            &#reports-analytics{
-                background-color: $reportsChartsIconBckColor;
-                border-color:$lightTan;
-                    a{
-                        .topNavImgIcon{
-                            margin-top:3px;
-                            background-image: url($reportingAnalyticsIconHover);
-                            display:block;
-                            position:relative;
-                            top:0;
-                            left:0;
-                            width:24px;
-                            height:22px;
-                        }
-                    }
-            }
-            &#enterprise{
-                background-color: $enterpriseIconBckColor;
-                border-color:$lightTan;
-                    a{
-                        .topNavImgIcon{
-                            margin-top:3px;
-                            background-image: url($enterpriseIconHover);
-                            display:block;
-                            position:relative;
-                            top:0;
-                            left:0;
-                            width:24px;
-                            height:22px;
-                        }
-                    }
-            }
-            &#people{
-                background-color: $peopleIconBckColor;
-                border-color:$lightTan;
-                    a{
-                        .topNavImgIcon{
-                            margin-top:3px;
-                            background-image: url($peopleIconHover);
-                            display:block;
-                            position:relative;
-                            top:0;
-                            left:0;
-                            width:24px;
-                            height:22px;
-                        }
-                    }
-            }
-            .oj-navigationlist-item-icon{
-                color:$iconSelectedColor;
+                }
+                .oj-navigationlist-item-icon{
+                    color:$iconSelectedColor;
+                }
             }
         }
         .oj-navigationlist-item-icon {
-            
                 color: $iconColor;
                 margin-right: 0;
                 font-size:16px;
-            }
+        }
     }
     a.oj-navigationlist-item-content {
         color: $iconColor;
@@ -2119,9 +1671,19 @@ a{
 .tbd {
     height: 427px;
     width: 100%;
-//    background-color: #cccccc;
+//    background-color: $lightGray;
 }
+//Header
+#headerTemplate{
+    #userToolButton{
+        #userMenu{
+            .fa:before{
+                content: url($headerUserIcon);
+            }
+        }
 
+    }
+}
 //Login Styles
 #loginPage{
     * {
@@ -2644,7 +2206,12 @@ footer{
     padding:10px;
 
 }
-
+#footCol{
+    border-top:1px solid $lightGray;
+    #footerDiv{
+        text-align: center;
+    }
+}
 //iCare
 #selected-title {
     background-color: $headerNavColorSelected;
@@ -2724,18 +2291,18 @@ footer{
         text-align: right;
         .scopeLink{
             &.active{
-                background-color: #616365;
+                background-color: $headerScopebutton;
                 color:$white;
             }
             
         }
         .scopeLink{
-            background-color: #ffffff;
+            background-color: $white;
             height: 100%;
             display: block;
             float:right;
             line-height: 40px;
-            color: #454545;
+            color: $darkerGray;
             padding:0px 10px;
             margin-left: 39px;
             margin-top: -3%;
@@ -2757,7 +2324,7 @@ footer{
                 }
                 &:hover{
                     color:$white;
-                    background-color:#616365;
+                    background-color:$headerScopebutton;
                     height:100%;
                     display: block;
                     line-height: 40px;
@@ -2778,10 +2345,8 @@ footer{
             margin-top: -10px;
             border-radius: 0;
                 .fa{
-                    color: #616365;
+                    color: $headerScopebutton;
                 }
-            
-            
         }
     }
     html:not([dir="rtl"]) .oj-button-icons-only .oj-button-icon.oj-start{
@@ -2809,13 +2374,13 @@ footer{
     #sidebar-left{
         height: inherit;
         min-height: 100vh;
-        background-color:$offCanvasGray;
+        background-color:$sideNavLinkBckColor;
  //       border-right: 1px $lightGray solid;
         padding-top: 10px;
         padding-left:10px;
             #sideNavigationContainer{
                 margin-top:16px;
-                color:$sideNavText;
+                color:$black;
                 padding-left:0px;
                     .sidebar-left-input {
                         width: 110px;
@@ -2838,9 +2403,9 @@ footer{
                 display: block;
             }
             li a:hover{
-                color: $white;
+                color: $sideNavLinkColorHover;
                 text-decoration: none;
-                background-color: $sideNavLinkBckColor;
+                background-color: $sideNavLinkBckBgHover;
             }
         
         }    
@@ -2858,7 +2423,6 @@ footer{
             font-weight: 600;
             color:#7d7d7d;
             font-size: 14px;
-            
         }
     }
     .checkboxWrapper:nth-child(2){
@@ -2933,12 +2497,87 @@ footer{
                 border-width: 0 0 0 0;
             }
     }
-    .profileWrapper{
-         background-repeat: no-repeat;
-         background-size: 225px 184px;
-         background-position:100% 30%;
-         background-color: #3caf85;
-         height:110px;
+@each $section, $color, $backGroundImg in (home, $primaryLightBlue, $homeBckHeader), 
+                            (labor, $primaryOrange, $laborBckHeader),
+                            (inventory, $primaryGreen, $inventoryBckHeader),
+                            (giftLoyalty, $primaryPurple, $giftLoyaltyBckHeader),
+                            (reportsAnalytics, $primaryBlueGray, $reportingAnalyticsBckHeader),
+                            (enterprise, $primaryDarkGray, $enterpriseBckHeader),
+                            (people, $primaryLightGreen, $peopleBckHeader),
+                            (profile, $primaryLightGreen){
+                            
+                                .#{$section}Wrapper{
+                                    @if $section == 'profile'{
+
+                                    } @else {
+                                        background:url($backGroundImg);
+                                    }
+                                    background-repeat: no-repeat;
+                                    background-size: 223px 111px;
+                                    background-position:100% 30%;
+                                    background-color: $color;
+                                    height:110px;
+                                        ##{$section}Section{
+                                            padding:15px;
+                                            h1{
+                                                font-size:36px;
+                                                font-family: Helvetica Neue Light;
+                                                font-weight: normal;
+                                                color: $white;
+                                            }
+                                            .page-sub-navigation{
+                                                color:$white;
+                                            }
+                                        } 
+                                }
+  
+                            }
+@each $section, $primaryColor, $secondaryColor in (home, $primaryLightBlue, $secondaryLightBlue), 
+                            (labor, $primaryOrange, $secondaryOrange),
+                            (inventory, $primaryGreen, $secondaryGreen),
+                            (giftLoyalty, $primaryPurple, $secondaryPurple),
+                            (reportsAnalytics, $primaryBlueGray, $secondaryBlueGray),
+                            (enterprise, $primaryDarkGray, $secondaryDarkGray),
+                            (people, $primaryLightGreen, $secondaryLightGreen),
+                            (profile, $primaryLightGreen, $secondaryLightGreen){
+                                
+                                ##{$section}Tabs{
+                                    a{
+                                        color:$darkGray;
+                                    }
+                                    .oj-navigationlist-item{
+                                        &.oj-focus{
+                                            outline-color:transparent;
+                                        }
+                                        &.oj-hover:not(.oj-selected){
+                                            background-color:$white;
+                                            border-color:$secondaryColor;
+                                                .oj-navigationlist-item-label{
+                                                    color:$primaryColor;
+                                                }
+                                        }
+                                        &.oj-default{
+                                            background-color: $secondaryColor;
+                                                .oj-navigationlist-item-label{
+                                                    color:$white;
+                                                }
+                                       }
+                                       &.oj-selected {
+                                           border-color: $secondaryColor;
+                                           a{
+                                           color:$darkGray;
+                                                .oj-navigationlist-item-label{
+                                                     font-weight:300;
+                                                     color:$black;
+                                                }
+                                           }
+                                       }
+                                    }
+                                } 
+                            }
+    #homeTabWrapper, #reportsAnalyticsTabWrapper{
+        min-height: 500px;
+        height: 100%;
     }
     .oj-navigationlist-item {
         border-width: 3px 0 0 0;
@@ -2958,7 +2597,7 @@ footer{
         }
     }
     #profileSection{
-        padding-top:3px;
+        padding-top:12px;
         h1{
             font-size:36px;
             font-family: Helvetica Neue Light;
@@ -2974,7 +2613,7 @@ footer{
         .profileToolBar{
             width:150px;
             font-size: 12px;
-            border-left: 1px solid #cccccc;
+            border-left: 1px solid $lightGray;
             vertical-align: middle;
             margin-top:13px;
             color:$white;
@@ -3010,7 +2649,7 @@ footer{
             width:175px;
             height:110px;
             z-index: 100;
-            background:url(images/profile-Large-mask.png);
+            background:url($profileOverLayImg);
         }
         .profileMaskImage{
             background-repeat: no-repeat;
@@ -3023,314 +2662,99 @@ footer{
             left:0;
         }
     }
-    #profileTabs{
-        a{
-            color:#444444;
-        }
-        .oj-navigationlist-item{
-            &.oj-focus{
-                outline-color:transparent;
-            }
-            &.oj-hover:not(.oj-selected){
-                background-color:$white;
-                border-color:$secondaryLightGreen;
-                    .oj-navigationlist-item-label{
-                        color:$primaryLightGreen;
-                    }
-            }
-            &.oj-default{
-                background-color: $secondaryLightGreen;
-                    .oj-navigationlist-item-label{
-                        color:$white;
-                    }
-           }
-           &.oj-selected {
-               border-color: $secondaryLightGreen;
-               a{
-               color:#444;
-                    .oj-navigationlist-item-label{
-                         font-weight:300;
-                         color:#000;
-                    }
-               }
-           }
-        }
-    }
-    .peopleWrapper{
-         background:url(images/people-icon.png);
-         background-repeat: no-repeat;
-         background-size: 225px 184px;
-         background-position:100% 30%;
-         background-color: #3caf85;
-         height:110px;
-    }
-    #peopleSection{
-        padding:15px;
-        h1{
-            font-size:36px;
-            font-family: Helvetica Neue Light;
-            font-weight: normal;
-            color: $white;
-        }
-        .page-sub-navigation{
-            color:$white;
-        }
-    }
-
-    .enterpriseWrapper{
-         background:url(images/enterprise-icon.png);
-         background-repeat: no-repeat;
-         background-size: 245px 204px;
-         background-position:100% 80%;
-         background-color: #fbce4a;
-         height:110px;
-    }
-    #enterpriseSection{
-        padding:15px;
-        h1{
-            font-size:36px;
-            font-family: Helvetica Neue Light;
-            font-weight: normal;
-            color: $white;
-        }
-        .page-sub-navigation{
-            color:$white;
-        }
-    }
-    #enterpriseTabs{
-        a{
-            color:#444444;
-        }
-        .oj-navigationlist-item{
-            &.oj-focus{
-                outline-color:transparent;
-            }
-            &.oj-hover:not(.oj-selected){
-                background-color:$white;
-                border-color:$secondaryYellow;
-                    .oj-navigationlist-item-label{
-                        color:$primaryYellow;
-                    }
-            }
-            &.oj-default{
-                background-color: $secondaryYellow;
-                    .oj-navigationlist-item-label{
-                        color:$white;
-                    }
-           }
-           &.oj-selected {
-               border-color: $secondaryYellow;
-               a{
-               color:#444;
-                    .oj-navigationlist-item-label{
-                         font-weight:300;
-                         color:#000;
-                    }
-               }
-           }
-        }
-    }
-    .reportsAnalyticsWrapper{
-         background:url(images/reportsCharts-icon.png);
-         background-repeat: no-repeat;
-         background-size: 225px 184px;
-         background-position:100% 30%;
-         background-color: #13b6cf;
-         height:110px;
-    }
-    #reportAnalyticsSection{
-        padding:15px;
-        h1{
-            font-size:36px;
-            font-family: Helvetica Neue Light;
-            font-weight: normal;
-            color: $white;
-        }
-        .page-sub-navigation{
-            color:$white;
-        }
-    }
-    .giftLoyaltyWrapper{
-         background:url(images/gift-loyalty-Icon.png);
-         background-repeat: no-repeat;
-         background-size: 225px 184px;
-         background-position:100% 30%;
-         background-color: #854e9b;
-    }
-    #giftLoyaltySection{
-        padding:15px;
-        h1{
-            font-size:36px;
-            font-family: Helvetica Neue Light;
-            font-weight: normal;
-            color: $white;
-        }
-        .page-sub-navigation{
-            color:$white;
-        }
-    }
-    #giftLoyaltySectionTabs{
-        a{
-            color:#444444;
-        }
-        .oj-navigationlist-item{
-            &.oj-focus{
-                outline-color:transparent;
-            }
-            &.oj-hover:not(.oj-selected){
-                background-color:$white;
-                border-color:$secondaryPurple;
-                    .oj-navigationlist-item-label{
-                        color:$primaryPurple;
-                    }
-            }
-            &.oj-default{
-                background-color: $secondaryPurple;
-                    .oj-navigationlist-item-label{
-                        color:$white;
-                    }
-            } 
-           &.oj-selected {
-               border-color: $secondaryPurple;
-               a{
-               color:#444;
-                    .oj-navigationlist-item-label{
-                         font-weight:300;
-                         color:#000;
-                    }
-               }
-           }
-        }
-    }
-    .inventoryWrapper{
-         background:url(images/inventory-icon.png);
-         background-repeat: no-repeat;
-         background-size: 225px 184px;
-         background-position:100% 30%;
-         background-color: #81bb5f;
-    }
-    #inventorySection{
-        padding:15px;
-        h1{
-            font-size:36px;
-            font-family: Helvetica Neue Light;
-            font-weight: normal;
-            color: $white;
-        }
-        .page-sub-navigation{
-            color:$white;
-        }
-    }
-    #inventorySectionTabs{
-        a{
-            color:#444444;
-        }
-        .oj-navigationlist-item{
-            &.oj-focus{
-                outline-color:transparent;
-            }
-            &.oj-hover:not(.oj-selected){
-                background-color:$white;
-                border-color:$secondaryGreen;
-                    .oj-navigationlist-item-label{
-                        color:$primaryGreen;
-                    }
-            }
-            &.oj-default{
-                background-color: #aed292;
-                    .oj-navigationlist-item-label{
-                        color:$white;
-                    }
-           }
-           &.oj-selected {
-               border-color: $secondaryGreen;
-               a{
-               color:#444;
-                    .oj-navigationlist-item-label{
-                         font-weight:300;
-                         color:#000;
-                    }
-               }
-           }
-        }
-    }
-    .laborWrapper{
-         background:url(images/labor-briefCase-bg.png);
-         background-repeat: no-repeat;
-         background-size: 225px 184px;
-         background-position:100% 30%;
-         background-color: #ED813E;
-    }
-    #laborSection{
-        padding:15px;
-        h1{
-            font-size:36px;
-            font-family: Helvetica Neue Light;
-            font-weight: normal;
-            color: $white;
-            
-        }
-        .page-sub-navigation{
-            color:$white;
-        }
-    }
-    #laborSectionTabs{
-        a{
-            color:#444444;
-        }
-        .oj-navigationlist-item{
-            &.oj-focus{
-                outline-color:transparent;
-            }
-            &.oj-hover:not(.oj-selected){
-                background-color:$white;
-                border-color:$secondaryOrange;
-                    .oj-navigationlist-item-label{
-                        color:$primaryOrange;
-                    }
-            }
-            &.oj-default{
-                background-color: #F3AC7A;
-                    .oj-navigationlist-item-label{
-                        color:$white;
-                    }
-           }
-           &.oj-selected {
-               border-color: $secondaryOrange;
-               a{
-               color:#444;
-                    .oj-navigationlist-item-label{
-                         font-weight:300;
-                         color:#000;
-                    }
-               }
-
-           }
-        }
-    }
-    .homeWrapper{
-         background:url(images/home-icon.png);
-         background-repeat: no-repeat;
-         background-size: 225px 184px;
-         background-position:100% 70%;
-         background-color: #309fdb;
-         height:110px;
-    }
-    #homeSection{
-        padding:15px;
-        h1{
-            font-size:36px;
-            font-family: 'Helvetica Neue Light';
-            font-weight: normal;
-            color: $white;
-            
-        }
-        .page-sub-navigation{
-            color:$white;
-        }
-    }
-    //Dialog Window Style
     
+
+    //Dialog Window Style
+    #ojDialogWrapper-preferenceDialogWindow_layer{
+        .oj-dialog-header{
+            height: 50px;
+            padding:0px;
+            background-color:$secondaryLightBlue;
+            .oj-dialog-header-close-wrapper{
+                width:40px;
+                height:35px;
+                margin:0;
+                padding:0;
+                background-color: $primaryLightBlue;
+                &.oj-hover{
+                    margin-top:0px;
+                    background-color:$primaryLightBlue;
+                    .oj-dialog-close-icon{
+                        height:45px;
+                        border-color:transparent;
+                        background-color:transparent;
+                        margin-top:7px;
+                    }
+                }
+                .oj-dialog-close-icon{
+                    width:40px;
+                    height:35px;
+                    color:$white;
+                    margin-top: 7px;
+                }
+            }
+            .oj-dialog-title {
+                padding:0px;
+                .leftSideTitleDialog{
+                    width:40px;
+                    height:35px;
+                    background-color: $primaryLightBlue;
+                }
+                .centerTitleDialog{
+                    &.oj-md-9{
+                        width: 81%;
+                        max-width: 82%;
+                        flex: 81%;
+                    }
+                    height:35px;
+                    background-color:#33a9e9;
+                    h2{
+                        color:$white;
+                        font-size: 21px;
+                        font-weight: normal;
+                        font-family: Helvetica Neue Light;
+                        margin-top:4px;
+                        .h2Text{
+                            margin-top: 3px;
+                            position: absolute;
+                        }
+                    }
+                    .dialogPageToolBarWrapper{
+                        
+                        .dialogPageToolBar{
+                            text-align: center;
+                            color:$white;
+                            margin-top:13px;
+                            .fa{
+                                font-size: 12px;
+                            }
+                            .pageNumber{
+                                font-weight: normal;
+                                font-family: Helvetica Neue Light;
+                            }
+                        }
+                    }
+                }
+                .rightSideToolBar{
+                    width: 141px;
+                    max-width: 141px;
+                    height:35px; 
+                    display: inherit;
+                    .dialogToolBar{
+                        height:35px; 
+                        width:46px;
+                        border-right:1px solid #e08541;
+                        display:block;
+                        a{
+                        
+
+                        }
+
+                    }
+                }
+            }
+        }
+    }
     //Labor Dialog Window
     #ojDialogWrapper-laborDialogWindow{
         .oj-dialog-header{
@@ -3480,7 +2904,6 @@ footer{
                         }
                     }
                 }
-
                 .oj-tabs-panel{
                     height: 213px;
                     &.oj-tabs-selected{
@@ -3492,7 +2915,7 @@ footer{
         }
     }
     .payrollId{
-        color:#cccccc;
+        color:$lightGray;
     }
     .headerFirstLastName{
         color:#1d6594;
@@ -3682,6 +3105,20 @@ footer{
     h2{
         font-size: 18px;
     }
+    #appDrawer{
+        background-color: $darkerGray;
+        width:200px;
+        outline-color: transparent;
+        .oj-navigationlist-element{
+            .oj-default{
+                .oj-navigationlist-item-label{
+                    color:$white;
+                    font-weight:300;
+                }
+            }
+        }
+    }
+
     //Footer styles
     footer{
         position:relative;
@@ -3746,27 +3183,41 @@ footer{
         width:92px;
         height:83px;
         z-index: 100;
-        background:url(images/thumb-overlay-mobile-profile.png);
+        background:url($profileOverlayImgMobile);
 
     }
     #profileNavList{
         background-color:$primaryLightGreen;
     }
-    #profileTabs{
-        .oj-navigationlist-item:not(.oj-disabled){
-            &.oj-default{
-                background-color: $secondaryLightGreen;
-                a{
-                    .oj-navigationlist-item-label{
-                        color:$white;
+    @each $section, $backGroundColor in 
+                                  (labor, $primaryOrange),
+                                  (inventory, $primaryGreen),
+                                  (giftloyalty, $primaryPurple),
+                                  (enterprise, $secondaryDarkGray),
+                                  (profile, $primaryLightGreen)
+    {
+        ##{$section}Tabs{
+            .oj-navigationlist-item:not(.oj-disabled){
+                &.oj-default{
+                    background-color: $backGroundColor;
+                    a{
+                        .oj-navigationlist-item-label{
+                            color:$white;
+                        }
+                    }
+                }
+                &.oj-selected{
+                    background-color: $navListSelected;   
+                    a{
+                        .oj-navigationlist-item-label{
+                            color:$white;  
+                        }
                     }
                 }
             }
-            &.oj-selected{
-
-            }
-        }
+        }                            
     }
+  
     #profileSection{
         padding-top:3px;
 
@@ -3788,102 +3239,36 @@ footer{
         }
         
     }
-    #laborNavList{
-        background-color:$primaryOrange;
-    }
-    #laborTabs{
-        .oj-navigationlist-item:not(.oj-disabled){
-            &.oj-default{
-                background-color: $secondaryOrange;
-                a{
-                    .oj-navigationlist-item-label{
-                        color:$white;
+    @each $section, $backGroundColor in 
+                                  (home, $primaryLightBlue),
+                                  (labor, $primaryOrange),
+                                  (inventory, $primaryGreen),
+                                  (giftLoyalty, $primaryPurple),
+                                  (enterprise, $primaryDarkGray),
+                                  (reportsAnalytics, $primaryBlueGray),
+                                  (people, $primaryLightGreen),
+                                  (profile, $primaryLightGreen)
+    {
+        ##{$section}NavList{
+            background-color:$backGroundColor;
+            @if $section == 'home'{
+                height: 38.5625px;
+            }
+            @if $section == 'reportsAnalytics'{
+                height: 38.5625px;
+            }
+            @else if $section == 'people'{
+            
+            }
+            @else if $section == 'people'{
+                padding-top:3px;
+                padding-left:15px;
+                padding-bottom:3px;
+                    h1{
+                        margin-bottom: 2px;
                     }
-                }
-
             }
-            &.oj-selected{
-
-            }
-
         }
-    }
-    #inventoryNavList{
-        background-color:$primaryGreen;
-    }
-    #inventoryTabs{
-        .oj-navigationlist-item:not(.oj-disabled){
-            &.oj-default{
-                background-color: $secondaryGreen;
-                a{
-                    .oj-navigationlist-item-label{
-                        color:$white;
-                    }
-                }
-
-            }
-            &.oj-selected{
-
-            }
-
-        }
-    }
-    #giftLoyaltyNavList{
-        background-color:$primaryPurple;
-    }
-    #giftLoyaltyTabs{
-        .oj-navigationlist-item:not(.oj-disabled){
-            &.oj-default{
-                background-color: $secondaryPurple;
-                a{
-                    .oj-navigationlist-item-label{
-                        color:$white;
-                    }
-                }
-
-            }
-            &.oj-selected{
-
-            }
-
-        }
-    }
-    #enterpriseNavList{
-        background-color:$primaryYellow;
-    }
-    #enterpriseTabs{
-        .oj-navigationlist-item:not(.oj-disabled){
-            &.oj-default{
-                background-color: $secondaryYellow;
-                a{
-                    .oj-navigationlist-item-label{
-                        color:$white;
-                    }
-                }
-
-            }
-            &.oj-selected{
-
-            }
-
-        }
-    }
-    #peopleNavList{
-        background-color:$primaryLightGreen;
-        padding-top:3px;
-        padding-left:15px;
-        padding-bottom:3px;
-        h1{
-            margin-bottom: 2px;
-        }
-    }
-    #homeNavList{
-        background-color:$primaryLightBlue;
-        height: 44.5625px;
-    }
-    #reportAnalyticsNavList{
-        background-color:$primaryTurquoise;
-        height: 44.5625px;
     }
     .tab-content{
         border-width: 0 0 0 0;
@@ -4033,7 +3418,7 @@ footer{
                 text-align: center;
                 padding: 10px 0px;
                 margin-top: 20px;
-                background-color: #000000;
+                background-color:$black;
                 color: #66f91a;
                 .fa{
                     font-size:12px;
@@ -4050,21 +3435,19 @@ footer{
                                width:67%; 
                             }
                         }
-
                         &.oj-selected{
                             background-color:$white;
                             border-color:#d6dfe6;
                             border-width: 1px 0 0 0;
                             a{
                                 .oj-tabs-title{
-                                  color:#000000;  
+                                  color:$black;  
                                 }
 
                             }
                         }
                     }
                 }
-
                 .oj-tabs-panel{
                     height: 213px;
                     &.oj-tabs-selected{
@@ -4166,7 +3549,6 @@ footer{
             div:last-child{
                 text-align: right;
             } 
-        
     }
     .scheduleTimecardsWindow{
         background-color: $white;
@@ -4211,11 +3593,12 @@ footer{
         color:$white;
         margin-top: 5px;
         margin-left:65px;
-        
     }
     .oj-panel.tab-content{
         padding:0;
-        background-color: transparent;
+        background-color: $white;
+        height: 100%;
+        min-height: 508px;
     }
     .parentProfileStatusToolArea{
         padding-right:0px;
@@ -4232,24 +3615,22 @@ footer{
             padding-right:5px;
             padding-left:5px;
             line-height: 20px;
-
-            .fa{
-                font-size:12px;
-                color: #444444;
-            }
-            .profileStatusToolArea{
-                h4{
-                    font-size:11px;
-                    margin-bottom:2px;
-                }
-                a{
+                .fa{
                     font-size:12px;
-                    .fa{
-                        color:#045fab;
+                    color: $darkGray;
+                }
+                .profileStatusToolArea{
+                    h4{
+                        font-size:11px;
+                        margin-bottom:2px;
+                    }
+                    a{
+                        font-size:12px;
+                        .fa{
+                            color:#045fab;
+                        }
                     }
                 }
-            }
-
         }
     }
     .oj-filmstrip-content-container{
@@ -4289,156 +3670,44 @@ footer{
     #accordionPage{
         margin-top:10px;
         background-color:$white;
-        #general{
-            h3{
-                color:#444444;
-                background-color:$secondaryLightGreen;
-                a{
-                    &.oj-collapsible-open-icon:before{
-                       font-family: 'FontAwesome';
-                       content: "\f067";
-                       color:#444444;
-                    }
-                    &.oj-collapsible-close-icon:before{
-                       font-family: 'FontAwesome';
-                       content: "\f068";
-                       color:#444444;
-                    }
-                }
-            }
-        }
-        #contact{
-            h3{
-                color:#444444;
-                background-color:$secondaryLightGreen;
-                a{
-                    &.oj-collapsible-open-icon:before{
-                       font-family: 'FontAwesome';
-                       content: "\f067";
-                       color:#444444;
-                    }
-                    &.oj-collapsible-close-icon:before{
-                       font-family: 'FontAwesome';
-                       content: "\f068";
-                       color:#444444;
+        @each $section in 
+                        (general),
+                        (contact),
+                        (Custom),
+                        (Custom),
+                        (i9information),
+                        (identitydocuments),
+                        (availability),
+                        (daysAndTimes),
+                        (schooldistrict)
+            {
+                ##{$section}{
+                h3{
+                    color:$darkGray;
+                    background-color:$secondaryLightGreen;
+                    a{
+                        &.oj-collapsible-open-icon:before{
+                           font-family: 'FontAwesome';
+                           content: "\f067";
+                           color:$darkGray;
+                        }
+                        &.oj-collapsible-close-icon:before{
+                           font-family: 'FontAwesome';
+                           content: "\f068";
+                           color:$darkGray;
+                        }
                     }
                 }
-            }
-            .indentDiv{
-                .fa{
-                    font-size:12px;
-                }
-            }
-            .contactArea{
-                .fa{
-                    font-size:12px;
-                }
-            }
-        }
-        #Custom{
-            h3{
-                color:#444444;
-                background-color:$secondaryLightGreen;
-                a{
-                    &.oj-collapsible-open-icon:before{
-                       font-family: 'FontAwesome';
-                       content: "\f067";
-                       color:#444444;
+                @if $section == 'contact'{
+                    .indentDiv{
+                        .fa{
+                            font-size:12px;
+                        }
                     }
-                    &.oj-collapsible-close-icon:before{
-                       font-family: 'FontAwesome';
-                       content: "\f068";
-                       color:#444444;
-                    }
-                }
-            }   
-        }
-        #i9information{
-            h3{
-                color:#444444;
-                background-color:$secondaryLightGreen;
-                a{
-                    &.oj-collapsible-open-icon:before{
-                       font-family: 'FontAwesome';
-                       content: "\f067";
-                       color:#444444;
-                    }
-                    &.oj-collapsible-close-icon:before{
-                       font-family: 'FontAwesome';
-                       content: "\f068";
-                       color:#444444;
-                    }
-                }
-            }  
-        }
-        #identitydocuments{
-            h3{
-                color:#444444;
-                background-color:$secondaryLightGreen;
-                a{
-                    &.oj-collapsible-open-icon:before{
-                       font-family: 'FontAwesome';
-                       content: "\f067";
-                       color:#444444;
-                    }
-                    &.oj-collapsible-close-icon:before{
-                       font-family: 'FontAwesome';
-                       content: "\f068";
-                       color:#444444;
-                    }
-                }
-            } 
-        }
-        #availability{
-           h3{
-                color:#444444;
-                background-color:$secondaryLightGreen;
-                a{
-                    &.oj-collapsible-open-icon:before{
-                       font-family: 'FontAwesome';
-                       content: "\f067";
-                       color:#444444;
-                    }
-                    &.oj-collapsible-close-icon:before{
-                       font-family: 'FontAwesome';
-                       content: "\f068";
-                       color:#444444;
-                    }
-                }
-            } 
-        }
-        #daysAndTimes{
-           h3{
-                color:#444444;
-                background-color:$secondaryLightGreen;
-                a{
-                    &.oj-collapsible-open-icon:before{
-                       font-family: 'FontAwesome';
-                       content: "\f067";
-                       color:#444444;
-                    }
-                    &.oj-collapsible-close-icon:before{
-                       font-family: 'FontAwesome';
-                       content: "\f068";
-                       color:#444444;
-                    }
-                }
-            }  
-        }
-        #schooldistrict{
-           h3{
-                color:#444444;
-                background-color:$secondaryLightGreen;
-                a{
-                    &.oj-collapsible-open-icon:before{
-                       font-family: 'FontAwesome';
-                       content: "\f067";
-                       color:#444444;
-                    }
-                    &.oj-collapsible-close-icon:before{
-                       font-family: 'FontAwesome';
-                       content: "\f068";
-                       color:#444444;
+                    .contactArea{
+                        .fa{
+                            font-size:12px;
+                        }
                     }
                 }
             }
@@ -4525,8 +3794,8 @@ footer{
         display:block;
     }
     .oj-tabs-panel {
-        border: 0px solid #cccccc;
-        border-top: 1px solid #cccccc;
+        border: 0px solid $lightGray;
+        border-top: 1px solid $lightGray;
     }
     //Schedule and Timecard
     .scheduleModal-dimensions{
@@ -4601,7 +3870,7 @@ footer{
     //profile
     #inventorySectionTabs{
         a{
-            color:#444444;
+            color:$darkGray;
         }
         .oj-navigationlist-item{
             &.oj-focus{
@@ -4624,10 +3893,10 @@ footer{
            &.oj-selected {
                border-color: $secondaryGreen;
                a{
-               color:#444;
+               color:$darkGray;
                     .oj-navigationlist-item-label{
                          font-weight:300;
-                         color:#000;
+                         color:$black;
                     }
                }
            }
@@ -4636,7 +3905,7 @@ footer{
     //labor section
     #profileTabs{
         a{
-            color:#444444;
+            color:$darkGray;
         }
         .oj-navigationlist-item{
             &.oj-focus{
@@ -4659,10 +3928,10 @@ footer{
            &.oj-selected {
                border-color: $secondaryLightGreen;
                a{
-               color:#444;
+               color:$darkGray;
                     .oj-navigationlist-item-label{
                          font-weight:300;
-                         color:#000;
+                         color:$black;
                     }
                }
            }
@@ -4674,7 +3943,7 @@ footer{
         margin-left:4px;
     }
     #appDrawer{
-        background-color: #454545;
+        background-color: $darkerGray;
         width:200px;
         outline-color: transparent;
         .oj-navigationlist-element{

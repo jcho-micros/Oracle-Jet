@@ -100,10 +100,12 @@ require(['ojs/ojcore',
                     childRouter.defaultStateId = '100';
                     router.currentState().value = childRouter;
                 }
-            }
+            },
+            'preference': {label: 'Preference', value: 'preference'}
+            
 
             //Not being used, only when add-employee section is suppose to be a stand alone page
-//            'add-employee': {
+//            'add-employee': { 
 //                label: 'Add Employee',
 //                value: 'add-employee',
 //                exit: function(){

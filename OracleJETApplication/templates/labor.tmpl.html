@@ -19,10 +19,20 @@
             </div>
         </div>
         <div class="oj-sm-12 oj-col" data-bind="if: router.stateId()">
-            <div class="oj-panel tab-content" data-bind="with: router.currentState()">
+            <div id="laborTabSection" class="oj-panel tab-content" data-bind="with: router.currentState()">
 
                 <div data-bind="template: {name: 'labor/' + id +'/' + id + '-small'}"></div>
             </div>
+        </div>
+    </div>
+    <div class="oj-row">
+        <div class="oj-sm-12 oj-col" id="footCol">
+            <footer role="contentinfo">
+              <div id='appfooterDiv' data-bind="ojModule: {
+                                                    name: 'footer', 
+                                                    viewName: 'footer'}">
+              </div>
+            </footer>
         </div>
     </div>
 </div>
@@ -55,7 +65,14 @@
                 <div data-bind="template: {name: 'labor/' + id +'/' + id + '-large'}"></div>
         </div>
     </div>
-<!--Labor dialog modal-->
+    <div class="oj-row">
+    <div class="oj-md-12 oj-col" id="footCol">
+        <footer role="contentinfo">
+          <div id='appfooterDiv' data-bind="ojModule: {name: 'footer', viewName: 'footer'}"></div>
+        </footer>
+    </div>
+</div>
+    <!--Labor dialog modal-->
 <div data-bind="template: {name: 'labor/dialogwindow/dialogwindow-large'}"></div>
 </script>
     

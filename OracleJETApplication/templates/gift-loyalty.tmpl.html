@@ -19,10 +19,20 @@
                 </div>
             </div>
             <div class="oj-sm-12 oj-col" data-bind="if: router.stateId()">
-                <div class="oj-panel tab-content" data-bind="with: router.currentState()">
+                <div id="giftLoyaltySection" class="oj-panel tab-content" data-bind="with: router.currentState()">
 <!--                    <h2 id="currentPage" data-bind="text: label"></h2>-->
                     <div data-bind="template: {name: 'gift-loyalty/' + id +'/' + id + '-small'}"></div>
                 </div>
+            </div>
+        </div>
+        <div class="oj-row">
+            <div class="oj-sm-12 oj-col" id="footCol">
+                <footer role="contentinfo">
+                  <div id='appfooterDiv' data-bind="ojModule: {
+                                                        name: 'footer', 
+                                                        viewName: 'footer'}">
+                  </div>
+                </footer>
             </div>
         </div>
     </div>
@@ -59,7 +69,13 @@
                     <div data-bind="template: {name: 'gift-loyalty/' + id +'/' + id + '-large'}"></div>
             </div>
         </div>
-
+        <div class="oj-row">
+            <div class="oj-md-12 oj-col" id="footCol">
+                <footer role="contentinfo">
+                  <div id='appfooterDiv' data-bind="ojModule: {name: 'footer', viewName: 'footer'}"></div>
+                </footer>
+            </div>
+        </div>
 </script>
 
 <div id="templateWrapper" class="templateArea" data-bind="template: {name: $root.medium() ? 'md_lg_xl_template' : 'sm_template'}"></div>

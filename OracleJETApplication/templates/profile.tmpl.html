@@ -75,7 +75,7 @@
 </div>
 <div class="oj-row">
     <div class="oj-sm-12 oj-col" data-bind="if: tabRouter.stateId()">
-        <div class="oj-panel tab-content" data-bind="with: tabRouter.currentState()">
+        <div id="profileTabSection" class="oj-panel tab-content" data-bind="with: tabRouter.currentState()">
 
             <div data-bind="template: {name: 'profile/' + id +'/' + id + '-small'}"></div>
         </div>

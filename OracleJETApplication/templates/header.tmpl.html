@@ -16,8 +16,8 @@
                         </a>
             </span>
         </div>
-        <div class="oj-sm-3 oj-col oj-helper-text-align-right">
-            <button class='oj-button-half-chrome' data-bind="ojComponent: { component: 'ojButton',
+        <div id="userToolButton" class="oj-sm-3 oj-col oj-helper-text-align-right">
+            <button id="userMenu" class='oj-button-half-chrome' data-bind="ojComponent: { component: 'ojButton',
                              label: 'Avatar', 
                              display: 'icons',
                              icons: {start:'oj-icon fa fa-user'},
@@ -71,7 +71,7 @@
             </div>
         </div>
 
-        <div class="oj-lg-3 oj-xl-3 oj-col userMenuWrap">
+        <div id="userToolButton" class="oj-lg-3 oj-xl-3 oj-col userMenuWrap">
             <!-- This pulldown menu is used for wider screens -->
             
 
@@ -100,6 +100,7 @@
                         </a>
             </div>
     </div>
+    <div data-bind="template: {name: 'partials/user/preference-large'}"></div>
 </script>
 <!-- oj-row -->
 <script type="text/html" id="app_nav_template">

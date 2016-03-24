@@ -3,6 +3,23 @@
 <div class="oj-row oj-cols-nopad">
     <div id="homeNavList" class="oj-sm-12 oj-col app-header-mobile-nav-title">
     </div>
+    <div class="oj-row">
+        <div class="oj-sm-12 oj-col">
+            <div id="homeSection" class="oj-panel tab-content">
+
+            </div>
+        </div>
+        <div class="oj-row">
+            <div class="oj-sm-12 oj-col" id="footCol">
+                <footer role="contentinfo">
+                  <div id='appfooterDiv' data-bind="ojModule: {
+                                                        name: 'footer', 
+                                                        viewName: 'footer'}">
+                  </div>
+                </footer>
+            </div>
+        </div>
+    </div>
 </div>
 </script>
 
@@ -15,12 +32,19 @@
                 <div id="city" data-bind="text: $root.globalstoreName ? $root.globalstoreName : $parent.storeName"></div>
             </h1>
         </div>
-<!--        <div data-bind="text: $root.globalRegion ? $root.globalRegion : $parent.region "></div>
-        <div data-bind="text: $root.globalCityNameId ? $root.globalCityNameId : $parent.locID"></div>
-        <div data-bind="text: $root.globalstoreName ? $root.globalstoreName : $parent.storeName"></div>-->
+
     </div>
-    <div>
-        
+    <div id="homeTabWrapper" class="oj-md-12 oj-col">
+        <div class="oj-panel tab-content">
+
+        </div>
+    </div>
+    <div class="oj-row">
+        <div class="oj-md-12 oj-col" id="footCol">
+            <footer role="contentinfo">
+              <div id='appfooterDiv' data-bind="ojModule: {name: 'footer', viewName: 'footer'}"></div>
+            </footer>
+        </div>
     </div>
 </script>
 
