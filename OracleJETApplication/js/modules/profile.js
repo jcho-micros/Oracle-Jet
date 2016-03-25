@@ -498,7 +498,7 @@ define([
                     }
                 };
                 self.getEmail = function () {
-                    return "mailto:" + self.email() + '@example.net';
+                    return "mailto:" + self.email();
                 };
 
                 //Child router for tabs - assigns the URL
