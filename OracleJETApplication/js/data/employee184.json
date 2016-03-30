@@ -397,6 +397,19 @@
             "fullendtime" : "2016-02-26T23:00:00-05:00"
         }],
       "schooldistrict" : "None",
+      "compensation" : [{
+            "locationname" : "Baltimore",
+            "jobcodename" : "Waiter",
+            "payrate" : "12.00",
+            "effectivestartdate" : "2015-02-26T14:00:00-05:00",
+            "effectiveenddate" : "2016-02-26T14:00:00-05:00"
+            },{
+            "locationname" : "Baltimore",
+            "jobcodename" : "Host",
+            "payrate" : "8.00",
+            "effectivestartdate" : "2015-02-26T14:00:00-05:00",
+            "effectiveenddate" : "2016-02-26T14:00:00-05:00"
+      }],
       "comps" : [ {
          "bonus" : 4050,
          "comission" : 0,

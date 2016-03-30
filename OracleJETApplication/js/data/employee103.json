@@ -38,7 +38,7 @@
       "hireDate" : "2006-07-14T00:00:00",
       "hireStatus": "Active",
       "profilePicture" : "images/people/103.png",
-      "veteranStatus" : 1,
+      "veteranStatus" : 0,
       "vietnamEra" : 1,
       "otherEligible" : 1,
       "otherProtected": 1,
@@ -88,7 +88,7 @@
       "potential" : 5,
       "deptId" : 60,
       "mgrId" : 102,
-      "deptName" : "IT",
+      "deptName" : "Kitchen",
       "mgrFirstName" : "Lex",
       "mgrLastName" : "De Haan",
       "teamAvgRating" : 4.0,
@@ -396,6 +396,19 @@
             "fullendtime" : "2016-02-26T23:00:00-05:00"
         }],
       "schooldistrict" : "None",
+      "compensation" : [{
+            "locationname" : "Baltimore",
+            "jobcodename" : "Waiter",
+            "payrate" : "12.00",
+            "effectivestartdate" : "2015-02-26T14:00:00-05:00",
+            "effectiveenddate" : "2016-02-26T14:00:00-05:00"
+            },{
+            "locationname" : "Baltimore",
+            "jobcodename" : "Host",
+            "payrate" : "8.00",
+            "effectivestartdate" : "2015-02-26T14:00:00-05:00",
+            "effectiveenddate" : "2016-02-26T14:00:00-05:00"
+      }],
       "comps" : [ {
          "bonus" : 7250,
          "comission" : 0,

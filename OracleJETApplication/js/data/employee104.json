@@ -85,7 +85,7 @@
       "potential" : 4,
       "deptId" : 60,
       "mgrId" : 103,
-      "deptName" : "IT",
+      "deptName" : "Restaurant",
       "mgrFirstName" : "Alexander",
       "mgrLastName" : "Hunold",
       "teamAvgRating" : 2.5,
@@ -364,6 +364,19 @@
             "fullendtime" : "2016-02-26T23:00:00-05:00"
         }],
       "schooldistrict" : "Baltimore School District",
+      "compensation" : [{
+            "locationname" : "Baltimore",
+            "jobcodename" : "Waiter",
+            "payrate" : "12.00",
+            "effectivestartdate" : "2015-02-26T14:00:00-05:00",
+            "effectiveenddate" : "2016-02-26T14:00:00-05:00"
+            },{
+            "locationname" : "Baltimore",
+            "jobcodename" : "Host",
+            "payrate" : "8.00",
+            "effectivestartdate" : "2015-02-26T14:00:00-05:00",
+            "effectiveenddate" : "2016-02-26T14:00:00-05:00"
+      }],
       "comps" : [ {
          "bonus" : 900,
          "comission" : 0,
