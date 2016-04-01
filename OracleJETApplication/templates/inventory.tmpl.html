@@ -36,6 +36,8 @@
             </div>
         </div>
     </div>
+<!--Inventory dialog modal-->
+<div data-bind="template: {name: 'inventory/dialogwindow/dialogwindow-small'}"></div>
 </script>
 
 <!-- large template -->
@@ -72,6 +74,8 @@
             </footer>
         </div>
     </div>
+    <!--Inventory dialog modal-->
+<div data-bind="template: {name: 'inventory/dialogwindow/dialogwindow-large'}"></div>
 </script>
 
 <div id="templateWrapper" class="templateArea" data-bind="template: {name: $root.medium() ? 'md_lg_xl_template' : 'sm_template'}"></div>

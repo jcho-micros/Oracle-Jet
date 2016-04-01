@@ -57,7 +57,7 @@ requirejs.config({
  */
 require(['ojs/ojcore',
     'knockout',
-   'data/data',
+    'data/data',
     'jquery',
     'ojs/ojrouter',
     'knockout-amd-helpers',

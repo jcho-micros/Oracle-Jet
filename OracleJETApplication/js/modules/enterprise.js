@@ -1,5 +1,14 @@
-define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', 'ojs/ojnavigationlist', 'ojs/ojconveyorbelt'],
-    function (oj, ko, $) {
+define([
+    'ojs/ojcore', 
+    'knockout', 
+    'data/data', 
+    'moment', 
+    'hammerjs',
+    'ojs/ojknockout', 
+    'ojs/ojrouter', 
+    'ojs/ojnavigationlist', 
+    'ojs/ojconveyorbelt'],
+    function (oj, ko, jsonData, moment) {
         /**
          * The view model for the iCare Child router.
          */
@@ -39,7 +48,10 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', 'o
             self.pageHeading = ko.observable('Enterprise Configuration');
             self.pageHeadingIconClass = ko.observable('fa fa-gift');
             self.sectionsState = ko.observable(false);
-
+            //General Dialog Reusable
+            self.handleOpen =  function(dialog) {
+                $(dialog).ojDialog("open");
+            };
             //Toggles visibility of sections
             self.toggleSections = function () {
                 self.sectionsState(!self.sectionsState());

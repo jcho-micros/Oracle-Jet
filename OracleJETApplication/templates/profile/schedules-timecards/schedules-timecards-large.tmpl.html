@@ -31,9 +31,19 @@
                   
                   <div class="oj-panel oj-panel-alt2 schedule-filmstrip-item" data-bind="style: {display: getItemInitialDisplay($index())}">
                     <div>
+                       
                        <a data-bind="click:function(){$parents[1].showItemIndex('#currentWeekModal')}">
-                       <span data-bind="text: currentDayStart"></span> <span data-bind="text: currentDayStartTime"></span> - <span data-bind="text: currentDayEndTime"></span> </a>
-                       <br /><span data-bind="text: location"></span>, <span data-bind="text: revenueCenter"></span>
+                           <p>
+                               <span data-bind="text: currentDayStart"></span> 
+                           </p>
+                           <p>
+                                <span data-bind="text: currentDayStartTime"></span> - <span data-bind="text: currentDayEndTime"></span> 
+                           </p>
+                            <p>
+                                 <span data-bind="text: currentSecondDayStartTime"></span> - <span data-bind="text: currentSecondDayEndTime"></span>
+                            </p>
+                        </a>
+                        <br /><span data-bind="text: location"></span>, <span data-bind="text: revenueCenter"></span>
                        <br /><span data-bind="text: job"></span>, <span data-bind="text: station"></span>
                        <br /><span data-bind="text: status"></span>
                        <br /><span data-bind="text: notes"></span>
@@ -70,8 +80,11 @@
                 <!-- ko foreach: $parent.futureScheduledDates -->
 
                 <div class="oj-panel oj-panel-alt2 demo-filmstrip-item" data-bind="style: {display: getItemInitialDisplay($index())}">
-                    <a data-bind="click:function(){$parents[1].showItemIndex('#upcomingWeekModal')}">    
-                    <span data-bind="text: futureDayStart"></span> <span data-bind="text: futureDayStartTime"></span> - <span data-bind="text: futureDayEndTime"></span>
+                    <a data-bind="click:function(){$parents[1].showItemIndex('#upcomingWeekModal')}">
+                        <p><span data-bind="text: futureDayStart"></span></p>
+                        <p><span data-bind="text: futureDayStartTime"></span> - <span data-bind="text: futureDayEndTime"></span></p>
+                        <p><span data-bind="text: futureSecondDayStartTime"></span> - <span data-bind="text: futureSecondDayEndTime"></span></p>
+                     
                     </a>
                     <br /><span data-bind="text: location"></span>, <span data-bind="text: revenueCenter"></span>
                     <br /><span data-bind="text: job"></span>, <span data-bind="text: station"></span>

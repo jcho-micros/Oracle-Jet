@@ -48,7 +48,7 @@ $white: #fff;
 $black: #000;
 $darkBlue: #0c4a7e;
 $lightBlue: #0572ce;
-$sideNavLinksBlue: #224882;
+$sideNavLinksBlue: #045fab;
 $lightTan: #f5f5f5;
 $darkGray: #444444;
 $darkerGray: #454545;
@@ -62,7 +62,7 @@ $gray: #666666;
 $lightGray: #cccccc;
 $lightGray2: #c4ced7;
 $navListSelected: #454545;
-$primaryLightBlue: #346fd4;
+$primaryLightBlue: #0572ce;
 $secondaryLightBlue: #84bbe6;
 $primaryOrange: #ea5801;
 $secondaryOrange: #ec7743;
@@ -1344,7 +1344,7 @@ a{
         outline-color:transparent;
     }
     #offCanvasScope{
-            height:225px;
+            height:162px;
         color:$white;
             [data-bind*="ojComponent"]:not(.oj-component-initnode){
                 visibility: visible;
@@ -1353,56 +1353,81 @@ a{
                 background-color:$darkerGray;
             }
             .regionReportUl{
-                margin-left:10px;
+                margin-left:0px;
+                padding-top:0px;
+                width:213px;
                 .regionReportLi{
-                    background-color:#878C90;
-                    margin-bottom:2px;
+                    background-color:#696e72;
+                    width:213px;
+                            border-width: 0 0 0 0;
                         a{
+                            &.oj-tabs-anchor{
+                                padding-left: 22px;
+                            }
                             .oj-tabs-title{
                                 color:$offCanvasGrayLi;
                                 font-family: Helvetica Neue Light;
-                                font-size: 16px;
+                                font-size: 12px;
                             }
                         }
                         &.oj-focus{
                             outline-color:transparent;
                             background-color:$offCanvasGrayLi;
                             border-width: 0 0 0 0;
-                            a{
-                                .oj-tabs-title{
-                                    color:#707070;
-                                    font-family: Helvetica Neue Light;
-                                    font-size: 16px;
+                            .oj-tabs-tab-content{
+                                a{
+                                    &.oj-tabs-anchor{
+                                        padding-left: 22px;
+                                    }
+                                    .oj-tabs-title{
+                                        color:#707070;
+                                        font-family: Helvetica Neue Light;
+                                        font-size: 12px;
+                                    }
                                 }
                             }
+
                         }
                         &.oj-selected{
-                            background-color:$offCanvasGrayLi;
+                            background-color:$darkerGray;
                             border-width: 0 0 0 0;
-                            a{
-                                .oj-tabs-title{
-                                    color:$darkerGray;
-                                    font-family: Helvetica Neue Light;
-                                    font-size: 16px;
-                                }
+                            .oj-tabs-tab-content{
+                                border-width: 0 0 0 0 ;
+                                a{
+                                    &.oj-tabs-anchor{
+                                        padding-left: 22px;
+                                    }
+                                    .oj-tabs-title{
+                                        color:$white;
+                                        font-family: Helvetica Neue Light;
+                                        font-size: 12px;
+                                        font-weight: normal;
+                                    }
+                                } 
                             }
+
                         }
                         &.oj-hover{
                             border-width: 0 0 0 0;
-                            a{
-                                .oj-tabs-title{
-                                    text-decoration: none;
-                                    font-family: Helvetica Neue Light;
-                                    font-size: 16px;
-                                }
+                             .oj-tabs-tab-content{
+                                a{
+                                    &.oj-tabs-anchor{
+                                        padding-left: 22px;
+                                    }
+                                    .oj-tabs-title{
+                                        text-decoration: none;
+                                        font-family: Helvetica Neue Light;
+                                        font-size: 12px;
+                                    }
 
-                            }
+                                }
+                             }
                         }
                 }
 
             }
             .regionTabSections{
-                background-color:#616365;
+                background-color:$darkerGray;
                 border-color:transparent;
                 .bodyText{
                     color:$white;
@@ -1508,6 +1533,7 @@ a{
                                           (people, $peopleIconDefault){
                     &.oj-focus{
                         &##{$section}{
+                            outline-color: transparent;
                             a{
                                 .topNavImgIcon{
                                     margin-top:3px;
@@ -2291,7 +2317,7 @@ footer{
         text-align: right;
         .scopeLink{
             &.active{
-                background-color: $headerScopebutton;
+                background-color: #454545;
                 color:$white;
             }
             
@@ -2392,21 +2418,22 @@ footer{
                     }
             }
         .sidebar-left-nav {
-        list-style-type: none;
-        margin: 0;
-        padding: 0.77778rem 0;
-        margin-top: 15px;
-            li a:not(.button) {
-                color: $sideNavLinkColor;
-                font-size: 1.05em;
-                padding: 10px 5px 10px 40px;
-                display: block;
-            }
-            li a:hover{
-                color: $sideNavLinkColorHover;
-                text-decoration: none;
-                background-color: $sideNavLinkBckBgHover;
-            }
+            list-style-type: none;
+            margin: 0;
+            padding: 0.77778rem 0;
+            margin-top: 15px;
+                li a:not(.button) {
+                    color: $sideNavLinkColor;
+                    font-size: 12px;
+                    padding: 12px 10px 12px 20px;
+                    font-weight: 500;
+                    display: block;
+                }
+                li a:hover{
+                    color: $sideNavLinkColorHover;
+                    text-decoration: none;
+                    background-color: $sideNavLinkBckBgHover;
+                }
         
         }    
     }  
@@ -2567,7 +2594,6 @@ footer{
                                            a{
                                            color:$darkGray;
                                                 .oj-navigationlist-item-label{
-                                                     font-weight:300;
                                                      color:$black;
                                                 }
                                            }
@@ -2755,165 +2781,177 @@ footer{
             }
         }
     }
-    //Labor Dialog Window
-    #ojDialogWrapper-laborDialogWindow{
-        .oj-dialog-header{
-            height: 50px;
-            padding:0px;
-            background-color:#e39154;
-            .oj-dialog-header-close-wrapper{
-                width:40px;
-                height:35px;
-                margin:0;
-                padding:0;
-                background-color: #e06d1c;
-                &.oj-hover{
-                    margin-top:0px;
-                    background-color:#e06d1c;
-                    .oj-dialog-close-icon{
-                        height:45px;
-                        border-color:transparent;
-                        background-color:transparent;
-                        margin-top:7px;
-                    }
-                }
-                .oj-dialog-close-icon{
-                    width:40px;
-                    height:35px;
-                    color:$white;
-                    margin-top: 7px;
-                }
-            }
-            .oj-dialog-title {
-                padding:0px;
-                .leftSideTitleDialog{
-                    width:40px;
-                    height:35px;
-                    background-color: #e06d1c;
-                }
-                .centerTitleDialog{
-                    &.oj-md-9{
-                        width: 81%;
-                        max-width: 82%;
-                        flex: 81%;
-                    }
-                    height:35px;
-                    background-color:#e08541;
-                    h2{
-                        color:$white;
-                        font-size: 21px;
-                        font-weight: normal;
-                        font-family: Helvetica Neue Light;
-                        margin-top:4px;
-                        .h2Text{
-                            margin-top: 3px;
-                            position: absolute;
-                        }
-                    }
-                    .dialogPageToolBarWrapper{
-                        
-                        .dialogPageToolBar{
-                            text-align: center;
-                            color:$white;
-                            margin-top:13px;
-                            .fa{
-                                font-size: 12px;
-                            }
-                            .pageNumber{
-                                font-weight: normal;
-                                font-family: Helvetica Neue Light;
-                            }
-                        }
-                    }
-                }
-                .rightSideToolBar{
-                    width: 141px;
-                    max-width: 141px;
-                    height:35px; 
-                    display: inherit;
-                    .dialogToolBar{
-                        height:35px; 
-                        width:46px;
-                        border-right:1px solid #e08541;
-                        display:block;
-                        a{
-                        
+@each $section, $primaryColor, $secondaryColor in (home, $primaryLightBlue, $secondaryLightBlue), 
+                            (labor, $primaryOrange, $secondaryOrange),
+                            (inventory, $primaryGreen, $secondaryGreen),
+                            (giftLoyalty, $primaryPurple, $secondaryPurple),
+                            (reportsAnalytics, $primaryBlueGray, $secondaryBlueGray),
+                            (enterprise, $primaryDarkGray, $secondaryDarkGray),
+                            (people, $primaryLightGreen, $secondaryLightGreen),
+                            (profile, $primaryLightGreen, $secondaryLightGreen){
+                            //Dialog window Per Section    
+                            #ojDialogWrapper-#{$section}DialogWindow{
+                                    .oj-dialog-header{
+                                        height: 35px;
+                                        padding:0px;
+                                        background-color:$primaryColor;
+                                        .oj-dialog-header-close-wrapper{
+                                            width:40px;
+                                            height:35px;
+                                            margin:0;
+                                            padding:0;
+                                            background-color: $secondaryColor;
+                                            &.oj-hover{
+                                                margin-top:0px;
+                                                background-color:$secondaryColor;
+                                                .oj-dialog-close-icon{
+                                                    height:45px;
+                                                    border-color:transparent;
+                                                    background-color:transparent;
+                                                    margin-top:7px;
+                                                }
+                                            }
+                                            .oj-dialog-close-icon{
+                                                width:40px;
+                                                height:35px;
+                                                color:$white;
+                                                margin-top: 7px;
+                                            }
+                                        }
+                                        .oj-dialog-title {
+                                            padding:0px;
+                                            .leftSideTitleDialog{
+                                                width:40px;
+                                                height:35px;
+                                                background-color: $primaryColor;
+                                            }
+                                            .centerTitleDialog{
+                                                &.oj-md-9{
+                                                    width: 81%;
+                                                    max-width: 82%;
+                                                    flex: 81%;
+                                                }
+                                                height:35px;
+                                                background-color:$secondaryColor;
+                                                h2{
+                                                    color:$white;
+                                                    font-size: 21px;
+                                                    font-weight: normal;
+                                                    font-family: Helvetica Neue Light;
+                                                    margin-top:4px;
+                                                    .h2Text{
+                                                        margin-top: 3px;
+                                                        position: absolute;
+                                                    }
+                                                }
+                                                .dialogPageToolBarWrapper{
 
-                        }
+                                                    .dialogPageToolBar{
+                                                        text-align: center;
+                                                        color:$white;
+                                                        margin-top:13px;
+                                                        .fa{
+                                                            font-size: 12px;
+                                                        }
+                                                        .pageNumber{
+                                                            font-weight: normal;
+                                                            font-family: Helvetica Neue Light;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            .rightSideToolBar{
+                                                width: 141px;
+                                                max-width: 141px;
+                                                height:35px; 
+                                                display: inherit;
+                                                .dialogToolBar{
+                                                    height:35px; 
+                                                    width:46px;
+                                                    border-right:1px solid $secondaryColor;
+                                                    display:block;
+                                                    a{
 
-                    }
-                }
-            }  
-        }
-        .oj-dialog-body{
-            .modificationTag{
-                font-style: italic;
-                padding-right:10px;
-            }
-            .showAllLink{
-                .fa{
-                    font-size:12px;
-                }
-            }
-            .orderDetailsWrapper{
-                width:100%;
-                border: 1px solid #e1e1e1;
-                text-align: center;
-                padding:10px 0px;
-                margin-top:15px;
-                .comments{
-                    text-transform: uppercase;
-                }
-                p{
-                    margin:0 0 4px 0
-                }
-            }
-            .alertMessage{
-                width:100%;
-                text-align: center;
-                padding: 10px 0px;
-                margin-top: 20px;
-                background-color: #000000;
-                color: #66f91a;
-                .fa{
-                    font-size:12px;
-                }
-            }
-            #tabs-container{
-                padding:25px 0px;
-                ul{
-                    .oj-tabs-tab{
-                        background-color:#e9ae7b;
-                        border-width: 1px 0 0 0;
-                        .oj-tabs-tab-content{
-                            a{
-                               width:67%; 
-                            }
-                        }
 
-                        &.oj-selected{
-                            background-color:$white;
-                            border-color:#d6dfe6;
-                            border-width: 1px 0 0 0;
-                            a{
-                                .oj-tabs-title{
-                                  color:#000000;  
+                                                    }
+
+                                                }
+                                            }
+                                        }  
+                                    }
+                                    .oj-dialog-body{
+                                        .modificationTag{
+                                            font-style: italic;
+                                            padding-right:10px;
+                                        }
+                                        .showAllLink{
+                                            .fa{
+                                                font-size:12px;
+                                            }
+                                        }
+                                        .orderDetailsWrapper{
+                                            width:100%;
+                                            border: 1px solid #e1e1e1;
+                                            text-align: center;
+                                            padding:10px 0px;
+                                            margin-top:15px;
+                                            .comments{
+                                                text-transform: uppercase;
+                                            }
+                                            p{
+                                                margin:0 0 4px 0
+                                            }
+                                        }
+                                        .alertMessage{
+                                            width:100%;
+                                            text-align: center;
+                                            padding: 10px 0px;
+                                            margin-top: 20px;
+                                            background-color: #000000;
+                                            color: #66f91a;
+                                            .fa{
+                                                font-size:12px;
+                                            }
+                                        }
+                                        #tabs-container{
+                                            padding:25px 0px;
+                                            ul{
+                                                .oj-tabs-tab{
+                                                    background-color:$secondaryColor;
+                                                    border-width: 1px 0 0 0;
+                                                    .oj-tabs-tab-content{
+                                                        a{
+                                                           width:67%; 
+                                                        }
+                                                    }
+
+                                                    &.oj-selected{
+                                                        background-color:$white;
+                                                        border-color:#d6dfe6;
+                                                        border-width: 1px 0 0 0;
+                                                        a{
+                                                            .oj-tabs-title{
+                                                              color:#000000;  
+                                                            }
+
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            .oj-tabs-panel{
+                                                height: 213px;
+                                                &.oj-tabs-selected{
+
+                                                }
+                                            }
+
+                                        }
+                                    }
                                 }
-
+                                
                             }
-                        }
-                    }
-                }
-                .oj-tabs-panel{
-                    height: 213px;
-                    &.oj-tabs-selected{
-
-                    }
-                }
-
-            }
-        }
-    }
+    //Labor Dialog Window
+    
     .payrollId{
         color:$lightGray;
     }
@@ -3047,14 +3085,16 @@ footer{
         padding-left:0px;
             .appheader-appname {
                 color: $headerLogoText;
-                font-size:12px;
+                font-size: 14px;
                 display: inline-block;
             }
         .appheader-logo-oracle {
+            backgroun-position-y: 5px;
             margin-bottom: 8px;
         }
         div:first-child{
-            padding-left:0px;
+            padding-left: 4px;
+            padding-top: 2px;
         }
     }
     //Top Navigation
@@ -3192,7 +3232,7 @@ footer{
     @each $section, $backGroundColor in 
                                   (labor, $primaryOrange),
                                   (inventory, $primaryGreen),
-                                  (giftloyalty, $primaryPurple),
+                                  (giftLoyalty, $primaryPurple),
                                   (enterprise, $secondaryDarkGray),
                                   (profile, $primaryLightGreen)
     {
@@ -3293,171 +3333,180 @@ footer{
         background:url(images/thumb-overlay-mobile-profile.png);
     }
     //Dialog Window Style
-    
-    //Labor Dialog Window
-    #ojDialogWrapper-laborDialogWindow{
-        .oj-dialog-header{
-            height: 70px;
-            padding:0px;
-            background-color:#e39154;
-            .oj-dialog-header-close-wrapper{
-                width:40px;
-                height:35px;
-                margin:0;
-                padding:0;
-                background-color: #e06d1c;
-                &.oj-hover{
-                    margin-top:0px;
-                    background-color:#e06d1c;
-                    .oj-dialog-close-icon{
-                        height:45px;
-                        border-color:transparent;
-                        background-color:transparent;
-                        margin-top:7px;
-                    }
-                }
-                .oj-dialog-close-icon{
-                    width:40px;
-                    height:35px;
-                    color:$white;
-                    margin-top: 7px;
-                }
-            }
-            .oj-dialog-title {
-                padding:0px;
-                .leftSideTitleDialog{
-                    width:40px;
-                    height:35px;
-                    background-color: #e06d1c;
-                }
-                .centerTitleDialog{
-                    &.oj-md-9{
-                        width: 81%;
-                        max-width: 82%;
-                        flex: 81%;
-                    }
-                    height:35px;
-                    background-color:#e08541;
-                    h2{
-                        color:$white;
-                        font-size: 21px;
-                        font-weight: normal;
-                        font-family: Helvetica Neue Light;
-                        margin-top:4px;
-                        .h2Text{
-                            margin-top: 0px;
-                            position: absolute;
-                            margin-left: 29px;
-                        }
-                        .hdImg{
-                            position: absolute;
-                            display: block;
-                            margin-top: -2px;
-                        }
-                    }
-                    .dialogPageToolBarWrapper{
-                        
-                        .dialogPageToolBar{
+@each $section, $primaryColor, $secondaryColor in (home, $primaryLightBlue, $secondaryLightBlue), 
+                            (labor, $primaryOrange, $secondaryOrange),
+                            (inventory, $primaryGreen, $secondaryGreen),
+                            (giftLoyalty, $primaryPurple, $secondaryPurple),
+                            (reportsAnalytics, $primaryBlueGray, $secondaryBlueGray),
+                            (enterprise, $primaryDarkGray, $secondaryDarkGray),
+                            (people, $primaryLightGreen, $secondaryLightGreen),
+                            (profile, $primaryLightGreen, $secondaryLightGreen){
+                            //Global Dialog Window
+                                #ojDialogWrapper-#{$section}DialogWindow{
+                                    .oj-dialog-header{
+                                        height: 70px;
+                                        padding:0px;
+                                        background-color:$primaryColor;
+                                        .oj-dialog-header-close-wrapper{
+                                            width:40px;
+                                            height:35px;
+                                            margin:0;
+                                            padding:0;
+                                            background-color: $secondaryColor;
+                                            &.oj-hover{
+                                                margin-top:0px;
+                                                background-color:$secondaryColor;
+                                                .oj-dialog-close-icon{
+                                                    height:45px;
+                                                    border-color:transparent;
+                                                    background-color:transparent;
+                                                    margin-top:7px;
+                                                }
+                                            }
+                                            .oj-dialog-close-icon{
+                                                width:40px;
+                                                height:35px;
+                                                color:$white;
+                                                margin-top: 7px;
+                                            }
+                                        }
+                                        .oj-dialog-title {
+                                            padding:0px;
+                                            .leftSideTitleDialog{
+                                                width:40px;
+                                                height:35px;
+                                                background-color: $secondaryColor;
+                                            }
+                                            .centerTitleDialog{
+                                                &.oj-md-9{
+                                                    width: 81%;
+                                                    max-width: 82%;
+                                                    flex: 81%;
+                                                }
+                                                height:35px;
+                                                background-color:$primaryColor;
+                                                h2{
+                                                    color:$white;
+                                                    font-size: 21px;
+                                                    font-weight: normal;
+                                                    font-family: Helvetica Neue Light;
+                                                    margin-top:4px;
+                                                    .h2Text{
+                                                        margin-top: 0px;
+                                                        position: absolute;
+                                                        margin-left: 29px;
+                                                    }
+                                                    .hdImg{
+                                                        position: absolute;
+                                                        display: block;
+                                                        margin-top: -2px;
+                                                    }
+                                                }
+                                                .dialogPageToolBarWrapper{
 
-                            color:$white;
-        
-                            .fa{
-                                font-size: 12px;
-                            }
-                            .pageNumber{
-                                font-weight: normal;
-                                font-family: Helvetica Neue Light;
-                            }
-                        }
-                    }
-                }
-                .rightSideToolBar{
-                    width: 40px;
-                    max-width: 40px;
-                    height:35px; 
-                    display: inherit;
-                    .dialogToolBar{
-                        height:35px; 
-                        width:46px;
-                        border-right:1px solid #e08541;
-                        display:block;
-                        a{
-                        
+                                                    .dialogPageToolBar{
 
-                        }
+                                                        color:$white;
 
-                    }
-                }
-            }  
-        }
-        .oj-dialog-body{
-            .modificationTag{
-                font-style: italic;
-                padding-right:10px;
-            }
-            .showAllLink{
-                .fa{
-                    font-size:12px;
-                }
-            }
-            .orderDetailsWrapper{
-                width:100%;
-                border: 1px solid #e1e1e1;
-                text-align: center;
-                padding:10px 0px;
-                margin-top:15px;
-                .comments{
-                    text-transform: uppercase;
-                }
-                p{
-                    margin:0 0 4px 0
-                }
-            }
-            .alertMessage{
-                width:100%;
-                text-align: center;
-                padding: 10px 0px;
-                margin-top: 20px;
-                background-color:$black;
-                color: #66f91a;
-                .fa{
-                    font-size:12px;
-                }
-            }
-            #tabs-container{
-                padding:25px 0px;
-                ul{
-                    .oj-tabs-tab{
-                        background-color:#e9ae7b;
-                        border-width: 1px 0 0 0;
-                        .oj-tabs-tab-content{
-                            a{
-                               width:67%; 
-                            }
-                        }
-                        &.oj-selected{
-                            background-color:$white;
-                            border-color:#d6dfe6;
-                            border-width: 1px 0 0 0;
-                            a{
-                                .oj-tabs-title{
-                                  color:$black;  
+                                                        .fa{
+                                                            font-size: 12px;
+                                                        }
+                                                        .pageNumber{
+                                                            font-weight: normal;
+                                                            font-family: Helvetica Neue Light;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            .rightSideToolBar{
+                                                width: 40px;
+                                                max-width: 40px;
+                                                height:35px; 
+                                                display: inherit;
+                                                .dialogToolBar{
+                                                    height:35px; 
+                                                    width:46px;
+                                                    border-right:1px solid $secondaryColor;
+                                                    display:block;
+                                                    a{
+
+
+                                                    }
+
+                                                }
+                                            }
+                                        }  
+                                    }
+                                    .oj-dialog-body{
+                                        .modificationTag{
+                                            font-style: italic;
+                                            padding-right:10px;
+                                        }
+                                        .showAllLink{
+                                            .fa{
+                                                font-size:12px;
+                                            }
+                                        }
+                                        .orderDetailsWrapper{
+                                            width:100%;
+                                            border: 1px solid #e1e1e1;
+                                            text-align: center;
+                                            padding:10px 0px;
+                                            margin-top:15px;
+                                            .comments{
+                                                text-transform: uppercase;
+                                            }
+                                            p{
+                                                margin:0 0 4px 0
+                                            }
+                                        }
+                                        .alertMessage{
+                                            width:100%;
+                                            text-align: center;
+                                            padding: 10px 0px;
+                                            margin-top: 20px;
+                                            background-color:$black;
+                                            color: #66f91a;
+                                            .fa{
+                                                font-size:12px;
+                                            }
+                                        }
+                                        #tabs-container{
+                                            padding:25px 0px;
+                                            ul{
+                                                .oj-tabs-tab{
+                                                    background-color:$secondaryColor;
+                                                    border-width: 1px 0 0 0;
+                                                    .oj-tabs-tab-content{
+                                                        a{
+                                                           width:67%; 
+                                                        }
+                                                    }
+                                                    &.oj-selected{
+                                                        background-color:$white;
+                                                        border-color:#d6dfe6;
+                                                        border-width: 1px 0 0 0;
+                                                        a{
+                                                            .oj-tabs-title{
+                                                              color:$black;  
+                                                            }
+
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            .oj-tabs-panel{
+                                                height: 213px;
+                                                &.oj-tabs-selected{
+
+                                                }
+                                            }
+
+                                        }
+                                    }
                                 }
-
                             }
-                        }
-                    }
-                }
-                .oj-tabs-panel{
-                    height: 213px;
-                    &.oj-tabs-selected{
-
-                    }
-                }
-
-            }
-        }
-    }
+    
     //Profile
     .profileNameHeader{
         margin-top:15px;

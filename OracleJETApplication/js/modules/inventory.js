@@ -83,7 +83,10 @@ define([
                 this.router = null;
             };
 
-
+            //General Dialog Reusable
+            self.handleOpen =  function(dialog) {
+                $(dialog).ojDialog("open");
+            };
             //Toggles visibility of sections
             self.toggleSections = function () {
                 self.sectionsState(!self.sectionsState());

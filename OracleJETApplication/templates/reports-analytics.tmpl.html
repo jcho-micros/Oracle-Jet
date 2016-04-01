@@ -6,7 +6,7 @@
     <div class="oj-row">
         <div class="oj-sm-12 oj-col">
             <div id="reportsAnalyticsSection" class="oj-panel tab-content">
-
+            <a data-bind="click: function(){$parent.handleOpen('#reportsAnalyticsDialogWindow')}" style="line-height:39px;">edit <i class="fa fa-pencil-square-o"></i></a>
             </div>
         </div>
         <div class="oj-row">
@@ -21,6 +21,8 @@
         </div>
     </div>
 </div>
+<!--reports-analytics dialog modal-->
+<div data-bind="template: {name: 'reports-analytics/dialogwindow/dialogwindow-small'}"></div>
 </script>
 
 <!-- large template -->
@@ -34,7 +36,7 @@
     </div>
         <div id="reportsAnalyticsTabWrapper" class="oj-md-12 oj-col">
         <div class="oj-panel tab-content">
-
+            <a data-bind="click: function(){$parent.handleOpen('#reportsAnalyticsDialogWindow')}" style="line-height:39px;">edit <i class="fa fa-pencil-square-o"></i></a>
         </div>
     </div>
     <div class="oj-row">
@@ -44,6 +46,8 @@
             </footer>
         </div>
     </div>
+<!--reports-analytics dialog modal-->
+<div data-bind="template: {name: 'reports-analytics/dialogwindow/dialogwindow-large'}"></div>
 </script>
 
 

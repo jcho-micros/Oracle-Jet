@@ -45,11 +45,9 @@ define([
 
                     // Retrieve the childRouter instance created in main.js
                     self.empRouter = parentRouter.currentState().value;
-                                          console.log(self.empRouter);
                     //Creates the child router for employees
                     self.empRouter.configure(function (stateId) {
                         var state;
-                                        console.log(stateId);
                         if (stateId) {
                             var data = stateId.toString();
                             state = new oj.RouterState(data, {
@@ -202,13 +200,20 @@ define([
                     self.currentScheduledDates = self.personProfile().currentScheduledDates;
                     self.futureScheduledDates = self.personProfile().futureScheduledDates;
                     self.currentDayStart = ko.observable(self.getFormattedDate('currentDayStart'));
+                    self.currentSecondDayStart = ko.observable(self.getFormattedDate('currentSecondDayStart'));
                     self.currentDayEnd = ko.observable(self.getFormattedDate('currentDayEnd'));
+                    self.currentSecondDayEnd = ko.observable(self.getFormattedDate('currentDayEnd'));
                     self.currentDayStartTime = ko.observable(self.getFormattedTime('currentDayStartTime'));
+                    self.currentDayStartTime = ko.observable(self.getFormattedTime('currentSecondDayStartTime'));
                     self.currentDayEndTime = ko.observable(self.getFormattedTime('currentDayEndTime'));
+                    self.currentSecondDayEndTime = ko.observable(self.getFormattedTime('currentSecondDayEndTime'));
                     self.futureDayStart = ko.observable(self.getFutureFormattedDate('futureDayStart'));
+                    self.futureSecondDayStart = ko.observable(self.getFutureFormattedDate('futureSecondDayStart'));
                     self.futureDayEnd = ko.observable(self.getFutureFormattedDate('futureDayEnd'));
                     self.futureDayStartTime = ko.observable(self.getFutureFormattedTime('futureDayStartTime'));
+                    self.futureSecondDayStartTime = ko.observable(self.getFutureFormattedTime('futureSecondDayStartTime'));
                     self.futureDayEndTime = ko.observable(self.getFutureFormattedTime('futureDayEndTime'));
+                    self.futureSecondDayEndTime = ko.observable(self.getFutureFormattedTime('futureSecondDayEndTime'));
                     self.datasource = new oj.ArrayTableDataSource(self.currentScheduledDates, {idAttribute: 'id'});
                     self.availability = self.personProfile().availability;
                     self.unavailable = self.personProfile().unavailable;
@@ -268,6 +273,9 @@ define([
                     self.pieSeriesValue = ko.observableArray();
                     self.directReports = ko.observableArray([]);
                     self.infoTiles = ko.observableArray();
+                    //Jobs and compensation
+                    self.compensation = ko.observableArray(self.personProfile().compensation);
+self.dataListSource = new oj.ArrayTableDataSource(self.compensation, {idAttribute: 'id'});
                     //payroll 
                     self.extPayrollId = ko.observable(self.personProfile().externalPayrollId);
                     self.minimumwage = ko.observable(self.personProfile().subminimumwage);

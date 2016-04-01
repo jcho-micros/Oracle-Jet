@@ -1,0 +1,75 @@
+<div style="display:none" id="reportsAnalyticsDialogWindow" title="" data-bind="ojComponent:{
+            component: 'ojDialog', 
+            initialVisibility: 'hide', 
+            rootAttributes: {class: 'scheduleModal-dimensions'}, 
+            'position': {'my': 'center center', 'at': 'top center'}}">
+     <!-- Note: the user must provide the aria-labelledby attribute for the dialog to be accessible -->
+     <div class="oj-dialog-header oj-helper-clearfix" aria-labelledby="dialogTitleId">
+         <div id="dialogTitleId" class="oj-dialog-title oj-flex">
+            <div class="leftSideTitleDialog">
+                <img data-bind="attr:{src: 'css/images/arrow-left-dialog.png'}" />
+            </div>
+            <div class="oj-md-9 centerTitleDialog">
+                <div class="oj-flex dialogPageToolBarWrapper">
+                    <div class="oj-md-5 oj-flex-item-nopad">
+                        <h2><img data-bind="attr:{src: 'css/images/header-icon-dialog.png'}" /> <span class="h2Text">reportsAnalytics Dialog Window</span></h2>
+                    </div>
+                    <div class="oj-md-4 oj-flex-item-nopad dialogPageToolBar">
+                        <i class="fa fa-arrow-circle-left"></i><span class="pageNumber"> 1 to 10 </span> <i class="fa fa-arrow-circle-right"></i>
+                    </div>
+                </div>
+
+            </div>
+             <div class="oj-md-2 rightSideToolBar">
+                <span class="dialogToolBar"><a href="#"><img data-bind="attr: {src:'css/images/pdf-icon-dialog.png'}" /></a></span>
+                <span class="dialogToolBar"><a href="#"><img data-bind="attr: {src:'css/images/excel-icon-dialog.png'}" /></a></span>
+                <span class="dialogToolBar"><a href="#"><img data-bind="attr: {src:'css/images/copy-icon-dialog.png'}" /></a></span>
+             </div>
+         </div> 
+     </div>
+
+     <div class="oj-dialog-body">
+         <div class="oj-flex">
+             <div class="oj-md-12 oj-flex-item-nopad oj-md-text-align-end">
+                 <span class="modificationTag">Last modified by DSCHAEFER2 on 9/14/16 11:49:42PM</span> <span class="showAllLink"><a href="#">show all activity <i class="fa fa-arrow-circle-right"></i></a>
+             </div>
+             <div class="oj-md-12 oj-flex-item-pad">
+                 <div class="orderDetailsWrapper">
+                     <div class="orderDetails">
+                        <div class="comments">Order Activity Details (hide/show)</div>
+                        <div>
+                            <p>submitted by</p>
+                            <p>B2B sync</p>
+                            <p>Emails sent to</p>
+                            <p>etc.</p>
+                        </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="oj-md-12 oj-flex-item-pad">
+                 <div class="alertMessage">
+                     <i class="fa fa-check-circle"></i> Order i15-02095 has been successfully <strong>submitted</strong>
+                 </div>
+             </div>
+            <div id="tabs-container" class="oj-md-12 oj-flex-item-pad">
+              <div id="tabs" data-bind="ojComponent:{component: 'ojTabs', 'rootAttributes': {
+                                                'id': 'dialogTabToolBar',
+                                                'style': 'overflow:visible'}}">
+                <!-- tab bar -->
+                <ul>
+                  <li><span>Download</span></li>
+                  <li><span>Send</span></li>
+                </ul>
+
+                <!-- tab contents -->
+                <div id="tabs-1">
+                  <p>Tab 1 Content</p>
+                </div>
+                <div id="tabs-2">
+                  <p>Tab 2 Content</p>
+                </div>
+              </div>
+            </div>
+         </div>
+     </div>
+</div>

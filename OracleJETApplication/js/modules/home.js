@@ -14,7 +14,10 @@ define([
         self.locationCity = ko.observableArray([]);
         
         self.pageHeading = ko.observable("Home");
-
+        //General Dialog Reusable
+        self.handleOpen =  function(dialog) {
+            $(dialog).ojDialog("open");
+        };
         
     }
 
