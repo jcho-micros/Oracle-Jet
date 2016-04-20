@@ -1,0 +1,117 @@
+<!-- small template -->
+<script type="text/html" id="sm_md_header_template">
+    <div class="oj-flex-bar appHeaderMobile">
+        <div class="oj-flex-bar-start appHeaderLogoWrap">
+            <span role="img" class="appHeaderLogo" title="Oracle Logo" alt="Oracle Logo"></span>
+        </div>
+        <div class="oj-flex-bar-end">
+            <a class="oj-button globalStoreLink" data-bind="click: $parent.toggleDrawer">
+                <span class="oj-sm-only-hide" data-bind="text: globalstoreName()? globalstoreName() : 'Beacon Hill'"></span>
+                <span class="arrowLocation fa fa-location-arrow"></span>
+            </a>
+            <button id="userMenu" data-bind="ojComponent: { component: 'ojButton',
+                             label: 'Avatar', 
+                             display: 'icons',
+                             icons: {start:'customUserIcon'},
+                             menu: '#appheaderGlobalNavMenuId'
+                             }">
+            </button>
+            <ul id="appheaderGlobalNavMenuId" data-bind="ojComponent: {component: 'ojMenu', select: menuItemSelect}" style="display:none">
+                <li data-bind="attr: {label: userName}">
+                    <a data-bind="text: userName, href: url"></a>
+                </li>
+
+                <!-- ko foreach: globalNavItems -->
+                <li data-bind="attr: {id: label}">
+                    <a data-bind="text: label, href: url"></a>
+                </li>
+                <!-- /ko -->
+            </ul>
+        </div>
+    </div>
+    <div class="oj-flex-item">
+        <div id="appHeaderMobileNav" data-bind="ojComponent: {component: 'ojNavigationList',
+                              drillMode: 'none', 
+                              edge: 'top', 
+                              selection: $root.router.stateId(),
+                              data: dataSource,
+                              optionChange: $root.optionChangeHandler,
+                              item: { template: 'app_nav_template' }
+                              }" aria-label="Choose only one navigation element">
+        </div>
+    </div>
+    <div class="oj-flex mobileTitle oj-sm-only-hide" data-bind="css: $root.router.stateId() + 'TitleWrap'">
+        <h1 data-bind="text: $root.pageTitle" class="pageTitle"></h1>
+    </div>
+</script>
+<!-- large template -->
+<script type="text/html" id="lg_xl_header_template">
+    <div class="oj-flex appHeaderDesktop">
+        <div class="oj-flex-item appHeaderLogoWrap">
+            <div role="img" class="oj-flex-item appHeaderLogo" title="Oracle Logo" alt="Oracle Logo"></div>
+            <div class="appHeaderName" data-bind="text: appName"></div>
+        </div>
+
+        <div class="oj-flex-item">
+            <div id="appHeaderDesktopNav" class="oj-xl-justify-content-flex-end" data-bind="ojComponent: {component: 'ojNavigationList',
+                              drillMode: 'none',
+                              edge: 'top',
+                              selection: $root.router.stateId(),
+                              data: dataSource,
+                              optionChange: $root.optionChangeHandler,
+                              item: { template: 'app_nav_template' }
+                              }" aria-label="Choose only one navigation element">
+            </div>
+        </div>
+
+        <div class="oj-flex-item userMenuWrap">
+            <!-- This pulldown menu is used for wider screens -->
+
+
+            <button id="userMenu" data-bind="ojComponent: { component: 'ojButton',
+                             label: 'Avatar', 
+                             display: 'icons',
+                             icons: {start:'customUserIcon'},
+                             menu: '#appheaderGlobalNavMenuId'
+                             }">
+            </button>
+            <ul id="appheaderGlobalNavMenuId" data-bind="ojComponent: {component: 'ojMenu', select: menuItemSelect}" style="display:none">
+
+                <li data-bind="attr: {label: userName}">
+                    <a data-bind="text: userName, href: url"></a>
+                </li>
+
+                <!-- ko foreach: globalNavItems -->
+                <li data-bind="attr: {id: label}">
+                    <a data-bind="text: label, href: url"></a>
+                </li>
+                <!-- /ko -->
+            </ul>
+            <button class="oj-button globalStoreLink" data-bind="click: $parent.toggleDrawer">
+                <span class="globalStoreText" data-bind="text: globalstoreName()? globalstoreName() : 'Beacon Hill'"></span>
+                <span class="arrowLocation fa fa-location-arrow"></span>
+            </button>
+        </div>
+    </div>
+    <div class="oj-flex" data-bind="css: $root.router.stateId() + 'TitleWrap'">
+        <h1 data-bind="text: $root.pageTitle" class="pageTitle"></h1>
+    </div>
+</script>
+<!-- oj-row -->
+<script type="text/html" id="app_nav_template">
+    <li data-bind="attr: {id: $data['id']}">
+        <a href="#">
+            <span class="topNavImgIcon" width="24px" height="22px"></span>
+        </a>
+    </li>
+</script>
+
+<script type="text/html" id="app_nav_off_canvas_template">
+    <li>
+        <a href="#">
+            <span data-bind="css: $data['iconClass']"></span>
+            <span data-bind="text: $data['name']"></span>
+        </a>
+    </li>
+</script>
+<div id="headerTemplate" data-bind="template: {name: $root.large() ? 'lg_xl_header_template' : 'sm_md_header_template'}"></div>

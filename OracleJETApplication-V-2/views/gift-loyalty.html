@@ -1,0 +1,31 @@
+<!-- small template -->
+<script type="text/html" id="sm_template">
+  <div id="gift-loyaltyNavList" class="oj-flex mobileSubNav" >
+        
+    </div>
+   <div class="mainContentArea">
+         <div class="oj-flex oj-flex-items-pad">
+            <div id="gift-loyaltySection" class="oj-flex-item">
+                <a data-bind="click: function(){$root.handleOpen('#gift-loyaltyDialogWindow')}" style="line-height:39px;">edit <i class="fa fa-pencil-square-o"></i></a>
+        
+            </div>
+        </div>
+    </div>
+    <!--gift-loyalty dialog modal-->
+    <div data-bind="template: {name: 'gift-loyalty/dialogwindow/dialogwindow-small'}"></div>
+</script>
+
+<!-- large template -->
+<script type="text/html" id="md_lg_xl_template">
+    <div class="oj-flex oj-flex-items-pad">
+        <div class="oj-flex-item">
+            -large
+            <a data-bind="click: function(){$root.handleOpen('#gift-loyaltyDialogWindow')}" style="line-height:39px;">edit <i class="fa fa-pencil-square-o"></i></a>
+        </div>
+    </div>
+    <!--gift-loyalty dialog modal-->
+    <div data-bind="template: {name: 'gift-loyalty/dialogwindow/dialogwindow-large'}"></div>
+</script>
+
+
+<div id="templateWrapper" data-bind="template: {name: $root.medium() ? 'md_lg_xl_template' : 'sm_template'}"></div>
