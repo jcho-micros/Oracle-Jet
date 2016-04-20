@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Global Template V2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+    <link href="css/libs/fa/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/oj/v2.0.0/alta/oj-alta.css" rel="stylesheet" type="text/css" />
+    <!--        Once completed remove override.css from file-->
+    <link href="css/oj-override.css" rel="stylesheet" type="text/css" />
+    
+    <script data-main="js/main" src="js/libs/require/require.js"></script>
+</head>
+
+<body id="globalBody" class="oj-web-applayout-page">
+
+    <header data-bind="ojModule: { name: 'header'}" class="appHeader oj-web-applayout-header"></header>
+    
+    <div id="topDrawer" class="oj-offcanvas-top" data-bind="ojModule: {
+                        name: 'header',
+                        viewName: 'off-canvas-template-top'}">
+    </div>
+
+    <div class="oj-web-applayout-content">
+        <div id="content" data-bind="ojModule: $root.router.moduleConfig"></div>
+    </div>
+    
+    <footer role="contentinfo" class="oj-web-applayout-footer">
+        <div data-bind="ojModule: {
+                                        name: 'footer', 
+                                        viewName: 'footer'}">
+        </div>
+    </footer>
+</body>
+
+</html>
