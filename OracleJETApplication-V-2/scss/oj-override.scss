@@ -59,6 +59,12 @@ $mediumGray: #696e72;
 $darkGray: #454545;
 $oliveGreen: #88b300;
 
+//Offcanvas
+$offCanvasGray: #454545;
+$offCanvasGrayLi: #f5f5f5;
+$sideNavBckColor:#f5f5f5;
+$sideNavLinkHover: #454545;
+$sideNavLinksBlue: #045fab;
 /*****Section Variables*****/
 // font family 
 
@@ -128,6 +134,11 @@ $navigationListDesktopTextColorSelected:   $black;
 $navListSelected: $darkGray;
 $tabActiveTxtColor: $black; 
 $tabHoverBckgColor: $white;
+//Offcanvas Styles
+$sideNavLinkColor:$sideNavLinksBlue;
+$sideNavLinkColorHover:$white;
+$sideNavLinkBckBgHover: $sideNavLinkHover;
+$sideNavLinkBckColor:$sideNavBckColor;
 
 //Page Variables
 $mainAreaBckgColor: $white;
@@ -517,7 +528,21 @@ html:not([dir="rtl"]) .oj-dialog-title{
                                  }
     }
 }
-
+//Left hand Side offcanvas
+//Left Side Navigation
+      #appDrawer{
+        background-color: $darkGray;
+        width:200px;
+        outline-color: transparent;
+        .oj-navigationlist-element{
+            .oj-default{
+                .oj-navigationlist-item-label{
+                    color:$white;
+                    font-weight:300;
+                }
+            }
+        }
+    }
 /*Page Tabs*/
 .oj-navigationlist-page-level.oj-navigationlist-vertical:not(.oj-navigationlist-icon-only) .oj-navigationlist-item:not(.oj-disabled) a.oj-navigationlist-item-content .oj-navigationlist-item-label{
     color: $mobileNavTextColor;
@@ -608,7 +633,10 @@ html:not([dir="rtl"]) .oj-dialog-title{
         margin: 5px 10px 0 10px;
     }
 }
-
+//Header OffCanvas
+.hamburger {
+    margin-top: 4px;
+}
 //large/desktop (UP)
 @media only screen and (min-width: 1024px){
     //Desktop Page Layout

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Global Template V2</title>
+    <title>Enterprise Back Office</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
     <link href="css/libs/fa/font-awesome.min.css" rel="stylesheet" type="text/css" />
@@ -20,7 +20,12 @@
                         name: 'header',
                         viewName: 'off-canvas-template-top'}">
     </div>
-
+    <div id="appDrawer" class="oj-offcanvas-start">
+        <div data-bind="ojModule: {
+                        name: 'header', 
+                        viewName: 'off-canvas-template-left'}">
+        </div>
+    </div>
     <div class="oj-web-applayout-content">
         <div id="content" data-bind="ojModule: $root.router.moduleConfig"></div>
     </div>

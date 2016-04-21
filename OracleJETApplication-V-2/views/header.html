@@ -2,6 +2,15 @@
 <script type="text/html" id="sm_md_header_template">
     <div class="oj-flex-bar appHeaderMobile">
         <div class="oj-flex-bar-start appHeaderLogoWrap">
+            <div class="hamburger">
+                <button data-bind="click: toggleAppDrawer,
+                                   ojComponent: {component:'ojButton', 
+                                   label: 'Toggle outer offcanvas', 
+                                   chroming: 'half',
+                                   display: 'icons', 
+                                   icons: {start: 'oj-fwk-icon-hamburger oj-fwk-icon'}}">
+                </button>
+            </div>
             <span role="img" class="appHeaderLogo" title="Oracle Logo" alt="Oracle Logo"></span>
         </div>
         <div class="oj-flex-bar-end">
@@ -47,6 +56,15 @@
 <!-- large template -->
 <script type="text/html" id="lg_xl_header_template">
     <div class="oj-flex appHeaderDesktop">
+        <div class="hamburger">
+            <button data-bind="click: toggleAppDrawer,
+                               ojComponent: {component:'ojButton', 
+                               label: 'Toggle outer offcanvas', 
+                               chroming: 'half',
+                               display: 'icons', 
+                               icons: {start: 'oj-fwk-icon-hamburger oj-fwk-icon'}}">
+            </button>
+        </div>
         <div class="oj-flex-item appHeaderLogoWrap">
             <div role="img" class="oj-flex-item appHeaderLogo" title="Oracle Logo" alt="Oracle Logo"></div>
             <div class="appHeaderName" data-bind="text: appName"></div>
