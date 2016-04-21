@@ -21,7 +21,9 @@ requirejs.config({
         'ojL10n': 'libs/oj/v2.0.0/ojL10n',
         'ojtranslations': 'libs/oj/v2.0.0/resources',
         'signals': 'libs/js-signals/signals.min',
-        'text': 'libs/require/text'
+        'crossroads': 'libs/crossroads/crossroads.min',
+        'text': 'libs/require/text',
+        'moment': 'libs/moment/moment.min'
     }
     //endinjector
     ,
