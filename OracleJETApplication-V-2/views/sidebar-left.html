@@ -1,0 +1,10 @@
+<div id="sideNavigationContainer">
+    <div data-bind="text:username"></div>
+    <div data-bind="text:property"></div>
+    <input type="text" placeholder="My 1st Page" class="sidebar-left-input">
+    <ul class="sidebar-left-nav" data-bind="foreach: $data.dataSideSource">
+        <li data-bind="attr: {id: name}">
+            <a data-bind="text: name, href: url"> <span class="sideLink"></span> </a>
+        </li>
+    </ul>
+</div>
