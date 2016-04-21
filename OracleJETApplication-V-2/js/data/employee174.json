@@ -1,0 +1,696 @@
+{
+      "empId" : 174,
+      "Prefix" : 0,
+      "prefixField" : "Mr.",
+      "firstName" : "Ernest",
+      "lastName" : "Abel",
+      "middleName" : "",
+      "title" : "Public Relations Reprentative",
+      "displayNameCheckBox" : 0,
+      "displayName" : "",
+      "posCheckNameCheckbox" : 1,
+      "posCheckName" : "test",
+      "email" : "EABEL",
+      "receiveEmailNotification" : 1,
+      "receiveTextNotification" : 1,
+      "publishInCompanyDirectory" : 1,
+      "optOut" : 1,
+      "phone" : "011.44.1644.429267",
+      "mobile" : "011.44.1644.429267",
+      "otherNumber" : "515.123.8080",
+      "phoneExtension" : "x231",
+      "faxNumber" : "",
+      "address1" : "Magdalen Centre The Oxford Science Park",
+      "address2" : "",
+      "city" : "Oxford",
+      "state" : "Oxford",
+      "country" : "UK",
+      "postal" : "OX9 9ZB",
+      "language": "English",
+      "inCityLimits" : 0,
+      "livesOnProperty" : 0,
+      "twitter" : "Ernest",
+      "facebook" : "Ernest",
+      "google" : "Ernest",
+      "linkedIn" : "Ernest",
+      "gender" : "Male",
+      "ethnicity": "caucasian",
+      "timeZone" : "US CST",
+      "hireDate" : "2010-01-01T00:00:00",
+      "hireStatus": "Active",
+      "profilePicture" : "images/people/174.png",
+      "veteranStatus" : 1,
+      "vietnamEra" : 1,
+      "otherEligible" : 1,
+      "otherProtected": 1,
+      "armedForcesServiceMedal": 1,
+      "recentlySeparated": 1,
+      "specialDisabled": 1,
+      "registeredDisabledNumber" : "0123456",
+      "dischargeDate" : "2001-04-22T00:00:00-08:00",
+      "emergencyName" : "Suzanne Jones",
+      "relationship" : "Mother",
+      "emergencyAddress" : "123 Main Street",
+      "emergencyCity" : "City",
+      "emergencyState" : "State",
+      "emergencyZipCode" : "60111",
+      "emergencyPhone" : "312-411-2225",
+      "homeStore": "Atlanta",
+      "externalPayrollId": "1235",
+      "subminimumwage" : 0,
+      "overtimeexempt" : 0,
+      "dateofbirth" : "1965-04-22",
+      "insstatus" : "Permanent Resident",
+      "admissionnumber" : "1234567890",
+      "insexpirationdate" : "",
+      "socialsecuritynumber" : "123557894",
+            "identifydocumenttype" : "list-a",
+      "bi9documenttype" : "fslidcard",
+      "bi9documentid" : "0001112223333",
+      "bi9documentexpiration" : "2016-04-22",
+      "bi9documentupload" : "Bi9upload.pdf",
+      "ci9documenttype" : "ussscard",
+      "ci9documentid" : "0001112223333",
+      "ci9documentexpiration" : "2016-04-22",
+      "ci9documentupload" : "Ci9upload.pdf",
+      "agecertification" : 0,
+      "certificationnumber" : "222245687",
+      "certificationexpiration" : "2016-04-22",
+      "agecertupload" : "age-cert.pdf",
+      "workpermit" : 1,
+      "workpermitnumber" : "222245687",
+      "workpermitexpiration" : "2016-04-22",
+      "workpermitupload" : "work-permit.pdf",
+      "compRatio" : 46,
+      "salary" : 11000.0,
+      "bonus" : 2750.0,
+      "commission" : 0.0,
+      "rating" : 4,
+      "potential" : 2,
+      "deptId" : 70,
+      "mgrId" : 149,
+      "deptName" : "Public Relations",
+      "mgrFirstName" : "Eleni",
+      "mgrLastName" : "Zlotkey",
+      "teamAvgRating" : 4.4,
+      "empMeetings" : 0,
+      "empEvents" : 0,
+      "notifyApproved" : 3,
+      "notifyWaiting" : 4,
+      "notifyRejected" : 1,
+      "groupSize" : 1,
+      "groupAvgRating" : 4.0,
+      "groupAvgPotential" : 2.0,
+      "groupCompRatioAbove" : 0,
+      "groupCompRatioIn" : 1,
+      "groupCompRatioBelow" : 1,
+      "groupMeetings" : 1,
+      "groupEvents" : 2,
+      "groupTrainings" : 0,
+      "groupTimeOff" : 1,
+      "currentScheduledDates" : [ {
+         "id" : 1,
+         "currentDayStart" : "2016-04-17T00:00:00-07:00",
+         "currentDayStartTime" : "1000",
+         "currentDayEnd" : "2016-04-17T00:00:00-15:00",
+         "currentDayEndTime" : "1400",
+         "currentSecondDayStart" : "2016-04-17T00:00:00-07:00",
+         "currentSecondDayStartTime" : "1900",
+         "currentSecondDayEnd" : "2016-04-17T00:00:00-15:00",
+         "currentSecondDayEndTime" : "2300",
+         "location" : "Resturant",
+         "revenueCenter" : "In-Dining",
+         "job" : "Bartender",
+         "station" : "Front Bar",
+         "status" : "Schdeuled",
+         "notes" : "N/A"
+      },{
+         "id" : 2,
+         "currentDayStart" : "2016-04-18T00:00:00-07:00",
+         "currentDayStartTime" : "1000",
+         "currentDayEnd" : "2016-04-18T00:00:00-15:00",
+         "currentDayEndTime" : "1400",
+         "currentSecondDayStart" : "2016-04-18T00:00:00-07:00",
+         "currentSecondDayStartTime" : "1900",
+         "currentSecondDayEnd" : "2016-04-18T00:00:00-15:00",
+         "currentSecondDayEndTime" : "2300",
+         "location" : "Resturant",
+         "revenueCenter" : "In-Dining",
+         "job" : "Off",
+         "station" : "Not Assigned",
+         "status" : "Not Schdeuled",
+         "notes" : "N/A"
+      },{
+         "id" : 3,
+         "currentDayStart" : "2016-04-19T00:00:00-07:00",
+         "currentDayStartTime" : "1000",
+         "currentDayEnd" : "2016-04-19T00:00:00-15:00",
+         "currentDayEndTime" : "1400",
+         "currentSecondDayStart" : "2016-04-19T00:00:00-07:00",
+         "currentSecondDayStartTime" : "1900",
+         "currentSecondDayEnd" : "2016-04-19T00:00:00-15:00",
+         "currentSecondDayEndTime" : "2300",
+         "location" : "Resturant",
+         "revenueCenter" : "In-Dining",
+         "job" : "Off",
+         "station" : "Not Assigned",
+         "status" : "Not Schdeuled",
+         "notes" : "N/A"
+      }, {
+         "id" : 4,
+         "currentDayStart" : "2016-04-20T00:00:00-07:00",
+         "currentDayStartTime" : "1000",
+         "currentDayEnd" : "2016-04-20T00:00:00-15:00",
+         "currentDayEndTime" : "1400",
+         "currentSecondDayStart" : "2016-04-20T00:00:00-07:00",
+         "currentSecondDayStartTime" : "1900",
+         "currentSecondDayEnd" : "2016-04-20T00:00:00-15:00",
+         "currentSecondDayEndTime" : "2300",
+         "location" : "Resturant",
+         "revenueCenter" : "In-Dining",
+         "job" : "Bartender",
+         "station" : "Front Bar",
+         "status" : "Schdeuled",
+         "notes" : "N/A"
+      },{
+         "id" : 5,
+         "currentDayStart" : "2016-04-21T00:00:00-07:00",
+         "currentDayStartTime" : "1000",
+         "currentDayEnd" : "2016-04-21T00:00:00-15:00",
+         "currentDayEndTime" : "1400",
+         "currentSecondDayStart" : "2016-04-21T00:00:00-07:00",
+         "currentSecondDayStartTime" : "1900",
+         "currentSecondDayEnd" : "2016-04-21T00:00:00-15:00",
+         "currentSecondDayEndTime" : "2300",
+         "location" : "Resturant",
+         "revenueCenter" : "In-Dining",
+         "job" : "Bartender",
+         "station" : "Front Bar",
+         "status" : "Schdeuled",
+         "notes" : "N/A"
+      },{
+         "id" : 6,
+         "currentDayStart" : "2016-04-22T00:00:00-07:00",
+         "currentDayStartTime" : "1000",
+         "currentDayEnd" : "2016-04-22T00:00:00-15:00",
+         "currentDayEndTime" : "1400",
+         "currentSecondDayStart" : "2016-04-22T00:00:00-07:00",
+         "currentSecondDayStartTime" : "1900",
+         "currentSecondDayEnd" : "2016-04-22T00:00:00-15:00",
+         "currentSecondDayEndTime" : "2300",
+         "location" : "Resturant",
+         "revenueCenter" : "In-Dining",
+         "job" : "Bartender",
+         "station" : "Front Bar",
+         "status" : "Schdeuled",
+         "notes" : "N/A"
+      },{
+         "id" : 7,
+         "currentDayStart" : "2016-04-23T00:00:00-07:00",
+         "currentDayStartTime" : "1000",
+         "currentDayEnd" : "2016-04-23T00:00:00-15:00",
+         "currentDayEndTime" : "1400",
+         "currentSecondDayStart" : "2016-04-23T00:00:00-07:00",
+         "currentSecondDayStartTime" : "1900",
+         "currentSecondDayEnd" : "2016-04-23T00:00:00-15:00",
+         "currentSecondDayEndTime" : "2300",
+         "location" : "Resturant",
+         "revenueCenter" : "In-Dining",
+         "job" : "Bartender",
+         "station" : "Front Bar",
+         "status" : "Schdeuled",
+         "notes" : "N/A"
+      }],
+      "futureScheduledDates" : [ {
+         "id" : 1,
+         "futureDayStart" : "2016-04-24T00:00:00-07:00",
+         "futureDayStartTime" : "0600",
+         "futureDayEnd" : "2016-04-24T00:00:00-15:00",
+         "futureDayEndTime" : "1300",
+         "futureSecondDayStart" : "2016-04-24T00:00:00-07:00",
+         "futureSecondDayStartTime" : "0600",
+         "futureSecondDayEnd" : "2016-04-24T00:00:00-15:00",
+         "futureSecondDayEndTime" : "1300",
+         "location" : "Resturant",
+         "revenueCenter" : "In-Dining",
+         "job" : "Off",
+         "station" : "Not Assigned",
+         "status" : "Not Schdeuled",
+         "notes" : "N/A"
+      },{
+         "id" : 2,
+         "futureDayStart" : "2016-04-25T00:00:00-07:00",
+         "futureDayStartTime" : "0600",
+         "futureDayEnd" : "2016-04-25T00:00:00-15:00",
+         "futureDayEndTime" : "1300",
+         "futureSecondDayStart" : "2016-04-25T00:00:00-07:00",
+         "futureSecondDayStartTime" : "0600",
+         "futureSecondDayEnd" : "2016-04-25T00:00:00-15:00",
+         "futureSecondDayEndTime" : "1300",
+         "location" : "Resturant",
+         "revenueCenter" : "In-Dining",
+         "job" : "Off",
+         "station" : "Not Assigned",
+         "status" : "Not Schdeuled",
+         "notes" : "N/A"
+      },{
+         "id" : 3,
+         "futureDayStart" : "2016-04-26T00:00:00-07:00",
+         "futureDayStartTime" : "0600",
+         "futureDayEnd" : "2016-04-26T00:00:00-15:00",
+         "futureDayEndTime" : "1300",
+         "futureSecondDayStart" : "2016-04-26T00:00:00-07:00",
+         "futureSecondDayStartTime" : "0600",
+         "futureSecondDayEnd" : "2016-04-26T00:00:00-15:00",
+         "futureSecondDayEndTime" : "1300",
+         "location" : "Resturant",
+         "revenueCenter" : "In-Dining",
+         "job" : "Off",
+         "station" : "Not Assigned",
+         "status" : "Not Schdeuled",
+         "notes" : "N/A"
+      }, {
+         "id" : 4,
+         "futureDayStart" : "2016-04-27T00:00:00-07:00",
+         "futureDayStartTime" : "0600",
+         "futureDayEnd" : "2016-04-27T00:00:00-15:00",
+         "futureDayEndTime" : "1300",
+         "futureSecondDayStart" : "2016-04-27T00:00:00-07:00",
+         "futureSecondDayStartTime" : "0600",
+         "futureSecondDayEnd" : "2016-04-27T00:00:00-15:00",
+         "futureSecondDayEndTime" : "1300",
+         "location" : "Resturant",
+         "revenueCenter" : "In-Dining",
+         "job" : "Off",
+         "station" : "Not Assigned",
+         "status" : "Not Schdeuled",
+         "notes" : "N/A"
+      },{
+         "id" : 5,
+         "futureDayStart" : "2016-04-28T00:00:00-07:00",
+         "futureDayStartTime" : "0600",
+         "futureDayEnd" : "2016-04-28T00:00:00-15:00",
+         "futureDayEndTime" : "1300",
+         "futureSecondDayStart" : "2016-04-28T00:00:00-07:00",
+         "futureSecondDayStartTime" : "0600",
+         "futureSecondDayEnd" : "2016-04-28T00:00:00-15:00",
+         "futureSecondDayEndTime" : "1300",
+         "location" : "Resturant",
+         "revenueCenter" : "In-Dining",
+         "job" : "Off",
+         "station" : "Not Assigned",
+         "status" : "Not Schdeuled",
+         "notes" : "N/A"
+      },{
+         "id" : 6,
+         "futureDayStart" : "2016-04-29T00:00:00-07:00",
+         "futureDayStartTime" : "0600",
+         "futureDayEnd" : "2016-04-29T00:00:00-15:00",
+         "futureDayEndTime" : "1300",
+         "futureSecondDayStart" : "2016-04-29T00:00:00-07:00",
+         "futureSecondDayStartTime" : "0600",
+         "futureSecondDayEnd" : "2016-04-29T00:00:00-15:00",
+         "futureSecondDayEndTime" : "1300",
+         "location" : "Resturant",
+         "revenueCenter" : "In-Dining",
+         "job" : "Off",
+         "station" : "Not Assigned",
+         "status" : "Not Schdeuled",
+         "notes" : "N/A"
+      },{
+         "id" : 7,
+         "futureDayStart" : "2016-04-30T00:00:00-07:00",
+         "futureDayStartTime" : "0600",
+         "futureDayEnd" : "2016-04-30T00:00:00-15:00",
+         "futureDayEndTime" : "1300",
+         "futureSecondDayStart" : "2016-04-30T00:00:00-07:00",
+         "futureSecondDayStartTime" : "0600",
+         "futureSecondDayEnd" : "2016-04-30T00:00:00-15:00",
+         "futureSecondDayEndTime" : "1300",
+         "location" : "Resturant",
+         "revenueCenter" : "In-Dining",
+         "job" : "Off",
+         "station" : "Not Assigned",
+         "status" : "Not Schdeuled",
+         "notes" : "N/A"
+      }],
+      "availability" : [{
+            "day" : "Sunday",
+            "hoursavailablefrom" : 0,
+            "hoursavailableto" : 0
+          },{
+            "day" : "Monday",
+            "hoursavailablefrom" : 4,
+            "hoursavailableto" : 6
+          },{
+            "day" : "Tuesday",
+            "hoursavailablefrom" : 0,
+            "hoursavailableto" : 2
+          },{
+            "day" : "Wednesday",
+            "hoursavailablefrom" : 4,
+            "hoursavailableto" : 12
+          },{
+            "day" : "Thursday",
+            "hoursavailablefrom" : 0,
+            "hoursavailableto" : 0
+          },{
+            "day" : "Friday",
+            "hoursavailablefrom" : 2,
+            "hoursavailableto" : 4
+          },{
+            "day" : "Saturday",
+            "hoursavailablefrom" : 4,
+            "hoursavailableto" : 12
+        }],
+      "daysandtimes" : [{
+            "timesegment" : "unavailable",
+            "day" : "monday",
+            "allday" : "yes",
+            "starttime" : "",
+            "fullstarttime" : "",
+            "endtime" : "",
+            "fullendtime" : ""
+            },{
+            "timesegment" : "unavailable",
+            "day" : "tuesday",
+            "allday" : "no",
+            "starttime" : "T15:00:00-05:00",
+            "fullstarttime" : "2016-02-26T15:23:00-05:00",
+            "endtime" : "T23:00:00-05:00",
+            "fullendtime" : "2016-02-26T23:00:00-05:00"
+            },{
+            "timesegment" : "preferred",
+            "day" : "thursday",
+            "allday" : "yes",
+            "starttime" : "",
+            "fullstarttime" : "",
+            "endtime" : "",
+            "fullendtime" : ""
+            },{
+            "timesegment" : "preferred",
+            "day" : "saturday",
+            "allday" : "no",
+            "starttime" : "T14:00:00-05:00",
+            "fullstarttime" : "2016-02-26T14:00:00-05:00",
+            "endtime" : "T23:00:00-05:00",
+            "fullendtime" : "2016-02-26T23:00:00-05:00"
+        }],
+      "schooldistrict" : "None",
+      "compensation" : [{
+            "locationname" : "Baltimore",
+            "jobcodename" : "Waiter",
+            "payrate" : "12.00",
+            "effectivestartdate" : "2015-02-26T14:00:00-05:00",
+            "effectiveenddate" : "2016-02-26T14:00:00-05:00"
+            },{
+            "locationname" : "Baltimore",
+            "jobcodename" : "Host",
+            "payrate" : "8.00",
+            "effectivestartdate" : "2015-02-26T14:00:00-05:00",
+            "effectiveenddate" : "2016-02-26T14:00:00-05:00"
+      }],
+      "comps" : [ {
+         "bonus" : 2750,
+         "comission" : 0,
+         "compId" : 50140,
+         "compRatio" : 46,
+         "compSalary" : 11000,
+         "effective" : "2015-04-02T00:00:00-07:00"
+      }, {
+         "bonus" : 2722.5,
+         "comission" : 0,
+         "compId" : 50141,
+         "compRatio" : 32,
+         "compSalary" : 10450,
+         "effective" : "2014-08-10T00:00:00-07:00"
+      }, {
+         "bonus" : 2586.375,
+         "comission" : 0,
+         "compId" : 50142,
+         "compRatio" : 60,
+         "compSalary" : 9927.5,
+         "effective" : "2013-07-02T00:00:00-07:00"
+      }, {
+         "bonus" : 2534.6475,
+         "comission" : 0,
+         "compId" : 50143,
+         "compRatio" : 34,
+         "compSalary" : 9629.675,
+         "effective" : "2012-09-21T00:00:00-07:00"
+      }, {
+         "bonus" : 2407.915125,
+         "comission" : 0,
+         "compId" : 50144,
+         "compRatio" : 58,
+         "compSalary" : 9148.19125,
+         "effective" : "2011-08-10T00:00:00-07:00"
+      }, {
+         "bonus" : 2383.83597375,
+         "comission" : 0,
+         "compId" : 50145,
+         "compRatio" : 47,
+         "compSalary" : 8782.2636,
+         "effective" : "2010-04-16T00:00:00-07:00"
+      } ],
+      "perfs" : [ {
+         "effective" : "2010-04-09T00:00:00-07:00",
+         "perfId" : 41881,
+         "potential" : 5,
+         "rating" : 3
+      }, {
+         "effective" : "2011-12-24T00:00:00-08:00",
+         "perfId" : 41882,
+         "potential" : 2,
+         "rating" : 3
+      }, {
+         "effective" : "2012-05-03T00:00:00-07:00",
+         "perfId" : 41883,
+         "potential" : 5,
+         "rating" : 2
+      }, {
+         "effective" : "2013-05-14T00:00:00-07:00",
+         "perfId" : 41884,
+         "potential" : 2,
+         "rating" : 5
+      }, {
+         "effective" : "2014-10-12T00:00:00-07:00",
+         "perfId" : 41885,
+         "potential" : 2,
+         "rating" : 2
+      }, {
+         "effective" : "2015-01-27T00:00:00-08:00",
+         "perfId" : 41886,
+         "potential" : 2,
+         "rating" : 4
+      } ],
+      "skills" : [ {
+         "empskillassignId" : 80998,
+         "empskillassignRating" : 3,
+         "skill" : {
+            "skill" : "HCM",
+            "skillId" : 17
+         }
+      }, {
+         "empskillassignId" : 80999,
+         "empskillassignRating" : 2,
+         "skill" : {
+            "skill" : "CRM",
+            "skillId" : 16
+         }
+      }, {
+         "empskillassignId" : 81000,
+         "empskillassignRating" : 4,
+         "skill" : {
+            "skill" : "Human Resources",
+            "skillId" : 18
+         }
+      }, {
+         "empskillassignId" : 81001,
+         "empskillassignRating" : 4,
+         "skill" : {
+            "skill" : "Javascript",
+            "skillId" : 6
+         }
+      }, {
+         "empskillassignId" : 81002,
+         "empskillassignRating" : 5,
+         "skill" : {
+            "skill" : "Corporate Tax",
+            "skillDescription" : "Corporate Tax",
+            "skillId" : 2
+         }
+      } ],
+      "events" : [ {
+         "color" : "#81bb5f",
+         "description" : "Sick",
+         "end" : "2010-08-11T00:00:00-07:00",
+         "eventId" : 147601,
+         "name" : "Time Off",
+         "start" : "2010-08-07T00:00:00-07:00",
+         "type" : "4"
+      }, {
+         "color" : "#81bb5f",
+         "description" : "Sick",
+         "end" : "2010-08-21T00:00:00-07:00",
+         "eventId" : 147602,
+         "name" : "Time Off",
+         "start" : "2010-08-20T00:00:00-07:00",
+         "type" : "4"
+      }, {
+         "color" : "#81bb5f",
+         "description" : "Sick",
+         "end" : "2011-09-30T00:00:00-07:00",
+         "eventId" : 147603,
+         "name" : "Time Off",
+         "start" : "2011-09-27T00:00:00-07:00",
+         "type" : "4"
+      }, {
+         "color" : "#fbce4a",
+         "description" : "Effective Mgmt",
+         "end" : "2011-03-21T00:00:00-07:00",
+         "eventId" : 147604,
+         "name" : "Training",
+         "start" : "2011-03-18T00:00:00-07:00",
+         "type" : "3"
+      }, {
+         "color" : "#fbce4a",
+         "description" : "Mobility",
+         "end" : "2012-05-10T00:00:00-07:00",
+         "eventId" : 147605,
+         "name" : "Training",
+         "start" : "2012-05-09T00:00:00-07:00",
+         "type" : "3"
+      }, {
+         "color" : "#309fdb",
+         "description" : "Bar Inc",
+         "end" : "2012-02-16T00:00:00-08:00",
+         "eventId" : 147606,
+         "name" : "Customer Meeting",
+         "start" : "2012-02-11T00:00:00-08:00",
+         "type" : "1"
+      }, {
+         "color" : "#fbce4a",
+         "description" : "Effective Mgmt",
+         "end" : "2012-07-14T00:00:00-07:00",
+         "eventId" : 147607,
+         "name" : "Training",
+         "start" : "2012-07-13T00:00:00-07:00",
+         "type" : "3"
+      }, {
+         "color" : "#fbce4a",
+         "description" : "Security",
+         "end" : "2012-05-04T00:00:00-07:00",
+         "eventId" : 147608,
+         "name" : "Training",
+         "start" : "2012-05-03T00:00:00-07:00",
+         "type" : "3"
+      }, {
+         "color" : "#309fdb",
+         "description" : "CCC Enterprises",
+         "end" : "2013-12-22T00:00:00-08:00",
+         "eventId" : 147609,
+         "name" : "Customer Meeting",
+         "start" : "2013-12-17T00:00:00-08:00",
+         "type" : "1"
+      }, {
+         "color" : "#fbce4a",
+         "description" : "ava Development",
+         "end" : "2013-10-26T00:00:00-07:00",
+         "eventId" : 147610,
+         "name" : "Training",
+         "start" : "2013-10-23T00:00:00-07:00",
+         "type" : "3"
+      }, {
+         "color" : "#fbce4a",
+         "description" : "iOS Development",
+         "end" : "2013-03-28T00:00:00-07:00",
+         "eventId" : 147611,
+         "name" : "Training",
+         "start" : "2013-03-24T00:00:00-07:00",
+         "type" : "3"
+      }, {
+         "color" : "#309fdb",
+         "description" : "DEF Inc",
+         "end" : "2013-12-28T00:00:00-08:00",
+         "eventId" : 147612,
+         "name" : "Customer Meeting",
+         "start" : "2013-12-25T00:00:00-08:00",
+         "type" : "1"
+      }, {
+         "color" : "#81bb5f",
+         "description" : "Sick",
+         "end" : "2014-06-20T00:00:00-07:00",
+         "eventId" : 147613,
+         "name" : "Time Off",
+         "start" : "2014-06-18T00:00:00-07:00",
+         "type" : "4"
+      }, {
+         "color" : "#81bb5f",
+         "description" : "Bereavement",
+         "end" : "2014-10-25T00:00:00-07:00",
+         "eventId" : 147614,
+         "name" : "Time Off",
+         "start" : "2014-10-24T00:00:00-07:00",
+         "type" : "4"
+      }, {
+         "color" : "#ed813e",
+         "description" : "Design Awards",
+         "end" : "2015-05-05T04:00:04-07:00",
+         "eventId" : 147615,
+         "name" : "Event",
+         "start" : "2015-05-03T04:00:04-07:00",
+         "type" : "2"
+      }, {
+         "color" : "#309fdb",
+         "description" : "DEF Inc",
+         "end" : "2015-07-26T04:00:04-07:00",
+         "eventId" : 147616,
+         "name" : "Customer Meeting",
+         "start" : "2015-07-21T04:00:04-07:00",
+         "type" : "1"
+      }, {
+         "color" : "#81bb5f",
+         "description" : "Sick",
+         "end" : "2015-04-17T04:00:04-07:00",
+         "eventId" : 147617,
+         "name" : "Time Off",
+         "start" : "2015-04-16T04:00:04-07:00",
+         "type" : "4"
+      }, {
+         "color" : "#ed813e",
+         "description" : "User Group Meetup",
+         "end" : "2015-07-18T04:00:04-07:00",
+         "eventId" : 147618,
+         "name" : "Event",
+         "start" : "2015-07-16T04:00:04-07:00",
+         "type" : "2"
+      } ],
+      "colleaguePerfs" : [ {
+         "effective" : "2015-07-21T00:00:00-07:00",
+         "perfId" : 41203,
+         "potential" : 4,
+         "rating" : 3
+      }, {
+         "effective" : "2015-12-24T00:00:00-08:00",
+         "perfId" : 41209,
+         "potential" : 3,
+         "rating" : 5
+      }, {
+         "effective" : "2015-08-10T00:00:00-07:00",
+         "perfId" : 41300,
+         "potential" : 5,
+         "rating" : 5
+      }, {
+         "effective" : "2015-06-06T00:00:00-07:00",
+         "perfId" : 41563,
+         "potential" : 4,
+         "rating" : 5
+      }, {
+         "effective" : "2015-01-27T00:00:00-08:00",
+         "perfId" : 41886,
+         "potential" : 2,
+         "rating" : 4
+      } ],
+      "reports" : [ ]
+   }

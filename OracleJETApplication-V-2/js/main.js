@@ -62,34 +62,24 @@ require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', '
 
         var router = oj.Router.rootInstance;
         router.configure({
-            'home': {
-                label: 'Home',
-                value: 'home',
-                isDefault: true,
-            },
-            'labor-management': {
-                label: 'Labor Management',
-                value: 'labor-management'
-            },
-            'inventory-management': {
-                label: 'Inventory Management',
-                value: 'inventory-management'
-            },
-            'gift-loyalty': {
-                label: 'Gift & Loyalty',
-                value: 'gift-loyalty'
-            },
-            'reports-analytics': {
-                label: 'Reporting & Analytics',
-                value: 'reports-analytics'
-            },
-            'enterprise': {
-                label: 'Enterprise',
-                value: 'enterprise'
-            },
-            'people': {
-                label: 'People',
-                value: 'people'
+            'home': {label: 'Home', value: 'home',isDefault: true,},
+            'labor-management': {label: 'Labor Management', value: 'labor-management'},
+            'inventory-management': {label: 'Inventory Management', value: 'inventory-management'},
+            'gift-loyalty': {label: 'Gift & Loyalty',  value: 'gift-loyalty'},
+            'reports-analytics': {label: 'Reporting & Analytics', value: 'reports-analytics'},
+            'enterprise': {label: 'Enterprise', value: 'enterprise'},
+            'people': {label: 'People', value: 'people'},
+            'profile': {label: 'Profile',
+                exit: function () {
+                    var childRouter = router.currentState().value;
+                    childRouter.dispose();
+                    $('#people').removeClass('oj-selected');
+                },
+                enter: function () {
+                    var childRouter = router.createChildRouter('emp');
+                    childRouter.defaultStateId = '100';
+                    router.currentState().value = childRouter;
+                }
             }
         });
 
