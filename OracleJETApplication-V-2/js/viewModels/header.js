@@ -48,7 +48,17 @@ define([
                 {name: 'Enterprise', id: 'enterprise', value: ' ',  img: 'enterprise-default.png'},
                 {name: 'People', id: 'people', value: ' ',  img: 'people-default.png'}
                 ];
-
+            var appSideNavData = [
+                {name: 'Charts', id: 'charts'},
+                {name: 'Reports', id: 'reports'},
+                {name: 'Links', id: 'links'},
+                {name: 'iCare', id: 'icare'},
+                {name: 'myInventory', id: 'myinventory'},
+                {name: 'Forecasting', id: 'forecasting'},
+                {name: 'Dashboards', id: 'dashboards'},
+                {name: 'myLabor', id: 'mylabor'},
+                {name: 'Admin', id: 'admin'}   
+            ];
         // Data for application name
             var appName = {
                 "id": "qs",
@@ -81,6 +91,19 @@ define([
                     }
                 ]
             };
+        //Left side navigation
+        self.appDrawer =
+            {
+                "edge": "start",
+                "displayMode": "push",
+                "selector": "#appDrawer",
+                "selection": "selectedItem"
+            };
+            
+        self.toggleAppDrawer = function ()
+        {
+            return oj.OffcanvasUtils.toggle(this.appDrawer);
+        };
         
         self.appId = appName.id;
         self.appName = appName.name;
@@ -88,7 +111,7 @@ define([
         self.userName = ko.observable(toolbarData.userName);
         self.toolbarButtons = toolbarData.toolbar_buttons;
         self.globalNavItems = toolbarData.global_nav_dropdown_items;
-
+        self.dataSideSource = new oj.ArrayTableDataSource(appSideNavData, {idAttribute: 'id'});
         
         
         self.linkUrlAppend = function (locationId)
