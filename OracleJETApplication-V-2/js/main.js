@@ -88,8 +88,53 @@ require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', '
             var self = this;
 
             //User information from json
-            var userData = {name: 'John Smith', id: '2', role: '2', homeStore: '1', homeStoreName: 'Beacon Hill'};
+            var userData = {
+                name: 'John Smith',
+                email: 'john.hancock@gmail.com',
+                id: '2',
+                role: '2',
+                homeLocation: '1',
+                homeLocationName: 'Bunker Hill',
+                assignedLocations: [
+                    {
+                        "locID" : 1,
+                        "name" : "Beacon Hill",
+                        "cityname" : "Boston1",
+                        "region" : "North East1",
+                        "dailySales" : "123,234",
+                        "laborCosts" : "12,543"
+                    },
+                    {
+                        "locID" : 2,
+                        "name" : "Cambridge",
+                        "cityname" : "Boston2",
+                        "region" : "North East2",
+                        "dailySales" : "223,234",
+                        "laborCosts" : "22,543"
+                    },
+                    {
+                      "locID": 3,
+                      "name": "Bunker Hill",
+                      "cityname": "Boston3",
+                      "region": "North East3",
+                      "dailySales" : "323,234",
+                      "laborCosts" : "32,543"
+                    }
+                ]
+            };
             self.userData = ko.observable(userData);
+
+            //Active Store location
+            self.activeLocation = ko.observable(userData.homeLocationName);
+            self.activeLocationId = ko.observable(userData.homeLocation);
+
+            self.showItemIndex = function () {
+                var data = ko.dataFor(event.target);
+                    if (data) {
+                         self.activeLocation(data.name);
+                         self.activeLocationId(data.locID);
+                    }
+            };
 
             self.router = router;
 

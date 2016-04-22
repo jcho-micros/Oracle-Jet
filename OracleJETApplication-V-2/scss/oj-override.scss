@@ -115,6 +115,8 @@ $topOffCanvasBckg: $darkGray;
 $topOffCanvasTabBckg: $mediumGray;
 $topOffCanvasTabSelected: $darkGray;
 $topOffCanvasTabTextColor: $white;
+$topOffCanvasAnalyticsBckgColor: $white;
+$topOffCanvasAnalyticsText: $black;
 
 //Header Variables
 $headerBgColor: $lightGray;
@@ -276,6 +278,14 @@ h1.pageTitle{
     }
     #offCanvasScope{
         height:225px;
+        .analyticsWrapper{
+            background-color: $topOffCanvasAnalyticsBckgColor;
+            display:block;
+            float:left;
+            margin:0 10px;
+            padding:10px;
+            color: $topOffCanvasAnalyticsText;
+        }
         .oj-tabs-tab.oj-selected, .oj-tabs-tab.oj-active .oj-tabs-close-icon, .oj-tabs-tab.oj-active .oj-tabs-anchor{
             border:0;
             background-color:$topOffCanvasTabSelected;
@@ -714,4 +724,4 @@ html:not([dir="rtl"]) .oj-dialog-title{
 @media only screen and (min-width: 1280px) and (max-width: 1900px){
 
 }
-@import "login.scss"; 
+@import "login.scss";

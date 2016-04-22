@@ -16,11 +16,7 @@ define([
         self.handleActivated = function (info) {
 
             self.dataSource = new oj.ArrayTableDataSource(appNavData, {idAttribute: 'id'});
-            self.globalstoreName = ko.observable("Beacon Hill");
-            
-            self.globalRegion = ko.observable("North East");
-            self.globalCityName = ko.observable("Boston");
-            self.visibleCity = ko.observable("Boston");
+//            self.globalstoreName = ko.observable("Beacon Hill");
 
 
         };

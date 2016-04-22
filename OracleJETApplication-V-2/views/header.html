@@ -26,8 +26,8 @@
                              }">
             </button>
             <ul id="appheaderGlobalNavMenuId" data-bind="ojComponent: {component: 'ojMenu', select: menuItemSelect}" style="display:none">
-                <li data-bind="attr: {label: userName}">
-                    <a data-bind="text: userName, href: url"></a>
+                <li data-bind="attr: {label: $root.userData().email}">
+                    <a data-bind="text: $root.userData().email, href: url"></a>
                 </li>
 
                 <!-- ko foreach: globalNavItems -->
@@ -95,8 +95,8 @@
             </button>
             <ul id="appheaderGlobalNavMenuId" data-bind="ojComponent: {component: 'ojMenu', select: menuItemSelect}" style="display:none">
 
-                <li data-bind="attr: {label: userName}">
-                    <a data-bind="text: userName, href: url"></a>
+               <li data-bind="attr: {label: $root.userData().email}">
+                    <a data-bind="text: $root.userData().email, href: url"></a>
                 </li>
 
                 <!-- ko foreach: globalNavItems -->
@@ -106,14 +106,13 @@
                 <!-- /ko -->
             </ul>
             <button class="oj-button globalStoreLink" data-bind="click: $parent.toggleDrawer">
-                <span class="globalStoreText" data-bind="text: globalstoreName()? globalstoreName() : 'Beacon Hill'"></span>
+                <span class="globalStoreText" data-bind="text: $root.activeLocation"></span>
                 <span class="arrowLocation fa fa-location-arrow"></span>
             </button>
         </div>
     </div>
     <div class="oj-flex" data-bind="css: $root.router.stateId() + 'TitleWrap'">
         <h1 data-bind="text: $root.pageTitle" class="pageTitle"></h1>
-        <div data-bind="text: $parent.userData().name"></div>
     </div>
 </script>
 <!-- oj-row -->
