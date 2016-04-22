@@ -9,7 +9,7 @@
         <div id="tabs-1" class="regionTabSections">
             <p>Vertical Tab 1.</p>
             <!-- ko foreach: $root.userData().assignedLocations-->
-            <div class="oj-flex analyticsWrapper" data-bind="click: $root.showItemIndex">
+            <div class="oj-flex analyticsWrapper" data-bind="click: $root.updateActiveLocation">
                 <div class="analyticsRegion" data-bind="text: region"></div>
                 <div class="analyticsStore" data-bind="text: name"></div>
                 <div class="analyticsCity" data-bind="text: cityname"></div>

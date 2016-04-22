@@ -128,7 +128,8 @@ require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', '
             self.activeLocation = ko.observable(userData.homeLocationName);
             self.activeLocationId = ko.observable(userData.homeLocationID);
 
-            self.showItemIndex = function () {
+            //Updates observables to update location based on click
+            self.updateActiveLocation = function () {
                 var data = ko.dataFor(event.target);
                     if (data) {
                          self.activeLocation(data.name);
