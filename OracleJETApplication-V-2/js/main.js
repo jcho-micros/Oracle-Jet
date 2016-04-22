@@ -86,6 +86,11 @@ require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', '
 
         function RootViewModel() {
             var self = this;
+
+            //User information from json
+            var userData = {name: 'John Smith', id: '2', role: '2', homeStore: '1', homeStoreName: 'Beacon Hill'};
+            self.userData = ko.observable(userData);
+
             self.router = router;
 
             var smQuery = oj.ResponsiveUtils.getFrameworkQuery(oj.ResponsiveUtils.FRAMEWORK_QUERY_KEY.SM_ONLY);
