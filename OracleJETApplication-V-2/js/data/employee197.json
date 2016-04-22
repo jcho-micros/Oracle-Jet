@@ -1,7 +1,7 @@
 {
       "empId" : 197,
       "Prefix" : 0,
-      "prefixField" : "Mr."
+      "prefixField" : "Mr.",
       "firstName" : "Kevin",
       "lastName" : "Feeney",
       "middleName" : "",

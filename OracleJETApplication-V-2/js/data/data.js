@@ -5,6 +5,7 @@ define(['ojs/ojcore', 'knockout', 'jquery'],
                 return $.getJSON(url);
             }
 
+
             function fetchPerson(url) {
                   return $.getJSON(url);
             }

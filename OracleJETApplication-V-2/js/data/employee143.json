@@ -4,7 +4,7 @@
       "prefixField" : "Mr.",
       "firstName" : "Randall",
       "lastName" : "Matos",
-      "middleName" : ""
+      "middleName" : "",
       "title" : "Marketing Representative",
       "displayNameCheckBox" : 0,
       "displayName" : "",
@@ -28,14 +28,14 @@
       "postal" : "94105",
       "language": "English",
       "inCityLimits" : 0,
-      "livesOnProperty" : 0
+      "livesOnProperty" : 0,
       "twitter" : "Randall",
       "facebook" : "Randall",
       "google" : "Randall",
       "linkedIn" : "Randall",
       "gender" : "Male",
       "ethnicity": "caucasian",
-      "timeZone" : "US CST"
+      "timeZone" : "US CST",
       "hireDate" : "2009-03-01T00:00:00",
       "hireStatus": "Active",
       "profilePicture" : "images/people/143.png",

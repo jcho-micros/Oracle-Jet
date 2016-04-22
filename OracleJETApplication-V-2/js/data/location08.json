@@ -2,7 +2,7 @@
     "locID" : 8,    
     "name" : "Marietta",
     "cityname" : "Atlanta",
-    "region" : "South East"
+    "region" : "South East",
     "schedule" : [{
             "role" : "Host"
             },{
