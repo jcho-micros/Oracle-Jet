@@ -200,6 +200,15 @@ html:not([dir="rtl"]) .oj-dialog-title {
 #ojDialogWrapper-peopleDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-default, #ojDialogWrapper-peopleDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-hover, #ojDialogWrapper-peopleDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-focus-only {
   background-color: #507AA0; }
 
+#ojDialogWrapper-profileDialogWindow .oj-dialog-header {
+  background-color: #507AA0; }
+  #ojDialogWrapper-profileDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper {
+    background-color: #446888; }
+    #ojDialogWrapper-profileDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper.oj-hover .oj-dialog-close-icon {
+      color: #446888; }
+#ojDialogWrapper-profileDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-default, #ojDialogWrapper-profileDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-hover, #ojDialogWrapper-profileDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-focus-only {
+  background-color: #507AA0; }
+
 /*Header*/
 .appHeader {
   background-color: #f5f5f5; }
@@ -319,6 +328,12 @@ html:not([dir="rtl"]) .oj-dialog-title {
     background-color: #507AA0; }
     #appHeaderDesktopNav .oj-navigationlist-item.oj-selected#people a .topNavImgIcon, #appHeaderDesktopNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#people a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-selected#people a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#people a .topNavImgIcon {
       background-image: url("images/icon/people-hover.png"); }
+  #appHeaderDesktopNav .oj-navigationlist-item.oj-focus#profile a .topNavImgIcon, #appHeaderDesktopNav .oj-navigationlist-item.oj-default#profile a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-focus#profile a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-default#profile a .topNavImgIcon {
+    background-image: url("images/icon/people-default.png"); }
+  #appHeaderDesktopNav .oj-navigationlist-item.oj-selected#profile, #appHeaderDesktopNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#profile, #appHeaderMobileNav .oj-navigationlist-item.oj-selected#profile, #appHeaderMobileNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#profile {
+    background-color: #507AA0; }
+    #appHeaderDesktopNav .oj-navigationlist-item.oj-selected#profile a .topNavImgIcon, #appHeaderDesktopNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#profile a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-selected#profile a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#profile a .topNavImgIcon {
+      background-image: url("images/icon/people-hover.png"); }
 
 #appDrawer {
   background-color: #454545;
@@ -391,6 +406,14 @@ html:not([dir="rtl"]) .oj-dialog-title {
     height: 110px; }
 
   .peopleTitleWrap {
+    background: url("images/header-icon-people.png");
+    background-repeat: no-repeat;
+    background-size: 223px 111px;
+    background-position: 100% 30%;
+    background-color: #507AA0;
+    height: 110px; }
+
+  .profileTitleWrap {
     background: url("images/header-icon-people.png");
     background-repeat: no-repeat;
     background-size: 223px 111px;
@@ -538,6 +561,26 @@ html:not([dir="rtl"]) .oj-dialog-title {
         font-weight: 300;
         color: #000; }
 
+  #profileTabs {
+    margin-left: 10px;
+    margin-top: 4px; }
+    #profileTabs .oj-navigationlist-item.oj-focus {
+      outline-color: transparent; }
+    #profileTabs .oj-navigationlist-item.oj-hover:not(.oj-selected) {
+      background-color: #fff;
+      border-color: #6A8EAE; }
+      #profileTabs .oj-navigationlist-item.oj-hover:not(.oj-selected) .oj-navigationlist-item-label {
+        color: #507AA0; }
+    #profileTabs .oj-navigationlist-item.oj-default {
+      background-color: #6A8EAE; }
+      #profileTabs .oj-navigationlist-item.oj-default .oj-navigationlist-item-label {
+        color: #fff; }
+    #profileTabs .oj-navigationlist-item.oj-selected {
+      border-color: #6A8EAE; }
+      #profileTabs .oj-navigationlist-item.oj-selected a .oj-navigationlist-item-label {
+        font-weight: 300;
+        color: #000; }
+
   .dialog-dimensions {
     width: 95%; }
 
@@ -651,6 +694,19 @@ html:not([dir="rtl"]) .oj-dialog-title {
     #peopleTabs .oj-navigationlist-item:not(.oj-disabled).oj-selected {
       background-color: #454545; }
     #peopleTabs .oj-navigationlist-item:not(.oj-disabled).oj-hover {
+      background-color: #454545; }
+
+  #profileNavList {
+    background-color: #507AA0;
+    height: 40px; }
+
+  #profileTabs {
+    border-top: 1px solid #65AD73; }
+    #profileTabs .oj-navigationlist-item:not(.oj-disabled).oj-default {
+      background-color: #507AA0; }
+    #profileTabs .oj-navigationlist-item:not(.oj-disabled).oj-selected {
+      background-color: #454545; }
+    #profileTabs .oj-navigationlist-item:not(.oj-disabled).oj-hover {
       background-color: #454545; } }
 #loginPage * {
   -webkit-box-sizing: border-box;
