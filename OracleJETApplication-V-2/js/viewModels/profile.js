@@ -22,7 +22,7 @@ define([
             function PersonViewModel() {
                 var self = this;
                 self.personProfile = ko.observableArray([]);
-
+                self.sectionsState = ko.observable(false);
                 self.handleClose =  function(dialog) {
                     $(dialog).ojDialog("close");
                 };
@@ -96,12 +96,7 @@ define([
                         });
                     });
                 };
-                self.selectHandler = function (event, ui) {
-                    if ('profileTabs' === event.target.id && event.originalEvent) {
-                        // Invoke go() with the selected item.
-                        self.router.go(ui.key);
-                    }
-                };
+
                 self.setupObservables = function(){
                     //Not sure why above observable array can't be used with InputText binding in KO. Need to look into this.
                     //Sets up observables to be able to update them only in the view, does not save data.
@@ -268,7 +263,7 @@ define([
                     self.infoTiles = ko.observableArray();
                     //Jobs and compensation
                     self.compensation = ko.observableArray(self.personProfile().compensation);
-                    self.dataListSource = new oj.ArrayTableDataSource(self.compensation, {idAttribute: 'id'});
+self.dataListSource = new oj.ArrayTableDataSource(self.compensation, {idAttribute: 'id'});
                     //payroll 
                     self.extPayrollId = ko.observable(self.personProfile().externalPayrollId);
                     self.minimumwage = ko.observable(self.personProfile().subminimumwage);
@@ -716,7 +711,12 @@ define([
                     $('#people').addClass('oj-selected');
 
                 };
-
+                self.selectHandler = function (event, ui) {
+                    if ('profileTabs' === event.target.id && event.originalEvent) {
+                        // Invoke go() with the selected item.
+                        self.router.go(ui.key);
+                    }
+                };
                 //General function to  auto popup modal based on URL param string and dialog ID
                 self.autoDialog = function(param, dialogId){
                     if(document.URL.indexOf(param) > -1){

@@ -383,7 +383,8 @@ html:not([dir="rtl"]) .oj-dialog-title{
                             (gift-loyalty, $giftLoyaltyDialogHeaderColor, $giftLoyaltyDialogAccentColor),
                             (reports-analytics, $reportsAnalyticsDialogHeaderColor, $reportsAnalyticsDialogAccentColor),
                             (enterprise, $enterpriseDialogHeaderColor, $enterpriseDialogAccentColor),
-                            (people, $peopleDialogHeaderColor, $peopleDialogAccentColor){
+                            (people, $peopleDialogHeaderColor, $peopleDialogAccentColor),
+                            (profile, $peopleDialogHeaderColor, $peopleDialogAccentColor){
                             //Dialog window Per Section    
                             #ojDialogWrapper-#{$section}DialogWindow{
                                     .oj-dialog-header{
@@ -505,7 +506,8 @@ html:not([dir="rtl"]) .oj-dialog-title{
                                  (gift-loyalty, $giftLoyaltyIconDefault, $giftLoyaltyMainTabBckColor, $giftLoyaltyIconHover),
                                  (reports-analytics, $reportingAnalyticsIconDefault, $reportsAnalyticsMainTabBckColor,$reportingAnalyticsIconHover),
                                  (enterprise, $enterpriseIconDefault, $enterpriseMainTabBckColor, $enterpriseIconHover),
-                                 (people, $peopleIconDefault, $peopleMainTabBckColor, $peopleIconHover){
+                                 (people, $peopleIconDefault, $peopleMainTabBckColor, $peopleIconHover),
+                                 (profile, $peopleIconDefault, $peopleMainTabBckColor, $peopleIconHover){
                                        &.oj-focus, &.oj-default{
                                            &##{$section}{
                                                a{
@@ -573,7 +575,8 @@ html:not([dir="rtl"]) .oj-dialog-title{
                             (gift-loyalty, $giftLoyaltyBckColor, $giftLoyaltyBckImg),
                             (reports-analytics, $reportsAnalyticsBckColor, $reportingAnalyticsBckImg),
                             (enterprise, $enterpriseBckColor, $enterpriseBckImg),
-                            (people, $peopleBckColor, $peopleBckImg){
+                            (people, $peopleBckColor, $peopleBckImg),
+                            (profile, $peopleBckColor, $peopleBckImg){
                                 .#{$section}TitleWrap{
                                     background:url($headerBckImg);
                                     background-repeat: no-repeat;
@@ -590,7 +593,8 @@ html:not([dir="rtl"]) .oj-dialog-title{
                             (gift-Loyalty, $giftLoyaltyTabHoverText, $giftLoyaltySubTabBckColor),
                             (reportsAnalytics, $reportsAnalyticsTabHoverText, $reportsAnalyticsSubTabBckColor),
                             (enterprise, $enterpriseTabHoverText, $enterpriseSubTabBckColor),
-                            (people, $peopleTabHoverText, $peopleSubTabBckColor){
+                            (people, $peopleTabHoverText, $peopleSubTabBckColor),
+                            (profile, $peopleTabHoverText, $peopleSubTabBckColor){
                                 
                                 ##{$section}Tabs{
                                     margin-left:10px;
@@ -675,6 +679,7 @@ html:not([dir="rtl"]) .oj-dialog-title{
                                   (enterprise, $enterpriseMobileTabBckColor, $enterpriseMobileTabAccentColor),
                                   (reports-analytics, $reportsAnalyticsMobileTabBckColor, $reportsAnalyticsMobileTabAccentColor),
                                   (people, $peopleMobileTabBckColor, $peopleMobileTabAccentColor),
+                                  (profile, $peopleMobileTabBckColor, $peopleMobileTabAccentColor)
     {
         ##{$section}NavList{
             background-color:$backGroundColor;

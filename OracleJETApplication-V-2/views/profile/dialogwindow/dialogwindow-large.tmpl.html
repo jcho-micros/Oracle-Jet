@@ -3,12 +3,16 @@
             resizeBehavior: 'none',
             dragAffordance: 'none',
             initialVisibility: 'hide', 
-            rootAttributes: {style: 'width: 375px; height: 600px;'}, 
-            'position': {'at': 'top'}}">
+            rootAttributes: {class: 'dialog-dimensions'}, 
+            'position': {'at': 'center'}}">
      <!-- Note: the user must provide the aria-labelledby attribute for the dialog to be accessible -->
     <div class="oj-dialog-header oj-helper-clearfix" aria-labelledby="dialogTitleId">
         <div id="dialogTitleId" class="oj-dialog-title">
-             <h2 class="dialogHeaderText oj-flex"><img data-bind="attr:{src: 'css/images/header-icon-dialog.png'}" /> <span>People Dialog Window</span></h2>
+            <div class="oj-flex">
+                <div class="oj-flex-item dialogHeaderLeft">
+                     <h2 class="dialogHeaderText"><img data-bind="attr:{src: 'css/images/header-icon-dialog.png'}" /> <span>People Dialog Window</span></h2>
+                </div>
+            </div>
         </div>
     </div> 
     <div class="oj-dialog-body">
@@ -20,4 +24,4 @@
                  </div>
              </div>
          </div>
-     </div>
+</div>

@@ -21,7 +21,6 @@ requirejs.config({
         'ojL10n': 'libs/oj/v2.0.0/ojL10n',
         'ojtranslations': 'libs/oj/v2.0.0/resources',
         'signals': 'libs/js-signals/signals.min',
-        'crossroads': 'libs/crossroads/crossroads.min',
         'text': 'libs/require/text',
         'moment': 'libs/moment/moment.min'
     }
@@ -64,10 +63,10 @@ require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', '
 
         var router = oj.Router.rootInstance;
         router.configure({
-            'home': {label: 'Home', value: 'home',isDefault: true,},
+            'home': {label: 'Home', isDefault: true},
             'labor-management': {label: 'Labor Management', value: 'labor-management'},
-            'inventory-management': {label: 'Inventory Management', value: 'inventory-management'},
-            'gift-loyalty': {label: 'Gift & Loyalty',  value: 'gift-loyalty'},
+            'inventory-management': {label: 'Inventory', value: 'inventory-management'},
+            'gift-loyalty': {label: 'Gift & Loyalty', value: 'gift-loyalty'},
             'reports-analytics': {label: 'Reporting & Analytics', value: 'reports-analytics'},
             'enterprise': {label: 'Enterprise', value: 'enterprise'},
             'people': {label: 'People', value: 'people'},
