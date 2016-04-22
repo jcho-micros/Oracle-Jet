@@ -93,7 +93,7 @@ require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', '
                 email: 'john.hancock@gmail.com',
                 id: '2',
                 role: '2',
-                homeLocation: '1',
+                homeLocationID: '1',
                 homeLocationName: 'Bunker Hill',
                 assignedLocations: [
                     {
@@ -126,7 +126,7 @@ require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', '
 
             //Active Store location
             self.activeLocation = ko.observable(userData.homeLocationName);
-            self.activeLocationId = ko.observable(userData.homeLocation);
+            self.activeLocationId = ko.observable(userData.homeLocationID);
 
             self.showItemIndex = function () {
                 var data = ko.dataFor(event.target);
