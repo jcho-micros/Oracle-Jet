@@ -15,7 +15,7 @@
         </div>
         <div class="oj-flex-bar-end">
             <a class="oj-button globalStoreLink" data-bind="click: $parent.toggleDrawer">
-                <span class="oj-sm-only-hide" data-bind="text: globalstoreName()? globalstoreName() : 'Beacon Hill'"></span>
+                <span class="oj-sm-only-hide globalStoreText" data-bind="text: $root.activeLocation"></span>
                 <span class="arrowLocation fa fa-location-arrow"></span>
             </a>
             <button id="userMenu" data-bind="ojComponent: { component: 'ojButton',

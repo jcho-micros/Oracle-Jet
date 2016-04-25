@@ -89,8 +89,8 @@ require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', '
 
             //User information from json
             var userData = {
-                name: 'John Smith',
-                email: 'john.hancock@gmail.com',
+                name: 'Sarah Smith',
+                email: 'sarah.smith@gmail.com',
                 id: '2',
                 role: '2',
                 homeLocationID: '1',
@@ -143,7 +143,7 @@ require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', '
             self.smScreen = oj.ResponsiveKnockoutUtils.createMediaQueryObservable(smQuery);
             var mdQuery = oj.ResponsiveUtils.getFrameworkQuery(oj.ResponsiveUtils.FRAMEWORK_QUERY_KEY.MD_UP);
             self.medium = oj.ResponsiveKnockoutUtils.createMediaQueryObservable(mdQuery);
-            var lgQuery = oj.ResponsiveUtils.getFrameworkQuery(oj.ResponsiveUtils.FRAMEWORK_QUERY_KEY.LG_UP)
+            var lgQuery = oj.ResponsiveUtils.getFrameworkQuery(oj.ResponsiveUtils.FRAMEWORK_QUERY_KEY.LG_UP);
             self.large = oj.ResponsiveKnockoutUtils.createMediaQueryObservable(lgQuery);
                 
             /*For dynamic title in header section rather than each page template*/

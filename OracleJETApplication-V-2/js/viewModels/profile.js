@@ -100,6 +100,7 @@ define([
                 self.setupObservables = function(){
                     //Not sure why above observable array can't be used with InputText binding in KO. Need to look into this.
                     //Sets up observables to be able to update them only in the view, does not save data.
+                     
                     self.firstName = ko.observable(self.personProfile().firstName);
                     self.lastName = ko.observable(self.personProfile().lastName);
                     self.posCheckName = ko.observable(self.personProfile().posCheckName);
@@ -263,7 +264,7 @@ define([
                     self.infoTiles = ko.observableArray();
                     //Jobs and compensation
                     self.compensation = ko.observableArray(self.personProfile().compensation);
-self.dataListSource = new oj.ArrayTableDataSource(self.compensation, {idAttribute: 'id'});
+                    self.dataListSource = new oj.ArrayTableDataSource(self.compensation, {idAttribute: 'id'});
                     //payroll 
                     self.extPayrollId = ko.observable(self.personProfile().externalPayrollId);
                     self.minimumwage = ko.observable(self.personProfile().subminimumwage);
