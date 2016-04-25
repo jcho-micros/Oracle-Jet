@@ -25,12 +25,12 @@ define([
             var parentRouter = oj.Router.rootInstance;
             //Child of Location
             self.router = parentRouter.createChildRouter('inventorytab').configure({
-                'overview': {label: 'Overview', value: 'overview', isDefault: true},
-                'employees': {label: 'Employees', value: 'employees'},
-                'schedules-timecards': {label: 'Schedules & Timecards', value: 'schedules-timecards'},
-                'forecasting': {label: 'Forecasting', value: 'forecasting'},
-                'payroll': {label: 'Payroll', value: 'payroll'},
-                'analytics': {label: 'Analytics', value: 'analytics'}
+                'overview': {label: 'Overview', value: 'overview'},
+                'ordering-receiving': {label: 'Ordering & Receiving', value: 'ordering-receiving'},
+                'store': {label: 'Store', value: 'store'},
+                'menus-recipes': {label: 'Menus & Recipes', value: 'menus-recipes'},
+                'analytics': {label: 'Analytics', value: 'analytics', isDefault: true}
+
             });
 
         // Now that the router for this view exist, synchronise it with the URL
