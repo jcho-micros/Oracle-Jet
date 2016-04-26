@@ -19,8 +19,8 @@ define([
             var parentRouter = oj.Router.rootInstance;
             this.router = parentRouter.createChildRouter('enterprisetabs').configure({
                 'overview': {label: 'Overview', value: 'overview', isDefault: true},
-                'labor-management': {label: 'Labor Management', value: 'labor-management'},
-                'inventory-management': {label: 'Inventory Management', value: 'inventory-management'},
+                'labormanagement': {label: 'Labor Management', value: 'labormanagement'},
+                'inventorymanagement': {label: 'Inventory Management', value: 'inventorymanagement'},
                 'gift-loyalties': {label: 'Gift & Loyalty', value: 'gift-loyalty'},
                 'reporting-analytics': {label: 'Reporting & Analytics', value: 'reporting-analytics'},
                 'locations': {label: 'Location',value: 'locations'},
