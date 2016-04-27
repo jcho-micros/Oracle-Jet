@@ -40,11 +40,11 @@ define([
         //Employee Basic Info Dialog
         self.empBasicInfoOpen =  function(emp) {
             self.basicEmpInfo(emp);
-            $("#empBasicDialog").ojDialog("open");
+            $("#empBasicDialogWindow").ojDialog("open");
         };
 
         self.empBasicInfoClose =  function() {
-            $("#empBasicDialog").ojDialog("close");
+            $("#empBasicDialogWindow").ojDialog("close");
         };
 
 
@@ -156,7 +156,11 @@ define([
             self.clickedButton(event.currentTarget.id);
             return true;
         }
-
+        self.handleFormatChange = function(event, ui) {
+            if (ui.option === "checked") {
+                // do stuff...
+            }
+        };
         this._HELP_SOURCE = "http://www.oracle.com";
         this._HELP_DEF = "your custom help definition here";
         this.helpSource = ko.observable(this._HELP_SOURCE);

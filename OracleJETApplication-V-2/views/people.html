@@ -26,13 +26,11 @@
 <!-- large template -->
 <script type="text/html" id="md_lg_xl_template">
     <div class="oj-flex oj-flex-items-pad">
-        <div class="oj-flex-item">
-            -large
-            <a data-bind="click: function(){$root.handleOpen('#peopleDialogWindow')}" style="line-height:39px;">edit <i class="fa fa-pencil-square-o"></i></a>
+        <div class="oj-md-12 oj-flex-item">
+            <div data-bind="template: {name: 'partials/employee-search/employee-search-large'}"></div>
         </div>
     </div>
-    <!--people dialog modal-->
-    <div data-bind="template: {name: 'people/dialogwindow/dialogwindow-large'}"></div>
+
 </script>
 
 

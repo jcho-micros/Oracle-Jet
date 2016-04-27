@@ -1,0 +1,124 @@
+<!--Linked to people.js through modules and template bindings-->
+<div class="oj-flex">
+    <div class="oj-flex-item searchWrapper">
+        <div class="searchTitle">
+            <h2>Search Criteria</h2> <a href="">view all employees</a>
+        </div>
+        <form data-bind="submit: filteredAllPeople" id="peopleSearchForm">
+            <div class="oj-flex">
+                <div class="oj-flex-item">
+                    <label for="firstname">Employee Name</label>
+                    <input placeholder="search" id="firstname" data-bind="value: firstNameSearch, ojComponent: {component: 'ojInputText'}"/>
+                </div>
+                <div class="oj-flex-item">
+                    <label for="basicSelect">Location</label>
+                    <select id="basicSelect" data-bind="ojComponent: {component: 'ojSelect', value: val, rootAttributes: {style:'max-width:20em'}}">
+                        <option value="IE">Internet Explorer</option>
+                        <option value="FF">Firefox</option>
+                        <option value="CH">Chrome</option>
+                        <option value="OP">Opera</option>
+                        <option value="SA">Safari</option>
+                    </select>
+                </div>
+                <div class="oj-flex-item">
+                    <label for="basicSelect">Home Store</label>
+                    <select id="basicSelect" data-bind="ojComponent: {component: 'ojSelect', value: val, rootAttributes: {style:'max-width:20em'}}">
+                        <option value="IE">Internet Explorer</option>
+                        <option value="FF">Firefox</option>
+                        <option value="CH">Chrome</option>
+                        <option value="OP">Opera</option>
+                        <option value="SA">Safari</option>
+                    </select>
+                </div>
+            </div>
+            <div class="oj-flex">
+                 <div class="oj-md-6 oj-flex-item checkboxWrapper">
+                     <label id="formatset">Status</label>
+                    <div id="formatset" 
+                       data-bind="ojComponent: {component: 'ojButtonset', checked: formats(), 
+                                                optionChange: handleFormatChange}"
+                       aria-controls="formattedText">
+                      <label for="active">Active</label>
+                      <input type="checkbox" value="active" id="active"/>
+                      <label for="inactive-suspended">Inactive-Suspended</label>
+                      <input type="checkbox" value="inactive-suspended" id="inactive-suspended"/>
+                      <label for="inactive-terminated">Inactive-Terminated</label>
+                      <input type="checkbox" value="inactive-terminated" id="inactive-terminated"/>
+                    </div>
+                </div>
+                <div class="oj-md-6 oj-flex-item checkboxWrapper">
+                     <label id="formatsetoptions">More Options</label>
+                    <div id="formatsetoptions" 
+                       data-bind="ojComponent: {component: 'ojButtonset', checked: formats(), 
+                                                optionChange: handleFormatChange}"
+                       aria-controls="formattedText">
+                      <label for="minor">Minor</label>
+                      <input type="checkbox" value="minor" id="minor"/>
+                      <label for="tloaemployees">Terminated & LOA Employees</label>
+                      <input type="checkbox" value="tloaemployees" id="tloaemployees"/>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="button-row">
+              <!--temporary toggleSection function applied to these buttons, will need to submit form and return results and then clear results-->
+             <input id="submit" type="submit" data-bind="ojComponent: {component: 'ojButton', label: 'Search', icons: { start: 'fa fa-search'} }" />
+             <input id="reset" type="reset" data-bind="click: resetData, ojComponent: {component: 'ojButton', label: 'Clear'}" />
+         </div>
+    </div>
+</div>
+
+<!-- Start of the Result template -->
+<div class="oj-flex">
+    <div class="oj-md-12 oj-flex-item">
+        <div class="resultWrapper">
+            <h2 class="float-l">Search Results</h2>
+            <div data-bind="ojComponent: {component: 'ojPagingControl', data: listViewDataSource, pageSize:10}" class="float-r"></div>
+                <ul id="listview" data-bind="ojComponent: {component: 'ojListView',
+                    data: listViewDataSource,
+                    item: {template: 'peoplelist_template'},
+                    selectionMode: 'single',
+                    currentItem: '100',
+                    selection: ['100'],
+                    rootAttributes: {style: 'width:100%; height:50%; overflow:auto; margin-top: 5px'},
+                    scrollPolicyOptions: {fetchSize: 10}}">
+                </ul>
+                <script type="text/html" id="peoplelist_template">
+                    <li data-bind="attr: {id: $data['name']}, click: $parent.empBasicInfoOpen"" class="item-marker">
+                    <div class="oj-offcanvas-outer-wrapper">
+                      <div class="oj-offcanvas-inner-wrapper">
+
+                        <div class="oj-flex">
+                            <div class="oj-lg-2 oj-md-2 oj-flex-item">
+                                <span class="inActiveStatusCheck" data-bind="visible: status == 'Inactive-Terminated'"></span>
+                                <span class="activeStatusCheck" data-bind="visible: status == 'Active'"></span>
+                                <span class="imageOverlay"></span>
+                                <img style="width:75px; height:75px;" data-bind="attr: {src: $parent.getPhoto($data['empId'])}"/>
+                            </div>
+                            <div class="oj-lg-3 oj-md-3 oj-flex-item">
+
+                                <div class="payrollId">Employee ID: <span data-bind="text: payrollId"></div>
+                                <div class="headerFirstLastName" data-bind="text: firstName + ' ' + lastName"></div>
+                                <div class="userTitle" data-bind="text: title"></div>
+                            </div>
+                            <div class="oj-lg-7 oj-md-7 oj-flex-item">
+                                <div class="homeStoreListView"><strong>Home Store: </strong><span data-bind="text: homeStore"></span></div>
+                                <div class="hireDateListview"><strong>Hire Date</strong> <span data-bind="text: $parent.getBasicFormattedDate(hireDate)"></span></div>
+                                <div class="employeeStatusListView" data-bind="style:{color: status == 'Inactive-Terminated' ? '#e80023' : '#81bb5f'}"><strong>Hire Status</strong> <span data-bind="text: status"></span></div>
+                            </div>
+                        </div>
+
+                      </div>
+                    </div>
+
+
+
+
+                    </li>
+                </script>
+        </div>
+
+    </div>
+</div>
+<div data-bind="template: {name: 'partials/employee-hire-status-modal/employee-hire-status-modal-large'}"></div>
+<div data-bind="template: {name: 'partials/employee-basic-info-modal/employee-basic-info-modal-large'}"></div>
