@@ -22,7 +22,19 @@ define([
             function PersonViewModel() {
                 var self = this;
                 self.personProfile = ko.observableArray([]);
-                self.sectionsState = ko.observable(false);
+
+                //Employee Dialog
+                self.handleOpen =  function(dialog) {
+                    if(dialog == "#scheduleDetailDialog"){
+                        //self.optionChangeHandler();
+                        $(dialog).ojDialog("open");
+                    }else{
+                        $(dialog).ojDialog("open");
+                    }
+
+
+                };
+
                 self.handleClose =  function(dialog) {
                     $(dialog).ojDialog("close");
                 };
@@ -66,6 +78,14 @@ define([
                     // executed until sync is resolved.
                     return oj.Router.sync();
                 };
+
+                self.selectHandler = function (event, ui) {
+                    if ('profileTabs' === event.target.id && event.originalEvent) {
+                        // Invoke go() with the selected item.
+                        self.router.go(ui.key);
+                    }
+                };
+
                 function getEmpURL(id) {
                     var url;
                     if (id) {
@@ -100,7 +120,6 @@ define([
                 self.setupObservables = function(){
                     //Not sure why above observable array can't be used with InputText binding in KO. Need to look into this.
                     //Sets up observables to be able to update them only in the view, does not save data.
-                     
                     self.firstName = ko.observable(self.personProfile().firstName);
                     self.lastName = ko.observable(self.personProfile().lastName);
                     self.posCheckName = ko.observable(self.personProfile().posCheckName);
@@ -264,7 +283,7 @@ define([
                     self.infoTiles = ko.observableArray();
                     //Jobs and compensation
                     self.compensation = ko.observableArray(self.personProfile().compensation);
-                    self.dataListSource = new oj.ArrayTableDataSource(self.compensation, {idAttribute: 'id'});
+self.dataListSource = new oj.ArrayTableDataSource(self.compensation, {idAttribute: 'id'});
                     //payroll 
                     self.extPayrollId = ko.observable(self.personProfile().externalPayrollId);
                     self.minimumwage = ko.observable(self.personProfile().subminimumwage);
@@ -712,12 +731,7 @@ define([
                     $('#people').addClass('oj-selected');
 
                 };
-                self.selectHandler = function (event, ui) {
-                    if ('profileTabs' === event.target.id && event.originalEvent) {
-                        // Invoke go() with the selected item.
-                        self.router.go(ui.key);
-                    }
-                };
+
                 //General function to  auto popup modal based on URL param string and dialog ID
                 self.autoDialog = function(param, dialogId){
                     if(document.URL.indexOf(param) > -1){
@@ -752,7 +766,6 @@ define([
                      return(false);
                      //create a mapping for friend url parameter like monday = 1
                 };
-
                 //Workaround to call schedules and timecards modal
                 //example ?root=profile&emp=103&tabs=schedules-timecards&currentWeekDay=0
                 //the zero thur 6 is the index of the 
