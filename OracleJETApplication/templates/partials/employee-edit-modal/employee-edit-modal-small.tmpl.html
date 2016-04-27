@@ -1,5 +1,5 @@
 <!--Not being used, only use when mobile template is very different from ipad/desktop template-->
-<div style="display:none;" id="empDialog" title="Edit Employee Information" data-bind="ojComponent:{component: 'ojDialog', initialVisibility: 'hide', dragAffordance: 'none',
+<div style="display:none;" id="profileDialogWindow" title="Edit Employee Information" data-bind="ojComponent:{component: 'ojDialog', initialVisibility: 'hide', dragAffordance: 'none',
             rootAttributes: {style: 'width: 375px; height: 600px;'},
             'position': {'my': 'right center', 'at': 'left center'}}">
     <div class="oj-dialog-body">
@@ -143,6 +143,6 @@
             </div>
         </div>
 
-        <button id="submitButton" class="basic-btn" data-bind="click: function(){$parent.handleClose('#empDialog')}">Save</button>
+        <button id="submitButton" class="basic-btn" data-bind="click: function(){$parent.handleClose('#profileDialogWindow')}">Save</button>
 
     </div>

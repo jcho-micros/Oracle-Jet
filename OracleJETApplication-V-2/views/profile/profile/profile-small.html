@@ -1,1 +1,150 @@
--Small
+<div id="accordionPage" data-bind="ojComponent: {component: 'ojAccordion'}">
+    <!-- Start of Section 1 --->
+    <div id="general" data-bind="ojComponent: {component: 'ojCollapsible', expanded:true}">
+        <h3>General</h3>
+        <div>
+            <div class="oj-flex">
+                <div class="oj-flex-item profileNameDisplay">
+                    <div class="oj-flex">
+                        <div class="oj-flex-item">
+                            <h4>Name</h4>
+                            <div class="employeeName" data-bind="text: $parent.firstName() + ' ' + $parent.lastName()"></div>
+                        </div>
+                    </div>
+                    <div class="oj-flex">
+                        <div class="oj-flex-item">
+                            <div class=" generalArea">
+                                <span><strong>Ethnicity: </strong></span>
+                                <span data-bind="text: $parent.ethnicity()"></span>
+                            </div>
+                            <div class=" generalArea">
+                                <span><strong>Gender: </strong></span>
+                                <span data-bind="text: $parent.gender()"></span>
+                            </div>
+                        </div>
+                        <div class="oj-flex-item">
+                            <div class=" generalArea">
+                                <span><strong>Language: </strong></span>
+                                <span data-bind="text: $parent.language()"></span>
+                            </div>
+                            <div class=" generalArea">
+                                <span><strong>Time Zone: </strong></span>
+                                <span data-bind="text: $parent.timeZone()"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-bind="visible: $parent.veteranStatus() == 'yes'">
+                        <div class="oj-flex">
+                            <h4>Veteran</h4>
+                        </div>
+                        <div class="oj-flex">
+                            <div class="oj-flex-item generalArea">
+                                <div class="indentDiv"><i class="fa fa-check"></i> <span data-bind="text: $parent.vietnamEra()"></span></div>
+                                <div class="indentDiv"><i class="fa fa-check"></i> <span data-bind="text: $parent.otherEligible()"></span></div>
+                                <div class="indentDiv"><i class="fa fa-check"></i> <span data-bind="text: $parent.otherProtected()"></span></div>
+                            </div>
+                            <div class="oj-flex-item generalArea">
+                                <div><i class="fa fa-check"></i> <span data-bind="text: $parent.armedForcesServiceMedal()"></span></div>
+                                <div><i class="fa fa-check"></i> <span data-bind="text: $parent.recentlySeparated()"></span></div>
+                                <div><i class="fa fa-check"></i> <span data-bind="text: $parent.specialDisabled()"></span></div>
+                            </div>
+                        </div>
+                        <div class="oj-flex">
+                            <div class="oj-flex-item disableNumberArea">
+                                <span><strong>Registered Disable Number: </strong></span>
+                                <span data-bind="text: $parent.registeredDisabledNumber()"></span>
+                            </div>
+                        </div>
+                        <div class="oj-flex">
+                            <div class="oj-flex-item disableNumberArea">
+                                <span><strong>Discharge Date: </strong></span>
+                                <span data-bind="text: $parent.dischargeDate()"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="contact">
+        <h3>Contact</h3>
+        <div>
+            <div class="contactArea">
+                <div class="oj-flex">
+                    <span><strong>Email Address: </strong></span>
+                    <a data-bind="attr:{href: $parent.getEmail($data)}, text: $parent.email() + '@example.net'"> </a> <i class="fa fa-envelope"></i>
+                </div>
+                <div data-bind="visible: $parent.receiveEmailNotification() == 1" class="oj-flex">
+                    <div class="indentDiv"><i class="fa fa-check"></i> Receive email notifications</div>
+                </div>
+            </div>
+            <div class="contactArea">
+                <div class="oj-flex">
+                    <span><strong>Phone Number: </strong></span>
+                    <a href=""><span data-bind="text: '+1 ' + $parent.phone()"></span> <i class="fa fa-phone"></i></a>
+                </div>
+                <div class="oj-flex" data-bind="visible: $parent.receiveTextNotification() == 1">
+                    <div class="indentDiv"><i class="fa fa-check"></i> Receive text notifications</div>
+                </div>
+                <div class="oj-flex" data-bind="visible: $parent.publishInCompanyDirectory() == 1">
+                    <div class="indentDiv"><i class="fa fa-check"></i> Publish in company directory</div>
+                </div>
+            </div>
+            <div class="oj-flex contactArea">
+                <span><strong>Other Phone Number: </strong></span>
+                <a href=""><span data-bind="text: '+1 ' + $parent.mobile()"></span> <i class="fa fa-phone"></i></a>
+            </div>
+            <div class="oj-flex contactArea" data-bind="visible: $parent.faxNumber()">
+                <span><strong>FAX Number: </strong></span>
+                <span data-bind="text: '+1 ' + $parent.faxNumber()"></span>
+            </div>
+            <div class="contactArea">
+                <div class="oj-flex"><strong>Address</strong></div>
+                <div class="indentDiv oj-flex">
+                    <div class="oj-flex-item">
+                        <div data-bind="text: $parent.address1()"></div>
+                        <div data-bind="text: $parent.address2()"></div>
+                        <span data-bind="text: $parent.city()"></span>
+                        <span data-bind="text: $parent.state()"></span>
+                        <span data-bind="text: $parent.postal()"></span>
+                        <span data-bind="text: $parent.country()"></span>
+                        <div data-bind="visible: $parent.inCityLimits() == 1">
+                            <div><i class="fa fa-check"></i> In city limits</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contactArea">
+                <div class="oj-flex"><strong>Emergency Contact</strong></div>
+                <div class="indentDiv oj-flex">
+                    <div class="oj-flex-item">
+                        <span data-bind="html: $parent.emergencyName()"></span>
+                        <span data-bind="html: $parent.formattedRelationship()"></span>
+                        <div data-bind="html: $parent.emergencyAddress()"></div>
+                        <span data-bind="html: $parent.emergencyCity()"></span>
+                        <span data-bind="html: $parent.emergencyState()"></span>
+                        <span data-bind="html: $parent.emergencyZipCode()"></span>
+                        <div data-bind="html: $parent.emergencyPhone()"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Custom">
+        <h3>Custom</h3>
+        <div class="oj-flex">&nbsp;</div>
+
+    </div>
+</div>
+<div class="subToolRow oj-flex">
+    <hr/>
+    <div class="oj-flex-item">
+        <a style="line-height:39px;" data-bind="attr:{href: 'index.html?root=people'}"><i class="fa fa-arrow-circle-left"></i> back to search</a>
+    </div>
+    <div class="oj-flex-item oj-sm-text-align-end">
+        <a data-bind="click: $parent.handleOpen('#profileDialogWindow')" style="line-height:39px;">edit <i class="fa fa-pencil-square-o"></i></a>
+    </div>
+</div>
+<div data-bind="template: {name: 'partials/employee-edit-modal/employee-edit-modal-small'}"></div>

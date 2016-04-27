@@ -745,7 +745,7 @@ self.dataListSource = new oj.ArrayTableDataSource(self.compensation, {idAttribut
                 self.autoDialog("&trueUpdateEmp", "#hireStatusDialog");
 
                 //Workaround to load dialog box for Editing Modal
-                self.autoDialog("&editEmp", "#empDialog");
+                self.autoDialog("&editEmp", "#profileDialogWindow");
 
                 //Workaround to show the New Employee Added Message when coming from the add-employee section
                 if(document.URL.indexOf("&trueAddEmp") > -1){

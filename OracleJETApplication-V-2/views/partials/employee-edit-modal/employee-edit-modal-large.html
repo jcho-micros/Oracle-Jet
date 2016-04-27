@@ -1,0 +1,197 @@
+<div style="display:none;" id="profileDialogWindow" title="Edit Employee Information" data-bind="ojComponent:{component: 'ojDialog', initialVisibility: 'hide', rootAttributes: {class: 'dialog-dimensions profile-dialog'}}">
+    <div class="oj-dialog-header oj-helper-clearfix" aria-labelledby="dialogTitleId">
+        <div id="dialogTitleId" class="oj-dialog-title">
+           <h2 class="dialogHeaderText">Edit Employee Information</h2>
+        </div>
+    </div>
+    <div class="oj-dialog-body">
+        <div class="oj-flex oj-sm-flex-items-1">
+            <div class="oj-flex-item">
+                <div class="oj-flex oj-sm-flex-items-1 oj-flex-items-pad">
+                    <div class="oj-flex-item dialog-field-label">First Name</div>
+                    <div class="oj-flex-item">
+                        <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.firstName}" />
+                    </div>
+                </div>
+                <div class="oj-flex oj-sm-flex-items-1 oj-flex-items-pad">
+                    <div class="oj-flex-item dialog-field-label">POS Check Name</div>
+                    <div class="oj-flex-item">
+                        <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.posCheckName}" />
+                    </div>
+                </div>
+                <div class="oj-flex oj-sm-flex-items-1 oj-flex-items-pad">
+                    <div class="oj-flex-item dialog-field-label">Time Zone</div>
+                    <div class="oj-flex-item">
+                        <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.timeZone}" />
+                    </div>
+                </div>
+                <div class="oj-flex oj-sm-flex-items-1 oj-flex-items-pad">
+                    <div class="oj-flex-item dialog-field-label">Gender</div>
+                    <div class="oj-flex-item">
+                        <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.gender}" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="oj-flex-item">
+                <div class="oj-flex oj-sm-flex-items-1 oj-flex-items-pad">
+                    <div class="oj-flex-item dialog-field-label">Last Name</div>
+                    <div class="oj-flex-item">
+                        <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.lastName}" />
+                    </div>
+                </div>
+
+                <div class="oj-flex oj-sm-flex-items-1 oj-flex-items-pad">
+                    <div class="oj-flex-item dialog-field-label">Language</div>
+                    <div class="oj-flex-item">
+                        <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.language}" />
+                    </div>
+                </div>
+                <div class="oj-flex oj-sm-flex-items-1 oj-flex-items-pad">
+                    <div class="oj-flex-item dialog-field-label">Ethnicity</div>
+                    <div class="oj-flex-item">
+                        <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.ethnicity}" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="oj-flex oj-sm-flex-items-1">
+            <div class="oj-flex-item">
+                <div class="oj-flex oj-sm-flex-items-1 oj-flex-items-pad">
+                    <div class="oj-flex-item dialog-section-label">Veteran Info</div>
+                </div>
+            </div>
+        </div>
+        <div class="oj-flex oj-sm-flex-items-1">
+            <div class="oj-flex-item">
+                <div class="oj-flex oj-sm-flex-items-1 oj-flex-items-pad">
+                    <div class="oj-flex-item dialog-field-label">Veteran Status</div>
+                    <div class="oj-flex-item">
+                        <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.veteranStatus}" />
+                    </div>
+                </div>
+                <div class="oj-flex oj-sm-flex-items-1 oj-flex-items-pad">
+                    <div class="oj-flex-item dialog-field-label">Other Eligible</div>
+                    <div class="oj-flex-item">
+                        <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.otherEligible}" />
+                    </div>
+                </div>
+                <div class="oj-flex oj-sm-flex-items-1 oj-flex-items-pad">
+                    <div class="oj-flex-item dialog-field-label">Armed Forces Service Medal</div>
+                    <div class="oj-flex-item">
+                        <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.armedForcesServiceMedal}" />
+                    </div>
+                </div>
+                <div class="oj-flex oj-sm-flex-items-1 oj-flex-items-pad">
+                    <div class="oj-flex-item dialog-field-label">Special Disabled</div>
+                    <div class="oj-flex-item">
+                        <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.specialDisabled}" />
+                    </div>
+                </div>
+                <div class="oj-flex oj-sm-flex-items-1 oj-flex-items-pad">
+                    <div class="oj-flex-item dialog-field-label">Discharge Date</div>
+                    <div class="oj-flex-item">
+                        <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.dischargeDate}" />
+                    </div>
+                </div>
+            </div>
+            <div class="oj-flex-item">
+                <div class="oj-flex oj-sm-flex-items-1 oj-flex-items-pad">
+                    <div class="oj-flex-item dialog-field-label">Vietnam Era</div>
+                    <div class="oj-flex-item">
+                        <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.vietnamEra}" />
+                    </div>
+                </div>
+
+                <div class="oj-flex oj-sm-flex-items-1 oj-flex-items-pad">
+                    <div class="oj-flex-item dialog-field-label">Other Protected</div>
+                    <div class="oj-flex-item">
+                        <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.otherProtected}" />
+                    </div>
+                </div>
+
+                <div class="oj-flex oj-sm-flex-items-1 oj-flex-items-pad">
+                    <div class="oj-flex-item dialog-field-label">Recently Separated</div>
+                    <div class="oj-flex-item">
+                        <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.recentlySeparated}" />
+                    </div>
+                </div>
+                <div class="oj-flex oj-sm-flex-items-1 oj-flex-items-pad">
+                    <div class="oj-flex-item dialog-field-label">Registered Disabled Number</div>
+                    <div class="oj-flex-item">
+                        <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.registeredDisabledNumber}" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="oj-flex oj-sm-flex-items-1">
+            <div class="oj-flex-item">
+                <div class="oj-flex oj-sm-flex-items-1 oj-flex-items-pad">
+                    <div class="oj-flex oj-flex-items-pad oj-sm-flex-items-1">
+                        <div class="oj-flex-item dialog-section-label">Contact Info</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="oj-flex oj-sm-flex-items-1">
+            <div class="oj-flex-item">
+                <div class="oj-flex oj-sm-flex-items-1 oj-flex-items-pad">
+                    <div class="oj-flex-item dialog-field-label">Email</div>
+                    <div class="oj-flex-item">
+                        <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.email}" />
+                    </div>
+                </div>
+                <div class="oj-flex oj-sm-flex-items-1 oj-flex-items-pad">
+                    <div class="oj-flex-item dialog-field-label">Other Phone Number</div>
+                    <div class="oj-flex-item">
+                        <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.mobile}" />
+                    </div>
+                </div>
+                <div class="oj-flex oj-sm-flex-items-1 oj-flex-items-pad">
+                    <div class="oj-flex-item dialog-field-label">Address</div>
+                    <div class="oj-flex-item">
+
+                        <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.address1}" />
+                        <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.address2}" />
+                        <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.city}" />
+                        <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.state}" />
+                        <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.postal}" />
+                        <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.country}" />
+                    </div>
+
+                </div>
+            </div>
+            <div class="oj-flex-item">
+
+                <div class="oj-flex oj-sm-flex-items-1 oj-flex-items-pad">
+                    <div class="oj-flex-item dialog-field-label">Phone</div>
+                    <div class="oj-flex-item">
+                        <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.phone}" />
+                    </div>
+                </div>
+                <div class="oj-flex oj-sm-flex-items-1 oj-flex-items-pad">
+                    <div class="oj-flex-item dialog-field-label">Fax Number</div>
+                    <div class="oj-flex-item">
+                        <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.faxNumber}" />
+                    </div>
+                </div>
+                <div class="oj-flex oj-sm-flex-items-1 oj-flex-items-pad">
+                    <div class="oj-flex-item dialog-field-label">Emergency Contact</div>
+                    <div class="oj-flex-item">
+                        <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.emergencyName}" />
+                        <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.relationship}" />
+                        <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.emergencyAddress}" />
+                        <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.emergencyCity}" />
+                        <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.emergencyState}" />
+                        <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.emergencyZipCode}" />
+                        <input data-bind="ojComponent: {component: 'ojInputText', value: $parent.emergencyPhone}" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <button id="submitButton" class="basic-btn" data-bind="click: function(){$parent.handleClose('#profileDialogWindow')}">Save</button>
+
+    </div>
+</div>

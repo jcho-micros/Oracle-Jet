@@ -1,8 +1,8 @@
 //Employee Dialog
 self.handleOpen =  function() {
-    $("#empDialog").ojDialog("open");
+    $("#profileDialogWindow").ojDialog("open");
 };
 
 self.handleClose =  function() {
-    $("#empDialog").ojDialog("close");
+    $("#profileDialogWindow").ojDialog("close");
 };

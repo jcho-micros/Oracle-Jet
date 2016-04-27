@@ -70,7 +70,7 @@ require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', '
             'reports-analytics': {label: 'Reporting & Analytics', value: 'reports-analytics'},
             'enterprise': {label: 'Enterprise', value: 'enterprise'},
             'people': {label: 'People', value: 'people'},
-            'profile': {label: 'Profile',
+            'profile': {label: 'Profile', value: 'profile',
                 exit: function () {
                     var childRouter = router.currentState().value;
                     childRouter.dispose();
@@ -171,16 +171,12 @@ require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', '
                     case 'people':
                         title = 'People';
                         return title;
+                    case 'profile':
+                        title = 'Profile';
+                        return title;
                 }
             });
-            self.navChange = function (event, ui) {
-                if (ui.option === 'selection' && ui.value !== self.router.stateId()) {
-                    // Only toggle navigation drawer when it's shown on small screens
-                    if (self.smScreen())
-                        self.toggleDrawer();
-                    self.router.go(ui.value);
-                }
-            };
+
             self.optionChangeHandler = function (event, data) {
                 if (data.value == undefined) {
                     data.value = 'home';
