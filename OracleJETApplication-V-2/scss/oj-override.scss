@@ -399,6 +399,7 @@ html:not([dir="rtl"]) .oj-dialog-title{
                             (reports-analytics, $reportsAnalyticsDialogHeaderColor, $reportsAnalyticsDialogAccentColor),
                             (enterprise, $enterpriseDialogHeaderColor, $enterpriseDialogAccentColor),
                             (people, $peopleDialogHeaderColor, $peopleDialogAccentColor),
+                            (empBasic, $peopleDialogHeaderColor, $peopleDialogAccentColor),
                             (profile, $peopleDialogHeaderColor, $peopleDialogAccentColor){
                             //Dialog window Per Section    
                             #ojDialogWrapper-#{$section}DialogWindow{
@@ -577,7 +578,23 @@ html:not([dir="rtl"]) .oj-dialog-title{
         }
     }
 }
-@import "people.scss";
+//People CSS
+.searchTitle{
+    h2{
+         color:$black;   
+    }
+}
+.searchWindow{
+    .peopleSearchWrapper {
+        padding: 0 20px;
+
+    }
+    .button-row {
+        padding: 10px 10px 0 10px;
+    }
+}
+
+
 //Media Query
 //Medium/ipad (UP)
 @media only screen and (min-width: 768px){
