@@ -19,6 +19,10 @@
         </div>
     </div>
     <div class="mainContentArea">
+        <!--    For profile Area header-->
+        <div class="oj-flex" data-bind="css: $root.router.stateId() + 'TitleWrap', if:$root.router.stateId() == 'profile'">
+            <h1 data-bind="text: firstName() + ' ' + lastName()" class="pageTitle"></h1>
+        </div>
         <div class="oj-flex oj-flex-items-pad" data-bind="if: router.stateId()">
             <div id="profileTabSection" class="oj-flex-item" data-bind="with: router.currentState()">
                 <div data-bind="template: {name: 'profile/' + id +'/' + id + '-small'}"></div>
@@ -31,6 +35,10 @@
 
 <!-- large template -->
 <script type="text/html" id="md_lg_xl_template">
+    <!--    For profile Area header-->
+    <div class="oj-flex" data-bind="css: $root.router.stateId() + 'TitleWrap', if:$root.router.stateId() == 'profile'">
+        <h1 data-bind="text: firstName() + ' ' + lastName()" class="pageTitle"></h1>
+    </div>
         <div id="profileSectionTabs" class="oj-flex-item subTabs">
             <div data-bind="ojComponent: {component: 'ojConveyorBelt'}">  
                 <div id="profileTabs" data-bind="ojComponent: {component: 'ojNavigationList', selection: router.stateId(), beforeSelect: selectHandler, drillMode: 'none', edge: 'top'}">

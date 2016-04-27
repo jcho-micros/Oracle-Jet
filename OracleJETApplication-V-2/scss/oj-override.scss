@@ -504,7 +504,23 @@ html:not([dir="rtl"]) .oj-dialog-title{
         content: url($headerUserIcon);
     }
 }
+//profile header overwrite
+#headerTemplate .profileTitleWrap {
+    display: none;
+}
+@each $section, $color, $headerBckImg in (home, $homeBckColor, $homeBckImg),
+                            (labor-management, $laborBckColor, $laborBckImg),
+                            (inventory-management, $inventoryBckColor, $inventoryBckImg),
+                            (gift-loyalty, $giftLoyaltyBckColor, $giftLoyaltyBckImg),
+                            (reports-analytics, $reportsAnalyticsBckColor, $reportingAnalyticsBckImg),
+                            (enterprise, $enterpriseBckColor, $enterpriseBckImg),
+                            (people, $peopleBckColor, $peopleBckImg),
+                            (profile, $peopleBckColor, $peopleBckImg){
+                                .#{$section}TitleWrap{
+                                    background-color: $color;
+                                }
 
+                            }
 #appHeaderDesktopNav, #appHeaderMobileNav{
     .topNavImgIcon{
        margin-top:3px;

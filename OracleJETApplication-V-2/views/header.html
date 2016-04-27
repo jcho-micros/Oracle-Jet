@@ -64,7 +64,7 @@
                     <h1 class="inlineHeader"><span class="fa fa-users"></span> People <span class="fa fa-question custom-question-icon"></span> </h1>
                 </div>
                 <div class="oj-flex-item">
-    <!--            <a href="index.html?root=add-employee" class="basic-btn-link">Add</a>-->
+                    <!--            <a href="index.html?root=add-employee" class="basic-btn-link">Add</a>-->
                     <a href="" data-bind="click: function(){handleOpen('#addEmpStatusDialog');}" class="basic-btn-link"><span class="fa fa-plus"></span> Add</a>
                 </div>
 
@@ -78,6 +78,16 @@
             <h1 data-bind="text: $root.pageTitle" class="pageTitle"></h1>
         </div>
     </div>
+    <!--    For profile Area header-->
+<!--
+    <div class="oj-flex" data-bind="css: $root.router.stateId() + 'TitleWrap', if:$root.router.stateId() == 'profile'">
+        <div id="topDrawer" class="oj-offcanvas-top" data-bind="ojModule: {
+                        name: 'profile',
+                        viewName: 'partials/profile-header/profile-header-large'}">
+        </div>
+    </div>
+-->
+
 
 </script>
 <!-- large template -->
@@ -122,7 +132,7 @@
             </button>
             <ul id="appheaderGlobalNavMenuId" data-bind="ojComponent: {component: 'ojMenu', select: menuItemSelect}" style="display:none">
 
-               <li data-bind="attr: {label: $root.userData().email}">
+                <li data-bind="attr: {label: $root.userData().email}">
                     <a data-bind="text: $root.userData().email, href: url"></a>
                 </li>
 
