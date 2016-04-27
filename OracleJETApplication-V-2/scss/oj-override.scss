@@ -16,7 +16,7 @@
          src: url('fonts/HelveticaNeue-Light.ttf') format('truetype');
 //         url('fontname.svg#fontname') format('svg');
 }
-
+ 
 // background colors 
 // ---------------------------------
 $white: #fff;
@@ -117,6 +117,11 @@ $topOffCanvasTabSelected: $darkGray;
 $topOffCanvasTabTextColor: $white;
 $topOffCanvasAnalyticsBckgColor: $white;
 $topOffCanvasAnalyticsText: $black;
+
+//Off Canvas Left
+$leftOffCanvasDesktopBckg: $sideNavBckColor;
+$leftOffCanvasDesktopText: $sideNavLinksBlue;
+
 
 //Header Variables
 $headerBgColor: $lightGray;
@@ -550,7 +555,6 @@ html:not([dir="rtl"]) .oj-dialog-title{
             .oj-default{
                 .oj-navigationlist-item-label{
                     color:$white;
-                    font-weight:300;
                 }
             }
         }
@@ -670,6 +674,25 @@ html:not([dir="rtl"]) .oj-dialog-title{
     .dialog-dimensions{
         width:85%;
         height:auto;
+    }
+    //Left Side Navigation
+      #appDrawer{
+        background-color: $leftOffCanvasDesktopBckg;
+        width:200px;
+        outline-color: transparent;
+        .oj-navigationlist-element{
+            .oj-default{
+                .oj-navigationlist-item-label{
+                    color:$leftOffCanvasDesktopText;
+                }
+            }
+            .oj-hover{
+                background-color: $sideNavLinkBckBgHover;
+                .oj-navigationlist-item-label{
+                    color:$sideNavLinkColorHover;
+                }
+            }
+        }
     }
 }
 
