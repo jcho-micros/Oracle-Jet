@@ -120,6 +120,7 @@ define([
                 self.setupObservables = function(){
                     //Not sure why above observable array can't be used with InputText binding in KO. Need to look into this.
                     //Sets up observables to be able to update them only in the view, does not save data.
+                    self.dataExample = ko.dataFor(document.getElementById('headerTemplate'));
                     self.firstName = ko.observable(self.personProfile().firstName);
                     self.lastName = ko.observable(self.personProfile().lastName);
                     self.posCheckName = ko.observable(self.personProfile().posCheckName);
