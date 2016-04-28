@@ -64,7 +64,7 @@ define([
                         return state;
                     });
                     //Sets up the Child router for tabs
-                    self.router = self.empRouter.createChildRouter('tabs').configure({
+                    self.router = self.empRouter.createChildRouter('profiletabs').configure({
                         'profile': {label: 'Profile', value: 'profile', isDefault: true},
                         'schedules-timecards': {label: 'Schedules & Timecards', value: 'schedules-timecards'},
                         'jobs-compensation': {label: 'Jobs & Compensation', value: 'jobs-compensation'},

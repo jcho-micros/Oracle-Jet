@@ -103,7 +103,6 @@ define([
         
         self.appId = appName.id;
         self.appName = appName.name;
-
         self.userName = ko.observable(toolbarData.userName);
         self.toolbarButtons = toolbarData.toolbar_buttons;
         self.globalNavItems = toolbarData.global_nav_dropdown_items;
