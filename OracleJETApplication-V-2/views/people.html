@@ -30,7 +30,12 @@
             <div data-bind="template: {name: 'partials/employee-search/employee-search-large'}"></div>
         </div>
     </div>
-
+    <!--Using large template until mobile is provided-->
+    <div data-bind="ojModule: {
+                    name: 'partials/add-employee-modal',
+                    viewName: 'partials/add-employee-modal/add-employee-modal-small'}">
+    </div>
+        <div data-bind="template: {name: 'people/dialogwindow/dialogwindow-large'}"></div>
 </script>
 
 

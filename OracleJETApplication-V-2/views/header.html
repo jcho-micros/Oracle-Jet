@@ -148,9 +148,20 @@
             </button>
         </div>
     </div>
-    <div class="oj-flex" data-bind="css: $root.router.stateId() + 'TitleWrap'">
-        <h1 data-bind="text: $root.pageTitle" class="pageTitle"></h1>
+    <div data-bind="ifnot:$root.router.stateId() == 'profile'">
+        <div class="oj-flex" data-bind="css: $root.router.stateId() + 'TitleWrap'">
+            <h1 data-bind="text: $root.pageTitle" class="pageTitle"></h1>
+        </div>
     </div>
+    <div data-bind="if: $root.router.stateId() == 'profile'">
+        <div class="oj-flex" data-bind="css: $root.router.stateId() + 'TitleWrap', if:$root.router.stateId() == 'profile'">
+            <div id="topDrawer" class="oj-offcanvas-top" data-bind="ojModule: {
+                            name: 'profile',
+                            viewName: 'partials/profile-header/profile-header-large'}">
+            </div>
+        </div>
+    </div>
+
 </script>
 <!-- oj-row -->
 <script type="text/html" id="app_nav_template">
