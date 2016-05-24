@@ -1,63 +1,36 @@
 <div class="oj-flex">
-
+    <div class="oj-col oj-md-12 oj-lg-text-align-end">
+        <a data-bind="click: $parent.handleOpen('#profileDialogWindow')" style="line-height:39px;">edit <i class="fa fa-pencil-square-o"></i></a>
+    </div>
     <div class="oj-flex-item">
-
-        <h3>General</h3>
-
+        <div class="oj-flex-item" style="background-color: #e1e7ee; hegiht: auto; padding: 2px; margin-top: 25px; margin-right: 15px; ">
+            <h3>General</h3>
+        </div>
         <div class="oj-flex">
-
             <div class="oj-flex-item">
-
                 <div>
-
-                    <h4>Name</h4>
-
+                    <h4>NAME</h4>
                     <span data-bind="text: $parent.firstName() + ' ' + $parent.lastName()"></span>
-
-
-
                 </div>
 
-
-
-                <!--                <div data-bind="visible: $parent.posCheckName()">
-
-                        <h4>POS Check Name <a href="#"><i class="fa fa-question-circle"></i></a></h4>
-
-                        <div data-bind="text: $parent.posCheckName()"></div>
-
-                    </div>-->
-
-                <div>
-
-                    <h4>Language</h4>
-
+                <div style="margin-top: 25px">
+                    <h4>LANGUAGE</h4>
                     <span data-bind="text: $parent.language()"></span>
-
                 </div>
 
-                <div>
-
-                    <h4>Time Zone</h4>
-
+                <div  style="margin-top: 25px">
+                    <h4>TIME ZONE</h4>
                     <div data-bind="text: $parent.timeZone()"></div>
-
                 </div>
 
-                <div>
-
-                    <h4>Ethnicity</h4>
-
+                <div  style="margin-top: 25px">
+                    <h4>ETHNICITY</h4>
                     <div data-bind="text: $parent.ethnicity()"></div>
-
                 </div>
 
-                <div>
-
-                    <h4>Gender</h4>
-
+                <div  style="margin-top: 25px">
+                    <h4>GENDER</h4>
                     <div data-bind="text: $parent.gender()"></div>
-
                 </div>
 
             </div>
@@ -80,7 +53,7 @@
 
                 <div data-bind="visible: $parent.veteranStatus() == 'yes'">
 
-                    <h4>Veteran</h4>
+                    <h4>VETERAN</h4>
 
                     <!--                <div><span class="veteranStatus">A Veteran?</span> <span data-bind="text: $parent.veteranStatus()"></span></div>-->
 
@@ -98,13 +71,13 @@
 
 
 
-                    <h4>Registered Disable Number</h4>
+                    <h4>REGISTERED DISABLE NUMBER</h4>
 
                     <div data-bind="text: $parent.registeredDisabledNumber()"></div>
 
 
 
-                    <h4>Discharge Date</h4>
+                    <h4>DISCHARGE DATE</h4>
 
                     <div data-bind="text: $parent.dischargeDate()"></div>
 
@@ -117,18 +90,19 @@
     </div>
 
     <div class="oj-flex-item">
+        <div class="oj-flex-item" style="background-color: #e1e7ee; hegiht: auto; padding: 2px; margin-top: 25px; ">
+            <h3>Contact</h3>
+        </div>
 
-        <h3>Contact</h3>
-
-<div class="oj-flex">
+    <div class="oj-flex">
 
             <div class="oj-flex-item">
 
                 <div class="contactColumn">
 
-                    <h4>Email Address</h4>
+                    <h4>EMAIL ADDRESS</h4>
 
-                    <a style="font-weight: bold;" data-bind="attr:{href: $parent.getEmail($data)}, text: $parent.email()"></a><i class="fa fa-envelope"></i>
+                    <i class="fa fa-envelope"></i><a style="font-weight: bold;" data-bind="attr:{href: $parent.getEmail($data)}, text: $parent.email()"></a>
 
                     <div data-bind="visible: $parent.receiveEmailNotification() == 1">
 
@@ -138,7 +112,7 @@
 
                 </div>
 
-                <h4>Phone Number</h4>
+                <h4>PHONE NUMBER</h4>
 
                 <div data-bind="text: $parent.phone()"></div>
 
@@ -156,7 +130,7 @@
 
                 <div>
 
-                    <h4>Other Phone Number</h4>
+                    <h4>OTHER PHONE NUMBER</h4>
 
                     <div data-bind="text: $parent.mobile()"></div>
 
@@ -166,13 +140,13 @@
 
                 <div data-bind="visible: $parent.faxNumber()">
 
-                    <h4>FAX Number</h4>
+                    <h4>FAX NUMBER</h4>
 
                     <div data-bind="text: $parent.faxNumber()"></div>
 
                 </div>
 
-                <h4>Address</h4>
+                <h4>ADDRESS</h4>
 
                 <div data-bind="text: $parent.address1()"></div>
 
@@ -198,7 +172,7 @@
 
                 <div>
 
-                    <h4>Emergency Contact</h4>
+                    <h4>EMERGENCY CONTACT</h4>
 
                     <div data-bind="html: $parent.emergencyName()"></div>
 
@@ -223,13 +197,13 @@
 
 </div>
 <div class="oj-flex">
-    <h3>Custom</h3>
+<!--    <h3>Custom</h3>-->
 
     <div class="oj-col oj-md-12 oj-lg-text-align-end">
         <a data-bind="attr:{href: 'index.html?root=people'}">back to search <i class="fa fa-arrow-circle-right"></i></a>
     </div>
 </div>
-<div class="oj-col oj-sm-3">
+<!--<div class="oj-col oj-sm-3">
     <a data-bind="click: $parent.handleOpen('#profileDialogWindow')" style="line-height:39px;">edit <i class="fa fa-pencil-square-o"></i></a>
-</div>
+</div>-->
 <div data-bind="template: {name: 'partials/employee-edit-modal/employee-edit-modal-large'}"></div>

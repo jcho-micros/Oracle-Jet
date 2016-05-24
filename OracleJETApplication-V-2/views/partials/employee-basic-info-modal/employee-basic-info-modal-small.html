@@ -3,34 +3,188 @@
             resizeBehavior: 'none',
             dragAffordance: 'none',
             initialVisibility: 'hide', 
-            rootAttributes: {style: 'width: 375px; height: 600px;'}, 
+            rootAttributes: {style: 'width: 315px; height: 1000px;'}, 
             'position': {'at': 'top'}}">
      <!-- Note: the user must provide the aria-labelledby attribute for the dialog to be accessible -->
     <div class="oj-dialog-header oj-helper-clearfix" aria-labelledby="dialogTitleId">
         <div id="dialogTitleId" class="oj-dialog-title">
-             <h2 class="dialogHeaderText oj-flex">
-                 <img data-bind="attr:{src: 'css/images/header-icon-dialog.png'}" /> 
+             <h1 class="dialogHeaderText oj-flex">
+                 <img style="width: 25px; height: 25px" data-bind="attr:{src: 'css/images/people/nopic.png'}" /> 
                 <span id="dialogTitleId">
                     <span data-bind="text: basicEmpInfo().firstName"></span>
                     <span data-bind="text: basicEmpInfo().lastName"></span>
-                    <button id="submitButton" data-bind="click:loadPersonPage">Full Details</button>
+                     <a style="padding-left: 10px; color: #ffffff" href="#" data-bind="click:loadPersonPage">full details<i class="fa fa-arrow-circle-right"></i></a>
+                
                 </span>
-             </h2>
+             </h1>
         </div>
     </div> 
     <div class="oj-dialog-body">
-      <!--        <div class="oj-flex">
-                <div class="alertMsgWrap oj-flex-item">
-                     <div class="alertMsgText">
-                         <i class="fa fa-check"></i> Order i15-02095 has been successfully submitted
-                     </div>
-                 </div>-->
-        <div class="oj-flex">
-            <div class="oj-flex-item"><img data-bind="attr: {src: getPhoto(basicEmpInfo().empId)}"/></div>
-            <div class="oj-flex-item" data-bind="text: basicEmpInfo().phone"></div>
-            <div class="oj-flex-item" data-bind="text: basicEmpInfo().title"></div>
+      
+       <div class="oj-flex">
+            <div class="oj-flex" style="background-color: #ffffff; height: auto">
+                                <div class="oj-sm-2 oj-flex-item" style="padding: 2px; float: left">
+                                    <img data-bind="attr: {src: getPhoto(basicEmpInfo().empId)}" style="width: 50px; height: 50px"/>
+                                </div>
+
+                                <div class="oj-sm-5 oj-flex-item" style="padding: 2px; ">
+                                    <label for="name">NAME</label>
+                                    <br /><span id="name" style="color: #00a8ff"  data-bind="text: basicEmpInfo().firstName + ' ' + basicEmpInfo().lastName"></span>
+                                    <br /><br /><label for="status">STATUS</label>
+                                    <br /><span id="status" style="color: #00a8ff" data-bind="text: basicEmpInfo().hireStatus"></span>
+                                    
+                                </div>
+
+                                <div class="oj-sm-5 oj-flex-item" style="padding: 2px; ">
+                                    <label for="homestore">HOME STORE</label>
+                                    <br /><span id="homestore" style="color: #00a8ff" data-bind="text: basicEmpInfo().homeStore"></span>
+                                    
+                                    <br /><br /><label for="hiredate">HIRE DATE</label>
+                                    <br /><span id="hiredate" style="color: #00a8ff" data-bind="text: new Date(basicEmpInfo().hireDate).getYear();"></span>
+                                    
+                                </div>
+                 </div>
+           </div>
+        <hr>
+        <div class="oj-flex" style="background-color: #ffffff; height: auto">
+            
+            <div class="oj-sm-6 oj-flex-item" style="padding: 5px; ">
+                
+                                    <label for="contact">CONTACT</label>
+                                    <br /><span id="contact" style="color: #00a8ff" data-bind="text: basicEmpInfo().mobile + ' mobile' "></span>
+                                    <br /><span id="contact" style="color: #00a8ff" data-bind="text: basicEmpInfo().email + ' email' "></span>
+            </div>        
+             <div class="oj-sm-6 oj-flex-item" style="padding: 5px; ">
+                                    
+                 <label for="emecontact">EMERGENCY CONTACT</label>
+                                    <br /><span id="emecontact" style="color: #00a8ff" data-bind="text: basicEmpInfo().emergencyName + ' ('+basicEmpInfo().relationship+ ') '+basicEmpInfo().emergencyPhone"></span>
+                                    
+                                </div>
         </div>
+        <hr>
+        <div class="oj-flex" style="background-color: #ffffff; height: auto">
+            <div class="oj-sm-6 oj-flex-item" style="padding: 5px; ">
+                <label for="clockedin">Clocked in</label>
+            </div>        
+             <div class="oj-sm-6 oj-flex-item" style="padding: 5px; ">
+                         <br /> <label for="clockedin">LAST CLOCKED IN</label>
+                        <br /><span id="clockedin" style="color: #00a8ff" data-bind="text: basicEmpInfo().homeStore"></span>
+                                    
+                         <br /><br /><a href="#">view all employees <i class="fa fa-arrow-circle-right"></i></a>                                   
              </div>
-         </div>
-     </div>
+        </div>
+        <hr>
+        <div class="oj-flex" style="background-color: #ffffff; height: auto">
+                   
+             <div class="oj-sm-12 oj-flex-item" style="padding: 5px; ">
+                         <label for="availability">AVAILABILITY (Days & Time)</label>
+                                   <br /> <label for="unavailable">UNAVAILABLE</label>
+                                   <div data-bind="foreach: unavailableDaysAndTimes()">
+                                    <div class="oj-flex-item currentWeekHeader" style="background-color: #ffffff;">
+                                        <div style="color: #000000" 
+                                             data-bind="text: day + ': '+ (allday === 'yes' ? 'all day' : starttime + ' - '+endtime)"> 
+                                        </div>
+                                   
+                                    </div>
+                                        </div>
+                                   <br /> <label for="preferred">PREFERRED</label>  
+                                   <div data-bind="foreach: preferredDaysAndTimes()">
+                                    <div class="oj-flex-item currentWeekHeader" style="background-color: #ffffff;">
+                                        <div style="color: #000000" 
+                                             data-bind="text: day + ': '+ (allday === 'yes' ? 'all day' : starttime + ' - '+endtime)"> 
+                                        </div>
+                                   
+                                    </div>
+                                    </div>
+             </div>
+        </div>
+        <hr>
+    </div>
+     
+    
+<!--              <div class="oj-md-4 oj-lg-3 oj-flex-item currentWeekHeader" style="background-color: #FAAC58; margin-right: 5px ">
+                <div style="color: #ffffff">BARTENDER TOTALS</div>
+                <div style="color: #ffffff">$126.75 (18.5 hours) | $120.00 tips</div>
+                <div style="color: #ffffff">$246.75</div>
+              </div>
+              <div class="oj-md-4 oj-lg-3 oj-flex-item currentWeekHeader" style="background-color: #8181F7; margin-right: 5px ">
+                <div style="color: #ffffff">SERVER TOTALS</div>
+                <div style="color: #ffffff">$126.75 (18.5 hours) | $120.00 tips</div>
+                <div style="color: #ffffff">$246.75</div>
+              </div>-->
+              
+<!--              <div data-bind="foreach:currentScheduledJobNames()">
+                <div class="oj-flex-item currentWeekHeader" style="background-color: #8181F7;">
+                  <div style="color: #ffffff" data-bind="text: $data + ' TOTALS'"> </div>
+                  <div style="color: #ffffff">$126.75 (18.5 hours) | $120.00 tips</div>
+                  <div style="color: #ffffff">$246.75</div>
+                </div>
+            </div>-->
+            
+     
+     <div class="oj-flex">
+            <div class="oj-flex" style="height: auto; width: 95%">
+                <div class="oj-flex-item currentWeekHeaderArea"  style="background-color: #84bbe6; width: 280px">
+                    <div class="currentWeekHeader"><strong>Current Week</strong> (8/40 hours) </div>
+                </div>
+                
+                <div class="oj-flex oj-sm-12 ">
+              <div class="oj-sm-12 oj-flex-item currentWeekHeader" style="background-color: #000000; margin-right: 5px ">
+                <div style="color: #ffffff">WEEKLY TOTALS</div>
+                <div style="color: #ffffff">$126.75 (18.5 hours) | $120.00 tips</div>
+                <div style="color: #ffffff">$246.75</div>
+              </div>   
+          </div>
+                
+                <div class="oj-flex-item currentFilmStrip">
+                <div id="filmStripDiv" class="oj-panel" style="margin: '20px';  width: 280px">
+                  <div id="filmStrip" aria-label="Set of chemicals" data-bind="ojComponent: {component: 'ojFilmStrip', arrowPlacement: self.currentNavArrowPlacement, arrowVisibility: self.currentNavArrowVisibility}">
+
+                    <!-- ko foreach:formttedCurrentScheduledDateValues -->
+
+                   <div class="oj-panel oj-panel-alt2 schedule-filmstrip-item" 
+                       data-bind="style: {display:  $parent.getItemInitialDisplayDialog($index())}">
+                    <div>
+                        <div style="background-color: black; color: white;  text-align: center;">
+                       <span data-bind="text: startDate"></span> 
+                       <br /><span style="float: " data-bind="text: totalEarning;"></span>
+                       <br /><span data-bind="text: dailyLoacl"></span>
+                       <br /><span data-bind="text: totalHours"></span> ( $<span data-bind="text: hourlyWage"></span> )
+                        </div>
+                            <div data-bind="foreach: locations" 
+                                 style="border: 1px solid #000000; padding: 5px; border-color: black">
+                                <div style="border: 1px solid #000000; background-color: white; color: black;  text-align: center;">
+                                <span data-bind="text: name"> </span>
+                                <br /><span data-bind="text: address"> </span>
+                                </div>
+                                    <div data-bind="foreach: workDetails;">
+                                        <div data-bind=" style: { 'background-color': backgroundcolor}">
+                                        <span data-bind="text: jobtitle"> </span>
+                                        <br /><span data-bind="text: (jobtitle === 'Not Scheduled' ? '' : workStation)"> </span>
+                                        <br /><span data-bind="text: (jobtitle === 'Not Scheduled' ? '' : time)"> </span>
+                                        <br /><span data-bind="text: (jobtitle === 'Not Scheduled' ? '' : (hours + ' hours'))"> </span>
+                                        </div>
+                                    </div>
+                                <br />
+                            </div>
+                        <div data-bind="visible: (preferred === 'yes')" style="background-color: #fcfdfe; color: black; border: 1px solid #000000;  text-align: center;">
+                            <span>PREFERRED</span>  
+                        <br /> <span data-bind="text: preferredtime"></span> 
+                        </div>
+                        <div data-bind="visible: (unavailable === 'yes')" style="background-color: #ba0006; color: white; border: 1px solid #000000;  text-align: center;">
+                            <span>NOT AVAILABLE</span> 
+                       <br /> <span data-bind="text: unavialbaletime"></span> 
+                        </div>
+                    </div> 
+                       
+                    </div>
+                  
+                    <!-- /ko -->
+                  </div>
+                </div> <!-- end filmStripDiv -->
+            </div>
+            </div>
+      </div>
+    
 </div>
+     

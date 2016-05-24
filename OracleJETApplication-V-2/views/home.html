@@ -1,13 +1,29 @@
 <!-- small template -->
-<script type="text/html" id="sm_template">
+<script type="text/html" id="sm_template_w">
   <div id="homeNavList" class="oj-flex mobileSubNav" >
         
     </div>
    <div class="mainContentArea">
          <div class="oj-flex oj-flex-items-pad">
             <div id="homeSection" class="oj-flex-item">
-                <a data-bind="click: function(){$root.handleOpen('#homeDialogWindow')}" style="line-height:39px;">edit <i class="fa fa-pencil-square-o"></i></a>
-        
+<!--                <a data-bind="click: function(){$root.handleOpen('#homeDialogWindow')}" style="line-height:39px;">edit <i class="fa fa-pencil-square-o"></i></a>
+        -->
+                <div class="oj-flex" style="background-color: #ffffff; padding : 20px; height: 500px; margin: 20px">
+                                <div class="oj-sm-12 oj-flex-item" style="padding: 10px; ">
+                                    <div style="background-color: #000000; background-color: #000000; padding: 10px; ">
+                                        <label style="color: #ffffff">Washington D.C. Dashboard content here</label>
+                                    </div>
+                                    <div style="background-color: #000000; padding: 10px; margin-top:10px">
+                                        <label style="color: #ffffff">Washington D.C. Dashboard content here</label>
+                                    </div>
+                                    <div style="background-color: #000000; padding: 10px; margin-top:10px">
+                                        <label style="color: #ffffff">Washington D.C. Dashboard content here</label>
+                                    </div>
+                                    <div style="background-color: #000000;  padding: 10px; margin-top:10px">
+                                        <label style="color: #ffffff">Washington D.C. Dashboard content here</label>
+                                    </div>
+                                </div>
+                </div>
             </div>
         </div>
     </div>
@@ -15,17 +31,108 @@
     <div data-bind="template: {name: 'home/dialogwindow/dialogwindow-small'}"></div>
 </script>
 
+<script type="text/html" id="sm_template_b">
+  <div id="homeNavList" class="oj-flex mobileSubNav" >
+        
+    </div>
+   <div class="mainContentArea">
+         <div class="oj-flex oj-flex-items-pad">
+            <div id="homeSection" class="oj-flex-item">
+<!--                <a data-bind="click: function(){$root.handleOpen('#homeDialogWindow')}" style="line-height:39px;">edit <i class="fa fa-pencil-square-o"></i></a>
+        -->
+                <div class="oj-flex" style="background-color: #ffffff; padding : 20px; height: 500px; margin: 20px">
+                                <div class="oj-sm-12 oj-flex-item" style="padding: 10px; ">
+                                    <div style="background-color: #000000; background-color: #000000; padding: 10px; ">
+                                        <label style="color: #ffffff">Baltimore D.C. Dashboard content here</label>
+                                    </div>
+                                    <div style="background-color: #000000; padding: 10px; margin-top:10px">
+                                        <label style="color: #ffffff">Baltimore D.C. Dashboard content here</label>
+                                    </div>
+                                    <div style="background-color: #000000; padding: 10px; margin-top:10px">
+                                        <label style="color: #ffffff">Baltimore D.C. Dashboard content here</label>
+                                    </div>
+                                    <div style="background-color: #000000;  padding: 10px; margin-top:10px">
+                                        <label style="color: #ffffff">Baltimore D.C. Dashboard content here</label>
+                                    </div>
+                                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--home dialog modal-->
+    <div data-bind="template: {name: 'home/dialogwindow/dialogwindow-small'}"></div>
+</script>
+
+
 <!-- large template -->
-<script type="text/html" id="md_lg_xl_template">
+<script type="text/html" id="md_lg_xl_template_b">
     <div class="oj-flex oj-flex-items-pad">
         <div class="oj-flex-item">
-            -large
-            <a data-bind="click: function(){$root.handleOpen('#homeDialogWindow')}" style="line-height:39px;">edit <i class="fa fa-pencil-square-o"></i></a>
+<!--            -large
+            <a data-bind="click: function(){$root.handleOpen('#homeDialogWindow')}" style="line-height:39px;">edit <i class="fa fa-pencil-square-o"></i></a>-->
+            
+
+                            <div class="oj-flex" style="background-color: #ffffff; padding : 20px; height: 500px; margin: 20px">
+                                <div class="oj-lg-4 oj-md-4 oj-flex-item" style="padding: 10px; ">
+                                    <div style="background-color: #000000; height: 480px; background-color: #000000; padding: 10px; ">
+                                        <label style="color: #ffffff">Dashboard content here</label>
+                                    </div>
+                                </div>
+
+                                <div class="oj-lg-8 oj-md-8 oj-flex-item" style="padding: 10px; ">
+                                    <div style="background-color: #000000; height: 130px; margin: 10px; ">
+                                        <label style="color: #ffffff">Dashboard content here</label>
+                                    </div>
+                                    <div style="background-color: #000000; height: 130px; margin: 10px; ">
+                                        <label style="color: #ffffff">Dashboard content here</label>
+                                    </div>
+                                    <div style="background-color: #000000; height: 210px; margin: 10px; ">
+                                        <label style="color: #ffffff">Dashboard content here</label>
+                                    </div>
+                                </div>
+                               
         </div>
     </div>
     <!--home dialog modal-->
     <div data-bind="template: {name: 'home/dialogwindow/dialogwindow-large'}"></div>
 </script>
 
+<script type="text/html" id="md_lg_xl_template_w">
+    <div class="oj-flex oj-flex-items-pad">
+        <div class="oj-flex-item">
+        
 
-<div id="templateWrapper" data-bind="template: {name: $root.medium() ? 'md_lg_xl_template' : 'sm_template'}"></div>
+                            <div class="oj-flex" style="background-color: #ffffff; padding : 20px; height: 500px; ">
+                                <div class="oj-lg-6 oj-md-6 oj-flex-item" style="padding: 10px; ">
+                                    <div style="background-color: #000000; height: 240px; background-color: #000000; margin: 10px; ">
+                                        <label style="color: #ffffff">Dashboard content here</label>
+                                    </div>
+                                    <div style="background-color: #000000; height: 240px; background-color: #000000; margin: 10px; ">
+                                        <label style="color: #ffffff">Dashboard content here</label>
+                                    </div>
+                                </div>
+
+                                <div class="oj-lg-4 oj-md-4 oj-flex-item" style="padding: 10px; ">
+                                    
+                                   
+                                    <div style="background-color: #000000; height: 480px; margin: 10px; ">
+                                        <label style="color: #ffffff">Dashboard content here</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="oj-lg-2 oj-md-2 oj-flex-item" style="padding: 10px; ">
+                                    
+                                   
+                                    <div style="background-color: #000000; height: 480px; margin: 10px; ">
+                                        <label style="color: #ffffff">Dashboard content here</label>
+                                    </div>
+                                </div>
+                               
+        </div>
+    </div>
+    <!--home dialog modal-->
+    <div data-bind="template: {name: 'home/dialogwindow/dialogwindow-large'}"></div>
+</script>
+<div id="templateWrapper" data-bind="template: {name: $root.medium() ? 
+    $root.activeLocation() === 'Washington D.C.' ? 'md_lg_xl_template_w' : 'md_lg_xl_template_b'
+             : $root.activeLocation() === 'Washington D.C.' ? 'sm_template_w' : 'sm_template_b'}"></div>

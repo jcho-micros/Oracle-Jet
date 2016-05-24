@@ -94,31 +94,23 @@ require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', '
                 id: '2',
                 role: '2',
                 homeLocationID: '1',
-                homeLocationName: 'Bunker Hill',
+                homeLocationName: 'Baltimore',
                 assignedLocations: [
                     {
                         "locID" : 1,
-                        "name" : "Beacon Hill",
-                        "cityname" : "Boston1",
-                        "region" : "North East1",
+                        "name" : "Baltimore",
+                        "cityname" : "SAINT PAUL STREET",
+                        "region" : "SAINT PAUL ST",
                         "dailySales" : "123,234",
                         "laborCosts" : "12,543"
                     },
                     {
                         "locID" : 2,
-                        "name" : "Cambridge",
-                        "cityname" : "Boston2",
-                        "region" : "North East2",
+                        "name" : "Washington D.C.",
+                        "cityname" : "13TH & PENNSYLVANIA",
+                        "region" : "PENNSYLVANIA AVE",
                         "dailySales" : "223,234",
                         "laborCosts" : "22,543"
-                    },
-                    {
-                      "locID": 3,
-                      "name": "Bunker Hill",
-                      "cityname": "Boston3",
-                      "region": "North East3",
-                      "dailySales" : "323,234",
-                      "laborCosts" : "32,543"
                     }
                 ]
             };
@@ -132,6 +124,7 @@ require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', '
             self.updateActiveLocation = function () {
                 var data = ko.dataFor(event.target);
                     if (data) {
+                        console.log("active location = "+data.name);
                          self.activeLocation(data.name);
                          self.activeLocationId(data.locID);
                     }
@@ -176,6 +169,24 @@ require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', '
                         return title;
                 }
             });
+            
+            self.updateSideMenu = function (event, data) {
+            
+            }
+            
+            self.leftOptionChangeHandler = function (event, data){
+                if (data.value == undefined) {
+                    data.value = 'home';
+                } else {
+                    if(data.value == 'nowhere'){
+                        return;
+                    }
+                    self.router.go(data.value);
+                    return (function () {
+                        self.currentSectionState(data.value);
+                    });
+                }
+            }
 
             self.optionChangeHandler = function (event, data) {
                 if (data.value == undefined) {

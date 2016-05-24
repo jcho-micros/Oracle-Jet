@@ -104,6 +104,7 @@ define([
                 // canEnter requires a promise that resolve as true or false
                 self.loadData = function (id) {
                     return new Promise(function(resolve, reject) {
+                     
                         jsonData.fetchData(getEmpURL(id)).then(function (person) {
                             self.personProfile(person);
                             self.setupObservables();
@@ -120,8 +121,8 @@ define([
                 self.setupObservables = function(){
                     //Not sure why above observable array can't be used with InputText binding in KO. Need to look into this.
                     //Sets up observables to be able to update them only in the view, does not save data.
-                    self.dataExample = ko.dataFor(document.getElementById('headerTemplate'));
                     self.firstName = ko.observable(self.personProfile().firstName);
+                    self.empId=ko.observable(self.personProfile().empId);
                     self.lastName = ko.observable(self.personProfile().lastName);
                     self.posCheckName = ko.observable(self.personProfile().posCheckName);
                     self.language = ko.observable(self.personProfile().language);
@@ -204,6 +205,7 @@ define([
                     self.hireDate = ko.observable(self.personProfile().hireDate);
                     self.hireType = ko.observable('');
                     self.reHireDate = ko.observable('');
+                    self.hireStatus = ko.observable(self.personProfile().hireStatus);
 
                     //This variable is for Schedule time  card Current schedule Dates Nested
                     self.currentScheduledDates = self.personProfile().currentScheduledDates;
@@ -673,16 +675,22 @@ self.dataListSource = new oj.ArrayTableDataSource(self.compensation, {idAttribut
                     }
                 };
                 self.getFormattedTime = function (oldTime) {
-                    var currentListTime = self.currentScheduledDates;
+                    
+                        var currentListTime = self.currentScheduledDates;
                     for(i=0; i < currentListTime.length; i++){
                         var newTime = currentListTime[i][oldTime];
-                        var hours24 = parseInt(newTime.substring(0,2));
-                        var hours = ((hours24 + 11) % 12) + 1;
-                        var amPm = hours24 > 11 ? 'pm' : 'am';
-                        var minutes = newTime.substring(2);
-                        newTime = hours + ':' + minutes + amPm;
-                        currentListTime[i][oldTime] = newTime;
+                        if(newTime !== undefined){
+                            var hours24 = parseInt(newTime.substring(0,2));
+                            var hours = ((hours24 + 11) % 12) + 1;
+                            var amPm = hours24 > 11 ? 'pm' : 'am';
+                            var minutes = newTime.substring(2);
+                            newTime = hours + ':' + minutes + amPm;
+                             currentListTime[i][oldTime] = newTime;
+                        }
+                        
                     }
+                    
+                    
                 };
                 self.getFutureFormattedDate = function (oldDate) {
                     var futureListDate = self.futureScheduledDates;

@@ -109,6 +109,321 @@
       "groupEvents" : 0,
       "groupTrainings" : 2,
       "groupTimeOff" : 1,
+      
+      "formattedCurrentScheduledDates" : [ {
+              "startDate" : "SUN OCT 17",
+              "totalEarning" : "$100",
+              "dailyLoacl" : "Daily Loacl",
+              "totalHours" : "6",
+              "hourlyWage" : "$7.00",
+              "preferred" : "yes",
+              "preferredtime" : "10:30 AM - 4:00PM",
+              "unavailable" : "yes",
+              "unavialbaletime" : "4:30 PM - 7:00PM",
+              "locations" : [
+                  {
+                      "name" : "Washington DC",
+                      "address" : "123 Main street, City St",
+                      "workDetails" : [ 
+                          {
+                              "jobtitle" : "Bartender",
+                              "backgroundcolor" : "#FAAC58",
+                              "workStation" : "Front Bar",
+                              "time" : "10:30 AM - 1:00PM",
+                              "hours" : "2:30",
+                              "rate" : "7.00",
+                              "id" : 1
+                          },
+                          {
+                              "jobtitle" : "Server",
+                              "backgroundcolor" : "#8181F7",
+                              "workStation" : "Front Bar",
+                              "time" : "2:00 PM - 5:00 PM",
+                              "hours" : "3",
+                              "rate" : "7.00",
+                              "id" : 2
+                          }
+                      ]
+                  }, {
+                      "name" : "Baltimore",
+                      "address" : "123 Main street, City St",
+                      "workDetails" : [ 
+                          {
+                              "jobtitle" : "Bartender",
+                              "backgroundcolor" : "#FAAC58",
+                              "workStation" : "Front Bar",
+                              "time" : "6:30 PM - 8:00PM",
+                              "hours" : "2",
+                              "rate" : "7.00",
+                              "id" : 1
+                          }
+                      ]
+                  }
+              ]
+      },
+      {
+              "startDate" : "MON OCT 18",
+              "totalEarning" : "$100",
+              "dailyLoacl" : "Daily Loacl",
+              "totalHours" : "6",
+              "hourlyWage" : "7.00",
+              "preferred" : "no",
+              "preferredtime" : "10:30 AM - 4:00PM",
+              "unavailable" : "yes",
+              "unavialbaletime" : "ALL DAY",
+              "locations" : [
+                  {
+                      "name" : "Baltimore",
+                      "address" : "123 Main street, City St",
+                      "workDetails" : [ 
+                          {
+                              "jobtitle" : "Bartender",
+                              "backgroundcolor" : "#FAAC58",
+                              "workStation" : "Front Bar",
+                               "time" : "6:30 PM - 8:00PM",
+                              "hours" : "2",
+                              "rate" : "7.00",
+                              "id" : 1
+                          }
+                      ]
+                  }
+              ]
+      }, 
+      {
+              "startDate" : "TUE OCT 19",
+              "totalEarning" : "$100",
+              "dailyLoacl" : "Daily Loacl",
+              "totalHours" : "6",
+              "hourlyWage" : "7.00",
+              "preferred" : "yes",
+              "preferredtime" : "10:30 AM - 4:00PM",
+              "unavailable" : "no",
+              "unavialbaletime" : "ALL DAY",
+              "locations" : [
+                  {
+                      "name" : "Washington DC",
+                      "address" : "123 Main street, City St",
+                      "workDetails" : [ 
+                          {
+                              "jobtitle" : "Bartender",
+                              "backgroundcolor" : "#FAAC58",
+                              "workStation" : "Front Bar",
+                               "time" : "6:30 PM - 8:00PM",
+                              "hours" : "2",
+                              "rate" : "7.00",
+                              "id" : 1
+                          }
+                      ]
+                  }, {
+                      "name" : "Baltimore",
+                      "address" : "123 Main street, City St",
+                      "workDetails" : [ 
+                          {
+                              "jobtitle" : "Bartender",
+                              "backgroundcolor" : "#FAAC58",
+                              "workStation" : "Front Bar",
+                               "time" : "6:30 PM - 8:00PM",
+                              "hours" : "2",
+                              "rate" : "7.00",
+                              "id" : 1
+                          }
+                      ]
+                  }
+              ]
+      }, {
+              "startDate" : "WED OCT 20",
+              "totalEarning" : "$100",
+              "dailyLoacl" : "Daily Loacl",
+              "totalHours" : "6",
+              "hourlyWage" : "7.00",
+              "preferred" : "yes",
+              "preferredtime" : "ALL DAY",
+              "unavailable" : "no",
+              "unavialbaletime" : "ALL DAY",
+              "locations" : [
+                  {
+                      "name" : "Washington DC",
+                      "address" : "123 Main street, City St",
+                      "workDetails" : [ 
+                          {
+                              "jobtitle" : "Bartender",
+                              "backgroundcolor" : "#FAAC58",
+                              "workStation" : "Front Bar",
+                               "time" : "6:30 PM - 8:00PM",
+                              "hours" : "2",
+                              "rate" : "7.00",
+                              "id" : 1
+                          },
+                          {
+                              "jobtitle" : "Server",
+                              "backgroundcolor" : "#8181F7",
+                              "workStation" : "Front Bar",
+                               "time" : "6:30 PM - 8:00PM",
+                              "hours" : "2",
+                              "rate" : "7.00",
+                              "id" : 2
+                          }
+                      ]
+                  }, {
+                      "name" : "Baltimore",
+                      "address" : "123 Main street, City St",
+                      "workDetails" : [ 
+                          {
+                              "jobtitle" : "Bartender",
+                              "backgroundcolor" : "#FAAC58",
+                              "workStation" : "Front Bar",
+                               "time" : "6:30 PM - 8:00PM",
+                              "hours" : "2",
+                              "rate" : "7.00",
+                              "id" : 1
+                          }
+                      ]
+                  }
+              ]
+      }, {
+              "startDate" : "THU OCT 21",
+              "totalEarning" : "$100",
+              "dailyLoacl" : "Daily Loacl",
+              "totalHours" : "6",
+              "hourlyWage" : "7.00",
+              "preferred" : "no",
+              "preferredtime" : "10:30 AM - 4:00PM",
+              "unavailable" : "yes",
+              "unavialbaletime" : "ALL DAY",
+              
+              "locations" : [
+                  {
+                      "name" : "Washington DC",
+                      "address" : "123 Main street, City St",
+                      "workDetails" : [ 
+                          {
+                              "jobtitle" : "Bartender",
+                              "backgroundcolor" : "#FAAC58",
+                              "workStation" : "Front Bar",
+                               "time" : "6:30 PM - 8:00PM",
+                              "hours" : "2",
+                              "rate" : "7.00",
+                              "id" : 1
+                          },
+                          {
+                              "jobtitle" : "Server",
+                              "backgroundcolor" : "#8181F7",
+                              "workStation" : "Front Bar",
+                               "time" : "6:30 PM - 8:00PM",
+                              "hours" : "2",
+                              "rate" : "7.00",
+                              "id" : 2
+                          }
+                      ]
+                  }, {
+                      "name" : "Baltimore",
+                      "address" : "123 Main street, City St",
+                      "workDetails" : [ 
+                          {
+                              "jobtitle" : "Bartender",
+                              "backgroundcolor" : "#FAAC58",
+                              "workStation" : "Front Bar",
+                               "time" : "6:30 PM - 8:00PM",
+                              "hours" : "2",
+                              "rate" : "7.00",
+                              "id" : 1
+                          }
+                      ]
+                  }
+              ]
+      }, {
+              "startDate" : "FRI OCT 22",
+              "totalEarning" : "$100",
+              "dailyLoacl" : "Daily Loacl",
+              "totalHours" : "6",
+              "hourlyWage" : "7.00",
+              "preferred" : "yes",
+              "preferredtime" : "ALL DAY",
+              "unavailable" : "no",
+              "unavialbaletime" : "ALL DAY",
+              "locations" : [
+                  {
+                      "name" : "Washington DC",
+                      "address" : "123 Main street, City St",
+                      "workDetails" : [ 
+                          {
+                              "jobtitle" : "Bartender",
+                              "backgroundcolor" : "#FAAC58",
+                              "workStation" : "Front Bar",
+                               "time" : "6:30 PM - 8:00PM",
+                              "hours" : "2",
+                              "rate" : "7.00",
+                              "id" : 1
+                          },
+                          {
+                              "jobtitle" : "Server",
+                              "backgroundcolor" : "#8181F7",
+                              "workStation" : "Front Bar",
+                               "time" : "6:30 PM - 8:00PM",
+                              "hours" : "2",
+                              "rate" : "7.00",
+                              "id" : 2
+                          }
+                      ]
+                  }, {
+                      "name" : "Baltimore",
+                      "address" : "123 Main street, City St",
+                      "workDetails" : [ 
+                          {
+                              "jobtitle" : "Not Scheduled",
+                              "backgroundcolor" : "#ffffff",
+                              "workStation" : "Front Bar",
+                               "time" : "6:30 PM - 8:00PM",
+                              "hours" : "2",
+                              "rate" : "7.00",
+                              "id" : 1
+                          }
+                      ]
+                  }
+              ]
+      }, {
+              "startDate" : "SAT OCT 23",
+              "totalEarning" : "$100",
+              "dailyLoacl" : "Daily Loacl",
+              "totalHours" : "6",
+              "hourlyWage" : "7.00",
+              "preferred" : "yes",
+              "preferredtime" : "ALL DAY",
+              "unavailable" : "no",
+              "unavialbaletime" : "ALL DAY",
+              "locations" : [
+                  {
+                      "name" : "Washington DC",
+                      "address" : "123 Main street, City St",
+                      "workDetails" : [ 
+                          {
+                              "jobtitle" : "Bartender",
+                              "backgroundcolor" : "#FAAC58",
+                              "workStation" : "Front Bar",
+                               "time" : "6:30 PM - 8:00PM",
+                              "hours" : "2",
+                              "rate" : "7.00",
+                              "id" : 1
+                          }
+                      ]
+                  }, {
+                      "name" : "Baltimore",
+                      "address" : "123 Main street, City St",
+                      "workDetails" : [ 
+                          {
+                              "jobtitle" : "Bartender",
+                              "backgroundcolor" : "#FAAC58",
+                              "workStation" : "Front Bar",
+                               "time" : "6:30 PM - 8:00PM",
+                              "hours" : "2",
+                              "rate" : "7.00",
+                              "id" : 1
+                          }
+                      ]
+                  }
+              ]
+      }
+      ],
       "currentScheduledDates" : [ {
          "id" : 1,
          "currentDayStart" : "2016-04-17T00:00:00-07:00",

@@ -1,1 +1,76 @@
--Small
+<div class="justifyCenter">
+    <div class="scheduleTimecardsWindow oj-flex-item">
+        <div class="oj-flex">
+            <div class="oj-sm-8 oj-flex-item">
+                <a style="line-height:39px;" data-bind="click:$parent.editRequestTimehandleOpen">Time Off Request</a>
+            </div>
+            <div class="oj-sm-4 oj-flex-item oj-lg-text-align-end">
+
+            </div>
+            <div class="oj-flex oj-flex-item currentWeekHeaderArea">
+                <div class="oj-sm-6 oj-flex-item currentWeekHeader"><strong>Current Week</strong> (8/40) <a data-bind="click: $parent.handleOpen('#shiftPoolModal')" class="shiftPoolLink">Shift Pool <i class="fa fa-arrow-circle-right"></i></a></div>
+                <div class="oj-sm-6 oj-flex-item scheduleIconBar">
+                    <ul class="scheduleToolArea">
+                        <li id="email"><a href="#"><span class="fa fa-envelope-o"></span></a></li>
+                        <li id="print"><a href="#"><span class="fa fa-print""></span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="oj-sm-12 oj-flex-item currentFilmStrip">
+                <div id="filmStripDiv" class="oj-panel" style="margin: '20px';  width='776px'">
+                  <div id="filmStrip" aria-label="Set of chemicals" data-bind="ojComponent: {component: 'ojFilmStrip', arrowPlacement: self.currentNavArrowPlacement, arrowVisibility: self.currentNavArrowVisibility}">
+                      <!-- ko foreach: $parent.currentScheduledDates -->
+
+                      <div class="oj-panel oj-panel-alt2 schedule-filmstrip-item" data-bind="style: {display: getItemInitialDisplay($index())}">
+
+                              <div>
+                                <a data-bind="click:function(){$parents[1].showItemIndex('#currentWeekModal')}">        
+                                <span data-bind="text: currentDayStart"></span> <span data-bind="text: currentDayStartTime"></span> - <span data-bind="text: currentDayEndTime"></span>
+                                </a>
+                                <br /><span data-bind="text: location"></span>, <span data-bind="text: revenueCenter"></span>
+                                <br /><span data-bind="text: job"></span>, <span data-bind="text: station"></span>
+                                <br /><span data-bind="text: status"></span>
+                                <br /><span data-bind="text: notes"></span>
+                              </div>
+                            </a>
+                        </div>
+
+                    <!-- /ko -->
+
+                  </div>
+                </div> <!-- end filmStripDiv -->
+            </div>
+        </div>
+        <div class="oj-flex oj-flex-item futureRow">
+            <div class="oj-flex-item upcomingWeekHeaderArea">
+                <div class="oj-sm-6 oj-flex-item upcomingWeekHeader"><strong>Upcoming Week</strong> (8/40) <a data-bind="click: $parent.handleOpen('#shiftPoolModal')" class="shiftPoolLink">Shift Pool <i class="fa fa-arrow-circle-right"></i></a> </div>
+                <div class="oj-sm-6 oj-flex-item scheduleIconBar">
+                    <ul class="scheduleToolArea">
+                        <li id="email"><a href="#"><span class="fa fa-envelope-o"></span></a></li>
+                        <li id="print"><a href="#"><span class="fa fa-print""></span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="oj-flex-item currentFilmStrip">
+                <div id="filmStripDiv" class="oj-panel" style="margin: '20px';  width='776px'">
+                  <div id="filmStrip" aria-label="Set of chemicals" data-bind="ojComponent: {component: 'ojFilmStrip', arrowPlacement: self.currentNavArrowPlacement, arrowVisibility: self.currentNavArrowVisibility}">
+
+                    <!-- ko foreach: $parent.futureScheduledDates -->
+
+                    <div class="oj-panel oj-panel-alt2 schedule-filmstrip-item" data-bind="style: {display: getItemInitialDisplay($index())}">
+                        <a data-bind="click:function(){$parents[1].showItemIndex('#upcomingWeekModal')}">    
+                        <span data-bind="text: futureDayStart"></span> <span data-bind="text: futureDayStartTime"></span> - <span data-bind="text: futureDayEndTime"></span>
+                        </a>
+                        <br /><span data-bind="text: location"></span>, <span data-bind="text: revenueCenter"></span>
+                        <br /><span data-bind="text: job"></span>, <span data-bind="text: station"></span>
+                        <br /><span data-bind="text: status"></span>
+                        <br /><span data-bind="text: notes"></span>
+                    </div>
+
+                    <!-- /ko -->
+                  </div>
+                </div> <!-- end filmStripDiv -->
+            </div>
+        </div>
+    </div>
+</div>

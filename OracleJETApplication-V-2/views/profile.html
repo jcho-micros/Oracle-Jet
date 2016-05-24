@@ -21,7 +21,7 @@
     <div class="mainContentArea">
         <!--    For profile Area header-->
         <div class="oj-flex" data-bind="css: $root.router.stateId() + 'TitleWrap', if:$root.router.stateId() == 'profile'">
-            <h1 data-bind="text: firstName() + ' ' + lastName()" class="pageTitle"></h1>
+            <h1 data-bind="text: firstName() + ' ' + lastName()" style="font-size: 26px"></h1>
         </div>
         <div class="oj-flex oj-flex-items-pad" data-bind="if: router.stateId()">
             <div id="profileTabSection" class="oj-flex-item" data-bind="with: router.currentState()">
@@ -36,7 +36,13 @@
 <!-- large template -->
 <script type="text/html" id="md_lg_xl_template">
     <!--    For profile Area header-->
-    <div class="oj-flex" data-bind="css: $root.router.stateId() + 'TitleWrap', if:$root.router.stateId() == 'profile'">
+    
+    <div id="profileLoader" data-bind="if:$root.router.stateId() == 'profile',style:{background: 'url(css/images/people/'+empId()+'.png)',
+                'background-repeat': 'no-repeat',
+    'background-size': '123px 111px',
+    'background-position': '100% 30%',
+    'background-color': '#507AA0',
+    'height': '110px'}" class="oj-flex" >
         <h1 data-bind="text: firstName() + ' ' + lastName()" class="pageTitle"></h1>
     </div>
         <div id="profileSectionTabs" class="oj-flex-item subTabs">

@@ -1,5 +1,5 @@
 define(['knockout', 'ojs/ojcore', 'ojs/ojknockout'
-], function (ko, oj) {
+], function (ko, oj, $) {
 
 function sideBarLeftContentViewModel() {
     var self = this;

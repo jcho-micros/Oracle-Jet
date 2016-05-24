@@ -107,118 +107,656 @@
       "groupEvents" : 80,
       "groupTrainings" : 89,
       "groupTimeOff" : 82,
+      "formattedCurrentScheduledDates" : [ {
+              "startDate" : "SUN OCT 17",
+              "totalEarning" : "$100",
+              "dailyLoacl" : "Daily Loacl",
+              "totalHours" : "6",
+              "hourlyWage" : "$7.00",
+              "preferred" : "yes",
+              "preferredtime" : "10:30 AM - 4:00PM",
+              "unavailable" : "yes",
+              "unavialbaletime" : "4:30 PM - 7:00PM",
+              "locations" : [
+                  {
+                      "name" : "Washington DC",
+                      "address" : "123 Main street, City St",
+                      "workDetails" : [ 
+                          {
+                              "jobtitle" : "Bartender",
+                              "backgroundcolor" : "#FAAC58",
+                              "workStation" : "Front Bar",
+                              "time" : "10:30 AM - 1:00PM",
+                              "hours" : "2:30",
+                              "rate" : "7.00",
+                              "id" : 1
+                          },
+                          {
+                              "jobtitle" : "Server",
+                              "backgroundcolor" : "#8181F7",
+                              "workStation" : "Front Bar",
+                              "time" : "2:00 PM - 5:00 PM",
+                              "hours" : "3",
+                              "rate" : "7.00",
+                              "id" : 2
+                          }
+                      ]
+                  }, {
+                      "name" : "Baltimore",
+                      "address" : "123 Main street, City St",
+                      "workDetails" : [ 
+                          {
+                              "jobtitle" : "Bartender",
+                              "backgroundcolor" : "#FAAC58",
+                              "workStation" : "Front Bar",
+                              "time" : "6:30 PM - 8:00PM",
+                              "hours" : "2",
+                              "rate" : "7.00",
+                              "id" : 1
+                          }
+                      ]
+                  }
+              ]
+      },
+      {
+              "startDate" : "MON OCT 18",
+              "totalEarning" : "$100",
+              "dailyLoacl" : "Daily Loacl",
+              "totalHours" : "6",
+              "hourlyWage" : "7.00",
+              "preferred" : "no",
+              "preferredtime" : "10:30 AM - 4:00PM",
+              "unavailable" : "yes",
+              "unavialbaletime" : "ALL DAY",
+              "locations" : [
+                  {
+                      "name" : "Baltimore",
+                      "address" : "123 Main street, City St",
+                      "workDetails" : [ 
+                          {
+                              "jobtitle" : "Bartender",
+                              "backgroundcolor" : "#FAAC58",
+                              "workStation" : "Front Bar",
+                               "time" : "6:30 PM - 8:00PM",
+                              "hours" : "2",
+                              "rate" : "7.00",
+                              "id" : 1
+                          }
+                      ]
+                  }
+              ]
+      }, 
+      {
+              "startDate" : "TUE OCT 19",
+              "totalEarning" : "$100",
+              "dailyLoacl" : "Daily Loacl",
+              "totalHours" : "6",
+              "hourlyWage" : "7.00",
+              "preferred" : "yes",
+              "preferredtime" : "10:30 AM - 4:00PM",
+              "unavailable" : "no",
+              "unavialbaletime" : "ALL DAY",
+              "locations" : [
+                  {
+                      "name" : "Washington DC",
+                      "address" : "123 Main street, City St",
+                      "workDetails" : [ 
+                          {
+                              "jobtitle" : "Bartender",
+                              "backgroundcolor" : "#FAAC58",
+                              "workStation" : "Front Bar",
+                               "time" : "6:30 PM - 8:00PM",
+                              "hours" : "2",
+                              "rate" : "7.00",
+                              "id" : 1
+                          }
+                      ]
+                  }, {
+                      "name" : "Baltimore",
+                      "address" : "123 Main street, City St",
+                      "workDetails" : [ 
+                          {
+                              "jobtitle" : "Bartender",
+                              "backgroundcolor" : "#FAAC58",
+                              "workStation" : "Front Bar",
+                               "time" : "6:30 PM - 8:00PM",
+                              "hours" : "2",
+                              "rate" : "7.00",
+                              "id" : 1
+                          }
+                      ]
+                  }
+              ]
+      }, {
+              "startDate" : "WED OCT 20",
+              "totalEarning" : "$100",
+              "dailyLoacl" : "Daily Loacl",
+              "totalHours" : "6",
+              "hourlyWage" : "7.00",
+              "preferred" : "yes",
+              "preferredtime" : "ALL DAY",
+              "unavailable" : "no",
+              "unavialbaletime" : "ALL DAY",
+              "locations" : [
+                  {
+                      "name" : "Washington DC",
+                      "address" : "123 Main street, City St",
+                      "workDetails" : [ 
+                          {
+                              "jobtitle" : "Bartender",
+                              "backgroundcolor" : "#FAAC58",
+                              "workStation" : "Front Bar",
+                               "time" : "6:30 PM - 8:00PM",
+                              "hours" : "2",
+                              "rate" : "7.00",
+                              "id" : 1
+                          },
+                          {
+                              "jobtitle" : "Server",
+                              "backgroundcolor" : "#8181F7",
+                              "workStation" : "Front Bar",
+                               "time" : "6:30 PM - 8:00PM",
+                              "hours" : "2",
+                              "rate" : "7.00",
+                              "id" : 2
+                          }
+                      ]
+                  }, {
+                      "name" : "Baltimore",
+                      "address" : "123 Main street, City St",
+                      "workDetails" : [ 
+                          {
+                              "jobtitle" : "Bartender",
+                              "backgroundcolor" : "#FAAC58",
+                              "workStation" : "Front Bar",
+                               "time" : "6:30 PM - 8:00PM",
+                              "hours" : "2",
+                              "rate" : "7.00",
+                              "id" : 1
+                          }
+                      ]
+                  }
+              ]
+      }, {
+              "startDate" : "THU OCT 21",
+              "totalEarning" : "$100",
+              "dailyLoacl" : "Daily Loacl",
+              "totalHours" : "6",
+              "hourlyWage" : "7.00",
+              "preferred" : "no",
+              "preferredtime" : "10:30 AM - 4:00PM",
+              "unavailable" : "yes",
+              "unavialbaletime" : "ALL DAY",
+              
+              "locations" : [
+                  {
+                      "name" : "Washington DC",
+                      "address" : "123 Main street, City St",
+                      "workDetails" : [ 
+                          {
+                              "jobtitle" : "Bartender",
+                              "backgroundcolor" : "#FAAC58",
+                              "workStation" : "Front Bar",
+                               "time" : "6:30 PM - 8:00PM",
+                              "hours" : "2",
+                              "rate" : "7.00",
+                              "id" : 1
+                          },
+                          {
+                              "jobtitle" : "Server",
+                              "backgroundcolor" : "#8181F7",
+                              "workStation" : "Front Bar",
+                               "time" : "6:30 PM - 8:00PM",
+                              "hours" : "2",
+                              "rate" : "7.00",
+                              "id" : 2
+                          }
+                      ]
+                  }, {
+                      "name" : "Baltimore",
+                      "address" : "123 Main street, City St",
+                      "workDetails" : [ 
+                          {
+                              "jobtitle" : "Bartender",
+                              "backgroundcolor" : "#FAAC58",
+                              "workStation" : "Front Bar",
+                               "time" : "6:30 PM - 8:00PM",
+                              "hours" : "2",
+                              "rate" : "7.00",
+                              "id" : 1
+                          }
+                      ]
+                  }
+              ]
+      }, {
+              "startDate" : "FRI OCT 22",
+              "totalEarning" : "$100",
+              "dailyLoacl" : "Daily Loacl",
+              "totalHours" : "6",
+              "hourlyWage" : "7.00",
+              "preferred" : "yes",
+              "preferredtime" : "ALL DAY",
+              "unavailable" : "no",
+              "unavialbaletime" : "ALL DAY",
+              "locations" : [
+                  {
+                      "name" : "Washington DC",
+                      "address" : "123 Main street, City St",
+                      "workDetails" : [ 
+                          {
+                              "jobtitle" : "Bartender",
+                              "backgroundcolor" : "#FAAC58",
+                              "workStation" : "Front Bar",
+                               "time" : "6:30 PM - 8:00PM",
+                              "hours" : "2",
+                              "rate" : "7.00",
+                              "id" : 1
+                          },
+                          {
+                              "jobtitle" : "Server",
+                              "backgroundcolor" : "#8181F7",
+                              "workStation" : "Front Bar",
+                               "time" : "6:30 PM - 8:00PM",
+                              "hours" : "2",
+                              "rate" : "7.00",
+                              "id" : 2
+                          }
+                      ]
+                  }, {
+                      "name" : "Baltimore",
+                      "address" : "123 Main street, City St",
+                      "workDetails" : [ 
+                          {
+                              "jobtitle" : "Not Scheduled",
+                              "backgroundcolor" : "#ffffff",
+                              "workStation" : "Front Bar",
+                               "time" : "6:30 PM - 8:00PM",
+                              "hours" : "2",
+                              "rate" : "7.00",
+                              "id" : 1
+                          }
+                      ]
+                  }
+              ]
+      }, {
+              "startDate" : "SAT OCT 23",
+              "totalEarning" : "$100",
+              "dailyLoacl" : "Daily Loacl",
+              "totalHours" : "6",
+              "hourlyWage" : "7.00",
+              "preferred" : "yes",
+              "preferredtime" : "ALL DAY",
+              "unavailable" : "no",
+              "unavialbaletime" : "ALL DAY",
+              "locations" : [
+                  {
+                      "name" : "Washington DC",
+                      "address" : "123 Main street, City St",
+                      "workDetails" : [ 
+                          {
+                              "jobtitle" : "Bartender",
+                              "backgroundcolor" : "#FAAC58",
+                              "workStation" : "Front Bar",
+                               "time" : "6:30 PM - 8:00PM",
+                              "hours" : "2",
+                              "rate" : "7.00",
+                              "id" : 1
+                          }
+                      ]
+                  }, {
+                      "name" : "Baltimore",
+                      "address" : "123 Main street, City St",
+                      "workDetails" : [ 
+                          {
+                              "jobtitle" : "Bartender",
+                              "backgroundcolor" : "#FAAC58",
+                              "workStation" : "Front Bar",
+                               "time" : "6:30 PM - 8:00PM",
+                              "hours" : "2",
+                              "rate" : "7.00",
+                              "id" : 1
+                          }
+                      ]
+                  }
+              ]
+      }
+      ],
       "currentScheduledDates" : [ {
          "id" : 1,
+         "status" : "Schdeuled",
+         "locationName" : "Washington DC",
+         "jobRateHourly" : "7.00",
+         "station" : "Front Bar",
+         "revenueCenter" : "In-Dining",
+         "jobName" : "Bartender",
          "currentDayStart" : "2016-04-17T00:00:00-07:00",
          "currentDayStartTime" : "1000",
          "currentDayEnd" : "2016-04-17T00:00:00-15:00",
-         "currentDayEndTime" : "1400",
-         "currentSecondDayStart" : "2016-04-17T00:00:00-07:00",
-         "currentSecondDayStartTime" : "1900",
-         "currentSecondDayEnd" : "2016-04-17T00:00:00-15:00",
-         "currentSecondDayEndTime" : "2300",
-         "location" : "Resturant",
-         "revenueCenter" : "In-Dining",
-         "job" : "Bartender",
-         "station" : "Front Bar",
-         "status" : "Schdeuled",
-         "notes" : "N/A"
+         "currentDayEndTime" : "1300",
+         "actualStartTime" : "1000",
+         "actualEndtime" : "1300",
+         "scheduleBreakTime1" : ".25",
+         "scheduleBreakTime2" : ".25",
+         "scheduleBreakTime3" : ".25",
+         "scheduleBreakTime4" : ".25",
+         "actualeBreakTime1" : ".25",
+         "actualBreakTime2" : ".25",
+         "actualBreakTime3" : ".25",
+         "actualBreakTime4" : ".25",
+         "onCallStart" : "",
+         "onCallEnd" : ""
       },{
          "id" : 2,
-         "currentDayStart" : "2016-04-18T00:00:00-07:00",
-         "currentDayStartTime" : "1000",
-         "currentDayEnd" : "2016-04-18T00:00:00-15:00",
-         "currentDayEndTime" : "1400",
-         "currentSecondDayStart" : "2016-04-18T00:00:00-07:00",
-         "currentSecondDayStartTime" : "1900",
-         "currentSecondDayEnd" : "2016-04-18T00:00:00-15:00",
-         "currentSecondDayEndTime" : "2300",
-         "location" : "Resturant",
+         "status" : "Schdeuled",
+         "locationName" : "Baltimore",
+         "jobRateHourly" : "7.00",
+         "station" : "Station 5",
          "revenueCenter" : "In-Dining",
-         "job" : "Off",
-         "station" : "Not Assigned",
-         "status" : "Not Schdeuled",
-         "notes" : "N/A"
+         "jobName" : "Server",
+         "currentDayStart" : "2016-04-17T00:00:00-07:00",
+         "currentDayStartTime" : "1400",
+         "currentDayEnd" : "2016-04-17T00:00:00-15:00",
+         "currentDayEndTime" : "2000",
+         "actualStartTime" : "1400",
+         "actualEndtime" : "2000",
+         "scheduleBreakTime1" : ".25",
+         "scheduleBreakTime2" : ".25",
+         "scheduleBreakTime3" : ".25",
+         "scheduleBreakTime4" : ".25",
+         "actualeBreakTime1" : ".25",
+         "actualBreakTime2" : ".25",
+         "actualBreakTime3" : ".25",
+         "actualBreakTime4" : ".25",
+         "onCallStart" : "",
+         "onCallEnd" : ""
       },{
          "id" : 3,
-         "currentDayStart" : "2016-04-19T00:00:00-07:00",
-         "currentDayStartTime" : "1000",
-         "currentDayEnd" : "2016-04-19T00:00:00-15:00",
-         "currentDayEndTime" : "1400",
-         "currentSecondDayStart" : "2016-04-19T00:00:00-07:00",
-         "currentSecondDayStartTime" : "1900",
-         "currentSecondDayEnd" : "2016-04-19T00:00:00-15:00",
-         "currentSecondDayEndTime" : "2300",
-         "location" : "Resturant",
-         "revenueCenter" : "In-Dining",
-         "job" : "Off",
-         "station" : "Not Assigned",
          "status" : "Not Schdeuled",
-         "notes" : "N/A"
-      }, {
-         "id" : 4,
-         "currentDayStart" : "2016-04-20T00:00:00-07:00",
-         "currentDayStartTime" : "1000",
-         "currentDayEnd" : "2016-04-20T00:00:00-15:00",
-         "currentDayEndTime" : "1400",
-         "currentSecondDayStart" : "2016-04-20T00:00:00-07:00",
-         "currentSecondDayStartTime" : "1900",
-         "currentSecondDayEnd" : "2016-04-20T00:00:00-15:00",
-         "currentSecondDayEndTime" : "2300",
-         "location" : "Resturant",
+         "locationName" : "Washington DC",
+         "jobRateHourly" : "7.00",
+         "station" : "Not Assigned",
          "revenueCenter" : "In-Dining",
-         "job" : "Bartender",
-         "station" : "Front Bar",
-         "status" : "Schdeuled",
-         "notes" : "N/A"
+         "jobName" : "Not Assigned",
+         "currentDayStart" : "2016-04-18T00:00:00-07:00",
+         "currentDayStartTime" : "",
+         "currentDayEnd" : "2016-04-18T00:00:00-15:00",
+         "currentDayEndTime" : "",
+         "actualStartTime" : "",
+         "actualEndtime" : "",
+         "scheduleBreakTime1" : ".25",
+         "scheduleBreakTime2" : ".25",
+         "scheduleBreakTime3" : ".25",
+         "scheduleBreakTime4" : ".25",
+         "actualeBreakTime1" : ".25",
+         "actualBreakTime2" : ".25",
+         "actualBreakTime3" : ".25",
+         "actualBreakTime4" : ".25",
+         "onCallStart" : "1000",
+         "onCallEnd" : "1300"
+     },{
+         "id" : 4,
+         "status" : "Not Schdeuled",
+         "locationName" : "Baltimore",
+         "jobRateHourly" : "7.00",
+         "station" : "Not Assigned",
+         "revenueCenter" : "In-Dining",
+         "jobName" : "Not Assigned",
+         "currentDayStart" : "2016-04-18T00:00:00-07:00",
+         "currentDayStartTime" : "",
+         "currentDayEnd" : "2016-04-18T00:00:00-15:00",
+         "currentDayEndTime" : "",
+         "actualStartTime" : "",
+         "actualEndtime" : "",
+         "scheduleBreakTime1" : ".25",
+         "scheduleBreakTime2" : ".25",
+         "scheduleBreakTime3" : ".25",
+         "scheduleBreakTime4" : ".25",
+         "actualeBreakTime1" : ".25",
+         "actualBreakTime2" : ".25",
+         "actualBreakTime3" : ".25",
+         "actualBreakTime4" : ".25",
+         "onCallStart" : "1200",
+         "onCallEnd" : "1400"
       },{
          "id" : 5,
-         "currentDayStart" : "2016-04-21T00:00:00-07:00",
-         "currentDayStartTime" : "1000",
-         "currentDayEnd" : "2016-04-21T00:00:00-15:00",
-         "currentDayEndTime" : "1400",
-         "currentSecondDayStart" : "2016-04-21T00:00:00-07:00",
-         "currentSecondDayStartTime" : "1900",
-         "currentSecondDayEnd" : "2016-04-21T00:00:00-15:00",
-         "currentSecondDayEndTime" : "2300",
-         "location" : "Resturant",
+         "status" : "Not Schdeuled",
+         "locationName" : "Washington DC",
+         "jobRateHourly" : "7.00",
+         "station" : "Not Assigned",
          "revenueCenter" : "In-Dining",
-         "job" : "Bartender",
-         "station" : "Front Bar",
-         "status" : "Schdeuled",
-         "notes" : "N/A"
-      },{
+         "jobName" : "Not Assigned",
+         "currentDayStart" : "2016-04-19T00:00:00-07:00",
+         "currentDayStartTime" : "",
+         "currentDayEnd" : "2016-04-19T00:00:00-15:00",
+         "currentDayEndTime" : "",
+         "actualStartTime" : "",
+         "actualEndtime" : "",
+         "scheduleBreakTime1" : ".25",
+         "scheduleBreakTime2" : ".25",
+         "scheduleBreakTime3" : ".25",
+         "scheduleBreakTime4" : ".25",
+         "actualeBreakTime1" : ".25",
+         "actualBreakTime2" : ".25",
+         "actualBreakTime3" : ".25",
+         "actualBreakTime4" : ".25",
+         "onCallStart" : "1000",
+         "onCallEnd" : "1300"
+     },{
          "id" : 6,
-         "currentDayStart" : "2016-04-22T00:00:00-07:00",
-         "currentDayStartTime" : "1000",
-         "currentDayEnd" : "2016-04-22T00:00:00-15:00",
-         "currentDayEndTime" : "1400",
-         "currentSecondDayStart" : "2016-04-22T00:00:00-07:00",
-         "currentSecondDayStartTime" : "1900",
-         "currentSecondDayEnd" : "2016-04-22T00:00:00-15:00",
-         "currentSecondDayEndTime" : "2300",
-         "location" : "Resturant",
+         "status" : "Not Schdeuled",
+         "locationName" : "Baltimore",
+         "jobRateHourly" : "7.00",
+         "station" : "Not Assigned",
          "revenueCenter" : "In-Dining",
-         "job" : "Bartender",
-         "station" : "Front Bar",
-         "status" : "Schdeuled",
-         "notes" : "N/A"
+         "jobName" : "Not Assigned",
+         "currentDayStart" : "2016-04-19T00:00:00-07:00",
+         "currentDayStartTime" : "",
+         "currentDayEnd" : "2016-04-19T00:00:00-15:00",
+         "currentDayEndTime" : "",
+         "actualStartTime" : "",
+         "actualEndtime" : "",
+         "scheduleBreakTime1" : ".25",
+         "scheduleBreakTime2" : ".25",
+         "scheduleBreakTime3" : ".25",
+         "scheduleBreakTime4" : ".25",
+         "actualeBreakTime1" : ".25",
+         "actualBreakTime2" : ".25",
+         "actualBreakTime3" : ".25",
+         "actualBreakTime4" : ".25",
+         "onCallStart" : "1200",
+         "onCallEnd" : "1400"
       },{
          "id" : 7,
-         "currentDayStart" : "2016-04-23T00:00:00-07:00",
-         "currentDayStartTime" : "1000",
-         "currentDayEnd" : "2016-04-23T00:00:00-15:00",
-         "currentDayEndTime" : "1400",
-         "currentSecondDayStart" : "2016-04-23T00:00:00-07:00",
-         "currentSecondDayStartTime" : "1900",
-         "currentSecondDayEnd" : "2016-04-23T00:00:00-15:00",
-         "currentSecondDayEndTime" : "2300",
-         "location" : "Resturant",
-         "revenueCenter" : "In-Dining",
-         "job" : "Bartender",
-         "station" : "Front Bar",
          "status" : "Schdeuled",
-         "notes" : "N/A"
+         "locationName" : "Washington DC",
+         "jobRateHourly" : "7.00",
+         "station" : "Front Bar",
+         "revenueCenter" : "In-Dining",
+         "jobName" : "Bartender",
+         "currentDayStart" : "2016-04-20T00:00:00-07:00",
+         "currentDayStartTime" : "1030",
+         "currentDayEnd" : "2016-04-20T00:00:00-15:00",
+         "currentDayEndTime" : "1300",
+         "actualStartTime" : "1030",
+         "actualEndtime" : "1300",
+         "scheduleBreakTime1" : ".25",
+         "scheduleBreakTime2" : ".25",
+         "scheduleBreakTime3" : ".25",
+         "scheduleBreakTime4" : ".25",
+         "actualeBreakTime1" : ".25",
+         "actualBreakTime2" : ".25",
+         "actualBreakTime3" : ".25",
+         "actualBreakTime4" : ".25",
+         "onCallStart" : "",
+         "onCallEnd" : ""
+     },{
+         "id" : 8,
+         "status" : "Not Schdeuled",
+         "locationName" : "Baltimore",
+         "jobRateHourly" : "7.00",
+         "station" : "Not Assigned",
+         "revenueCenter" : "In-Dining",
+         "jobName" : "Not Assigned",
+         "currentDayStart" : "2016-04-20T00:00:00-07:00",
+         "currentDayStartTime" : "",
+         "currentDayEnd" : "2016-04-20T00:00:00-15:00",
+         "currentDayEndTime" : "",
+         "actualStartTime" : "",
+         "actualEndtime" : "",
+         "scheduleBreakTime1" : ".25",
+         "scheduleBreakTime2" : ".25",
+         "scheduleBreakTime3" : ".25",
+         "scheduleBreakTime4" : ".25",
+         "actualeBreakTime1" : ".25",
+         "actualBreakTime2" : ".25",
+         "actualBreakTime3" : ".25",
+         "actualBreakTime4" : ".25",
+         "onCallStart" : "1200",
+         "onCallEnd" : "1400"
+      },{
+         "id" : 9,
+         "status" : "Schdeuled",
+         "locationName" : "Washington DC",
+         "jobRateHourly" : "7.00",
+         "station" : "Front Bar",
+         "revenueCenter" : "In-Dining",
+         "jobName" : "Bartender",
+         "currentDayStart" : "2016-04-21T00:00:00-07:00",
+         "currentDayStartTime" : "1030",
+         "currentDayEnd" : "2016-04-21T00:00:00-15:00",
+         "currentDayEndTime" : "1300",
+         "actualStartTime" : "1030",
+         "actualEndtime" : "1300",
+         "scheduleBreakTime1" : ".25",
+         "scheduleBreakTime2" : ".25",
+         "scheduleBreakTime3" : ".25",
+         "scheduleBreakTime4" : ".25",
+         "actualeBreakTime1" : ".25",
+         "actualBreakTime2" : ".25",
+         "actualBreakTime3" : ".25",
+         "actualBreakTime4" : ".25",
+         "onCallStart" : "",
+         "onCallEnd" : ""
+     },{
+         "id" : 10,
+         "status" : "Not Schdeuled",
+         "locationName" : "Baltimore",
+         "jobRateHourly" : "7.00",
+         "station" : "Not Assigned",
+         "revenueCenter" : "In-Dining",
+         "jobName" : "Not Assigned",
+         "currentDayStart" : "2016-04-20T00:00:00-07:00",
+         "currentDayStartTime" : "",
+         "currentDayEnd" : "2016-04-20T00:00:00-15:00",
+         "currentDayEndTime" : "",
+         "actualStartTime" : "",
+         "actualEndtime" : "",
+         "scheduleBreakTime1" : ".25",
+         "scheduleBreakTime2" : ".25",
+         "scheduleBreakTime3" : ".25",
+         "scheduleBreakTime4" : ".25",
+         "actualeBreakTime1" : ".25",
+         "actualBreakTime2" : ".25",
+         "actualBreakTime3" : ".25",
+         "actualBreakTime4" : ".25",
+         "onCallStart" : "1200",
+         "onCallEnd" : "1400"
+      },{
+         "id" : 11,
+         "status" : "Schdeuled",
+         "locationName" : "Washington DC",
+         "jobRateHourly" : "7.00",
+         "station" : "Front Bar",
+         "revenueCenter" : "In-Dining",
+         "jobName" : "Bartender",
+         "currentDayStart" : "2016-04-22T00:00:00-07:00",
+         "currentDayStartTime" : "1030",
+         "currentDayEnd" : "2016-04-22T00:00:00-15:00",
+         "currentDayEndTime" : "1300",
+         "actualStartTime" : "1030",
+         "actualEndtime" : "1300",
+         "scheduleBreakTime1" : ".25",
+         "scheduleBreakTime2" : ".25",
+         "scheduleBreakTime3" : ".25",
+         "scheduleBreakTime4" : ".25",
+         "actualeBreakTime1" : ".25",
+         "actualBreakTime2" : ".25",
+         "actualBreakTime3" : ".25",
+         "actualBreakTime4" : ".25",
+         "onCallStart" : "",
+         "onCallEnd" : ""
+     },{
+         "id" : 12,
+         "status" : "Not Schdeuled",
+         "locationName" : "Baltimore",
+         "jobRateHourly" : "7.00",
+         "station" : "Station 5",
+         "revenueCenter" : "In-Dining",
+         "jobName" : "Server",
+         "currentDayStart" : "2016-04-22T00:00:00-07:00",
+         "currentDayStartTime" : "1430",
+         "currentDayEnd" : "2016-04-22T00:00:00-15:00",
+         "currentDayEndTime" : "1800",
+         "actualStartTime" : "1430",
+         "actualEndtime" : "",
+         "scheduleBreakTime1" : ".25",
+         "scheduleBreakTime2" : ".25",
+         "scheduleBreakTime3" : ".25",
+         "scheduleBreakTime4" : ".25",
+         "actualeBreakTime1" : ".25",
+         "actualBreakTime2" : ".25",
+         "actualBreakTime3" : ".25",
+         "actualBreakTime4" : ".25",
+         "onCallStart" : "1200",
+         "onCallEnd" : "1400"
+      },{
+         "id" : 13,
+         "status" : "Not Schdeuled",
+         "locationName" : "Washington DC",
+         "jobRateHourly" : "7.00",
+         "station" : "Not Assigned",
+         "revenueCenter" : "In-Dining",
+         "jobName" : "Not Assigned",
+         "currentDayStart" : "2016-04-23T00:00:00-07:00",
+         "currentDayStartTime" : "1030",
+         "currentDayEnd" : "2016-04-23T00:00:00-15:00",
+         "currentDayEndTime" : "1300",
+         "actualStartTime" : "1030",
+         "actualEndtime" : "1300",
+         "scheduleBreakTime1" : ".25",
+         "scheduleBreakTime2" : ".25",
+         "scheduleBreakTime3" : ".25",
+         "scheduleBreakTime4" : ".25",
+         "actualeBreakTime1" : ".25",
+         "actualBreakTime2" : ".25",
+         "actualBreakTime3" : ".25",
+         "actualBreakTime4" : ".25",
+         "onCallStart" : "",
+         "onCallEnd" : ""
+     },{
+         "id" : 14,
+         "status" : "Not Schdeuled",
+         "locationName" : "Baltimore",
+         "jobRateHourly" : "7.00",
+         "station" : "Station 5",
+         "revenueCenter" : "In-Dining",
+         "jobName" : "Server",
+         "currentDayStart" : "2016-04-23T00:00:00-07:00",
+         "currentDayStartTime" : "1430",
+         "currentDayEnd" : "2016-04-23T00:00:00-15:00",
+         "currentDayEndTime" : "1800",
+         "actualStartTime" : "1430",
+         "actualEndtime" : "",
+         "scheduleBreakTime1" : ".25",
+         "scheduleBreakTime2" : ".25",
+         "scheduleBreakTime3" : ".25",
+         "scheduleBreakTime4" : ".25",
+         "actualeBreakTime1" : ".25",
+         "actualBreakTime2" : ".25",
+         "actualBreakTime3" : ".25",
+         "actualBreakTime4" : ".25",
+         "onCallStart" : "1200",
+         "onCallEnd" : "1400"
       }],
       "futureScheduledDates" : [ {
          "id" : 1,

@@ -1,13 +1,13 @@
 <div id="offCanvasScope">
-    <div id="vtabs" data-bind="ojComponent:{component: 'ojTabs', orientation: 'vertical'}">
+    <!--<div id="vtabs" data-bind="ojComponent:{component: 'ojTabs', orientation: 'vertical'}">
         <ul class="regionReportUl">
             <li class="regionReportLi"><span>Favorites</span></li>
             <li class="regionReportLi"><span>Recently Viewed</span></li>
             <li class="regionReportLi"><span>Browse</span></li>
             <li class="regionReportLi"><span>Search</span></li>
-        </ul>
-        <div id="tabs-1" class="regionTabSections">
-            <p>Vertical Tab 1.</p>
+        </ul>-->
+        <div id="tabs-1" class="regionTabSections" style="padding-top: 10px; ">
+            <!--<p>Vertical Tab 1.</p>-->
             <!-- ko foreach: $root.userData().assignedLocations-->
             <div class="oj-flex analyticsWrapper" data-bind="click: $root.updateActiveLocation">
                 <div class="analyticsRegion" data-bind="text: region"></div>
@@ -25,9 +25,9 @@
              <!-- /ko -->
 
         </div>
-        <div id="tabs-2" class="regionTabSections">
+       <!-- <div id="tabs-2" class="regionTabSections">
             <p>Vertical Tab 2.</p>
-        </div>
+        </div> 
 
         <div id="tabs-3" class="regionTabSections">
             <p>Vertical Tab 3.</p>
@@ -36,5 +36,5 @@
         <div id="tabs-4" class="regionTabSections">
             <p>Vertical Tab 4.</p>
         </div>
-    </div>
+    </div>-->
 </div>

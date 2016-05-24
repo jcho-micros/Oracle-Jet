@@ -2,6 +2,8 @@
      data-bind="ojComponent: {component: 'ojNavigationList',
         drillMode: 'collapsible',
         data: $data.dataSideSource,
+        selection: $root.router.stateId(),
+        optionChange: $root.leftOptionChangeHandler,
         item: { template: 'app_nav_off_canvas_template' }
         }"
      >

@@ -1,8 +1,23 @@
-<div class="tbd">Content TBD
-     -large
+<div class="tbd">
 
-<a data-bind="click: function(){$root.handleOpen('#laborDialogWindow')}" style="line-height:39px;">edit <i class="fa fa-pencil-square-o"></i></a>
-
+<a data-bind="click: function(){$root.handleOpen('#laborDialogWindow')}" style="line-height:39px; float: right"><i class="fa fa-pencil-square-o" style="float: right"></i>edit layout</a>
+<div class="oj-flex oj-lg-12 oj-md-12">
+    <div class="oj-lg-7 oj-md-7 oj-flex-item"  style="margin-left: 10px; margin-right: 10px;">
+        <div  style="padding-top: 5px; padding-left: 5px;  height: 30px; background-color: #c4c1be;">
+            <span style="color: black; "><strong>Schedule</strong></span>
+        </div>
+        <a href="#"  data-bind="click: $parent.empDayScheduleOpen" style="line-height:19px; float: right">View complete schedule</a>
+        <div>
+            
+        </div>
+    </div>
+    <div class="oj-lg-4 oj-md-4 oj-flex-item" style="margin-right: 10px;">
+        <div  style="padding-top: 5px; padding-left: 5px;  height: 30px; background-color: #c4c1be;">
+            <span style="color: black"><strong>Manager's log</strong></span>
+        </div>
+    </div>
+</div>
 
 </div>
+<div data-bind="template: {name: 'labor-management/dialogwindow/schedule-dailogwindow-large'}"></div>
 

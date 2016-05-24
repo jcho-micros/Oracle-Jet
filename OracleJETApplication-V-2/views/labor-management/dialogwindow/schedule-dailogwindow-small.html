@@ -1,0 +1,162 @@
+<div style="display:none" id="laborScheduleDailogWindow" title="" data-bind="ojComponent:{
+            component: 'ojDialog',
+            resizeBehavior: 'none',
+            dragAffordance: 'none',
+            initialVisibility: 'hide', 
+            rootAttributes: {style: 'width: 100%; height: 667px;'},
+            'position': {'at': 'top'}}">
+     <!-- Note: the user must provide the aria-labelledby attribute for the dialog to be accessible -->
+    <div class="oj-dialog-header oj-helper-clearfix" aria-labelledby="dialogTitleId">
+        <div id="dialogTitleId" class="oj-dialog-title" style="background-color: #FF4000; color: #ffffff">
+            <div class="oj-flex">
+                <div class="oj-flex-item dialogHeaderLeft">
+                     <h4 class="dialogHeaderText"> <span>Schedule Detail for east</span></h4>
+                </div>
+                <img data-bind="attr:{src: 'css/images/header-icon-dialog.png'}" style="float: right"/>
+            </div>
+        </div>
+    </div> 
+     <div class="oj-flex" style="margin: 5px">
+         <div class="oj-flex-item currentWeekHeader">
+             <span><strong>WEEK OF OCT. 15-21, 2016</strong></span>
+             <br /><span>For maximum text size, please set your printer to have .5" margin on all sides</span>
+             <br /><span>* denotes multiple shifts</span>
+         </div>
+         <div class="oj-flex-item  currentWeekHeader">
+             <br /><br /><span><strong>print options</strong></span>
+             <br />	<input type="checkbox" name="pagebreak" value="Pagebreak"><span>Insert page breaks after each sections</span>
+         </div>
+     </div> 
+     
+     <div class="oj-flex" style="margin: 5px">
+         <div >
+             <input id="btnJob" type="button" value="job" style="background-color: #FF4000; color: #ffffff; width: 40px; height: 30px" title="Job"/>
+         </div>
+         <div >
+             <input id="btnEmployee" type="button" value="employee" style="background-color: #ffffff; color: #000000; width: 70px; height: 30px" title="Employee"/>
+         </div>
+         <div>
+             <input id="btnDay" type="button" value="day" style="background-color: #FF4000; color: #ffffff; width: 40px; height: 30px" title="Day"/>
+         </div>
+         <div>
+             <input id="btnStation" type="button" value="station" style="background-color: #FF4000; color: #ffffff; width: 60px; height: 30px" title="Station"/>
+         </div>  
+     </div> 
+    
+     
+     <div class="oj-flex">
+          
+        <!--  ko foreach: $parent.personSchedules -->
+        
+         <div class="oj-sm-12 oj-flex-item" style="margin-left: 10px; margin-right: 10px">
+     <div id="accordionPage" data-bind="ojComponent: {component: 'ojAccordion'}">
+  <div id="c1"  data-bind="visible: (homeStore.toLowerCase() === $root.activeLocation().toString().toLowerCase())">
+            <div>
+                <span style="color: #000000; width: 100%" data-bind="text: firstName + ' ' +lastName" > </span>
+            </div>
+      <div><!-- child content -->
+          <div class="oj-flex oj-sm-12 ">
+              <div class="oj-sm-12 oj-flex-item currentWeekHeader" style="background-color: #ffffff; margin-right: 5px ">
+                <div style="background-color:  #04B404; height: 4px"></div>
+                <div style="color: #000000">WEEKLY TOTALS</div>
+                <div style="color: #000000">$126.75 (18.5 hours) | $120.00 tips</div>
+                <div style="color: #000000">$246.75</div>
+              </div>
+<!--              <div class="oj-md-4 oj-lg-3 oj-flex-item currentWeekHeader" style="background-color: #ffffff; margin-right: 5px ">
+                <div style="background-color:  #FE9A2E; height: 4px"></div>
+                <div style="color: #000000">BARTENDER TOTALS</div>
+                <div style="color: #000000">$126.75 (18.5 hours) | $120.00 tips</div>
+                <div style="color: #000000">$246.75</div>
+              </div>
+              <div class="oj-md-4 oj-lg-3 oj-flex-item currentWeekHeader" style="background-color: #ffffff; margin-right: 5px ">
+                <div style="background-color:  #2E2EFE; height: 4px"></div>
+                <div style="color: #000000">SERVER TOTALS</div>
+                <div style="color: #000000">$126.75 (18.5 hours) | $120.00 tips</div>
+                <div style="color: #000000">$246.75</div>
+              </div>-->
+            </div>
+          
+            <div class="currentFilmStrip">
+                <div id="filmStripDiv" class="oj-panel" style="margin: '20px';">
+                  <div id="filmStrip" aria-label="Set of chemicals" data-bind="ojComponent: {component: 'ojFilmStrip', arrowPlacement: self.currentNavArrowPlacement, arrowVisibility: self.currentNavArrowVisibility}">
+                      <!-- ko foreach: schedules -->
+                      <div class="oj-panel oj-panel-alt2 schedule-filmstrip-item" >
+                         
+                        <div style="color: black;  text-align: center;">
+                            <span data-bind="text: startDate"></span> 
+                        </div>
+                             <div style="border: 1px solid #000000; background-color: white; padding: 5px; border-color: black; color: #000000">
+                                 <div>
+                                     <span data-bind="text: totalHours + ' hours'"></span>
+                                     <span data-bind="text: '$'+hourlyWage" style="float: right"></span>
+                                 </div>
+                                 <div>
+                                     <span >Tips</span>
+                                     <span data-bind="text: '$'+tipsamount" style="float: right"></span>
+                                 </div>
+                                  <div>
+                                      <span ><strong>Daily Total</strong></span>
+                                     <span data-bind="text: '$'+(totalHours * hourlyWage)" style="float: right"></span>
+                                 </div>
+                             </div>
+                             
+                             <div style="border: 1px solid #000000;  border-color: black; background-color: white; color: #000000; min-height: 70px">
+                                 
+                                 <div data-bind="visible: (preferred === 'yes')" 
+                                      style="background-color: white; color: black; text-align: center;">
+                                     <span style="color: black"><strong>PREFERRED</strong></span>  
+                                    <br /> <span data-bind="text: preferredtime" style="color: black"></span> 
+                                </div>
+                                <div data-bind="visible: (unavailable === 'yes')" 
+                                    style="background-color: white; text-align: center;">
+                                    <span style="color: red"><strong>NOT AVAILABLE</strong></span> 
+                                    <br /> <span data-bind="text: unavialbaletime" style="color: black"></span> 
+                                </div>
+                             </div>
+                             
+                            <div data-bind="foreach: locations">
+                                <div style="border: 1px solid #000000; background-color: white; margin-top: 5px; color: black;  text-align: center;" 
+                                     data-bind="visible: (name.toLowerCase() === $root.activeLocation().toString().toLowerCase())">
+                                    <strong><span data-bind="text: name"> </span></strong>
+                                <br /><span data-bind="text: address"> </span>
+                                
+                                    <div data-bind="foreach: workDetails;" style="margin-left: 5px; margin-right: 5px">
+                                        
+                                        <div data-bind=" style: { 'background-color': backgroundcolor, 'height' : '5px' }"></div>
+                                       
+                                        <strong><span data-bind="text: jobtitle" > </span></strong>
+                                        <br /><span data-bind="text: (jobtitle === 'Not Scheduled' ? '' : workStation)"> </span>
+                                        <br /><span data-bind="text: (jobtitle === 'Not Scheduled' ? '' : time)"> </span>
+                                        <br /><span data-bind="text: (jobtitle === 'Not Scheduled' ? '' : (hours + ' hours'))"> </span>
+                                        <br /><span data-bind="text: (jobtitle === 'Not Scheduled' ? '' : (tipamount + ' tips'))"> </span>
+                                        
+                                        <br />
+                                        <br />
+                                    </div>
+                                    
+                                    
+                                    <div data-bind="visible: (oncall === 'yes')" 
+                                         style="background-color: white;   margin-left: 5px;
+                                         margin-right: 5px; text-align: center;">
+                                        <div style="background-color:  #FA58F4; height: 4px"></div>
+                                        <strong><span>ON CALL</span> </strong>
+                                        <br /> <span data-bind="text: oncalltime"></span> 
+                                    </div>
+                                </div>
+                                <br />
+                            </div>
+                        
+                     </div>
+                
+                    <!-- /ko -->
+
+                  </div>
+                </div> <!-- end filmStripDiv -->
+            </div>
+      </div><!-- end child content -->
+  </div>
+     </div>
+         </div>
+        <!--/ko-->
+     </div>
+</div>

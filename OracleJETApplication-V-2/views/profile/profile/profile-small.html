@@ -1,42 +1,65 @@
-<div id="accordionPage" data-bind="ojComponent: {component: 'ojAccordion'}">
+<div class="oj-flex" style="background-color: #507AA0; margin-left: -10px; margin-right: -10px">
+                <div class="oj-flex-item profileNameDisplay">
+                    <div class="oj-flex" style="margin-left: 10px; margin-bottom: 5px; height: auto">
+                        <div class="oj-flex-item oj-sm-9" style="padding-left: 10px">
+                            <span style="color: #ffffff"><strong>Home Store </strong></span><br>
+                            <span style="color: #ffffff" data-bind="text: $parent.location()"></span><br><br>
+                        
+                            <span style="color: #ffffff"><strong>Hire Status </strong></span><br>
+                                <span style="color: #ffffff" data-bind="text: $parent.hireStatus()"></span>
+                        </div>
+                        
+<!--                        <div id="profileLoader" data-bind="if:$root.router.stateId() == 'profile',style:{background: 'url(css/images/people/'+$parent.empId()+'.png)',
+                        'background-repeat': 'no-repeat',
+                        'background-position': '100% 30%',
+                        'background-color': '#507AA0',
+                        'height': '60px'}" class="oj-flex-item oj-sm-3" >-->
+                        
+                    </div>
+                </div>
+</div>
+<div id="accordionPage" data-bind="ojComponent: {component: 'ojAccordion'}" style="margin: 5px; background-color: #E5F6EA">
     <!-- Start of Section 1 --->
+    
     <div id="general" data-bind="ojComponent: {component: 'ojCollapsible', expanded:true}">
         <h3>General</h3>
         <div>
             <div class="oj-flex">
                 <div class="oj-flex-item profileNameDisplay">
                     <div class="oj-flex">
-                        <div class="oj-flex-item">
-                            <h4>Name</h4>
-                            <div class="employeeName" data-bind="text: $parent.firstName() + ' ' + $parent.lastName()"></div>
+                        <div class="oj-flex-item oj-sm-6">
+                            <span><strong>NAME </strong></span><br>
+                                <span data-bind="text: $parent.firstName() + ' ' + $parent.lastName()"></span>
                         </div>
-                    </div>
-                    <div class="oj-flex">
-                        <div class="oj-flex-item">
-                            <div class=" generalArea">
-                                <span><strong>Ethnicity: </strong></span>
+                        <div class="oj-flex-item oj-sm-6 generalArea">
+                                <span><strong>ETHNICITY </strong></span>
                                 <span data-bind="text: $parent.ethnicity()"></span>
-                            </div>
-                            <div class=" generalArea">
-                                <span><strong>Gender: </strong></span>
-                                <span data-bind="text: $parent.gender()"></span>
-                            </div>
-                        </div>
-                        <div class="oj-flex-item">
-                            <div class=" generalArea">
-                                <span><strong>Language: </strong></span>
-                                <span data-bind="text: $parent.language()"></span>
-                            </div>
-                            <div class=" generalArea">
-                                <span><strong>Time Zone: </strong></span>
-                                <span data-bind="text: $parent.timeZone()"></span>
-                            </div>
                         </div>
                     </div>
-
+                    
+                    
+                    <div class="oj-flex" style="margin-top: 10px">
+                        <div class="oj-flex-item oj-sm-6">
+                            <span><strong>LANGUAGE </strong></span><br>
+                                <span data-bind="text: $parent.language()"></span>
+                        </div>
+                        <div class="oj-flex-item oj-sm-6 generalArea">
+                            <span><strong>GENDER </strong></span><br>
+                                <span data-bind="text: $parent.gender()"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="oj-flex" style="margin-top: 10px">
+                        <div class="oj-flex-item oj-sm-6">
+                            <span><strong> TIME ZONE </strong></span><br>
+                                <span data-bind="text: $parent.timeZone()"></span>
+                        </div>
+                        
+                    </div>
+                    
                     <div data-bind="visible: $parent.veteranStatus() == 'yes'">
-                        <div class="oj-flex">
-                            <h4>Veteran</h4>
+                        <div class="oj-flex" style="margin-top: 15px">
+                            <h4>VETERAN</h4>
                         </div>
                         <div class="oj-flex">
                             <div class="oj-flex-item generalArea">
@@ -50,15 +73,16 @@
                                 <div><i class="fa fa-check"></i> <span data-bind="text: $parent.specialDisabled()"></span></div>
                             </div>
                         </div>
-                        <div class="oj-flex">
+                        
+                        <div class="oj-flex"  style="margin-top: 15px">
                             <div class="oj-flex-item disableNumberArea">
-                                <span><strong>Registered Disable Number: </strong></span>
+                                <span><strong>REGISTERED DISABLE NUMBER </strong></span><br>
                                 <span data-bind="text: $parent.registeredDisabledNumber()"></span>
                             </div>
                         </div>
-                        <div class="oj-flex">
+                        <div class="oj-flex" style="margin-top: 10px">
                             <div class="oj-flex-item disableNumberArea">
-                                <span><strong>Discharge Date: </strong></span>
+                                <span><strong>DISCHARGE DATE </strong></span><br>
                                 <span data-bind="text: $parent.dischargeDate()"></span>
                             </div>
                         </div>
@@ -132,11 +156,11 @@
             </div>
         </div>
     </div>
-    <div id="Custom">
+<!--    <div id="Custom">
         <h3>Custom</h3>
         <div class="oj-flex">&nbsp;</div>
 
-    </div>
+    </div>-->
 </div>
 <div class="subToolRow oj-flex">
     <hr/>

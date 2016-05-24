@@ -1,3 +1,103 @@
-<div>
-    hello small
-</div>
+<!-- small template -->
+<script type="text/html" id="sm_template_w">
+  <div id="homeNavList" class="oj-flex mobileSubNav" >
+        
+    </div>
+   <div class="mainContentArea">
+         <div class="oj-flex oj-flex-items-pad">
+            <div id="homeSection" class="oj-flex-item">
+<!--                <a data-bind="click: function(){$root.handleOpen('#homeDialogWindow')}" style="line-height:39px;">edit <i class="fa fa-pencil-square-o"></i></a>
+        -->
+                <div class="oj-flex" style="background-color: #ffffff; padding : 20px; height: 500px; margin: 20px">
+                                <div class="oj-sm-12 oj-flex-item" style="padding: 10px; ">
+                                    <div style="background-color: #000000; background-color: #000000; padding: 10px; ">
+                                        <label style="color: #ffffff">This week's schedule</label>
+                                        <br /><a href="#" data-bind="click: $parent.empLaborScheduleOpen" >+add new schedule</a>
+                                    </div>
+                                    <div style="background-color: #000000; padding: 10px; margin-top:10px">
+                                        <label style="color: #ffffff">Washington D.C. Dashboard content here</label>
+                                    </div>
+                                    <div style="background-color: #000000; padding: 10px; margin-top:10px">
+                                        <label style="color: #ffffff">Washington D.C. Dashboard content here</label>
+                                    </div>
+                                    <div style="background-color: #000000;  padding: 10px; margin-top:10px">
+                                        <label style="color: #ffffff">Washington D.C. Dashboard content here</label>
+                                    </div>
+                                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--home dialog modal-->
+    <div data-bind="template: {name: 'labor-management/dialogwindow/schedule-dailogwindow-small'}"></div>
+</script>
+
+<script type="text/html" id="sm_template_b">
+  <div id="homeNavList" class="oj-flex mobileSubNav" >
+        
+    </div>
+   <div class="mainContentArea">
+         <div class="oj-flex oj-flex-items-pad">
+            <div id="homeSection" class="oj-flex-item">
+<!--                <a data-bind="click: function(){$root.handleOpen('#homeDialogWindow')}" style="line-height:39px;">edit <i class="fa fa-pencil-square-o"></i></a>
+        -->
+                <div class="oj-flex" style="background-color: #ffffff; padding : 20px; height: 500px; margin: 20px">
+                                <div class="oj-sm-12 oj-flex-item" style="padding: 10px; ">
+                                    <div style="background-color: #000000; background-color: #000000; padding: 10px; ">
+                                        <label style="color: #ffffff">This week's schedule</label>
+                                        <br /><a href="#" data-bind="click: $parent.empLaborScheduleOpen" >+add new schedule</a>
+                                    </div>
+                                    <div style="background-color: #000000; padding: 10px; margin-top:10px">
+                                        <label style="color: #ffffff">Baltimore Dashboard content here</label>
+                                    </div>
+                                    <div style="background-color: #000000; padding: 10px; margin-top:10px">
+                                        <label style="color: #ffffff">Baltimore Dashboard content here</label>
+                                    </div>
+                                    <div style="background-color: #000000;  padding: 10px; margin-top:10px">
+                                        <label style="color: #ffffff">Baltimore Dashboard content here</label>
+                                    </div>
+                                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--home dialog modal-->
+    <div data-bind="template: {name: 'labor-management/dialogwindow/schedule-dailogwindow-small'}"></div>
+</script>
+
+<script type="text/html" id="sm_template_ww">
+  <div id="homeNavList" class="oj-flex mobileSubNav" >
+        
+    </div>
+   <div class="mainContentArea">
+         <div class="oj-flex oj-flex-items-pad">
+            <div id="homeSection" class="oj-flex-item">
+<!--                <a data-bind="click: function(){$root.handleOpen('#homeDialogWindow')}" style="line-height:39px;">edit <i class="fa fa-pencil-square-o"></i></a>
+        -->
+                <div class="oj-flex" style="background-color: #ffffff; padding : 20px; height: 500px; margin: 20px">
+                                <div class="oj-sm-12 oj-flex-item" style="padding: 10px; ">
+                                    <div style="background-color: #000000; background-color: #000000; padding: 10px; ">
+                                        <label style="color: #ffffff">This week's schedule</label>
+                                        <br /><a href="#" data-bind="click: $parent.empLaborScheduleOpen" >+add new schedule</a>
+                                    </div>
+                                    <div style="background-color: #000000; padding: 10px; margin-top:10px">
+                                        <label style="color: #ffffff">Washington D.C. Dashboard content here</label>
+                                    </div>
+                                    <div style="background-color: #000000; padding: 10px; margin-top:10px">
+                                        <label style="color: #ffffff">Washington D.C. Dashboard content here</label>
+                                    </div>
+                                    <div style="background-color: #000000;  padding: 10px; margin-top:10px">
+                                        <label style="color: #ffffff">Washington D.C. Dashboard content here</label>
+                                    </div>
+                                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--home dialog modal-->
+    <div data-bind="template: {name: 'labor-management/dialogwindow/schedule-dailogwindow-small'}"></div>
+</script>
+
+<div id="templateWrapper" data-bind="template: {name: 
+            $root.activeLocation() === 'Washington D.C.' ? 'sm_template_ww' : 'sm_template_b'}"></div>
+<!--<div data-bind="template: {name: 'labor-management/schedules-timecards/schedules-timecards-dailog-small'}"></div>-->

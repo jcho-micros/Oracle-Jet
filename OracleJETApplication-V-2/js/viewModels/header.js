@@ -45,15 +45,15 @@ define([
                 {name: 'People', id: 'people', value: ' ',  img: 'people-default.png'}
                 ];
             var appSideNavData = [
-                {name: 'Charts', id: 'charts'},
-                {name: 'Reports', id: 'reports'},
-                {name: 'Links', id: 'links'},
-                {name: 'iCare', id: 'icare'},
-                {name: 'myInventory', id: 'myinventory'},
-                {name: 'Forecasting', id: 'forecasting'},
-                {name: 'Dashboards', id: 'dashboards'},
-                {name: 'myLabor', id: 'mylabor'},
-                {name: 'Admin', id: 'admin'}   
+                {name: 'Charts', id: 'reports-analytics'},
+                {name: 'Reports', id: 'reports-analytics'},
+                {name: 'Links', id: 'nowhere'},
+                {name: 'iCare', id: 'gift-loyalty'},
+                {name: 'myInventory', id: 'inventory-management'},
+                {name: 'Forecasting', id: 'nowhere'},
+                {name: 'Dashboards', id: 'nowhere'},
+                {name: 'myLabor', id: 'labor-management'},
+                {name: 'Admin', id: 'nowhere'}   
             ];
         // Data for application name
             var appName = {
@@ -94,6 +94,7 @@ define([
                 "displayMode": "push",
                 "selector": "#appDrawer",
                 "selection": "selectedItem"
+               
             };
             
         self.toggleAppDrawer = function ()
@@ -112,7 +113,6 @@ define([
         self.linkUrlAppend = function (locationId)
         {
             var oldLink = locationId;
-
         }
       
     }

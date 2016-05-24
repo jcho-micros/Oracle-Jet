@@ -1,1 +1,64 @@
--Large
+<div class="justifyCenter">
+    <div class="oj-flex">
+        <div class="oj-md-10 oj-flex-item">
+            <div class="scheduleHeader"> <h2>Schedule</h2> <span class="timeOffRequest"><a data-bind="click:$parent.editRequestTimehandleOpen">Time Off Request</a></span></div>
+        </div> 
+        <div class="oj-md-2 oj-flex-item">
+            <a data-bind="click: function(){$parent.handleOpen('#scheduleDetailDialog')}" style="line-height:39px;">edit <i class="fa fa-pencil-square-o"></i></a>
+        </div>
+    </div>
+    <div class="oj-flex">
+        <div class="oj-md-12 oj-flex-item currentWeekHeaderArea">
+            <div class="currentWeekHeader"><strong>Current Week</strong> (8/40) </div>
+        </div>
+        <div class="oj-md-12 oj-flex-item">
+            <div class="oj-flex oj-flex-item">
+                <div class="oj-md-6 oj-flex-item shiftPoolDiv">
+                   <a data-bind="click: $parent.handleOpen('#shiftPoolModal')" class="shiftPoolLink">Shift Pool</a>
+                </div>
+                <div class="oj-md-6 oj-flex-item emailAndPringDiv">
+                    <ul class="scheduleToolArea">
+                        <li id="email"><a href="#"><span class="fa fa-envelope-o"></span> email</a></li>
+                        <li id="print"><a href="#"><span class="fa fa-print"></span> print</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div id="filmStripDiv" class="oj-panel" style="margin: '20px';  width: '100%'">
+              <div id="filmStrip" aria-label="Set of chemicals" 
+                   data-bind="ojComponent: {component: 'ojFilmStrip', 
+                               arrowPlacement: self.currentNavArrowPlacement, 
+                               arrowVisibility: self.currentNavArrowVisibility}">
+                  <!-- ko foreach: $parent.currentScheduledDates -->
+                  
+                  <div class="oj-panel oj-panel-alt2 schedule-filmstrip-item" 
+                       data-bind="style: {display: getItemInitialDisplay($index())}">
+                    <div>
+                       
+                       <a data-bind="click:function(){$parents[1].showItemIndex('#currentWeekModal')}">
+                           <p>
+                               <span data-bind="text: currentDayStart"></span> 
+                           </p>
+                           <p>
+                                <span data-bind="text: currentDayStartTime"></span> - <span data-bind="text: currentDayEndTime"></span> 
+                           </p>
+                            <p>
+                                 <span data-bind="text: currentSecondDayStartTime"></span> - <span data-bind="text: currentSecondDayEndTime"></span>
+                            </p>
+                        </a>
+                        <br /><span data-bind="text: location"></span>, <span data-bind="text: revenueCenter"></span>
+                       <br /><span data-bind="text: job"></span>, <span data-bind="text: station"></span>
+                       <br /><span data-bind="text: status"></span>
+                       <br /><span data-bind="text: notes"></span>
+                    </div> 
+                       
+                    </div>
+                      
+                <!-- /ko -->
+
+              </div>
+            </div> <!-- end filmStripDiv -->
+        </div>
+        
+    </div>
+</div>
