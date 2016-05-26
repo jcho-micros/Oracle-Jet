@@ -23,6 +23,56 @@ $white: #fff;
 $offWhite: #f7f8f9;
 $black: #000;
 
+//New Colors
+$darkGray: #37424C;
+$medGray1: #6E8598;
+$medGray2: #919fAB;
+$gray: #AFBAC5;
+$lightGray1: #CFDCE8;
+$lightGray2: #F5F5F5;
+
+$darkBlue: #002d66;
+$medBlue1: #004587;
+$medBlue2: #015FAB;
+$lightBlue: #0572CE;
+
+$darkBrown: #6F2900;
+$medBrown1: #8b3300;
+$medBrown2: #AB4100;
+$lightBrown: #be4800;
+
+$darkGreen: #004A2E;
+$medGreen1: #005C3A;
+$medGreen2: #007B2B;
+$lightGreen: #1A8841;
+
+$darkRed: #6D000A;
+$medRed1: #88000d;
+$medRed2: #ba0006;
+$lightRed: #e4001e;
+
+$darkViolet: #5B004F;
+$medViolet1: #79006C;
+$medViolet2: #920083;
+$lightViolet: #A90083;
+
+$darkPurple: #300050;
+$medPurple1: #410b6e;
+$medPurple2: #501884;
+$lightPurple: #754b9a;
+
+$darkGrayBlue: #101356;
+$medGrayBlue1: #172777;
+$medGrayBlue2: #1F348F;
+$lightGrayBlue: #5a68ad;
+
+$darkMustard: #8D4300;
+$medMustard1: #905200;
+$medMustard2: #926200;
+$lightMustard: #947100;
+
+
+//Old Colors
 $primaryLightBlue: #346fd4;
 $secondaryLightBlue: #84bbe6;
 $tertiaryLightBlue: #045fab;
@@ -47,16 +97,17 @@ $primaryDarkGray:#2D3142;
 $secondaryDarkGray: #575A68;
 $tertiaryDarkGray: #262A38;
 
-$primaryLightGreen: #507AA0;
-$secondaryLightGreen: #6A8EAE;
+$primaryLightGrayBlue: #507AA0;
+$secondaryLightGrayBlue: #6A8EAE;
+
 $tertiaryLightGreen: #446888;
 
-$lightGray: #f5f5f5;
-$lightGray2: #e8eef4;
-$lightGray3: #d5d7d6;
-$lightGray4: #d2d2d2;
+$lightGrayOld: #f5f5f5;
+$lightGrayOld2: #e8eef4;
+$lightGrayOld3: #d5d7d6;
+$lightGrayOld4: #d2d2d2;
 $mediumGray: #696e72;
-$darkGray: #454545;
+$darkGrayOld: #454545;
 $oliveGreen: #88b300;
 
 //Offcanvas
@@ -108,12 +159,12 @@ $dialogBg: $white;
 $dialogAccentHover: $offWhite;
 $dialogAccentText: $white;
 $dialogIconColor: $oliveGreen;
-$alertMsgBckColor: $lightGray;
+$alertMsgBckColor: $lightGray2;
 
 //Off Canvas Variables
-$topOffCanvasBckg: $darkGray;
+$topOffCanvasBckg: $darkGrayOld;
 $topOffCanvasTabBckg: $mediumGray;
-$topOffCanvasTabSelected: $darkGray;
+$topOffCanvasTabSelected: $darkGrayOld;
 $topOffCanvasTabTextColor: $white;
 $topOffCanvasAnalyticsBckgColor: $white;
 $topOffCanvasAnalyticsText: $black;
@@ -122,15 +173,14 @@ $topOffCanvasAnalyticsText: $black;
 $leftOffCanvasDesktopBckg: $sideNavBckColor;
 $leftOffCanvasDesktopText: $sideNavLinksBlue;
 
-
 //Header Variables
-$headerBgColor: $lightGray;
-$globalStoreLinkIconBorder: $lightGray3;
-$globalStoreLinkIcon: $darkGray;
+$headerBgColor: $lightGray2;
+$globalStoreLinkIconBorder: $lightGrayOld3;
+$globalStoreLinkIcon: $darkGrayOld;
 $globalStoreLinkIconHover: $white;
 
 $globalStoreLinkIconBckg: $white;
-$globalStoreLinkIconHoverBckg: $darkGray;
+$globalStoreLinkIconHoverBckg: $darkGrayOld;
 
 
 //Navigation Styles
@@ -138,7 +188,7 @@ $mobileNavTextColor:            $white;
 $navigationListDesktopBgSelected:          $white;
 $navigationListDesktopTextColorSelected:   $black;
 
-$navListSelected: $darkGray;
+$navListSelected: $darkGrayOld;
 $tabActiveTxtColor: $black; 
 $tabHoverBckgColor: $white;
 //Offcanvas Styles
@@ -149,7 +199,7 @@ $sideNavLinkBckColor:$sideNavBckColor;
 
 //Page Variables
 $mainAreaBckgColor: $white;
-$mainAreaBorderColor: $lightGray2;
+$mainAreaBorderColor: $lightGrayOld2;
 
 $homeBckColor: $primaryLightBlue;
 $homeMobileTabBckColor: $primaryLightBlue;
@@ -206,17 +256,26 @@ $enterpriseTabHoverText: $primaryDarkGray;
 $enterpriseDialogHeaderColor: $primaryDarkGray;
 $enterpriseDialogAccentColor: $tertiaryDarkGray;
 
-$peopleBckColor: $primaryLightGreen;
-$peopleMobileTabBckColor: $primaryLightGreen;
-$peopleMobileTabAccentColor: $secondaryGreen;
-$peopleMainTabBckColor: $primaryLightGreen;
-$peopleSubTabBckColor: $secondaryLightGreen;
-$peopleTabHoverText: $primaryLightGreen;
-$peopleDialogHeaderColor: $primaryLightGreen;
+$peopleBckColor: $medGrayBlue1;
+$peopleMobileTabBckColor: $medGrayBlue1;
+$peopleMobileTabAccentColor: $medGrayBlue2;
+$peopleMainTabBckColor: $medGrayBlue1;
+$peopleSubTabBckColor: $lightGrayBlue;
+$peopleTabHoverText: $medGrayBlue1;
+$peopleDialogHeaderColor: $medGrayBlue1;
 $peopleDialogAccentColor: $tertiaryLightGreen;
 
+//Employee Search
+$searchTitleBarBckg: $lightGray2;
+$searchWrapBorder: $lightGray2;
+$inputFieldBorder: $lightGray2;
+$tableHeaderBckg: $darkGray;
+$formBorders: $gray;
+$oddEmpTableBckg: $lightGray2;
+
+
 //Footer Variables
-$footerBorderColor: $lightGray4;
+$footerBorderColor: $lightGrayOld4;
 $footerBckgColor: $white;
 
 // MOBILE FIRST SETUP
@@ -565,7 +624,7 @@ html:not([dir="rtl"]) .oj-dialog-title{
 //Left hand Side offcanvas
 //Left Side Navigation
       #appDrawer{
-        background-color: $darkGray;
+        background-color: $darkGrayOld;
         width:200px;
         outline-color: transparent;
         .oj-navigationlist-element{
@@ -595,26 +654,104 @@ html:not([dir="rtl"]) .oj-dialog-title{
     }
 }
 //People CSS
+
+.inputFieldWrap{
+    max-width:100%;
+}
+.inputField{
+    border: 1px solid $inputFieldBorder;
+}
+.searchFieldWrap{
+    border: 1px solid $searchWrapBorder;
+    overflow:hidden;
+}
+.searchBtnWrap{
+    float:right;
+}
+.searchTitleBar{
+    height:40px;
+    padding:10px;
+    background-color: $searchTitleBarBckg;
+    label{
+        font-size: 20px;
+    }
+}
+.advSearchLabel{
+    font-weight: bold;
+    width: 100%;
+    display: block;
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid $formBorders;
+}
+.advSearchCol{
+    border-right: 1px solid $formBorders;
+    padding:10px 20px;
+    &:last-child{
+        border:0;
+    }
+    label{
+        margin-bottom:10px;
+        font-weight:bold;
+        display: block;
+    }
+}
+.tableHeader{
+    background-color: $tableHeaderBckg;
+    padding:15px 10px;
+    span{
+        color:$white;
+    }
+}
+
+.employeeTable{
+    li{
+        background-color:$white;
+        &:nth-child(even){
+            background-color: $oddEmpTableBckg;
+        }
+        .oj-flex-item{
+            div, a{
+                line-height:50px;
+            }
+        }
+    }
+}
+.empImg{
+    border-radius:50%;
+    height:50px;
+    width:50px;
+}
+.oj-listview-item.oj-hover{
+    background-color: #ebeced !important;
+}
+
+.simplesearchWrap{
+    margin:10px 5px;
+}
 .searchTitle{
     h2{
-         color:$black;   
+         color:$black;
     }
 }
-.searchWindow{
-    .peopleSearchWrapper {
-        padding: 0 20px;
-
-    }
-    .button-row {
-        padding: 10px 10px 0 10px;
-    }
-}
+//.searchWindow{
+//    .peopleSearchWrapper {
+//        padding: 0 20px;
+//
+//    }
+//    .button-row {
+//        padding: 10px 10px 0 10px;
+//    }
+//}
 
 
 //Media Query
 //Medium/ipad (UP)
 @media only screen and (min-width: 768px){
     //Tablet Page Layout
+    //Search Styles
+    .searchFieldWrap{
+        margin:15px;
+    }
     
 @each $section, $color, $headerBckImg in (home, $homeBckColor, $homeBckImg), 
                             (labor-management, $laborBckColor, $laborBckImg),
@@ -690,6 +827,7 @@ html:not([dir="rtl"]) .oj-dialog-title{
 }
 //large/desktop (UP)
 @media only screen and (min-width: 1024px){
+
     //Desktop Page Layout
     .oj-web-applayout-footer {
         border: 1px solid $footerBorderColor;
@@ -726,6 +864,10 @@ html:not([dir="rtl"]) .oj-dialog-title{
                 }
             }
         }
+    }
+    //Search styles
+    .inputFieldWrap{
+        width:60em;
     }
 }
 

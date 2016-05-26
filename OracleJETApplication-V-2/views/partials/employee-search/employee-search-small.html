@@ -13,22 +13,21 @@
                     <hr class="oj-flex-item" />
                 </div>
                 <div class="oj-flex" >
-                <div class="oj-flex-item" style="background-color: #ffffff; padding: 2px; ">
-                    <div class="oj-flex-item" style="background-color: #ffffff;  width: 296px; border: 3px solid #000000">
+                <div class="oj-flex-item">
+                    <div class="oj-flex-item searchFieldWrap">
 
-                        <div class="oj-flex-item" style="background-color: #e1e7ee; padding: 2px; ">
+                        <div class="oj-flex-item searchTitleBar">
                             <label >Search</label>
                         </div>
-                        <div id="simplesearch" style="background-color: #ffffff; padding: 2px;" data-bind="visible:visibleAdvanceSearch()===false">
-                            <input class="oj-flex-item" style="background-color: #ffffff;  border: 1px solid #000000"
+                        <div id="simplesearch" class="simplesearchWrap" data-bind="visible:visibleAdvanceSearch()===false">
+                            <input class="oj-flex-item inputField"
                                    placeholder="Search for active names, stores, jobs" 
-                                   id="firstname" data-bind="value: firstNameSearch, ojComponent: {component: 'ojInputText',rootAttributes: {
-                                            style:'max-width:45em'}}"/>
+                                   id="firstname" data-bind="value: firstNameSearch, ojComponent: {component: 'ojInputText', rootAttributes:{class:'inputFieldWrap'}}"/>
                             <input class="oj-flex-item oj-button-primary" id="submit" type="submit" 
                                    data-bind="ojComponent: {component: 'ojButton', 
                             label: 'Search', icons: { start: 'fa fa-search'} }" />
                             <input class="oj-flex-item" id="reset" type="reset" data-bind="click: resetData, ojComponent: {component: 'ojButton', label: 'Clear'}" />
-                            <button class="oj-flex-item" id="hidesimple" style="float:right;" 
+                            <button class="oj-flex-item" id="hidesimple"
                                    data-bind="click: hideSimpleSearch, ojComponent: {component: 'ojButton', label: 'Adv. Search'}" />
 
                         </div>
@@ -141,7 +140,7 @@
                 <div class="oj-flex-items-pad">
                     <div class="oj-flex-item"><h2>Search Results</h2></div>
 
-                        <div style="margin-top:0px; position: relative; width: 310px;" 
+                        <div style="margin-top:0px; position: relative; width: 100%;"
                              data-bind="ojComponent: {component: 'ojPagingControl', 
                                 data: listViewDataSource, pageSize:10}"></div>
                         <ul id="listview" data-bind="ojComponent: {component: 'ojListView',

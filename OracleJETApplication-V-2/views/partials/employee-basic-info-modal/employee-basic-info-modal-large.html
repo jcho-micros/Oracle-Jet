@@ -27,21 +27,20 @@
                      </div>
                  </div>-->
         <div class="oj-flex">
-            <div class="oj-flex" style="background-color: #ffffff; height: auto; width: 95%;">
-                                <div class="oj-lg-1 oj-md-1 oj-flex-item" 
-                                     style="padding: 2px; width: 50px; height: 50px;">
+            <div class="oj-flex" style="background-color: #ffffff; height: auto; width: 100%;">
+                                <div class="oj-flex-item">
                                     <img data-bind="attr: {src: getPhoto(basicEmpInfo().empId)}"/>
                                 </div>
 
-                                <div class="oj-lg-2 oj-md-2 oj-flex-item" style="padding: 2px; ">
-                                    <label for="name">NAME</label>
+                                <div class="oj-flex-item" >
+                                    <label for="name">NAMEs</label>
                                     <br /><span id="name" style="color: #00a8ff" data-bind="text: basicEmpInfo().firstName + ' ' + basicEmpInfo().lastName"></span>
                                     <br /><br /><label for="status">STATUS</label>
                                     <br /><span id="status" style="color: #00a8ff" data-bind="text: basicEmpInfo().hireStatus"></span>
                                     
                                 </div>
 
-                                <div class="oj-lg-2 oj-md-2 oj-flex-item" style="padding: 2px; ">
+                                <div class="oj-flex-item" >
                                     <label for="homestore">HOME STORE</label>
                                     <br /><span id="homestore" style="color: #00a8ff" data-bind="text: basicEmpInfo().homeStore"></span>
                                     
@@ -50,7 +49,7 @@
                                     
                                 </div>
                 
-                <div class="oj-lg-2 oj-md-2 oj-flex-item" style="padding: 10px; ">
+                                <div class="oj-flex-item">
                                     <label for="contact">CONTACT</label>
                                     <br /><span id="contact" style="color: #00a8ff" data-bind="text: basicEmpInfo().mobile + ' mobile' "></span>
                                     <br /><span id="contact" style="color: #00a8ff" data-bind="text: basicEmpInfo().email + ' email' "></span>
@@ -60,7 +59,7 @@
                                     
                                 </div>
                 
-                <div class="oj-lg-2 oj-md-2 oj-flex-item" style="padding: 2px; ">
+                <div class="oj-flex-item" >
                         <label for="clockedin">Clocked in</label>
                         <br /><label for="clockedin">LAST CLOCKED IN</label>
                         <br /><span id="clockedin" style="color: #00a8ff" data-bind="text: basicEmpInfo().homeStore"></span>
@@ -68,7 +67,7 @@
                          <br /><br /><a href="#">view all employees <i class="fa fa-arrow-circle-right"></i></a>          
                 </div>
                 
-                <div class="oj-lg-3 oj-md-3 oj-flex-item" style="padding: 10px; ">
+                <div class="oj-lg-3 oj-md-3 oj-flex-item">
                                     <label for="availability">AVAILABILITY (Days & Time)</label>
                                     <br /><label for="unavailable"><strong>UNAVAILABLE</strong></label>
                                     <div data-bind="foreach: unavailableDaysAndTimes()">
