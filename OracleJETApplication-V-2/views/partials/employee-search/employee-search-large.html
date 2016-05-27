@@ -9,7 +9,7 @@
                 <div class="oj-flex-item">
                     <div class="oj-flex-item searchFieldWrap">
 
-                        <div class="oj-flex-item searchTitleBar">
+                        <div class="searchTitleBar">
                             <label >Search</label>
                         </div>
                         <div id="simplesearch" class="simplesearchWrap" data-bind="visible:visibleAdvanceSearch()===false">
@@ -33,7 +33,7 @@
                             </div>
 
                             <div class="oj-flex" style="background-color: #ffffff; height: auto">
-                                <div class="oj-lg-2 oj-md-2 oj-flex-item advSearchCol">
+                                <div class="oj-flex-item advSearchCol">
                                     <label for="firstname">FIRST NAME</label>
                                     <input id="firstname" data-bind="value: advFirstNameSearch, ojComponent: {component: 'ojInputText'}"/>
 
@@ -42,7 +42,7 @@
 
                                 </div>
 
-                                <div class="oj-lg-2 oj-md-3 oj-flex-item advSearchCol">
+                                <div class="oj-flex-item advSearchCol">
                                     <label for="homestore">HOME STORE ASSIGNMENT</label>
                                     <input placeholder="" id="homestore" data-bind="value: homeStoreSearch, ojComponent: {component: 'ojInputText'}"/>
 
@@ -51,7 +51,7 @@
 
                                 </div>
 
-                                <div class="oj-lg-3 oj-md-2 oj-flex-item advSearchCol">
+                                <div class="oj-flex-item advSearchCol">
                                     <label for="job">JOB</label>
                                     <input placeholder="" id="job" data-bind="value: jobSearch, ojComponent: {component: 'ojInputText'}"/>
 
@@ -60,7 +60,7 @@
 
                                 </div>
 
-                                <div class="oj-lg-2 oj-md-2 oj-flex-item advSearchCol">
+                                <div class="oj-flex-item advSearchCol">
                                     <label for="status">STATUS</label>
                                     <div>
                                         <div id="statuscheckboxSetId" aria-labelledby="mainlabelid" data-bind="ojComponent: {
@@ -86,7 +86,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="oj-lg-2 oj-md-2 oj-flex-item advSearchCol">
+                                <div class="oj-flex-item advSearchCol">
                                     <label for="status">MORE OPTIONS</label>
                                     <div>
                                         <div id="morecheckboxSetId" aria-labelledby="mainlabelid" data-bind="ojComponent: {
@@ -128,11 +128,11 @@
     </div>
 </div>
 <div class="oj-flex" >
-    <div class="oj-lg-4 oj-md-3 oj-flex-item peopleSearchWrapper" >
+    <div class="oj-flex-item peopleSearchWrapper" >
 
     </div>
 
-    <div class="oj-lg-2 oj-md-3 oj-flex-item peopleSearchWrapper" style="padding: 10px;">
+    <div class="oj-flex-item peopleSearchWrapper" style="padding: 10px;">
         <label for="sortoption">SORT </label>
         <select id="sortoption" style="padding-top: 5px" 
                 data-bind="ojComponent: {component: 'ojSelect', value: sortvalue, 
@@ -144,14 +144,14 @@
         </select>
     </div>
 
-    <div class="oj-lg-2 oj-md-3 oj-flex-item peopleSearchWrapper"  style="padding: 10px;">
+    <div class="oj-flex-item peopleSearchWrapper"  style="padding: 10px;">
         <label for="filteroption">FILTER OPTIONS </label>
         <select id="filteroption" style="padding-top: 5px" data-bind="ojComponent: {component: 'ojSelect', value: val, rootAttributes: {style:'max-width:20em'}}">
 
         </select>
     </div>
 
-    <div class="oj-lg-2 oj-md-3 oj-flex-item "  style="padding: 10px;">
+    <div class="oj-flex-item "  style="padding: 10px;">
         <label for="downloadoption">DOWNLOAD </label>
         <select id="downloadoption" style="padding-top: 5px" 
                 data-bind="ojComponent: {component: 'ojSelect', 
@@ -161,7 +161,7 @@
         </select>
     </div>
 
-    <div class="oj-lg-2 oj-md-3 oj-flex-item peopleSearchWrapper"  style="padding: 10px;">
+    <div class="oj-flex-item peopleSearchWrapper"  style="padding: 10px;">
         <label for="layoutoption">LAYOUT </label>
         <select id="layoutoption" style="padding-top: 5px" 
                 data-bind="ojComponent: {component: 'ojSelect', 

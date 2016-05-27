@@ -661,6 +661,11 @@ html:not([dir="rtl"]) .oj-dialog-title{
 .inputField{
     border: 1px solid $inputFieldBorder;
 }
+.searchResultSections{
+    width:100%;
+    padding:0 10px;
+}
+
 .searchFieldWrap{
     border: 1px solid $searchWrapBorder;
     overflow:hidden;
@@ -669,12 +674,15 @@ html:not([dir="rtl"]) .oj-dialog-title{
     float:right;
 }
 .searchTitleBar{
-    height:40px;
+    height:20px;
     padding:10px;
     background-color: $searchTitleBarBckg;
     label{
         font-size: 20px;
     }
+}
+.firstAdvSearchArea, #advancebtn{
+    padding:10px;
 }
 .advSearchLabel{
     font-weight: bold;
@@ -718,8 +726,11 @@ html:not([dir="rtl"]) .oj-dialog-title{
 }
 .empImg{
     border-radius:50%;
-    height:50px;
-    width:50px;
+    height:75px;
+    width:75px;
+}
+.empImgCol{
+    max-width:95px;
 }
 .oj-listview-item.oj-hover{
     background-color: #ebeced !important;
@@ -751,6 +762,10 @@ html:not([dir="rtl"]) .oj-dialog-title{
     //Search Styles
     .searchFieldWrap{
         margin:15px;
+    }
+    .empImg{
+        height:50px;
+        width:50px;
     }
     
 @each $section, $color, $headerBckImg in (home, $homeBckColor, $homeBckImg), 
