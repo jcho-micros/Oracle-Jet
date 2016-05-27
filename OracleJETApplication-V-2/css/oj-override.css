@@ -136,7 +136,7 @@ html:not([dir="rtl"]) .oj-dialog-title {
   text-align: center;
   padding: 10px 0px;
   margin: 20px 0;
-  background-color: #f5f5f5;
+  background-color: #F5F5F5;
   border-top: 10px solid #88b300;
   min-height: 40px; }
   .alertMsgWrap .alertMsgText {
@@ -199,35 +199,35 @@ html:not([dir="rtl"]) .oj-dialog-title {
   background-color: #2D3142; }
 
 #ojDialogWrapper-peopleDialogWindow .oj-dialog-header {
-  background-color: #507AA0; }
+  background-color: #172777; }
   #ojDialogWrapper-peopleDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper {
     background-color: #446888; }
     #ojDialogWrapper-peopleDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper.oj-hover .oj-dialog-close-icon {
       color: #446888; }
 #ojDialogWrapper-peopleDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-default, #ojDialogWrapper-peopleDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-hover, #ojDialogWrapper-peopleDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-focus-only {
-  background-color: #507AA0; }
+  background-color: #172777; }
 
 #ojDialogWrapper-empBasicDialogWindow .oj-dialog-header {
-  background-color: #507AA0; }
+  background-color: #172777; }
   #ojDialogWrapper-empBasicDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper {
     background-color: #446888; }
     #ojDialogWrapper-empBasicDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper.oj-hover .oj-dialog-close-icon {
       color: #446888; }
 #ojDialogWrapper-empBasicDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-default, #ojDialogWrapper-empBasicDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-hover, #ojDialogWrapper-empBasicDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-focus-only {
-  background-color: #507AA0; }
+  background-color: #172777; }
 
 #ojDialogWrapper-profileDialogWindow .oj-dialog-header {
-  background-color: #507AA0; }
+  background-color: #172777; }
   #ojDialogWrapper-profileDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper {
     background-color: #446888; }
     #ojDialogWrapper-profileDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper.oj-hover .oj-dialog-close-icon {
       color: #446888; }
 #ojDialogWrapper-profileDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-default, #ojDialogWrapper-profileDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-hover, #ojDialogWrapper-profileDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-focus-only {
-  background-color: #507AA0; }
+  background-color: #172777; }
 
 /*Header*/
 .appHeader {
-  background-color: #f5f5f5; }
+  background-color: #F5F5F5; }
 
 .appHeaderMobile {
   padding-left: 10px; }
@@ -249,7 +249,7 @@ html:not([dir="rtl"]) .oj-dialog-title {
   float: right;
   display: block;
   background-image: none;
-  background-color: #f5f5f5;
+  background-color: #F5F5F5;
   height: 100%;
   border: 0px;
   line-height: 40px;
@@ -315,10 +315,10 @@ html:not([dir="rtl"]) .oj-dialog-title {
   background-color: #2D3142; }
 
 .peopleTitleWrap {
-  background-color: #507AA0; }
+  background-color: #172777; }
 
 .profileTitleWrap {
-  background-color: #507AA0; }
+  background-color: #172777; }
 
 #appHeaderDesktopNav .topNavImgIcon, #appHeaderMobileNav .topNavImgIcon {
   margin-top: 3px;
@@ -368,13 +368,13 @@ html:not([dir="rtl"]) .oj-dialog-title {
   #appHeaderDesktopNav .oj-navigationlist-item.oj-focus#people a .topNavImgIcon, #appHeaderDesktopNav .oj-navigationlist-item.oj-default#people a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-focus#people a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-default#people a .topNavImgIcon {
     background-image: url("images/icon/people-default.png"); }
   #appHeaderDesktopNav .oj-navigationlist-item.oj-selected#people, #appHeaderDesktopNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#people, #appHeaderMobileNav .oj-navigationlist-item.oj-selected#people, #appHeaderMobileNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#people {
-    background-color: #507AA0; }
+    background-color: #172777; }
     #appHeaderDesktopNav .oj-navigationlist-item.oj-selected#people a .topNavImgIcon, #appHeaderDesktopNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#people a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-selected#people a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#people a .topNavImgIcon {
       background-image: url("images/icon/people-hover.png"); }
   #appHeaderDesktopNav .oj-navigationlist-item.oj-focus#profile a .topNavImgIcon, #appHeaderDesktopNav .oj-navigationlist-item.oj-default#profile a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-focus#profile a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-default#profile a .topNavImgIcon {
     background-image: url("images/icon/people-default.png"); }
   #appHeaderDesktopNav .oj-navigationlist-item.oj-selected#profile, #appHeaderDesktopNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#profile, #appHeaderMobileNav .oj-navigationlist-item.oj-selected#profile, #appHeaderMobileNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#profile {
-    background-color: #507AA0; }
+    background-color: #172777; }
     #appHeaderDesktopNav .oj-navigationlist-item.oj-selected#profile a .topNavImgIcon, #appHeaderDesktopNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#profile a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-selected#profile a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#profile a .topNavImgIcon {
       background-image: url("images/icon/people-hover.png"); }
 
@@ -398,15 +398,74 @@ html:not([dir="rtl"]) .oj-dialog-title {
       .subTabs .oj-navigationlist-item.oj-selected a.oj-navigationlist-item-content {
         color: #000; }
 
+.inputFieldWrap {
+  max-width: 100%; }
+
+.inputField {
+  border: 1px solid #F5F5F5; }
+
+.searchFieldWrap {
+  border: 1px solid #F5F5F5;
+  overflow: hidden; }
+
+.searchBtnWrap {
+  float: right; }
+
+.searchTitleBar {
+  height: 40px;
+  padding: 10px;
+  background-color: #F5F5F5; }
+  .searchTitleBar label {
+    font-size: 20px; }
+
+.advSearchLabel {
+  font-weight: bold;
+  width: 100%;
+  display: block;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid #AFBAC5; }
+
+.advSearchCol {
+  border-right: 1px solid #AFBAC5;
+  padding: 10px 20px; }
+  .advSearchCol:last-child {
+    border: 0; }
+  .advSearchCol label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    display: block; }
+
+.tableHeader {
+  background-color: #37424C;
+  padding: 15px 10px; }
+  .tableHeader span {
+    color: #fff; }
+
+.employeeTable li {
+  background-color: #fff; }
+  .employeeTable li:nth-child(even) {
+    background-color: #F5F5F5; }
+  .employeeTable li .oj-flex-item div, .employeeTable li .oj-flex-item a {
+    line-height: 50px; }
+
+.empImg {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px; }
+
+.oj-listview-item.oj-hover {
+  background-color: #ebeced !important; }
+
+.simplesearchWrap {
+  margin: 10px 5px; }
+
 .searchTitle h2 {
   color: #000; }
 
-.searchWindow .peopleSearchWrapper {
-  padding: 0 20px; }
-.searchWindow .button-row {
-  padding: 10px 10px 0 10px; }
-
 @media only screen and (min-width: 768px) {
+  .searchFieldWrap {
+    margin: 15px; }
+
   .homeTitleWrap {
     background: url("images/header-icon-header.png");
     background-repeat: no-repeat;
@@ -460,7 +519,7 @@ html:not([dir="rtl"]) .oj-dialog-title {
     background-repeat: no-repeat;
     background-size: 223px 111px;
     background-position: 100% 30%;
-    background-color: #507AA0;
+    background-color: #172777;
     height: 110px; }
 
   .profileTitleWrap {
@@ -468,7 +527,7 @@ html:not([dir="rtl"]) .oj-dialog-title {
     background-repeat: no-repeat;
     background-size: 223px 111px;
     background-position: 100% 30%;
-    background-color: #507AA0;
+    background-color: #172777;
     height: 110px; }
 
   #homeTabs {
@@ -598,15 +657,15 @@ html:not([dir="rtl"]) .oj-dialog-title {
       outline-color: transparent; }
     #peopleTabs .oj-navigationlist-item.oj-hover:not(.oj-selected) {
       background-color: #fff;
-      border-color: #6A8EAE; }
+      border-color: #5a68ad; }
       #peopleTabs .oj-navigationlist-item.oj-hover:not(.oj-selected) .oj-navigationlist-item-label {
-        color: #507AA0; }
+        color: #172777; }
     #peopleTabs .oj-navigationlist-item.oj-default {
-      background-color: #6A8EAE; }
+      background-color: #5a68ad; }
       #peopleTabs .oj-navigationlist-item.oj-default .oj-navigationlist-item-label {
         color: #fff; }
     #peopleTabs .oj-navigationlist-item.oj-selected {
-      border-color: #6A8EAE; }
+      border-color: #5a68ad; }
       #peopleTabs .oj-navigationlist-item.oj-selected a .oj-navigationlist-item-label {
         font-weight: 300;
         color: #000; }
@@ -618,15 +677,15 @@ html:not([dir="rtl"]) .oj-dialog-title {
       outline-color: transparent; }
     #profileTabs .oj-navigationlist-item.oj-hover:not(.oj-selected) {
       background-color: #fff;
-      border-color: #6A8EAE; }
+      border-color: #5a68ad; }
       #profileTabs .oj-navigationlist-item.oj-hover:not(.oj-selected) .oj-navigationlist-item-label {
-        color: #507AA0; }
+        color: #172777; }
     #profileTabs .oj-navigationlist-item.oj-default {
-      background-color: #6A8EAE; }
+      background-color: #5a68ad; }
       #profileTabs .oj-navigationlist-item.oj-default .oj-navigationlist-item-label {
         color: #fff; }
     #profileTabs .oj-navigationlist-item.oj-selected {
-      border-color: #6A8EAE; }
+      border-color: #5a68ad; }
       #profileTabs .oj-navigationlist-item.oj-selected a .oj-navigationlist-item-label {
         font-weight: 300;
         color: #000; }
@@ -664,7 +723,10 @@ html:not([dir="rtl"]) .oj-dialog-title {
     #appDrawer .oj-navigationlist-element .oj-hover {
       background-color: #454545; }
       #appDrawer .oj-navigationlist-element .oj-hover .oj-navigationlist-item-label {
-        color: #fff; } }
+        color: #fff; }
+
+  .inputFieldWrap {
+    width: 60em; } }
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   #homeNavList {
     background-color: #346fd4;
@@ -745,26 +807,26 @@ html:not([dir="rtl"]) .oj-dialog-title {
       background-color: #454545; }
 
   #peopleNavList {
-    background-color: #507AA0;
+    background-color: #172777;
     height: 40px; }
 
   #peopleTabs {
-    border-top: 1px solid #65AD73; }
+    border-top: 1px solid #1F348F; }
     #peopleTabs .oj-navigationlist-item:not(.oj-disabled).oj-default {
-      background-color: #507AA0; }
+      background-color: #172777; }
     #peopleTabs .oj-navigationlist-item:not(.oj-disabled).oj-selected {
       background-color: #454545; }
     #peopleTabs .oj-navigationlist-item:not(.oj-disabled).oj-hover {
       background-color: #454545; }
 
   #profileNavList {
-    background-color: #507AA0;
+    background-color: #172777;
     height: 40px; }
 
   #profileTabs {
-    border-top: 1px solid #65AD73; }
+    border-top: 1px solid #1F348F; }
     #profileTabs .oj-navigationlist-item:not(.oj-disabled).oj-default {
-      background-color: #507AA0; }
+      background-color: #172777; }
     #profileTabs .oj-navigationlist-item:not(.oj-disabled).oj-selected {
       background-color: #454545; }
     #profileTabs .oj-navigationlist-item:not(.oj-disabled).oj-hover {
@@ -785,6 +847,7 @@ html:not([dir="rtl"]) .oj-dialog-title {
   margin: 5px 0;
   height: 40px;
   width: 100%;
+  min-width: 100px !important;
   font-family: Helvetica Neue, helvetica, arial, sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -874,7 +937,7 @@ html:not([dir="rtl"]) .oj-dialog-title {
     width: 50%;
     display: block; }
   #loginPage a.btn_primary {
-    max-width: 300px; }
+    max-width: 150px; }
   #loginPage .textlg {
     font-size: 20px;
     color: #fff;
@@ -920,8 +983,8 @@ html:not([dir="rtl"]) .oj-dialog-title {
   #loginPage .topbackground {
     border-bottom: 0;
     background-color: transparent;
-    height: 136px;
-    margin-top: 163px; }
+    height: auto;
+    margin-top: 90px; }
   #loginPage .circle_1 {
     position: relative;
     z-index: 2;
