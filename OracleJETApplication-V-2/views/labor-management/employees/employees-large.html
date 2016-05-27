@@ -1,4 +1,4 @@
-<!--Linked to people.js through modules and template bindings-->
+
 
 
 <style>
@@ -235,7 +235,7 @@
                     <div class="oj-offcanvas-outer-wrapper">
                         <div class="oj-offcanvas-inner-wrapper">
 
-                            <div class="oj-flex">
+                            <div class="oj-flex" >
                                 <div class="oj-lg-1 oj-md-1 oj-flex-item">
                                     <span class="inActiveStatusCheck" data-bind="visible: status == 'Inactive-Terminated'"></span>
                                     <span class="activeStatusCheck" data-bind="visible: status == 'Active'"></span>
@@ -244,7 +244,7 @@
                                 </div>
 
                                 <div class="oj-lg-3 oj-md-3 oj-flex-item">
-                                    <a href="#" data-bind="click: $parent.empLaborScheduleOpen, text: firstName + ' ' + lastName"></a>
+                                    <a href="#" data-bind="click: $parents[1].empBasicViewOpen, text: firstName + ' ' + lastName"></a>
 <!--                                    <div class="headerFirstLastName" data-bind=""></div>-->
                                 </div>
                                 <div class="oj-lg-3 oj-md-3 oj-flex-item">
@@ -255,7 +255,7 @@
                                     <div class="homeStoreListView" data-bind="text: homeStore"></div>
                                 </div>
                                 <div class="oj-lg-1 oj-md-1 oj-flex-item">
-                                    <div class="hireDateListview" data-bind="text: hireDate"></div>
+                                    <div class="hireDateListview" data-bind="text: $parents[1].getBasicFormattedDate(hireDate)"></div>
                                 </div>
                                 <div class="oj-lg-2 oj-md-2 oj-flex-item">
                                     <div class="employeeStatusListView" data-bind="style:{color: status == 'Inactive-Terminated' ? '#e80023' : '#81bb5f'}"> <span data-bind="text: status"></span></div>
@@ -270,5 +270,4 @@
 
         </div>
     </div>
-    
     <div data-bind="template: {name: 'labor-management/dialogwindow/employee-basicinfo-modal-large'}"></div>

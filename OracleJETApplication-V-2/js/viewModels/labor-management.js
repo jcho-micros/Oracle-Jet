@@ -89,10 +89,11 @@ define([
         self.jobSearch = ko.observable('');
         self.payrollIdSearch = ko.observable('');
           
+        
           
        self.getItemInitialDisplayDialog = function(index){return index < 3 ? '' : 'none';};
         //Employee Basic Info Dialog
-        self.empBasicInfoOpen =  function(emp) {
+       self.empBasicViewOpen =  function(emp) {
             self.basicEmpInfo(emp);
             return new Promise(function(resolve, reject) {
                         data.fetchData("js/data/employee" + emp.empId + ".json").then(function (person) {
@@ -155,7 +156,7 @@ define([
             
         };
 
-        self.empBasicInfoClose =  function() {
+        self.empBasicViewClose =  function() {
             $("#empLaborBasicDialogWindow").ojDialog("close");
         };
 
@@ -163,6 +164,7 @@ define([
         //self.ready = ko.observable(false);
         data.fetchData('js/data/employees.json').then(function (people) {
             self.allPeople(people.employees);
+            
         }).fail(function (error) {
             console.log('Error in getting People data: ' + error.message);
         });
@@ -178,7 +180,80 @@ define([
         //Workaround to load dialog box when coming from another page
         self.autoDialog("&trueAddEmp", "#addEmpStatusDialog");
         //Search Feature
-
+        
+        self.empBasicViewOpen =  function(emp) {
+            self.basicEmpInfo(emp);
+            return new Promise(function(resolve, reject) {
+                        data.fetchData("js/data/employee" + emp.empId + ".json").then(function (person) {
+                            self.personProfile(person);  
+                            
+                            self.currentScheduledDates(self.personProfile().currentScheduledDates);
+                            self.formttedCurrentScheduledDateValues(self.personProfile().formattedCurrentScheduledDates);
+                            
+                            self.currentScheduledDateValues(ko.dependentObservable(function() {
+                               
+                                return ko.utils.arrayGetDistinctValues(
+                                        ko.utils.arrayMap(self.currentScheduledDates(), 
+                                function(item){ 
+                                    var dateValue = new Date(item.currentDayStart);
+                                        return dateValue.getDate() + ' ' +monthNames[dateValue.getMonth()] + ' ' +weekday[dateValue.getDay()];
+                                    })).sort();
+                            }));
+                            
+                            
+                            
+                            self.currentScheduledDateValues(ko.dependentObservable(function() {
+                               
+                                return ko.utils.arrayGetDistinctValues(
+                                        ko.utils.arrayMap(self.currentScheduledDates(), 
+                                function(item){ 
+                                    var dateValue = new Date(item.currentDayStart);
+                                        return dateValue.getDate() + ' ' +monthNames[dateValue.getMonth()] + ' ' +weekday[dateValue.getDay()];
+                                    })).sort();
+                            }));
+                            self.daysandtimes(self.personProfile().daysandtimes);
+                            self.unavailableDaysAndTimes(ko.dependentObservable(function() {
+                                return ko.utils.arrayFilter(self.daysandtimes(), function(item) {
+                                    if(item.timesegment === 'unavailable'){
+                                        return item;
+                                    }
+                                });
+                            }));
+                            self.preferredDaysAndTimes(ko.dependentObservable(function() {
+                                return ko.utils.arrayFilter(self.daysandtimes(), function(item) {
+                                    if(item.timesegment === 'preferred'){
+                                        return item;
+                                    }
+                                });
+                            }));
+                            self.currentScheduledJobNames(ko.dependentObservable(function() {
+                               
+                                return ko.utils.arrayGetDistinctValues(
+                                        ko.utils.arrayMap(self.currentScheduledDates(), 
+                                function(item){ 
+                                    if(item.jobName !== 'Not Assigned') 
+                                        return item.jobName;})).sort();
+                            }));
+                            $("#empLaborBasicDialogWindow").ojDialog("open");
+                            resolve(true);
+                        }).fail(function (error) {
+                            console.log('Error: ' + error.message);
+                            resolve(false);
+                        });
+                    });
+            
+        };
+        
+        self.getPhoto = function (empId) {
+            var src;
+            if (empId < 188) {
+                src = 'css/images/people/' + empId + '.png';
+            } else {
+                src = 'css/images/people/nopic.png';
+            }
+            return src;
+        };
+        
         //Reset search
         //Resets only the 'First Name' field in the form
         self.resetData = function(){
@@ -217,10 +292,13 @@ define([
         self.filteredAllPeople = ko.computed(
             function(){
                  var peopleFilter = new Array();
+                
                  if (self.allPeople().length !== 0) {
                      if(self.visibleAdvanceSearch() === false){//Simple search functionality
+                         //console.log("params.location = "+self.activelocation());
                          if (self.firstNameSearch().length === 0) {
                             peopleFilter = self.allPeople();
+                            
                          } else {
                             ko.utils.arrayFilter(self.allPeople(),
                              function (r) {
@@ -408,15 +486,7 @@ define([
         };
         
         
-        self.getPhoto = function (empId) {
-            var src;
-            if (empId < 188) {
-                src = 'css/images/people/' + empId + '.png';
-            } else {
-                src = 'css/images/people/nopic.png';
-            }
-            return src;
-        };
+        
             
     }
 

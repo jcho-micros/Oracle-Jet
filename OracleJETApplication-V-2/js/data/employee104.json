@@ -117,7 +117,7 @@
               "unavialbaletime" : "4:30 PM - 7:00PM",
               "locations" : [
                   {
-                      "name" : "Washington DC",
+                      "name" : "Washington D.C.",
                       "address" : "123 Main street, City St",
                       "workDetails" : [ 
                           {
@@ -196,7 +196,7 @@
               "unavialbaletime" : "ALL DAY",
               "locations" : [
                   {
-                      "name" : "Washington DC",
+                      "name" : "Washington D.C.",
                       "address" : "123 Main street, City St",
                       "workDetails" : [ 
                           {
@@ -237,7 +237,7 @@
               "unavialbaletime" : "ALL DAY",
               "locations" : [
                   {
-                      "name" : "Washington DC",
+                      "name" : "Washington D.C.",
                       "address" : "123 Main street, City St",
                       "workDetails" : [ 
                           {
@@ -288,7 +288,7 @@
               
               "locations" : [
                   {
-                      "name" : "Washington DC",
+                      "name" : "Washington D.C.",
                       "address" : "123 Main street, City St",
                       "workDetails" : [ 
                           {
@@ -338,7 +338,7 @@
               "unavialbaletime" : "ALL DAY",
               "locations" : [
                   {
-                      "name" : "Washington DC",
+                      "name" : "Washington D.C.",
                       "address" : "123 Main street, City St",
                       "workDetails" : [ 
                           {
@@ -388,7 +388,7 @@
               "unavialbaletime" : "ALL DAY",
               "locations" : [
                   {
-                      "name" : "Washington DC",
+                      "name" : "Washington D.C.",
                       "address" : "123 Main street, City St",
                       "workDetails" : [ 
                           {

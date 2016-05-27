@@ -127,10 +127,34 @@ require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', '
                         console.log("active location = "+data.name);
                          self.activeLocation(data.name);
                          self.activeLocationId(data.locID);
+                        
                     }
             };
-
+            
+            
+                        
             self.router = router;
+            
+//            self.mergeConfig=function (original) {
+//
+//                    return $.extend(true, {}, original, {
+//                        'params': {'location': self.activeLocation()}
+//                    });
+//
+//
+//                };
+
+
+//            self.moduleLoader=ko.pureComputed(function(){
+//
+//                    if (self.router.stateId()==='labor-management') {
+//
+//                                    //currentModule = MasterviewModel.action.moduleConfig;
+//                                    return self.mergeConfig(self.router.moduleConfig);
+//                                }else{
+//                                    self.router.moduleConfig;
+//                                }
+//            });
 
             var smQuery = oj.ResponsiveUtils.getFrameworkQuery(oj.ResponsiveUtils.FRAMEWORK_QUERY_KEY.SM_ONLY);
             self.smScreen = oj.ResponsiveKnockoutUtils.createMediaQueryObservable(smQuery);

@@ -30,7 +30,7 @@
             <div class="oj-flex" style="background-color: #ffffff; height: auto; width: 95%;">
                                 <div class="oj-lg-1 oj-md-1 oj-flex-item" 
                                      style="padding: 2px; width: 50px; height: 50px;">
-                                    <img />
+                                    <img data-bind="attr: {src: $parent.getPhoto($parent.basicEmpInfo().empId)}"/>
                                 </div>
 
                                 <div class="oj-lg-2 oj-md-2 oj-flex-item" style="padding: 2px; ">
@@ -139,9 +139,9 @@
                                    
                      </div>
           </div>-->
-<!--                       <div class="oj-flex">
+                       <div class="oj-flex">
           
-                   ko foreach: $parent.formttedCurrentScheduledDateValues 
+<!--                   ko foreach: $parent.formttedCurrentScheduledDateValues -->
                   
                   <div class="oj-flex-item">
                     <div>
@@ -153,11 +153,12 @@
                         </div>
                             <div data-bind="foreach: locations" 
                                  style="border: 1px solid #000000; padding: 5px; border-color: black">
+                                <div data-bind="visible: (name.toLowerCase() === $root.activeLocation().toString().toLowerCase())">
                                 <div style="border: 1px solid #000000; background-color: white; color: black;  text-align: center;">
                                 <span data-bind="text: name"> </span>
                                 <br /><span data-bind="text: address"> </span>
                                 </div>
-                                    <div data-bind="foreach: workDetails;">
+                                    <div data-bind="foreach: workDetails; ">
                                         <div data-bind=" style: { 'background-color': backgroundcolor}">
                                         <span data-bind="text: jobtitle"> </span>
                                         <br /><span data-bind="text: (jobtitle === 'Not Scheduled' ? '' : workStation)"> </span>
@@ -166,6 +167,7 @@
                                         </div>
                                     </div>
                                 <br />
+                                </div>
                             </div>
                         <div data-bind="visible: (preferred === 'yes')" style="background-color: #fcfdfe; color: black; border: 1px solid #000000;  text-align: center;">
                             <span>PREFERRED</span>  
@@ -177,9 +179,9 @@
                         </div>
                     </div> 
                     </div>
-                 /ko 
+<!--                 /ko -->
               
-          </div>-->
+          </div>
         
       </div>
       

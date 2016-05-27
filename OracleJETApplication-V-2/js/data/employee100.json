@@ -119,7 +119,7 @@
               "unavialbaletime" : "4:30 PM - 7:00PM",
               "locations" : [
                   {
-                      "name" : "Washington DC",
+                      "name" : "Washington D.C.",
                       "address" : "123 Main street, City St",
                       "workDetails" : [ 
                           {
@@ -198,7 +198,7 @@
               "unavialbaletime" : "ALL DAY",
               "locations" : [
                   {
-                      "name" : "Washington DC",
+                      "name" : "Washington D.C.",
                       "address" : "123 Main street, City St",
                       "workDetails" : [ 
                           {
@@ -239,7 +239,7 @@
               "unavialbaletime" : "ALL DAY",
               "locations" : [
                   {
-                      "name" : "Washington DC",
+                      "name" : "Washington D.C.",
                       "address" : "123 Main street, City St",
                       "workDetails" : [ 
                           {
@@ -290,7 +290,7 @@
               
               "locations" : [
                   {
-                      "name" : "Washington DC",
+                      "name" : "Washington D.C.",
                       "address" : "123 Main street, City St",
                       "workDetails" : [ 
                           {
@@ -340,7 +340,7 @@
               "unavialbaletime" : "ALL DAY",
               "locations" : [
                   {
-                      "name" : "Washington DC",
+                      "name" : "Washington D.C.",
                       "address" : "123 Main street, City St",
                       "workDetails" : [ 
                           {
@@ -390,7 +390,7 @@
               "unavialbaletime" : "ALL DAY",
               "locations" : [
                   {
-                      "name" : "Washington DC",
+                      "name" : "Washington D.C.",
                       "address" : "123 Main street, City St",
                       "workDetails" : [ 
                           {
@@ -424,7 +424,7 @@
       "currentScheduledDates" : [ {
          "id" : 1,
          "status" : "Schdeuled",
-         "locationName" : "Washington DC",
+         "locationName" : "Washington D.C.",
          "jobRateHourly" : "7.00",
          "station" : "Front Bar",
          "revenueCenter" : "In-Dining",
@@ -472,7 +472,7 @@
       },{
          "id" : 3,
          "status" : "Not Schdeuled",
-         "locationName" : "Washington DC",
+         "locationName" : "Washington D.C.",
          "jobRateHourly" : "7.00",
          "station" : "Not Assigned",
          "revenueCenter" : "In-Dining",
@@ -520,7 +520,7 @@
       },{
          "id" : 5,
          "status" : "Not Schdeuled",
-         "locationName" : "Washington DC",
+         "locationName" : "Washington D.C.",
          "jobRateHourly" : "7.00",
          "station" : "Not Assigned",
          "revenueCenter" : "In-Dining",
@@ -568,7 +568,7 @@
       },{
          "id" : 7,
          "status" : "Schdeuled",
-         "locationName" : "Washington DC",
+         "locationName" : "Washington D.C.",
          "jobRateHourly" : "7.00",
          "station" : "Front Bar",
          "revenueCenter" : "In-Dining",
@@ -616,7 +616,7 @@
       },{
          "id" : 9,
          "status" : "Schdeuled",
-         "locationName" : "Washington DC",
+         "locationName" : "Washington D.C.",
          "jobRateHourly" : "7.00",
          "station" : "Front Bar",
          "revenueCenter" : "In-Dining",
@@ -664,7 +664,7 @@
       },{
          "id" : 11,
          "status" : "Schdeuled",
-         "locationName" : "Washington DC",
+         "locationName" : "Washington D.C.",
          "jobRateHourly" : "7.00",
          "station" : "Front Bar",
          "revenueCenter" : "In-Dining",
@@ -712,7 +712,7 @@
       },{
          "id" : 13,
          "status" : "Not Schdeuled",
-         "locationName" : "Washington DC",
+         "locationName" : "Washington D.C.",
          "jobRateHourly" : "7.00",
          "station" : "Not Assigned",
          "revenueCenter" : "In-Dining",
