@@ -41,6 +41,13 @@ h1.pageTitle {
 .oj-navigationlist-item {
   border-width: 0 !important; }
 
+.oj-panel {
+  border-color: transparent; }
+
+.oj-panel-alt2 {
+  background-color: transparent;
+  border-color: transparent; }
+
 /*Font Awesome Overwrites*/
 .arrowLocation.fa-location-arrow {
   font-size: 14px; }
@@ -504,6 +511,15 @@ html:not([dir="rtl"]) .oj-dialog-title {
         margin-right: 5px; }
 #empBasicDialogWindow .oj-flex-item:not(:last-child) {
   margin: 0 20px 10px 0; }
+#empBasicDialogWindow #filmStripDiv {
+  background-color: #F5F5F5; }
+  #empBasicDialogWindow #filmStripDiv .dayHeader {
+    background-color: #F5F5F5; }
+  #empBasicDialogWindow #filmStripDiv .dayBody {
+    border: 1px solid #000;
+    padding: 5px; }
+  #empBasicDialogWindow #filmStripDiv .oj-flex-item {
+    margin: 0; }
 #empBasicDialogWindow .oj-flex-item.currentWeekHeaderArea {
   margin: 0;
   background-color: #F5F5F5; }
@@ -512,8 +528,13 @@ html:not([dir="rtl"]) .oj-dialog-title {
 #empBasicDialogWindow .oj-flex-item.currentWeekHeader {
   margin: 0; }
 #empBasicDialogWindow .currentWeekHeader {
-  padding: 10px;
-  color: #fff; }
+  padding: 10px; }
+#empBasicDialogWindow .weeklyTotalHeader {
+  border-top: 3px solid #04b404; }
+#empBasicDialogWindow .job1TotalHeader {
+  border-top: 3px solid #fe9a2e; }
+#empBasicDialogWindow .job2TotalHeader {
+  border-top: 3px solid #2e2efe; }
 
 @media only screen and (min-width: 768px) {
   .searchFieldWrap {

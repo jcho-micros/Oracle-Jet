@@ -26,6 +26,10 @@ $brightBlue: #00a8ff;
 $brightGreen: #22a451;
 $brightRed: #ff0000;
 
+$medGreen3: #04b404;
+$medOrange3: #fe9a2e;
+$medBlue3: #2e2efe;
+
 //New Colors
 $darkGray: #37424C;
 $medGray1: #6E8598;
@@ -169,7 +173,14 @@ $dialogAccentText: $white;
 $dialogIconColor: $oliveGreen;
 $alertMsgBckColor: $lightGray2;
 
+//Employee Styles
 $currentWeekHeaderArea: $lightGray2;
+$weeklyTotalHeader: $medGreen3;
+$job1TotalHeader: $medOrange3;
+$job2TotalHeader: $medBlue3;
+$mobileScheduleBckgColor: $lightGray2;
+$dayHeaderBckgColor: $lightGray2;
+$dayBodyBorderColor: $black;
 
 //Off Canvas Variables
 $topOffCanvasBckg: $darkGrayOld;
@@ -332,8 +343,13 @@ h1.pageTitle{
 .oj-navigationlist-item {
     border-width:0 !important;
 }
-
-
+.oj-panel{
+    border-color:transparent;
+}
+.oj-panel-alt2{
+    background-color:transparent;
+    border-color: transparent;
+}
 /*Font Awesome Overwrites*/
 .arrowLocation.fa-location-arrow{
     font-size:14px;
@@ -796,6 +812,19 @@ html:not([dir="rtl"]) .oj-dialog-title{
     .oj-flex-item:not(:last-child){
         margin:0 20px 10px 0;
     }
+    #filmStripDiv{
+        background-color: $mobileScheduleBckgColor;
+        .dayHeader{
+            background-color: $dayHeaderBckgColor;
+        }
+        .dayBody{
+            border:1px solid $dayBodyBorderColor;
+            padding:5px;
+        }
+        .oj-flex-item{
+            margin:0;
+        }
+    }
     .oj-flex-item{
         &.currentWeekHeaderArea{
             margin:0;
@@ -810,7 +839,15 @@ html:not([dir="rtl"]) .oj-dialog-title{
     }
     .currentWeekHeader{
         padding:10px;
-        color: $white;
+    }
+    .weeklyTotalHeader{
+        border-top:3px solid $weeklyTotalHeader;
+    }
+    .job1TotalHeader{
+        border-top:3px solid $job1TotalHeader;
+    }
+    .job2TotalHeader{
+        border-top:3px solid $job2TotalHeader;
     }
 }
 //.searchWindow{
