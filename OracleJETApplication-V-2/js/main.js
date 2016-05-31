@@ -135,14 +135,14 @@ require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', '
                         
             self.router = router;
             
-//            self.mergeConfig=function (original) {
-//
-//                    return $.extend(true, {}, original, {
-//                        'params': {'location': self.activeLocation()}
-//                    });
-//
-//
-//                };
+            self.mergeConfig=function (original) {
+
+                    return $.extend(true, {}, original, {
+                        'params': {'location': self.activeLocation()}
+                    });
+
+
+                };
 
 
 //            self.moduleLoader=ko.pureComputed(function(){

@@ -25,13 +25,14 @@ define([
     'ojs/ojradioset',
     'ojs/ojmenu'
 ], function (oj, ko, data) {
+    var locationSpecific;
     
-    
-    function laborContentViewModel() {
+    function laborContentViewModel(params) {
         var self = this;
         //Child Router
         this.router = undefined;
-        
+        locationSpecific='Baltimore';//params.location;
+        self.locationName=ko.observable(locationSpecific);
         self.sectionsState = ko.observable(false);
         self.personSchedules = ko.observableArray([]);
         self.jobSchedules = ko.observableArray([]);
@@ -163,11 +164,17 @@ define([
 
         //self.ready = ko.observable(false);
         data.fetchData('js/data/employees.json').then(function (people) {
-            self.allPeople(people.employees);
-            
+            self.allPeople(ko.utils.arrayFilter(people.employees,function(item){
+                 if(item.homeStore === self.locationName()){
+                       return item;
+                  }
+            }));   
         }).fail(function (error) {
             console.log('Error in getting People data: ' + error.message);
         });
+        
+        
+        
         //General function to  auto popup modal based on URL param string and dialog ID
         self.autoDialog = function(param, dialogId){
             if(document.URL.indexOf(param) > -1){
@@ -268,13 +275,15 @@ define([
             self.awayStoreSearch('');
             self.jobSearch('');
             self.payrollIdSearch('');
-            self.filteredAllPeopleAdvance();
+            
         };
         
         self.hideSimpleSearch = function(){
            self.visibleAdvanceSearch(true);
            self.listViewDataSource();
         };
+        
+        
         
         self.advanceSearch=function(){
             self.listViewDataSource();
@@ -295,7 +304,7 @@ define([
                 
                  if (self.allPeople().length !== 0) {
                      if(self.visibleAdvanceSearch() === false){//Simple search functionality
-                         //console.log("params.location = "+self.activelocation());
+                         
                          if (self.firstNameSearch().length === 0) {
                             peopleFilter = self.allPeople();
                             
@@ -362,11 +371,14 @@ define([
              }
             );
     
+       
         self.listViewDataSource = ko.computed(function () {
-            return new oj.PagingTableDataSource(
-                    new oj.ArrayTableDataSource(self.filteredAllPeople(),
+           return new oj.PagingTableDataSource(new oj.ArrayTableDataSource(self.filteredAllPeople(),
                     {idAttribute: 'empId'}));
+           
         });
+        
+        
         
 
         self.loadPersonPage = function () {
@@ -407,6 +419,7 @@ define([
                             self.reviewsandapprovals(schedulecontent.reviewsandapprovals);
                             self.managerlogs(schedulecontent.managerlogs);
                             self.currentlyclockedin(schedulecontent.currentlyclockedin);
+                            self.listViewDataSource();
                         }).fail(function (error) {
                             console.log('Error: ' + error.message);
                         });
@@ -416,6 +429,7 @@ define([
 
             var parentRouter = oj.Router.rootInstance;
             //Child of Location
+            
             self.router = parentRouter.createChildRouter('labortab').configure({
                 'overview': {label: 'Overview', value: 'overview', isDefault: true},
                 'employees': {label: 'Employees', value: 'employees'},
