@@ -22,6 +22,9 @@ body {
 a {
   cursor: pointer; }
 
+.txtHighlight {
+  color: #00a8ff; }
+
 h1, h2 {
   font-family: 'Helvetica Neue Light';
   font-weight: normal;
@@ -145,83 +148,83 @@ html:not([dir="rtl"]) .oj-dialog-title {
 
 /*Dialog window*/
 #ojDialogWrapper-homeDialogWindow .oj-dialog-header {
-  background-color: #346fd4; }
+  background-color: #004587; }
   #ojDialogWrapper-homeDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper {
-    background-color: #045fab; }
+    background-color: #0572CE; }
     #ojDialogWrapper-homeDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper.oj-hover .oj-dialog-close-icon {
-      color: #045fab; }
+      color: #0572CE; }
 #ojDialogWrapper-homeDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-default, #ojDialogWrapper-homeDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-hover, #ojDialogWrapper-homeDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-focus-only {
-  background-color: #346fd4; }
+  background-color: #004587; }
 
 #ojDialogWrapper-laborDialogWindow .oj-dialog-header {
-  background-color: #EA5801; }
+  background-color: #8b3300; }
   #ojDialogWrapper-laborDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper {
-    background-color: #C74B01; }
+    background-color: #be4800; }
     #ojDialogWrapper-laborDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper.oj-hover .oj-dialog-close-icon {
-      color: #C74B01; }
+      color: #be4800; }
 #ojDialogWrapper-laborDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-default, #ojDialogWrapper-laborDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-hover, #ojDialogWrapper-laborDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-focus-only {
-  background-color: #EA5801; }
+  background-color: #8b3300; }
 
 #ojDialogWrapper-inventoryDialogWindow .oj-dialog-header {
-  background-color: #3E9850; }
+  background-color: #79006C; }
   #ojDialogWrapper-inventoryDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper {
-    background-color: #358144; }
+    background-color: #A90083; }
     #ojDialogWrapper-inventoryDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper.oj-hover .oj-dialog-close-icon {
-      color: #358144; }
+      color: #A90083; }
 #ojDialogWrapper-inventoryDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-default, #ojDialogWrapper-inventoryDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-hover, #ojDialogWrapper-inventoryDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-focus-only {
-  background-color: #3E9850; }
+  background-color: #79006C; }
 
 #ojDialogWrapper-gift-loyaltyDialogWindow .oj-dialog-header {
-  background-color: #4C1889; }
+  background-color: #410b6e; }
   #ojDialogWrapper-gift-loyaltyDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper {
-    background-color: #411475; }
+    background-color: #754b9a; }
     #ojDialogWrapper-gift-loyaltyDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper.oj-hover .oj-dialog-close-icon {
-      color: #411475; }
+      color: #754b9a; }
 #ojDialogWrapper-gift-loyaltyDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-default, #ojDialogWrapper-gift-loyaltyDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-hover, #ojDialogWrapper-gift-loyaltyDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-focus-only {
-  background-color: #4C1889; }
+  background-color: #410b6e; }
 
 #ojDialogWrapper-reports-analyticsDialogWindow .oj-dialog-header {
-  background-color: #596D86; }
+  background-color: #005C3A; }
   #ojDialogWrapper-reports-analyticsDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper {
-    background-color: #4C5D72; }
+    background-color: #1A8841; }
     #ojDialogWrapper-reports-analyticsDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper.oj-hover .oj-dialog-close-icon {
-      color: #4C5D72; }
+      color: #1A8841; }
 #ojDialogWrapper-reports-analyticsDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-default, #ojDialogWrapper-reports-analyticsDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-hover, #ojDialogWrapper-reports-analyticsDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-focus-only {
-  background-color: #596D86; }
+  background-color: #005C3A; }
 
 #ojDialogWrapper-enterpriseDialogWindow .oj-dialog-header {
-  background-color: #2D3142; }
+  background-color: #88000d; }
   #ojDialogWrapper-enterpriseDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper {
-    background-color: #262A38; }
+    background-color: #e4001e; }
     #ojDialogWrapper-enterpriseDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper.oj-hover .oj-dialog-close-icon {
-      color: #262A38; }
+      color: #e4001e; }
 #ojDialogWrapper-enterpriseDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-default, #ojDialogWrapper-enterpriseDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-hover, #ojDialogWrapper-enterpriseDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-focus-only {
-  background-color: #2D3142; }
+  background-color: #88000d; }
 
 #ojDialogWrapper-peopleDialogWindow .oj-dialog-header {
   background-color: #172777; }
   #ojDialogWrapper-peopleDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper {
-    background-color: #446888; }
+    background-color: #5a68ad; }
     #ojDialogWrapper-peopleDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper.oj-hover .oj-dialog-close-icon {
-      color: #446888; }
+      color: #5a68ad; }
 #ojDialogWrapper-peopleDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-default, #ojDialogWrapper-peopleDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-hover, #ojDialogWrapper-peopleDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-focus-only {
   background-color: #172777; }
 
 #ojDialogWrapper-empBasicDialogWindow .oj-dialog-header {
   background-color: #172777; }
   #ojDialogWrapper-empBasicDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper {
-    background-color: #446888; }
+    background-color: #5a68ad; }
     #ojDialogWrapper-empBasicDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper.oj-hover .oj-dialog-close-icon {
-      color: #446888; }
+      color: #5a68ad; }
 #ojDialogWrapper-empBasicDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-default, #ojDialogWrapper-empBasicDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-hover, #ojDialogWrapper-empBasicDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-focus-only {
   background-color: #172777; }
 
 #ojDialogWrapper-profileDialogWindow .oj-dialog-header {
   background-color: #172777; }
   #ojDialogWrapper-profileDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper {
-    background-color: #446888; }
+    background-color: #5a68ad; }
     #ojDialogWrapper-profileDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper.oj-hover .oj-dialog-close-icon {
-      color: #446888; }
+      color: #5a68ad; }
 #ojDialogWrapper-profileDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-default, #ojDialogWrapper-profileDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-hover, #ojDialogWrapper-profileDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-focus-only {
   background-color: #172777; }
 
@@ -297,22 +300,22 @@ html:not([dir="rtl"]) .oj-dialog-title {
   display: none; }
 
 .homeTitleWrap {
-  background-color: #346fd4; }
+  background-color: #004587; }
 
 .labor-managementTitleWrap {
-  background-color: #EA5801; }
+  background-color: #8b3300; }
 
 .inventory-managementTitleWrap {
-  background-color: #3E9850; }
+  background-color: #79006C; }
 
 .gift-loyaltyTitleWrap {
-  background-color: #4C1889; }
+  background-color: #410b6e; }
 
 .reports-analyticsTitleWrap {
-  background-color: #596D86; }
+  background-color: #005C3A; }
 
 .enterpriseTitleWrap {
-  background-color: #2D3142; }
+  background-color: #88000d; }
 
 .peopleTitleWrap {
   background-color: #172777; }
@@ -332,37 +335,37 @@ html:not([dir="rtl"]) .oj-dialog-title {
   #appHeaderDesktopNav .oj-navigationlist-item.oj-focus#home a .topNavImgIcon, #appHeaderDesktopNav .oj-navigationlist-item.oj-default#home a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-focus#home a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-default#home a .topNavImgIcon {
     background-image: url("images/icon/home-default.png"); }
   #appHeaderDesktopNav .oj-navigationlist-item.oj-selected#home, #appHeaderDesktopNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#home, #appHeaderMobileNav .oj-navigationlist-item.oj-selected#home, #appHeaderMobileNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#home {
-    background-color: #346fd4; }
+    background-color: #004587; }
     #appHeaderDesktopNav .oj-navigationlist-item.oj-selected#home a .topNavImgIcon, #appHeaderDesktopNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#home a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-selected#home a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#home a .topNavImgIcon {
       background-image: url("images/icon/home-hover.png"); }
   #appHeaderDesktopNav .oj-navigationlist-item.oj-focus#labor-management a .topNavImgIcon, #appHeaderDesktopNav .oj-navigationlist-item.oj-default#labor-management a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-focus#labor-management a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-default#labor-management a .topNavImgIcon {
     background-image: url("images/icon/labor-default.png"); }
   #appHeaderDesktopNav .oj-navigationlist-item.oj-selected#labor-management, #appHeaderDesktopNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#labor-management, #appHeaderMobileNav .oj-navigationlist-item.oj-selected#labor-management, #appHeaderMobileNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#labor-management {
-    background-color: #EA5801; }
+    background-color: #8b3300; }
     #appHeaderDesktopNav .oj-navigationlist-item.oj-selected#labor-management a .topNavImgIcon, #appHeaderDesktopNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#labor-management a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-selected#labor-management a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#labor-management a .topNavImgIcon {
       background-image: url("images/icon/labor-hover.png"); }
   #appHeaderDesktopNav .oj-navigationlist-item.oj-focus#inventory-management a .topNavImgIcon, #appHeaderDesktopNav .oj-navigationlist-item.oj-default#inventory-management a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-focus#inventory-management a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-default#inventory-management a .topNavImgIcon {
     background-image: url("images/icon/inventory-default.png"); }
   #appHeaderDesktopNav .oj-navigationlist-item.oj-selected#inventory-management, #appHeaderDesktopNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#inventory-management, #appHeaderMobileNav .oj-navigationlist-item.oj-selected#inventory-management, #appHeaderMobileNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#inventory-management {
-    background-color: #3E9850; }
+    background-color: #79006C; }
     #appHeaderDesktopNav .oj-navigationlist-item.oj-selected#inventory-management a .topNavImgIcon, #appHeaderDesktopNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#inventory-management a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-selected#inventory-management a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#inventory-management a .topNavImgIcon {
       background-image: url("images/icon/inventory-hover.png"); }
   #appHeaderDesktopNav .oj-navigationlist-item.oj-focus#gift-loyalty a .topNavImgIcon, #appHeaderDesktopNav .oj-navigationlist-item.oj-default#gift-loyalty a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-focus#gift-loyalty a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-default#gift-loyalty a .topNavImgIcon {
     background-image: url("images/icon/gift-loyalty-default.png"); }
   #appHeaderDesktopNav .oj-navigationlist-item.oj-selected#gift-loyalty, #appHeaderDesktopNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#gift-loyalty, #appHeaderMobileNav .oj-navigationlist-item.oj-selected#gift-loyalty, #appHeaderMobileNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#gift-loyalty {
-    background-color: #4C1889; }
+    background-color: #410b6e; }
     #appHeaderDesktopNav .oj-navigationlist-item.oj-selected#gift-loyalty a .topNavImgIcon, #appHeaderDesktopNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#gift-loyalty a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-selected#gift-loyalty a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#gift-loyalty a .topNavImgIcon {
       background-image: url("images/icon/gift-loyalty-hover.png"); }
   #appHeaderDesktopNav .oj-navigationlist-item.oj-focus#reports-analytics a .topNavImgIcon, #appHeaderDesktopNav .oj-navigationlist-item.oj-default#reports-analytics a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-focus#reports-analytics a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-default#reports-analytics a .topNavImgIcon {
     background-image: url("images/icon/reporting-analytics-default.png"); }
   #appHeaderDesktopNav .oj-navigationlist-item.oj-selected#reports-analytics, #appHeaderDesktopNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#reports-analytics, #appHeaderMobileNav .oj-navigationlist-item.oj-selected#reports-analytics, #appHeaderMobileNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#reports-analytics {
-    background-color: #596D86; }
+    background-color: #005C3A; }
     #appHeaderDesktopNav .oj-navigationlist-item.oj-selected#reports-analytics a .topNavImgIcon, #appHeaderDesktopNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#reports-analytics a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-selected#reports-analytics a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#reports-analytics a .topNavImgIcon {
       background-image: url("images/icon/reporting-analytics-hover.png"); }
   #appHeaderDesktopNav .oj-navigationlist-item.oj-focus#enterprise a .topNavImgIcon, #appHeaderDesktopNav .oj-navigationlist-item.oj-default#enterprise a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-focus#enterprise a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-default#enterprise a .topNavImgIcon {
     background-image: url("images/icon/enterprise-default.png"); }
   #appHeaderDesktopNav .oj-navigationlist-item.oj-selected#enterprise, #appHeaderDesktopNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#enterprise, #appHeaderMobileNav .oj-navigationlist-item.oj-selected#enterprise, #appHeaderMobileNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#enterprise {
-    background-color: #2D3142; }
+    background-color: #88000d; }
     #appHeaderDesktopNav .oj-navigationlist-item.oj-selected#enterprise a .topNavImgIcon, #appHeaderDesktopNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#enterprise a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-selected#enterprise a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#enterprise a .topNavImgIcon {
       background-image: url("images/icon/enterprise-hover.png"); }
   #appHeaderDesktopNav .oj-navigationlist-item.oj-focus#people a .topNavImgIcon, #appHeaderDesktopNav .oj-navigationlist-item.oj-default#people a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-focus#people a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-default#people a .topNavImgIcon {
@@ -404,6 +407,10 @@ html:not([dir="rtl"]) .oj-dialog-title {
 .inputField {
   border: 1px solid #F5F5F5; }
 
+.searchResultSections {
+  width: 100%;
+  padding: 0 10px; }
+
 .searchFieldWrap {
   border: 1px solid #F5F5F5;
   overflow: hidden; }
@@ -412,11 +419,14 @@ html:not([dir="rtl"]) .oj-dialog-title {
   float: right; }
 
 .searchTitleBar {
-  height: 40px;
+  height: 20px;
   padding: 10px;
   background-color: #F5F5F5; }
   .searchTitleBar label {
     font-size: 20px; }
+
+.firstAdvSearchArea, #advancebtn {
+  padding: 10px; }
 
 .advSearchLabel {
   font-weight: bold;
@@ -450,8 +460,11 @@ html:not([dir="rtl"]) .oj-dialog-title {
 
 .empImg {
   border-radius: 50%;
-  height: 50px;
-  width: 50px; }
+  height: 75px;
+  width: 75px; }
+
+.empImgCol {
+  max-width: 95px; }
 
 .oj-listview-item.oj-hover {
   background-color: #ebeced !important; }
@@ -462,16 +475,60 @@ html:not([dir="rtl"]) .oj-dialog-title {
 .searchTitle h2 {
   color: #000; }
 
+#empBasicDialogWindow label {
+  font-weight: bold;
+  text-transform: uppercase; }
+  #empBasicDialogWindow label.subLabel {
+    text-transform: capitalize; }
+  #empBasicDialogWindow label.empStatus {
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    display: inline-block; }
+    #empBasicDialogWindow label.empStatus.clockedIn {
+      color: #22a451; }
+      #empBasicDialogWindow label.empStatus.clockedIn::before {
+        height: 10px;
+        width: 10px;
+        background-color: #22a451;
+        content: '';
+        display: inline-block;
+        margin-right: 5px; }
+    #empBasicDialogWindow label.empStatus.clockedOut {
+      color: #ff0000; }
+      #empBasicDialogWindow label.empStatus.clockedOut::before {
+        height: 10px;
+        width: 10px;
+        background-color: #ff0000;
+        content: '';
+        display: inline-block;
+        margin-right: 5px; }
+#empBasicDialogWindow .oj-flex-item:not(:last-child) {
+  margin: 0 20px 10px 0; }
+#empBasicDialogWindow .oj-flex-item.currentWeekHeaderArea {
+  margin: 0;
+  background-color: #F5F5F5; }
+  #empBasicDialogWindow .oj-flex-item.currentWeekHeaderArea .currentWeekHeader {
+    color: #000; }
+#empBasicDialogWindow .oj-flex-item.currentWeekHeader {
+  margin: 0; }
+#empBasicDialogWindow .currentWeekHeader {
+  padding: 10px;
+  color: #fff; }
+
 @media only screen and (min-width: 768px) {
   .searchFieldWrap {
     margin: 15px; }
+
+  .empImg {
+    height: 50px;
+    width: 50px; }
 
   .homeTitleWrap {
     background: url("images/header-icon-header.png");
     background-repeat: no-repeat;
     background-size: 223px 111px;
     background-position: 100% 30%;
-    background-color: #346fd4;
+    background-color: #004587;
     height: 110px; }
 
   .labor-managementTitleWrap {
@@ -479,7 +536,7 @@ html:not([dir="rtl"]) .oj-dialog-title {
     background-repeat: no-repeat;
     background-size: 223px 111px;
     background-position: 100% 30%;
-    background-color: #EA5801;
+    background-color: #8b3300;
     height: 110px; }
 
   .inventory-managementTitleWrap {
@@ -487,7 +544,7 @@ html:not([dir="rtl"]) .oj-dialog-title {
     background-repeat: no-repeat;
     background-size: 223px 111px;
     background-position: 100% 30%;
-    background-color: #3E9850;
+    background-color: #79006C;
     height: 110px; }
 
   .gift-loyaltyTitleWrap {
@@ -495,7 +552,7 @@ html:not([dir="rtl"]) .oj-dialog-title {
     background-repeat: no-repeat;
     background-size: 223px 111px;
     background-position: 100% 30%;
-    background-color: #4C1889;
+    background-color: #410b6e;
     height: 110px; }
 
   .reports-analyticsTitleWrap {
@@ -503,7 +560,7 @@ html:not([dir="rtl"]) .oj-dialog-title {
     background-repeat: no-repeat;
     background-size: 223px 111px;
     background-position: 100% 30%;
-    background-color: #596D86;
+    background-color: #005C3A;
     height: 110px; }
 
   .enterpriseTitleWrap {
@@ -511,7 +568,7 @@ html:not([dir="rtl"]) .oj-dialog-title {
     background-repeat: no-repeat;
     background-size: 223px 111px;
     background-position: 100% 30%;
-    background-color: #2D3142;
+    background-color: #88000d;
     height: 110px; }
 
   .peopleTitleWrap {
@@ -537,15 +594,15 @@ html:not([dir="rtl"]) .oj-dialog-title {
       outline-color: transparent; }
     #homeTabs .oj-navigationlist-item.oj-hover:not(.oj-selected) {
       background-color: #fff;
-      border-color: #84bbe6; }
+      border-color: #015FAB; }
       #homeTabs .oj-navigationlist-item.oj-hover:not(.oj-selected) .oj-navigationlist-item-label {
-        color: #346fd4; }
+        color: #004587; }
     #homeTabs .oj-navigationlist-item.oj-default {
-      background-color: #84bbe6; }
+      background-color: #015FAB; }
       #homeTabs .oj-navigationlist-item.oj-default .oj-navigationlist-item-label {
         color: #fff; }
     #homeTabs .oj-navigationlist-item.oj-selected {
-      border-color: #84bbe6; }
+      border-color: #015FAB; }
       #homeTabs .oj-navigationlist-item.oj-selected a .oj-navigationlist-item-label {
         font-weight: 300;
         color: #000; }
@@ -557,15 +614,15 @@ html:not([dir="rtl"]) .oj-dialog-title {
       outline-color: transparent; }
     #laborTabs .oj-navigationlist-item.oj-hover:not(.oj-selected) {
       background-color: #fff;
-      border-color: #EE7934; }
+      border-color: #AB4100; }
       #laborTabs .oj-navigationlist-item.oj-hover:not(.oj-selected) .oj-navigationlist-item-label {
-        color: #EA5801; }
+        color: #8b3300; }
     #laborTabs .oj-navigationlist-item.oj-default {
-      background-color: #EE7934; }
+      background-color: #AB4100; }
       #laborTabs .oj-navigationlist-item.oj-default .oj-navigationlist-item-label {
         color: #fff; }
     #laborTabs .oj-navigationlist-item.oj-selected {
-      border-color: #EE7934; }
+      border-color: #AB4100; }
       #laborTabs .oj-navigationlist-item.oj-selected a .oj-navigationlist-item-label {
         font-weight: 300;
         color: #000; }
@@ -577,15 +634,15 @@ html:not([dir="rtl"]) .oj-dialog-title {
       outline-color: transparent; }
     #inventoryTabs .oj-navigationlist-item.oj-hover:not(.oj-selected) {
       background-color: #fff;
-      border-color: #65AD73; }
+      border-color: #920083; }
       #inventoryTabs .oj-navigationlist-item.oj-hover:not(.oj-selected) .oj-navigationlist-item-label {
-        color: #3E9850; }
+        color: #79006C; }
     #inventoryTabs .oj-navigationlist-item.oj-default {
-      background-color: #65AD73; }
+      background-color: #920083; }
       #inventoryTabs .oj-navigationlist-item.oj-default .oj-navigationlist-item-label {
         color: #fff; }
     #inventoryTabs .oj-navigationlist-item.oj-selected {
-      border-color: #65AD73; }
+      border-color: #920083; }
       #inventoryTabs .oj-navigationlist-item.oj-selected a .oj-navigationlist-item-label {
         font-weight: 300;
         color: #000; }
@@ -597,15 +654,15 @@ html:not([dir="rtl"]) .oj-dialog-title {
       outline-color: transparent; }
     #gift-LoyaltyTabs .oj-navigationlist-item.oj-hover:not(.oj-selected) {
       background-color: #fff;
-      border-color: #7046A1; }
+      border-color: #501884; }
       #gift-LoyaltyTabs .oj-navigationlist-item.oj-hover:not(.oj-selected) .oj-navigationlist-item-label {
-        color: #4C1889; }
+        color: #410b6e; }
     #gift-LoyaltyTabs .oj-navigationlist-item.oj-default {
-      background-color: #7046A1; }
+      background-color: #501884; }
       #gift-LoyaltyTabs .oj-navigationlist-item.oj-default .oj-navigationlist-item-label {
         color: #fff; }
     #gift-LoyaltyTabs .oj-navigationlist-item.oj-selected {
-      border-color: #7046A1; }
+      border-color: #501884; }
       #gift-LoyaltyTabs .oj-navigationlist-item.oj-selected a .oj-navigationlist-item-label {
         font-weight: 300;
         color: #000; }
@@ -617,15 +674,15 @@ html:not([dir="rtl"]) .oj-dialog-title {
       outline-color: transparent; }
     #reportsAnalyticsTabs .oj-navigationlist-item.oj-hover:not(.oj-selected) {
       background-color: #fff;
-      border-color: #7A8A9E; }
+      border-color: #007B2B; }
       #reportsAnalyticsTabs .oj-navigationlist-item.oj-hover:not(.oj-selected) .oj-navigationlist-item-label {
-        color: #596D86; }
+        color: #005C3A; }
     #reportsAnalyticsTabs .oj-navigationlist-item.oj-default {
-      background-color: #7A8A9E; }
+      background-color: #007B2B; }
       #reportsAnalyticsTabs .oj-navigationlist-item.oj-default .oj-navigationlist-item-label {
         color: #fff; }
     #reportsAnalyticsTabs .oj-navigationlist-item.oj-selected {
-      border-color: #7A8A9E; }
+      border-color: #007B2B; }
       #reportsAnalyticsTabs .oj-navigationlist-item.oj-selected a .oj-navigationlist-item-label {
         font-weight: 300;
         color: #000; }
@@ -637,15 +694,15 @@ html:not([dir="rtl"]) .oj-dialog-title {
       outline-color: transparent; }
     #enterpriseTabs .oj-navigationlist-item.oj-hover:not(.oj-selected) {
       background-color: #fff;
-      border-color: #575A68; }
+      border-color: #ba0006; }
       #enterpriseTabs .oj-navigationlist-item.oj-hover:not(.oj-selected) .oj-navigationlist-item-label {
-        color: #2D3142; }
+        color: #88000d; }
     #enterpriseTabs .oj-navigationlist-item.oj-default {
-      background-color: #575A68; }
+      background-color: #ba0006; }
       #enterpriseTabs .oj-navigationlist-item.oj-default .oj-navigationlist-item-label {
         color: #fff; }
     #enterpriseTabs .oj-navigationlist-item.oj-selected {
-      border-color: #575A68; }
+      border-color: #ba0006; }
       #enterpriseTabs .oj-navigationlist-item.oj-selected a .oj-navigationlist-item-label {
         font-weight: 300;
         color: #000; }
@@ -729,78 +786,78 @@ html:not([dir="rtl"]) .oj-dialog-title {
     width: 60em; } }
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   #homeNavList {
-    background-color: #346fd4;
+    background-color: #004587;
     height: 40px; }
 
   #homeTabs {
-    border-top: 1px solid #84bbe6; }
+    border-top: 1px solid #015FAB; }
     #homeTabs .oj-navigationlist-item:not(.oj-disabled).oj-default {
-      background-color: #346fd4; }
+      background-color: #004587; }
     #homeTabs .oj-navigationlist-item:not(.oj-disabled).oj-selected {
       background-color: #454545; }
     #homeTabs .oj-navigationlist-item:not(.oj-disabled).oj-hover {
       background-color: #454545; }
 
   #laborNavList {
-    background-color: #EA5801;
+    background-color: #8b3300;
     height: 40px; }
 
   #laborTabs {
-    border-top: 1px solid #EE7934; }
+    border-top: 1px solid #AB4100; }
     #laborTabs .oj-navigationlist-item:not(.oj-disabled).oj-default {
-      background-color: #EA5801; }
+      background-color: #8b3300; }
     #laborTabs .oj-navigationlist-item:not(.oj-disabled).oj-selected {
       background-color: #454545; }
     #laborTabs .oj-navigationlist-item:not(.oj-disabled).oj-hover {
       background-color: #454545; }
 
   #inventoryNavList {
-    background-color: #3E9850;
+    background-color: #79006C;
     height: 40px; }
 
   #inventoryTabs {
-    border-top: 1px solid #65AD73; }
+    border-top: 1px solid #920083; }
     #inventoryTabs .oj-navigationlist-item:not(.oj-disabled).oj-default {
-      background-color: #3E9850; }
+      background-color: #79006C; }
     #inventoryTabs .oj-navigationlist-item:not(.oj-disabled).oj-selected {
       background-color: #454545; }
     #inventoryTabs .oj-navigationlist-item:not(.oj-disabled).oj-hover {
       background-color: #454545; }
 
   #gift-loyaltyNavList {
-    background-color: #4C1889;
+    background-color: #410b6e;
     height: 40px; }
 
   #gift-loyaltyTabs {
-    border-top: 1px solid #7046A1; }
+    border-top: 1px solid #501884; }
     #gift-loyaltyTabs .oj-navigationlist-item:not(.oj-disabled).oj-default {
-      background-color: #4C1889; }
+      background-color: #410b6e; }
     #gift-loyaltyTabs .oj-navigationlist-item:not(.oj-disabled).oj-selected {
       background-color: #454545; }
     #gift-loyaltyTabs .oj-navigationlist-item:not(.oj-disabled).oj-hover {
       background-color: #454545; }
 
   #enterpriseNavList {
-    background-color: #2D3142;
+    background-color: #88000d;
     height: 40px; }
 
   #enterpriseTabs {
-    border-top: 1px solid #575A68; }
+    border-top: 1px solid #ba0006; }
     #enterpriseTabs .oj-navigationlist-item:not(.oj-disabled).oj-default {
-      background-color: #2D3142; }
+      background-color: #88000d; }
     #enterpriseTabs .oj-navigationlist-item:not(.oj-disabled).oj-selected {
       background-color: #454545; }
     #enterpriseTabs .oj-navigationlist-item:not(.oj-disabled).oj-hover {
       background-color: #454545; }
 
   #reports-analyticsNavList {
-    background-color: #596D86;
+    background-color: #005C3A;
     height: 40px; }
 
   #reports-analyticsTabs {
-    border-top: 1px solid #7A8A9E; }
+    border-top: 1px solid #007B2B; }
     #reports-analyticsTabs .oj-navigationlist-item:not(.oj-disabled).oj-default {
-      background-color: #596D86; }
+      background-color: #005C3A; }
     #reports-analyticsTabs .oj-navigationlist-item:not(.oj-disabled).oj-selected {
       background-color: #454545; }
     #reports-analyticsTabs .oj-navigationlist-item:not(.oj-disabled).oj-hover {
@@ -1024,5 +1081,3 @@ html:not([dir="rtl"]) .oj-dialog-title {
     border-radius: 50%; }
   #loginPage .footer {
     text-align: right; } }
-
-/*# sourceMappingURL=oj-override.css.map */
