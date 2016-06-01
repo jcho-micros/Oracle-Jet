@@ -26,12 +26,9 @@
                         viewName: 'off-canvas-template-left'}">
         </div>
     </div>
-    <div class="oj-web-applayout-content">
-            <div id="content" data-bind="ojModule: $root.router.moduleConfig"></div>
-        </div>
 
     <div class="oj-web-applayout-content">
-            <div id="content" data-bind="ojModule: $root.moduleLoader"></div>
+            <div id="content" data-bind="ojModule: $root.moduleLoader()"></div>
         </div>
 
     

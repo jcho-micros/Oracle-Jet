@@ -25,14 +25,15 @@ define([
     'ojs/ojradioset',
     'ojs/ojmenu'
 ], function (oj, ko, data) {
-    var locationSpecific;
+    
     
     function laborContentViewModel(params) {
         var self = this;
         //Child Router
         this.router = undefined;
-        locationSpecific='Baltimore';//params.location;
-        self.locationName=ko.observable(locationSpecific);
+       var that = params.self;
+//        locationSpecific='Baltimore';//params.location;
+//        self.locationName=ko.observable(locationSpecific);
         self.sectionsState = ko.observable(false);
         self.personSchedules = ko.observableArray([]);
         self.jobSchedules = ko.observableArray([]);
@@ -40,6 +41,8 @@ define([
         self.managerlogs = ko.observableArray([]);
         self.reviewsandapprovals = ko.observableArray([]);
         self.currentlyclockedin = ko.observableArray([]);
+        self.jobTabContent = ko.observableArray([]);
+        self.stationTabContent = ko.observableArray([]);
         self.personLocationSchedules = ko.observableArray([]);
         self.selectedTab = ko.observable('Job');
         
@@ -90,7 +93,19 @@ define([
         self.jobSearch = ko.observable('');
         self.payrollIdSearch = ko.observable('');
           
-        
+        that.activeLocation.subscribe(function(value){
+            data.fetchData('js/data/employees.json').then(function (people) {
+            //self.allPeople(people.employees);
+          self.allPeople(ko.utils.arrayFilter(people.employees,function(item){
+                 if(item.homeStore === value){
+                       return item;
+                  }
+            }));
+           }).fail(function (error) {
+            console.log('Error in getting People data: ' + error.message);
+        });
+            
+        });
           
        self.getItemInitialDisplayDialog = function(index){return index < 3 ? '' : 'none';};
         //Employee Basic Info Dialog
@@ -164,11 +179,7 @@ define([
 
         //self.ready = ko.observable(false);
         data.fetchData('js/data/employees.json').then(function (people) {
-            self.allPeople(ko.utils.arrayFilter(people.employees,function(item){
-                 if(item.homeStore === self.locationName()){
-                       return item;
-                  }
-            }));   
+            self.allPeople(people.employees);   
         }).fail(function (error) {
             console.log('Error in getting People data: ' + error.message);
         });
@@ -388,10 +399,10 @@ define([
                 history.pushState('null', '', 'index.html?root=profile&emp=' + emp.empId);
                   //  $("#profileDetails").css({"background-color":"red"}); 
                 
-                oj.Router.sync();
+               return oj.Router.sync();
             } else {
                 // Default id for profile is 100 so no need to specify.
-                oj.Router.rootInstance.go('profile');
+                return oj.Router.rootInstance.go('profile');
              
             }
         };
@@ -419,7 +430,9 @@ define([
                             self.reviewsandapprovals(schedulecontent.reviewsandapprovals);
                             self.managerlogs(schedulecontent.managerlogs);
                             self.currentlyclockedin(schedulecontent.currentlyclockedin);
-                            self.listViewDataSource();
+                            self.jobTabContent(schedulecontent.jobtabcontent);
+                            self.stationTabContent(schedulecontent.stationcontent);
+                            //self.listViewDataSource();
                         }).fail(function (error) {
                             console.log('Error: ' + error.message);
                         });

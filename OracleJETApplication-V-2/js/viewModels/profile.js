@@ -1,16 +1,16 @@
 define([
-    'ojs/ojcore', 
-    'knockout', 
-    'data/data', 
-    'moment', 
-    'ojs/ojknockout', 
-    'ojs/ojdialog', 
-    'ojs/ojinputtext', 
-    'ojs/ojfilmstrip', 
-    'ojs/ojtable', 
-    'ojs/ojaccordion', 
-    'ojs/ojcollapsible', 
-    'ojs/ojcheckboxset', 
+    'ojs/ojcore',
+    'knockout',
+    'data/data',
+    'moment',
+    'ojs/ojknockout',
+    'ojs/ojdialog',
+    'ojs/ojinputtext',
+    'ojs/ojfilmstrip',
+    'ojs/ojtable',
+    'ojs/ojaccordion',
+    'ojs/ojcollapsible',
+    'ojs/ojcheckboxset',
     'ojs/ojradioset',
     'ojs/ojdatetimepicker',
     'ojs/ojinputnumber',
@@ -24,18 +24,18 @@ define([
                 self.personProfile = ko.observableArray([]);
 
                 //Employee Dialog
-                self.handleOpen =  function(dialog) {
-                    if(dialog == "#scheduleDetailDialog"){
+                self.handleOpen = function (dialog) {
+                    if (dialog == "#scheduleDetailDialog") {
                         //self.optionChangeHandler();
                         $(dialog).ojDialog("open");
-                    }else{
+                    } else {
                         $(dialog).ojDialog("open");
                     }
 
 
                 };
 
-                self.handleClose =  function(dialog) {
+                self.handleClose = function (dialog) {
                     $(dialog).ojDialog("close");
                 };
 
@@ -43,6 +43,7 @@ define([
 
                     var parentRouter = oj.Router.rootInstance;
 
+                  
                     // Retrieve the childRouter instance created in main.js
                     self.empRouter = parentRouter.currentState().value;
                     //Creates the child router for employees
@@ -64,14 +65,16 @@ define([
                         return state;
                     });
                     //Sets up the Child router for tabs
-                    self.router = self.empRouter.createChildRouter('profiletabs').configure({
-                        'profile': {label: 'Profile', value: 'profile', isDefault: true},
-                        'schedules-timecards': {label: 'Schedules & Timecards', value: 'schedules-timecards'},
-                        'jobs-compensation': {label: 'Jobs & Compensation', value: 'jobs-compensation'},
-                        'payroll': {label: 'Payroll', value: 'payroll'},
-                        'analytics': {label: 'Analytics', value: 'analytics'},
-                        'permissions': {label: 'Permissions', value: 'permissions'}
-                    });
+                    if(self.empRouter.getChildRouter('profiletabs') === undefined){
+                        self.router = self.empRouter.createChildRouter('profiletabs').configure({
+                            'profile': {label: 'Profile', value: 'profile', isDefault: true},
+                            'schedules-timecards': {label: 'Schedules & Timecards', value: 'schedules-timecards'},
+                            'jobs-compensation': {label: 'Jobs & Compensation', value: 'jobs-compensation'},
+                            'payroll': {label: 'Payroll', value: 'payroll'},
+                            'analytics': {label: 'Analytics', value: 'analytics'},
+                            'permissions': {label: 'Permissions', value: 'permissions'}
+                        });
+                    }
 
                     // Returns the sync promise to handleActivated. The next
                     // phase of the ojModule lifecycle (attached) will not be
@@ -103,8 +106,8 @@ define([
 
                 // canEnter requires a promise that resolve as true or false
                 self.loadData = function (id) {
-                    return new Promise(function(resolve, reject) {
-                     
+                    return new Promise(function (resolve, reject) {
+
                         jsonData.fetchData(getEmpURL(id)).then(function (person) {
                             self.personProfile(person);
                             self.setupObservables();
@@ -118,11 +121,11 @@ define([
                     });
                 };
 
-                self.setupObservables = function(){
+                self.setupObservables = function () {
                     //Not sure why above observable array can't be used with InputText binding in KO. Need to look into this.
                     //Sets up observables to be able to update them only in the view, does not save data.
                     self.firstName = ko.observable(self.personProfile().firstName);
-                    self.empId=ko.observable(self.personProfile().empId);
+                    self.empId = ko.observable(self.personProfile().empId);
                     self.lastName = ko.observable(self.personProfile().lastName);
                     self.posCheckName = ko.observable(self.personProfile().posCheckName);
                     self.language = ko.observable(self.personProfile().language);
@@ -133,36 +136,36 @@ define([
                     self.profilePhoto = ko.observable(self.personProfile().gender);
 
                     //Veteran Info Start
-                        self.veteranStatus = ko.observable(self.personProfile().veteranStatus);
-                        //changes veteranStatus 1/0 to yes/no
-                        self.changeBooleanFormat(self.veteranStatus);
+                    self.veteranStatus = ko.observable(self.personProfile().veteranStatus);
+                    //changes veteranStatus 1/0 to yes/no
+                    self.changeBooleanFormat(self.veteranStatus);
 
-                        self.vietnamEra = ko.observable(self.personProfile().vietnamEra);
-                        //changes veteranStatus 1/0 to text passed to function
-                        self.changeBooleanToText(self.vietnamEra, 'Vietnam Era');
+                    self.vietnamEra = ko.observable(self.personProfile().vietnamEra);
+                    //changes veteranStatus 1/0 to text passed to function
+                    self.changeBooleanToText(self.vietnamEra, 'Vietnam Era');
 
-                        self.otherEligible = ko.observable(self.personProfile().otherEligible);
-                        //changes veteranStatus 1/0 to text passed to function
-                        self.changeBooleanToText(self.otherEligible, 'Other Eligible');
+                    self.otherEligible = ko.observable(self.personProfile().otherEligible);
+                    //changes veteranStatus 1/0 to text passed to function
+                    self.changeBooleanToText(self.otherEligible, 'Other Eligible');
 
-                        self.otherProtected = ko.observable(self.personProfile().otherProtected);
-                        //changes veteranStatus 1/0 to text passed to function
-                        self.changeBooleanToText(self.otherProtected, 'Other Protected');
+                    self.otherProtected = ko.observable(self.personProfile().otherProtected);
+                    //changes veteranStatus 1/0 to text passed to function
+                    self.changeBooleanToText(self.otherProtected, 'Other Protected');
 
-                        self.armedForcesServiceMedal = ko.observable(self.personProfile().armedForcesServiceMedal);
-                        //changes veteranStatus 1/0 to text passed to function
-                        self.changeBooleanToText(self.armedForcesServiceMedal, 'Armed Forces Service Medal');
+                    self.armedForcesServiceMedal = ko.observable(self.personProfile().armedForcesServiceMedal);
+                    //changes veteranStatus 1/0 to text passed to function
+                    self.changeBooleanToText(self.armedForcesServiceMedal, 'Armed Forces Service Medal');
 
-                        self.recentlySeparated = ko.observable(self.personProfile().recentlySeparated);
-                        //changes veteranStatus 1/0 to text passed to function
-                        self.changeBooleanToText(self.recentlySeparated, 'Recently Separated');
+                    self.recentlySeparated = ko.observable(self.personProfile().recentlySeparated);
+                    //changes veteranStatus 1/0 to text passed to function
+                    self.changeBooleanToText(self.recentlySeparated, 'Recently Separated');
 
-                        self.specialDisabled = ko.observable(self.personProfile().specialDisabled);
-                        //changes veteranStatus 1/0 to text passed to function
-                        self.changeBooleanToText(self.specialDisabled, 'Special Disabled');
+                    self.specialDisabled = ko.observable(self.personProfile().specialDisabled);
+                    //changes veteranStatus 1/0 to text passed to function
+                    self.changeBooleanToText(self.specialDisabled, 'Special Disabled');
 
-                        self.registeredDisabledNumber = ko.observable(self.personProfile().registeredDisabledNumber);
-                        self.dischargeDate = ko.observable(self.getBasicFormattedDate('dischargeDate'));
+                    self.registeredDisabledNumber = ko.observable(self.personProfile().registeredDisabledNumber);
+                    self.dischargeDate = ko.observable(self.getBasicFormattedDate('dischargeDate'));
 
                     //Veteran Info END
 
@@ -172,8 +175,8 @@ define([
                     self.publishInCompanyDirectory = ko.observable(self.personProfile().publishInCompanyDirectory);
                     self.phone = ko.observable(self.personProfile().phone);
                     self.mobile = ko.observable(self.personProfile().mobile);
-                    
-                    
+
+
                     self.faxNumber = ko.observable(self.personProfile().faxNumber);
 
                     //Address Fields
@@ -184,14 +187,14 @@ define([
                     self.postal = ko.observable(self.personProfile().postal);
                     self.country = ko.observable(self.personProfile().country);
                     self.inCityLimits = ko.observable(self.personProfile().inCityLimits);
-                    
+
 
                     //Emergency Contact Fields
                     self.emergencyName = ko.observable(self.personProfile().emergencyName);
                     self.relationship = ko.observable(self.personProfile().relationship);
                     //Formats relationship observable
                     self.formattedRelationship = ko.pureComputed({
-                        read: function(){
+                        read: function () {
                             return "(" + self.relationship() + ")";
                         }
                     });
@@ -200,7 +203,7 @@ define([
                     self.emergencyState = ko.observable(self.personProfile().emergencyState);
                     self.emergencyZipCode = ko.observable(self.personProfile().emergencyZipCode);
                     self.emergencyPhone = ko.observable(self.personProfile().emergencyPhone);
-                    
+
                     //Hire Status variables
                     self.hireDate = ko.observable(self.personProfile().hireDate);
                     self.hireType = ko.observable('');
@@ -264,14 +267,14 @@ define([
                     self.minStep = ko.observable(10);
 
                     //add-employee Availaibilty fields
-                    
+
                     self.minWeekTotal = ko.observable(self.minDateNumberSelection('hoursavailablefrom'));
                     self.maxWeekTotal = ko.observable(self.minDateNumberSelection('hoursavailableto'));
                     //Home Store Modal
                     self.enterpriseName = ko.observable("W");
                     self.location1Name = ko.observable("CA");
                     self.location2Name = ko.observable('');
-                    
+
                     self.val = ko.observableArray([""]);
                     self.socialnumber = ko.observable("12345678945");
                     //Analytics
@@ -286,14 +289,14 @@ define([
                     self.infoTiles = ko.observableArray();
                     //Jobs and compensation
                     self.compensation = ko.observableArray(self.personProfile().compensation);
-self.dataListSource = new oj.ArrayTableDataSource(self.compensation, {idAttribute: 'id'});
+                    self.dataListSource = new oj.ArrayTableDataSource(self.compensation, {idAttribute: 'id'});
                     //payroll 
                     self.extPayrollId = ko.observable(self.personProfile().externalPayrollId);
                     self.minimumwage = ko.observable(self.personProfile().subminimumwage);
                     self.overtimeexempt = ko.observable(self.personProfile().overtimeexempt);
                     self.birthDate = ko.observable(self.personProfile().dateofbirth);
-                    self.birthDateFormatted = ko.pureComputed(function(){
-                        if(self.birthDate() !== ''){
+                    self.birthDateFormatted = ko.pureComputed(function () {
+                        if (self.birthDate() !== '') {
                             var date = new Date(self.birthDate() + ' 00:00:00');
                             var newDate = ((date.getMonth() + 1) + '/' + date.getDate() + '/' + date.getFullYear());
                         }
@@ -302,7 +305,9 @@ self.dataListSource = new oj.ArrayTableDataSource(self.compensation, {idAttribut
 
                     self.admissionnumber = ko.observable(self.personProfile().admissionnumber);
                     self.insexpirationdate = ko.observable(self.personProfile().insexpirationdate);
-                    self.insexpirationdateFormatted = ko.pureComputed(function(){return self.basicCalDateFormat(self.insexpirationdate());});
+                    self.insexpirationdateFormatted = ko.pureComputed(function () {
+                        return self.basicCalDateFormat(self.insexpirationdate());
+                    });
 
                     self.insstatus = ko.observableArray([self.personProfile().insstatus]);
                     self.socialsecuritynumber = ko.observable(self.personProfile().socialsecuritynumber);
@@ -334,103 +339,104 @@ self.dataListSource = new oj.ArrayTableDataSource(self.compensation, {idAttribut
 
                 };
                 //Find the Tab State if allday is true or false to display the correc tab selection
-                self.tabStatusResult = function(status){
+                self.tabStatusResult = function (status) {
                     var statusSelected = [status];
-                    for(var i=0; i < statusSelected.length; i++){
-                        if(statusSelected[i] == 'yes'){
+                    for (var i = 0; i < statusSelected.length; i++) {
+                        if (statusSelected[i] == 'yes') {
                             return true;
-                        }else{
+                        } else {
                             return false;
                         }
                     }
                 };
                 //Finds the current State to return yes or no
-                self.allDayStatusResult = function(status){
+                self.allDayStatusResult = function (status) {
                     var statusSelected = [status];
-                    for(var i=0; i < statusSelected.length; i++){
+                    for (var i = 0; i < statusSelected.length; i++) {
                         return statusSelected[i];
                     }
                 };
                 //Finds the Week of day to apply value to the Select pulldown
-                self.weekCompleteListResult = function(day) {
+                self.weekCompleteListResult = function (day) {
                     var daySelected = [day];
-                    for(var index=0; index < daySelected.length; index++){
+                    for (var index = 0; index < daySelected.length; index++) {
                         return daySelected[index];
-                    };
+                    }
+                    ;
                 };
                 //Add item to Time Segment
-                self.addSegmentTime = function() {
-                  self.daysAndTimesList.push(
-                          {
-                            timesegment : "unavailable",
-                            day : "sunday",
-                            allday : "no",
-                            starttime : "T11:00:00-05:00",
-                            endtime : "T16:00:00-05:00"
-                          }
+                self.addSegmentTime = function () {
+                    self.daysAndTimesList.push(
+                            {
+                                timesegment: "unavailable",
+                                day: "sunday",
+                                allday: "no",
+                                starttime: "T11:00:00-05:00",
+                                endtime: "T16:00:00-05:00"
+                            }
                     )
                 };
                 //Removes item from Time Segment
                 self.toggleTabsSections = function () {
                     self.sectionsState(!self.sectionsState());
-                    if(self.sectionsState()==true){
+                    if (self.sectionsState() == true) {
                         $('.mobileNavTitleArea .fa-chevron-down').addClass('fa-chevron-up').removeClass('fa-chevron-down');
-                    }else if(self.sectionsState()==false){
+                    } else if (self.sectionsState() == false) {
                         $('.mobileNavTitleArea .fa-chevron-up').addClass('fa-chevron-down').removeClass('fa-chevron-up');
-                        
+
                     }
-                    
+
                 };
-                
+
                 //Loops throught the array to match the value to json value and return the nameas
-                self.minDateNumberSelection = function(timeRange){
+                self.minDateNumberSelection = function (timeRange) {
                     type = self.employeeAvailabilityList();
                     var sum = 0;
-                        if(timeRange == 'hoursavailablefrom'){
-                            for(i=0; i< type.length; i++){
-                                sum += parseInt(type[i].hoursavailablefrom);
-                            }
+                    if (timeRange == 'hoursavailablefrom') {
+                        for (i = 0; i < type.length; i++) {
+                            sum += parseInt(type[i].hoursavailablefrom);
                         }
-                        if(timeRange == 'hoursavailableto'){
-                            for(i=0; i< type.length; i++){
-                                sum += parseInt(type[i].hoursavailableto);
-                            }
+                    }
+                    if (timeRange == 'hoursavailableto') {
+                        for (i = 0; i < type.length; i++) {
+                            sum += parseInt(type[i].hoursavailableto);
                         }
+                    }
                     return sum;
                 };
-                self.identityfilterSelectedType = function() {
-                        type = self.identityTypes();
-                        selectedType = self.identifydocumenttype();
-                        for(i=0; i< type.length; i++){
-                            if(selectedType === type[i].value){
-                                var selectedName = type[i].name;
-                                return selectedName;
-                            }
+                self.identityfilterSelectedType = function () {
+                    type = self.identityTypes();
+                    selectedType = self.identifydocumenttype();
+                    for (i = 0; i < type.length; i++) {
+                        if (selectedType === type[i].value) {
+                            var selectedName = type[i].name;
+                            return selectedName;
                         }
-                       
-                    };
-                self.bi9filterSelectedType = function() {
-                        type = self.bi9DocTypes();
-                        selectedType = self.bi9documenttype();
-                        for(i=0; i< type.length; i++){
-                            if(selectedType === type[i].value){
-                                var selectedName = type[i].name;
-                                return selectedName;
-                            }
+                    }
+
+                };
+                self.bi9filterSelectedType = function () {
+                    type = self.bi9DocTypes();
+                    selectedType = self.bi9documenttype();
+                    for (i = 0; i < type.length; i++) {
+                        if (selectedType === type[i].value) {
+                            var selectedName = type[i].name;
+                            return selectedName;
                         }
-                       
-                    };
-                self.ci9filterSelectedType = function() {
-                        type = self.ci9DocTypes();
-                        selectedType = self.ci9documenttype();
-                        for(i=0; i< type.length; i++){
-                            if(selectedType === type[i].value){
-                                var selectedName = type[i].name;
-                                return selectedName;
-                            }
+                    }
+
+                };
+                self.ci9filterSelectedType = function () {
+                    type = self.ci9DocTypes();
+                    selectedType = self.ci9documenttype();
+                    for (i = 0; i < type.length; i++) {
+                        if (selectedType === type[i].value) {
+                            var selectedName = type[i].name;
+                            return selectedName;
                         }
-                       
-                    };
+                    }
+
+                };
                 var timeSegment = [
                     {name: 'Unavailable', value: 'unavailable'},
                     {name: 'Preferred', value: 'preferred'},
@@ -446,40 +452,39 @@ self.dataListSource = new oj.ArrayTableDataSource(self.compensation, {idAttribut
                     {name: 'Saturday', value: 'saturday'},
                 ];
                 var identityTypes = [
-                    {name: 'None',  value: 'none'},
-                    {name: 'List A',  value: 'list-a'},
-                    {name: 'List B and List C',  value: 'list-b-c'},
+                    {name: 'None', value: 'none'},
+                    {name: 'List A', value: 'list-a'},
+                    {name: 'List B and List C', value: 'list-b-c'},
                 ];
                 var bi9DocTypes = [
-                    {name: 'Please Select',  value: 'pleaseselect'},
-                    {name: 'Canadian Drivers License',  value: 'calicense'},
-                    {name: 'Clinic, Doctor, or Hospital Record',  value: 'cdhrecords'},
-                    {name: 'Drivers License',  value: 'driverlicense'},
-                    {name: 'Federal, State, or Local ID Card',  value: 'fslidcard'},
-                    {name: 'Military Dependents ID Card',  value: 'mildepidcard'},
-                    {name: 'Native American Tribal Document',  value: 'natamericandoc'},
-                    {name: 'School ID Card',  value: 'schoolidcard'},
-                    {name: 'School Record/Report Card',  value: 'recordreportcard'},
-                    {name: 'US Coast Guard merchant',  value: 'uscoastguard'},
-                    {name: 'Employment Authorization Document ID Card',  value: 'documentidcard'}
+                    {name: 'Please Select', value: 'pleaseselect'},
+                    {name: 'Canadian Drivers License', value: 'calicense'},
+                    {name: 'Clinic, Doctor, or Hospital Record', value: 'cdhrecords'},
+                    {name: 'Drivers License', value: 'driverlicense'},
+                    {name: 'Federal, State, or Local ID Card', value: 'fslidcard'},
+                    {name: 'Military Dependents ID Card', value: 'mildepidcard'},
+                    {name: 'Native American Tribal Document', value: 'natamericandoc'},
+                    {name: 'School ID Card', value: 'schoolidcard'},
+                    {name: 'School Record/Report Card', value: 'recordreportcard'},
+                    {name: 'US Coast Guard merchant', value: 'uscoastguard'},
+                    {name: 'Employment Authorization Document ID Card', value: 'documentidcard'}
                 ];
                 var ci9DocTypes = [
-                    {name: 'Please Select',  value: 'pleaseselect'},
-                    {name: 'Certificate of Birth Abroad',  value: 'calicense'},
-                    {name: 'Employment Authorization Document ID Card',  value: 'cdhrecords'},
-                    {name: 'Native American Tribal Document',  value: 'dnschoolrecord'},
-                    {name: 'US Birth Certificate',  value: 'driverlicense'},
-                    {name: 'US Citizen ID Card',  value: 'fslidcard'},
-                    {name: 'US Social Security Card',  value: 'ussscard'}
+                    {name: 'Please Select', value: 'pleaseselect'},
+                    {name: 'Certificate of Birth Abroad', value: 'calicense'},
+                    {name: 'Employment Authorization Document ID Card', value: 'cdhrecords'},
+                    {name: 'Native American Tribal Document', value: 'dnschoolrecord'},
+                    {name: 'US Birth Certificate', value: 'driverlicense'},
+                    {name: 'US Citizen ID Card', value: 'fslidcard'},
+                    {name: 'US Social Security Card', value: 'ussscard'}
                 ];
                 var breakDetails = [
                     {id: 1, breakStart: '9:00 AM', breakEnd: '9:15 AM', totalBreak: '15 minutes'},
                     {id: 2, breakStart: '11:00 AM', breakEnd: '11:30 AM', totalBreak: '30 minutes'},
                     {id: 3, breakStart: '1:00 PM', breakEnd: '1:15 PM', totalBreak: '15 minutes'},
-
                 ];
                 self.breakDetails = ko.observableArray(breakDetails);
-                
+
                 self.showItemIndex = function (dialog) {
                     var data = ko.dataFor(event.target);
                     if (data) {
@@ -500,19 +505,19 @@ self.dataListSource = new oj.ArrayTableDataSource(self.compensation, {idAttribut
                 };
 
                 //Changes values from 1/0 to yes/no
-                self.changeBooleanFormat = function(property){
-                    if(property() === 1){
+                self.changeBooleanFormat = function (property) {
+                    if (property() === 1) {
                         property("yes");
-                    }else{
+                    } else {
                         property("no");
                     }
                 };
 
                 //Changes values from 1/0 to text
-                self.changeBooleanToText = function(property, text){
-                    if(property() === 1){
+                self.changeBooleanToText = function (property, text) {
+                    if (property() === 1) {
                         property(text);
-                    }else{
+                    } else {
                         property("");
                     }
                 };
@@ -537,28 +542,29 @@ self.dataListSource = new oj.ArrayTableDataSource(self.compensation, {idAttribut
                 };
 
                 //This is a basic format when using the ojInputDate component
-                self.basicCalDateFormat = function(value){
-                    if(value !== ''){
+                self.basicCalDateFormat = function (value) {
+                    if (value !== '') {
                         var date = new Date(value + ' 00:00:00');
                         var newDate = ((date.getMonth() + 1) + '/' + date.getDate() + '/' + date.getFullYear());
                     }
                     return newDate;
                 };
                 //this converts the date function format to a display time to hh:mm AM/PM
-                self.basicTimeFormat = function(time){
-                    var date =  new Date(time);
+                self.basicTimeFormat = function (time) {
+                    var date = new Date(time);
                     var hour = date.getHours() - (date.getHours() >= 12 ? 12 : 0);
                     var minutes = date.getMinutes();
                     var period = date.getHours() >= 12 ? 'PM' : 'AM';
-                    if (minutes == 0) minutes = '0'+minutes;
-                    return hour + ':' + minutes + ' ' +period;
+                    if (minutes == 0)
+                        minutes = '0' + minutes;
+                    return hour + ':' + minutes + ' ' + period;
                 };
                 /////// JOHN insert for schedule
                 //Analytics
                 function loadPerfandPotenialData() {
-                    
+
                     var ratcount = [], potcount = [], specyear = [], payyear = [], salcount = [], data = self.personProfile();
-                    
+
                     ko.utils.arrayForEach(data.perfs, function (item) {
                         ratcount.push(item.rating);
                         potcount.push(item.potential);
@@ -615,9 +621,9 @@ self.dataListSource = new oj.ArrayTableDataSource(self.compensation, {idAttribut
                 //Employee Dialog
                 //
                 //General function to  auto popup modal based on URL param string and dialog ID
-                self.autoDialog = function(param, dialogId){
-                    if(document.URL.indexOf(param) > -1){
-                        setTimeout(function() {
+                self.autoDialog = function (param, dialogId) {
+                    if (document.URL.indexOf(param) > -1) {
+                        setTimeout(function () {
                             self.handleOpen(dialogId);
                         }, 700);
                     }
@@ -647,24 +653,24 @@ self.dataListSource = new oj.ArrayTableDataSource(self.compensation, {idAttribut
                 //Workaround to load ID first then Time off Request card dialog box when coming from another page
                 //example ?root=profile&emp=103&trueExternalPayroll
                 self.autoDialog("&trueScheduleEdit", "#scheduleDetailDialog");
-                
-                
-                
-                
-                self.timeCardhandleOpen =  function() {
+
+
+
+
+                self.timeCardhandleOpen = function () {
                     $("#scheduleTimeCardDialog").ojDialog("open");
                 };
-                self.editRequestTimehandleOpen =  function() {
+                self.editRequestTimehandleOpen = function () {
                     $("#editTimeOffRequestDialog").ojDialog("open");
                 };
-                self.timeCardhandleClose =  function() {
+                self.timeCardhandleClose = function () {
                     $("#scheduleTimeCardDialog").ojDialog("close");
                 };
 
                 //this is for Schedules and Timecards format Date
                 self.getFormattedDate = function (oldDate) {
                     var currentListDate = self.currentScheduledDates;
-                    for(i=0; i < currentListDate.length; i++){
+                    for (i = 0; i < currentListDate.length; i++) {
                         var newDate = currentListDate[i][oldDate];
                         var dateOptions = {formatStyle: 'date', dateFormat: 'medium'};
                         var dateConverter = oj.Validation.converterFactory("datetime").createConverter(dateOptions);
@@ -675,26 +681,26 @@ self.dataListSource = new oj.ArrayTableDataSource(self.compensation, {idAttribut
                     }
                 };
                 self.getFormattedTime = function (oldTime) {
-                    
-                        var currentListTime = self.currentScheduledDates;
-                    for(i=0; i < currentListTime.length; i++){
+
+                    var currentListTime = self.currentScheduledDates;
+                    for (i = 0; i < currentListTime.length; i++) {
                         var newTime = currentListTime[i][oldTime];
-                        if(newTime !== undefined){
-                            var hours24 = parseInt(newTime.substring(0,2));
+                        if (newTime !== undefined) {
+                            var hours24 = parseInt(newTime.substring(0, 2));
                             var hours = ((hours24 + 11) % 12) + 1;
                             var amPm = hours24 > 11 ? 'pm' : 'am';
                             var minutes = newTime.substring(2);
                             newTime = hours + ':' + minutes + amPm;
-                             currentListTime[i][oldTime] = newTime;
+                            currentListTime[i][oldTime] = newTime;
                         }
-                        
+
                     }
-                    
-                    
+
+
                 };
                 self.getFutureFormattedDate = function (oldDate) {
                     var futureListDate = self.futureScheduledDates;
-                    for(i=0; i < futureListDate.length; i++){
+                    for (i = 0; i < futureListDate.length; i++) {
                         var newDate = futureListDate[i][oldDate];
                         var dateOptions = {formatStyle: 'date', dateFormat: 'medium'};
                         var dateConverter = oj.Validation.converterFactory("datetime").createConverter(dateOptions);
@@ -706,9 +712,9 @@ self.dataListSource = new oj.ArrayTableDataSource(self.compensation, {idAttribut
                 };
                 self.getFutureFormattedTime = function (oldTime) {
                     var futureListTime = self.futureScheduledDates;
-                    for(i=0; i < futureListTime.length; i++){
+                    for (i = 0; i < futureListTime.length; i++) {
                         var newTime = futureListTime[i][oldTime];
-                        var hours24 = parseInt(newTime.substring(0,2));
+                        var hours24 = parseInt(newTime.substring(0, 2));
                         var hours = ((hours24 + 11) % 12) + 1;
                         var amPm = hours24 > 11 ? 'pm' : 'am';
                         var minutes = newTime.substring(2);
@@ -721,30 +727,32 @@ self.dataListSource = new oj.ArrayTableDataSource(self.compensation, {idAttribut
                 //Toggles visibility of sections
                 self.toggleSections = function () {
                     self.sectionsState(!self.sectionsState());
-                    if(self.sectionsState()==true){
+                    if (self.sectionsState() == true) {
                         $('.mobileNavTitleArea .fa-chevron-down').addClass('fa-chevron-up').removeClass('fa-chevron-down');
-                    }else if(self.sectionsState()==false){
+                    } else if (self.sectionsState() == false) {
                         $('.mobileNavTitleArea .fa-chevron-up').addClass('fa-chevron-down').removeClass('fa-chevron-up');
-                        
+
                     }
-                    
+
                 };
 
                 self.currentNavArrowPlacement = ko.observable("adjacent");
                 self.currentNavArrowVisibility = ko.observable("auto");
 
-                getItemInitialDisplay = function(index){return index < 3 ? '' : 'none';};
+                getItemInitialDisplay = function (index) {
+                    return index < 3 ? '' : 'none';
+                };
 
-                self.handleAttached = function(){
+                self.handleAttached = function () {
                     //Adds class to people parent router when profile is active and is removed in the main.js file on exit of the page.
                     $('#people').addClass('oj-selected');
 
                 };
 
                 //General function to  auto popup modal based on URL param string and dialog ID
-                self.autoDialog = function(param, dialogId){
-                    if(document.URL.indexOf(param) > -1){
-                        setTimeout(function() {
+                self.autoDialog = function (param, dialogId) {
+                    if (document.URL.indexOf(param) > -1) {
+                        setTimeout(function () {
                             self.handleOpen(dialogId);
                         }, 600);
                     }
@@ -757,29 +765,31 @@ self.dataListSource = new oj.ArrayTableDataSource(self.compensation, {idAttribut
                 self.autoDialog("&editEmp", "#profileDialogWindow");
 
                 //Workaround to show the New Employee Added Message when coming from the add-employee section
-                if(document.URL.indexOf("&trueAddEmp") > -1){
-                     setTimeout(function() {
+                if (document.URL.indexOf("&trueAddEmp") > -1) {
+                    setTimeout(function () {
                         $(".addedNewEmpMessage").show();
                     }, 600);
                 }
 
                 //For Schedules and Timecards tab
                 //searches for specified param string and returns the value after the equal symbol
-                self.findURLParam = function(param){
-                     var query = window.location.search.substring(1);
-                     var vars = query.split("&");
-                     for(i=0; i< vars.length; i++){
-                         var pair = vars[i].split("=");
-                         if(pair[0] == param){return pair[1];}
-                     }
-                     return(false);
-                     //create a mapping for friend url parameter like monday = 1
+                self.findURLParam = function (param) {
+                    var query = window.location.search.substring(1);
+                    var vars = query.split("&");
+                    for (i = 0; i < vars.length; i++) {
+                        var pair = vars[i].split("=");
+                        if (pair[0] == param) {
+                            return pair[1];
+                        }
+                    }
+                    return(false);
+                    //create a mapping for friend url parameter like monday = 1
                 };
                 //Workaround to call schedules and timecards modal
                 //example ?root=profile&emp=103&tabs=schedules-timecards&currentWeekDay=0
                 //the zero thur 6 is the index of the 
-                setTimeout(function() {
-                    if(document.URL.indexOf('currentWeekDay') > -1){
+                setTimeout(function () {
+                    if (document.URL.indexOf('currentWeekDay') > -1) {
                         var data = self.personProfile().currentScheduledDates[self.findURLParam('currentWeekDay')];
                         if (data) {
                             self.selectedSchedule(data);
@@ -789,7 +799,8 @@ self.dataListSource = new oj.ArrayTableDataSource(self.compensation, {idAttribut
                 }, 600);
 
 
-            };
+            }
+            ;
 
             return new PersonViewModel();
         });
