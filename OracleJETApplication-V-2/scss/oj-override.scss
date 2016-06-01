@@ -180,7 +180,9 @@ $job1TotalHeader: $medOrange3;
 $job2TotalHeader: $medBlue3;
 $mobileScheduleBckgColor: $lightGray2;
 $dayHeaderBckgColor: $lightGray2;
-$dayBodyBorderColor: $black;
+$daySectionsBorderColor: $black;
+$daySectionsBckgColor: $white;
+$currentWeekSummaryBorderColor: $gray;
 
 //Off Canvas Variables
 $topOffCanvasBckg: $darkGrayOld;
@@ -222,23 +224,23 @@ $sideNavLinkBckColor:$sideNavBckColor;
 $mainAreaBckgColor: $white;
 $mainAreaBorderColor: $lightGrayOld2;
 
-$homeBckColor: $medBlue1;
-$homeMobileTabBckColor: $medBlue1;
-$homeMobileTabAccentColor: $medBlue2;
-$homeMainTabBckColor: $medBlue1;
-$homeSubTabBckColor: $medBlue2;
-$homeTabHoverText: $medBlue1;
-$homeDialogHeaderColor: $medBlue1;
+$homeBckColor: $medBlue2;
+$homeMobileTabBckColor: $medBlue2;
+$homeMobileTabAccentColor: $medBlue1;
+$homeMainTabBckColor: $medBlue2;
+$homeSubTabBckColor: $medBlue1;
+$homeTabHoverText: $medBlue2;
+$homeDialogHeaderColor: $medBlue2;
 $homeDialogAccentColor: $lightBlue;
 
 
-$laborBckColor: $medBrown1;
-$laborMobileTabBckColor: $medBrown1;
-$laborMobileTabAccentColor: $medBrown2;
-$laborMainTabBckColor: $medBrown1;
-$laborSubTabBckColor: $medBrown2;
-$laborTabHoverText: $medBrown1;
-$laborDialogHeaderColor: $medBrown1;
+$laborBckColor: $medBrown2;
+$laborMobileTabBckColor: $medBrown2;
+$laborMobileTabAccentColor: $medBrown1;
+$laborMainTabBckColor: $medBrown2;
+$laborSubTabBckColor: $medBrown1;
+$laborTabHoverText: $medBrown2;
+$laborDialogHeaderColor: $medBrown2;
 $laborDialogAccentColor: $lightBrown;
 
 $inventoryBckColor: $medViolet1;
@@ -259,22 +261,22 @@ $giftLoyaltyTabHoverText: $medPurple1;
 $giftLoyaltyDialogHeaderColor: $medPurple1;
 $giftLoyaltyDialogAccentColor: $lightPurple;
 
-$reportsAnalyticsBckColor: $medGreen1;
-$reportsAnalyticsMobileTabBckColor: $medGreen1;
-$reportsAnalyticsMobileTabAccentColor: $medGreen2;
-$reportsAnalyticsMainTabBckColor: $medGreen1;
-$reportsAnalyticsSubTabBckColor: $medGreen2;
-$reportsAnalyticsTabHoverText: $medGreen1;
-$reportsAnalyticsDialogHeaderColor: $medGreen1;
+$reportsAnalyticsBckColor: $medGreen2;
+$reportsAnalyticsMobileTabBckColor: $medGreen2;
+$reportsAnalyticsMobileTabAccentColor: $medGreen1;
+$reportsAnalyticsMainTabBckColor: $medGreen2;
+$reportsAnalyticsSubTabBckColor: $medGreen1;
+$reportsAnalyticsTabHoverText: $medGreen2;
+$reportsAnalyticsDialogHeaderColor: $medGreen2;
 $reportsAnalyticsDialogAccentColor: $lightGreen;
 
-$enterpriseBckColor: $medRed1;
-$enterpriseMobileTabBckColor: $medRed1;
-$enterpriseMobileTabAccentColor: $medRed2;
-$enterpriseMainTabBckColor: $medRed1;
-$enterpriseSubTabBckColor: $medRed2;
-$enterpriseTabHoverText: $medRed1;
-$enterpriseDialogHeaderColor: $medRed1;
+$enterpriseBckColor: $medRed2;
+$enterpriseMobileTabBckColor: $medRed2;
+$enterpriseMobileTabAccentColor: $medRed1;
+$enterpriseMainTabBckColor: $medRed2;
+$enterpriseSubTabBckColor: $medRed1;
+$enterpriseTabHoverText: $medRed2;
+$enterpriseDialogHeaderColor: $medRed2;
 $enterpriseDialogAccentColor: $lightRed;
 
 $peopleBckColor: $medGrayBlue1;
@@ -345,10 +347,6 @@ h1.pageTitle{
 }
 .oj-panel{
     border-color:transparent;
-}
-.oj-panel-alt2{
-    background-color:transparent;
-    border-color: transparent;
 }
 /*Font Awesome Overwrites*/
 .arrowLocation.fa-location-arrow{
@@ -758,6 +756,10 @@ html:not([dir="rtl"]) .oj-dialog-title{
     height:75px;
     width:75px;
 }
+.empImg2{
+    border-radius:50%;
+    padding-bottom:10px;
+}
 .empImgCol{
     max-width:95px;
 }
@@ -773,8 +775,35 @@ html:not([dir="rtl"]) .oj-dialog-title{
          color:$black;
     }
 }
+#dialogTitleId {
+    .dialogHeaderText{
+        padding:0;
+        img{
+            height:25px;
+            width:25px;
+        }
+        a{
+            padding-left:10px;
+            color: $white;
+            border-left: 1px solid $white;
+            margin-left: 10px;
+            font-size:14px;
 
+            .fa{
+                margin-left:5px;
+            }
+        }
+    }
+}
 #empBasicDialogWindow {
+    .scheduleLayout{
+        align-self: flex-start;
+    }
+    .empInfo{
+        .oj-flex-item{
+            margin:0 20px 10px 0;
+        }
+    }
     label{
         font-weight:bold;
         text-transform: uppercase;
@@ -809,37 +838,70 @@ html:not([dir="rtl"]) .oj-dialog-title{
             }
         }
     }
-    .oj-flex-item:not(:last-child){
-        margin:0 20px 10px 0;
-    }
     #filmStripDiv{
         background-color: $mobileScheduleBckgColor;
+        .dayTotals{
+            font-weight:bold;
+        }
         .dayHeader{
             background-color: $dayHeaderBckgColor;
+            text-align:center;
+            margin-top:10px;
         }
-        .dayBody{
-            border:1px solid $dayBodyBorderColor;
+        .daySections{
+            border:1px solid $daySectionsBorderColor;
             padding:5px;
+            margin:10px 0;
+            background-color: $daySectionsBckgColor;
         }
-        .oj-flex-item{
-            margin:0;
-        }
-    }
-    .oj-flex-item{
-        &.currentWeekHeaderArea{
-            margin:0;
-            background-color: $currentWeekHeaderArea;
-            .currentWeekHeader{
-                color: $BodyTextColor;
+        .locSections{
+            text-align: center;
+            .locLabel{
+                font-weight: bold;
+            }
+            .jobSection{
+                border-top:3px solid;
+                margin: 10px 0 0 0;
+                padding: 5px 0;
             }
         }
-        &.currentWeekHeader{
-            margin:0;
+        .dollarAmts{
+            text-align:right;
+        }
+        .empAvailability{
+            text-align:center;
+            .prefLabel, .notAvailLabel{
+                text-transform: uppercase;
+                font-weight:bold;
+            }
+            .notAvailLabel{
+                color: $brightRed;
+            }
         }
     }
-    .currentWeekHeader{
+   .currentWeekHeaderArea{
+        background-color: $currentWeekHeaderArea;
+        margin-top:10px;
+        .currentWeekHeader{
+            color: $BodyTextColor;
+            padding:10px;
+        }
+    }
+    .currentWeekSummary{
         padding:10px;
     }
+    .emailAndPringDiv{
+        float:right;
+        ul{
+            margin:0;
+            list-style-type:none;
+            padding:0;
+            li{
+                display:inline-block;
+            }
+        }
+    }
+
     .weeklyTotalHeader{
         border-top:3px solid $weeklyTotalHeader;
     }
@@ -873,7 +935,21 @@ html:not([dir="rtl"]) .oj-dialog-title{
         height:50px;
         width:50px;
     }
-    
+    #empBasicDialogWindow {
+         .currentWeekSummary{
+             padding:0;
+            > div{
+                border-right:1px solid $currentWeekSummaryBorderColor;
+                padding:10px;
+                margin:10px 0;
+            }
+            &:last-child{
+                >div{
+                    border:0;
+                }
+            }
+        }
+    }
 @each $section, $color, $headerBckImg in (home, $homeBckColor, $homeBckImg), 
                             (labor-management, $laborBckColor, $laborBckImg),
                             (inventory-management, $inventoryBckColor, $inventoryBckImg),

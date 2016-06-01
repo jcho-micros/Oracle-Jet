@@ -44,10 +44,6 @@ h1.pageTitle {
 .oj-panel {
   border-color: transparent; }
 
-.oj-panel-alt2 {
-  background-color: transparent;
-  border-color: transparent; }
-
 /*Font Awesome Overwrites*/
 .arrowLocation.fa-location-arrow {
   font-size: 14px; }
@@ -155,22 +151,22 @@ html:not([dir="rtl"]) .oj-dialog-title {
 
 /*Dialog window*/
 #ojDialogWrapper-homeDialogWindow .oj-dialog-header {
-  background-color: #004587; }
+  background-color: #015FAB; }
   #ojDialogWrapper-homeDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper {
     background-color: #0572CE; }
     #ojDialogWrapper-homeDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper.oj-hover .oj-dialog-close-icon {
       color: #0572CE; }
 #ojDialogWrapper-homeDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-default, #ojDialogWrapper-homeDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-hover, #ojDialogWrapper-homeDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-focus-only {
-  background-color: #004587; }
+  background-color: #015FAB; }
 
 #ojDialogWrapper-laborDialogWindow .oj-dialog-header {
-  background-color: #8b3300; }
+  background-color: #AB4100; }
   #ojDialogWrapper-laborDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper {
     background-color: #be4800; }
     #ojDialogWrapper-laborDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper.oj-hover .oj-dialog-close-icon {
       color: #be4800; }
 #ojDialogWrapper-laborDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-default, #ojDialogWrapper-laborDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-hover, #ojDialogWrapper-laborDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-focus-only {
-  background-color: #8b3300; }
+  background-color: #AB4100; }
 
 #ojDialogWrapper-inventoryDialogWindow .oj-dialog-header {
   background-color: #79006C; }
@@ -191,22 +187,22 @@ html:not([dir="rtl"]) .oj-dialog-title {
   background-color: #410b6e; }
 
 #ojDialogWrapper-reports-analyticsDialogWindow .oj-dialog-header {
-  background-color: #005C3A; }
+  background-color: #007B2B; }
   #ojDialogWrapper-reports-analyticsDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper {
     background-color: #1A8841; }
     #ojDialogWrapper-reports-analyticsDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper.oj-hover .oj-dialog-close-icon {
       color: #1A8841; }
 #ojDialogWrapper-reports-analyticsDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-default, #ojDialogWrapper-reports-analyticsDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-hover, #ojDialogWrapper-reports-analyticsDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-focus-only {
-  background-color: #005C3A; }
+  background-color: #007B2B; }
 
 #ojDialogWrapper-enterpriseDialogWindow .oj-dialog-header {
-  background-color: #88000d; }
+  background-color: #ba0006; }
   #ojDialogWrapper-enterpriseDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper {
     background-color: #e4001e; }
     #ojDialogWrapper-enterpriseDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper.oj-hover .oj-dialog-close-icon {
       color: #e4001e; }
 #ojDialogWrapper-enterpriseDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-default, #ojDialogWrapper-enterpriseDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-hover, #ojDialogWrapper-enterpriseDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-focus-only {
-  background-color: #88000d; }
+  background-color: #ba0006; }
 
 #ojDialogWrapper-peopleDialogWindow .oj-dialog-header {
   background-color: #172777; }
@@ -307,10 +303,10 @@ html:not([dir="rtl"]) .oj-dialog-title {
   display: none; }
 
 .homeTitleWrap {
-  background-color: #004587; }
+  background-color: #015FAB; }
 
 .labor-managementTitleWrap {
-  background-color: #8b3300; }
+  background-color: #AB4100; }
 
 .inventory-managementTitleWrap {
   background-color: #79006C; }
@@ -319,10 +315,10 @@ html:not([dir="rtl"]) .oj-dialog-title {
   background-color: #410b6e; }
 
 .reports-analyticsTitleWrap {
-  background-color: #005C3A; }
+  background-color: #007B2B; }
 
 .enterpriseTitleWrap {
-  background-color: #88000d; }
+  background-color: #ba0006; }
 
 .peopleTitleWrap {
   background-color: #172777; }
@@ -342,13 +338,13 @@ html:not([dir="rtl"]) .oj-dialog-title {
   #appHeaderDesktopNav .oj-navigationlist-item.oj-focus#home a .topNavImgIcon, #appHeaderDesktopNav .oj-navigationlist-item.oj-default#home a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-focus#home a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-default#home a .topNavImgIcon {
     background-image: url("images/icon/home-default.png"); }
   #appHeaderDesktopNav .oj-navigationlist-item.oj-selected#home, #appHeaderDesktopNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#home, #appHeaderMobileNav .oj-navigationlist-item.oj-selected#home, #appHeaderMobileNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#home {
-    background-color: #004587; }
+    background-color: #015FAB; }
     #appHeaderDesktopNav .oj-navigationlist-item.oj-selected#home a .topNavImgIcon, #appHeaderDesktopNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#home a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-selected#home a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#home a .topNavImgIcon {
       background-image: url("images/icon/home-hover.png"); }
   #appHeaderDesktopNav .oj-navigationlist-item.oj-focus#labor-management a .topNavImgIcon, #appHeaderDesktopNav .oj-navigationlist-item.oj-default#labor-management a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-focus#labor-management a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-default#labor-management a .topNavImgIcon {
     background-image: url("images/icon/labor-default.png"); }
   #appHeaderDesktopNav .oj-navigationlist-item.oj-selected#labor-management, #appHeaderDesktopNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#labor-management, #appHeaderMobileNav .oj-navigationlist-item.oj-selected#labor-management, #appHeaderMobileNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#labor-management {
-    background-color: #8b3300; }
+    background-color: #AB4100; }
     #appHeaderDesktopNav .oj-navigationlist-item.oj-selected#labor-management a .topNavImgIcon, #appHeaderDesktopNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#labor-management a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-selected#labor-management a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#labor-management a .topNavImgIcon {
       background-image: url("images/icon/labor-hover.png"); }
   #appHeaderDesktopNav .oj-navigationlist-item.oj-focus#inventory-management a .topNavImgIcon, #appHeaderDesktopNav .oj-navigationlist-item.oj-default#inventory-management a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-focus#inventory-management a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-default#inventory-management a .topNavImgIcon {
@@ -366,13 +362,13 @@ html:not([dir="rtl"]) .oj-dialog-title {
   #appHeaderDesktopNav .oj-navigationlist-item.oj-focus#reports-analytics a .topNavImgIcon, #appHeaderDesktopNav .oj-navigationlist-item.oj-default#reports-analytics a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-focus#reports-analytics a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-default#reports-analytics a .topNavImgIcon {
     background-image: url("images/icon/reporting-analytics-default.png"); }
   #appHeaderDesktopNav .oj-navigationlist-item.oj-selected#reports-analytics, #appHeaderDesktopNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#reports-analytics, #appHeaderMobileNav .oj-navigationlist-item.oj-selected#reports-analytics, #appHeaderMobileNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#reports-analytics {
-    background-color: #005C3A; }
+    background-color: #007B2B; }
     #appHeaderDesktopNav .oj-navigationlist-item.oj-selected#reports-analytics a .topNavImgIcon, #appHeaderDesktopNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#reports-analytics a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-selected#reports-analytics a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#reports-analytics a .topNavImgIcon {
       background-image: url("images/icon/reporting-analytics-hover.png"); }
   #appHeaderDesktopNav .oj-navigationlist-item.oj-focus#enterprise a .topNavImgIcon, #appHeaderDesktopNav .oj-navigationlist-item.oj-default#enterprise a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-focus#enterprise a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-default#enterprise a .topNavImgIcon {
     background-image: url("images/icon/enterprise-default.png"); }
   #appHeaderDesktopNav .oj-navigationlist-item.oj-selected#enterprise, #appHeaderDesktopNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#enterprise, #appHeaderMobileNav .oj-navigationlist-item.oj-selected#enterprise, #appHeaderMobileNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#enterprise {
-    background-color: #88000d; }
+    background-color: #ba0006; }
     #appHeaderDesktopNav .oj-navigationlist-item.oj-selected#enterprise a .topNavImgIcon, #appHeaderDesktopNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#enterprise a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-selected#enterprise a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#enterprise a .topNavImgIcon {
       background-image: url("images/icon/enterprise-hover.png"); }
   #appHeaderDesktopNav .oj-navigationlist-item.oj-focus#people a .topNavImgIcon, #appHeaderDesktopNav .oj-navigationlist-item.oj-default#people a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-focus#people a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-default#people a .topNavImgIcon {
@@ -470,6 +466,10 @@ html:not([dir="rtl"]) .oj-dialog-title {
   height: 75px;
   width: 75px; }
 
+.empImg2 {
+  border-radius: 50%;
+  padding-bottom: 10px; }
+
 .empImgCol {
   max-width: 95px; }
 
@@ -482,6 +482,24 @@ html:not([dir="rtl"]) .oj-dialog-title {
 .searchTitle h2 {
   color: #000; }
 
+#dialogTitleId .dialogHeaderText {
+  padding: 0; }
+  #dialogTitleId .dialogHeaderText img {
+    height: 25px;
+    width: 25px; }
+  #dialogTitleId .dialogHeaderText a {
+    padding-left: 10px;
+    color: #fff;
+    border-left: 1px solid #fff;
+    margin-left: 10px;
+    font-size: 14px; }
+    #dialogTitleId .dialogHeaderText a .fa {
+      margin-left: 5px; }
+
+#empBasicDialogWindow .scheduleLayout {
+  align-self: flex-start; }
+#empBasicDialogWindow .empInfo .oj-flex-item {
+  margin: 0 20px 10px 0; }
 #empBasicDialogWindow label {
   font-weight: bold;
   text-transform: uppercase; }
@@ -509,26 +527,52 @@ html:not([dir="rtl"]) .oj-dialog-title {
         content: '';
         display: inline-block;
         margin-right: 5px; }
-#empBasicDialogWindow .oj-flex-item:not(:last-child) {
-  margin: 0 20px 10px 0; }
 #empBasicDialogWindow #filmStripDiv {
   background-color: #F5F5F5; }
+  #empBasicDialogWindow #filmStripDiv .dayTotals {
+    font-weight: bold; }
   #empBasicDialogWindow #filmStripDiv .dayHeader {
-    background-color: #F5F5F5; }
-  #empBasicDialogWindow #filmStripDiv .dayBody {
+    background-color: #F5F5F5;
+    text-align: center;
+    margin-top: 10px; }
+  #empBasicDialogWindow #filmStripDiv .daySections {
     border: 1px solid #000;
-    padding: 5px; }
-  #empBasicDialogWindow #filmStripDiv .oj-flex-item {
-    margin: 0; }
-#empBasicDialogWindow .oj-flex-item.currentWeekHeaderArea {
-  margin: 0;
-  background-color: #F5F5F5; }
-  #empBasicDialogWindow .oj-flex-item.currentWeekHeaderArea .currentWeekHeader {
-    color: #000; }
-#empBasicDialogWindow .oj-flex-item.currentWeekHeader {
-  margin: 0; }
-#empBasicDialogWindow .currentWeekHeader {
+    padding: 5px;
+    margin: 10px 0;
+    background-color: #fff; }
+  #empBasicDialogWindow #filmStripDiv .locSections {
+    text-align: center; }
+    #empBasicDialogWindow #filmStripDiv .locSections .locLabel {
+      font-weight: bold; }
+    #empBasicDialogWindow #filmStripDiv .locSections .jobSection {
+      border-top: 3px solid;
+      margin: 10px 0 0 0;
+      padding: 5px 0; }
+  #empBasicDialogWindow #filmStripDiv .dollarAmts {
+    text-align: right; }
+  #empBasicDialogWindow #filmStripDiv .empAvailability {
+    text-align: center; }
+    #empBasicDialogWindow #filmStripDiv .empAvailability .prefLabel, #empBasicDialogWindow #filmStripDiv .empAvailability .notAvailLabel {
+      text-transform: uppercase;
+      font-weight: bold; }
+    #empBasicDialogWindow #filmStripDiv .empAvailability .notAvailLabel {
+      color: #ff0000; }
+#empBasicDialogWindow .currentWeekHeaderArea {
+  background-color: #F5F5F5;
+  margin-top: 10px; }
+  #empBasicDialogWindow .currentWeekHeaderArea .currentWeekHeader {
+    color: #000;
+    padding: 10px; }
+#empBasicDialogWindow .currentWeekSummary {
   padding: 10px; }
+#empBasicDialogWindow .emailAndPringDiv {
+  float: right; }
+  #empBasicDialogWindow .emailAndPringDiv ul {
+    margin: 0;
+    list-style-type: none;
+    padding: 0; }
+    #empBasicDialogWindow .emailAndPringDiv ul li {
+      display: inline-block; }
 #empBasicDialogWindow .weeklyTotalHeader {
   border-top: 3px solid #04b404; }
 #empBasicDialogWindow .job1TotalHeader {
@@ -544,12 +588,21 @@ html:not([dir="rtl"]) .oj-dialog-title {
     height: 50px;
     width: 50px; }
 
+  #empBasicDialogWindow .currentWeekSummary {
+    padding: 0; }
+    #empBasicDialogWindow .currentWeekSummary > div {
+      border-right: 1px solid #AFBAC5;
+      padding: 10px;
+      margin: 10px 0; }
+    #empBasicDialogWindow .currentWeekSummary:last-child > div {
+      border: 0; }
+
   .homeTitleWrap {
     background: url("images/header-icon-header.png");
     background-repeat: no-repeat;
     background-size: 223px 111px;
     background-position: 100% 30%;
-    background-color: #004587;
+    background-color: #015FAB;
     height: 110px; }
 
   .labor-managementTitleWrap {
@@ -557,7 +610,7 @@ html:not([dir="rtl"]) .oj-dialog-title {
     background-repeat: no-repeat;
     background-size: 223px 111px;
     background-position: 100% 30%;
-    background-color: #8b3300;
+    background-color: #AB4100;
     height: 110px; }
 
   .inventory-managementTitleWrap {
@@ -581,7 +634,7 @@ html:not([dir="rtl"]) .oj-dialog-title {
     background-repeat: no-repeat;
     background-size: 223px 111px;
     background-position: 100% 30%;
-    background-color: #005C3A;
+    background-color: #007B2B;
     height: 110px; }
 
   .enterpriseTitleWrap {
@@ -589,7 +642,7 @@ html:not([dir="rtl"]) .oj-dialog-title {
     background-repeat: no-repeat;
     background-size: 223px 111px;
     background-position: 100% 30%;
-    background-color: #88000d;
+    background-color: #ba0006;
     height: 110px; }
 
   .peopleTitleWrap {
@@ -615,15 +668,15 @@ html:not([dir="rtl"]) .oj-dialog-title {
       outline-color: transparent; }
     #homeTabs .oj-navigationlist-item.oj-hover:not(.oj-selected) {
       background-color: #fff;
-      border-color: #015FAB; }
+      border-color: #004587; }
       #homeTabs .oj-navigationlist-item.oj-hover:not(.oj-selected) .oj-navigationlist-item-label {
-        color: #004587; }
+        color: #015FAB; }
     #homeTabs .oj-navigationlist-item.oj-default {
-      background-color: #015FAB; }
+      background-color: #004587; }
       #homeTabs .oj-navigationlist-item.oj-default .oj-navigationlist-item-label {
         color: #fff; }
     #homeTabs .oj-navigationlist-item.oj-selected {
-      border-color: #015FAB; }
+      border-color: #004587; }
       #homeTabs .oj-navigationlist-item.oj-selected a .oj-navigationlist-item-label {
         font-weight: 300;
         color: #000; }
@@ -635,15 +688,15 @@ html:not([dir="rtl"]) .oj-dialog-title {
       outline-color: transparent; }
     #laborTabs .oj-navigationlist-item.oj-hover:not(.oj-selected) {
       background-color: #fff;
-      border-color: #AB4100; }
+      border-color: #8b3300; }
       #laborTabs .oj-navigationlist-item.oj-hover:not(.oj-selected) .oj-navigationlist-item-label {
-        color: #8b3300; }
+        color: #AB4100; }
     #laborTabs .oj-navigationlist-item.oj-default {
-      background-color: #AB4100; }
+      background-color: #8b3300; }
       #laborTabs .oj-navigationlist-item.oj-default .oj-navigationlist-item-label {
         color: #fff; }
     #laborTabs .oj-navigationlist-item.oj-selected {
-      border-color: #AB4100; }
+      border-color: #8b3300; }
       #laborTabs .oj-navigationlist-item.oj-selected a .oj-navigationlist-item-label {
         font-weight: 300;
         color: #000; }
@@ -695,15 +748,15 @@ html:not([dir="rtl"]) .oj-dialog-title {
       outline-color: transparent; }
     #reportsAnalyticsTabs .oj-navigationlist-item.oj-hover:not(.oj-selected) {
       background-color: #fff;
-      border-color: #007B2B; }
+      border-color: #005C3A; }
       #reportsAnalyticsTabs .oj-navigationlist-item.oj-hover:not(.oj-selected) .oj-navigationlist-item-label {
-        color: #005C3A; }
+        color: #007B2B; }
     #reportsAnalyticsTabs .oj-navigationlist-item.oj-default {
-      background-color: #007B2B; }
+      background-color: #005C3A; }
       #reportsAnalyticsTabs .oj-navigationlist-item.oj-default .oj-navigationlist-item-label {
         color: #fff; }
     #reportsAnalyticsTabs .oj-navigationlist-item.oj-selected {
-      border-color: #007B2B; }
+      border-color: #005C3A; }
       #reportsAnalyticsTabs .oj-navigationlist-item.oj-selected a .oj-navigationlist-item-label {
         font-weight: 300;
         color: #000; }
@@ -715,15 +768,15 @@ html:not([dir="rtl"]) .oj-dialog-title {
       outline-color: transparent; }
     #enterpriseTabs .oj-navigationlist-item.oj-hover:not(.oj-selected) {
       background-color: #fff;
-      border-color: #ba0006; }
+      border-color: #88000d; }
       #enterpriseTabs .oj-navigationlist-item.oj-hover:not(.oj-selected) .oj-navigationlist-item-label {
-        color: #88000d; }
+        color: #ba0006; }
     #enterpriseTabs .oj-navigationlist-item.oj-default {
-      background-color: #ba0006; }
+      background-color: #88000d; }
       #enterpriseTabs .oj-navigationlist-item.oj-default .oj-navigationlist-item-label {
         color: #fff; }
     #enterpriseTabs .oj-navigationlist-item.oj-selected {
-      border-color: #ba0006; }
+      border-color: #88000d; }
       #enterpriseTabs .oj-navigationlist-item.oj-selected a .oj-navigationlist-item-label {
         font-weight: 300;
         color: #000; }
@@ -807,26 +860,26 @@ html:not([dir="rtl"]) .oj-dialog-title {
     width: 60em; } }
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   #homeNavList {
-    background-color: #004587;
+    background-color: #015FAB;
     height: 40px; }
 
   #homeTabs {
-    border-top: 1px solid #015FAB; }
+    border-top: 1px solid #004587; }
     #homeTabs .oj-navigationlist-item:not(.oj-disabled).oj-default {
-      background-color: #004587; }
+      background-color: #015FAB; }
     #homeTabs .oj-navigationlist-item:not(.oj-disabled).oj-selected {
       background-color: #454545; }
     #homeTabs .oj-navigationlist-item:not(.oj-disabled).oj-hover {
       background-color: #454545; }
 
   #laborNavList {
-    background-color: #8b3300;
+    background-color: #AB4100;
     height: 40px; }
 
   #laborTabs {
-    border-top: 1px solid #AB4100; }
+    border-top: 1px solid #8b3300; }
     #laborTabs .oj-navigationlist-item:not(.oj-disabled).oj-default {
-      background-color: #8b3300; }
+      background-color: #AB4100; }
     #laborTabs .oj-navigationlist-item:not(.oj-disabled).oj-selected {
       background-color: #454545; }
     #laborTabs .oj-navigationlist-item:not(.oj-disabled).oj-hover {
@@ -859,26 +912,26 @@ html:not([dir="rtl"]) .oj-dialog-title {
       background-color: #454545; }
 
   #enterpriseNavList {
-    background-color: #88000d;
+    background-color: #ba0006;
     height: 40px; }
 
   #enterpriseTabs {
-    border-top: 1px solid #ba0006; }
+    border-top: 1px solid #88000d; }
     #enterpriseTabs .oj-navigationlist-item:not(.oj-disabled).oj-default {
-      background-color: #88000d; }
+      background-color: #ba0006; }
     #enterpriseTabs .oj-navigationlist-item:not(.oj-disabled).oj-selected {
       background-color: #454545; }
     #enterpriseTabs .oj-navigationlist-item:not(.oj-disabled).oj-hover {
       background-color: #454545; }
 
   #reports-analyticsNavList {
-    background-color: #005C3A;
+    background-color: #007B2B;
     height: 40px; }
 
   #reports-analyticsTabs {
-    border-top: 1px solid #007B2B; }
+    border-top: 1px solid #005C3A; }
     #reports-analyticsTabs .oj-navigationlist-item:not(.oj-disabled).oj-default {
-      background-color: #005C3A; }
+      background-color: #007B2B; }
     #reports-analyticsTabs .oj-navigationlist-item:not(.oj-disabled).oj-selected {
       background-color: #454545; }
     #reports-analyticsTabs .oj-navigationlist-item:not(.oj-disabled).oj-hover {
@@ -1102,5 +1155,3 @@ html:not([dir="rtl"]) .oj-dialog-title {
     border-radius: 50%; }
   #loginPage .footer {
     text-align: right; } }
-
-/*# sourceMappingURL=oj-override.css.map */
