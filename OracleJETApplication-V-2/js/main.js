@@ -86,7 +86,7 @@ require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', '
 
         function RootViewModel() {
             var self = this;
-
+            self.router = router;
             //User information from json
             var userData = {
                 name: 'Sarah Smith',
@@ -133,29 +133,30 @@ require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', '
             
             
                         
-            self.router = router;
+            
             
             self.mergeConfig=function (original) {
-
                     return $.extend(true, {}, original, {
-                        'params': {'location': self.activeLocation()}
+                        'params': {'self':self}
                     });
 
 
                 };
 
 
-//            self.moduleLoader=ko.pureComputed(function(){
-//
-//                    if (self.router.stateId()==='labor-management') {
-//
-//                                    //currentModule = MasterviewModel.action.moduleConfig;
-//                                    return self.mergeConfig(self.router.moduleConfig);
-//                                }else{
-//                                    self.router.moduleConfig;
-//                                }
-//            });
+            self.moduleLoader=ko.pureComputed(function(){
 
+                    if (self.router.stateId()==='labor-management') {
+                                    //currentModule = MasterviewModel.action.moduleConfig;
+                                    return $.extend(true, {}, self.router.moduleConfig, {
+                        'params': {'self':self}
+                    });
+                                }else{
+                                   return  self.router.moduleConfig;
+                                }
+            });
+
+            
             var smQuery = oj.ResponsiveUtils.getFrameworkQuery(oj.ResponsiveUtils.FRAMEWORK_QUERY_KEY.SM_ONLY);
             self.smScreen = oj.ResponsiveKnockoutUtils.createMediaQueryObservable(smQuery);
             var mdQuery = oj.ResponsiveUtils.getFrameworkQuery(oj.ResponsiveUtils.FRAMEWORK_QUERY_KEY.MD_UP);
