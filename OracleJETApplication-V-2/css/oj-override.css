@@ -12,7 +12,8 @@ html, body {
   min-height: 100%;
   margin: 0;
   padding: 0;
-  font-size: 14px; }
+  font-size: 14px;
+  font-family: "Helvetica Neue Medium", Arial, sans-serif; }
 
 body {
   background-image: none;
@@ -22,17 +23,25 @@ body {
 a {
   cursor: pointer; }
 
+hr {
+  border: solid #AFBAC5;
+  border-width: 1px 0 0; }
+
 .txtHighlight {
   color: #00a8ff; }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue Light", Arial, sans-serif;
+  margin: 0; }
+
 h1, h2 {
-  font-family: 'Helvetica Neue Light';
   font-weight: normal;
   color: #fff;
   padding-left: 15px; }
 
 h1.pageTitle {
-  font-size: 36px; }
+  font-size: 36px;
+  margin-top: 10px; }
 
 /*OJET Overwrites*/
 .oj-navigationlist-horizontal .oj-navigationlist-element, .oj-navigationlist-icon-only .oj-navigationlist-element {
@@ -63,12 +72,32 @@ h1.pageTitle {
   #topDrawer #offCanvasScope {
     height: 225px; }
     #topDrawer #offCanvasScope .analyticsWrapper {
-      background-color: #fff;
-      display: block;
-      float: left;
+      display: inline-block;
       margin: 0 10px;
-      padding: 10px;
-      color: #000; }
+      color: #000;
+      min-height: 180px;
+      min-width: 190px; }
+      #topDrawer #offCanvasScope .analyticsWrapper .analyticsContent {
+        background-color: #fff;
+        padding: 10px; }
+      #topDrawer #offCanvasScope .analyticsWrapper .active {
+        height: 7px;
+        background-color: #0572CE; }
+      #topDrawer #offCanvasScope .analyticsWrapper .inactive {
+        height: 7px; }
+      #topDrawer #offCanvasScope .analyticsWrapper .analyticsStore {
+        font-weight: bold; }
+      #topDrawer #offCanvasScope .analyticsWrapper .locTotalSummary {
+        text-align: right;
+        margin-top: 20px;
+        font-weight: bold;
+        font-size: 18px; }
+        #topDrawer #offCanvasScope .analyticsWrapper .locTotalSummary .fa {
+          vertical-align: middle; }
+      #topDrawer #offCanvasScope .analyticsWrapper .analyticsTotalgreen {
+        color: #22a451; }
+      #topDrawer #offCanvasScope .analyticsWrapper .analyticsTotalred {
+        color: #ff0000; }
     #topDrawer #offCanvasScope .oj-tabs-tab.oj-selected, #topDrawer #offCanvasScope .oj-tabs-tab.oj-active .oj-tabs-close-icon, #topDrawer #offCanvasScope .oj-tabs-tab.oj-active .oj-tabs-anchor {
       border: 0;
       background-color: #454545; }
@@ -109,7 +138,7 @@ html:not([dir="rtl"]) .oj-dialog-title {
 
 .oj-dialog-header-close-wrapper {
   width: 40px;
-  height: 35px;
+  height: 56px;
   margin: 0;
   padding: 0; }
   .oj-dialog-header-close-wrapper.oj-active .oj-dialog-close-icon {
@@ -117,24 +146,27 @@ html:not([dir="rtl"]) .oj-dialog-title {
 
 .oj-dialog-close-icon {
   color: #fff;
-  line-height: 35px;
+  line-height: 56px;
   width: 40px;
   border: 0;
   border-radius: 0; }
 
 .oj-dialog-header {
-  padding: 0px; }
+  padding: 0; }
   .oj-dialog-header h2 {
     color: #fff;
     font-size: 18px; }
   .oj-dialog-header .dialogHeaderText {
     display: inline-block;
-    margin: 3px; }
+    margin: 3px;
+    padding: 10px 0; }
   .oj-dialog-header img {
     vertical-align: middle; }
 
 .oj-dialog-body {
   font-size: 15px; }
+  .oj-dialog-body label {
+    font-size: 13px; }
   .oj-dialog-body .fa-check {
     color: #88b300; }
 
@@ -466,9 +498,10 @@ html:not([dir="rtl"]) .oj-dialog-title {
   height: 75px;
   width: 75px; }
 
-.empImg2 {
+.empImgDialog {
   border-radius: 50%;
-  padding-bottom: 10px; }
+  margin: 0 auto;
+  border: 1px solid #AFBAC5; }
 
 .empImgCol {
   max-width: 95px; }
@@ -482,24 +515,32 @@ html:not([dir="rtl"]) .oj-dialog-title {
 .searchTitle h2 {
   color: #000; }
 
-#dialogTitleId .dialogHeaderText {
-  padding: 0; }
-  #dialogTitleId .dialogHeaderText img {
-    height: 25px;
-    width: 25px; }
-  #dialogTitleId .dialogHeaderText a {
-    padding-left: 10px;
-    color: #fff;
-    border-left: 1px solid #fff;
-    margin-left: 10px;
-    font-size: 14px; }
-    #dialogTitleId .dialogHeaderText a .fa {
-      margin-left: 5px; }
+#dialogTitleId .dialogHeaderText img {
+  height: 25px;
+  width: 25px; }
+#dialogTitleId .dialogHeaderText a {
+  padding-left: 10px;
+  color: #fff;
+  border-left: 1px solid #fff;
+  margin-left: 10px;
+  font-size: 14px; }
+  #dialogTitleId .dialogHeaderText a .fa {
+    margin-left: 5px; }
 
+#empBasicDialogWindow #status {
+  text-align: center; }
 #empBasicDialogWindow .scheduleLayout {
-  align-self: flex-start; }
-#empBasicDialogWindow .empInfo .oj-flex-item {
-  margin: 0 20px 10px 0; }
+  align-self: flex-start;
+  margin: 0 5px; }
+#empBasicDialogWindow .empInfo {
+  margin-left: 10px; }
+  #empBasicDialogWindow .empInfo .oj-flex-item {
+    margin: 0 20px 10px 0; }
+#empBasicDialogWindow .weekSummary {
+  font-weight: bold; }
+  #empBasicDialogWindow .weekSummary .weekTotals {
+    font-size: 30px;
+    margin-top: 15px; }
 #empBasicDialogWindow label {
   font-weight: bold;
   text-transform: uppercase; }
@@ -536,27 +577,51 @@ html:not([dir="rtl"]) .oj-dialog-title {
     text-align: center;
     margin-top: 10px; }
   #empBasicDialogWindow #filmStripDiv .daySections {
-    border: 1px solid #000;
-    padding: 5px;
+    padding: 10px;
     margin: 10px 0;
-    background-color: #fff; }
+    background-color: #fff;
+    min-height: 150px;
+    -webkit-box-shadow: 0 5px 5px 0px #AFBAC5;
+    box-shadow: 0 5px 5px 0px #AFBAC5; }
   #empBasicDialogWindow #filmStripDiv .locSections {
     text-align: center; }
     #empBasicDialogWindow #filmStripDiv .locSections .locLabel {
       font-weight: bold; }
     #empBasicDialogWindow #filmStripDiv .locSections .jobSection {
-      border-top: 3px solid;
+      border-top: 10px solid;
       margin: 10px 0 0 0;
-      padding: 5px 0; }
+      padding: 5px 0;
+      text-align: left; }
+      #empBasicDialogWindow #filmStripDiv .locSections .jobSection .Bartender, #empBasicDialogWindow #filmStripDiv .locSections .jobSection .Server {
+        margin-top: 3px;
+        margin-right: 3px;
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale; }
+      #empBasicDialogWindow #filmStripDiv .locSections .jobSection .Bartender:before {
+        content: "\f000";
+        font-size: 30px; }
+      #empBasicDialogWindow #filmStripDiv .locSections .jobSection .Server:before {
+        content: "\f0f5";
+        font-size: 30px; }
+      #empBasicDialogWindow #filmStripDiv .locSections .jobSection .fa {
+        font-size: 30px;
+        margin-top: 3px; }
   #empBasicDialogWindow #filmStripDiv .dollarAmts {
     text-align: right; }
-  #empBasicDialogWindow #filmStripDiv .empAvailability {
-    text-align: center; }
-    #empBasicDialogWindow #filmStripDiv .empAvailability .prefLabel, #empBasicDialogWindow #filmStripDiv .empAvailability .notAvailLabel {
-      text-transform: uppercase;
-      font-weight: bold; }
-    #empBasicDialogWindow #filmStripDiv .empAvailability .notAvailLabel {
-      color: #ff0000; }
+  #empBasicDialogWindow #filmStripDiv .empAvailability .prefLabel, #empBasicDialogWindow #filmStripDiv .empAvailability .notAvailLabel {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: "Helvetica Neue Light", Arial, sans-serif;
+    font-size: 14px; }
+    #empBasicDialogWindow #filmStripDiv .empAvailability .prefLabel .fa, #empBasicDialogWindow #filmStripDiv .empAvailability .notAvailLabel .fa {
+      vertical-align: middle; }
+  #empBasicDialogWindow #filmStripDiv .empAvailability .notAvailLabel {
+    color: #ff0000; }
+  #empBasicDialogWindow #filmStripDiv .empAvailability .prefLabel {
+    color: #6E8598; }
 #empBasicDialogWindow .currentWeekHeaderArea {
   background-color: #F5F5F5;
   margin-top: 10px; }
@@ -574,11 +639,11 @@ html:not([dir="rtl"]) .oj-dialog-title {
     #empBasicDialogWindow .emailAndPringDiv ul li {
       display: inline-block; }
 #empBasicDialogWindow .weeklyTotalHeader {
-  border-top: 3px solid #04b404; }
+  border-top: 10px solid #04b404; }
 #empBasicDialogWindow .job1TotalHeader {
-  border-top: 3px solid #fe9a2e; }
+  border-top: 10px solid #fe9a2e; }
 #empBasicDialogWindow .job2TotalHeader {
-  border-top: 3px solid #2e2efe; }
+  border-top: 10px solid #2e2efe; }
 
 @media only screen and (min-width: 768px) {
   .searchFieldWrap {
@@ -587,6 +652,9 @@ html:not([dir="rtl"]) .oj-dialog-title {
   .empImg {
     height: 50px;
     width: 50px; }
+
+  .oj-dialog-header .dialogHeaderText {
+    padding: 10px; }
 
   #empBasicDialogWindow .currentWeekSummary {
     padding: 0; }
@@ -825,7 +893,6 @@ html:not([dir="rtl"]) .oj-dialog-title {
     width: 95%; }
 
   .oj-dialog-header h2 {
-    padding: 0;
     margin: 5px 10px 0 10px; } }
 .hamburger {
   margin-top: 4px; }

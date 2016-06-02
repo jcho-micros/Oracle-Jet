@@ -127,6 +127,7 @@ $sideNavLinksBlue: #045fab;
 // font family 
 
 $fontFamily: 'Helvetica Neue Light', Arial, sans-serif;
+$fontFamily2: 'Helvetica Neue Medium', Arial, sans-serif;
 
 //Text
 $BodyTextColor:       $black; 
@@ -180,7 +181,7 @@ $job1TotalHeader: $medOrange3;
 $job2TotalHeader: $medBlue3;
 $mobileScheduleBckgColor: $lightGray2;
 $dayHeaderBckgColor: $lightGray2;
-$daySectionsBorderColor: $black;
+$daySectionsBorderColor: $gray;
 $daySectionsBckgColor: $white;
 $currentWeekSummaryBorderColor: $gray;
 
@@ -191,6 +192,9 @@ $topOffCanvasTabSelected: $darkGrayOld;
 $topOffCanvasTabTextColor: $white;
 $topOffCanvasAnalyticsBckgColor: $white;
 $topOffCanvasAnalyticsText: $black;
+$topOffCanvasRevText: $brightGreen;
+$topOffCanvasCostText: $brightRed;
+$offCanvasAnalyticsActiveLocColor: $lightBlue; //Notes to Dev: need color here
 
 //Off Canvas Left
 $leftOffCanvasDesktopBckg: $sideNavBckColor;
@@ -313,6 +317,7 @@ html,body{
     margin: 0;
     padding: 0;
     font-size:14px;
+    font-family: $fontFamily2;
 }
 body{
     background-image:none;
@@ -323,18 +328,26 @@ a{
     cursor: pointer;
 }
 
+hr {
+    border: solid $gray;
+    border-width: 1px 0 0;
+}
 .txtHighlight{
     color: $highlightTxtColor;
 }
 //General Header Tags
+h1, h2, h3, h4, h5, h6{
+    font-family: $fontFamily;
+    margin:0;
+}
 h1, h2{
-    font-family: 'Helvetica Neue Light';
     font-weight: normal;
     color: $headerTextColor;
     padding-left: 15px;
 }
 h1.pageTitle{
     font-size: 36px;
+    margin-top: 10px;
 }
 
 /*OJET Overwrites*/
@@ -357,6 +370,7 @@ h1.pageTitle{
 }
 /*Page layouts*/
 //Top Off Canvas
+
 #topDrawer{
     background-color: $topOffCanvasTabBckg;
     outline-color:transparent;
@@ -369,13 +383,44 @@ h1.pageTitle{
     }
     #offCanvasScope{
         height:225px;
+
         .analyticsWrapper{
-            background-color: $topOffCanvasAnalyticsBckgColor;
-            display:block;
-            float:left;
+            //background-color: $topOffCanvasAnalyticsBckgColor;
+            display:inline-block;
             margin:0 10px;
-            padding:10px;
+            //padding:10px;
             color: $topOffCanvasAnalyticsText;
+            min-height: 180px;
+            min-width: 190px;
+            .analyticsContent{
+                background-color: $topOffCanvasAnalyticsBckgColor;
+                padding:10px;
+            }
+            .active{
+                height:7px;
+                background-color: $offCanvasAnalyticsActiveLocColor;
+            }
+            .inactive{
+                height: 7px;
+            }
+            .analyticsStore{
+                font-weight:bold;
+            }
+            .locTotalSummary{
+                text-align: right;
+                margin-top:20px;
+                font-weight:bold;
+                font-size: 18px;
+                .fa{
+                     vertical-align: middle;
+                }
+            }
+            .analyticsTotalgreen{
+                color:$topOffCanvasRevText;
+            }
+            .analyticsTotalred{
+                color: $topOffCanvasCostText;
+            }
         }
         .oj-tabs-tab.oj-selected, .oj-tabs-tab.oj-active .oj-tabs-close-icon, .oj-tabs-tab.oj-active .oj-tabs-anchor{
             border:0;
@@ -427,7 +472,7 @@ html:not([dir="rtl"]) .oj-dialog-title{
 }
 .oj-dialog-header-close-wrapper{
     width:40px;
-    height:35px;
+    height:56px;
     margin:0;
     padding:0;
     &.oj-active .oj-dialog-close-icon {
@@ -436,13 +481,13 @@ html:not([dir="rtl"]) .oj-dialog-title{
 }
 .oj-dialog-close-icon{
     color: $dialogAccentText;
-    line-height: 35px;
+    line-height: 56px;
     width:40px;
     border:0;
     border-radius:0;
 }
 .oj-dialog-header{
-    padding:0px;
+    padding:0;
    
     h2{
         color: $dialogTitleText;
@@ -451,6 +496,7 @@ html:not([dir="rtl"]) .oj-dialog-title{
     .dialogHeaderText{
         display:inline-block;
         margin:3px;
+        padding:10px 0;
     }
     img{
         vertical-align: middle;
@@ -459,6 +505,9 @@ html:not([dir="rtl"]) .oj-dialog-title{
 
 .oj-dialog-body {
     font-size:15px;
+    label{
+        font-size:13px;
+    }
     .fa-check{
         color: $dialogIconColor;
     }
@@ -756,9 +805,10 @@ html:not([dir="rtl"]) .oj-dialog-title{
     height:75px;
     width:75px;
 }
-.empImg2{
+.empImgDialog{
     border-radius:50%;
-    padding-bottom:10px;
+    margin:0 auto;
+    border:1px solid $gray;
 }
 .empImgCol{
     max-width:95px;
@@ -777,7 +827,6 @@ html:not([dir="rtl"]) .oj-dialog-title{
 }
 #dialogTitleId {
     .dialogHeaderText{
-        padding:0;
         img{
             height:25px;
             width:25px;
@@ -796,12 +845,24 @@ html:not([dir="rtl"]) .oj-dialog-title{
     }
 }
 #empBasicDialogWindow {
+    #status{
+        text-align: center;
+    }
     .scheduleLayout{
         align-self: flex-start;
+        margin:0 5px;
     }
     .empInfo{
+        margin-left:10px;
         .oj-flex-item{
             margin:0 20px 10px 0;
+        }
+    }
+    .weekSummary{
+        font-weight:bold;
+        .weekTotals{
+            font-size: 30px;
+            margin-top: 15px;
         }
     }
     label{
@@ -849,10 +910,13 @@ html:not([dir="rtl"]) .oj-dialog-title{
             margin-top:10px;
         }
         .daySections{
-            border:1px solid $daySectionsBorderColor;
-            padding:5px;
+            //border:1px solid $daySectionsBorderColor;
+            padding:10px;
             margin:10px 0;
             background-color: $daySectionsBckgColor;
+            min-height:150px;
+            -webkit-box-shadow: 0 5px 5px 0px $daySectionsBorderColor;
+            box-shadow: 0 5px 5px 0px $daySectionsBorderColor;
         }
         .locSections{
             text-align: center;
@@ -860,22 +924,55 @@ html:not([dir="rtl"]) .oj-dialog-title{
                 font-weight: bold;
             }
             .jobSection{
-                border-top:3px solid;
+                border-top:10px solid;
                 margin: 10px 0 0 0;
                 padding: 5px 0;
+                text-align: left;
+                .Bartender, .Server{
+                    margin-top: 3px;
+                    margin-right:3px;
+                    display: inline-block;
+                    font: normal normal normal 14px/1 FontAwesome;
+                    text-rendering: auto;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                }
+                .Bartender{
+                     &:before{
+                        content: "\f000";
+                        font-size: 30px;
+                    }
+                }
+                .Server{
+                     &:before{
+                        content: "\f0f5";
+                        font-size: 30px;
+                    }
+                }
+                .fa{
+                    font-size: 30px;
+                    margin-top: 3px;
+                }
             }
         }
         .dollarAmts{
             text-align:right;
         }
         .empAvailability{
-            text-align:center;
             .prefLabel, .notAvailLabel{
                 text-transform: uppercase;
                 font-weight:bold;
+                font-family: $fontFamily;
+                font-size:14px;
+                .fa{
+                    vertical-align: middle;
+                }
             }
             .notAvailLabel{
                 color: $brightRed;
+            }
+            .prefLabel{
+                color: $medGray1;
             }
         }
     }
@@ -903,13 +1000,13 @@ html:not([dir="rtl"]) .oj-dialog-title{
     }
 
     .weeklyTotalHeader{
-        border-top:3px solid $weeklyTotalHeader;
+        border-top:10px solid $weeklyTotalHeader;
     }
     .job1TotalHeader{
-        border-top:3px solid $job1TotalHeader;
+        border-top:10px solid $job1TotalHeader;
     }
     .job2TotalHeader{
-        border-top:3px solid $job2TotalHeader;
+        border-top:10px solid $job2TotalHeader;
     }
 }
 //.searchWindow{
@@ -934,6 +1031,11 @@ html:not([dir="rtl"]) .oj-dialog-title{
     .empImg{
         height:50px;
         width:50px;
+    }
+    .oj-dialog-header{
+        .dialogHeaderText{
+            padding:10px;
+        }
     }
     #empBasicDialogWindow {
          .currentWeekSummary{
@@ -1014,7 +1116,6 @@ html:not([dir="rtl"]) .oj-dialog-title{
         width:95%;
     }
     .oj-dialog-header h2{
-        padding:0;
         margin: 5px 10px 0 10px;
     }
 }

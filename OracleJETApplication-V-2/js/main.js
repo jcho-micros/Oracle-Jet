@@ -100,7 +100,7 @@ require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', '
                         "locID" : 1,
                         "name" : "Baltimore",
                         "cityname" : "SAINT PAUL STREET",
-                        "region" : "SAINT PAUL ST",
+                        "region" : "East Coast",
                         "dailySales" : "123,234",
                         "laborCosts" : "12,543"
                     },
@@ -108,7 +108,7 @@ require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', '
                         "locID" : 2,
                         "name" : "Washington D.C.",
                         "cityname" : "13TH & PENNSYLVANIA",
-                        "region" : "PENNSYLVANIA AVE",
+                        "region" : "East Coast",
                         "dailySales" : "223,234",
                         "laborCosts" : "22,543"
                     }

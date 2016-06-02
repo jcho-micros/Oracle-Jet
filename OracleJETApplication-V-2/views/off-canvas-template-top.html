@@ -1,31 +1,41 @@
 <div id="offCanvasScope">
-    <!--<div id="vtabs" data-bind="ojComponent:{component: 'ojTabs', orientation: 'vertical'}">
+    <div id="vtabs" data-bind="ojComponent:{component: 'ojTabs', orientation: 'vertical'}">
         <ul class="regionReportUl">
             <li class="regionReportLi"><span>Favorites</span></li>
             <li class="regionReportLi"><span>Recently Viewed</span></li>
             <li class="regionReportLi"><span>Browse</span></li>
             <li class="regionReportLi"><span>Search</span></li>
-        </ul>-->
+        </ul>
         <div id="tabs-1" class="regionTabSections" style="padding-top: 10px; ">
-            <!--<p>Vertical Tab 1.</p>-->
-            <!-- ko foreach: $root.userData().assignedLocations-->
-            <div class="oj-flex analyticsWrapper" data-bind="click: $root.updateActiveLocation">
-                <div class="analyticsRegion" data-bind="text: region"></div>
-                <div class="analyticsStore" data-bind="text: name"></div>
-                <div class="analyticsCity" data-bind="text: cityname"></div>
-                <div class="analyticsTotalgreen oj-md-12">
-                        <span class="dailySalesLabel">Daily Sales:</span> <span data-bind="text: dailySales"></span>
-                        <i class="fa fa-arrow-circle-o-up"></i>
-                </div>
-                <div class="analyticsTotalred oj-flex-item">
-                        <span class="dailyLaborCostLabel">Daily Labor Cost:</span> <span data-bind="text: laborCosts"></span>
-                        <i class="fa fa-arrow-circle-o-down"></i>
-                </div>
-            </div>
-             <!-- /ko -->
+                         <!-- ko foreach: $root.userData().assignedLocations-->
+                        <div class="analyticsWrapper" data-bind="click: $root.updateActiveLocation">
+                            <div data-bind="css: ((locID == $root.activeLocationId()) ? 'active' : 'inactive')"></div>
+                            <div class="analyticsContent">
+                                <div class="analyticsStore" data-bind="text: name"></div>
+                                <div class="analyticsCity" data-bind="text: cityname"></div>
+                                <div class="analyticsRegion" data-bind="text: region"></div>
 
+                                <div class="locTotalSummary">
+                                    <div class="analyticsTotalgreen">
+                                            <!--<span class="dailySalesLabel">Daily Sales:</span>-->
+                                            <span data-bind="text: dailySales"></span>
+                                            <i class="fa fa-arrow-circle-o-up"></i>
+                                    </div>
+                                    <div class="analyticsTotalred">
+                                            <!--<span class="dailyLaborCostLabel">Daily Labor Cost:</span>-->
+                                            <span data-bind="text: laborCosts"></span>
+                                            <i class="fa fa-arrow-circle-o-down"></i>
+                                    </div>
+                                </div>
+                                <div class="viewedStatus">
+                                    <span data-bind="visible: !(locID == $root.activeLocationId())">Viewed x days/hours ago</span>
+                                    <span data-bind="visible: (locID == $root.activeLocationId())"><i><strong>Currently Viewing</strong></i></span>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- /ko -->
         </div>
-       <!-- <div id="tabs-2" class="regionTabSections">
+        <div id="tabs-2" class="regionTabSections">
             <p>Vertical Tab 2.</p>
         </div> 
 
@@ -36,5 +46,5 @@
         <div id="tabs-4" class="regionTabSections">
             <p>Vertical Tab 4.</p>
         </div>
-    </div>-->
+    </div>
 </div>

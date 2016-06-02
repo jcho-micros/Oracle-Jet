@@ -28,19 +28,25 @@
         <div class="oj-flex">
             <div class="oj-flex-item">
                 <div class="oj-flex oj-flex-items-pad oj-sm-flex-items-1">
-                        <div class="oj-flex-item">
-                        <img data-bind="attr: {src: getPhoto(basicEmpInfo().empId)}" class="empImg2" />
+                    <div class="oj-flex-item">
+                            <div class="oj-flex">
+                                <img data-bind="attr: {src: getPhoto(basicEmpInfo().empId)}" class="empImgDialog" />
+                            </div>
+                            <div class="oj-flex">
+<!--                            <label for="status">STATUS</label>-->
+                                <span id="status" data-bind="text: basicEmpInfo().hireStatus" class="oj-flex-item"></span>
+                            </div>
                     </div>
 
+<!--
                     <div class="oj-flex-item">
                         <label for="name">NAMEs</label>
                         <br /><span id="name" data-bind="text: basicEmpInfo().firstName + ' ' + basicEmpInfo().lastName"></span>
                         <br />
                         <br />
-                        <label for="status">STATUS</label>
-                        <br /><span id="status" data-bind="text: basicEmpInfo().hireStatus"></span>
 
                     </div>
+-->
 
                     <div class="oj-flex-item">
                         <label for="homestore">HOME STORE</label>
@@ -52,10 +58,6 @@
                         <br /><span id="hiredate" data-bind="text: new Date(basicEmpInfo().hireDate).getYear();"></span>
 
                     </div>
-                </div>
-            </div>
-            <div class="oj-flex-item">
-                <div class="oj-flex oj-flex-items-pad oj-sm-flex-items-1">
                     <div class="oj-flex-item">
                         <label for="contact">CONTACT</label>
                         <br /><span id="contact" data-bind="text: basicEmpInfo().mobile + ' mobile' "></span>
@@ -67,6 +69,11 @@
                         <br /><span id="emecontact" data-bind="text: basicEmpInfo().emergencyName + ' ('+basicEmpInfo().relationship+ ') '+basicEmpInfo().emergencyPhone"></span>
 
                     </div>
+                </div>
+            </div>
+            <div class="oj-flex-item">
+                <div class="oj-flex oj-flex-items-pad oj-sm-flex-items-1">
+
 
                     <div class="oj-flex-item">
                         <label for="clockedin">Clocked in</label>
@@ -77,7 +84,6 @@
                         <br />
                         <br /><a href="#">view all employees <i class="fa fa-arrow-circle-right"></i></a>
                     </div>
-
                     <div class="oj-flex-item">
                         <label for="availability">AVAILABILITY (Days & Time)</label>
                         <br />
@@ -90,6 +96,9 @@
                             </div>
                         </div>
                         <br />
+                    </div>
+                    <div class="oj-flex-item">
+
                         <label for="preferred"><strong>PREFERRED</strong></label>
                         <div data-bind="foreach: preferredDaysAndTimes()">
                             <div class="oj-flex-item">
@@ -120,23 +129,23 @@
         <div class="oj-flex weekSummary">
             <div class="oj-flex-item currentWeekSummary weeklyTotalHeader">
                 <div>
-                    <div>WEEKLY TOTALS</div>
+                    <h3>WEEKLY TOTALS</h3>
                     <div>$126.75 (18.5 hours) | $120.00 tips</div>
-                    <div>$246.75</div>
+                    <div class="weekTotals">$246.75</div>
                 </div>
             </div>
             <div class="oj-flex-item currentWeekSummary job1TotalHeader">
                 <div>
-                    <div>BARTENDER TOTALS</div>
+                    <h3>BARTENDER TOTALS</h3>
                     <div>$126.75 (18.5 hours) | $120.00 tips</div>
-                    <div>$246.75</div>
+                    <div class="weekTotals">$246.75</div>
                 </div>
             </div>
             <div class="oj-flex-item currentWeekSummary job2TotalHeader">
                 <div>
-                    <div>SERVER TOTALS</div>
+                    <h3>SERVER TOTALS</h3>
                     <div>$126.75 (18.5 hours) | $120.00 tips</div>
-                    <div>$246.75</div>
+                    <div class="weekTotals">$246.75</div>
                 </div>
             </div>
         </div>
@@ -179,7 +188,11 @@
                                     <hr/>
                                     <div data-bind="visible: (preferred === 'yes')" class="empAvailability">
                                         <div class="oj-flex">
-                                            <span class="oj-flex-item prefLabel">PREFERRED</span>
+
+                                            <span class="oj-flex-item prefLabel">
+                                                <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                                                PREFERRED
+                                            </span>
                                         </div>
                                         <div class="oj-flex">
                                             <span data-bind="text: preferredtime" class="oj-flex-item"></span>
@@ -187,7 +200,10 @@
                                     </div>
                                     <div data-bind="visible: (unavailable === 'yes')" class="empAvailability">
                                         <div class="oj-flex">
-                                            <span class="notAvailLabel oj-flex-item">NOT AVAILABLE</span>
+                                            <span class="notAvailLabel oj-flex-item">
+                                                <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                                                NOT AVAILABLE
+                                            </span>
                                         </div>
                                         <div class="oj-flex">
                                             <span data-bind="text: unavialbaletime" class="oj-flex-item"></span>
@@ -201,11 +217,16 @@
                                             <br /><span data-bind="text: address"> </span>
                                         </div>
                                         <div data-bind="foreach: workDetails;">
-                                            <div data-bind=" style: { 'border-color': backgroundcolor}" class="jobSection">
-                                                <span data-bind="text: jobtitle" class="locLabel"> </span>
-                                                <br /><span data-bind="text: (jobtitle === 'Not Scheduled' ? '' : workStation)"> </span>
-                                                <br /><span data-bind="text: (jobtitle === 'Not Scheduled' ? '' : time)"> </span>
-                                                <br /><span data-bind="text: (jobtitle === 'Not Scheduled' ? '' : (hours + ' hours'))"> </span>
+
+                                            <div data-bind=" style: { 'border-color': backgroundcolor}" class="jobSection oj-flex">
+                                                <!--Notes to Dev: Would be good to have class name in json for each job-->
+                                                <span data-bind="css: jobtitle" class="oj-flex-item"></span>
+                                                <span class="oj-flex-item">
+                                                   <span data-bind="text: jobtitle" class="locLabel"> </span>
+                                                    <br /><span data-bind="text: (jobtitle === 'Not Scheduled' ? '' : workStation)"> </span>
+                                                    <br /><span data-bind="text: (jobtitle === 'Not Scheduled' ? '' : time)"> </span>
+                                                    <br /><span data-bind="text: (jobtitle === 'Not Scheduled' ? '' : (hours + ' hours'))"> </span>
+                                                </span>
                                             </div>
                                         </div>
                                         <br />
