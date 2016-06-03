@@ -116,6 +116,9 @@ require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', '
             };
             self.userData = ko.observable(userData);
 
+            self.currentNavArrowPlacement = ko.observable("adjacent");
+            self.currentNavArrowVisibility = ko.observable("auto");
+
             //Active Store location
             self.activeLocation = ko.observable(userData.homeLocationName);
             self.activeLocationId = ko.observable(userData.homeLocationID);

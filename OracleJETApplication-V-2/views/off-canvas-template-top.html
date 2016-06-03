@@ -1,13 +1,33 @@
 <div id="offCanvasScope">
     <div id="vtabs" data-bind="ojComponent:{component: 'ojTabs', orientation: 'vertical'}">
         <ul class="regionReportUl">
-            <li class="regionReportLi"><span>Favorites</span></li>
-            <li class="regionReportLi"><span>Recently Viewed</span></li>
-            <li class="regionReportLi"><span>Browse</span></li>
-            <li class="regionReportLi"><span>Search</span></li>
+            <li class="regionReportLi">
+                <span class="oj-sm-only-hide">Favorites</span>
+                <span class="oj-md-hide"><i class="fa fa-star" aria-hidden="true"></i></span>
+            </li>
+            <li class="regionReportLi">
+                <span class="oj-sm-only-hide">Recently Viewed</span>
+                <span class="oj-md-hide"><i class="fa fa-hourglass-half" aria-hidden="true"></i></span>
+            </li>
+            <li class="regionReportLi">
+                <span class="oj-sm-only-hide">Browse</span>
+                <span class="oj-md-hide"><i class="fa fa-eye" aria-hidden="true"></i></span>
+            </li>
+            <li class="regionReportLi">
+                <span class="oj-sm-only-hide">Search</span>
+                <span class="oj-md-hide"><i class="fa fa-search" aria-hidden="true"></i></span>
+            </li>
         </ul>
         <div id="tabs-1" class="regionTabSections" style="padding-top: 10px; ">
+             <div id="filmStripDiv">
+                <div id="filmStrip"
+                     aria-label="Set of chemicals"
+                     data-bind="ojComponent: {
+                       component: 'ojFilmStrip',
+                       arrowPlacement: $root.currentNavArrowPlacement,
+                       arrowVisibility: $root.currentNavArrowVisibility}">
                          <!-- ko foreach: $root.userData().assignedLocations-->
+
                         <div class="analyticsWrapper" data-bind="click: $root.updateActiveLocation">
                             <div data-bind="css: ((locID == $root.activeLocationId()) ? 'active' : 'inactive')"></div>
                             <div class="analyticsContent">
@@ -34,9 +54,11 @@
                             </div>
                         </div>
                          <!-- /ko -->
+                           </div>
+                    </div>
         </div>
         <div id="tabs-2" class="regionTabSections">
-            <p>Vertical Tab 2.</p>
+           <p>Vertical Tab 2.</p>
         </div> 
 
         <div id="tabs-3" class="regionTabSections">

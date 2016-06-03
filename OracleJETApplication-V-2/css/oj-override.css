@@ -71,6 +71,8 @@ h1.pageTitle {
     text-decoration: none !important; }
   #topDrawer #offCanvasScope {
     height: 225px; }
+    #topDrawer #offCanvasScope #vtabs .fa {
+      font-size: 16px; }
     #topDrawer #offCanvasScope .analyticsWrapper {
       display: inline-block;
       margin: 0 10px;
