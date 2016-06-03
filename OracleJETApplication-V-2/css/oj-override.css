@@ -47,6 +47,9 @@ h1.pageTitle {
 .oj-navigationlist-horizontal .oj-navigationlist-element, .oj-navigationlist-icon-only .oj-navigationlist-element {
   margin: 0; }
 
+a.oj-navigationlist-item-content.oj-navigationlist-item-no-icon {
+  padding: 0; }
+
 .oj-navigationlist-item {
   border-width: 0 !important; }
 
@@ -534,10 +537,10 @@ html:not([dir="rtl"]) .oj-dialog-title {
 #empBasicDialogWindow .scheduleLayout {
   align-self: flex-start;
   margin: 0 5px; }
+#empBasicDialogWindow .empInfo .oj-flex-item, #empBasicDialogWindow .empContactInfo .oj-flex-item {
+  margin: 0 20px 10px 0; }
 #empBasicDialogWindow .empInfo {
   margin-left: 10px; }
-  #empBasicDialogWindow .empInfo .oj-flex-item {
-    margin: 0 20px 10px 0; }
 #empBasicDialogWindow .weekSummary {
   font-weight: bold; }
   #empBasicDialogWindow .weekSummary .weekTotals {
@@ -554,22 +557,8 @@ html:not([dir="rtl"]) .oj-dialog-title {
     display: inline-block; }
     #empBasicDialogWindow label.empStatus.clockedIn {
       color: #22a451; }
-      #empBasicDialogWindow label.empStatus.clockedIn::before {
-        height: 10px;
-        width: 10px;
-        background-color: #22a451;
-        content: '';
-        display: inline-block;
-        margin-right: 5px; }
     #empBasicDialogWindow label.empStatus.clockedOut {
       color: #ff0000; }
-      #empBasicDialogWindow label.empStatus.clockedOut::before {
-        height: 10px;
-        width: 10px;
-        background-color: #ff0000;
-        content: '';
-        display: inline-block;
-        margin-right: 5px; }
 #empBasicDialogWindow #filmStripDiv {
   background-color: #F5F5F5; }
   #empBasicDialogWindow #filmStripDiv .dayTotals {

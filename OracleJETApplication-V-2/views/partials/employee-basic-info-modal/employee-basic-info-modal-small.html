@@ -48,7 +48,7 @@
                 </div>
             </div>
         <hr>
-        <div class="oj-flex empInfo">
+        <div class="oj-flex empContactInfo">
             <div class="oj-flex-item">
                 <label for="contact">CONTACT</label>
                 <br /><span id="contact" class="txtHighlight" data-bind="text: basicEmpInfo().mobile + ' mobile' "></span>
@@ -63,7 +63,9 @@
         <hr>
         <div class="oj-flex">
             <div class="oj-flex-item">
-                <label for="clockedin" class="empStatus clockedIn">Clocked in</label>
+                <label for="clockedin" class="empStatus clockedIn">
+                    <i class="fa fa-check-circle" aria-hidden="true"></i> Clocked in
+                </label>
                 <br />
                 <label for="clockedin">LAST CLOCKED IN</label>
                 <br /><span id="clockedin" class="txtHighlight" data-bind="text: basicEmpInfo().homeStore"></span>
@@ -126,7 +128,7 @@
 
                         <!-- ko foreach:formttedCurrentScheduledDateValues -->
 
-                        <div class="schedule-filmstrip-item" data-bind="style: {display:  $parent.getItemInitialDisplayDialog($index())}">
+                        <div class="schedule-filmstrip-item scheduleLayout" data-bind="style: {display:  $parent.getItemInitialDisplayDialog($index())}">
                             <div>
                                 <div class="dayHeader">
                                     <span data-bind="text: startDate"></span>

@@ -28,26 +28,15 @@
         <div class="oj-flex">
             <div class="oj-flex-item">
                 <div class="oj-flex oj-flex-items-pad oj-sm-flex-items-1">
+
                     <div class="oj-flex-item">
                             <div class="oj-flex">
                                 <img data-bind="attr: {src: getPhoto(basicEmpInfo().empId)}" class="empImgDialog" />
                             </div>
                             <div class="oj-flex">
-<!--                            <label for="status">STATUS</label>-->
                                 <span id="status" data-bind="text: basicEmpInfo().hireStatus" class="oj-flex-item"></span>
                             </div>
                     </div>
-
-<!--
-                    <div class="oj-flex-item">
-                        <label for="name">NAMEs</label>
-                        <br /><span id="name" data-bind="text: basicEmpInfo().firstName + ' ' + basicEmpInfo().lastName"></span>
-                        <br />
-                        <br />
-
-                    </div>
--->
-
                     <div class="oj-flex-item">
                         <label for="homestore">HOME STORE</label>
                         <br /><span id="homestore" data-bind="text: basicEmpInfo().homeStore"></span>
@@ -69,12 +58,6 @@
                         <br /><span id="emecontact" data-bind="text: basicEmpInfo().emergencyName + ' ('+basicEmpInfo().relationship+ ') '+basicEmpInfo().emergencyPhone"></span>
 
                     </div>
-                </div>
-            </div>
-            <div class="oj-flex-item">
-                <div class="oj-flex oj-flex-items-pad oj-sm-flex-items-1">
-
-
                     <div class="oj-flex-item">
                         <label for="clockedin">Clocked in</label>
                         <br />
@@ -85,7 +68,7 @@
                         <br /><a href="#">view all employees <i class="fa fa-arrow-circle-right"></i></a>
                     </div>
                     <div class="oj-flex-item">
-                        <label for="availability">AVAILABILITY (Days & Time)</label>
+                        <label for="availability">AVAILABILITY (Days &amp; Time)</label>
                         <br />
                         <label for="unavailable"><strong>UNAVAILABLE</strong></label>
                         <div data-bind="foreach: unavailableDaysAndTimes()">
