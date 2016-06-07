@@ -202,7 +202,11 @@ define([
                                     if(item.jobName !== 'Not Assigned') 
                                         return item.jobName;})).sort();
                             }));
+                            
                             $("#empBasicDialogWindow").ojDialog("open");
+                           
+                            //setTimeout(function(){$( "#filmStrip" ).ojFilmStrip( "option", "maxItemsPerPage", 5)}, 1000);
+                             $("#filmStrip").ojFilmStrip("refresh");
                             resolve(true);
                         }).fail(function (error) {
                             console.log('Error: ' + error.message);

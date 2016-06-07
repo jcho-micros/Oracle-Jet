@@ -107,8 +107,6 @@
       "groupEvents" : 8,
       "groupTrainings" : 13,
       "groupTimeOff" : 9,
-      
-      
       "formattedCurrentScheduledDates" : [ {
               "startDate" : "SUN OCT 17",
               "totalEarning" : "$100",

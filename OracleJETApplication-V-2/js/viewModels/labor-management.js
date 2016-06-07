@@ -23,6 +23,7 @@ define([
     'ojs/ojtabs',
     'ojs/ojcheckboxset',
     'ojs/ojradioset',
+    'ojs/ojfilmstrip',
     'ojs/ojmenu'
 ], function (oj, ko, data) {
     
@@ -390,7 +391,9 @@ define([
         });
         
         
-        
+        self.loadOverview = function() {
+            self.router.go('overview');
+        }
 
         self.loadPersonPage = function () {
             var emp = self.basicEmpInfo();
@@ -480,16 +483,15 @@ define([
         
         self.changeTabContent = function(state){
                 self.selectedTab(state);
-            
         };
         
         self.empDayScheduleOpen = function(){
             return new Promise(function(resolve, reject) {
                 data.fetchData("js/data/employeesjobschedules.json").then(function (schedulecontent) {
-                            
                             self.jobSchedules(schedulecontent.jobschedules);
                             self.selectedTab('Day');
-                            $("#laborScheduleDailogWindow").ojDialog("open");
+                            self.router.go('schedules-timecards');
+                            // $("#laborScheduleDailogWindow").ojDialog("open");
                             resolve(true);
                         }).fail(function (error) {
                             console.log('Error: ' + error.message);
