@@ -100,7 +100,7 @@ require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', '
                         "locID" : 1,
                         "name" : "Baltimore",
                         "cityname" : "SAINT PAUL STREET",
-                        "region" : "East Coast",
+                        "region" : "SAINT PAUL ST",
                         "dailySales" : "123,234",
                         "laborCosts" : "12,543"
                     },
@@ -108,16 +108,13 @@ require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', '
                         "locID" : 2,
                         "name" : "Washington D.C.",
                         "cityname" : "13TH & PENNSYLVANIA",
-                        "region" : "East Coast",
+                        "region" : "PENNSYLVANIA AVE",
                         "dailySales" : "223,234",
                         "laborCosts" : "22,543"
                     }
                 ]
             };
             self.userData = ko.observable(userData);
-
-            self.currentNavArrowPlacement = ko.observable("adjacent");
-            self.currentNavArrowVisibility = ko.observable("auto");
 
             //Active Store location
             self.activeLocation = ko.observable(userData.homeLocationName);
@@ -225,7 +222,7 @@ require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', '
                         self.currentSectionState(data.value);
                     });
                 }
-            };
+            }; 
             self.topDrawer =
             {
                 "displayMode": "push",
@@ -239,6 +236,9 @@ require(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojrouter', '
                 $("#topDrawer").on("ojbeforeclose", function(event, offcanvas) {
                     $('.globalStoreLink').removeClass('active');
                 });
+                $( "#vtabs" ).ojTabs( "refresh" );
+                $( "#vtabs" ).ojTabs( { "selected": "tabs-0" } );
+                setTimeout(function(){$( "#vtabs" ).ojTabs( { "selected": "tabs-1" } )}, 100);
                 return oj.OffcanvasUtils.toggle(self.topDrawer);
             };
             
