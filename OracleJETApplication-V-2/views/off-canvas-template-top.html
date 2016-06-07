@@ -1,6 +1,10 @@
 <div id="offCanvasScope">
     <div id="vtabs" data-bind="ojComponent:{component: 'ojTabs', orientation: 'vertical'}">
         <ul class="regionReportUl">
+            <li class="regionReportLi" style="visibility: hidden; height: 1px;">
+                <span class="oj-sm-only-hide">Favorites</span>
+                <span class="oj-md-hide"><i class="fa fa-star" aria-hidden="true"></i></span>
+            </li>
             <li class="regionReportLi">
                 <span class="oj-sm-only-hide">Favorites</span>
                 <span class="oj-md-hide"><i class="fa fa-star" aria-hidden="true"></i></span>
@@ -18,6 +22,9 @@
                 <span class="oj-md-hide"><i class="fa fa-search" aria-hidden="true"></i></span>
             </li>
         </ul>
+         <div id="tabs-0" class="regionTabSections" style="visibility: hidden">
+           <p>Vertical Tab 0.</p>
+        </div> 
         <div id="tabs-1" class="regionTabSections" style="padding-top: 10px; ">
              <div id="filmStripDiv">
                 <div id="filmStrip"
