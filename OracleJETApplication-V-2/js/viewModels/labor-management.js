@@ -4,7 +4,8 @@ define([
     'data/data',
     'hammerjs',
     'moment',
-    'ojs/ojknockout', 
+    'ojs/ojknockout',
+    'ojs/ojoffcanvas',
     'ojs/ojrouter', 
     'ojs/ojnavigationlist', 
     'ojs/ojconveyorbelt', 
@@ -80,6 +81,23 @@ define([
             {id: 'excel',    label: 'Excel'}
         ];
         
+        self.innerDrawer =
+        {
+            "displayMode": "overlay",
+            "selector": "#innerDrawer"
+        };
+
+        // toggle show/hide offcanvas
+        self.toggleInner = function()
+        {
+            return oj.OffcanvasUtils.toggle(self.innerDrawer);
+        };
+
+        self.closeInner = function()
+        {
+            return oj.OffcanvasUtils.close(self.innerDrawer);
+        };
+
         self.downloadoption = ko.observable("pdf");
         self.personProfile=ko.observableArray([]);
         self.currentScheduledDates=ko.observableArray([]);
@@ -200,68 +218,68 @@ define([
         self.autoDialog("&trueAddEmp", "#addEmpStatusDialog");
         //Search Feature
         
-        self.empBasicViewOpen =  function(emp) {
-            self.basicEmpInfo(emp);
-            return new Promise(function(resolve, reject) {
-                        data.fetchData("js/data/employee" + emp.empId + ".json").then(function (person) {
-                            self.personProfile(person);  
-                            
-                            self.currentScheduledDates(self.personProfile().currentScheduledDates);
-                            self.formttedCurrentScheduledDateValues(self.personProfile().formattedCurrentScheduledDates);
-                            
-                            self.currentScheduledDateValues(ko.dependentObservable(function() {
-                               
-                                return ko.utils.arrayGetDistinctValues(
-                                        ko.utils.arrayMap(self.currentScheduledDates(), 
-                                function(item){ 
-                                    var dateValue = new Date(item.currentDayStart);
-                                        return dateValue.getDate() + ' ' +monthNames[dateValue.getMonth()] + ' ' +weekday[dateValue.getDay()];
-                                    })).sort();
-                            }));
-                            
-                            
-                            
-                            self.currentScheduledDateValues(ko.dependentObservable(function() {
-                               
-                                return ko.utils.arrayGetDistinctValues(
-                                        ko.utils.arrayMap(self.currentScheduledDates(), 
-                                function(item){ 
-                                    var dateValue = new Date(item.currentDayStart);
-                                        return dateValue.getDate() + ' ' +monthNames[dateValue.getMonth()] + ' ' +weekday[dateValue.getDay()];
-                                    })).sort();
-                            }));
-                            self.daysandtimes(self.personProfile().daysandtimes);
-                            self.unavailableDaysAndTimes(ko.dependentObservable(function() {
-                                return ko.utils.arrayFilter(self.daysandtimes(), function(item) {
-                                    if(item.timesegment === 'unavailable'){
-                                        return item;
-                                    }
-                                });
-                            }));
-                            self.preferredDaysAndTimes(ko.dependentObservable(function() {
-                                return ko.utils.arrayFilter(self.daysandtimes(), function(item) {
-                                    if(item.timesegment === 'preferred'){
-                                        return item;
-                                    }
-                                });
-                            }));
-                            self.currentScheduledJobNames(ko.dependentObservable(function() {
-                               
-                                return ko.utils.arrayGetDistinctValues(
-                                        ko.utils.arrayMap(self.currentScheduledDates(), 
-                                function(item){ 
-                                    if(item.jobName !== 'Not Assigned') 
-                                        return item.jobName;})).sort();
-                            }));
-                            $("#empLaborBasicDialogWindow").ojDialog("open");
-                            resolve(true);
-                        }).fail(function (error) {
-                            console.log('Error: ' + error.message);
-                            resolve(false);
-                        });
-                    });
-            
-        };
+//        self.empBasicViewOpen =  function(emp) {
+//            self.basicEmpInfo(emp);
+//            return new Promise(function(resolve, reject) {
+//                        data.fetchData("js/data/employee" + emp.empId + ".json").then(function (person) {
+//                            self.personProfile(person);
+//
+//                            self.currentScheduledDates(self.personProfile().currentScheduledDates);
+//                            self.formttedCurrentScheduledDateValues(self.personProfile().formattedCurrentScheduledDates);
+//
+//                            self.currentScheduledDateValues(ko.dependentObservable(function() {
+//
+//                                return ko.utils.arrayGetDistinctValues(
+//                                        ko.utils.arrayMap(self.currentScheduledDates(),
+//                                function(item){
+//                                    var dateValue = new Date(item.currentDayStart);
+//                                        return dateValue.getDate() + ' ' +monthNames[dateValue.getMonth()] + ' ' +weekday[dateValue.getDay()];
+//                                    })).sort();
+//                            }));
+//
+//
+//
+//                            self.currentScheduledDateValues(ko.dependentObservable(function() {
+//
+//                                return ko.utils.arrayGetDistinctValues(
+//                                        ko.utils.arrayMap(self.currentScheduledDates(),
+//                                function(item){
+//                                    var dateValue = new Date(item.currentDayStart);
+//                                        return dateValue.getDate() + ' ' +monthNames[dateValue.getMonth()] + ' ' +weekday[dateValue.getDay()];
+//                                    })).sort();
+//                            }));
+//                            self.daysandtimes(self.personProfile().daysandtimes);
+//                            self.unavailableDaysAndTimes(ko.dependentObservable(function() {
+//                                return ko.utils.arrayFilter(self.daysandtimes(), function(item) {
+//                                    if(item.timesegment === 'unavailable'){
+//                                        return item;
+//                                    }
+//                                });
+//                            }));
+//                            self.preferredDaysAndTimes(ko.dependentObservable(function() {
+//                                return ko.utils.arrayFilter(self.daysandtimes(), function(item) {
+//                                    if(item.timesegment === 'preferred'){
+//                                        return item;
+//                                    }
+//                                });
+//                            }));
+//                            self.currentScheduledJobNames(ko.dependentObservable(function() {
+//
+//                                return ko.utils.arrayGetDistinctValues(
+//                                        ko.utils.arrayMap(self.currentScheduledDates(),
+//                                function(item){
+//                                    if(item.jobName !== 'Not Assigned')
+//                                        return item.jobName;})).sort();
+//                            }));
+//                            $("#empLaborBasicDialogWindow").ojDialog("open");
+//                            resolve(true);
+//                        }).fail(function (error) {
+//                            console.log('Error: ' + error.message);
+//                            resolve(false);
+//                        });
+//                    });
+//
+//        };
         
         self.getPhoto = function (empId) {
             var src;
@@ -462,6 +480,9 @@ define([
             if ('laborTabs' === event.target.id && event.originalEvent) {
                 // Invoke go() with the selected item.
                 self.router.go(ui.key);
+                if(ui.key === 'schedules-timecards'){
+                    setTimeout(function(){self.selectedTab('Day');}, 1000);
+                }
             }
         };
         self.dispose = function () {
@@ -489,8 +510,9 @@ define([
             return new Promise(function(resolve, reject) {
                 data.fetchData("js/data/employeesjobschedules.json").then(function (schedulecontent) {
                             self.jobSchedules(schedulecontent.jobschedules);
-                            self.selectedTab('Day');
+                            //self.personSchedules(schedulecontent.employees);
                             self.router.go('schedules-timecards');
+                            setTimeout(function(){self.selectedTab('Day');}, 1000);
                             // $("#laborScheduleDailogWindow").ojDialog("open");
                             resolve(true);
                         }).fail(function (error) {

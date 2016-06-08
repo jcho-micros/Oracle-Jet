@@ -1,6 +1,4 @@
 
-
-
 <style>
     .headerPeople span{
         display:inline-block;
@@ -240,7 +238,7 @@
                                     <span class="inActiveStatusCheck" data-bind="visible: status == 'Inactive-Terminated'"></span>
                                     <span class="activeStatusCheck" data-bind="visible: status == 'Active'"></span>
                                     <span class="imageOverlay"></span>
-                                    <img style="width:25px; height:25px;" />
+                                    <img style="width:75px; height:75px;" data-bind="attr: {src: $parents[1].getPhoto($data['empId'])}" />
                                 </div>
 
                                 <div class="oj-lg-3 oj-md-3 oj-flex-item">

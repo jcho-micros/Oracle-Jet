@@ -1,3 +1,190 @@
-<div>
-    hello small
+<!--Linked to people.js through modules and template bindings-->
+<div class="justifyCenter">
+    <div class="oj-flex">
+        <div class="oj-flex-item searchWindow">
+            <form data-bind="submit: $parent.filteredAllPeople">
+                <div class="oj-flex">
+                    <div class="oj-flex-item">
+                    <h2>Search Criteria </h2>
+                    </div>
+                    <div class="oj-flex-item viewAllEmployee">
+                        <a href="#">view all employees <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                    <hr class="oj-flex-item" />
+                </div>
+                <div class="oj-flex" >
+                <div class="oj-flex-item" style="background-color: #ffffff; padding: 2px; ">
+                    <div class="oj-flex-item" style="background-color: #ffffff;  width: 296px; border: 3px solid #000000">
+
+                        <div class="oj-flex-item" style="background-color: #e1e7ee; padding: 2px; ">
+                            <label >Search</label>
+                        </div>
+                        <div id="simplesearch" style="background-color: #ffffff; padding: 2px;"
+                             data-bind="visible: $parent.visibleAdvanceSearch()===false">
+                            <input class="oj-flex-item" style="background-color: #ffffff;  border: 1px solid #000000"
+                                   placeholder="Search for active names, stores, jobs"
+                                   id="firstname" data-bind="value: $parent.firstNameSearch, ojComponent: {component: 'ojInputText',rootAttributes: {
+                                            style:'max-width:45em'}}"/>
+                            <input class="oj-flex-item oj-button-primary" id="submit" type="submit"
+                                   data-bind="ojComponent: {component: 'ojButton',
+                            label: 'Search', icons: { start: 'fa fa-search'} }" />
+                            <input class="oj-flex-item" id="reset" type="reset" data-bind="click: $parent.resetData, ojComponent: {component: 'ojButton', label: 'Clear'}" />
+                            <button class="oj-flex-item" id="hidesimple" style="float:right;"
+                                   data-bind="click: $parent.hideSimpleSearch, ojComponent: {component: 'ojButton', label: 'Adv. Search'}" />
+
+                        </div>
+
+                        <div id="advanceseach" style="background-color: #ffffff; padding: 2px;" data-bind="visible: $parent.visibleAdvanceSearch">
+<!--                            <div class="oj-flex-item" style="background-color: #fffff; padding: 10px; ">
+                                <span style="font-style:bold">Advance Search</span>
+                            </div>-->
+
+                            <div class="oj-flex" style="background-color: #ffffff; height: auto">
+                                <div class="oj-lg-2 oj-md-2 oj-flex-item" style="padding: 10px; ">
+                                    <label for="firstname">FIRST NAME</label>
+                                    <input id="firstname" data-bind="value: $parent.advFirstNameSearch, ojComponent: {component: 'ojInputText'}"/>
+
+                                    <label for="lastname">LAST NAME</label>
+                                    <input id="lastname" data-bind="value: $parent.lastNameSearch,ojComponent: {component: 'ojInputText'}">
+
+                                </div>
+
+                                <div class="oj-lg-2 oj-md-3 oj-flex-item" style="padding: 10px; ">
+                                    <label for="homestore">HOME STORE ASSIGNMENT</label>
+                                    <input placeholder="" id="homestore" data-bind="value: $parent.homeStoreSearch, ojComponent: {component: 'ojInputText'}"/>
+
+                                    <label for="lastname">AWAY STORE(S)</label>
+                                    <input id="awaystore" data-bind="value: $parent.awayStoreSearch,ojComponent: {component: 'ojInputText'}">
+
+                                </div>
+
+                                <div class="oj-lg-3 oj-md-2 oj-flex-item" style="padding: 10px; ">
+                                    <label for="job">JOB</label>
+                                    <input placeholder="" id="job" data-bind="value: $parent.jobSearch, ojComponent: {component: 'ojInputText'}"/>
+
+                                    <label for="payroll">PAYROLL ID</label>
+                                    <input id="payroll" data-bind="value: $parent.payrollIdSearch,ojComponent: {component: 'ojInputText'}">
+
+                                </div>
+                                <div class="oj-flex accordionRow">
+                <div class="oj-flex-item">
+                    <div id="employee-search-accordion" data-bind="ojComponent: {component: 'ojAccordion'}">
+                        <div id="c1">
+                                    <label for="status">STATUS</label>
+                                    <div>
+                                        <div id="statuscheckboxSetId" aria-labelledby="mainlabelid" data-bind="ojComponent: {
+                                                              component: 'ojCheckboxset',
+                                                              invalidComponentTracker: $parent.statusTracker,
+                                                              value: $parent.currentStatus}">
+                                            <span class="oj-choice-row">
+                                                <input id="active" type="checkbox" value="Active" checked>
+                                                <label for="active">Active</label>
+                                            </span>
+                                            <span class="oj-choice-row">
+                                                <input id="inactivesuspended" type="checkbox" value="Inactive-Suspended"  checked>
+                                                <label for="inactivesuspended">Inactive-Suspended</label>
+                                            </span>
+                                            <span class="oj-choice-row">
+                                                <input id="inactiveterm" type="checkbox" value="Inactive-Terminated"  checked>
+                                                <label for="inactiveterm">Inactive-Terminated</label>
+                                            </span>
+                                            <span class="oj-choice-row">
+                                                <input id="inactiveterm" type="checkbox" value="Inactive-Leave"  checked>
+                                                <label for="inactiveterm">Inactive-Leave Of Absence</label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="c2">
+
+                                    <label for="status">MORE OPTIONS</label>
+                                    <div>
+                                        <div id="morecheckboxSetId" aria-labelledby="mainlabelid" data-bind="ojComponent: {
+                                                              component: 'ojCheckboxset',
+                                                              value: $parent.currentMoreOptions}">
+                                            <span class="oj-choice-row">
+                                                <input id="minor" type="checkbox" value="Minor" checked data-bin="help: {definition: helpDef()}">
+                                                <label for="minor">Minor</label>
+                                            </span>
+
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="advancebtn" style="background-color: #ffffff; padding: 2px; margin: 2px">
+                                <button class="oj-flex-item" id="hideadvance"
+                                        data-bind="click: $parent.hideAdvanceSearch,
+                                        ojComponent: {component: 'ojButton', label: 'Default search'}">
+                                </button>
+
+                                <input class="oj-flex-item oj-button-primary" id="advsubmit" type="submit"
+                                       style="float:right; margin-left: 5px"
+                                       data-bind="click: $parent.advanceSearch,ojComponent: {component: 'ojButton',
+                                        label: 'Search', icons: { start: 'fa fa-search'} }" />
+
+                                <button class="oj-flex-item" id="advreset" style="float:right; margin-left: 5px"
+                                        data-bind="click: $parent.advResetData,
+                                    ojComponent: {component: 'ojButton', label: 'Clear'}" />
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+        </div>
+            </form>
+        </div>
+        <div class="oj-flex searchWindow">
+
+                <div class="oj-flex-items-pad">
+                    <div class="oj-flex-item"><h2>Search Results</h2></div>
+
+                        <div style="margin-top:0px; position: relative; width: 310px;"
+                             data-bind="ojComponent: {component: 'ojPagingControl',
+                                data: $parent.listViewDataSource, pageSize:10}"></div>
+                        <ul id="listview" data-bind="ojComponent: {component: 'ojListView',
+                            data: $parent.listViewDataSource,
+                            item: {template: 'peoplelist_template'},
+                            selectionMode: 'single',
+                            currentItem: '100',
+                            selection: ['100'],
+                            rootAttributes: {style: 'overflow:auto; margin-top: 5px'},
+                            scrollPolicyOptions: {fetchSize: 10}}">
+                        </ul>
+                         <script type="text/html" id="peoplelist_template">
+                             <li data-bind="attr: {id: $data['name']}" class="item-marker">
+                                        <div class="oj-flex">
+                                            <div class="oj-sm-3 oj-flex-item">
+                                                <span class="inActiveStatusCheck" data-bind="visible: status == 'Inactive-Terminated'"></span>
+                                                <span class="activeStatusCheck" data-bind="visible: status == 'Active'"></span>
+                                                <span class="imageOverlay"></span>
+                                                <img style="width:75px; height:75px;" data-bind="attr: {src: $parents[1].getPhoto($data['empId'])}"/>
+                                            </div>
+                                            <div class="oj-sm-8 oj-col">
+                                                <div class="oj-sm-12 oj-flex-item">
+                                                    <strong><span class="header" data-bind="click: $parents[1].empBasicViewOpen, text: firstName + ' ' + lastName"></span></strong>
+                                                </div>
+                                                <div class="oj-sm-12 oj-flex-item">
+                                                    <span data-bind="text: homeStore"></span>
+
+                                                </div>
+                                                <div class="oj-sm-12 oj-flex-item">
+                                                    <span data-bind="text: $parents[1].getBasicFormattedDate(hireDate)"></span>
+                                                </div>
+                                                <div class="oj-sm-12 oj-flex-item">
+                                                    <div class="employeeStatusListView" data-bind="style:{color: status == 'Inactive-Terminated' ? '#e80023' : '#81bb5f'}"><strong>Hire Status</strong> <span data-bind="text: status"></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                             </li>
+                         </script>
+                </div>
+        </div>
+    </div>
 </div>
+ <div data-bind="template: {name: 'labor-management/dialogwindow/employee-basicinfo-modal-small'}"></div>
