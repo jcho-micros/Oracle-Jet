@@ -140,8 +140,16 @@
                 selectionMode: 'single',
                 currentItem: '100',
                 selection: ['100'],
+                ready: handleReady, 
+                destroy: handleDestroy,
                 scrollPolicyOptions: {fetchSize: 10}}">
-                     </ul>
+                </ul>
+                <!-- Hidden Links for swipe -->
+                <ui id="itemMenu" style="display:none" aria-label="Swipe Actions" data-bind="ojComponent: {component: 'ojMenu', 
+                select: handleMenuItemSelect}">
+                    <li id="tag"><a href="#">Tag</a></li>
+                    <li id="delete"><a href="#">Delete</a></li>
+                </ul>
          </div>
     </div>
 
@@ -150,30 +158,60 @@
                                 data: listViewDataSource, pageSize:10}"></div>
     </div>
     <script type="text/html" id="peoplelist_template">
-                 <li data-bind="attr: {id: $data['name']}, click: $parent.empBasicInfoOpen" class="item-marker">
+                 <li data-bind="attr: {id: $data['name']}", class="item-marker">
+                    <!-- Offcanvas swipe menu -->
+                        <div class="oj-offcanvas-outer-wrapper">
+                          <div class="oj-offcanvas-inner-wrapper">
+
                                 <div class="oj-flex">
-                                    <div class="oj-flex-item empImgCol">
-                                        <span class="inActiveStatusCheck" data-bind="visible: status == 'Inactive-Terminated'"></span>
-                                        <span class="activeStatusCheck" data-bind="visible: status == 'Active'"></span>
-                                        <img class="empImg" data-bind="attr: {src: $parent.getPhoto($data['empId'])}"/>
-                                    </div>
-                                    <div class="oj-flex-item">
-                                        <div>
-                                            <strong><span class="header" data-bind="text: firstName + ' ' + lastName"></span></strong>
-                                        </div>
-                                        <div>
-                                            <span data-bind="text: homeStore"></span>
+                                     <div class="oj-flex-item empImgCol">
+                                         <span class="inActiveStatusCheck" data-bind="visible: status == 'Inactive-Terminated'"></span>
+                                         <span class="activeStatusCheck" data-bind="visible: status == 'Active'"></span>
+                                         <img class="empImg" data-bind="attr: {src: $parent.getPhoto($data['empId'])}"/>
+                                     </div>
+                                     <div class="oj-flex-item">
+                                         <div>
+                                             <strong><span class="header" data-bind="text: firstName + ' ' + lastName"></span></strong>
+                                         </div>
+                                         <div>
+                                             <span data-bind="text: homeStore"></span>
 
+                                         </div>
+                                         <div>
+                                             <span data-bind="text: $parent.getBasicFormattedDate(hireDate)"></span>
+                                         </div>
+                                         <div>
+                                             <div class="employeeStatusListView" data-bind="css:{empStatusInactive: status == 'Inactive-Terminated', empStatusActive: status == 'Active'}"><span data-bind="css:{'fa-times-circle': status == 'Inactive-Terminated', 'fa-check-circle': status == 'Active'}"></span> <span data-bind="text: status"></span></div>
+                                         </div>
+                                     </div>
+                               
+                                 
+                                    <div tabIndex="-1" data-bind="attr: {id: 'second_toolbar_'+$data['name']}" class="oj-offcanvas-end" style="width:150px">
+                                        <div data-bind="click: $parent.handleQuickView" class="oj-swipetoreveal-more">
+                                            <div class="oj-flex-bar" style="height:100%">
+                                                <div class="oj-flex-bar-center-absolute">
+                                                    <div class="oj-flex oj-sm-flex-direction-column">
+                                                        <div title=".demo-library-icon-24" role="img" class="oj-flex-item demo-library-icon-24 demo-icon-font-24"></div>
+                                                        <div style="padding-top: 10px" class="oj-flex-item">quick view</div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div>
-                                            <span data-bind="text: $parent.getBasicFormattedDate(hireDate)"></span>
-                                        </div>
-                                        <div>
-                                            <div class="employeeStatusListView" data-bind="css:{empStatusInactive: status == 'Inactive-Terminated', empStatusActive: status == 'Active'}"><span data-bind="css:{'fa-times-circle': status == 'Inactive-Terminated', 'fa-check-circle': status == 'Active'}"></span> <span data-bind="text: status"></span></div>
+                                        <div data-bind="click: $parent.handleStatus" class="oj-swipetoreveal-flag">
+                                            <div class="oj-flex-bar" style="height:100%">
+                                                <div class="oj-flex-bar-center-absolute">
+                                                    <div class="oj-flex oj-sm-flex-direction-column">
+                                                        <div title=".demo-library-icon-24" role="img" class="oj-flex-item demo-library-icon-24 demo-icon-font-24"></div>
+                                                        <div style="padding-top: 10px" class="oj-flex-item">status</div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-
+                                </div> 
+                          </div>
+                        </div>
+                    <!-- end of offcanvas swipe -->
 
                  </li>
              </script>
