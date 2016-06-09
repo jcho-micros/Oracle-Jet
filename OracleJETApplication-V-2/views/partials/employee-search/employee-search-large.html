@@ -8,21 +8,22 @@
             <div class="oj-flex" >
                 <div class="oj-flex-item">
                     <div class="oj-flex-item searchFieldWrap">
+                        <div id="accordionPage" data-bind="ojComponent: {component: 'ojAccordion'}">
+                              <div id="c1">
+                                  <label class="searchTitleBar">Search</label>
+                                  <div>
 
-                        <div class="searchTitleBar">
-                            <label >Search</label>
-                        </div>
                         <div id="simplesearch" class="simplesearchWrap" data-bind="visible:visibleAdvanceSearch()===false">
                             <input class="oj-flex-item inputField"
-                                   placeholder="Search for active names, stores, jobs" 
+                                   placeholder="search for active names, stores, jobs"
                                    id="firstname" data-bind="value: firstNameSearch, ojComponent: {component: 'ojInputText', rootAttributes:{class:'inputFieldWrap'}}"/>
                             <div class="searchBtnWrap">
                                 <input class="oj-flex-item oj-button-primary" id="submit" type="submit"
                                        data-bind="ojComponent: {component: 'ojButton',
-                                label: 'Search', icons: { start: 'fa fa-search'} }" />
-                                <input class="oj-flex-item" id="reset" type="reset" data-bind="click: resetData, ojComponent: {component: 'ojButton', label: 'Clear'}" />
+                                label: 'search', icons: { start: 'fa fa-search'} }" />
+<!--                                <input class="oj-flex-item" id="reset" type="reset" data-bind="click: resetData, ojComponent: {component: 'ojButton', label: 'Clear'}" />-->
                                 <button class="oj-flex-item" id="hidesimple"
-                                       data-bind="click: hideSimpleSearch, ojComponent: {component: 'ojButton', label: 'Advance Search'}" />
+                                        data-bind="click: hideSimpleSearch, ojComponent: {component: 'ojButton', icons: {start: 'fa fa-search'}, label: 'advance search'}"></button>
                             </div>
 
                         </div>
@@ -110,14 +111,20 @@
                                 <input class="oj-flex-item oj-button-primary" id="advsubmit" type="submit"
                                        style="float:right;"
                                        data-bind="click:advanceSearch,ojComponent: {component: 'ojButton', 
-                                        label: 'Search', icons: { start: 'fa fa-search'} }" />
+                                        label: 'search', icons: { start: 'fa fa-search'} }" />
                                 
+<!--
                                 <button class="oj-flex-item" id="advreset" style="float:right;" 
                                         data-bind="click: advResetData, 
                                     ojComponent: {component: 'ojButton', label: 'Clear'}" />
+-->
 
                             </div> 
                         </div>
+                                  </div>
+                              </div>
+                        </div>
+
 
                     </div>
                 </div>
@@ -127,6 +134,7 @@
 
     </div>
 </div>
+<!--
 <div class="oj-flex" >
     <div class="oj-flex-item peopleSearchWrapper" >
 
@@ -174,6 +182,7 @@
     </div>
 
 </div>
+-->
 <!-- Start of the Result template -->
 <div class="oj-flex">
     <div class="oj-md-12 oj-flex-item">
@@ -188,11 +197,13 @@
                     <span>Name</span>
                 </div>
                 <div class="oj-lg-3 oj-md-3 oj-flex-item">
-                    <span>Primary ID</span>
+                    <span>Primary Job</span>
+<!--
                     <span>
                         <a class="oj-component-icon oj-table-column-header-asc-icon oj-clickable-icon-nocontext"
                            style="display: inline-block;left:initial !important;"></a>
                     </span>
+-->
                     <span>
                         <a class="oj-component-icon oj-table-column-header-desc-icon oj-clickable-icon-nocontext"
                            style="display: inline-block;left:initial !important;"></a>
@@ -232,7 +243,6 @@
                                 <div class="oj-lg-1 oj-md-1 oj-flex-item">
                                     <span class="inActiveStatusCheck" data-bind="visible: status == 'Inactive-Terminated'"></span>
                                     <span class="activeStatusCheck" data-bind="visible: status == 'Active'"></span>
-                                    <span class="imageOverlay"></span>
                                     <img class="empImg" data-bind="attr: {src: $parent.getPhoto($data['empId'])}"/>
                                 </div>
 
@@ -251,7 +261,7 @@
                                     <div class="hireDateListview" data-bind="text: $parent.getBasicFormattedDate(hireDate)"></div>
                                 </div>
                                 <div class="oj-lg-2 oj-md-2 oj-flex-item">
-                                    <div class="employeeStatusListView" data-bind="style:{color: status == 'Inactive-Terminated' ? '#e80023' : '#81bb5f'}"> <span data-bind="text: status"></span></div>
+                                    <div class="employeeStatusListView" data-bind="css:{empStatusInactive: status == 'Inactive-Terminated', empStatusActive: status == 'Active'}"><span data-bind="css:{'fa-times-circle': status == 'Inactive-Terminated', 'fa-check-circle': status == 'Active'}"></span> <span data-bind="text: status"></span></div>
                                 </div>
                             </div>
 

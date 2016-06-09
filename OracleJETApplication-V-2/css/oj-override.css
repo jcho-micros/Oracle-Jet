@@ -44,6 +44,9 @@ h1.pageTitle {
   margin-top: 10px; }
 
 /*OJET Overwrites*/
+.oj-button.oj-button-full-chrome, .oj-button.oj-button-full-chrome:link, .oj-button.oj-button-full-chrome:visited, .oj-button.oj-button-full-chrome:hover, .oj-button.oj-button-full-chrome:active {
+  font-weight: normal !important; }
+
 .oj-navigationlist-horizontal .oj-navigationlist-element, .oj-navigationlist-icon-only .oj-navigationlist-element {
   margin: 0; }
 
@@ -441,6 +444,47 @@ html:not([dir="rtl"]) .oj-dialog-title {
       .subTabs .oj-navigationlist-item.oj-selected a.oj-navigationlist-item-content {
         color: #000; }
 
+a.addEmp {
+  line-height: 60px;
+  margin: 10px;
+  text-decoration: none;
+  color: #fff; }
+  a.addEmp .fa {
+    font-size: 16px; }
+
+.empStatusInactive {
+  color: #ff0000; }
+  .empStatusInactive .fa-times-circle {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 16px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+
+.empStatusActive {
+  color: #22a451; }
+  .empStatusActive .fa-check-circle {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 16px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+
+#hidesimple {
+  background-color: transparent;
+  background-image: none;
+  border: 0;
+  border-color: transparent;
+  color: #0572CE;
+  outline: 0 !important; }
+  #hidesimple.oj-active, #hidesimple.oj-focus {
+    color: #00a8ff; }
+  #hidesimple .fa {
+    font-size: 16px;
+    color: #0572CE; }
+
 .inputFieldWrap {
   max-width: 100%; }
 
@@ -457,13 +501,26 @@ html:not([dir="rtl"]) .oj-dialog-title {
 
 .searchBtnWrap {
   float: right; }
+  .searchBtnWrap #submit {
+    padding: 10px 20px !important;
+    height: auto;
+    line-height: 16px; }
+
+#advsubmit, #hideadvance {
+  padding: 10px 20px !important;
+  height: auto;
+  line-height: 16px; }
 
 .searchTitleBar {
-  height: 20px;
-  padding: 10px;
-  background-color: #F5F5F5; }
-  .searchTitleBar label {
-    font-size: 20px; }
+  overflow: hidden;
+  padding: 10px !important; }
+  .searchTitleBar.oj-collapsible-header {
+    background-color: #F5F5F5; }
+    .searchTitleBar.oj-collapsible-header label {
+      font-size: 20px; }
+  .searchTitleBar a.oj-component-icon.oj-collapsible-header-icon {
+    float: right;
+    padding: 0; }
 
 .firstAdvSearchArea, #advancebtn {
   padding: 10px; }
@@ -500,8 +557,8 @@ html:not([dir="rtl"]) .oj-dialog-title {
 
 .empImg {
   border-radius: 50%;
-  height: 75px;
-  width: 75px; }
+  height: 65px;
+  width: 65px; }
 
 .empImgDialog {
   border-radius: 50%;
@@ -509,7 +566,8 @@ html:not([dir="rtl"]) .oj-dialog-title {
   border: 1px solid #AFBAC5; }
 
 .empImgCol {
-  max-width: 95px; }
+  max-width: 95px;
+  text-align: center; }
 
 .oj-listview-item.oj-hover {
   background-color: #ebeced !important; }
@@ -635,6 +693,9 @@ html:not([dir="rtl"]) .oj-dialog-title {
   border-top: 10px solid #fe9a2e; }
 #empBasicDialogWindow .job2TotalHeader {
   border-top: 10px solid #2e2efe; }
+
+.searchWindow h3 {
+  padding: 10px; }
 
 @media only screen and (min-width: 768px) {
   .searchFieldWrap {
@@ -919,7 +980,7 @@ html:not([dir="rtl"]) .oj-dialog-title {
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   #homeNavList {
     background-color: #015FAB;
-    height: 40px; }
+    height: 10px; }
 
   #homeTabs {
     border-top: 1px solid #004587; }
@@ -932,7 +993,7 @@ html:not([dir="rtl"]) .oj-dialog-title {
 
   #laborNavList {
     background-color: #AB4100;
-    height: 40px; }
+    height: 10px; }
 
   #laborTabs {
     border-top: 1px solid #8b3300; }
@@ -945,7 +1006,7 @@ html:not([dir="rtl"]) .oj-dialog-title {
 
   #inventoryNavList {
     background-color: #79006C;
-    height: 40px; }
+    height: 10px; }
 
   #inventoryTabs {
     border-top: 1px solid #920083; }
@@ -958,7 +1019,7 @@ html:not([dir="rtl"]) .oj-dialog-title {
 
   #gift-loyaltyNavList {
     background-color: #410b6e;
-    height: 40px; }
+    height: 10px; }
 
   #gift-loyaltyTabs {
     border-top: 1px solid #501884; }
@@ -971,7 +1032,7 @@ html:not([dir="rtl"]) .oj-dialog-title {
 
   #enterpriseNavList {
     background-color: #ba0006;
-    height: 40px; }
+    height: 10px; }
 
   #enterpriseTabs {
     border-top: 1px solid #88000d; }
@@ -984,7 +1045,7 @@ html:not([dir="rtl"]) .oj-dialog-title {
 
   #reports-analyticsNavList {
     background-color: #007B2B;
-    height: 40px; }
+    height: 10px; }
 
   #reports-analyticsTabs {
     border-top: 1px solid #005C3A; }
@@ -997,7 +1058,7 @@ html:not([dir="rtl"]) .oj-dialog-title {
 
   #peopleNavList {
     background-color: #172777;
-    height: 40px; }
+    height: 10px; }
 
   #peopleTabs {
     border-top: 1px solid #1F348F; }
@@ -1010,7 +1071,7 @@ html:not([dir="rtl"]) .oj-dialog-title {
 
   #profileNavList {
     background-color: #172777;
-    height: 40px; }
+    height: 10px; }
 
   #profileTabs {
     border-top: 1px solid #1F348F; }
@@ -1213,5 +1274,3 @@ html:not([dir="rtl"]) .oj-dialog-title {
     border-radius: 50%; }
   #loginPage .footer {
     text-align: right; } }
-
-/*# sourceMappingURL=oj-override.css.map */
