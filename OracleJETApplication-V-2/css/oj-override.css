@@ -4,6 +4,10 @@
 @font-face {
   font-family: 'Helvetica Neue Light';
   src: url("fonts/HelveticaNeue-Light.ttf") format("truetype"); }
+/*****Ramu Section**********/
+.redText {
+  color: #e4001e; }
+
 /*****Section Variables*****/
 html {
   height: 100vh; }
@@ -1274,3 +1278,5 @@ a.addEmp {
     border-radius: 50%; }
   #loginPage .footer {
     text-align: right; } }
+
+/*# sourceMappingURL=oj-override.css.map */

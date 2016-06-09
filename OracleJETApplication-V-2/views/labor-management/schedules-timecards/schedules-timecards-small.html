@@ -5,23 +5,23 @@
 
               <!-- inner start offcanvas -->
               <div id="innerDrawer"
-                   class="oj-offcanvas-start oj-panel oj-panel-alt"
+                   class="oj-offcanvas-start oj-panel oj-panel-alt" 
                    style="width: 100%; background: #fffff;  position: fixed; top: 120px ">
 
-
-                      <div style="height: 320px; ">
+               
+                      <div style="height: 320px; color: #fffff">
                 <div style="margin-top: -15px; margin-left: -15px; margin-right: -15px; background: #901b0c; color: #fffff" data-bind="ojComponent:{
-                    component: 'ojNavigationList',
+                    component: 'ojNavigationList', 
                     drillMode: 'sliding',
-                    rootLabel : 'MAIN MENU'
-                    }">
-                    <button class="oj-button-sm oj-button-half-chrome"
+                    rootLabel : 'Main menu'
+                    }"> 
+                    <button class="oj-button-sm oj-button-half-chrome" 
                           aria-label="close" role="button"
-                          style="float: right; margin-top: -35px; margin-right: 10px"
+                          style="float: right; margin-top: -35px; margin-right: 10px" 
                           data-bind="click: $parent.closeInner,
-                                     ojComponent: {component:'ojButton',
-                                     label: 'Close inner offcanvas',
-                                     display: 'icons',
+                                     ojComponent: {component:'ojButton', 
+                                     label: 'Close inner offcanvas', 
+                                     display: 'icons', 
                                      icons: {start: 'oj-fwk-icon-cross oj-fwk-icon'}}">
                   </button>
                 <ul style="background: #ffffff">
@@ -37,25 +37,25 @@
                             <li id="next">
                                 <a href="#"  >Next</a>
                             </li>
-
+                            
                         </ul>
                     </li>
                      <li id="timecards" data-bind="click: $parent.loadOverview">
                         <a href="#" >Time Cards</a>
-                     </li>
+                     </li>  
                 </ul>
         </div>
                   </div>
               </div>
 
               <div id="imain" class="demo-main-content" style="height: 100%;  ">
-
+               
 
                 <!-- inner offcanvas launch button -->
                 <button class="oj-button-half-chrome"
-                        style="margin-left: -10px; background: #901b0c; color: white"
+                        style="margin-left: -10px; background: #901b0c; color: white" 
                         data-bind="click: $parent.toggleInner,
-                                   ojComponent: {component:'ojButton',
+                                   ojComponent: {component:'ojButton', 
                                    label: '<'}">
                 </button>
 
@@ -65,72 +65,72 @@
     <div class="oj-flex oj-sm-11">
     <div class="oj-flex" style="margin: 2px">
          <div >
-             <input id="btnJob" type="button" value="JOB"
+             <input id="btnJob" type="button" value="JOB" 
                     style="background-color: #ffffff; color: #000000; width: 30px; font-size: 10px; height: 30px" title="Job"
                     data-bind="visible: ($parent.selectedTab() === 'Job')"/>
          </div>
          <div >
-             <input id="btnJob" type="button" value="JOB"
+             <input id="btnJob" type="button" value="JOB" 
                     style="background-color: #FF4000; color: #ffffff; width: 30px; font-size: 10px; height: 30px" title="Job"
                     data-bind="click: $parent.changeTabContent('Job'), visible: ($parent.selectedTab() !== 'Job');"/>
          </div>
          <div >
-             <input id="btnEmployee" type="button" value="EMPLOYEE"
+             <input id="btnEmployee" type="button" value="EMPLOYEE" 
                     style="background-color: #ffffff; color: #000000; width: 60px; font-size: 10px; height: 30px" title="Employee"
                     data-bind="visible: ($parent.selectedTab() === 'Employee')"/>
          </div>
          <div >
-             <input id="btnEmployee" type="button" value="EMPLOYEE"
+             <input id="btnEmployee" type="button" value="EMPLOYEE" 
                     style="background-color: #FF4000; color: #ffffff; width: 60px; font-size: 10px; height: 30px" title="Employee"
                     data-bind="click: $parent.changeTabContent('Employee'), visible: ($parent.selectedTab() !== 'Employee');"/>
          </div>
          <div>
-             <input id="btnDay" type="button" value="DAY"
+             <input id="btnDay" type="button" value="DAY" 
                     style="background-color: #ffffff; color: #000000; width: 30px; font-size: 10px; height: 30px" title="Day"
                     data-bind="visible: ($parent.selectedTab() === 'Day')"/>
          </div>
          <div>
-             <input id="btnDay" type="button" value="DAY"
+             <input id="btnDay" type="button" value="DAY" 
                     style="background-color: #FF4000; color: #ffffff; width: 30px; font-size: 10px; height: 30px" title="Day"
-                    data-bind="click: $parent.changeTabContent('Day'), visible: ($parent.selectedTab() !== 'Day')"
+                    data-bind="click: $parent.changeTabContent('Day'), visible: ($parent.selectedTab() !== 'Day')" 
                     />
          </div>
          <div>
-             <input id="btnStation" type="button" value="STATION"
+             <input id="btnStation" type="button" value="STATION" 
                     style="background-color: #ffffff; color: #000000; width: 60px; font-size: 10px; height: 30px" title="Station"
                     data-bind="visible: ($parent.selectedTab() === 'Station')"/>
-         </div>
+         </div>  
          <div>
-             <input id="btnStation" type="button" value="STATION"
+             <input id="btnStation" type="button" value="STATION" 
                     style="background-color: #FF4000; color: #ffffff; width: 60px; font-size: 10px; height: 30px" title="Station"
-                    data-bind="click: $parent.changeTabContent('Station'), visible: ($parent.selectedTab() !== 'Station')"
+                    data-bind="click: $parent.changeTabContent('Station'), visible: ($parent.selectedTab() !== 'Station')" 
                     />
          </div>
          <div>
-             <input id="btnLocation" type="button" value="LOCATION"
+             <input id="btnLocation" type="button" value="LOCATION" 
                     style="background-color: #ffffff; color: #000000; width: 60px; font-size: 10px; height: 30px" title="Location"
                     data-bind="visible: ($parent.selectedTab() === 'Location')"/>
          </div>
          <div >
-             <input id="btnLocation" type="button" value="LOCATION"
+             <input id="btnLocation" type="button" value="LOCATION" 
                     style="background-color: #FF4000; color: #ffffff; width: 60px; font-size: 10px; height: 30px" title="Location"
                     data-bind="click: $parent.changeTabContent('Location'), visible: ($parent.selectedTab() !== 'Location');"/>
          </div>
 <!--         <div>
-             <input id="btnRevenue" type="button" value="REV CENTER"
+             <input id="btnRevenue" type="button" value="REV CENTER" 
                     style="background-color: #ffffff; color: #000000; width: 60px; font-size: 10px; height: 30px" title="Revenue"
                     data-bind="visible: ($parent.selectedTab() === 'Revenue')"/>
-         </div>
+         </div>  
          <div>
-             <input id="btnRevenue" type="button" value="REV CENTER"
+             <input id="btnRevenue" type="button" value="REV CENTER" 
                     style="background-color: #FF4000; color: #ffffff; width: 60px; font-size: 10px; height: 30px" title="Revenue"
-                    data-bind="click: $parent.changeTabContent('Revenue'), visible: ($parent.selectedTab() !== 'Revenue')"
+                    data-bind="click: $parent.changeTabContent('Revenue'), visible: ($parent.selectedTab() !== 'Revenue')" 
                     />
          </div>-->
-     </div>
-
+     </div>  
+     
      <div class="oj-flex" data-bind="visible: ($parent.selectedTab() === 'Job')">
-
+         
          <!--  ko foreach: $parent.jobTabContent -->
          <div class="oj-sm-12 oj-flex-item" style="margin-left: 2px; margin-right: 2px">
              <div id="accordionPage" data-bind="ojComponent: {component: 'ojAccordion'}" >
@@ -142,11 +142,11 @@
                      <div ><!-- child content -->
                          <div class="oj-flex" style="background-color: #E6E6E6; margin: 10px">
                   <!--  ko foreach: days -->
-
+                     
                      <div class="oj-flex-item" style="margin: 5px">
                          <div>
                         <div style="color: black;  text-align: center;">
-                            <span data-bind="text: startdate"></span>
+                            <span data-bind="text: startdate"></span> 
                         </div>
                              <div style="border: 1px solid #000000; background-color: white; padding: 5px; border-color: black; color: #000000">
                                  <div>
@@ -162,21 +162,24 @@
                                      <span data-bind="text: '$'+dailytotalamount" style="float: right"></span>
                                  </div>
                              </div>
-
+                             
                               <div data-bind="foreach: locations">
-                                <div style="border: 1px solid #000000; background-color: white; margin-top: 5px; color: black;  text-align: center;"
+                                <div style="border: 1px solid #000000; background-color: white; margin-top: 5px; color: black;  text-align: center;" 
                                      data-bind="visible: (location.toLowerCase() === $root.activeLocation().toString().toLowerCase())">
-                                     <div data-bind="foreach: openingshift;">
-                                        <div style="border: 1px solid #000000; background-color: white; color: black;  text-align: center;">
-                                            <strong><span >OPENING SHIFT</span></strong>
+                                    
+                                    <div data-bind="foreach: openingshift;">
+                                    <div id="accordionPageOpenJob" data-bind="ojComponent: {component: 'ojAccordion'}" >
+                                    <div id="openshift" >
+                                        <div style="border: 1px solid #000000; background-color: #db3c71; color: black;  text-align: center;">
+                                            <strong><span >Opening Shift</span></strong>
                                             <br /><span >#.# hours | $##.###</span>
                                         </div>
-
+                                        
                                         <div data-bind="foreach: revenuecenters;" style="margin-left: 10px; margin-right: 10px">
                                             <div style="background-color: #ded8d2; color: black;  text-align: left;">
                                                 <br /><strong><span data-bind="text: revenuecenter"></span></strong>
                                                 <div data-bind="foreach: employees;" style="margin-top: 5px">
-                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"
+                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" 
                                              style="height: 20px; width: 30px;"/>
                                                     <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
                                                     <br /><span data-bind="text: timings"></span>
@@ -185,92 +188,102 @@
                                             </div>
                                         </div>
                                     </div>
+                                    </div></div>
                                     <div data-bind="foreach: breakfastshift;">
-                                        <div style="border: 1px solid #000000; background-color: white; color: black;  text-align: center;">
-                                            <strong><span >BREAKFAST SHIFT</span></strong>
+                                        <div id="accordionPagebreakJob" data-bind="ojComponent: {component: 'ojAccordion'}" >
+                                        <div id="breakshift" >
+                                        <div style="border: 1px solid #000000; background-color: #b7f87d; color: black;  text-align: center;">
+                                            <strong><span >Breakfast Shift</span></strong>
                                             <br /><span >#.# hours | $##.###</span>
                                         </div>
-
+                                        
                                         <div data-bind="foreach: revenuecenters;" style="margin-left: 10px; margin-right: 10px">
                                             <div style="background-color: #ded8d2; color: black;  text-align: left;">
                                                 <br /><strong><span data-bind="text: revenuecenter"></span></strong>
                                                 <div data-bind="foreach: employees;" style="margin-top: 5px">
-                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"
+                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" 
                                              style="height: 20px; width: 30px;"/>
                                                     <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
-
+                                                    
                                                     <br /><span data-bind="text: timings"></span>
                                                     <br /><span data-bind="text: hours +' hours | $'+hourlywage"></span><br />
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                            </div></div>
                                     <div data-bind="foreach: lunchshift;">
-                                        <div style="border: 1px solid #000000; background-color: white; color: black;  text-align: center;">
-                                            <strong><span >LUNCH SHIFT</span></strong>
+                                        <div id="accordionPagelunchJob" data-bind="ojComponent: {component: 'ojAccordion'}" >
+                                        <div id="lunchshift" >
+                                        <div style="border: 1px solid #000000; background-color: #29eadf; color: black;  text-align: center;">
+                                            <strong><span >Lunch Shift</span></strong>
                                             <br /><span >#.# hours | $##.###</span>
                                         </div>
-
+                                        
                                         <div data-bind="foreach: revenuecenters;" style="margin-left: 10px; margin-right: 10px">
                                             <div style="background-color: #ded8d2; color: black;  text-align: left;">
                                                 <br /><strong><span data-bind="text: revenuecenter"></span></strong>
                                                 <div data-bind="foreach: employees;" style="margin-top: 5px">
-                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"
+                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" 
                                              style="height: 20px; width: 30px;"/>
                                                     <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
-
+                                                    
                                                     <br /><span data-bind="text: timings"></span>
                                                     <br /><span data-bind="text: hours +' hours | $'+hourlywage"></span><br />
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div></div></div>
                                     <div data-bind="foreach: dinnershift;">
-                                        <div style="border: 1px solid #000000; background-color: white; color: black;  text-align: center;">
-                                            <strong><span >DINNER SHIFT</span></strong>
+                                         <div id="accordionPageDinnerJob" data-bind="ojComponent: {component: 'ojAccordion'}" >
+                                        <div id="dinnershift" >
+                                        <div style="border: 1px solid #000000; background-color: #7e9ff0; color: black;  text-align: center;">
+                                            <strong><span >Dinner Shift</span></strong>
                                             <br /><span >#.# hours | $##.###</span>
                                         </div>
-
+                                        
                                         <div data-bind="foreach: revenuecenters;" style="margin-left: 10px; margin-right: 10px">
                                             <div style="background-color: #ded8d2; color: black;  text-align: left;">
                                                 <br /><strong><span data-bind="text: revenuecenter"></span></strong>
                                                 <div data-bind="foreach: employees;" style="margin-top: 5px">
-                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"
+                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" 
                                              style="height: 20px; width: 30px;"/>
                                                     <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
-
+                                                    
                                                     <br /><span data-bind="text: timings"></span>
                                                     <br /><span data-bind="text: hours +' hours | $'+hourlywage"></span><br />
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div></div></div>
                                     <div data-bind="foreach: closingshift;">
-                                        <div style="border: 1px solid #000000; background-color: white; color: black;  text-align: center;">
-                                            <strong><span >CLOSING SHIFT</span></strong>
+                                        <div id="accordionPageCloseJob" data-bind="ojComponent: {component: 'ojAccordion'}" >
+                                        <div id="closeshift" >
+                                        <div style="border: 1px solid #000000; background-color: #e4b9dd; color: black;  text-align: center;">
+                                            <strong><span >Closing Shift</span></strong>
                                             <br /><span >#.# hours | $##.###</span>
                                         </div>
-
+                                        
                                         <div data-bind="foreach: revenuecenters;" style="margin-left: 10px; margin-right: 10px">
                                             <div style="background-color: #ded8d2; color: black;  text-align: left;">
                                                 <br /><strong><span data-bind="text: revenuecenter"></span></strong>
                                                 <div data-bind="foreach: employees;" style="margin-top: 5px">
-                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"
+                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" 
                                              style="height: 20px; width: 30px;"/>
                                                     <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
-
+                                                    
                                                     <br /><span data-bind="text: timings"></span>
                                                     <br /><span data-bind="text: hours +' hours | $'+hourlywage"></span><br />
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div>    </div></div>
                                 </div>
-
-                              </div>
+                                  
+                              </div>  
                          </div>
                      </div>
-                          <!-- /ko -->
+                          <!-- /ko -->   
                      </div>
                      </div>
                  </div>
@@ -278,11 +291,11 @@
          </div>
          <!-- /ko -->
      </div>
-
+     
      <div class="oj-flex"  data-bind="visible: ($parent.selectedTab() === 'Employee')">
-
+          
         <!--  ko foreach: $parent.personSchedules -->
-
+        
          <div class="oj-sm-12 oj-flex-item" style="margin-left: 10px; margin-right: 10px">
      <div id="accordionPage" data-bind="ojComponent: {component: 'ojAccordion'}">
   <div id="c1"  data-bind="visible: (homeStore.toLowerCase() === $root.activeLocation().toString().toLowerCase())">
@@ -299,16 +312,16 @@
               </div>
 
             </div>
-
-
+          
+            
                       <!-- ko foreach: schedules -->
-
+                      
                          <div class="oj-flex-item" style="margin: 5px">
                          <div>
                         <div style="color: black;  text-align: center;">
-                            <span data-bind="text: startDate"></span>
+                            <span data-bind="text: startDate"></span> 
                         </div>
-                             <div style="border: 1px solid #000000; background-color: white;
+                             <div style="border: 1px solid #000000; background-color: white; 
                                   padding: 5px; border-color: black; color: #000000">
                                  <div>
                                      <span data-bind="text: totalHours + ' hours'"></span>
@@ -323,113 +336,120 @@
                                      <span data-bind="text: '$'+(totalHours * hourlyWage)" style="float: right"></span>
                                  </div>
                              </div>
-
+                             
                              <div style="border: 1px solid #000000;  border-color: black; background-color: white; color: #000000; min-height: 70px">
-
-                                 <div data-bind="visible: (preferred === 'yes')"
+                                 
+                                 <div data-bind="visible: (preferred === 'yes')" 
                                       style="background-color: white; color: black; text-align: center;">
-                                     <span style="color: black"><strong>PREFERRED</strong></span>
-                                    <br /> <span data-bind="text: preferredtime" style="color: black"></span>
+                                     <span style="color: black"><strong>PREFERRED</strong></span>  
+                                    <br /> <span data-bind="text: preferredtime" style="color: black"></span> 
                                 </div>
-                                <div data-bind="visible: (unavailable === 'yes')"
+                                <div data-bind="visible: (unavailable === 'yes')" 
                                     style="background-color: white; text-align: center;">
-                                    <span style="color: red"><strong>NOT AVAILABLE</strong></span>
-                                    <br /> <span data-bind="text: unavialbaletime" style="color: black"></span>
+                                    <span style="color: red"><strong>NOT AVAILABLE</strong></span> 
+                                    <br /> <span data-bind="text: unavialbaletime" style="color: black"></span> 
                                 </div>
                              </div>
-
+                             
                             <div data-bind="foreach: locations">
-                                <div style="border: 1px solid #000000; background-color: white; margin-top: 5px; color: black;  text-align: center;"
+                                <div style="border: 1px solid #000000; background-color: white; margin-top: 5px; color: black;  text-align: center;" 
                                      data-bind="visible: (name.toLowerCase() === $root.activeLocation().toString().toLowerCase())">
                                     <strong><span data-bind="text: name"> </span></strong>
                                 <br /><span data-bind="text: address"> </span>
-
+                                
                                     <div data-bind="foreach: workDetails;" style="margin-left: 5px; margin-right: 5px">
-
+                                        
                                         <div data-bind=" style: { 'background-color': backgroundcolor, 'height' : '5px' }"></div>
-
+                                       
                                         <strong><span data-bind="text: jobtitle" > </span></strong>
                                         <br /><span data-bind="text: (jobtitle === 'Not Scheduled' ? '' : workStation)"> </span>
                                         <br /><span data-bind="text: (jobtitle === 'Not Scheduled' ? '' : time)"> </span>
                                         <br /><span data-bind="text: (jobtitle === 'Not Scheduled' ? '' : (hours + ' hours'))"> </span>
                                         <br /><span data-bind="text: (jobtitle === 'Not Scheduled' ? '' : (tipamount + ' tips'))"> </span>
-
+                                        
                                         <br />
                                         <br />
                                     </div>
-
-
-                                    <div data-bind="visible: (oncall === 'yes')"
+                                    
+                                    
+                                    <div data-bind="visible: (oncall === 'yes')" 
                                          style="background-color: white;   margin-left: 5px;
                                          margin-right: 5px; text-align: center;">
                                         <div style="background-color:  #FA58F4; height: 4px"></div>
                                         <strong><span>ON CALL</span> </strong>
-                                        <br /> <span data-bind="text: oncalltime"></span>
+                                        <br /> <span data-bind="text: oncalltime"></span> 
                                     </div>
                                 </div>
                                 <br />
                             </div>
-
+                        
                          </div></div>
-
-                    <!-- /ko-->
+                
+                    <!-- /ko--> 
       </div><!-- end child content -->
   </div>
      </div>
          </div>
         <!--/ko-->
      </div>
-
+     
       <div class="oj-flex" data-bind="visible: ($parent.selectedTab() === 'Day')">
-
+          
         <!--  ko foreach: $parent.jobSchedules -->
-
-         <div class="oj-lg-12 oj-md-12 oj-flex-item" style="margin-left: 20px; margin-right: 20px">
+        
+         <div class="oj-lg-12 oj-md-12 oj-flex-item" style="margin-left: 5px; margin-right: 5px">
              <div id="accordionPage" data-bind="ojComponent: {component: 'ojAccordion'}" >
                  <div id="c1" >
             <div  style="color: #000000; width: 100%">
                 <span data-bind="text: startdate" > </span>
             </div>
-
-
+            
+            
             <div ><!-- child content -->
-
-
+            
+            
             <div class="oj-flex oj-lg-12 ">
               <div class="oj-flex-item currentWeekHeader" style="color: #000000; margin-right: 5px ">
                   <strong><span data-bind="text: 'Daily Totals $'+dailytotalamount+ ' ('+dailytotalhours+' hours)'"></span></strong>
               </div>
             </div>
-
-
+                
+                
             <div class="oj-flex" style="background-color: #E6E6E6; margin: 10px">
                   <!--  ko foreach: locations -->
-
+                     
                      <div style="margin: 5px"
                           data-bind="visible: (location.toLowerCase() === $root.activeLocation().toString().toLowerCase())">
                          <div class="oj-flex">
                             <!--ko foreach: jobs-->
                                 <div class="oj-flex-item">
-                                    <div data-bind="style : {'background-color': backgroundcolor}" style="border: 1px solid #000000;  margin-top: 5px;
-                                         color: white;  text-align: center; height: 100px">
+                                    <div id="accordionPageDistinctDay" data-bind="ojComponent: {component: 'ojAccordion'}" >
+                                    <div id="distinctDay" >
+                                    <div data-bind="style : {'background-color': backgroundcolor}" style="border: 1px solid #000000;  margin-top: 5px; 
+                                         color: white;  text-align: left; height: 20px">
                                     <strong><span data-bind="text: jobtitle"> </span></strong>
+                                    </div>
+                                         <div data-bind="style : {'background-color': backgroundcolor}" style="border: 1px solid #000000;  margin-top: 5px; 
+                                         color: white;  text-align: center; height: auto">
                                     <br /><span data-bind="text: workStation"> </span>
                                     <br /><span data-bind="text: '$'+totalearning"> </span>
                                     <br /><span > Daily Total</span>
                                     <br /><span data-bind="text: '$'+hourlyWage+ ' ('+totalhours+' hours)'"></span>
                                     <br /><span data-bind="text: '$'+tipsamount+ 'tips'"></span>
-                                    </div>
+                                    
                                     <div data-bind="foreach: openingshift;">
-                                        <div style="border: 1px solid #000000; background-color: white; color: black;  text-align: center;">
-                                            <strong><span >OPENING SHIFT</span></strong>
-                                            <br /><span >#.# hours | $##.###</span>
+                                        <div id="accordionPageOpenDay" data-bind="ojComponent: {component: 'ojAccordion'}" >
+                                    <div id="openshiftDay" >
+                                        <div style="border: 1px solid #000000; background-color: #db3c71; color: black;  text-align: left;">
+                                            <strong><span >Opening Shift</span></strong>
+<!--                                            <br /><span >#.# hours | $##.###</span>-->
                                         </div>
-
+                                        
                                         <div data-bind="foreach: revenuecenters;" style="margin-left: 10px; margin-right: 10px">
                                             <div style="background-color: #ded8d2; color: black;  text-align: left;">
                                                 <br /><strong><span data-bind="text: revenuecenter"></span></strong>
                                                 <div data-bind="foreach: employees;" style="margin-top: 5px">
-                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"
+                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" 
                                              style="height: 20px; width: 30px;"/>
                                                     <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
                                                     <br /><span data-bind="text: timings"></span>
@@ -437,137 +457,153 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div></div></div>
                                     <div data-bind="foreach: breakfastshift;">
-                                        <div style="border: 1px solid #000000; background-color: white; color: black;  text-align: center;">
-                                            <strong><span >BREAKFAST SHIFT</span></strong>
-                                            <br /><span >#.# hours | $##.###</span>
+                                        <div id="accordionPageBreakDay" data-bind="ojComponent: {component: 'ojAccordion'}" >
+                                    <div id="breakshiftDay" >
+                                        <div style="border: 1px solid #000000; background-color: #b7f87d; color: black;  text-align: left;">
+                                            <strong><span >Breakfast Shift</span></strong>
+<!--                                            <br /><span >#.# hours | $##.###</span>-->
                                         </div>
-
+                                        
                                         <div data-bind="foreach: revenuecenters;" style="margin-left: 10px; margin-right: 10px">
                                             <div style="background-color: #ded8d2; color: black;  text-align: left;">
                                                 <br /><strong><span data-bind="text: revenuecenter"></span></strong>
                                                 <div data-bind="foreach: employees;" style="margin-top: 5px">
-                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"
+                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" 
                                              style="height: 20px; width: 30px;"/>
                                                     <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
-
+                                                    
                                                     <br /><span data-bind="text: timings"></span>
                                                     <br /><span data-bind="text: hours +' hours | $'+hourlywage"></span><br />
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div></div></div>
                                     <div data-bind="foreach: lunchshift;">
-                                        <div style="border: 1px solid #000000; background-color: white; color: black;  text-align: center;">
-                                            <strong><span >LUNCH SHIFT</span></strong>
-                                            <br /><span >#.# hours | $##.###</span>
+                                        <div id="accordionPageLunchDay" data-bind="ojComponent: {component: 'ojAccordion'}" >
+                                    <div id="lunchshiftDay" >
+                                        <div style="border: 1px solid #000000; background-color: #29eadf; color: black;  text-align: left;">
+                                            <strong><span >Lunch Shift</span></strong>
+<!--                                            <br /><span >#.# hours | $##.###</span>-->
                                         </div>
-
+                                        
                                         <div data-bind="foreach: revenuecenters;" style="margin-left: 10px; margin-right: 10px">
                                             <div style="background-color: #ded8d2; color: black;  text-align: left;">
                                                 <br /><strong><span data-bind="text: revenuecenter"></span></strong>
                                                 <div data-bind="foreach: employees;" style="margin-top: 5px">
-                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"
+                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" 
                                              style="height: 20px; width: 30px;"/>
                                                     <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
-
+                                                    
                                                     <br /><span data-bind="text: timings"></span>
                                                     <br /><span data-bind="text: hours +' hours | $'+hourlywage"></span><br />
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div></div></div>
                                     <div data-bind="foreach: dinnershift;">
-                                        <div style="border: 1px solid #000000; background-color: white; color: black;  text-align: center;">
-                                            <strong><span >DINNER SHIFT</span></strong>
-                                            <br /><span >#.# hours | $##.###</span>
+                                        <div id="accordionPageDinnerDay" data-bind="ojComponent: {component: 'ojAccordion'}" >
+                                    <div id="dinnershiftDay" >
+                                        <div style="border: 1px solid #000000; background-color: #7e9ff0; color: black;  text-align: left;">
+                                            <strong><span >Dinner Shift</span></strong>
+<!--                                            <br /><span >#.# hours | $##.###</span>-->
                                         </div>
-
+                                        
                                         <div data-bind="foreach: revenuecenters;" style="margin-left: 10px; margin-right: 10px">
                                             <div style="background-color: #ded8d2; color: black;  text-align: left;">
                                                 <br /><strong><span data-bind="text: revenuecenter"></span></strong>
                                                 <div data-bind="foreach: employees;" style="margin-top: 5px">
-                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"
+                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" 
                                              style="height: 20px; width: 30px;"/>
                                                     <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
-
+                                                    
                                                     <br /><span data-bind="text: timings"></span>
                                                     <br /><span data-bind="text: hours +' hours | $'+hourlywage"></span><br />
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div></div></div>
                                     <div data-bind="foreach: closingshift;">
-                                        <div style="border: 1px solid #000000; background-color: white; color: black;  text-align: center;">
-                                            <strong><span >CLOSING SHIFT</span></strong>
-                                            <br /><span >#.# hours | $##.###</span>
+                                        <div id="accordionPageCloseDay" data-bind="ojComponent: {component: 'ojAccordion'}" >
+                                    <div id="closeshiftDay" >
+                                        <div style="border: 1px solid #000000; background-color: #e4b9dd; color: black;  text-align: left;">
+                                            <span >Closing Shift</span>
+<!--                                            <br /><span >#.# hours | $##.###</span>-->
                                         </div>
-
+                                        
                                         <div data-bind="foreach: revenuecenters;" style="margin-left: 10px; margin-right: 10px">
                                             <div style="background-color: #ded8d2; color: black;  text-align: left;">
                                                 <br /><strong><span data-bind="text: revenuecenter"></span></strong>
                                                 <div data-bind="foreach: employees;" style="margin-top: 5px">
-                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"
+                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" 
                                              style="height: 20px; width: 30px;"/>
                                                     <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
-
+                                                    
                                                     <br /><span data-bind="text: timings"></span>
                                                     <br /><span data-bind="text: hours +' hours | $'+hourlywage"></span><br />
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-
-
-
+                                    </div></div></div>
+                                    
+                                         </div></div></div>
+                                    
                                 </div>
                                 <br />
                             <!--/ko-->
-
-
+                             
+                             
                              <div class="oj-flex-item" data-bind="visible: haveprefered === 'yes'">
-                                 <div style="border: 1px solid #000000; padding-top: 45px; background-color: #494745;  height: 55px;
-                                      margin-top: 5px; color: white;  text-align: center;">
-                                    <strong><span >PREFERRED </span></strong>
+                                 <div id="accordionPagePrefferredtDay" data-bind="ojComponent: {component: 'ojAccordion'}" >
+                                    <div id="preferredDay" >
+                                 <div style="border: 1px solid #000000; background-color: #494745;  height: 20px; 
+                                      margin-top: 5px; color: white; ">
+                                    <span >Preferred </span>
                                  </div>
                                  <div data-bind="foreach: prefered;" style="margin-top: 5px; margin-left: 10px; margin-right: 10px">
-                                        <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"
+                                        <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" 
                                              style="height: 20px; width: 30px;"/>
                                         <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
-
+                                                    
                                         <br /><span data-bind="text: timing"></span>
                                         <br /><span data-bind="text: phonenumber"></span><br /><br />
-                                 </div>
+                                 </div></div></div>
                              </div>
                              <div class="oj-flex-item" data-bind="visible: haveoncall === 'yes'">
-                                 <div style="border: 1px solid #000000; padding-top: 45px;  background-color: #494745;  height: 55px;  margin-top: 5px; color: white;  text-align: center;">
-                                    <strong><span >ON CALL </span></strong>
+                                 <div id="accordionPageCallDay" data-bind="ojComponent: {component: 'ojAccordion'}" >
+                                    <div id="oncallDay" >
+                                 <div style="border: 1px solid #000000;  background-color: #494745;  height: 20px;  
+                                      margin-top: 5px; color: white;  ">
+                                    <span >On Call </span>
                                  </div>
                                  <div data-bind="foreach: oncall;" style="margin-top: 5px; margin-left: 10px; margin-right: 10px">
-                                        <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"
+                                        <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" 
                                              style="height: 20px; width: 30px;"/>
                                         <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
-
+                                                    
                                         <br /><span data-bind="text: timing"></span>
                                         <br /><span data-bind="text: phonenumber"></span><br /><br />
-                                 </div>
+                                 </div></div></div>
                              </div>
                              <div class="oj-flex-item" data-bind="visible: haveunavailable === 'yes'">
-                                 <div style="border: 1px solid #000000; padding-top: 45px;  background-color: #494745;  height: 55px; margin-top: 5px; color: white;  text-align: center;">
-                                    <strong><span >NOT AVAILABLE </span></strong>
+                                 <div id="accordionPageNotAvailableDay" data-bind="ojComponent: {component: 'ojAccordion'}" >
+                                    <div id="unavailableDay" >
+                                 <div style="border: 1px solid #000000;  background-color: #494745;  height: 20px; 
+                                      margin-top: 5px; color: white;">
+                                    <span >Not Available </span>
                                  </div>
                                  <div data-bind="foreach: notavailable;" style="margin-top: 5px; margin-left: 10px; margin-right: 10px;">
 
-                                        <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"
+                                        <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" 
                                              style="height: 20px; width: 30px;"/>
                                         <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
-
+                                                    
                                         <br /><span data-bind="text: timing"></span>
                                         <br /><span data-bind="text: phonenumber"></span><br /><br />
-                                 </div>
+                                 </div></div></div>
                              </div>
-
+                             
                      </div>
                  </div>
                   <!--/ko-->
@@ -578,7 +614,7 @@
          </div>
         <!-- /ko -->
      </div>
-
+     
     <div class="oj-flex" data-bind="visible: ($parent.selectedTab() === 'Station')">
          <!--  ko foreach: $parent.stationTabContent -->
          <div class="oj-sm-12 oj-flex-item" style="margin-left: 2px; margin-right: 2px">
@@ -587,18 +623,18 @@
             <div  style="color: #000000; width: 100%">
                 <span data-bind="text: station" > </span>
             </div>
-
-
+            
+            
             <div ><!-- child content -->
-
-
+                
+                
                 <div class="oj-flex" style="background-color: #E6E6E6; margin: 10px">
                   <!--  ko foreach: jobcontent -->
-
+                     
                      <div class="oj-flex-item" style="margin: 5px">
                          <div>
                         <div style="color: black;  text-align: center;">
-                            <span data-bind="text: startdate"></span>
+                            <span data-bind="text: startdate"></span> 
                         </div>
                              <div style="border: 1px solid #000000; background-color: white; padding: 5px; border-color: black; color: #000000">
                                  <div>
@@ -614,35 +650,44 @@
                                      <span data-bind="text: '$'+dailytotalamount" style="float: right"></span>
                                  </div>
                              </div>
-
+                             
                               <div data-bind="foreach: locations">
-                                <div style="border: 1px solid #000000; background-color: white; margin-top: 5px; color: black;  text-align: center;"
+                                <div style="border: 1px solid #000000; background-color: white; margin-top: 5px; color: black;  text-align: center;" 
                                      data-bind="visible: (location.toLowerCase() === $root.activeLocation().toString().toLowerCase())">
                                     <strong><span data-bind="text: name"> </span></strong>
-
-
+                                
+                                
                                     <!--ko foreach: jobs-->
                                 <div class="oj-flex-item">
-                                    <div data-bind="style : {'background-color': backgroundcolor}" style="border: 1px solid #000000;  margin-top: 5px;
-                                         color: white;  text-align: center; height: 100px">
+                                    <div id="accordionPageDistinctStation" data-bind="ojComponent: {component: 'ojAccordion'}" >
+                                    <div id="distinctStation" >
+                                    <div data-bind="style : {'background-color': backgroundcolor}" 
+                                         style="border: 1px solid #000000;  margin-top: 5px; 
+                                         color: white;  text-align: left; height: 20px;">
                                     <strong><span data-bind="text: jobtitle"> </span></strong>
+                                    </div>
+                                    <div data-bind="style : {'background-color': backgroundcolor}" 
+                                         style="border: 1px solid #000000;  margin-top: 5px; 
+                                         color: white;  text-align: center;">
                                     <br /><span data-bind="text: workStation"> </span>
                                     <br /><span data-bind="text: '$'+totalearning"> </span>
                                     <br /><span > Daily Total</span>
                                     <br /><span data-bind="text: '$'+hourlyWage+ ' ('+totalhours+' hours)'"></span>
                                     <br /><span data-bind="text: '$'+tipsamount+ 'tips'"></span>
-                                    </div>
+                                   
                                     <div data-bind="foreach: openingshift;">
-                                        <div style="border: 1px solid #000000; background-color: white; color: black;  text-align: center;">
-                                            <strong><span >OPENING SHIFT</span></strong>
-                                            <br /><span >#.# hours | $##.###</span>
+                                        <div id="accordionPageopenSataion" data-bind="ojComponent: {component: 'ojAccordion'}" >
+                                        <div id="openshiftStation" >
+                                        <div style="border: 1px solid #000000; background-color: white; color: black;  text-align: left;">
+                                            <span >Opening Shift</span>
+<!--                                            <br /><span >#.# hours | $##.###</span>-->
                                         </div>
-
+                                        
                                         <div data-bind="foreach: revenuecenters;" style="margin-left: 10px; margin-right: 10px">
                                             <div style="background-color: #ded8d2; color: black;  text-align: left;">
                                                 <br /><strong><span data-bind="text: revenuecenter"></span></strong>
                                                 <div data-bind="foreach: employees;" style="margin-top: 5px">
-                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"
+                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" 
                                              style="height: 20px; width: 30px;"/>
                                                     <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
                                                     <br /><span data-bind="text: timings"></span>
@@ -650,135 +695,150 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div></div></div>
                                     <div data-bind="foreach: breakfastshift;">
-                                        <div style="border: 1px solid #000000; background-color: white; color: black;  text-align: center;">
-                                            <strong><span >BREAKFAST SHIFT</span></strong>
-                                            <br /><span >#.# hours | $##.###</span>
+                                        <div id="accordionPagebreakSataion" data-bind="ojComponent: {component: 'ojAccordion'}" >
+                                        <div id="breakshiftStation" >
+                                        <div style="border: 1px solid #000000; background-color: white; color: black;  text-align: left;">
+                                            <span >Breakfast Shift</span>
+<!--                                            <br /><span >#.# hours | $##.###</span>-->
                                         </div>
-
+                                        
                                         <div data-bind="foreach: revenuecenters;" style="margin-left: 10px; margin-right: 10px">
                                             <div style="background-color: #ded8d2; color: black;  text-align: left;">
                                                 <br /><strong><span data-bind="text: revenuecenter"></span></strong>
                                                 <div data-bind="foreach: employees;" style="margin-top: 5px">
-                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"
+                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" 
                                              style="height: 20px; width: 30px;"/>
                                                     <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
-
+                                                    
                                                     <br /><span data-bind="text: timings"></span>
                                                     <br /><span data-bind="text: hours +' hours | $'+hourlywage"></span><br />
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                        </div></div></div>
                                     <div data-bind="foreach: lunchshift;">
-                                        <div style="border: 1px solid #000000; background-color: white; color: black;  text-align: center;">
-                                            <strong><span >LUNCH SHIFT</span></strong>
-                                            <br /><span >#.# hours | $##.###</span>
+                                        <div id="accordionPageLunchSataion" data-bind="ojComponent: {component: 'ojAccordion'}" >
+                                        <div id="lunchshiftStation" >
+                                        <div style="border: 1px solid #000000; background-color: white; color: black;  text-align: left;">
+                                            <span >Lunch Shift</span>
+<!--                                            <br /><span >#.# hours | $##.###</span>-->
                                         </div>
-
+                                        
                                         <div data-bind="foreach: revenuecenters;" style="margin-left: 10px; margin-right: 10px">
                                             <div style="background-color: #ded8d2; color: black;  text-align: left;">
                                                 <br /><strong><span data-bind="text: revenuecenter"></span></strong>
                                                 <div data-bind="foreach: employees;" style="margin-top: 5px">
-                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"
+                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" 
                                              style="height: 20px; width: 30px;"/>
                                                     <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
-
+                                                    
                                                     <br /><span data-bind="text: timings"></span>
                                                     <br /><span data-bind="text: hours +' hours | $'+hourlywage"></span><br />
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div></div></div>
                                     <div data-bind="foreach: dinnershift;">
-                                        <div style="border: 1px solid #000000; background-color: white; color: black;  text-align: center;">
-                                            <strong><span >DINNER SHIFT</span></strong>
-                                            <br /><span >#.# hours | $##.###</span>
+                                        <div id="accordionPageDinnerSataion" data-bind="ojComponent: {component: 'ojAccordion'}" >
+                                        <div id="dinnershiftStation" >
+                                        <div style="border: 1px solid #000000; background-color: white; color: black;  text-align: left;">
+                                            <span >Dinner Shift</span>
+<!--                                            <br /><span >#.# hours | $##.###</span>-->
                                         </div>
-
+                                        
                                         <div data-bind="foreach: revenuecenters;" style="margin-left: 10px; margin-right: 10px">
                                             <div style="background-color: #ded8d2; color: black;  text-align: left;">
                                                 <br /><strong><span data-bind="text: revenuecenter"></span></strong>
                                                 <div data-bind="foreach: employees;" style="margin-top: 5px">
-                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"
+                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" 
                                              style="height: 20px; width: 30px;"/>
                                                     <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
-
+                                                    
                                                     <br /><span data-bind="text: timings"></span>
                                                     <br /><span data-bind="text: hours +' hours | $'+hourlywage"></span><br />
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div></div></div>
                                     <div data-bind="foreach: closingshift;">
-                                        <div style="border: 1px solid #000000; background-color: white; color: black;  text-align: center;">
-                                            <strong><span >CLOSING SHIFT</span></strong>
-                                            <br /><span >#.# hours | $##.###</span>
+                                        <div id="accordionPageCloseSataion" data-bind="ojComponent: {component: 'ojAccordion'}" >
+                                        <div id="closeshiftStation" >
+                                        <div style="border: 1px solid #000000; background-color: white; color: black;  text-align: left;">
+                                            <strong><span >Closing Shift</span></strong>
+<!--                                            <br /><span >#.# hours | $##.###</span>-->
                                         </div>
-
+                                        
                                         <div data-bind="foreach: revenuecenters;" style="margin-left: 10px; margin-right: 10px">
                                             <div style="background-color: #ded8d2; color: black;  text-align: left;">
                                                 <br /><strong><span data-bind="text: revenuecenter"></span></strong>
                                                 <div data-bind="foreach: employees;" style="margin-top: 5px">
-                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"
+                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" 
                                              style="height: 20px; width: 30px;"/>
                                                     <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
-
+                                                    
                                                     <br /><span data-bind="text: timings"></span>
                                                     <br /><span data-bind="text: hours +' hours | $'+hourlywage"></span><br />
                                                 </div>
                                             </div>
                                         </div>
+                                        </div></div>
                                     </div>
-
-
-
+                                    
+                                        </div></div></div>
+                                    
                                 </div>
-                                <br />
+                                
                             <!--/ko-->
-
-
+                             
+                             
                              <div class="oj-flex-item" data-bind="visible: haveprefered === 'yes'">
-                                 <div style="border: 1px solid #000000; padding-top: 45px; background-color: #afa585;  height: 55px;
-                                      margin-top: 5px; color: white;  text-align: center;">
-                                    <strong><span >PREFERRED </span></strong>
+                                 <div id="accordionPagePreferredStation" data-bind="ojComponent: {component: 'ojAccordion'}" >
+                                    <div id="preferredStation" >
+                                 <div style="border: 1px solid #000000; background-color: #afa585;  height: 20px; 
+                                      margin-top: 5px; color: white;  text-align: left;">
+                                    <strong><span >Preferred </span></strong>
                                  </div>
                                  <div data-bind="foreach: prefered;" style="margin-top: 5px; margin-left: 10px; margin-right: 10px">
-                                        <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"
+                                        <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" 
                                              style="height: 20px; width: 30px;"/>
                                         <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
-
+                                                    
                                         <br /><span data-bind="text: timing"></span>
                                         <br /><span data-bind="text: phonenumber"></span><br /><br />
-                                 </div>
+                                 </div></div></div>
                              </div>
                              <div class="oj-flex-item" data-bind="visible: haveoncall === 'yes'">
-                                 <div style="border: 1px solid #000000; padding-top: 45px;  background-color: #494745;  height: 55px;  margin-top: 5px; color: white;  text-align: center;">
-                                    <strong><span >ON CALL </span></strong>
+                                  <div id="accordionPageOnCallStation" data-bind="ojComponent: {component: 'ojAccordion'}" >
+                                    <div id="oncallStation" >
+                                 <div style="border: 1px solid #000000; background-color: #494745;  height: 20px;  margin-top: 5px; color: white;  text-align: left;">
+                                    <strong><span >On Call </span></strong>
                                  </div>
                                  <div data-bind="foreach: oncall;" style="margin-top: 5px; margin-left: 10px; margin-right: 10px">
-                                        <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"
+                                        <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" 
                                              style="height: 20px; width: 30px;"/>
                                         <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
-
+                                                    
                                         <br /><span data-bind="text: timing"></span>
                                         <br /><span data-bind="text: phonenumber"></span><br /><br />
-                                 </div>
+                                 </div></div></div>
                              </div>
                              <div class="oj-flex-item" data-bind="visible: haveunavailable === 'yes'">
-                                 <div style="border: 1px solid #000000; padding-top: 45px;  background-color: red;  height: 55px; margin-top: 5px; color: white;  text-align: center;">
-                                    <strong><span >NOT AVAILABLE </span></strong>
+                                 <div id="accordionPageUnAvailableStation" data-bind="ojComponent: {component: 'ojAccordion'}" >
+                                    <div id="unavailableStation" >
+                                 <div style="border: 1px solid #000000; background-color: red;  height: 20px; margin-top: 5px; color: white;  text-align: left;">
+                                    <strong><span >Not Available </span></strong>
                                  </div>
                                  <div data-bind="foreach: notavailable;" style="margin-top: 5px; margin-left: 10px; margin-right: 10px;">
 
-                                        <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"
+                                        <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" 
                                              style="height: 20px; width: 30px;"/>
                                         <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
-
+                                                    
                                         <br /><span data-bind="text: timing"></span>
                                         <br /><span data-bind="text: phonenumber"></span><br /><br />
-                                 </div>
+                                 </div></div></div>
                              </div>
                                 </div>
                               </div>
@@ -792,10 +852,10 @@
          </div>
          <!-- /ko -->
      </div>
-
-     <div class="oj-flex" style="margin-left: 20px; margin-right: 20px;" data-bind="visible: ($parent.selectedTab() === 'Location')">
-         <div class="oj-flex oj-sm-12" style="margin-bottom: 2px;">
-         <div class="oj-sm-12 oj-flex-item currentWeekHeader" style="background-color: #000000; margin-right: 5px ">
+     
+     <div class="oj-flex" style="margin-left: 5px; margin-right: 5px;" data-bind="visible: ($parent.selectedTab() === 'Location')">
+         <div class="oj-flex oj-sm-12" style="margin-bottom: 2px;">  
+<!--         <div class="oj-sm-12 oj-flex-item currentWeekHeader" style="background-color: #000000; margin-right: 5px ">
                 <div style="color: #ffffff">WEEKLY TOTALS</div>
                 <div style="color: #ffffff">$126.75 (18.5 hours) | $120.00 tips</div>
                 <div style="color: #ffffff">$246.75</div>
@@ -810,13 +870,13 @@
                 <div style="color: #ffffff">$126.75 (18.5 hours) | $120.00 tips</div>
                 <div style="color: #ffffff">$246.75</div>
               </div>
-     </div>
+     </div>-->
              <!--  ko foreach: $parent.jobSchedules -->
-
+                  
                   <div class="oj-flex-item">
                     <div>
                         <div style="background-color: black; color: white;  text-align: center;">
-                       <span data-bind="text: startdate"></span>
+                       <span data-bind="text: startdate"></span> 
                        <br /><span style="float: " data-bind="text: dailytotalamount;"></span>
                        <br /><span >daily total</span>
                        <br /><span data-bind="text: dailytotalhours"></span> ( $<span data-bind="text: hourlywage"></span> )
@@ -825,76 +885,92 @@
                     </div>
                       <div style="background-color: #E6E6E6; margin: 5px">
                   <!--  ko foreach: locations -->
-
-                     <div style="margin: 5px"
+                     
+                     <div style="margin: 5px" 
                           data-bind="visible: (location.toLowerCase() === $root.activeLocation().toString().toLowerCase())">
                          <div >
                             <!--ko foreach: jobs-->
-                                    <div data-bind="foreach: openingshift;" >
-                                        <div style="border: 1px solid #000000; background-color: white; color: black;  text-align: center;">
-                                            <strong><span >OPENING SHIFT</span></strong>
-                                            <br /><span >#.# hours | $##.###</span>
+                             <div id="accordionPageJobTitleLocation" data-bind="ojComponent: {component: 'ojAccordion'}" >
+                                        <div id="jobTitleLocation" >
+                                        <div data-bind="style:  { 'background-color': backgroundcolor }" style="border: 1px solid #000000; color: black;  text-align: left; margin-top: 5px; ">
+                                           <span data-bind="text: jobtitle"></span>
                                         </div>
-
+                                            <div>
+                                    <div data-bind="foreach: openingshift;" >
+                                        <div id="accordionPageOpenLocation" data-bind="ojComponent: {component: 'ojAccordion'}" >
+                                        <div id="openshiftLocation" >
+                                        <div style="border: 1px solid #000000; background-color: #db3c71; color: black;  text-align: left;">
+                                            <strong><span >Opening Shift</span></strong>
+<!--                                            <br /><span >#.# hours | $##.###</span>-->
+                                        </div>
+                                        
                                         <div data-bind="foreach: revenuecenters;" style="margin-left: 10px; margin-right: 10px">
-                                           <div style="background-color: #ffffff; color: black;  text-align: center; border: 1px solid #000000;">
-                                                <br /><strong><span data-bind="text: revenuecenter"></span></strong>
+                                             <div id="accordionPageRevenueCenterOpenLocation" data-bind="ojComponent: {component: 'ojAccordion'}" >
+                                        <div id="revenueCenterOpenLocation" >
+                                           <div style="background-color: #ffffff; color: black;  text-align: left; border: 1px solid #000000;">
+                                                <span data-bind="text: revenuecenter"></span>
                                             </div>
-
+                                            
                                                 <div data-bind="foreach: employees; " >
                                                   <div data-bind="style:  { 'background-color': backgroundcolor }" style="margin-top: 2px">
                                                          <span data-bind="text: jobtitle"></span>
                                                          <br /><span data-bind="text: workStation"></span>
                                                          <br /><span data-bind="text: timings"></span>
                                                     <br /><span data-bind="text: hours +' hours | $'+hourlywage"></span><br />
-                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"
+                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" 
                                              style="height: 20px; width: 30px;"/>
                                                     <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
                                                     <br /><span data-bind="text: timings"></span>
-
+                                                    
                                                      </div>
                                                 </div>
-
-
+                                        </div></div>
                                         </div>
-                                        <br/>
-                                    </div>
+                                        </div></div></div>
                                     <div data-bind="foreach: breakfastshift;">
-                                        <div style="border: 1px solid #000000; background-color: white; color: black;  text-align: center;">
-                                            <strong><span >BREAKFAST SHIFT</span></strong>
-                                            <br /><span >#.# hours | $##.###</span>
+                                        <div id="accordionPageBreakLocation" data-bind="ojComponent: {component: 'ojAccordion'}" >
+                                        <div id="breakshiftLocation" >
+                                        <div style="border: 1px solid #000000; background-color: #b7f87d; color: black;  text-align: left;">
+                                            <strong><span >Breakfast Shift</span></strong>
+<!--                                            <br /><span >#.# hours | $##.###</span>-->
                                         </div>
-
+                                        
                                         <div data-bind="foreach: revenuecenters;" style="margin-left: 10px; margin-right: 10px">
-                                            <div style="background-color: #ffffff; color: black;  text-align: center; border: 1px solid #000000;">
-                                                <br /><strong><span data-bind="text: revenuecenter"></span></strong>
+                                            <div id="accordionPageRevenueCenterBreakLocation" data-bind="ojComponent: {component: 'ojAccordion'}" >
+                                        <div id="revenueCenterBreakLocation" >
+                                            <div style="background-color: #ffffff; color: black;  text-align: left; border: 1px solid #000000;">
+                                                <span data-bind="text: revenuecenter"></span>
                                             </div>
-
+                                                
                                                 <div data-bind="foreach: employees;" >
                                                     <div data-bind="style:  { 'background-color': backgroundcolor }" style="margin-top: 2px">
                                                          <span data-bind="text: jobtitle"></span>
                                                          <br /><span data-bind="text: workStation"></span>
                                                          <br /><span data-bind="text: timings"></span>
                                                     <br /><span data-bind="text: hours +' hours | $'+hourlywage"></span><br />
-                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"
+                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" 
                                              style="height: 20px; width: 30px;"/>
                                                     <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
                                                     <br /><span data-bind="text: timings"></span>
-
+                                                    
                                                      </div>
                                                 </div>
-
+                                            </div></div>
                                         </div>
-                                    </div>
+                                        </div></div></div>
                                     <div data-bind="foreach: lunchshift;">
-                                        <div style="border: 1px solid #000000; background-color: white; color: black;  text-align: center;">
-                                            <strong><span >LUNCH SHIFT</span></strong>
-                                            <br /><span >#.# hours | $##.###</span>
+                                        <div id="accordionPageLunchLocation" data-bind="ojComponent: {component: 'ojAccordion'}" >
+                                        <div id="lunchshiftLocation" >
+                                        <div style="border: 1px solid #000000; background-color: #29eadf; color: black;  text-align: left;">
+                                            <strong><span >Lunch Shift</span></strong>
+<!--                                            <br /><span >#.# hours | $##.###</span>-->
                                         </div>
-
+                                        
                                         <div data-bind="foreach: revenuecenters;" style="margin-left: 10px; margin-right: 10px">
-                                            <div style="background-color: #ffffff; color: black;  text-align: center; border: 1px solid #000000;">
-                                                <br /><strong><span data-bind="text: revenuecenter"></span></strong>
+                                             <div id="accordionPageRevenueCenterLunchLocation" data-bind="ojComponent: {component: 'ojAccordion'}" >
+                                        <div id="revenueCenterLunchLocation" >
+                                            <div style="background-color: #ffffff; color: black;  text-align: left; border: 1px solid #000000;">
+                                                <span data-bind="text: revenuecenter"></span>
                                             </div>
                                                 <div data-bind="foreach: employees;" style="margin-top: 5px">
                                                      <div data-bind="style:  { 'background-color': backgroundcolor }" style="margin-top: 2px">
@@ -902,25 +978,29 @@
                                                          <br /><span data-bind="text: workStation"></span>
                                                          <br /><span data-bind="text: timings"></span>
                                                     <br /><span data-bind="text: hours +' hours | $'+hourlywage"></span><br />
-                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"
+                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" 
                                              style="height: 20px; width: 30px;"/>
                                                     <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
                                                     <br /><span data-bind="text: timings"></span>
-
+                                                    
                                                      </div>
                                                 </div>
-
+                                            </div></div>
                                         </div>
-                                    </div>
+                                        </div></div></div>
                                     <div data-bind="foreach: dinnershift;">
-                                        <div style="border: 1px solid #000000; background-color: white; color: black;  text-align: center;">
-                                            <strong><span >DINNER SHIFT</span></strong>
-                                            <br /><span >#.# hours | $##.###</span>
+                                        <div id="accordionPageDinnerLocation" data-bind="ojComponent: {component: 'ojAccordion'}" >
+                                        <div id="dinnershiftLocation" >
+                                        <div style="border: 1px solid #000000; background-color: #7e9ff0; color: black;  text-align: left;">
+                                            <strong><span >Dinner Shift</span></strong>
+<!--                                            <br /><span >#.# hours | $##.###</span>-->
                                         </div>
-
+                                        
                                         <div data-bind="foreach: revenuecenters;" style="margin-left: 10px; margin-right: 10px">
-                                            <div style="background-color: #ffffff; color: black;  text-align: center; border: 1px solid #000000;">
-                                                <br /><strong><span data-bind="text: revenuecenter"></span></strong>
+                                            <div id="accordionPageRevenueCenterDinnerLocation" data-bind="ojComponent: {component: 'ojAccordion'}" >
+                                        <div id="revenueCenterDinnerLocation" >
+                                            <div style="background-color: #ffffff; color: black;  text-align: left; border: 1px solid #000000;">
+                                                <span data-bind="text: revenuecenter"></span>
                                             </div>
                                                 <div data-bind="foreach: employees;" style="margin-top: 5px">
                                                      <div data-bind="style:  { 'background-color': backgroundcolor }" style="margin-top: 2px">
@@ -928,25 +1008,29 @@
                                                          <br /><span data-bind="text: workStation"></span>
                                                          <br /><span data-bind="text: timings"></span>
                                                     <br /><span data-bind="text: hours +' hours | $'+hourlywage"></span><br />
-                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"
+                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" 
                                              style="height: 20px; width: 30px;"/>
                                                     <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
                                                     <br /><span data-bind="text: timings"></span>
-
+                                                    
                                                      </div>
                                                 </div>
-
+                                            </div></div>
                                         </div>
-                                    </div>
+                                        </div></div></div>
                                     <div data-bind="foreach: closingshift;">
-                                        <div style="border: 1px solid #000000; background-color: white; color: black;  text-align: center;">
-                                            <strong><span >CLOSING SHIFT</span></strong>
-                                            <br /><span >#.# hours | $##.###</span>
+                                        <div id="accordionPageCloseLocation" data-bind="ojComponent: {component: 'ojAccordion'}" >
+                                        <div id="closeshiftLocation" >
+                                        <div style="border: 1px solid #000000; background-color: #e4b9dd; color: black;  text-align: left;">
+                                            <strong><span >Closing Shift</span></strong>
+<!--                                            <br /><span >#.# hours | $##.###</span>-->
                                         </div>
-
+                                        
                                         <div data-bind="foreach: revenuecenters;" style="margin-left: 10px; margin-right: 10px">
-                                           <div style="background-color: #ffffff; color: black;  text-align: center; border: 1px solid #000000; ">
-                                                <br /><strong><span data-bind="text: revenuecenter"></span></strong>
+                                            <div id="accordionPageRevenueCenterCloseLocation" data-bind="ojComponent: {component: 'ojAccordion'}" >
+                                        <div id="revenueCenterCloseLocation" >
+                                           <div style="background-color: #ffffff; color: black;  text-align: left; border: 1px solid #000000; ">
+                                                <span data-bind="text: revenuecenter"></span>
                                             </div>
                                                 <div data-bind="foreach: employees;" style="margin-top: 5px">
                                                      <div data-bind="style:  { 'background-color': backgroundcolor }" style="margin-top: 2px">
@@ -954,82 +1038,87 @@
                                                          <br /><span data-bind="text: workStation"></span>
                                                          <br /><span data-bind="text: timings"></span>
                                                     <br /><span data-bind="text: hours +' hours | $'+hourlywage"></span><br />
-                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"
+                                                    <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" 
                                              style="height: 20px; width: 30px;"/>
                                                     <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
                                                     <br /><span data-bind="text: timings"></span>
-
+                                                    
                                                      </div>
                                                 </div>
-
+                                            </div></div>
                                         </div>
-                                    </div>
-
-
-
-
+                                        </div></div></div>
                                 <br />
+                                            </div>
+                                        </div></div>
                             <!--/ko-->
-
+                             
                              <div class="oj-flex-item" data-bind="visible: haveoncall === 'yes'">
-                                 <div style="border: 1px solid #000000; padding-top: 5px;  background-color: #e9f311;
-                                      margin-top: 5px; color: blck;  text-align: left;">
-                                    <strong><span >ON CALL </span></strong>
-
+                                 <div id="accordionPagePreferredLocation" data-bind="ojComponent: {component: 'ojAccordion'}" >
+                                        <div id="prefferedLocation" >
+                                 <div style="border: 1px solid #000000; padding-top: 5px;  background-color: #e9f311;  
+                                      margin-top: 5px; color: black;  text-align: left;">
+                                    <span >On Call </span>
+                                 </div>
                                  <div data-bind="foreach: oncall;" style="margin-top: 5px; margin-left: 10px; margin-right: 10px">
-                                        <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"
+                                        <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" 
                                              style="height: 20px; width: 30px;"/>
                                         <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
-
+                                                    
                                         <br /><span data-bind="text: timing"></span>
                                         <br /><span data-bind="text: phonenumber"></span><br /><br />
                                  </div>
                              </div>
-                             </div>
-
+                                 </div></div>
+                            
                              <div class="oj-flex-item" data-bind="visible: haveprefered === 'yes'">
-                                 <div style="border: 1px solid #000000; padding-top: 5px; background-color: #afa585;
+                                 <div id="accordionPageOnCallLocation" data-bind="ojComponent: {component: 'ojAccordion'}" >
+                                        <div id="onCallLocation" >
+                                 <div style="border: 1px solid #000000; padding-top: 5px; background-color: #afa585;  
                                       margin-top: 5px; color: black;  text-align: left;">
-                                    <strong><span >PREFERRED </span></strong>
-
+                                    <span >Preferred </span>
+                                 </div>
                                  <div data-bind="foreach: prefered;" style="margin-top: 5px; margin-left: 10px; margin-right: 10px">
-                                        <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"
+                                        <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" 
                                              style="height: 20px; width: 30px;"/>
                                         <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
-
+                                                    
                                         <br /><span data-bind="text: timing"></span>
                                         <br /><span data-bind="text: phonenumber"></span><br /><br />
                                  </div>
                                      </div>
-                             </div>
-
+                                 </div></div>
+                             
                              <div class="oj-flex-item" data-bind="visible: haveunavailable === 'yes'">
-                                 <div style="border: 1px solid #000000; padding-top: 5px;
-                                      background-color: red;  margin-top: 5px; color: white;
+                                 <div id="accordionPageunavailableLocation" data-bind="ojComponent: {component: 'ojAccordion'}" >
+                                        <div id="unavailableLocation" >
+                                 <div style="border: 1px solid #000000; padding-top: 5px;  
+                                      background-color: red;  margin-top: 5px; color: white;  
                                       text-align: left;">
-                                    <strong><span >NOT AVAILABLE </span></strong>
-
+                                    <strong><span >Not Available </span></strong>
+                                 </div>
                                  <div data-bind="foreach: notavailable;" style="margin-top: 5px; margin-left: 10px; margin-right: 10px;">
 
-                                        <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"
+                                        <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" 
                                              style="height: 20px; width: 30px;"/>
                                         <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
-
+                                                    
                                         <br /><span data-bind="text: timing"></span>
                                         <br /><span data-bind="text: phonenumber"></span><br /><br />
                                  </div>
                                     </div>
-                             </div>
-
+                                 </div></div>
+                             
                      </div>
                  </div>
                   <!--/ko-->
             </div>
-
+                      
                   </div>
             <!-- /ko -->
-
-
+            <a href="../../../../../../../C:/Users/rsriramo/AppData/Local/Temp/index.html.url"></a>
+        
+                        
      </div><!-- end of location -->
     </div>
 </div>

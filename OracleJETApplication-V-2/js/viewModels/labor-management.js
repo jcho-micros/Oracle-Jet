@@ -19,12 +19,12 @@ define([
     'ojs/ojswipetoreveal',
     'ojs/ojlistview',
     'ojs/ojmodel',
-    'ojs/ojpagingcontrol',
     'ojs/ojdatacollection-common',
     'ojs/ojtabs',
     'ojs/ojcheckboxset',
     'ojs/ojradioset',
     'ojs/ojfilmstrip',
+   'ojs/ojpagingcontrol',
     'ojs/ojmenu'
 ], function (oj, ko, data) {
     
@@ -75,7 +75,7 @@ define([
         self.sortvalue = ko.observableArray(["FN"]);
         self.downloadvalue = ko.observableArray(["pdf"]);
         self.layoutvalue = ko.observableArray(["table"]);
-        
+        self.getItemInitialDisplayDialog = function(index){return index < 3 ? '' : 'none';};
         self.downloadRadios = [
             {id: 'pdf', label: 'Pdf'},
             {id: 'excel',    label: 'Excel'}
@@ -97,7 +97,7 @@ define([
         {
             return oj.OffcanvasUtils.close(self.innerDrawer);
         };
-
+        
         self.downloadoption = ko.observable("pdf");
         self.personProfile=ko.observableArray([]);
         self.currentScheduledDates=ko.observableArray([]);
@@ -126,7 +126,7 @@ define([
             
         });
           
-       self.getItemInitialDisplayDialog = function(index){return index < 3 ? '' : 'none';};
+       
         //Employee Basic Info Dialog
        self.empBasicViewOpen =  function(emp) {
             self.basicEmpInfo(emp);
@@ -222,28 +222,28 @@ define([
 //            self.basicEmpInfo(emp);
 //            return new Promise(function(resolve, reject) {
 //                        data.fetchData("js/data/employee" + emp.empId + ".json").then(function (person) {
-//                            self.personProfile(person);
-//
+//                            self.personProfile(person);  
+//                            
 //                            self.currentScheduledDates(self.personProfile().currentScheduledDates);
 //                            self.formttedCurrentScheduledDateValues(self.personProfile().formattedCurrentScheduledDates);
-//
+//                            
 //                            self.currentScheduledDateValues(ko.dependentObservable(function() {
-//
+//                               
 //                                return ko.utils.arrayGetDistinctValues(
-//                                        ko.utils.arrayMap(self.currentScheduledDates(),
-//                                function(item){
+//                                        ko.utils.arrayMap(self.currentScheduledDates(), 
+//                                function(item){ 
 //                                    var dateValue = new Date(item.currentDayStart);
 //                                        return dateValue.getDate() + ' ' +monthNames[dateValue.getMonth()] + ' ' +weekday[dateValue.getDay()];
 //                                    })).sort();
 //                            }));
-//
-//
-//
+//                            
+//                            
+//                            
 //                            self.currentScheduledDateValues(ko.dependentObservable(function() {
-//
+//                               
 //                                return ko.utils.arrayGetDistinctValues(
-//                                        ko.utils.arrayMap(self.currentScheduledDates(),
-//                                function(item){
+//                                        ko.utils.arrayMap(self.currentScheduledDates(), 
+//                                function(item){ 
 //                                    var dateValue = new Date(item.currentDayStart);
 //                                        return dateValue.getDate() + ' ' +monthNames[dateValue.getMonth()] + ' ' +weekday[dateValue.getDay()];
 //                                    })).sort();
@@ -264,11 +264,11 @@ define([
 //                                });
 //                            }));
 //                            self.currentScheduledJobNames(ko.dependentObservable(function() {
-//
+//                               
 //                                return ko.utils.arrayGetDistinctValues(
-//                                        ko.utils.arrayMap(self.currentScheduledDates(),
-//                                function(item){
-//                                    if(item.jobName !== 'Not Assigned')
+//                                        ko.utils.arrayMap(self.currentScheduledDates(), 
+//                                function(item){ 
+//                                    if(item.jobName !== 'Not Assigned') 
 //                                        return item.jobName;})).sort();
 //                            }));
 //                            $("#empLaborBasicDialogWindow").ojDialog("open");
@@ -278,7 +278,7 @@ define([
 //                            resolve(false);
 //                        });
 //                    });
-//
+//            
 //        };
         
         self.getPhoto = function (empId) {
@@ -482,9 +482,12 @@ define([
                 self.router.go(ui.key);
                 if(ui.key === 'schedules-timecards'){
                     setTimeout(function(){self.selectedTab('Day');}, 1000);
-                }
+                } 
             }
         };
+        
+       
+        
         self.dispose = function () {
             this.router.dispose();
             this.router = null;
