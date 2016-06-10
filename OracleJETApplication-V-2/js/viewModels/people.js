@@ -24,6 +24,7 @@ define([
     'ojs/ojinputtext',
     'ojs/ojselectcombobox',
     'ojs/ojradioset',
+    'ojs/ojdatetimepicker',
     'ojs/ojmenu'
 ], function (oj, ko, data, $, Hammer) {
     
@@ -53,6 +54,8 @@ define([
         self.currentScheduledDateValues = ko.observableArray([]);
         self.formattedCurrentScheduledDateValues = ko.observableArray([]);
         
+        self.hireStatusChanges = ko.observableArray([]);
+        
         self.PageControllVal = ko.observable(5);
         // this is the invalidComponentTracker on ojCheckboxset
         self.statusTracker = ko.observable();
@@ -73,9 +76,12 @@ define([
         self.personProfile=ko.observableArray([]);
         self.currentScheduledDates=ko.observableArray([]);
         self.formttedCurrentScheduledDateValues = ko.observableArray([]);
+        
+        self.hireType =  ko.observable("");      
+        self.reHireDate = ko.observable(oj.IntlConverterUtils.dateToLocalIso(new Date()));
+        self.hiredateprev = ko.observable("");  
           
-          
-       self.getItemInitialDisplayDialog = function(index){return index < 3 ? '' : 'none';};
+        self.getItemInitialDisplayDialog = function(index){return index < 3 ? '' : 'none';};
         //Employee Basic Info Dialog
         self.empBasicInfoOpen =  function(emp) {
             self.basicEmpInfo(emp);
@@ -216,10 +222,46 @@ define([
                     });
             
         };
+        
+        //Employee Hire Staus Dialog
+        self.empHireStatusOpen =  function(emp) {
+            self.basicEmpInfo(emp);
+            return new Promise(function(resolve, reject) {
+                        data.fetchData("js/data/employee" + emp.empId + ".json").then(function (person) {
+                            self.personProfile(person);
+                            self.hiredateprev(oj.IntlConverterUtils.dateToLocalIso(new Date(
+                                    new Date(self.basicEmpInfo().hireDate).getFullYear(),
+                                    new Date(self.basicEmpInfo().hireDate).getMonth(),
+                                    new Date(self.basicEmpInfo().hireDate).getDate())));
+                                    
+                            $("#hireStatusDialog").ojDialog("open");
+                            $( "#tabs" ).ojTabs( "refresh" );
+                            if(self.basicEmpInfo().hireStatus === 'Active'){
+                                $( "#tabs" ).ojTabs( { "selected": "tabs-1" } );
+                            } else if(self.basicEmpInfo().hireStatus === 'Inactive-Suspended'){
+                                $( "#tabs" ).ojTabs( { "selected": "tabs-2" } );
+                            } else if(self.basicEmpInfo().hireStatus === 'Inactive-Terminated'){
+                                $( "#tabs" ).ojTabs( { "selected": "tabs-2" } );
+                            } else if(self.basicEmpInfo().hireStatus === 'Inactive-Leave Of Absence'){
+                                $( "#tabs" ).ojTabs( { "selected": "tabs-3" } );
+                            }
+                            
+                            
+                            resolve(true);
+                        }).fail(function (error) {
+                            console.log('Error: ' + error.message);
+                            resolve(false);
+                        });
+                    });
+            
+        };
+
 
         self.empBasicInfoClose =  function() {
             $("#empBasicDialogWindow").ojDialog("close");
         };
+        
+        
 
 
         //self.ready = ko.observable(false);
@@ -335,6 +377,16 @@ define([
                          }
                      }
                  }
+                 if(self.hireStatusChanges().length > 0){
+                     for(var item = 0; item < peopleFilter.length; item++){
+                         for(var changeItem = 0;  changeItem < self.hireStatusChanges().length; changeItem++){
+                             if(peopleFilter[item].empId === self.hireStatusChanges()[changeItem].empid){
+                                 peopleFilter[item].hireDate = self.hireStatusChanges()[changeItem].newhiredate;
+                                 peopleFilter[item].status = self.hireStatusChanges()[changeItem].newhirestatus;
+                             }
+                         }   
+                     }
+                 }
                  if(peopleFilter.length > 0){
                      peopleFilter.sort(function(a, b){
                          if(self.sortvalue() === "FN"){
@@ -399,6 +451,19 @@ define([
                 oj.Router.rootInstance.go('profile');
              
             }
+        };
+        
+        self.empHireStatusClose =  function() {
+            var a=self.hireStatusChanges();
+            a.push({
+                'empid': self.basicEmpInfo().empId,
+                'newhiredate' : self.reHireDate(),
+                'newhirestatus' : 'Active'
+            });
+            self.hireStatusChanges(a);
+            console.log("length of hireStatusChanges = "+self.hireStatusChanges().length);
+            $("#hireStatusDialog").ojDialog("close");
+            //self.filteredAllPeople();
         };
         self.getBasicFormattedDate = function (oldDate) {
             var dischargeDate = [oldDate];
@@ -513,6 +578,8 @@ define([
         self.toggleSections = function () {
             self.sectionsState(!self.sectionsState());
         };
+        
+        
 
     }
 

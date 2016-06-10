@@ -187,17 +187,18 @@
                                
                                  
                                     <div tabIndex="-1" data-bind="attr: {id: 'second_toolbar_'+$data['name']}" class="oj-offcanvas-end" style="width:150px">
-                                        <div data-bind="click: $parent.handleQuickView" class="oj-swipetoreveal-more">
+                                        <div data-bind="click: $parent.empBasicInfoOpen" class="oj-swipetoreveal-more">
                                             <div class="oj-flex-bar" style="height:100%">
                                                 <div class="oj-flex-bar-center-absolute">
                                                     <div class="oj-flex oj-sm-flex-direction-column">
                                                         <div title=".demo-library-icon-24" role="img" class="oj-flex-item demo-library-icon-24 demo-icon-font-24"></div>
-                                                        <div style="padding-top: 10px" class="oj-flex-item">quick view</div>
+                                                        <div style="padding-top: 10px" class="oj-flex-item" >
+                                                            <span >quick view</span></div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div data-bind="click: $parent.handleStatus" class="oj-swipetoreveal-flag">
+                                        <div data-bind="click: $parent.empHireStatusOpen" class="oj-swipetoreveal-flag">
                                             <div class="oj-flex-bar" style="height:100%">
                                                 <div class="oj-flex-bar-center-absolute">
                                                     <div class="oj-flex oj-sm-flex-direction-column">
@@ -217,4 +218,5 @@
              </script>
 
 
+ <div data-bind="template: {name: 'partials/employee-hire-status-modal/employee-hire-status-modal-small'}"></div>
  <div data-bind="template: {name: 'partials/employee-basic-info-modal/employee-basic-info-modal-small'}"></div>
