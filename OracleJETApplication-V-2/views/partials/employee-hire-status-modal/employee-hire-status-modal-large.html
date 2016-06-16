@@ -1,27 +1,33 @@
-<div style="display:none;" id="hireStatusDialog" data-bind="ojComponent:{component: 'ojDialog', initialVisibility: 'hide', rootAttributes: {class: 'generalModal-dimensions'},'position': {'my': 'start bottom', 'at': 'end+14 top'}}">
+<div style="display:none;" id="hireStatusDialog" data-bind="ojComponent:{component: 'ojDialog', initialVisibility: 'hide', 
+            rootAttributes: {style: 'width: 95%; height: auto;'}, 
+            'position': {'at': 'center'}}">
     <div class="oj-dialog-header oj-helper-clearfix" aria-labelledby="dialogTitleId">
-        <span id="dialogTitleId" class="oj-dialog-title">
-           <div>Hire Status Modal</div>
+       <span id="dialogTitleId" class="oj-dialog-title" data-bind="text: basicEmpInfo().firstName + basicEmpInfo().lastName + ' Hire Status'">
+           Hire Status
         </span>
     </div>
     <div class="oj-dialog-body">
         <div id="tabs-container">
-            <div id="tabs" data-bind="ojComponent:{component: 'ojTabs', disabledTabs: [3]}">
+            <div id="tabs" data-bind="ojComponent:{component: 'ojTabs', 
+                    optionChange: tabsChangeHandler,
+                    disabledTabs: [3]}">
                 <!-- tab bar -->
                 <ul>
-                    <li><span>Hired</span></li>
-                    <li><span>Terminated</span></li>
-                    <li><span>Leave of Absence</span></li>
+                    <li id="t1"><span>Hired</span></li>
+                    <li id="t2"><span>Terminated</span></li>
+                    <li id="t3"><span>Leave of Absence</span></li>
                 </ul>
                 <div id="tabs-1">
-                    <div class="oj-row">
-                        <div class="oj-col oj-sm-4">
+                    <div class="oj-flex" style="background: #eaeded">
+                        <div class="oj-felx-item oj-lg-4 oj-md-4">
                             <div>Hire Date</div>
-<!--                            <input data-bind="ojComponent: {component: 'ojInputDate', value: $parent.hireDate()}" />-->
+                            <input data-bind="ojComponent: {component: 'ojInputDate', 
+                                    value: hiredateprev,
+                                readOnly: true}" />
                         </div>
-                        <div class="oj-col oj-sm-4">
+                        <div class="oj-felx-item oj-lg-4 oj-md-4">
                             <div>Type</div>
-                            <div id="checkboxSetHireType" aria-labelledby="mainlabelid" data-bind="ojComponent: {component: 'ojCheckboxset', value: ''}">
+                            <div id="checkboxSetHireType" aria-labelledby="mainlabelid" data-bind="ojComponent: {component: 'ojCheckboxset', value: basicEmpInfo().hireStatus}">
                               <span class="oj-choice-row">
                                 <input id="temp" type="checkbox" value="temporary">
                                 <label>Temporary</label>
@@ -32,20 +38,99 @@
                               </span>
                             </div>
                         </div>
-                        <div class="oj-col oj-sm-4">
+                        <div class="oj-felx-item oj-lg-4 oj-md-4">
                             <div>Re-hire Date</div>
-<!--                            <input data-bind="ojComponent: {component: 'ojInputDate', value: reHireDate}" />-->
+                            <input data-bind="ojComponent: {component: 'ojInputDate', value: reHireDate}" />
                         </div>
                     </div>
                 </div>
                 <div id="tabs-2">
-                    <p>Terminated Tab</p>
+                    <div class="oj-flex" style="background: #eaeded">
+                        <div class="oj-flex-item oj-lg-4 oj-md-4">
+                            <div>Termination Date</div>
+                                <input data-bind="ojComponent: {component: 'ojInputDate', 
+                                        value: terminationdate
+                                    }" />
+
+                            <div>Eligibale for Rehire ?</div>
+                            <input id="giftWrapSwitch" data-bind="ojComponent: {component: 'ojSwitch', 
+				value: true
+                            }" title="Eligibale for Rehire ?"/>
+			
+		
+                            
+                            <div>Termination Status</div>
+                                <select id="basicSelect" data-bind="ojComponent: {component: 'ojSelect',
+                                                        value: termstatusvalue,
+                                                        rootAttributes: {style:'max-width:20em'}}">
+                                <option value="VA">A</option>
+                                <option value="SI">B</option>
+                                <option value="CA">C</option>
+                                <option value="OU">D</option>
+                              </select>
+                        </div>
+                
+                        <div class="oj-flex-item oj-lg-4 oj-md-4">
+                            <div>Termination Reason</div>
+                            <select id="basicSelect" data-bind="ojComponent: {component: 'ojSelect',
+                                                    value: termsreasonvalue1,
+                                                    rootAttributes: {style:'max-width:20em'}}">
+                                <option value="VA">A</option>
+                                <option value="SI">B</option>
+                                <option value="CA">C</option>
+                                <option value="OU">D</option>
+                            </select>
+                            <br/>
+                            <a href="#">+ add another</a>
+                        </div>
+                        
+                         <div class="oj-flex-item oj-lg-4 oj-md-4">
+                            <label for="text-area">Termination Notes</label>
+                            <textarea id="text-area" 
+                                      data-bind="ojComponent: {component: 'ojTextArea', 
+                                                               value: terminotes}"></textarea>
+                        </div>
                 </div>
+                </div>
+                
                 <div id="tabs-3">
-                    <p>Leave of Absence Tab</p>
+                    <div class="oj-flex" style="background: #eaeded">
+                        <div class="oj-flex-item oj-lg-6 oj-md-6">
+                            <div>Effective Dates</div>
+                            <label for="text-area">Start*</label>
+                            <input data-bind="ojComponent: {component: 'ojInputDate', 
+                                    value: leavestartdate
+                                }" />
+                            <label for="text-area">End*</label>
+                            <input data-bind="ojComponent: {component: 'ojInputDate', 
+                                    value: leaveenddate
+                            }" />
+                            <br/>
+                             
+                             <div>Reason</div>
+                                <select id="basicSelect" data-bind="ojComponent: {component: 'ojSelect',
+                                                    value: reasonvalue,
+                                                    rootAttributes: {style:'max-width:20em'}}">
+                                    <option value="VA">Vacation</option>
+                                    <option value="SI">Sick</option>
+                                    <option value="CA">Casual</option>
+                                    <option value="OU">Out of town</option>
+                                 </select>
+                            </div>
+                        
+                        <div class="oj-flex-item oj-lg-6 oj-md-6">
+                            <label for="text-area">Notes</label>
+                            <textarea id="text-area" 
+                                      data-bind="ojComponent: {component: 'ojTextArea', 
+                                                               value: leavenotes}"></textarea>
+
+                           
+                        </div>
+                       
+                    </div>
                 </div>
             </div>
         </div>
-        <button id="submitButton" class="basic-btn" data-bind="click: function(){handleClose('#hireStatusDialog')}">Save</button>
+        <button id="submitButton" class="basic-btn" data-bind="click: empHireStatusClose">Save</button>
     </div>
 </div>

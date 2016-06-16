@@ -132,7 +132,8 @@
      <div class="oj-flex" data-bind="visible: ($parent.selectedTab() === 'Job')">
          
          <!--  ko foreach: $parent.jobTabContent -->
-         <div class="oj-sm-12 oj-flex-item" style="margin-left: 2px; margin-right: 2px">
+         <div class="oj-sm-12 oj-flex-item" style="margin-left: 2px; margin-right: 2px"
+              data-bind="visible: (joblocation.toLowerCase() === $root.activeLocation().toString().toLowerCase())">
              <div id="accordionPage" data-bind="ojComponent: {component: 'ojAccordion'}" >
                  <div id="c1" >
                     <div>
@@ -163,9 +164,9 @@
                                  </div>
                              </div>
                              
-                              <div data-bind="foreach: locations">
+                              
                                 <div style="border: 1px solid #000000; background-color: white; margin-top: 5px; color: black;  text-align: center;" 
-                                     data-bind="visible: (location.toLowerCase() === $root.activeLocation().toString().toLowerCase())">
+                                     >
                                     
                                     <div data-bind="foreach: openingshift;">
                                     <div id="accordionPageOpenJob" data-bind="ojComponent: {component: 'ojAccordion'}" >
@@ -280,7 +281,7 @@
                                     </div>    </div></div>
                                 </div>
                                   
-                              </div>  
+                                
                          </div>
                      </div>
                           <!-- /ko -->   
@@ -855,22 +856,7 @@
      
      <div class="oj-flex" style="margin-left: 5px; margin-right: 5px;" data-bind="visible: ($parent.selectedTab() === 'Location')">
          <div class="oj-flex oj-sm-12" style="margin-bottom: 2px;">  
-<!--         <div class="oj-sm-12 oj-flex-item currentWeekHeader" style="background-color: #000000; margin-right: 5px ">
-                <div style="color: #ffffff">WEEKLY TOTALS</div>
-                <div style="color: #ffffff">$126.75 (18.5 hours) | $120.00 tips</div>
-                <div style="color: #ffffff">$246.75</div>
-              </div>
-              <div class="oj-md-4 oj-lg-3 oj-flex-item currentWeekHeader" style="background-color: #FAAC58; margin-right: 5px ">
-                <div style="color: #ffffff">BARTENDER TOTALS</div>
-                <div style="color: #ffffff">$126.75 (18.5 hours) | $120.00 tips</div>
-                <div style="color: #ffffff">$246.75</div>
-              </div>
-              <div class="oj-md-4 oj-lg-3 oj-flex-item currentWeekHeader" style="background-color: #8181F7; margin-right: 5px ">
-                <div style="color: #ffffff">SERVER TOTALS</div>
-                <div style="color: #ffffff">$126.75 (18.5 hours) | $120.00 tips</div>
-                <div style="color: #ffffff">$246.75</div>
-              </div>
-     </div>-->
+
              <!--  ko foreach: $parent.jobSchedules -->
                   
                   <div class="oj-flex-item">

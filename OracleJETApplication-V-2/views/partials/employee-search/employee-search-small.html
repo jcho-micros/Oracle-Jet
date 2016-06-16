@@ -181,7 +181,9 @@
                                              <span data-bind="text: $parent.getBasicFormattedDate(hireDate)"></span>
                                          </div>
                                          <div>
-                                             <div class="employeeStatusListView" data-bind="css:{empStatusInactive: status == 'Inactive-Terminated', empStatusActive: status == 'Active'}"><span data-bind="css:{'fa-times-circle': status == 'Inactive-Terminated', 'fa-check-circle': status == 'Active'}"></span> <span data-bind="text: status"></span></div>
+                                             <div class="employeeStatusListView"
+                                                  data-bind="css:{empStatusInactive: status == 'Inactive-Terminated', empStatusActive: status == 'Active'}">
+                                                 <span data-bind="css:{'fa-times-circle': status == 'Inactive-Terminated', 'fa-check-circle': status == 'Active'}"></span> <span data-bind="text: status"></span></div>
                                          </div>
                                      </div>
                                

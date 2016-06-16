@@ -58,6 +58,7 @@ define([
         self.pageHeading = ko.observable("People");
         
         self.allPeople = ko.observableArray([]);
+        self.distinctJobNames = ko.observableArray([]);
         self.basicEmpInfo = ko.observableArray([]);
         self.currentScheduledJobNames = ko.observableArray([]);
         self.daysandtimes = ko.observableArray([]);
@@ -98,10 +99,13 @@ define([
             return oj.OffcanvasUtils.close(self.innerDrawer);
         };
         
+        
         self.downloadoption = ko.observable("pdf");
         self.personProfile=ko.observableArray([]);
         self.currentScheduledDates=ko.observableArray([]);
         self.formttedCurrentScheduledDateValues = ko.observableArray([]);
+        
+        
         //Search form observables
         self.payrollIdSearch = ko.observable('');
         self.firstNameSearch = ko.observable('');
@@ -115,7 +119,8 @@ define([
         that.activeLocation.subscribe(function(value){
             data.fetchData('js/data/employees.json').then(function (people) {
             //self.allPeople(people.employees);
-          self.allPeople(ko.utils.arrayFilter(people.employees,function(item){
+            
+           self.allPeople(ko.utils.arrayFilter(people.employees,function(item){
                  if(item.homeStore === value){
                        return item;
                   }
@@ -126,7 +131,7 @@ define([
             
         });
           
-       
+        
         //Employee Basic Info Dialog
        self.empBasicViewOpen =  function(emp) {
             self.basicEmpInfo(emp);
@@ -190,6 +195,10 @@ define([
                     });
             
         };
+        
+        self.empBasicInfoOpen = function(){
+            $("#laborScheduleDailogWindow").ojDialog("open");
+        };
 
         self.empBasicViewClose =  function() {
             $("#empLaborBasicDialogWindow").ojDialog("close");
@@ -199,6 +208,11 @@ define([
         //self.ready = ko.observable(false);
         data.fetchData('js/data/employees.json').then(function (people) {
             self.allPeople(people.employees);   
+            self.distinctJobNames(ko.utils.arrayGetDistinctValues(
+                                        ko.utils.arrayFilter(people.employees, 
+                                function(item){ 
+                                        return item.title;})
+                            ));
         }).fail(function (error) {
             console.log('Error in getting People data: ' + error.message);
         });
@@ -218,68 +232,7 @@ define([
         self.autoDialog("&trueAddEmp", "#addEmpStatusDialog");
         //Search Feature
         
-//        self.empBasicViewOpen =  function(emp) {
-//            self.basicEmpInfo(emp);
-//            return new Promise(function(resolve, reject) {
-//                        data.fetchData("js/data/employee" + emp.empId + ".json").then(function (person) {
-//                            self.personProfile(person);  
-//                            
-//                            self.currentScheduledDates(self.personProfile().currentScheduledDates);
-//                            self.formttedCurrentScheduledDateValues(self.personProfile().formattedCurrentScheduledDates);
-//                            
-//                            self.currentScheduledDateValues(ko.dependentObservable(function() {
-//                               
-//                                return ko.utils.arrayGetDistinctValues(
-//                                        ko.utils.arrayMap(self.currentScheduledDates(), 
-//                                function(item){ 
-//                                    var dateValue = new Date(item.currentDayStart);
-//                                        return dateValue.getDate() + ' ' +monthNames[dateValue.getMonth()] + ' ' +weekday[dateValue.getDay()];
-//                                    })).sort();
-//                            }));
-//                            
-//                            
-//                            
-//                            self.currentScheduledDateValues(ko.dependentObservable(function() {
-//                               
-//                                return ko.utils.arrayGetDistinctValues(
-//                                        ko.utils.arrayMap(self.currentScheduledDates(), 
-//                                function(item){ 
-//                                    var dateValue = new Date(item.currentDayStart);
-//                                        return dateValue.getDate() + ' ' +monthNames[dateValue.getMonth()] + ' ' +weekday[dateValue.getDay()];
-//                                    })).sort();
-//                            }));
-//                            self.daysandtimes(self.personProfile().daysandtimes);
-//                            self.unavailableDaysAndTimes(ko.dependentObservable(function() {
-//                                return ko.utils.arrayFilter(self.daysandtimes(), function(item) {
-//                                    if(item.timesegment === 'unavailable'){
-//                                        return item;
-//                                    }
-//                                });
-//                            }));
-//                            self.preferredDaysAndTimes(ko.dependentObservable(function() {
-//                                return ko.utils.arrayFilter(self.daysandtimes(), function(item) {
-//                                    if(item.timesegment === 'preferred'){
-//                                        return item;
-//                                    }
-//                                });
-//                            }));
-//                            self.currentScheduledJobNames(ko.dependentObservable(function() {
-//                               
-//                                return ko.utils.arrayGetDistinctValues(
-//                                        ko.utils.arrayMap(self.currentScheduledDates(), 
-//                                function(item){ 
-//                                    if(item.jobName !== 'Not Assigned') 
-//                                        return item.jobName;})).sort();
-//                            }));
-//                            $("#empLaborBasicDialogWindow").ojDialog("open");
-//                            resolve(true);
-//                        }).fail(function (error) {
-//                            console.log('Error: ' + error.message);
-//                            resolve(false);
-//                        });
-//                    });
-//            
-//        };
+
         
         self.getPhoto = function (empId) {
             var src;

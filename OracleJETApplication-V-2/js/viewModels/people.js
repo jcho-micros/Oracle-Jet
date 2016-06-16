@@ -25,6 +25,7 @@ define([
     'ojs/ojselectcombobox',
     'ojs/ojradioset',
     'ojs/ojdatetimepicker',
+    'ojs/ojswitch',
     'ojs/ojmenu'
 ], function (oj, ko, data, $, Hammer) {
     
@@ -80,7 +81,21 @@ define([
         self.hireType =  ko.observable("");      
         self.reHireDate = ko.observable(oj.IntlConverterUtils.dateToLocalIso(new Date()));
         self.hiredateprev = ko.observable("");  
-          
+        self.leavestartdate = ko.observable(oj.IntlConverterUtils.dateToLocalIso(new Date()));
+        self.leaveenddate = ko.observable(oj.IntlConverterUtils.dateToLocalIso(new Date()));
+        self.reasonvalue = ko.observableArray([""]);
+        self.leavenotes = ko.observable("");
+        self.terminationdate = ko.observable(oj.IntlConverterUtils.dateToLocalIso(new Date()));
+        self.termstatusvalue = ko.observableArray([""]);
+        self.terminotes =  ko.observable("");
+        self.termsreasonvalue1 = ko.observableArray([""]);
+        self.selectedTab = ko.observable("");  
+        self.rehireEligibility = ko.observable();
+        
+        self.tabsChangeHandler = function(event, data) {
+            self.selectedTab(data.value);
+         };
+         
         self.getItemInitialDisplayDialog = function(index){return index < 3 ? '' : 'none';};
         //Employee Basic Info Dialog
         self.empBasicInfoOpen =  function(emp) {
@@ -455,11 +470,46 @@ define([
         
         self.empHireStatusClose =  function() {
             var a=self.hireStatusChanges();
-            a.push({
+            var found = false;
+            for (var i = 0; i < a.length; i++) {
+                if (a[i].empid === self.basicEmpInfo().empId) {
+                    found = true;
+                    if(self.selectedTab() === 't1'){
+                        a[i].newhiredate = self.reHireDate();
+                        a[i].newhirestatus = 'Active';
+                    } else if(self.selectedTab() === 't2'){
+                        a[i].newhiredate = self.terminationdate();
+                        a[i].newhirestatus = 'Inactive-Terminated';
+                    } else if(self.selectedTab() === 't3'){
+                        a[i].newhiredate = self.leavestartdate();
+                        a[i].newhirestatus = 'Inactive-Leave Of Absence';
+                    }
+                    break;
+                }
+            }
+            if(found === false){
+                if(self.selectedTab() === 't1'){
+                a.push({
                 'empid': self.basicEmpInfo().empId,
                 'newhiredate' : self.reHireDate(),
                 'newhirestatus' : 'Active'
-            });
+                });
+            } else if(self.selectedTab() === 't2'){
+                a.push({
+                'empid': self.basicEmpInfo().empId,
+                'newhiredate' : self.terminationdate(),
+                'newhirestatus' : 'Inactive-Terminated'
+                });
+            } else if(self.selectedTab() === 't3'){
+                a.push({
+                'empid': self.basicEmpInfo().empId,
+                'newhiredate' : self.leavestartdate(),
+                'newhirestatus' : 'Inactive-Leave Of Absence'
+                });
+            }
+
+            }
+                        
             self.hireStatusChanges(a);
             console.log("length of hireStatusChanges = "+self.hireStatusChanges().length);
             $("#hireStatusDialog").ojDialog("close");
