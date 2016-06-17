@@ -388,7 +388,7 @@
                                                 "hours" : "3",
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Cook",
-                                                "backgroundcolor" : "#f98b1e",
+                                                "backgroundcolor" : "#da7b1e",
                                                 "workStation" : "Line cook"
                                             }
                                         ]
@@ -407,7 +407,7 @@
                                                 "hours" : "3",
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Cook",
-                                                "backgroundcolor" : "#f98b1e",
+                                                "backgroundcolor" : "#da7b1e",
                                                 "workStation" : "Line cook"
                                             }
                                         ]
@@ -426,7 +426,7 @@
                                                 "hours" : "3",
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Cook",
-                                                "backgroundcolor" : "#f98b1e",
+                                                "backgroundcolor" : "#da7b1e",
                                                 "workStation" : "Prep cook"
                                             }
                                         ]
@@ -440,7 +440,7 @@
                                                 "hours" : "3",
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Cook",
-                                                "backgroundcolor" : "#f98b1e",
+                                                "backgroundcolor" : "#da7b1e",
                                                 "workStation" : "Line cook"
                                             }
                                         ]
@@ -459,7 +459,7 @@
                                                 "hours" : "3",
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Cook",
-                                                "backgroundcolor" : "#f98b1e",
+                                                "backgroundcolor" : "#da7b1e",
                                                 "workStation" : "Prep cook"
                                             }
                                         ]
@@ -473,7 +473,7 @@
                                                 "hours" : "3",
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Cook",
-                                                "backgroundcolor" : "#f98b1e",
+                                                "backgroundcolor" : "#da7b1e",
                                                 "workStation" : "Line cook"
                                             }
                                         ]
@@ -491,7 +491,7 @@
                                                 "hours" : "6",
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Cook",
-                                                "backgroundcolor" : "#f98b1e",
+                                                "backgroundcolor" : "#da7b1e",
                                                 "workStation" : "Line cook"
                                             }
                                         ]
@@ -521,7 +521,7 @@
                                                 "hours" : "3",
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Waiter",
-                                                "backgroundcolor" : "#f98b1e",
+                                                "backgroundcolor" : "#a98b2e",
                                                 "workStation" : "Station1"
                                             }
                                         ]
@@ -535,7 +535,7 @@
                                                 "hours" : "3",
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Waiter",
-                                                "backgroundcolor" : "#f98b1e",
+                                                "backgroundcolor" : "#a98b2e",
                                                 "workStation" : "Station2"
                                             }
                                         ]
@@ -555,7 +555,7 @@
                                                 "hours" : "3",
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Waiter",
-                                                "backgroundcolor" : "#f98b1e",
+                                                "backgroundcolor" : "#a98b2e",
                                                 "workStation" : "Station2"
                                             }
                                         ]
@@ -569,7 +569,7 @@
                                                 "hours" : "3",
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Waiter",
-                                                "backgroundcolor" : "#f98b1e",
+                                                "backgroundcolor" : "#a98b2e",
                                                 "workStation" : "Station3"
                                             }
                                         ]
@@ -589,7 +589,7 @@
                                                 "hours" : "3",
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Waiter",
-                                                "backgroundcolor" : "#f98b1e",
+                                                "backgroundcolor" : "#a98b2e",
                                                 "workStation" : "Station1"
                                             }
                                         ]
@@ -603,7 +603,7 @@
                                                 "hours" : "3",
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Waiter",
-                                                "backgroundcolor" : "#f98b1e",
+                                                "backgroundcolor" : "#a98b2e",
                                                 "workStation" : "Station3"
                                             }
                                         ]
@@ -623,7 +623,7 @@
                                                 "hours" : "3",
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Waiter",
-                                                "backgroundcolor" : "#f98b1e",
+                                                "backgroundcolor" : "#a98b2e",
                                                 "workStation" : "Station1"
                                             }
                                         ]
@@ -637,7 +637,7 @@
                                                 "hours" : "3",
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Waiter",
-                                                "backgroundcolor" : "#f98b1e",
+                                                "backgroundcolor" : "#a98b2e",
                                                 "workStation" : "Station2"
                                             }
                                         ]
@@ -655,7 +655,7 @@
                                                 "hours" : "6",
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Waiter",
-                                                "backgroundcolor" : "#f98b1e",
+                                                "backgroundcolor" : "#a98b2e",
                                                 "workStation" : "Station1"
                                             }
                                         ]
@@ -686,7 +686,7 @@
                                                 "hours" : "3",
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Waitress",
-                                                "backgroundcolor" : "#f98b1e",
+                                                "backgroundcolor" : "#b98e1e",
                                                 "workStation" : "Station1"
                                             }
                                         ]
@@ -705,7 +705,7 @@
                                                 "hours" : "3",
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Waitress",
-                                                "backgroundcolor" : "#f98b1e",
+                                                "backgroundcolor" : "#b98e1e",
                                                 "workStation" : "Station1"
                                             }
                                         ]
@@ -725,7 +725,7 @@
                                                 "hours" : "7",
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Waitress",
-                                                "backgroundcolor" : "#f98b1e",
+                                                "backgroundcolor" : "#b98e1e",
                                                 "workStation" : "Station1"
                                             }
                                         ]
@@ -744,7 +744,7 @@
                                                 "hours" : "6",
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Waitress",
-                                                "backgroundcolor" : "#f98b1e",
+                                                "backgroundcolor" : "#b98e1e",
                                                 "workStation" : "Station1"
                                             }
                                         ]
@@ -977,7 +977,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -992,7 +992,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -1013,7 +1013,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -1028,7 +1028,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -1049,7 +1049,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Prep cook"
                         }
                     ]
@@ -1064,7 +1064,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Prep cook"
                         }
                     ]
@@ -1085,7 +1085,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Prep cook"
                         }
                     ]
@@ -1100,7 +1100,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Prep cook"
                         }
                     ]
@@ -1121,7 +1121,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -1153,7 +1153,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station1"
                         }
                     ]
@@ -1168,7 +1168,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -1189,7 +1189,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -1204,7 +1204,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station3"
                         }
                     ]
@@ -1225,7 +1225,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station1"
                         }
                     ]
@@ -1240,7 +1240,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station3"
                         }
                     ]
@@ -1261,7 +1261,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station1"
                         }
                     ]
@@ -1276,7 +1276,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -1297,7 +1297,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station1"
                         }
                     ]
@@ -1328,7 +1328,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station1"
                         }
                     ]
@@ -1343,7 +1343,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station2"
                         }
                     ]
@@ -1364,7 +1364,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station2"
                         }
                     ]
@@ -1379,7 +1379,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station3"
                         }
                     ]
@@ -1400,7 +1400,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station1"
                         }
                     ]
@@ -1415,7 +1415,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station3"
                         }
                     ]
@@ -1436,7 +1436,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station1"
                         }
                     ]
@@ -1451,7 +1451,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station2"
                         }
                     ]
@@ -1472,7 +1472,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station1"
                         }
                     ]
@@ -1503,7 +1503,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Host",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#697b2e",
                             "workStation": "Front Bar"
                         }
                     ]
@@ -1524,7 +1524,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Host",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#697b2e",
                             "workStation": "Front Bar"
                         }
                     ]
@@ -1545,7 +1545,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Host",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#697b2e",
                             "workStation": "Prep Host"
                         }
                     ]
@@ -1566,7 +1566,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Host",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#697b2e",
                             "workStation": "Prep Host"
                         }
                     ]
@@ -1587,7 +1587,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Host",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#697b2e",
                             "workStation": "Front Bar"
                         }
                     ]
@@ -1744,7 +1744,7 @@
                                                 "hours" : "3",
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Cook",
-                                                "backgroundcolor" : "#f98b1e",
+                                                "backgroundcolor" : "#da7b1e",
                                                 "workStation" : "Line cook"
                                             }
                                         ]
@@ -1763,7 +1763,7 @@
                                                 "hours" : "3",
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Cook",
-                                                "backgroundcolor" : "#f98b1e",
+                                                "backgroundcolor" : "#da7b1e",
                                                 "workStation" : "Line cook"
                                             }
                                         ]
@@ -1782,7 +1782,7 @@
                                                 "hours" : "4",
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Cook",
-                                                "backgroundcolor" : "#f98b1e",
+                                                "backgroundcolor" : "#da7b1e",
                                                 "workStation" : "Line cook"
                                             }
                                         ]
@@ -1802,7 +1802,7 @@
                                                 "hours" : "3",
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Cook",
-                                                "backgroundcolor" : "#f98b1e",
+                                                "backgroundcolor" : "#da7b1e",
                                                 "workStation" : "Line cook"
                                             }
                                         ]
@@ -1835,7 +1835,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station1"
                         }
                     ]
@@ -1850,7 +1850,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -1871,7 +1871,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -1886,7 +1886,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station3"
                         }
                     ]
@@ -1907,7 +1907,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station1"
                         }
                     ]
@@ -1922,7 +1922,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station3"
                         }
                     ]
@@ -1943,7 +1943,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station3"
                         }
                     ]
@@ -1958,7 +1958,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -1979,7 +1979,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -2011,7 +2011,7 @@
                     "hours": "3",
                     "hourlywage": "7",
                     "jobtitle": "Waitress",
-                    "backgroundcolor": "#f98b1e",
+                    "backgroundcolor": "#a98b2e",
                     "workStation": "Station1"
                   }
                 ]
@@ -2033,7 +2033,7 @@
                     "hours": "4",
                     "hourlywage": "7",
                     "jobtitle": "Waitress",
-                    "backgroundcolor": "#f98b1e",
+                    "backgroundcolor": "#a98b2e",
                     "workStation": "Station1"
                   }
                 ]
@@ -2055,7 +2055,7 @@
                     "hours": "3",
                     "hourlywage": "7",
                     "jobtitle": "Waitress",
-                    "backgroundcolor": "#f98b1e",
+                    "backgroundcolor": "#a98b2e",
                     "workStation": "Station1"
                   }
                 ]
@@ -2287,7 +2287,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -2302,7 +2302,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -2323,7 +2323,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -2338,7 +2338,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -2359,7 +2359,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Prep cook"
                         }
                     ]
@@ -2374,7 +2374,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Prep cook"
                         }
                     ]
@@ -2395,7 +2395,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Prep cook"
                         }
                     ]
@@ -2410,7 +2410,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Prep cook"
                         }
                     ]
@@ -2431,7 +2431,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -2462,7 +2462,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station1"
                         }
                     ]
@@ -2477,7 +2477,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -2498,7 +2498,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -2513,7 +2513,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station3"
                         }
                     ]
@@ -2534,7 +2534,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station1"
                         }
                     ]
@@ -2549,7 +2549,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station3"
                         }
                     ]
@@ -2570,7 +2570,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station3"
                         }
                     ]
@@ -2585,7 +2585,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -2606,7 +2606,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -2637,7 +2637,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station1"
                         }
                     ]
@@ -2652,7 +2652,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station2"
                         }
                     ]
@@ -2673,7 +2673,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station2"
                         }
                     ]
@@ -2688,7 +2688,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station3"
                         }
                     ]
@@ -2709,7 +2709,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station1"
                         }
                     ]
@@ -2724,7 +2724,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station3"
                         }
                     ]
@@ -2745,7 +2745,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station3"
                         }
                     ]
@@ -2760,7 +2760,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station2"
                         }
                     ]
@@ -2781,7 +2781,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station2"
                         }
                     ]
@@ -2812,7 +2812,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Host",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#697b2e",
                             "workStation": "Front Bar"
                         }
                     ]
@@ -2833,7 +2833,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Host",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#697b2e",
                             "workStation": "Front Bar"
                         }
                     ]
@@ -2854,7 +2854,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Host",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#697b2e",
                             "workStation": "Prep Host"
                         }
                     ]
@@ -2875,7 +2875,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Host",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#697b2e",
                             "workStation": "Prep Host"
                         }
                     ]
@@ -2896,7 +2896,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Host",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#697b2e",
                             "workStation": "Front Bar"
                         }
                     ]
@@ -2938,7 +2938,7 @@
                         "phonenumber" : "4081012025",
                         "timing" : "ALL DAY"
                 }],
-            "haveunavailable" : "yes",
+                "haveunavailable" : "yes",
                 "notavailable" : [{
                         "empid" : "103",
                         "empname" : "Keith Williams",
@@ -3079,7 +3079,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Prep cook"
                         }
                     ]
@@ -3100,7 +3100,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Prep cook"
                         }
                     ]
@@ -3122,7 +3122,7 @@
                             "hours": "7",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -3143,7 +3143,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -3176,7 +3176,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station1"
                         }
                     ]
@@ -3191,7 +3191,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -3212,7 +3212,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -3227,7 +3227,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station3"
                         }
                     ]
@@ -3248,7 +3248,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station1"
                         }
                     ]
@@ -3263,7 +3263,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station3"
                         }
                     ]
@@ -3284,7 +3284,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station1"
                         }
                     ]
@@ -3299,7 +3299,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -3320,7 +3320,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station1"
                         }
                     ]
@@ -3351,7 +3351,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waitress",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#a98b2e",
                             "workStation": "Station1"
                         }
                     ]
@@ -3372,7 +3372,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waitress",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#a98b2e",
                             "workStation": "Station1"
                         }
                     ]
@@ -3394,7 +3394,7 @@
                             "hours": "7",
                             "hourlywage": "7",
                             "jobtitle": "Waitress",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#a98b2e",
                             "workStation": "Station1"
                         }
                     ]
@@ -3415,7 +3415,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Waitress",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#a98b2e",
                             "workStation": "Station1"
                         }
                     ]
@@ -3435,7 +3435,7 @@
                         "phonenumber" : "4081012023",
                         "timing" : "ALL DAY"
                 }],
-            "haveunavailable" : "yes",
+                "haveunavailable" : "yes",
                 "notavailable" : [{
                         "empid" : "103",
                         "empname" : "Keith Williams",
@@ -3644,7 +3644,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Prep cook"
                         }
                     ]
@@ -3659,7 +3659,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -3680,7 +3680,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Prep cook"
                         }
                     ]
@@ -3695,7 +3695,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -3716,7 +3716,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Prep cook"
                         }
                     ]
@@ -3731,7 +3731,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -3752,7 +3752,7 @@
                             "hours": "7",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Prep cook"
                         }
                     ]
@@ -3767,7 +3767,7 @@
                             "hours": "7",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -3788,7 +3788,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Prep cook"
                         }
                     ]
@@ -3820,7 +3820,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station1"
                         }
                     ]
@@ -3835,7 +3835,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station3"
                         }
                     ]
@@ -3856,7 +3856,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station1"
                         }
                     ]
@@ -3871,7 +3871,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -3892,7 +3892,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -3907,7 +3907,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station3"
                         }
                     ]
@@ -3928,7 +3928,7 @@
                             "hours": "7",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -3943,7 +3943,7 @@
                             "hours": "7",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station3"
                         }
                     ]
@@ -3964,7 +3964,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station1"
                         }
                     ]
@@ -3995,7 +3995,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station1"
                         }
                     ]
@@ -4010,7 +4010,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station3"
                         }
                     ]
@@ -4031,7 +4031,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station1"
                         }
                     ]
@@ -4046,7 +4046,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station2"
                         }
                     ]
@@ -4067,7 +4067,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station2"
                         }
                     ]
@@ -4082,7 +4082,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station3"
                         }
                     ]
@@ -4103,7 +4103,7 @@
                             "hours": "7",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station2"
                         }
                     ]
@@ -4118,7 +4118,7 @@
                             "hours": "7",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station3"
                         }
                     ]
@@ -4139,7 +4139,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station1"
                         }
                     ]
@@ -4170,7 +4170,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Host",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#697b2e",
                             "workStation": "Front Bar"
                         }
                     ]
@@ -4191,7 +4191,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Host",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#697b2e",
                             "workStation": "Front Bar"
                         }
                     ]
@@ -4212,7 +4212,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Host",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#697b2e",
                             "workStation": "Prep Host"
                         }
                     ]
@@ -4233,7 +4233,7 @@
                             "hours": "7",
                             "hourlywage": "7",
                             "jobtitle": "Host",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#697b2e",
                             "workStation": "Prep Host"
                         }
                     ]
@@ -4254,7 +4254,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Host",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#697b2e",
                             "workStation": "Prep Host"
                         }
                     ]
@@ -4437,7 +4437,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Prep cook"
                         }
                     ]
@@ -4458,7 +4458,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Prep cook"
                         }
                     ]
@@ -4480,7 +4480,7 @@
                             "hours": "7",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -4501,7 +4501,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -4532,7 +4532,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station1"
                         }
                     ]
@@ -4547,7 +4547,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -4568,7 +4568,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -4583,7 +4583,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station3"
                         }
                     ]
@@ -4604,7 +4604,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station3"
                         }
                     ]
@@ -4619,7 +4619,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station1"
                         }
                     ]
@@ -4640,7 +4640,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -4655,7 +4655,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -4676,7 +4676,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station1"
                         }
                     ]
@@ -4709,7 +4709,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waitress",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#a98b2e",
                             "workStation": "Station1"
                         }
                     ]
@@ -4730,7 +4730,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waitress",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#a98b2e",
                             "workStation": "Station1"
                         }
                     ]
@@ -4752,7 +4752,7 @@
                             "hours": "7",
                             "hourlywage": "7",
                             "jobtitle": "Waitress",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#a98b2e",
                             "workStation": "Station1"
                         }
                     ]
@@ -4773,7 +4773,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Waitress",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#a98b2e",
                             "workStation": "Station1"
                         }
                     ]
@@ -5002,7 +5002,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -5017,7 +5017,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -5038,7 +5038,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -5053,7 +5053,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -5074,7 +5074,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Prep cook"
                         }
                     ]
@@ -5089,7 +5089,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Prep cook"
                         }
                     ]
@@ -5110,7 +5110,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Prep cook"
                         }
                     ]
@@ -5125,7 +5125,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Prep cook"
                         }
                     ]
@@ -5146,7 +5146,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -5178,7 +5178,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station1"
                         }
                     ]
@@ -5193,7 +5193,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -5214,7 +5214,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -5229,7 +5229,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station3"
                         }
                     ]
@@ -5250,7 +5250,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station3"
                         }
                     ]
@@ -5265,7 +5265,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station1"
                         }
                     ]
@@ -5286,7 +5286,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -5301,7 +5301,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -5322,7 +5322,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station1"
                         }
                     ]
@@ -5353,7 +5353,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station1"
                         }
                     ]
@@ -5368,7 +5368,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station2"
                         }
                     ]
@@ -5389,7 +5389,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station2"
                         }
                     ]
@@ -5404,7 +5404,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station3"
                         }
                     ]
@@ -5425,7 +5425,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station3"
                         }
                     ]
@@ -5440,7 +5440,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station1"
                         }
                     ]
@@ -5461,7 +5461,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station2"
                         }
                     ]
@@ -5476,7 +5476,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station2"
                         }
                     ]
@@ -5497,7 +5497,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station1"
                         }
                     ]
@@ -5528,7 +5528,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Host",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#697b2e",
                             "workStation": "Front Bar"
                         }
                     ]
@@ -5549,7 +5549,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Host",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#697b2e",
                             "workStation": "Front Bar"
                         }
                     ]
@@ -5570,7 +5570,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Host",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#697b2e",
                             "workStation": "Prep Host"
                         }
                     ]
@@ -5591,7 +5591,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Host",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#697b2e",
                             "workStation": "Prep Host"
                         }
                     ]
@@ -5612,7 +5612,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Host",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#697b2e",
                             "workStation": "Front Bar"
                         }
                     ]
@@ -5774,7 +5774,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -5796,7 +5796,7 @@
                             "hours": "4",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -5818,7 +5818,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -5850,7 +5850,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station1"
                         }
                     ]
@@ -5865,7 +5865,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waitress",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -5886,7 +5886,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waitress",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -5901,7 +5901,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waitress",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station3"
                         }
                     ]
@@ -5922,7 +5922,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waitress",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station3"
                         }
                     ]
@@ -5937,7 +5937,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waitress",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station3"
                         }
                     ]
@@ -5958,7 +5958,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waitress",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station1"
                         }
                     ]
@@ -5973,7 +5973,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waitress",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station3"
                         }
                     ]
@@ -5994,7 +5994,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -6026,7 +6026,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waitress",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#a98b2e",
                             "workStation": "Station1"
                         }
                     ]
@@ -6048,7 +6048,7 @@
                             "hours": "4",
                             "hourlywage": "7",
                             "jobtitle": "Waitress",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#a98b2e",
                             "workStation": "Station1"
                         }
                     ]
@@ -6070,7 +6070,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waitress",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#a98b2e",
                             "workStation": "Station1"
                         }
                     ]
@@ -6300,7 +6300,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -6315,7 +6315,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -6336,7 +6336,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -6351,7 +6351,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -6372,7 +6372,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Prep cook"
                         }
                     ]
@@ -6387,7 +6387,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Prep cook"
                         }
                     ]
@@ -6408,7 +6408,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Prep cook"
                         }
                     ]
@@ -6423,7 +6423,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Prep cook"
                         }
                     ]
@@ -6444,7 +6444,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -6476,7 +6476,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station1"
                         }
                     ]
@@ -6491,7 +6491,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -6512,7 +6512,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -6527,7 +6527,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station3"
                         }
                     ]
@@ -6548,7 +6548,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station3"
                         }
                     ]
@@ -6563,7 +6563,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station3"
                         }
                     ]
@@ -6584,7 +6584,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station1"
                         }
                     ]
@@ -6599,7 +6599,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station3"
                         }
                     ]
@@ -6620,7 +6620,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -6651,7 +6651,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station1"
                         }
                     ]
@@ -6666,7 +6666,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station2"
                         }
                     ]
@@ -6687,7 +6687,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station2"
                         }
                     ]
@@ -6702,7 +6702,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station3"
                         }
                     ]
@@ -6723,7 +6723,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station3"
                         }
                     ]
@@ -6738,7 +6738,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station3"
                         }
                     ]
@@ -6759,7 +6759,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station1"
                         }
                     ]
@@ -6774,7 +6774,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station3"
                         }
                     ]
@@ -6795,7 +6795,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station2"
                         }
                     ]
@@ -6827,7 +6827,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Host",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#697b2e",
                             "workStation": "Front Bar"
                         }
                     ]
@@ -6848,7 +6848,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Host",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#697b2e",
                             "workStation": "Front Bar"
                         }
                     ]
@@ -6869,7 +6869,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Host",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#697b2e",
                             "workStation": "Prep Host"
                         }
                     ]
@@ -6890,7 +6890,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Host",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#697b2e",
                             "workStation": "Prep Host"
                         }
                     ]
@@ -6911,7 +6911,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Host",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#697b2e",
                             "workStation": "Front Bar"
                         }
                     ]
@@ -7090,7 +7090,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -7111,7 +7111,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -7133,7 +7133,7 @@
                             "hours": "7",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Prep cook"
                         }
                     ]
@@ -7154,7 +7154,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Prep cook"
                         }
                     ]
@@ -7187,7 +7187,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station1"
                         }
                     ]
@@ -7202,7 +7202,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -7223,7 +7223,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -7238,7 +7238,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station3"
                         }
                     ]
@@ -7259,7 +7259,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station3"
                         }
                     ]
@@ -7274,7 +7274,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station1"
                         }
                     ]
@@ -7295,7 +7295,7 @@
                             "hours": "7",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station1"
                         }
                     ]
@@ -7310,7 +7310,7 @@
                             "hours": "7",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -7331,7 +7331,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station3"
                         }
                     ]
@@ -7361,7 +7361,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waitress",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#a98b2e",
                             "workStation": "Station1"
                         }
                     ]
@@ -7382,7 +7382,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waitress",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#a98b2e",
                             "workStation": "Station1"
                         }
                     ]
@@ -7404,7 +7404,7 @@
                             "hours": "7",
                             "hourlywage": "7",
                             "jobtitle": "Waitress",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#a98b2e",
                             "workStation": "Station1"
                         }
                     ]
@@ -7425,7 +7425,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Waitress",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#a98b2e",
                             "workStation": "Station1"
                         }
                     ]
@@ -7655,7 +7655,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Prep cook"
                         }
                     ]
@@ -7670,7 +7670,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -7691,7 +7691,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Prep cook"
                         }
                     ]
@@ -7706,7 +7706,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -7727,7 +7727,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Prep cook"
                         }
                     ]
@@ -7742,7 +7742,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -7763,7 +7763,7 @@
                             "hours": "7",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Prep cook"
                         }
                     ]
@@ -7778,7 +7778,7 @@
                             "hours": "7",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -7799,7 +7799,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -7831,7 +7831,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station1"
                         }
                     ]
@@ -7846,7 +7846,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -7867,7 +7867,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -7882,7 +7882,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station3"
                         }
                     ]
@@ -7903,7 +7903,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station3"
                         }
                     ]
@@ -7918,7 +7918,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station1"
                         }
                     ]
@@ -7939,7 +7939,7 @@
                             "hours": "7",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station1"
                         }
                     ]
@@ -7954,7 +7954,7 @@
                             "hours": "7",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -7975,7 +7975,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station3"
                         }
                     ]
@@ -8006,7 +8006,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station1"
                         }
                     ]
@@ -8021,7 +8021,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station2"
                         }
                     ]
@@ -8042,7 +8042,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station2"
                         }
                     ]
@@ -8057,7 +8057,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station3"
                         }
                     ]
@@ -8078,7 +8078,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station3"
                         }
                     ]
@@ -8093,7 +8093,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station1"
                         }
                     ]
@@ -8114,7 +8114,7 @@
                             "hours": "7",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station1"
                         }
                     ]
@@ -8129,7 +8129,7 @@
                             "hours": "7",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station2"
                         }
                     ]
@@ -8150,7 +8150,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station3"
                         }
                     ]
@@ -8181,7 +8181,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Host",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#697b2e",
                             "workStation": "Front Bar"
                         }
                     ]
@@ -8202,7 +8202,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Host",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#697b2e",
                             "workStation": "Front Bar"
                         }
                     ]
@@ -8223,7 +8223,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Host",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#697b2e",
                             "workStation": "Prep Host"
                         }
                     ]
@@ -8244,7 +8244,7 @@
                             "hours": "7",
                             "hourlywage": "7",
                             "jobtitle": "Host",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#697b2e",
                             "workStation": "Prep Host"
                         }
                     ]
@@ -8265,7 +8265,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Host",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#697b2e",
                             "workStation": "Front Bar"
                         }
                     ]
@@ -8448,7 +8448,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -8469,7 +8469,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -8491,7 +8491,7 @@
                             "hours": "7",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Prep cook"
                         }
                     ]
@@ -8512,7 +8512,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Prep cook"
                         }
                     ]
@@ -8543,7 +8543,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station1"
                         }
                     ]
@@ -8558,7 +8558,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -8579,7 +8579,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -8594,7 +8594,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station3"
                         }
                     ]
@@ -8615,7 +8615,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station1"
                         }
                     ]
@@ -8630,7 +8630,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station3"
                         }
                     ]
@@ -8651,7 +8651,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -8666,7 +8666,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -8687,7 +8687,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Waiter",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#b98e1e",
                             "workStation": "Station3"
                         }
                     ]
@@ -8719,7 +8719,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waitress",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#a98b2e",
                             "workStation": "Station1"
                         }
                     ]
@@ -8740,7 +8740,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Waitress",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#a98b2e",
                             "workStation": "Station1"
                         }
                     ]
@@ -8762,7 +8762,7 @@
                             "hours": "7",
                             "hourlywage": "7",
                             "jobtitle": "Waitress",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#a98b2e",
                             "workStation": "Station1"
                         }
                     ]
@@ -8783,7 +8783,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Waitress",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#a98b2e",
                             "workStation": "Station1"
                         }
                     ]
@@ -9013,7 +9013,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -9028,7 +9028,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -9049,7 +9049,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -9064,7 +9064,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -9085,7 +9085,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Prep cook"
                         }
                     ]
@@ -9100,7 +9100,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Prep cook"
                         }
                     ]
@@ -9121,7 +9121,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Prep cook"
                         }
                     ]
@@ -9136,7 +9136,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Prep cook"
                         }
                     ]
@@ -9157,7 +9157,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Cook",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#da7b1e",
                             "workStation": "Line cook"
                         }
                     ]
@@ -9189,7 +9189,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station1"
                         }
                     ]
@@ -9204,7 +9204,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -9225,7 +9225,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -9240,7 +9240,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station3"
                         }
                     ]
@@ -9261,7 +9261,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station1"
                         }
                     ]
@@ -9276,7 +9276,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station3"
                         }
                     ]
@@ -9297,7 +9297,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -9312,7 +9312,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station2"
                         }
                     ]
@@ -9333,7 +9333,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Server",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#888e1e",
                             "workStation": "Station3"
                         }
                     ]
@@ -9363,7 +9363,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station1"
                         }
                     ]
@@ -9378,7 +9378,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station2"
                         }
                     ]
@@ -9399,7 +9399,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station2"
                         }
                     ]
@@ -9414,7 +9414,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station3"
                         }
                     ]
@@ -9435,7 +9435,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station1"
                         }
                     ]
@@ -9450,7 +9450,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station3"
                         }
                     ]
@@ -9471,7 +9471,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station2"
                         }
                     ]
@@ -9486,7 +9486,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station2"
                         }
                     ]
@@ -9507,7 +9507,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Busser",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#29712e",
                             "workStation": "Station3"
                         }
                     ]
@@ -9539,7 +9539,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Host",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#697b2e",
                             "workStation": "Front Bar"
                         }
                     ]
@@ -9560,7 +9560,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Host",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#697b2e",
                             "workStation": "Front Bar"
                         }
                     ]
@@ -9581,7 +9581,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Host",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#697b2e",
                             "workStation": "Prep Host"
                         }
                     ]
@@ -9602,7 +9602,7 @@
                             "hours": "3",
                             "hourlywage": "7",
                             "jobtitle": "Host",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#697b2e",
                             "workStation": "Prep Host"
                         }
                     ]
@@ -9623,7 +9623,7 @@
                             "hours": "6",
                             "hourlywage": "7",
                             "jobtitle": "Host",
-                            "backgroundcolor": "#f98b1e",
+                            "backgroundcolor": "#697b2e",
                             "workStation": "Front Bar"
                         }
                     ]
