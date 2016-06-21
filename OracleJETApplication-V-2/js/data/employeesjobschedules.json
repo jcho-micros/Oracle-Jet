@@ -289,18 +289,26 @@
                         "totalhours" : "##",
                         "tipsamount" : "###",
                         "openingshift": [ {
-                        
                                 "revenuecenters" : [ {
                                         "revenuecenter" : "In-Bar",
                                         "employees" : [ {
                                                 "empid" : "105",
                                                 "empname" : "Michelle Jones",
+                                                "currentposition" : "1",
+                                                "totalpositions" : "4",
                                                 "timings" : "5 AM - 8 AM",
                                                 "hours" : "3",
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                                "revenuecenter" : "In-Bar",
+                                                "location" : "BALTIMORE",
+                                                "date": "Sunday, Oct. 15",
+                                                "daypart" : "openingshift",
+                                                "status" : "Active",
+                                                "daydate" : "15"
+                                                
                                             }
                                         ]
                                 }   
@@ -315,11 +323,19 @@
                                                 "empid" : "105",
                                                 "empname" : "Michelle Jones",
                                                 "timings" : "8 AM - 11 AM",
+                                                "currentposition" : "2",
+                                                "totalpositions" : "4",
                                                 "hours" : "3",
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                                "revenuecenter" : "In-Bar",
+                                                "location" : "BALTIMORE",
+                                                "date": "Sunday, Oct. 15",
+                                                "daypart" : "breakfastshift",
+                                                "status" : "Future",
+                                                "daydate" : "15"
                                             }
                                         ]
                                 }   
@@ -335,11 +351,19 @@
                                                 "empid" : "105",
                                                 "empname" : "Michelle Jones",
                                                 "timings" : "3 PM - 10 PM",
+                                                "currentposition" : "3",
+                                                "totalpositions" : "4",
                                                 "hours" : "7",
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                                "revenuecenter" : "In-Bar",
+                                                "location" : "BALTIMORE",
+                                                "date": "Sunday, Oct. 15",
+                                                "daypart" : "dinnershift",
+                                                "status" : "Future",
+                                                "daydate" : "15"
                                             }
                                         ]
                                         
@@ -354,11 +378,19 @@
                                                 "empid" : "105",
                                                 "empname" : "Michelle Jones",
                                                 "timings" : "11 PM - 5 AM",
+                                                "currentposition" : "4",
+                                                "totalpositions" : "4",
                                                 "hours" : "6",
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                                "revenuecenter" : "In-Bar",
+                                                "location" : "BALTIMORE",
+                                                "date": "Sunday, Oct. 15",
+                                                "daypart" : "closeshift",
+                                                "status" : "Future",
+                                                "daydate" : "15"
                                             }
                                         ]
                                 }
@@ -389,7 +421,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Cook",
                                                 "backgroundcolor" : "#da7b1e",
-                                                "workStation" : "Line cook"
+                                                "workStation" : "Line cook",
+                                                "revenuecenter" : "In-Kitchen",
+                                                "location" : "BALTIMORE",
+                                                "date": "Sunday, Oct. 15",
+                                                "daypart" : "openingshift",
+                                                "status" : "Future",
+                                                "daydate" : "15"
                                             }
                                         ]
                                 }   
@@ -408,7 +446,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Cook",
                                                 "backgroundcolor" : "#da7b1e",
-                                                "workStation" : "Line cook"
+                                                "workStation" : "Line cook",
+                                                "revenuecenter" : "In-Kitchen",
+                                                "location" : "BALTIMORE",
+                                                "date": "Sunday, Oct. 15",
+                                                "daypart" : "breakfastshift",
+                                                "status" : "Future",
+                                                "daydate" : "15"
                                             }
                                         ]
                                 }   
@@ -427,7 +471,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Cook",
                                                 "backgroundcolor" : "#da7b1e",
-                                                "workStation" : "Prep cook"
+                                                "workStation" : "Prep cook",
+                                                "revenuecenter" : "In-Kitchen",
+                                                "location" : "BALTIMORE",
+                                                "date": "Sunday, Oct. 15",
+                                                "daypart" : "lunchshift",
+                                                "status" : "Future",
+                                                "daydate" : "15"
                                             }
                                         ]
                                 }  , {
@@ -441,7 +491,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Cook",
                                                 "backgroundcolor" : "#da7b1e",
-                                                "workStation" : "Line cook"
+                                                "workStation" : "Line cook",
+                                                "revenuecenter" : "In-Kitchen",
+                                                "location" : "BALTIMORE",
+                                                "date": "Sunday, Oct. 15",
+                                                "daypart" : "lunchshift",
+                                                "status" : "Future",
+                                                "daydate" : "15"
                                             }
                                         ]
                                 }   
@@ -460,7 +516,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Cook",
                                                 "backgroundcolor" : "#da7b1e",
-                                                "workStation" : "Prep cook"
+                                                "workStation" : "Prep cook",
+                                                "revenuecenter" : "In-Kitchen",
+                                                "location" : "BALTIMORE",
+                                                "date": "Sunday, Oct. 15",
+                                                "daypart" : "dinnershift",
+                                                "status" : "Future",
+                                                "daydate" : "15"
                                             }
                                         ]
                                 }  , {
@@ -474,7 +536,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Cook",
                                                 "backgroundcolor" : "#da7b1e",
-                                                "workStation" : "Line cook"
+                                                "workStation" : "Line cook",
+                                                "revenuecenter" : "In-Kitchen",
+                                                "location" : "BALTIMORE",
+                                                "date": "Sunday, Oct. 15",
+                                                "daypart" : "dinnershift",
+                                                "status" : "Future",
+                                                "daydate" : "15"
                                             }
                                         ]
                                 }   
@@ -492,7 +560,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Cook",
                                                 "backgroundcolor" : "#da7b1e",
-                                                "workStation" : "Line cook"
+                                                "workStation" : "Line cook",
+                                                "revenuecenter" : "In-Kitchen",
+                                                "location" : "BALTIMORE",
+                                                "date": "Sunday, Oct. 15",
+                                                "daypart" : "closeshift",
+                                                "status" : "Future",
+                                                "daydate" : "15"
                                             }
                                         ]
                                 }

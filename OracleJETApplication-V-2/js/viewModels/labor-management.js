@@ -20,6 +20,7 @@ define([
     'ojs/ojlistview',
     'ojs/ojmodel',
     'ojs/ojdatacollection-common',
+    'ojs/ojdatetimepicker',
     'ojs/ojtabs',
     'ojs/ojcheckboxset',
     'ojs/ojradioset',
@@ -47,13 +48,113 @@ define([
         self.stationTabContent = ko.observableArray([]);
         self.personLocationSchedules = ko.observableArray([]);
         self.selectedTab = ko.observable('Job');
-        
+        self.scheduleDetailContnet = ko.observableArray([]);
+        self.visibleclockout = ko.observable(false);
+        self.visibleclockin = ko.observable(false);
+        self.scheduleStatusChanges = ko.observableArray([]);
+        self.currentShiftStatus = ko.observable("");
+        self.clockindate = ko.observable(oj.IntlConverterUtils.dateToLocalIso(new Date(2014, 1, 1)));
+        self.clockintime = ko.observable("");
+        self.clockoutdate = ko.observable("");
+        self.clockouttime = ko.observable("");
+        self.clockinreason = ko.observable("");
         //People functionality
         var monthNames = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN",
             "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
         var weekday = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
         
+        self.showclockoutlayout = function(){
+            self.visibleclockout(true);
+        };
         
+        self.showclockinlayout = function(){
+            self.visibleclockin(true);
+        };
+        self.closeclockoutlayout = function(){
+            self.visibleclockout(false);
+        };
+        
+        self.closeclockinlayout = function(){
+            self.visibleclockin(false);
+        };
+        
+        self.saveclockinlayout = function(){
+            var a = self.scheduleStatusChanges();
+            var found = false;
+            for (var i = 0; i < a.length; i++) {
+                if (a[i].empid === self.scheduleDetailContnet().empid &&
+                         a[i].daypart === self.scheduleDetailContnet().daypart) {
+                    found = true;
+                    if(a[i].status === 'Future'){
+                        a[i].status = 'Active';
+                        a[i].daypart = self.scheduleDetailContnet().daypart;
+                    } else if(a[i].status === 'Active'){
+                        a[i].status = 'Completed';
+                        a[i].daypart = self.scheduleDetailContnet().daypart;
+                    } 
+                    break;
+                }
+            }
+            
+            if(found === false){
+                if(self.scheduleDetailContnet().status === 'Future'){
+                    a.push({
+                    'empid': self.scheduleDetailContnet().empid,
+                    'daypart' : self.scheduleDetailContnet().daypart,
+                    'status' : 'Active'
+                    });
+                } else if(self.scheduleDetailContnet().status === 'Active'){
+                    a.push({
+                     'empid': self.scheduleDetailContnet().empid,
+                     'daypart' : self.scheduleDetailContnet().daypart,
+                    'status' : 'Completed'
+                    });
+                }
+            }
+            self.scheduleStatusChanges(a);
+            self.visibleclockin(false);
+            self.currentShiftStatus('Active');
+        };
+        
+        self.saveclockoutlayout = function(){
+            var a = self.scheduleStatusChanges();
+            var found = false;
+            for (var i = 0; i < a.length; i++) {
+                if (a[i].empid === self.scheduleDetailContnet().empid &&
+                         a[i].daypart === self.scheduleDetailContnet().daypart) {
+                    found = true;
+                    if(a[i].status === 'Future'){
+                        a[i].status = 'Active';
+                        a[i].daypart = self.scheduleDetailContnet().daypart;
+                    } else if(a[i].status === 'Active'){
+                        a[i].status = 'Completed';
+                        a[i].daypart = self.scheduleDetailContnet().daypart;
+                    } 
+                    break;
+                }
+            }
+            
+            if(found === false){
+                if(self.scheduleDetailContnet().status === 'Future'){
+                    a.push({
+                    'empid': self.scheduleDetailContnet().empid,
+                    'daypart' : self.scheduleDetailContnet().daypart,
+                    'status' : 'Active'
+                    });
+                } else if(self.scheduleDetailContnet().status === 'Active'){
+                    a.push({
+                     'empid': self.scheduleDetailContnet().empid,
+                     'daypart' : self.scheduleDetailContnet().daypart,
+                    'status' : 'Completed'
+                    });
+                }
+            }
+            self.scheduleStatusChanges(a);
+            self.visibleclockout(false);
+            self.currentShiftStatus('Completed');
+        };
+        
+         
         self.visibleAdvanceSearch = ko.observable(false);
         self.pageHeading = ko.observable("People");
         
@@ -198,6 +299,61 @@ define([
         
         self.empBasicInfoOpen = function(){
             $("#laborScheduleDailogWindow").ojDialog("open");
+        };
+        
+        
+        self.empScheduleDetailInfoOpen = function(emp){
+            self.scheduleDetailContnet(emp);
+            var a = self.scheduleStatusChanges();
+            var found = false;
+            for (var i = 0; i < a.length; i++) {
+                 if (a[i].empid === self.scheduleDetailContnet().empid &&
+                         a[i].daypart === self.scheduleDetailContnet().daypart) {
+                     found = true;
+                     self.currentShiftStatus(a[i].status);
+                 }
+            }
+            if(found == false){
+                self.currentShiftStatus(self.scheduleDetailContnet().status);
+            }
+            self.clockindate(oj.IntlConverterUtils.dateToLocalIso(new Date(2015, 9, self.scheduleDetailContnet().daydate)));
+            if(self.scheduleDetailContnet().daypart === 'openshift'){
+                 self.clockintime(oj.IntlConverterUtils.dateToLocalIso(new Date(2015, 9, self.scheduleDetailContnet().daydate, 5, 0, 0, 0)));
+                 self.clockouttime(oj.IntlConverterUtils.dateToLocalIso(new Date(2015, 9, self.scheduleDetailContnet().daydate, 8, 0, 0, 0)).substring(0,16));
+            } else if(self.scheduleDetailContnet().daypart === 'breakfastshift'){
+                 self.clockintime(oj.IntlConverterUtils.dateToLocalIso(new Date(2015, 9, self.scheduleDetailContnet().daydate, 8, 0, 0, 0)));
+                 self.clockouttime(oj.IntlConverterUtils.dateToLocalIso(new Date(2015, 9, self.scheduleDetailContnet().daydate, 11, 0, 0, 0)).substring(0,16));
+            } else if(self.scheduleDetailContnet().daypart === 'lunchshift'){
+                 self.clockintime(oj.IntlConverterUtils.dateToLocalIso(new Date(2015, 9, self.scheduleDetailContnet().daydate, 11, 0, 0, 0)));
+                 self.clockouttime(oj.IntlConverterUtils.dateToLocalIso(new Date(2015, 9, self.scheduleDetailContnet().daydate, 15, 0, 0, 0)).substring(0,16));
+            
+            } else if(self.scheduleDetailContnet().daypart === 'dinnershift'){
+                 self.clockintime(oj.IntlConverterUtils.dateToLocalIso(new Date(2015, 9, self.scheduleDetailContnet().daydate, 15, 0, 0, 0)));
+                 self.clockouttime(oj.IntlConverterUtils.dateToLocalIso(new Date(2015, 9, self.scheduleDetailContnet().daydate, 23, 0, 0, 0)).substring(0,16));
+            
+            } else if(self.scheduleDetailContnet().daypart === 'closeshift'){
+                 self.clockintime(oj.IntlConverterUtils.dateToLocalIso(new Date(2015, 9, self.scheduleDetailContnet().daydate, 23, 0, 0, 0)));
+                 if(self.scheduleDetailContnet().daydate === "15")
+                    self.clockouttime(oj.IntlConverterUtils.dateToLocalIso(new Date(2015, 9, 16, 5, 0, 0, 0)).substring(0,16));
+                 else if(self.scheduleDetailContnet().daydate === "16")
+                    self.clockouttime(oj.IntlConverterUtils.dateToLocalIso(new Date(2015, 9, 17, 5, 0, 0, 0)).substring(0,16));
+                else if(self.scheduleDetailContnet().daydate === "17")
+                    self.clockouttime(oj.IntlConverterUtils.dateToLocalIso(new Date(2015, 9, 18, 5, 0, 0, 0)).substring(0,16));
+                else if(self.scheduleDetailContnet().daydate === "18")
+                    self.clockouttime(oj.IntlConverterUtils.dateToLocalIso(new Date(2015, 9, 19, 5, 0, 0, 0)).substring(0,16));
+                else if(self.scheduleDetailContnet().daydate === "19")
+                    self.clockouttime(oj.IntlConverterUtils.dateToLocalIso(new Date(2015, 9, 20, 5, 0, 0, 0)).substring(0,16));
+                else if(self.scheduleDetailContnet().daydate === "20")
+                    self.clockouttime(oj.IntlConverterUtils.dateToLocalIso(new Date(2015, 9, 21, 5, 0, 0, 0)).substring(0,16));
+                else if(self.scheduleDetailContnet().daydate === "21")
+                    self.clockouttime(oj.IntlConverterUtils.dateToLocalIso(new Date(2015, 9, 22, 5, 0, 0, 0)).substring(0,16));
+            
+            }
+            $("#laborScheduleDetailDailogWindow").ojDialog("open");
+        };
+        
+        self.empScheduleDetailInfoClose = function(){
+            $("#laborScheduleDetailDailogWindow").ojDialog("close");
         };
 
         self.empBasicViewClose =  function() {
