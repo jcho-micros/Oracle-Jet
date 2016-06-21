@@ -1,0 +1,355 @@
+<div style="display:none" id="laborScheduleDetailDailogWindow" title="" data-bind="ojComponent:{
+            component: 'ojDialog',
+            resizeBehavior: 'none',
+            dragAffordance: 'none',
+            initialVisibility: 'hide', 
+            rootAttributes: {style: 'width: 95%; height: auto;'}, 
+            'position': {'at': 'center'}}">
+     <!-- Note: the user must provide the aria-labelledby attribute for the dialog to be accessible -->
+    <div class="oj-dialog-header oj-helper-clearfix" aria-labelledby="dialogTitleId">
+        <div id="dialogTitleId" class="oj-dialog-title" style="background-color: #FF4000; color: #ffffff">
+            <div class="oj-flex">
+                <div class="oj-flex-item dialogHeaderLeft">
+                     <h2 class="dialogHeaderText"> <span data-bind="text: $parent.scheduleDetailContnet().empname 
+                                                         + ', '+ $parent.scheduleDetailContnet().jobtitle +', (' +
+                                                                 $parent.scheduleDetailContnet().currentposition +
+                                                                  ' of '+ $parent.scheduleDetailContnet().totalpositions +') '">
+                     </span></h2>
+                    <span class="fa fa-chevron-circle-left" ></span>
+                            <span data-bind="text: $parent.scheduleDetailContnet().currentposition +
+                                    ' of '+ $parent.scheduleDetailContnet().totalpositions"></span>
+                    <span class="fa fa-chevron-circle-right"></span>
+                </div>
+                
+            </div>
+        </div>
+    </div> 
+     
+     <div class="oj-flex" style="margin: 15px">
+         <div class="oj-flex-item oj-lg-6 oj-md-6">
+             <div style="margin: 5px; background: gray; color: black; height: 30px; padding-top: 5px;">
+                 <span>Timecard</span>
+             </div>
+             
+                 <div style="padding: 2px; width: 50px; height: 50px;">
+                       <img data-bind="attr: {src: $parent.getPhoto($parent.scheduleDetailContnet().empid)}"/>
+                 </div>
+
+                <div style="margin-left: 20px; padding-left: 100px; margin-top: -20px">
+                                    <span id="name" style="color: #000000; padding-left: 20px;" 
+                                              data-bind="text: $parent.scheduleDetailContnet().empname"></span>
+                                             <br/> <span style="color: #00a8ff; padding-left: 20px;" >312-125-0123</span>
+                                    <br />
+                                    <br />
+                                    <div>
+                                        <div style="background: blue; height:5px; margin-left: 10px; margin-right: 10px"></div>
+                                        <div style="background: #606060; color: white; height: 30px; margin-left: 10px; margin-right: 10px; padding-top: 7px;">
+                                            <span style="padding-left: 10px; " data-bind="text: $parent.scheduleDetailContnet().empname + ' has multiple shifts on this day'"></span>
+                                        </div>
+                                    </div>
+                </div>
+             
+                <hr />
+                <div>
+                    <span style="color: #000000" 
+                              data-bind="text: $parent.scheduleDetailContnet().jobtitle"></span><a data-bind="click: function(){
+                    $parent.handleOpen('#scheduleDetailDialog')
+                }" style="line-height:39px;">edit <i class="fa fa-pencil-square-o"></i></a>
+                    <br /><span style="color: #000000" 
+                                data-bind="text: $parent.scheduleDetailContnet().location +
+                                                              ', '+$parent.scheduleDetailContnet().revenuecenter"></span>
+                    <br />
+                    <span style="color: #000000" 
+                            data-bind="text: $parent.scheduleDetailContnet().date "></span>
+                    <br />
+                    <span style="color: #000000" 
+                            data-bind="text: $parent.scheduleDetailContnet().daypart "></span>
+                    <br /><br />
+                </div>
+                <div data-bind="visible: $parent.currentShiftStatus() === 'Active'">
+                <div style="border: 1px solid #000000; padding: 5px; border-color: black; width: 100px">
+                    <span style="color: #000000"  >CLOCK-IN</span>
+                    <br />
+                    <span style="color: #000000" 
+                            data-bind="visible:  $parent.scheduleDetailContnet().daypart === 'closeshift'">11:00 p.m.</span>
+                    <span style="color: #000000" 
+                            data-bind="visible:  $parent.scheduleDetailContnet().daypart === 'openingshift'">5:00 a.m</span>
+                    <span style="color: #000000" 
+                            data-bind="visible:  $parent.scheduleDetailContnet().daypart === 'breakfastshift'">8:00 a.m.</span>
+                    <span style="color: #000000" 
+                            data-bind="visible:  $parent.scheduleDetailContnet().daypart === 'lunchshift'">11:00 a.m.</span>
+                    <span style="color: #000000" 
+                            data-bind="visible:  $parent.scheduleDetailContnet().daypart === 'dinnershift'">3:00 p.m.</span>
+                    <br />
+                    <i class="fa fa-check-circle" aria-hidden="true"><span style="color: #000000" data-bind="text: '<status>'" ></span></i>
+                    
+                </div>
+                <div style="border: 1px solid #000000; padding: 5px; margin-top: -63px; margin-left: 110px; border-color: black; width: 30px; height: 22px;">
+                   <i class="fa fa-check" aria-hidden="true"></i>
+                </div>
+                <div style="border: 1px solid #000000; padding: 5px; margin-left: 110px; border-color: black; width: 30px">
+                   <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                </div>
+                
+                <div id="clockoutbtn" style="padding: 5px; margin-left: 250px; margin-top: -63px; width: 150px; background: #507AA0; text-align: center;"
+                     data-bind="visible: $parent.visibleclockout() ===false">
+                    <span style="color: white" data-bind="click: $parent.showclockoutlayout">Clock out</span>
+                </div>
+                <div data-bind="visible: $parent.visibleclockout()" style="margin-top: -63px;">
+                    <div id="clockoutlayoout" style="padding: 5px;color: white; margin-left: 250px;  width: 150px; background: #507AA0; text-align: left;">
+                        <span>CLOCK-OUT</span><br/><br/>
+                        <span>Date and Time</span><br/>
+<!--                        <span data-bind="text: $parent.clockoutdate"></span><br/>-->
+                        <span data-bind="text: $parent.clockouttime"></span><br/><br/>
+                        <span>Tips Collected</span><br/>
+                        <span>$ </span><input id="tipsamount" type="text" style="width: 70px;"/>
+                    </div>
+                    <div style="border: 1px solid #507AA0; background: #507AA0; padding-left: 10px; margin-top: -133px; margin-left: 410px; border-color: 507AA0; width: 30px; height: 22px;"
+                         data-bind="click: $parent.closeclockoutlayout()">
+                       <i class="fa fa-times" aria-hidden="true"></i>
+                    </div>
+                    <div style="border: 1px solid #000000; padding-top: 35px; padding-left: 10px; margin-left: 410px; border-color: black; width: 30px; height: 70px;"
+                          data-bind="click: $parent.saveclockoutlayout()">
+                       <i class="fa fa-floppy-o" aria-hidden="true"></i>
+                    </div>
+                </div>
+                </div>
+                
+                <div data-bind="visible: $parent.currentShiftStatus() === 'Future'">
+                    <div data-bind="visible: $parent.visibleclockin() ===false">
+                <div id="clockoutbtn" style="padding: 5px; width: 150px; background: #507AA0; text-align: center;">
+                    <span style="color: white" data-bind="click: $parent.showclockinlayout">Clock In</span>
+                </div>
+                    <div style="padding-left: 10px; 
+                         margin-top: -30px; margin-left: 200px; ">
+                        <span style="color: #507AA0">request change | </span>
+                        <span style="color: #507AA0">send to shift pool</span>
+                    </div>
+                    </div>
+                <div data-bind="visible: $parent.visibleclockin()" style="margin-top: -65px;">
+                    <div id="clockinlayoout" style="padding: 5px;color: white;  margin-top: 60px; width: 150px; background: #507AA0; 
+                         text-align: left;">
+                        <span>CLOCK-IN</span><br/>
+                        <span>DATE</span><br/>
+                        <input data-bind="ojComponent: {component: 'ojInputDate', 
+                                              value: $parent.clockindate}"/><br/>
+                        <span>TIME</span><br/>
+                        <input id="time"
+                            data-bind="ojComponent: {component: 'ojInputTime', 
+                                  value: $parent.clockintime }"/><br/>
+                        <span>REASON CODE</span><br/>
+                        <select id="basicSelect" data-bind="ojComponent: {component: 'ojSelect',
+                                                    value: $parent.clockinreason,
+                                                    rootAttributes: {style:'max-width:20em'}}">
+                        <option value="r1">Code 1</option>
+                        <option value="r2">Code 2</option>
+                        <option value="r3">Code 3</option>
+                      </select>
+                    </div>
+                    <div style="border: 1px solid #507AA0; background: #507AA0; padding-left: 10px; margin-top: -185px; margin-left: 160px; border-color: 507AA0; width: 30px; height: 22px;"
+                         data-bind="click: $parent.closeclockinlayout()">
+                       <i class="fa fa-times" aria-hidden="true"></i>
+                    </div>
+                    <div style="border: 1px solid #000000; padding-top: 35px; padding-left: 10px; margin-left: 160px; 
+                         border-color: black; width: 30px; height: 125px;"
+                          data-bind="click: $parent.saveclockinlayout()">
+                       <i class="fa fa-floppy-o" aria-hidden="true"></i>
+                    </div>
+                    
+                    <div style="padding-left: 10px; 
+                         margin-top: -133px; margin-left: 350px; ">
+                        <span style="color: #507AA0">request change | </span>
+                        <span style="color: #507AA0">send to shift pool</span>
+                    </div>
+                </div>
+                </div>
+                    
+                <div data-bind="visible: $parent.currentShiftStatus() === 'Completed'">
+                <div style="border: 1px solid #000000; padding: 5px; border-color: black; width: 100px">
+                        <span style="color: #000000"  >CLOCK-IN</span>
+                        <br />
+                        <span style="color: #000000" 
+                            data-bind="visible:  $parent.scheduleDetailContnet().daypart === 'closeshift'">11:00 p.m.</span>
+                        <span style="color: #000000" 
+                            data-bind="visible:  $parent.scheduleDetailContnet().daypart === 'openingshift'">5:00 a.m</span>
+                        <span style="color: #000000" 
+                            data-bind="visible:  $parent.scheduleDetailContnet().daypart === 'breakfastshift'">8:00 a.m.</span>
+                        <span style="color: #000000" 
+                            data-bind="visible:  $parent.scheduleDetailContnet().daypart === 'lunchshift'">11:00 a.m.</span>
+                        <span style="color: #000000" 
+                            data-bind="visible:  $parent.scheduleDetailContnet().daypart === 'dinnershift'">3:00 p.m.</span>
+                        <br />
+                        <i class="fa fa-check-circle" aria-hidden="true"><span style="color: #000000" data-bind="text: '<status>'" ></span></i>
+                    </div>
+                    <div style="border: 1px solid #000000; padding: 5px; margin-top: -63px; margin-left: 110px; border-color: black; width: 30px; height: 22px;">
+                        <i class="fa fa-check" aria-hidden="true"></i>
+                    </div>
+                    <div style="border: 1px solid #000000; padding: 5px; margin-left: 110px; border-color: black; width: 30px">
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    </div>
+                    
+                    <div style="padding: 5px; color: black; margin-left: 250px; width: 150px; 
+                         background: white; text-align: left; margin-top: -63px; border: 1px solid black;">
+                        <span>CLOCK-OUT</span><br/>
+                        <span data-bind="visible:  $parent.scheduleDetailContnet().daypart === 'closeshift'">5:00 a.m.</span>
+                        <span data-bind="visible:  $parent.scheduleDetailContnet().daypart === 'openingshift'">8:00 a.m.</span>
+                        <span data-bind="visible:  $parent.scheduleDetailContnet().daypart === 'breakfastshift'">11:00 a.m.</span>
+                        <span data-bind="visible:  $parent.scheduleDetailContnet().daypart === 'lunchshift'">3:00 p.m.</span>
+                        <span data-bind="visible:  $parent.scheduleDetailContnet().daypart === 'dinnershift'">10:00 p.m.</span><br/>
+                        
+                        <span style="color: red">11:34 p.m.</span><br/>
+                        <i class="fa fa-exclamation-triangle" aria-hidden="true"></i><span style="color: red">Manager Approval</span><br/>
+                    </div>
+                    <div style="border: 1px solid black; background: #white; padding-left: 10px; margin-top: -80px; margin-left: 410px; border-color: black; width: 30px; height: 22px;"
+                         data-bind="click: $parent.closeclockoutlayout()">
+                       <i class="fa fa-times" aria-hidden="true"></i>
+                    </div>
+                    <div style="border: 1px solid black; padding-top: 35px; padding-left: 10px;
+                         margin-left: 410px; border-color: black; width: 30px; height: 20px;"
+                          data-bind="click: $parent.saveclockoutlayout()">
+                       <i class="fa fa-floppy-o" aria-hidden="true"></i>
+                    </div>
+                </div>
+         </div>
+         
+         <div class="oj-flex-item oj-lg-6 oj-md-6">
+              <div style="margin: 5px; background: gray; color: black; height: 30px;">
+                 <span>Scheduled Shift</span><a data-bind="click: function(){
+                    $parent.handleOpen('#scheduleDetailDialog')
+                }" style="line-height:39px;">edit <i class="fa fa-pencil-square-o"></i></a>
+             </div>
+             
+             <div style="margin: 10px;">
+                    <span style="color: #000000" 
+                              data-bind="text: $parent.scheduleDetailContnet().jobtitle"></span>
+                    <br /><span style="color: #000000" 
+                                data-bind="text: $parent.scheduleDetailContnet().location +
+                                                              ', '+$parent.scheduleDetailContnet().revenuecenter"></span>
+                    <br />
+                    <span style="color: #000000" 
+                            data-bind="text: $parent.scheduleDetailContnet().date "></span> 
+                    <br />
+                    <span style="color: #000000" 
+                            data-bind="text: $parent.scheduleDetailContnet().daypart "></span>
+                    <br />
+                    <span style="color: #000000" 
+                            data-bind="text: $parent.scheduleDetailContnet().timings "></span>
+                    <br /><br />
+                    <span style="color: #000000" data-bind="text: '<BREAK RULE TYPE>'"></span>
+                    <br />
+                    <div data-bind="visible: $parent.scheduleDetailContnet().daypart === 'closeshift'">
+                        <span style="color: #000000" data-bind="text: '1:00AM - 1:15 AM <15 minutes>'"></span>
+                        <br />
+                        <span style="color: #000000" data-bind="text: '2:30AM - 3:00AM <30 minutes>'"></span>
+                        <br />
+                        <span style="color: #000000" data-bind="text: '4:00AM - 4:15AM <15 minutes>'"></span>
+                    </div>
+                    <div data-bind="visible: $parent.scheduleDetailContnet().daypart === 'openingshift'">
+                        <span style="color: #000000" data-bind="text: '6:00AM - 6:15 AM <15 minutes>'"></span>
+                        <br />
+                        <span style="color: #000000" data-bind="text: '7:00AM - 7:15AM <15 minutes>'"></span>
+                    </div>
+                    <div data-bind="visible: $parent.scheduleDetailContnet().daypart === 'breakfastshift'">
+                        <span style="color: #000000" data-bind="text: '9:00AM - 9:15 AM <15 minutes>'"></span>
+                        <br />
+                        <span style="color: #000000" data-bind="text: '10:00AM - 10:15AM <15 minutes>'"></span>
+                    </div>
+                    <div data-bind="visible: $parent.scheduleDetailContnet().daypart === 'lunchshift'">
+                        <span style="color: #000000" data-bind="text: '1:00PM - 1:15 AM <15 minutes>'"></span>
+                        <br />
+                        <span style="color: #000000" data-bind="text: '2:00PM - 2:15PM <15 minutes>'"></span>
+                    </div>
+                    <div data-bind="visible: $parent.scheduleDetailContnet().daypart === 'dinnershift'">
+                        <span style="color: #000000" data-bind="text: '4:00AM - 4:15 AM <15 minutes>'"></span>
+                        <br />
+                        <span style="color: #000000" data-bind="text: '5:30PM - 6:00PM <30 minutes>'"></span>
+                        <br />
+                        <span style="color: #000000" data-bind="text: '7:45PM - 8:00PM <15 minutes>'"></span>
+                    </div>
+                    <hr/>
+                    <span style="color: #000000; font-style:bold"
+                            data-bind="text: 'EDIT HISTORY'"></span>
+                    <a data-bind="click: function(){
+                    $parent.handleOpen('#scheduleDetailDialog')
+                }" style="line-height:39px;">show <i class="fa fa-chevron-circle-down"></i></a>
+        
+                </div>
+         </div>
+     </div> 
+     
+     <div class="oj-flex">
+         <div class="oj-flex-item oj-lg-8 oj-md-8" style="margin-top: 120px; margin-left: 10px">
+             <span style="font-size: 'bold'; color: black;" 
+                   data-bind="text: '$' + ($parent.scheduleDetailContnet().hours * $parent.scheduleDetailContnet().hourlywage) +
+                   ' PROJECTED PAYROLL'"></span><a data-bind="click: function(){
+                    $parent.handleOpen('#scheduleDetailDialog')
+                }" style="line-height:39px;">show <i class="fa fa-chevron-circle-down"></i></a>
+                <br/><br/>
+                <hr/>
+                
+                <span style="color: #000000; font-style:bold"
+                            data-bind="text: 'EDIT HISTORY'"></span>
+                    <a data-bind="click: function(){
+                    $parent.handleOpen('#scheduleDetailDialog')
+                }" style="line-height:39px;">show <i class="fa fa-chevron-circle-down"></i></a>
+                   
+         </div>
+     </div>
+     
+     <div class="oj-flex">
+         <div class="oj-flex-item oj-lg-4 oj-md-4" style="margin-top: 5px; margin-left: 10px; margin-right: 10px;">
+             <div style="background: #ebeced; color: black; height: 30px; padding-top: 7px; font-size: 15px; padding-left: 2px;">
+                 <span>Related Links</span>
+             </div>
+             <div style="margin-top: 5px; background: #ebeced; color: black; height: 50px; padding-top: 17px; text-align: center">
+                 <span>PLACE HOLDER</span>
+             </div>      
+         </div>
+         <div class="oj-flex-item oj-lg-3 oj-md-3" style="margin-top: 5px; margin-left: 10px; margin-right: 10px;">
+             <div style="background: #ebeced; color: black; height: 30px; padding-top: 7px; font-size: 15px; padding-left: 2px;">
+                 <span>Manager Shift Notes</span>
+             </div>
+             <div style="margin-top: 5px; background: #ebeced; color: black; height: 50px; padding-top: 17px; text-align: center">
+                 <span>PLACE HOLDER</span>
+             </div>      
+         </div>
+         <div class="oj-flex-item oj-lg-4 oj-md-4" style="margin-top: 5px; margin-left: 10px; margin-right: 10px;">
+             <div style="background: #ebeced; color: black; height: 30px; padding-top: 7px; font-size: 15px; padding-left: 2px;">
+                 <span>Checks / Guests Served</span>
+             </div>
+             <div style="margin-top: 5px; background: #ebeced; color: black; height: 50px; padding-top: 17px; text-align: center">
+                 <span>PLACE HOLDER</span>
+             </div>      
+         </div>
+     </div>
+     
+     <div class="oj-flex">
+         <div class="oj-flex-item oj-lg-11 oj-md-11" 
+              style="background: #ebeced; color: black; height: 30px; padding-top: 7px; font-size: 15px; padding-left: 2px; margin-top: 5px; margin-left: 10px; margin-right: 10px;">
+              <span>Analytics</span>
+         </div>
+     </div>
+     <div class="oj-flex" style="margin-bottom: 10px;">
+         <div class="oj-flex-item oj-lg-3 oj-md-3" 
+              style="background: #ebeced; color: black; height: 100px; padding-top: 17px; text-align: center; margin-top: 5px; margin-left: 10px; margin-right: 10px;">
+              <span>EMPLOYEE</span><br/>
+              <span>PAY PERIOD ACTUALS VS.</span><br/>
+              <span>PROJECTIONS</span><br/>
+              <span>How do i know if the user is going to</span><br/>
+              <span>go in to overtime?</span><br/>
+         </div>
+         <div class="oj-flex-item oj-lg-2 oj-md-2" 
+              style="background: #ebeced; color: black; height: 100px; padding-top: 44px; text-align: center; margin-top: 5px; margin-left: 10px; margin-right: 10px;">
+              <span>SALES</span><br/>
+              <span>CHART</span>
+         </div>
+         <div class="oj-flex-item oj-lg-3 oj-md-3" 
+              style="background: #ebeced; color: black; height: 100px; padding-top: 47px; text-align: center; margin-top: 5px; margin-left: 10px; margin-right: 10px;">
+              <span>CHART</span>
+         </div>
+         <div class="oj-flex-item oj-lg-3 oj-md-3" 
+              style="background: #ebeced; color: black; height: 100px; padding-top: 47px;  text-align: center; margin-top: 5px; margin-left: 10px; margin-right: 10px;">
+              <span>CHART</span>
+         </div>
+     </div>
+</div>
