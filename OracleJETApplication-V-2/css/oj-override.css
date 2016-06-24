@@ -7,7 +7,41 @@
 /*****Ramu Section**********/
 .redText {
   color: #e4001e; }
+   
+.jobSection {
+      border-top: 10px solid;
+      margin: 10px 0 0 0;
+      padding: 5px 0;
+      text-align: left; }
 
+.locSections {
+    text-align: center; }
+    .locLabel {
+      font-weight: bold; }
+    .jobSection {
+      border-top: 10px solid;
+      margin: 10px 0 0 0;
+      padding: 5px 0;
+      text-align: left; }
+      .Bartender, .Server {
+        margin-top: 3px;
+        margin-right: 3px;
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale; }
+      .Bartender:before {
+        content: "\f000";
+        font-size: 30px; }
+      .Server:before {
+        content: "\f0f5";
+        font-size: 30px; }
+      .fa {
+        font-size: 30px;
+        margin-top: 3px; }
+  .dollarAmts {
+    text-align: right; }
 /*****Section Variables*****/
 html {
   height: 100vh; }
@@ -32,7 +66,8 @@ hr {
   border-width: 1px 0 0; }
 
 .txtHighlight {
-  color: #00a8ff; }
+  color: #00a8ff;
+  }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue Light", Arial, sans-serif;

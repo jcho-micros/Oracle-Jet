@@ -288,6 +288,8 @@ define([
                                         return item.jobName;})).sort();
                             }));
                             $("#empLaborBasicDialogWindow").ojDialog("open");
+                            setTimeout(function(){$( "#filmStrip" ).ojFilmStrip( "option", "maxItemsPerPage", 4)}, 1000);
+                            $("#filmStrip").ojFilmStrip("refresh");
                             resolve(true);
                         }).fail(function (error) {
                             console.log('Error: ' + error.message);

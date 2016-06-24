@@ -182,7 +182,7 @@
                                                 <div data-bind="foreach: employees;" style="margin-top: 5px">
                                                     <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" 
                                              style="height: 20px; width: 30px;"/>
-                                                    <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
+                                                    <a href="#" data-bind="click: $parents[5].empScheduleDetailInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
                                                     <br /><span data-bind="text: timings"></span>
                                                     <br /><span data-bind="text: hours +' hours | $'+hourlywage"></span><br />
                                                 </div>
@@ -204,7 +204,7 @@
                                                 <div data-bind="foreach: employees;" style="margin-top: 5px">
                                                     <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" 
                                              style="height: 20px; width: 30px;"/>
-                                                    <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
+                                                    <a href="#" data-bind="click: $parents[5].empScheduleDetailInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
                                                     
                                                     <br /><span data-bind="text: timings"></span>
                                                     <br /><span data-bind="text: hours +' hours | $'+hourlywage"></span><br />
@@ -227,7 +227,7 @@
                                                 <div data-bind="foreach: employees;" style="margin-top: 5px">
                                                     <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" 
                                              style="height: 20px; width: 30px;"/>
-                                                    <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
+                                                    <a href="#" data-bind="click: $parents[5].empScheduleDetailInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
                                                     
                                                     <br /><span data-bind="text: timings"></span>
                                                     <br /><span data-bind="text: hours +' hours | $'+hourlywage"></span><br />
@@ -249,7 +249,7 @@
                                                 <div data-bind="foreach: employees;" style="margin-top: 5px">
                                                     <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" 
                                              style="height: 20px; width: 30px;"/>
-                                                    <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
+                                                    <a href="#" data-bind="click: $parents[5].empScheduleDetailInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
                                                     
                                                     <br /><span data-bind="text: timings"></span>
                                                     <br /><span data-bind="text: hours +' hours | $'+hourlywage"></span><br />
@@ -271,7 +271,7 @@
                                                 <div data-bind="foreach: employees;" style="margin-top: 5px">
                                                     <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" 
                                              style="height: 20px; width: 30px;"/>
-                                                    <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
+                                                    <a href="#" data-bind="click: $parents[5].empScheduleDetailInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
                                                     
                                                     <br /><span data-bind="text: timings"></span>
                                                     <br /><span data-bind="text: hours +' hours | $'+hourlywage"></span><br />
@@ -426,8 +426,9 @@
                                 <div class="oj-flex-item">
                                     <div id="accordionPageDistinctDay" data-bind="ojComponent: {component: 'ojAccordion'}" >
                                     <div id="distinctDay" >
-                                    <div data-bind="style : {'background-color': backgroundcolor}" style="border: 1px solid #000000;  margin-top: 5px; 
-                                         color: white;  text-align: left; height: 20px">
+                                    <div data-bind="style : {'background-color': backgroundcolor}" 
+                                         style="border: 1px solid #000000;  margin-top: 5px; 
+                                         color: white;  text-align: left; height: 30px; width: 200px;">
                                     <strong><span data-bind="text: jobtitle"> </span></strong>
                                     </div>
                                          <div data-bind="style : {'background-color': backgroundcolor}" style="border: 1px solid #000000;  margin-top: 5px; 
@@ -690,7 +691,7 @@
                                                 <div data-bind="foreach: employees;" style="margin-top: 5px">
                                                     <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" 
                                              style="height: 20px; width: 30px;"/>
-                                                    <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
+                                                    <a href="#" data-bind="click: $parents[7].empScheduleDetailInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
                                                     <br /><span data-bind="text: timings"></span>
                                                     <br /><span data-bind="text: hours +' hours | $'+hourlywage"></span><br />
                                                 </div>
@@ -711,7 +712,7 @@
                                                 <div data-bind="foreach: employees;" style="margin-top: 5px">
                                                     <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" 
                                              style="height: 20px; width: 30px;"/>
-                                                    <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
+                                                    <a href="#" data-bind="click: $parents[7].empScheduleDetailInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
                                                     
                                                     <br /><span data-bind="text: timings"></span>
                                                     <br /><span data-bind="text: hours +' hours | $'+hourlywage"></span><br />
@@ -733,7 +734,7 @@
                                                 <div data-bind="foreach: employees;" style="margin-top: 5px">
                                                     <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" 
                                              style="height: 20px; width: 30px;"/>
-                                                    <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
+                                                    <a href="#" data-bind="click: $parents[7].empScheduleDetailInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
                                                     
                                                     <br /><span data-bind="text: timings"></span>
                                                     <br /><span data-bind="text: hours +' hours | $'+hourlywage"></span><br />
@@ -755,7 +756,7 @@
                                                 <div data-bind="foreach: employees;" style="margin-top: 5px">
                                                     <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" 
                                              style="height: 20px; width: 30px;"/>
-                                                    <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
+                                                    <a href="#" data-bind="click: $parents[7].empScheduleDetailInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
                                                     
                                                     <br /><span data-bind="text: timings"></span>
                                                     <br /><span data-bind="text: hours +' hours | $'+hourlywage"></span><br />
@@ -777,7 +778,7 @@
                                                 <div data-bind="foreach: employees;" style="margin-top: 5px">
                                                     <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" 
                                              style="height: 20px; width: 30px;"/>
-                                                    <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
+                                                    <a href="#" data-bind="click: $parents[7].empScheduleDetailInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
                                                     
                                                     <br /><span data-bind="text: timings"></span>
                                                     <br /><span data-bind="text: hours +' hours | $'+hourlywage"></span><br />

@@ -12260,7 +12260,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                                "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Sunday, Oct. 15",
+                                                "daypart": "openingshift",
+                                                "status": "Future",
+                                                "daydate": "15"
                                             }
                                         ]
                                 }   
@@ -12279,7 +12285,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                                "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Sunday, Oct. 15",
+                                                "daypart": "breakfastshift",
+                                                "status": "Future",
+                                                "daydate": "15"
                                             }
                                         ]
                                 }   
@@ -12299,7 +12311,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                                "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Sunday, Oct. 15",
+                                                "daypart": "dinnerdhift",
+                                                "status": "Future",
+                                                "daydate": "15"
                                             }
                                         ]
                                         
@@ -12318,7 +12336,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                                "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Sunday, Oct. 15",
+                                                "daypart": "closeshift",
+                                                "status": "Future",
+                                                "daydate": "15"
                                             }
                                         ]
                                 }
@@ -12349,7 +12373,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                                "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Monday, Oct. 16",
+                                                "daypart": "openingshift",
+                                                "status": "Future",
+                                                "daydate": "16"
                                             }
                                         ]
                                 }   
@@ -12370,7 +12400,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                                "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Monday, Oct. 16",
+                                                "daypart": "lunchshift",
+                                                "status": "Future",
+                                                "daydate": "16"
                                             }
                                         ]
                                 }   
@@ -12390,7 +12426,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                                "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Monday, Oct. 16",
+                                                "daypart": "closeshift",
+                                                "status": "Future",
+                                                "daydate": "16"
                                             }
                                         ]
                                 }
@@ -12421,7 +12463,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                                "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Tuesday, Oct. 17",
+                                                "daypart": "openingshift",
+                                                "status": "Future",
+                                                "daydate": "17"
                                             }
                                         ]
                                 }   
@@ -12440,7 +12488,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                                "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Tuesday, Oct. 17",
+                                                "daypart": "breakfastshift",
+                                                "status": "Future",
+                                                "daydate": "17"
                                             }
                                         ]
                                 }   
@@ -12460,7 +12514,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                                "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Tuesday, Oct. 17",
+                                                "daypart": "dinnershift",
+                                                "status": "Future",
+                                                "daydate": "17"
                                             }
                                         ]
                                         
@@ -12479,7 +12539,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                                "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Tuesday, Oct. 17",
+                                                "daypart": "closeshift",
+                                                "status": "Future",
+                                                "daydate": "17"
                                             }
                                         ]
                                 }
@@ -12509,8 +12575,14 @@
                                                 "hours" : "3",
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
-                                                "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                            "backgroundcolor" : "#f98b1e",
+                                                "workStation" : "Front Bar",
+                                                "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                            "date": "Wednesday, Oct. 18",
+                                                "daypart": "openingshift",
+                                                "status": "Future",
+                                                "daydate": "18"
                                             }
                                         ]
                                 }   
@@ -12529,7 +12601,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                                "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                            "date": "Wednesday, Oct. 18",
+                                                "daypart": "breakfastshift",
+                                                "status": "Future",
+                                                "daydate": "18"
                                             }
                                         ]
                                 }   
@@ -12549,7 +12627,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                                "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                            "date": "Wednesday, Oct. 18",
+                                                "daypart": "dinnershift",
+                                                "status": "Future",
+                                                "daydate": "18"
                                             }
                                         ]
                                         
@@ -12568,7 +12652,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                                "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                            "date": "Wednesday, Oct. 18",
+                                                "daypart": "closeshift",
+                                                "status": "Future",
+                                                "daydate": "18"
                                             }
                                         ]
                                 }
@@ -12599,7 +12689,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                                "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                            "date": "Thursday, Oct. 19",
+                                                "daypart": "openingshift",
+                                                "status": "Future",
+                                                "daydate": "19"
                                             }
                                         ]
                                 }   
@@ -12620,7 +12716,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                                "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                            "date": "Thursday, Oct. 19",
+                                                "daypart": "lunchshift",
+                                                "status": "Future",
+                                                "daydate": "19"
                                             }
                                         ]
                                 }   
@@ -12640,7 +12742,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                                "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                            "date": "Thursday, Oct. 19",
+                                                "daypart": "closeshift",
+                                                "status": "Future",
+                                                "daydate": "19"
                                             }
                                         ]
                                 }
@@ -12671,7 +12779,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                                "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                            "date": "Friday, Oct. 20",
+                                                "daypart": "openingshift",
+                                                "status": "Future",
+                                                "daydate": "20"
                                             }
                                         ]
                                 }   
@@ -12690,7 +12804,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                                "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                            "date": "Friday, Oct. 20",
+                                                "daypart": "breakfastshift",
+                                                "status": "Future",
+                                                "daydate": "20"
                                             }
                                         ]
                                 }   
@@ -12710,7 +12830,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                                "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                            "date": "Friday, Oct. 20",
+                                                "daypart": "dinnershift",
+                                                "status": "Future",
+                                                "daydate": "20"
                                             }
                                         ]
                                         
@@ -12729,7 +12855,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                                "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                            "date": "Friday, Oct. 20",
+                                                "daypart": "closeshift",
+                                                "status": "Future",
+                                                "daydate": "20"
                                             }
                                         ]
                                 }
@@ -12760,7 +12892,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                                "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                            "date": "Saturday, Oct. 21",
+                                                "daypart": "openingshift",
+                                                "status": "Future",
+                                                "daydate": "21"
                                             }
                                         ]
                                 }   
@@ -12779,7 +12917,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                                "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                            "date": "Saturday, Oct. 21",
+                                                "daypart": "breakfastshift",
+                                                "status": "Future",
+                                                "daydate": "21"
                                             }
                                         ]
                                 }   
@@ -12799,7 +12943,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                                "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                            "date": "Saturday, Oct. 21",
+                                                "daypart": "dinnershift",
+                                                "status": "Future",
+                                                "daydate": "21"
                                             }
                                         ]
                                         
@@ -12818,7 +12968,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                                "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                            "date": "Saturday, Oct. 21",
+                                                "daypart": "closeshift",
+                                                "status": "Future",
+                                                "daydate": "21"
                                             }
                                         ]
                                 }
@@ -20695,8 +20851,14 @@
                                                 "hours" : "3",
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
-                                                "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                            "backgroundcolor" : "#f98b1e",
+                                            "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Sunday, Oct. 15",
+                                                "daypart": "openingshift",
+                                                "status": "Active",
+                                                "daydate": "15"
                                             }
                                         ]
                                 }   
@@ -20715,7 +20877,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                                "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Sunday, Oct. 15",
+                                        "daypart": "breakfastshift",
+                                                "status": "Active",
+                                                "daydate": "15"
                                             }
                                         ]
                                 }   
@@ -20734,8 +20902,14 @@
                                                 "hours" : "7",
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
-                                                "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                            "backgroundcolor" : "#f98b1e",
+                                            "workStation" : "Front Bar",
+                                                "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Sunday, Oct. 15",
+                                                "daypart": "dinnershift",
+                                                "status": "Active",
+                                                "daydate": "15"
                                             }
                                         ]
                                         
@@ -20753,8 +20927,15 @@
                                                 "hours" : "6",
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
-                                                "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                            "backgroundcolor" : "#f98b1e",
+                                            "workStation" : "Front Bar",
+                                            
+                                                "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Sunday, Oct. 15",
+                                                "daypart": "closeshift",
+                                                "status": "Active",
+                                                "daydate": "15"
                                             }
                                         ]
                                 }
@@ -20807,7 +20988,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Sunday, Oct. 15",
+                                                "daypart": "openingshift",
+                                                "status": "Active",
+                                                "daydate": "15"
                                             }
                                         ]
                                 } ,
@@ -20821,7 +21008,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Sunday, Oct. 15",
+                                                "daypart": "openingshift",
+                                                "status": "Active",
+                                                "daydate": "15"
                                             }
                                         ]
                                 } 
@@ -20841,7 +21034,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Sunday, Oct. 15",
+                                                "daypart": "openingshift",
+                                                "status": "Active",
+                                                "daydate": "15"
                                             }
                                         ]
                                     }   ,
@@ -20855,7 +21054,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Sunday, Oct. 15",
+                                                "daypart": "openingshift",
+                                                "status": "Active",
+                                                "daydate": "15"
                                             }
                                         ]
                                 }    
@@ -20875,7 +21080,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Sunday, Oct. 15",
+                                                "daypart": "openingshift",
+                                                "status": "Active",
+                                                "daydate": "15"
                                             }
                                         ]
                                     }   ,
@@ -20889,7 +21100,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Sunday, Oct. 15",
+                                                "daypart": "openingshift",
+                                                "status": "Active",
+                                                "daydate": "15"
                                             }
                                         ]
                                 }    
@@ -20909,7 +21126,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Sunday, Oct. 15",
+                                                "daypart": "openingshift",
+                                                "status": "Active",
+                                                "daydate": "15"
                                             }
                                         ]
                                     }   ,
@@ -20923,7 +21146,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Sunday, Oct. 15",
+                                                "daypart": "openingshift",
+                                                "status": "Active",
+                                                "daydate": "15"
                                             }
                                         ]
                                 }    
@@ -20941,7 +21170,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Sunday, Oct. 15",
+                                                "daypart": "openingshift",
+                                                "status": "Active",
+                                                "daydate": "15"
                                             }
                                         ]
                                 }
@@ -20971,7 +21206,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Host",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Restaurant",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Sunday, Oct. 15",
+                                                "daypart": "openingshift",
+                                                "status": "Active",
+                                                "daydate": "15"
                                             }
                                         ]
                                 }  
@@ -20991,7 +21232,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Host",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Restaurant",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Sunday, Oct. 15",
+                                                "daypart": "breakfastshifft",
+                                                "status": "Active",
+                                                "daydate": "15"
                                             }
                                         ]
                                     }      
@@ -21011,7 +21258,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Host",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Prep Host"
+                                                "workStation" : "Prep Host",
+                                            "revenuecenter": "In-Restaurant",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Sunday, Oct. 15",
+                                                "daypart": "lunchshift",
+                                                "status": "Active",
+                                                "daydate": "15"
                                             }
                                         ]
                                     }   
@@ -21031,7 +21284,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Host",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Prep Host"
+                                                "workStation" : "Prep Host",
+                                            "revenuecenter": "In-Restaurant",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Sunday, Oct. 15",
+                                                "daypart": "dinnershift",
+                                                "status": "Active",
+                                                "daydate": "15"
                                             }
                                         ]
                                     }   
@@ -21049,7 +21308,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Host",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Restaurant",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Sunday, Oct. 15",
+                                                "daypart": "closeshift",
+                                                "status": "Active",
+                                                "daydate": "15"
                                             }
                                         ]
                                 }
@@ -21133,7 +21398,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Monay, Oct. 16",
+                                                "daypart": "openingshift",
+                                                "status": "Active",
+                                                "daydate": "16"
                                             }
                                         ]
                                 }   
@@ -21154,7 +21425,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Monay, Oct. 16",
+                                                "daypart": "lunchshift",
+                                                "status": "Active",
+                                                "daydate": "16"
                                             }
                                         ]
                                 }   
@@ -21174,7 +21451,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Monay, Oct. 16",
+                                                "daypart": "closeshift",
+                                                "status": "Active",
+                                                "daydate": "16"
                                             }
                                         ]
                                 }
@@ -21227,7 +21510,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Monay, Oct. 16",
+                                                "daypart": "openingshift",
+                                                "status": "Active",
+                                                "daydate": "16"
                                             }
                                         ]
                                 } ,
@@ -21241,7 +21530,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Monay, Oct. 16",
+                                                "daypart": "openingshift",
+                                                "status": "Active",
+                                                "daydate": "16"
                                             }
                                         ]
                                 } 
@@ -21261,7 +21556,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Monay, Oct. 16",
+                                                "daypart": "breakfastshift",
+                                                "status": "Active",
+                                                "daydate": "16"
                                             }
                                         ]
                                     }   ,
@@ -21275,7 +21576,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Monay, Oct. 16",
+                                                "daypart": "breakfastshift",
+                                                "status": "Active",
+                                                "daydate": "16"
                                             }
                                         ]
                                 }    
@@ -21295,7 +21602,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Monay, Oct. 16",
+                                                "daypart": "lunchshift",
+                                                "status": "Active",
+                                                "daydate": "16"
                                             }
                                         ]
                                     }   ,
@@ -21309,7 +21622,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Monay, Oct. 16",
+                                                "daypart": "lunchshift",
+                                                "status": "Active",
+                                                "daydate": "16"
                                             }
                                         ]
                                 }    
@@ -21329,7 +21648,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Monay, Oct. 16",
+                                                "daypart": "dinnershift",
+                                                "status": "Active",
+                                                "daydate": "16"
                                             }
                                         ]
                                     }   ,
@@ -21343,7 +21668,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Monay, Oct. 16",
+                                                "daypart": "dinnershift",
+                                                "status": "Active",
+                                                "daydate": "16"
                                             }
                                         ]
                                 }    
@@ -21361,7 +21692,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Monay, Oct. 16",
+                                                "daypart": "closeshift",
+                                                "status": "Active",
+                                                "daydate": "16"
                                             }
                                         ]
                                 }
@@ -21391,7 +21728,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Host",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Restaurant",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Monay, Oct. 16",
+                                                "daypart": "openingshift",
+                                                "status": "Active",
+                                                "daydate": "16"
                                             }
                                         ]
                                 }
@@ -21411,7 +21754,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Host",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Restaurant",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Monay, Oct. 16",
+                                                "daypart": "breakfastshift",
+                                                "status": "Active",
+                                                "daydate": "16"
                                             }
                                         ]
                                     }     
@@ -21431,7 +21780,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Host",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Prep Host"
+                                                "workStation" : "Prep Host",
+                                            "revenuecenter": "In-Restaurant",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Monay, Oct. 16",
+                                                "daypart": "lunchshift",
+                                                "status": "Active",
+                                                "daydate": "16"
                                             }
                                         ]
                                     }  
@@ -21451,7 +21806,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Host",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Prep Host"
+                                                "workStation" : "Prep Host",
+                                            "revenuecenter": "In-Restaurant",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Monay, Oct. 16",
+                                                "daypart": "dinnershift",
+                                                "status": "Active",
+                                                "daydate": "16"
                                             }
                                         ]
                                     } 
@@ -21469,7 +21830,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Host",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Restaurant",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Monay, Oct. 16",
+                                                "daypart": "closeshift",
+                                                "status": "Active",
+                                                "daydate": "16"
                                             }
                                         ]
                                 }
@@ -21553,7 +21920,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "BLATIMORE",
+                                                "date": "Tuesday, Oct. 17",
+                                                "daypart": "openingshift",
+                                                "status": "Active",
+                                                "daydate": "17"
                                             }
                                         ]
                                 }   
@@ -21572,7 +21945,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "BLATIMORE",
+                                                "date": "Tuesday, Oct. 17",
+                                                "daypart": "breakfastshift",
+                                                "status": "Active",
+                                                "daydate": "17"
                                             }
                                         ]
                                 }   
@@ -21592,7 +21971,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "BLATIMORE",
+                                                "date": "Tuesday, Oct. 17",
+                                                "daypart": "dinnershift",
+                                                "status": "Active",
+                                                "daydate": "17"
                                             }
                                         ]
                                         
@@ -21611,7 +21996,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "BLATIMORE",
+                                                "date": "Tuesday, Oct. 17",
+                                                "daypart": "closeshift",
+                                                "status": "Active",
+                                                "daydate": "17"
                                             }
                                         ]
                                 }
@@ -21665,7 +22056,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Tuesday, Oct. 17",
+                                                "daypart": "openingshift",
+                                                "status": "Active",
+                                                "daydate": "17"
                                             }
                                         ]
                                 } ,
@@ -21679,7 +22076,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Tuesday, Oct. 17",
+                                                "daypart": "openingshift",
+                                                "status": "Active",
+                                                "daydate": "17"
                                             }
                                         ]
                                 } 
@@ -21698,7 +22101,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Tuesday, Oct. 17",
+                                                "daypart": "breakfastshift",
+                                                "status": "Active",
+                                                "daydate": "17"
                                             }
                                         ]
                                 } ,
@@ -21712,7 +22121,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Tuesday, Oct. 17",
+                                                "daypart": "breakfastshift",
+                                                "status": "Active",
+                                                "daydate": "17"
                                             }
                                         ]
                                 } 
@@ -21731,7 +22146,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Tuesday, Oct. 17",
+                                                "daypart": "lunchshift",
+                                                "status": "Active",
+                                                "daydate": "17"
                                             }
                                         ]
                                 } ,
@@ -21745,7 +22166,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Tuesday, Oct. 17",
+                                                "daypart": "lunchshift",
+                                                "status": "Active",
+                                                "daydate": "17"
                                             }
                                         ]
                                 } 
@@ -21763,7 +22190,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Tuesday, Oct. 17",
+                                                "daypart": "dinnershift",
+                                                "status": "Active",
+                                                "daydate": "17"
                                             }
                                         ]
                                         
@@ -21778,7 +22211,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Tuesday, Oct. 17",
+                                                "daypart": "dinnershift",
+                                                "status": "Active",
+                                                "daydate": "17"
                                             }
                                         ]
                                         
@@ -21797,7 +22236,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Tuesday, Oct. 17",
+                                                "daypart": "closeshift",
+                                                "status": "Active",
+                                                "daydate": "17"
                                             }
                                         ]
                                 }
@@ -21829,7 +22274,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Host",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Restaurant",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Tuesday, Oct. 17",
+                                                "daypart": "openingshift",
+                                                "status": "Active",
+                                                "daydate": "17"
                                             }
                                         ]
                                 } 
@@ -21848,7 +22299,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Host",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Restaurant",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Tuesday, Oct. 17",
+                                                "daypart": "breakfastshift",
+                                                "status": "Active",
+                                                "daydate": "17"
                                             }
                                         ]
                                 } 
@@ -21867,7 +22324,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Host",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Prep Host"
+                                                "workStation" : "Prep Host",
+                                            "revenuecenter": "In-Restaurant",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Tuesday, Oct. 17",
+                                                "daypart": "lunchshift",
+                                                "status": "Active",
+                                                "daydate": "17"
                                             }
                                         ]
                                 }
@@ -21885,7 +22348,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Host",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Prep Host"
+                                                "workStation" : "Prep Host",
+                                            "revenuecenter": "In-Restaurant",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Tuesday, Oct. 17",
+                                                "daypart": "dinnershift",
+                                                "status": "Active",
+                                                "daydate": "17"
                                             }
                                         ]
                                         
@@ -21904,7 +22373,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Host",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Prep Host"
+                                                "workStation" : "Prep Host",
+                                            "revenuecenter": "In-Restaurant",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Tuesday, Oct. 17",
+                                                "daypart": "closeshift",
+                                                "status": "Active",
+                                                "daydate": "17"
                                             }
                                         ]
                                 }
@@ -21990,7 +22465,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Wednesday, Oct. 18",
+                                                "daypart": "openingshift",
+                                                "status": "Active",
+                                                "daydate": "18"
                                             }
                                         ]
                                 }   
@@ -22009,7 +22490,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Wednesday, Oct. 18",
+                                                "daypart": "breakfastshift",
+                                                "status": "Active",
+                                                "daydate": "18"
                                             }
                                         ]
                                 }   
@@ -22029,7 +22516,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Wednesday, Oct. 18",
+                                                "daypart": "dinnershift",
+                                                "status": "Active",
+                                                "daydate": "18"
                                             }
                                         ]
                                         
@@ -22048,7 +22541,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Wednesday, Oct. 18",
+                                                "daypart": "closeshift",
+                                                "status": "Active",
+                                                "daydate": "18"
                                             }
                                         ]
                                 }
@@ -22101,7 +22600,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Wednesday, Oct. 18",
+                                                "daypart": "openingshift",
+                                                "status": "Active",
+                                                "daydate": "18"
                                             }
                                         ]
                                 } ,
@@ -22115,7 +22620,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Wednesday, Oct. 18",
+                                                "daypart": "openingshift",
+                                                "status": "Active",
+                                                "daydate": "18"
                                             }
                                         ]
                                 } 
@@ -22135,7 +22646,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Wednesday, Oct. 18",
+                                                "daypart": "breakfastshift",
+                                                "status": "Active",
+                                                "daydate": "18"
                                             }
                                         ]
                                     }   ,
@@ -22149,7 +22666,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Wednesday, Oct. 18",
+                                                "daypart": "breakfastshift",
+                                                "status": "Active",
+                                                "daydate": "18"
                                             }
                                         ]
                                 }    
@@ -22169,7 +22692,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Wednesday, Oct. 18",
+                                                "daypart": "lunchshift",
+                                                "status": "Active",
+                                                "daydate": "18"
                                             }
                                         ]
                                     }   ,
@@ -22183,7 +22712,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Wednesday, Oct. 18",
+                                                "daypart": "lunchshift",
+                                                "status": "Active",
+                                                "daydate": "18"
                                             }
                                         ]
                                 }    
@@ -22203,7 +22738,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Wednesday, Oct. 18",
+                                                "daypart": "dinnershift",
+                                                "status": "Active",
+                                                "daydate": "18"
                                             }
                                         ]
                                     }   ,
@@ -22217,7 +22758,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Wednesday, Oct. 18",
+                                                "daypart": "dinnershift",
+                                                "status": "Active",
+                                                "daydate": "18"
                                             }
                                         ]
                                 }    
@@ -22235,7 +22782,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Wednesday, Oct. 18",
+                                                "daypart": "closeshift",
+                                                "status": "Active",
+                                                "daydate": "18"
                                             }
                                         ]
                                 }
@@ -22265,7 +22818,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Host",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Restaurant",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Wednesday, Oct. 18",
+                                                "daypart": "openingshift",
+                                                "status": "Active",
+                                                "daydate": "18"
                                             }
                                         ]
                                 } 
@@ -22285,7 +22844,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Host",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Restaurant",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Wednesday, Oct. 18",
+                                                "daypart": "breakfastshift",
+                                                "status": "Active",
+                                                "daydate": "18"
                                             }
                                         ]
                                     }     
@@ -22305,7 +22870,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Host",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Prep Host"
+                                                "workStation" : "Prep Host",
+                                            "revenuecenter": "In-Restaurant",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Wednesday, Oct. 18",
+                                                "daypart": "lunchshift",
+                                                "status": "Active",
+                                                "daydate": "18"
                                             }
                                         ]
                                     }   
@@ -22325,7 +22896,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Host",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Prep Host"
+                                                "workStation" : "Prep Host",
+                                            "revenuecenter": "In-Restaurant",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Wednesday, Oct. 18",
+                                                "daypart": "dinnershift",
+                                                "status": "Active",
+                                                "daydate": "18"
                                             }
                                         ]
                                     }    
@@ -22343,7 +22920,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Host",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Restaurant",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Wednesday, Oct. 18",
+                                                "daypart": "closeshift",
+                                                "status": "Active",
+                                                "daydate": "18"
                                             }
                                         ]
                                 }
@@ -22426,7 +23009,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Thursday, Oct. 19",
+                                                "daypart": "openingshift",
+                                                "status": "Active",
+                                                "daydate": "19"
                                             }
                                         ]
                                 }   
@@ -22447,7 +23036,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Thursday, Oct. 19",
+                                                "daypart": "lunchshift",
+                                                "status": "Active",
+                                                "daydate": "19"
                                             }
                                         ]
                                 }   
@@ -22467,7 +23062,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Thursday, Oct. 19",
+                                                "daypart": "closeshift",
+                                                "status": "Active",
+                                                "daydate": "19"
                                             }
                                         ]
                                 }
@@ -22518,7 +23119,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Thursday, Oct. 19",
+                                                "daypart": "openingshift",
+                                                "status": "Active",
+                                                "daydate": "19"
                                             }
                                         ]
                                 } ,
@@ -22532,7 +23139,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Thursday, Oct. 19",
+                                                "daypart": "openingshift",
+                                                "status": "Active",
+                                                "daydate": "19"
                                             }
                                         ]
                                 } 
@@ -22552,7 +23165,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Thursday, Oct. 19",
+                                                "daypart": "breakfastshift",
+                                                "status": "Active",
+                                                "daydate": "19"
                                             }
                                         ]
                                     }   ,
@@ -22566,7 +23185,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Thursday, Oct. 19",
+                                                "daypart": "breakfastshift",
+                                                "status": "Active",
+                                                "daydate": "19"
                                             }
                                         ]
                                 }    
@@ -22586,7 +23211,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Thursday, Oct. 19",
+                                                "daypart": "lunchshift",
+                                                "status": "Active",
+                                                "daydate": "19"
                                             }
                                         ]
                                     }   ,
@@ -22600,7 +23231,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Thursday, Oct. 19",
+                                                "daypart": "lunchshift",
+                                                "status": "Active",
+                                                "daydate": "19"
                                             }
                                         ]
                                 }    
@@ -22620,7 +23257,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Thursday, Oct. 19",
+                                                "daypart": "dinnershift",
+                                                "status": "Active",
+                                                "daydate": "19"
                                             }
                                         ]
                                     }   ,
@@ -22634,7 +23277,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Thursday, Oct. 19",
+                                                "daypart": "dinnershift",
+                                                "status": "Active",
+                                                "daydate": "19"
                                             }
                                         ]
                                 }    
@@ -22652,7 +23301,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Thursday, Oct. 19",
+                                                "daypart": "closeshift",
+                                                "status": "Active",
+                                                "daydate": "19"
                                             }
                                         ]
                                 }
@@ -22682,7 +23337,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Host",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Restaurant",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Thursday, Oct. 19",
+                                                "daypart": "openingshift",
+                                                "status": "Active",
+                                                "daydate": "19"
                                             }
                                         ]
                                 } 
@@ -22702,7 +23363,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Host",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Restaurant",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Thursday, Oct. 19",
+                                                "daypart": "breakfastshift",
+                                                "status": "Active",
+                                                "daydate": "19"
                                             }
                                         ]
                                     }  
@@ -22722,7 +23389,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Host",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Prep Host"
+                                                "workStation" : "Prep Host",
+                                            "revenuecenter": "In-Restaurant",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Thursday, Oct. 19",
+                                                "daypart": "lunchshift",
+                                                "status": "Active",
+                                                "daydate": "19"
                                             }
                                         ]
                                     }  
@@ -22742,7 +23415,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Host",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Prep Host"
+                                                "workStation" : "Prep Host",
+                                            "revenuecenter": "In-Restaurant",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Thursday, Oct. 19",
+                                                "daypart": "dinnershift",
+                                                "status": "Active",
+                                                "daydate": "19"
                                             }
                                         ]
                                     }      
@@ -22760,7 +23439,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Host",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Restaurant",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Thursday, Oct. 19",
+                                                "daypart": "closeshift",
+                                                "status": "Active",
+                                                "daydate": "19"
                                             }
                                         ]
                                 }
@@ -22842,7 +23527,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Friday, Oct. 20",
+                                                "daypart": "openingshift",
+                                                "status": "Active",
+                                                "daydate": "20"
                                             }
                                         ]
                                 }   
@@ -22861,7 +23552,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Friday, Oct. 20",
+                                                "daypart": "breakfastshift",
+                                                "status": "Active",
+                                                "daydate": "20"
                                             }
                                         ]
                                 }   
@@ -22881,7 +23578,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Friday, Oct. 20",
+                                                "daypart": "dinnershift",
+                                                "status": "Active",
+                                                "daydate": "20"
                                             }
                                         ]
                                         
@@ -22900,7 +23603,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Friday, Oct. 20",
+                                                "daypart": "closeshift",
+                                                "status": "Active",
+                                                "daydate": "20"
                                             }
                                         ]
                                 }
@@ -22952,7 +23661,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Friday, Oct. 20",
+                                                "daypart": "openingshift",
+                                                "status": "Active",
+                                                "daydate": "20"
                                             }
                                         ]
                                 } ,
@@ -22966,7 +23681,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Friday, Oct. 20",
+                                                "daypart": "openingshift",
+                                                "status": "Active",
+                                                "daydate": "20"
                                             }
                                         ]
                                 } 
@@ -22985,7 +23706,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Friday, Oct. 20",
+                                                "daypart": "breakfastshift",
+                                                "status": "Active",
+                                                "daydate": "20"
                                             }
                                         ]
                                 } ,
@@ -22999,7 +23726,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Friday, Oct. 20",
+                                                "daypart": "breakfastshift",
+                                                "status": "Active",
+                                                "daydate": "20"
                                             }
                                         ]
                                 } 
@@ -23018,7 +23751,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Friday, Oct. 20",
+                                                "daypart": "lunchshift",
+                                                "status": "Active",
+                                                "daydate": "20"
                                             }
                                         ]
                                 } ,
@@ -23032,7 +23771,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Friday, Oct. 20",
+                                                "daypart": "lunchshift",
+                                                "status": "Active",
+                                                "daydate": "20"
                                             }
                                         ]
                                 } 
@@ -23050,7 +23795,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Friday, Oct. 20",
+                                                "daypart": "dinnershift",
+                                                "status": "Active",
+                                                "daydate": "20"
                                             }
                                         ]
                                         
@@ -23065,7 +23816,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Friday, Oct. 20",
+                                                "daypart": "dinnershift",
+                                                "status": "Active",
+                                                "daydate": "20"
                                             }
                                         ]
                                         
@@ -23084,7 +23841,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Friday, Oct. 20",
+                                                "daypart": "closeshift",
+                                                "status": "Active",
+                                                "daydate": "20"
                                             }
                                         ]
                                 }
@@ -23114,7 +23877,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Host",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Restaurant",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Friday, Oct. 20",
+                                                "daypart": "openingshift",
+                                                "status": "Active",
+                                                "daydate": "20"
                                             }
                                         ]
                                 } 
@@ -23134,7 +23903,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Host",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Restaurant",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Friday, Oct. 20",
+                                                "daypart": "breakfastshift",
+                                                "status": "Active",
+                                                "daydate": "20"
                                             }
                                         ]
                                 } 
@@ -23153,7 +23928,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Host",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Prep Host"
+                                                "workStation" : "Prep Host",
+                                            "revenuecenter": "In-Restaurant",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Friday, Oct. 20",
+                                                "daypart": "lunchshift",
+                                                "status": "Active",
+                                                "daydate": "20"
                                             }
                                         ]
                                 } 
@@ -23171,7 +23952,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Host",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Prep Host"
+                                                "workStation" : "Prep Host",
+                                            "revenuecenter": "In-Restaurant",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Friday, Oct. 20",
+                                                "daypart": "dinnershift",
+                                                "status": "Active",
+                                                "daydate": "20"
                                             }
                                         ]
                                         
@@ -23190,7 +23977,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Host",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Restaurant",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Friday, Oct. 20",
+                                                "daypart": "closeshift",
+                                                "status": "Active",
+                                                "daydate": "20"
                                             }
                                         ]
                                 }
@@ -23276,7 +24069,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Saturday, Oct. 21",
+                                                "daypart": "openingshift",
+                                                "status": "Active",
+                                                "daydate": "21"
                                             }
                                         ]
                                 }   
@@ -23295,7 +24094,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Saturday, Oct. 21",
+                                                "daypart": "breakfastshift",
+                                                "status": "Active",
+                                                "daydate": "21"
                                             }
                                         ]
                                 }   
@@ -23315,7 +24120,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Saturday, Oct. 21",
+                                                "daypart": "dinnershift",
+                                                "status": "Active",
+                                                "daydate": "21"
                                             }
                                         ]
                                         
@@ -23334,7 +24145,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Saturday, Oct. 21",
+                                                "daypart": "closeshift",
+                                                "status": "Active",
+                                                "daydate": "21"
                                             }
                                         ]
                                 }
@@ -23385,7 +24202,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "WASHINGTON D.C.",
+                                                "date": "Saturday, Oct. 21",
+                                                "daypart": "openingshift",
+                                                "status": "Active",
+                                                "daydate": "21"
                                             }
                                         ]
                                 } ,
@@ -23399,7 +24222,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Saturday, Oct. 21",
+                                                "daypart": "openingshift",
+                                                "status": "Active",
+                                                "daydate": "21"
                                             }
                                         ]
                                 } 
@@ -23419,7 +24248,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Saturday, Oct. 21",
+                                                "daypart": "breakfastshift",
+                                                "status": "Active",
+                                                "daydate": "21"
                                             }
                                         ]
                                     }   ,
@@ -23433,7 +24268,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Saturday, Oct. 21",
+                                                "daypart": "breakfastshift",
+                                                "status": "Active",
+                                                "daydate": "21"
                                             }
                                         ]
                                 }    
@@ -23453,7 +24294,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Saturday, Oct. 21",
+                                                "daypart": "lunchshift",
+                                                "status": "Active",
+                                                "daydate": "21"
                                             }
                                         ]
                                     }   ,
@@ -23467,7 +24314,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Saturday, Oct. 21",
+                                                "daypart": "lunchshift",
+                                                "status": "Active",
+                                                "daydate": "21"
                                             }
                                         ]
                                 }    
@@ -23487,7 +24340,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Saturday, Oct. 21",
+                                                "daypart": "dinnershift",
+                                                "status": "Active",
+                                                "daydate": "21"
                                             }
                                         ]
                                     }   ,
@@ -23501,7 +24360,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Saturday, Oct. 21",
+                                                "daypart": "dinnershift",
+                                                "status": "Active",
+                                                "daydate": "21"
                                             }
                                         ]
                                 }    
@@ -23519,7 +24384,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Bartender",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Bar",
+                                                "location": "BALTIMORE",
+                                                "date": "Saturday, Oct. 21",
+                                                "daypart": "closeshift",
+                                                "status": "Active",
+                                                "daydate": "21"
                                             }
                                         ]
                                 }
@@ -23547,7 +24418,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Host",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Restaurant",
+                                                "location": "BALTIMORE",
+                                                "date": "Saturday, Oct. 21",
+                                                "daypart": "openingshift",
+                                                "status": "Active",
+                                                "daydate": "21"
                                             }
                                         ]
                                 } 
@@ -23567,7 +24444,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Host",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Restaurant",
+                                                "location": "BALTIMORE",
+                                                "date": "Saturday, Oct. 21",
+                                                "daypart": "breakfastshift",
+                                                "status": "Active",
+                                                "daydate": "21"
                                             }
                                         ]
                                     }  
@@ -23587,7 +24470,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Host",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Prep Host"
+                                                "workStation" : "Prep Host",
+                                            "revenuecenter": "In-Restaurant",
+                                                "location": "BALTIMORE",
+                                                "date": "Saturday, Oct. 21",
+                                                "daypart": "lunchshift",
+                                                "status": "Active",
+                                                "daydate": "21"
                                             }
                                         ]
                                     }    
@@ -23607,7 +24496,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Host",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Prep Host"
+                                                "workStation" : "Prep Host",
+                                            "revenuecenter": "In-Restaurant",
+                                                "location": "BALTIMORE",
+                                                "date": "Saturday, Oct. 21",
+                                                "daypart": "dinnershift",
+                                                "status": "Active",
+                                                "daydate": "21"
                                             }
                                         ]
                                     }       
@@ -23625,7 +24520,13 @@
                                                 "hourlywage" : "7",
                                                 "jobtitle" : "Host",
                                                 "backgroundcolor" : "#f98b1e",
-                                                "workStation" : "Front Bar"
+                                                "workStation" : "Front Bar",
+                                            "revenuecenter": "In-Restaurant",
+                                                "location": "BALTIMORE",
+                                                "date": "Saturday, Oct. 21",
+                                                "daypart": "dinnershift",
+                                                "status": "Active",
+                                                "daydate": "21"
                                             }
                                         ]
                                 }
