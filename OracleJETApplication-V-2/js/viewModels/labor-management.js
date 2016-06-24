@@ -287,7 +287,7 @@ define([
                                     if(item.jobName !== 'Not Assigned') 
                                         return item.jobName;})).sort();
                             }));
-                            $("#empLaborBasicDialogWindow").ojDialog("open");
+                            $("#laborDialogWindow").ojDialog("open");
                             setTimeout(function(){$( "#filmStrip" ).ojFilmStrip( "option", "maxItemsPerPage", 4)}, 1000);
                             $("#filmStrip").ojFilmStrip("refresh");
                             resolve(true);
@@ -359,7 +359,7 @@ define([
         };
 
         self.empBasicViewClose =  function() {
-            $("#empLaborBasicDialogWindow").ojDialog("close");
+            $("#LaborDialogWindow").ojDialog("close");
         };
 
 
@@ -649,7 +649,94 @@ define([
                         });
             });
         };
-        
+        // Mobile Swipe functions 
+        self.handleReady = function()
+        {
+            // register swipe to reveal for all new list items
+            $("#listview").find(".item-marker").each(function(index)
+            {
+                var id = $(this).prop("id");
+                var startOffcanvas = $(this).find(".oj-offcanvas-start").first();
+                var endOffcanvas = $(this).find(".oj-offcanvas-end").first();     
+
+                // setup swipe actions               
+                oj.SwipeToRevealUtils.setupSwipeActions(startOffcanvas);
+                oj.SwipeToRevealUtils.setupSwipeActions(endOffcanvas);
+
+                // make sure listener only registered once
+                endOffcanvas.off("ojdefaultaction");
+                endOffcanvas.on("ojdefaultaction", function() 
+                {
+                    self.handleDefaultAction({"id": id});
+                });
+            });
+        };
+        self.handleDestroy = function()
+        {
+            // register swipe to reveal for all new list items
+            $("#listview").find(".item-marker").each(function(index)
+            {
+                var startOffcanvas = $(this).find(".oj-offcanvas-start").first();                    
+                var endOffcanvas = $(this).find(".oj-offcanvas-end").first();                    
+
+                oj.SwipeToRevealUtils.tearDownSwipeActions(startOffcanvas);
+                oj.SwipeToRevealUtils.tearDownSwipeActions(endOffcanvas);
+            });
+        };
+        self.handleMenuItemSelect = function(event, ui)
+        {
+            var id = ui.item.prop("id");
+            if (id == "read")
+                self.handleRead();
+            else if (id == "tag")
+                self.handleFlag();
+        };
+        self.closeToolbar = function(which, item)
+        {
+            var toolbarId = "#"+which+"_toolbar_"+item.prop("id");
+            var drawer = {"displayMode": "push", "selector": toolbarId};
+
+            oj.OffcanvasUtils.close(drawer);
+        }
+        self.handleAction = function(which, action, model)
+        {
+            var id;
+            if (model != null && model.id)
+            {
+                // offcanvas won't be open for default action case
+                if (action != "default")
+                    self.closeToolbar(which, $(model));
+                id = model.id;
+            }
+            else
+            {
+                id = $("#listview").ojListView("option", "currentItem");
+            }
+            
+            self.action("Handle "+action+" action on: "+id);
+        }
+        self.handleQuickView = function(model)
+        {
+            self.handleAction("second", "flag", model);
+        };
+        self.handleStatus = function(model)
+        {
+            self.handleAction("second", "flag", model);
+        };
+        self.handleDefaultAction = function(model)
+        {
+            self.handleAction("second", "default", model);
+            self.removeModel(model);
+        };
+        self.buttonClick = function (data, event) {
+            self.clickedButton(event.currentTarget.id);
+            return true;
+        };
+        self.handleFormatChange = function(event, ui) {
+            if (ui.option === "checked") {
+                // do stuff...
+            }
+        };
         
         
             

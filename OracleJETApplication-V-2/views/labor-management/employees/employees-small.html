@@ -1,15 +1,14 @@
 <!--Linked to people.js through modules and template bindings-->
-<div class="justifyCenter">
-    <div class="oj-flex">
-        <div class="oj-flex-item searchWindow">
-            <form data-bind="submit: $parent.filteredAllPeople">
-                
-                <div >
+
+<div class="searchWindow">
+    <form data-bind="submit: $parent.filteredAllPeople">
+
+            <div class="searchFieldWrap">
                   <div id="accordionPage" data-bind="ojComponent: {component: 'ojAccordion'}">
                                   <div id="c1">
                                       <label class="searchTitleBar">Search</label>
                                       <div>
-                <div id="simplesearch" class="simplesearchWrap" data-bind="visible: $parent.visibleAdvanceSearch()===false">
+                <div id="simplesearch" class="simplesearchWrap" data-bind="visible:$parent.visibleAdvanceSearch()===false">
                     <input class="inputField"
                            placeholder="search for active names, stores, jobs"
                            id="firstname" data-bind="value: $parent.firstNameSearch, ojComponent: {component: 'ojInputText', rootAttributes:{class:'inputFieldWrap'}}"/>
@@ -91,7 +90,7 @@
                                                               component: 'ojCheckboxset',
                                                               value: $parent.currentMoreOptions}">
                                             <span class="oj-choice-row">
-                                                <input id="minor" type="checkbox" value="Minor" checked data-bin="help: {definition: helpDef()}">
+                                                <input id="minor" type="checkbox" value="Minor" checked data-bind="help: {definition: $parent.helpDef()}">
                                                 <label for="minor">Minor</label>
                                             </span>
 
@@ -125,56 +124,101 @@
                       </div>
                 </div>
             </div>
-            </form>
-        </div>
-        <div class="oj-flex searchWindow">
-            
-                <div class="oj-flex-items-pad">
-                    <div class="oj-flex-item"><h2>Search Results</h2></div>
+    </form>
+</div>
 
-                        <div style="margin-top:0px; position: relative; width: 310px;" 
-                             data-bind="ojComponent: {component: 'ojPagingControl', 
+<div class="searchWindow">
+
+    <div class="oj-flex">
+        <h3>Search Results</h3>
+    </div>
+    <div class="oj-flex">
+        <div class="oj-flex-item">
+              <ul id="listview" data-bind="ojComponent: {component: 'ojListView',
+                data: $parent.listViewDataSource,
+                item: {template: 'peoplelist_template'},
+                selectionMode: 'single',
+                currentItem: '100',
+                selection: ['100'],
+                ready: $parent.handleReady, 
+                destroy: $parent.handleDestroy,
+                scrollPolicyOptions: {fetchSize: 10}}">
+                </ul>
+                <!-- Hidden Links for swipe -->
+                <ui id="itemMenu" style="display:none" aria-label="Swipe Actions" data-bind="ojComponent: {component: 'ojMenu', 
+                select: $parent.handleMenuItemSelect}">
+                    <li id="tag"><a href="#">Tag</a></li>
+                    <li id="delete"><a href="#">Delete</a></li>
+                </ul>
+         </div>
+    </div>
+
+    <div class="oj-flex">
+         <div data-bind="ojComponent: {component: 'ojPagingControl',
                                 data: $parent.listViewDataSource, pageSize:10}"></div>
-                        <ul id="listview" data-bind="ojComponent: {component: 'ojListView',
-                            data: $parent.listViewDataSource,
-                            item: {template: 'peoplelist_template'},
-                            selectionMode: 'single',
-                            currentItem: '100',
-                            selection: ['100'],
-                            rootAttributes: {style: 'overflow:auto; margin-top: 5px'},
-                            scrollPolicyOptions: {fetchSize: 10}}">
-                        </ul>
-                         <script type="text/html" id="peoplelist_template">
-                             <li data-bind="attr: {id: $data['name']}" class="item-marker">
-                                        <div class="oj-flex">
-                                            <div class="oj-sm-3 oj-flex-item">
-                                                <span class="inActiveStatusCheck" data-bind="visible: status == 'Inactive-Terminated'"></span>
-                                                <span class="activeStatusCheck" data-bind="visible: status == 'Active'"></span>
-                                                <span class="imageOverlay"></span>
-                                                <img style="width:75px; height:75px;" data-bind="attr: {src: $parents[1].getPhoto($data['empId'])}"/>
-                                            </div>
-                                            <div class="oj-sm-8 oj-col">
-                                                <div class="oj-sm-12 oj-flex-item">
-                                                    <strong><span class="header" data-bind="click: $parents[1].empBasicViewOpen, text: firstName + ' ' + lastName"></span></strong>
-                                                </div>
-                                                <div class="oj-sm-12 oj-flex-item">
-                                                    <span data-bind="text: homeStore"></span>
+    </div>
+    <script type="text/html" id="peoplelist_template">
+                 <li data-bind="attr: {id: $data['name']}", class="item-marker">
+                    <!-- Offcanvas swipe menu -->
+                        <div class="oj-offcanvas-outer-wrapper">
+                          <div class="oj-offcanvas-inner-wrapper">
 
-                                                </div>
-                                                <div class="oj-sm-12 oj-flex-item">
-                                                    <span data-bind="text: $parents[1].getBasicFormattedDate(hireDate)"></span>
-                                                </div>
-                                                <div class="oj-sm-12 oj-flex-item">
-                                                    <div class="employeeStatusListView" data-bind="style:{color: status == 'Inactive-Terminated' ? '#e80023' : '#81bb5f'}"><strong>Hire Status</strong> <span data-bind="text: status"></span></div>
+                                <div class="oj-flex">
+                                     <div class="oj-flex-item empImgCol">
+                                         <span class="inActiveStatusCheck" data-bind="visible: status == 'Inactive-Terminated'"></span>
+                                         <span class="activeStatusCheck" data-bind="visible: status == 'Active'"></span>
+                                         <img class="empImg" data-bind="attr: {src: $parents[1].getPhoto($data['empId'])}"/>
+                                     </div>
+                                     <div class="oj-flex-item">
+                                         <div>
+                                             <strong><span class="header" data-bind="text: firstName + ' ' + lastName"></span></strong>
+                                         </div>
+                                         <div>
+                                             <span data-bind="text: homeStore"></span>
+
+                                         </div>
+                                         <div>
+                                             <span data-bind="text: $parents[1].getBasicFormattedDate(hireDate)"></span>
+                                         </div>
+                                         <div>
+                                             <div class="employeeStatusListView"
+                                                  data-bind="css:{empStatusInactive: status == 'Inactive-Terminated', empStatusActive: status == 'Active'}">
+                                                 <span data-bind="css:{'fa-times-circle': status == 'Inactive-Terminated', 'fa-check-circle': status == 'Active'}"></span> <span data-bind="text: status"></span></div>
+                                         </div>
+                                     </div>
+                               
+                                 
+                                    <div tabIndex="-1" data-bind="attr: {id: 'second_toolbar_'+$data['name']}" class="oj-offcanvas-end" style="width:150px">
+                                        <div data-bind="click: $parents[1].empBasicViewOpen" class="oj-swipetoreveal-more">
+                                            <div class="oj-flex-bar" style="height:100%">
+                                                <div class="oj-flex-bar-center-absolute">
+                                                    <div class="oj-flex oj-sm-flex-direction-column">
+                                                        <div title=".demo-library-icon-24" role="img" class="oj-flex-item demo-library-icon-24 demo-icon-font-24"></div>
+                                                        <div style="padding-top: 10px" class="oj-flex-item" >
+                                                            <span >quick view</span></div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
+                                        <div data-bind="click: $parent.empHireStatusOpen" class="oj-swipetoreveal-flag">
+                                            <div class="oj-flex-bar" style="height:100%">
+                                                <div class="oj-flex-bar-center-absolute">
+                                                    <div class="oj-flex oj-sm-flex-direction-column">
+                                                        <div title=".demo-library-icon-24" role="img" class="oj-flex-item demo-library-icon-24 demo-icon-font-24"></div>
+                                                        <div style="padding-top: 10px" class="oj-flex-item">status</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                          </div>
+                        </div>
+                    <!-- end of offcanvas swipe -->
 
-                                 
-                             </li>
-                         </script>
-                </div>
-        </div>
-    </div>
-</div>
+                 </li>
+             </script>
+
+
+<!-- <div data-bind="template: {name: 'partials/employee-hire-status-modal/employee-hire-status-modal-small'}"></div>-->
  <div data-bind="template: {name: 'labor-management/dialogwindow/employee-basicinfo-modal-small'}"></div>
