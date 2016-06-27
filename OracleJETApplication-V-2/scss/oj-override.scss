@@ -22,57 +22,71 @@
 $white: #fff;
 $offWhite: #f7f8f9;
 $black: #000;
-$brightBlue: #00a8ff;
-$brightGreen: #22a451;
-$brightRed: #ff0000;
 
+$brightRed: #E40004;
+$medRed: #BB0003;
+
+$brightGreen: #00A02D;
+$medGreen: #008325;
+
+$brightOrange: #DF6D00;
+$medOrange: #B35800;
+
+$brightBlue: #0572CE;
+$medBlue: #0056A4;
+
+$brightBlue2: #00a8ff;
+
+$brightGreen2: #22a451;
 $medGreen3: #04b404;
 $medOrange3: #fe9a2e;
 $medBlue3: #2e2efe;
 
 //New Colors
 $darkGray: #37424C;
-$darkGray2: #4C759B;
 $medGray1: #6E8598;
 $medGray2: #919fAB;
 $gray: #AFBAC5;
 $lightGray1: #CFDCE8;
 $lightGray2: #F5F5F5;
 
-$darkBlue: #002d66;
-$medBlue1: #004587;
-$medBlue2: #015FAB;
-$lightBlue: #0572CE;
+$darkBlueGray: #4C759B;
+$lightBlueGray: #C5DEF4;
 
-$darkBrown: #6F2900;
-$medBrown1: #8b3300;
-$medBrown2: #AB4100;
-$lightBrown: #be4800;
+$darkRoyalBlue: #002d66;
+$medRoyalBlue1: #004587;
+$medRoyalBlue2: #015FAB;
+$lightRoyalBlue: #0572CE;
 
-$darkGreen: #004A2E;
-$medGreen1: #005C3A;
-$medGreen2: #007B2B;
-$lightGreen: #1A8841;
+$darkEmeraldGreen: #004A2E;
+$medEmeraldGreen1: #005C3A;
+$medEmeraldGreen2: #007B2B;
+$lightEmeraldGreen: #1A8841;
 
-$darkRed: #6D000A;
-$medRed1: #88000d;
-$medRed2: #ba0006;
-$lightRed: #e4001e;
+$darkNavyBlue: #101356;
+$medNavyBlue1: #172777;
+$medNavyBlue2: #1F348F;
+$lightNavyBlue: #5a68ad;
 
-$darkViolet: #5B004F;
-$medViolet1: #79006C;
-$medViolet2: #920083;
-$lightViolet: #A90083;
+$darkBurntOrange: #6F2900;
+$medBurntOrange1: #8b3300;
+$medBurntOrange2: #AB4100;
+$lightBurntOrange: #be4800;
 
-$darkPurple: #300050;
-$medPurple1: #410b6e;
-$medPurple2: #501884;
-$lightPurple: #754b9a;
+$darkDeepLavander: #300050;
+$medDeepLavander1: #410b6e;
+$medDeepLavander2: #501884;
+$lightDeepLavander: #754b9a;
 
-$darkGrayBlue: #101356;
-$medGrayBlue1: #172777;
-$medGrayBlue2: #1F348F;
-$lightGrayBlue: #5a68ad;
+$darkCrimson: #6D000A;
+$medCrimson1: #88000d;
+$medCrimson2: #ba0006;
+$lightCrimson: #e4001e;
+
+$darkFuchsia: #5B004F;
+$medFuchsia1: #79006C;
+$medFuchsia2: #920083;
+$lightFuchsia: #A90083;
 
 $darkMustard: #8D4300;
 $medMustard1: #905200;
@@ -96,24 +110,37 @@ $sideNavLinkHover: #454545;
 $sideNavLinksBlue: #045fab;
 /*****Ramu Section**********/
 .redText{
-    color: $lightRed;
+    color: $lightCrimson;
 }
 
-
-
 /*****Section Variables*****/
-// font family 
-
+// font family
 $fontFamily: 'Helvetica Neue Light', Arial, sans-serif;
 $fontFamily2: 'Helvetica Neue Medium', Arial, sans-serif;
+
+//Success Colors
+$successColor: $brightGreen;
+$successColor2: $medGreen;
+
+//Warning Colors
+$warningColor: $brightOrange;
+$warningColor2: $medOrange;
+
+//Error Colors
+$errorColor: $brightRed;
+$errorColor2: $medRed;
+
+//Information Colors
+$informationColor: $brightBlue;
+$informationColor2: $medBlue;
 
 //Text
 $BodyTextColor:       $black; 
 $headerTextColor:     $white;
 
-$highlightTxtColor: $brightBlue;
+$highlightTxtColor: $brightBlue2;
 
-$clockedInStatus: $brightGreen;
+$clockedInStatus: $brightGreen2;
 $clockedOutStatus: $brightRed;
 
 //Image Variables
@@ -170,9 +197,9 @@ $topOffCanvasTabSelected: $darkGrayOld;
 $topOffCanvasTabTextColor: $white;
 $topOffCanvasAnalyticsBckgColor: $white;
 $topOffCanvasAnalyticsText: $black;
-$topOffCanvasRevText: $brightGreen;
+$topOffCanvasRevText: $brightGreen2;
 $topOffCanvasCostText: $brightRed;
-$offCanvasAnalyticsActiveLocColor: $lightBlue; //Notes to Dev: need color here
+$offCanvasAnalyticsActiveLocColor: $lightRoyalBlue; //Notes to Dev: need color here
 
 //Off Canvas Left
 $leftOffCanvasDesktopBckg: $sideNavBckColor;
@@ -205,75 +232,74 @@ $sideNavLinkBckColor:$sideNavBckColor;
 //Accordion Variables
 $accordionBckgColor: $lightGray2;
 $accordionBorderColor: $gray;
-$accordionLinkColor: $darkGray2;
+$accordionLinkColor: $darkBlueGray;
 
 //Page Variables
 $mainAreaBckgColor: $white;
 $mainAreaBorderColor: $lightGrayOld2;
 
-$homeBckColor: $medBlue2;
-$homeMobileTabBckColor: $medBlue2;
-$homeMobileTabAccentColor: $medBlue1;
-$homeMainTabBckColor: $medBlue2;
-$homeSubTabBckColor: $medBlue1;
-$homeTabHoverText: $medBlue2;
-$homeDialogHeaderColor: $medBlue2;
-$homeDialogAccentColor: $lightBlue;
+$homeBckColor: $medRoyalBlue2;
+$homeMobileTabBckColor: $medRoyalBlue2;
+$homeMobileTabAccentColor: $medRoyalBlue1;
+$homeMainTabBckColor: $medRoyalBlue2;
+$homeSubTabBckColor: $medRoyalBlue1;
+$homeTabHoverText: $medRoyalBlue2;
+$homeDialogHeaderColor: $medRoyalBlue2;
+$homeDialogAccentColor: $lightRoyalBlue;
 
+$laborBckColor: $medBurntOrange2;
+$laborMobileTabBckColor: $medBurntOrange2;
+$laborMobileTabAccentColor: $medBurntOrange1;
+$laborMainTabBckColor: $medBurntOrange2;
+$laborSubTabBckColor: $medBurntOrange1;
+$laborTabHoverText: $medBurntOrange2;
+$laborDialogHeaderColor: $medBurntOrange2;
+$laborDialogAccentColor: $lightBurntOrange;
 
-$laborBckColor: $medBrown2;
-$laborMobileTabBckColor: $medBrown2;
-$laborMobileTabAccentColor: $medBrown1;
-$laborMainTabBckColor: $medBrown2;
-$laborSubTabBckColor: $medBrown1;
-$laborTabHoverText: $medBrown2;
-$laborDialogHeaderColor: $medBrown2;
-$laborDialogAccentColor: $lightBrown;
+$inventoryBckColor: $medNavyBlue1;
+$inventoryMobileTabBckColor: $medNavyBlue1;
+$inventoryMobileTabAccentColor: $medNavyBlue2;
+$inventoryMainTabBckColor: $medNavyBlue1;
+$inventorySubTabBckColor: $medNavyBlue2;
+$inventoryTabHoverText: $medNavyBlue1;
+$inventoryDialogHeaderColor: $medNavyBlue1;
+$inventoryDialogAccentColor: $lightNavyBlue;
 
-$inventoryBckColor: $medViolet1;
-$inventoryMobileTabBckColor: $medViolet1;
-$inventoryMobileTabAccentColor: $medViolet2;
-$inventoryMainTabBckColor: $medViolet1;
-$inventorySubTabBckColor: $medViolet2;
-$inventoryTabHoverText: $medViolet1;
-$inventoryDialogHeaderColor: $medViolet1;
-$inventoryDialogAccentColor: $lightViolet;
+$giftLoyaltyBckColor: $medDeepLavander1;
+$giftLoyaltyMobileTabBckColor: $medDeepLavander1;
+$giftLoyaltyMobileTabAccentColor: $medDeepLavander2;
+$giftLoyaltyMainTabBckColor: $medDeepLavander1;
+$giftLoyaltySubTabBckColor: $medDeepLavander2;
+$giftLoyaltyTabHoverText: $medDeepLavander1;
+$giftLoyaltyDialogHeaderColor: $medDeepLavander1;
+$giftLoyaltyDialogAccentColor: $lightDeepLavander;
 
-$giftLoyaltyBckColor: $medPurple1;
-$giftLoyaltyMobileTabBckColor: $medPurple1;
-$giftLoyaltyMobileTabAccentColor: $medPurple2;
-$giftLoyaltyMainTabBckColor: $medPurple1;
-$giftLoyaltySubTabBckColor: $medPurple2;
-$giftLoyaltyTabHoverText: $medPurple1;
-$giftLoyaltyDialogHeaderColor: $medPurple1;
-$giftLoyaltyDialogAccentColor: $lightPurple;
+$reportsAnalyticsBckColor: $medEmeraldGreen2;
+$reportsAnalyticsMobileTabBckColor: $medEmeraldGreen2;
+$reportsAnalyticsMobileTabAccentColor: $medEmeraldGreen1;
+$reportsAnalyticsMainTabBckColor: $medEmeraldGreen2;
+$reportsAnalyticsSubTabBckColor: $medEmeraldGreen1;
+$reportsAnalyticsTabHoverText: $medEmeraldGreen2;
+$reportsAnalyticsDialogHeaderColor: $medEmeraldGreen2;
+$reportsAnalyticsDialogAccentColor: $lightEmeraldGreen;
 
-$reportsAnalyticsBckColor: $medGreen2;
-$reportsAnalyticsMobileTabBckColor: $medGreen2;
-$reportsAnalyticsMobileTabAccentColor: $medGreen1;
-$reportsAnalyticsMainTabBckColor: $medGreen2;
-$reportsAnalyticsSubTabBckColor: $medGreen1;
-$reportsAnalyticsTabHoverText: $medGreen2;
-$reportsAnalyticsDialogHeaderColor: $medGreen2;
-$reportsAnalyticsDialogAccentColor: $lightGreen;
+$enterpriseBckColor: $medCrimson2;
+$enterpriseMobileTabBckColor: $medCrimson2;
+$enterpriseMobileTabAccentColor: $medCrimson1;
+$enterpriseMainTabBckColor: $medCrimson2;
+$enterpriseSubTabBckColor: $medCrimson1;
+$enterpriseTabHoverText: $medCrimson2;
+$enterpriseDialogHeaderColor: $medCrimson2;
+$enterpriseDialogAccentColor: $lightCrimson;
 
-$enterpriseBckColor: $medRed2;
-$enterpriseMobileTabBckColor: $medRed2;
-$enterpriseMobileTabAccentColor: $medRed1;
-$enterpriseMainTabBckColor: $medRed2;
-$enterpriseSubTabBckColor: $medRed1;
-$enterpriseTabHoverText: $medRed2;
-$enterpriseDialogHeaderColor: $medRed2;
-$enterpriseDialogAccentColor: $lightRed;
-
-$peopleBckColor: $medGrayBlue1;
-$peopleMobileTabBckColor: $medGrayBlue1;
-$peopleMobileTabAccentColor: $medGrayBlue2;
-$peopleMainTabBckColor: $medGrayBlue1;
-$peopleSubTabBckColor: $lightGrayBlue;
-$peopleTabHoverText: $medGrayBlue1;
-$peopleDialogHeaderColor: $medGrayBlue1;
-$peopleDialogAccentColor: $lightGrayBlue;
+$peopleBckColor: $medFuchsia1;
+$peopleMobileTabBckColor: $medFuchsia1;
+$peopleMobileTabAccentColor: $medFuchsia2;
+$peopleMainTabBckColor: $medFuchsia1;
+$peopleSubTabBckColor: $lightFuchsia;
+$peopleTabHoverText: $medFuchsia1;
+$peopleDialogHeaderColor: $medFuchsia1;
+$peopleDialogAccentColor: $lightFuchsia;
 
 //Employee Search
 $searchTitleBarBckg: $lightGray2;
@@ -284,7 +310,7 @@ $formBorders: $gray;
 $oddEmpTableBckg: $lightGray2;
 
 //Labor Variables
-$scheduleDayHeaderBckgColor: $medGray2;
+$scheduleDayHeaderBckgColor: $lightGray1;
 $scheduleContentBckgColor: $lightGray2;
 
 //Footer Variables
@@ -752,7 +778,7 @@ a.addEmp{
     }
 }
 .empStatusActive{
-    color: $brightGreen;
+    color: $brightGreen2;
     .fa-check-circle{
         display: inline-block;
         font: normal normal normal 14px/1 FontAwesome;
@@ -767,14 +793,14 @@ a.addEmp{
     background-image: none;
     border: 0;
     border-color:transparent;
-    color: $lightBlue;
+    color: $lightRoyalBlue;
     outline: 0 !important;
     &.oj-active, &.oj-focus{
-        color: $brightBlue;
+        color: $brightBlue2;
     }
     .fa{
         font-size:16px;
-        color: $lightBlue;
+        color: $lightRoyalBlue;
     }
 }
 .inputFieldWrap{
@@ -912,156 +938,155 @@ a.addEmp{
         }
     }
 }
-#empBasicDialogWindow, #laborDialogWindow {
-    #status{
-        text-align: center;
+
+#status{
+    text-align: center;
+}
+.scheduleLayout{
+    align-self: flex-start;
+    margin:0 5px;
+}
+.empInfo, .empContactInfo{
+    .oj-flex-item{
+        margin:0 20px 10px 0;
     }
-    .scheduleLayout{
-        align-self: flex-start;
-        margin:0 5px;
+}
+.empInfo{
+    margin-left:10px;
+}
+.weekSummary{
+    font-weight:bold;
+    .weekTotals{
+        font-size: 30px;
+        margin-top: 15px;
     }
-    .empInfo, .empContactInfo{
-        .oj-flex-item{
-            margin:0 20px 10px 0;
+}
+label{
+    font-weight:bold;
+    text-transform: uppercase;
+    &.subLabel{
+        text-transform: capitalize;
+    }
+    &.empStatus{
+        text-transform: capitalize;
+        margin-bottom: 10px;
+        display: inline-block;
+        &.clockedIn{
+            color: $clockedInStatus;
+        }
+        &.clockedOut{
+            color: $clockedOutStatus;
         }
     }
-    .empInfo{
-        margin-left:10px;
-    }
-    .weekSummary{
+}
+#filmStripDiv, .filmStripDiv{
+    background-color: $mobileScheduleBckgColor;
+    .dayTotals{
         font-weight:bold;
-        .weekTotals{
-            font-size: 30px;
-            margin-top: 15px;
-        }
     }
-    label{
-        font-weight:bold;
-        text-transform: uppercase;
-        &.subLabel{
-            text-transform: capitalize;
-        }
-        &.empStatus{
-            text-transform: capitalize;
-            margin-bottom: 10px;
-            display: inline-block;
-            &.clockedIn{
-                color: $clockedInStatus;
-            }
-            &.clockedOut{
-                color: $clockedOutStatus;
-            }
-        }
-    }
-    #filmStripDiv{
-        background-color: $mobileScheduleBckgColor;
-        .dayTotals{
-            font-weight:bold;
-        }
-        .dayHeader{
-            background-color: $dayHeaderBckgColor;
-            text-align:center;
-            margin-top:10px;
-        }
-        .daySections{
-            //border:1px solid $daySectionsBorderColor;
-            padding:10px;
-            margin:10px 0;
-            background-color: $daySectionsBckgColor;
-            min-height:150px;
-            -webkit-box-shadow: 0 5px 5px 0px $daySectionsBorderColor;
-            box-shadow: 0 5px 5px 0px $daySectionsBorderColor;
-        }
-        .locSections{
-            text-align: center;
-            .locLabel{
-                font-weight: bold;
-            }
-            .jobSection{
-                border-top:10px solid;
-                margin: 10px 0 0 0;
-                padding: 5px 0;
-                text-align: left;
-                .Bartender, .Server{
-                    margin-top: 3px;
-                    margin-right:3px;
-                    display: inline-block;
-                    font: normal normal normal 14px/1 FontAwesome;
-                    text-rendering: auto;
-                    -webkit-font-smoothing: antialiased;
-                    -moz-osx-font-smoothing: grayscale;
-                }
-                .Bartender{
-                     &:before{
-                        content: "\f000";
-                        font-size: 30px;
-                    }
-                }
-                .Server{
-                     &:before{
-                        content: "\f0f5";
-                        font-size: 30px;
-                    }
-                }
-                .fa{
-                    font-size: 30px;
-                    margin-top: 3px;
-                }
-            }
-        }
-        .dollarAmts{
-            text-align:right;
-        }
-        .empAvailability{
-            .prefLabel, .notAvailLabel{
-                text-transform: uppercase;
-                font-weight:bold;
-                font-family: $fontFamily;
-                font-size:14px;
-                .fa{
-                    vertical-align: middle;
-                }
-            }
-            .notAvailLabel{
-                color: $brightRed;
-            }
-            .prefLabel{
-                color: $medGray1;
-            }
-        }
-    }
-   .currentWeekHeaderArea{
-        background-color: $currentWeekHeaderArea;
+    .dayHeader{
+        background-color: $dayHeaderBckgColor;
+        text-align:center;
         margin-top:10px;
-        .currentWeekHeader{
-            color: $BodyTextColor;
-            padding:10px;
+    }
+    .daySections{
+        //border:1px solid $daySectionsBorderColor;
+        padding:10px;
+        margin:10px 0;
+        background-color: $daySectionsBckgColor;
+        min-height:150px;
+        -webkit-box-shadow: 0 5px 5px 0px $daySectionsBorderColor;
+        box-shadow: 0 5px 5px 0px $daySectionsBorderColor;
+    }
+    .locSections{
+        text-align: center;
+        .locLabel{
+            font-weight: bold;
+        }
+        .jobSection{
+            border-top:10px solid;
+            margin: 10px 0 0 0;
+            padding: 5px 0;
+            text-align: left;
+            .Bartender, .Server{
+                margin-top: 3px;
+                margin-right:3px;
+                display: inline-block;
+                font: normal normal normal 14px/1 FontAwesome;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+            .Bartender{
+                 &:before{
+                    content: "\f000";
+                    font-size: 30px;
+                }
+            }
+            .Server{
+                 &:before{
+                    content: "\f0f5";
+                    font-size: 30px;
+                }
+            }
+            .fa{
+                font-size: 30px;
+                margin-top: 3px;
+            }
         }
     }
-    .currentWeekSummary{
+    .dollarAmts{
+        text-align:right;
+    }
+    .empAvailability{
+        .prefLabel, .notAvailLabel{
+            text-transform: uppercase;
+            font-weight:bold;
+            font-family: $fontFamily;
+            font-size:14px;
+            .fa{
+                vertical-align: middle;
+            }
+        }
+        .notAvailLabel{
+            color: $brightRed;
+        }
+        .prefLabel{
+            color: $medGray1;
+        }
+    }
+}
+.currentWeekHeaderArea{
+    background-color: $currentWeekHeaderArea;
+    margin-top:10px;
+    .currentWeekHeader{
+        color: $BodyTextColor;
         padding:10px;
     }
-    .emailAndPringDiv{
-        float:right;
-        ul{
-            margin:0;
-            list-style-type:none;
-            padding:0;
-            li{
-                display:inline-block;
-            }
+}
+.currentWeekSummary{
+    padding:10px;
+}
+.emailAndPringDiv{
+    float:right;
+    ul{
+        margin:0;
+        list-style-type:none;
+        padding:0;
+        li{
+            display:inline-block;
         }
     }
+}
 
-    .weeklyTotalHeader{
-        border-top:10px solid $weeklyTotalHeader;
-    }
-    .job1TotalHeader{
-        border-top:10px solid $job1TotalHeader;
-    }
-    .job2TotalHeader{
-        border-top:10px solid $job2TotalHeader;
-    }
+.weeklyTotalHeader{
+    border-top:10px solid $weeklyTotalHeader;
+}
+.job1TotalHeader{
+    border-top:10px solid $job1TotalHeader;
+}
+.job2TotalHeader{
+    border-top:10px solid $job2TotalHeader;
 }
 
 .searchWindow{
@@ -1076,14 +1101,14 @@ a.addEmp{
     .dayTotalsLabel{
         text-transform: uppercase;
     }
-    .dayTotals{
+    .dayTotalsPrice{
         font-weight:bold;
         font-size: 30px;
     }
 }
 .scheduleContent{
-    height: 250px;
-    overflow-y: scroll;
+    //height: 250px;
+    //overflow-y: scroll;
     background-color: $scheduleContentBckgColor;
 }
 #laborTabSection {
@@ -1107,7 +1132,7 @@ a.addEmp{
 
 .scheduleDayHeader{
     background-color: $scheduleDayHeaderBckgColor;
-    color: $white;
+    color: $black;
     padding:$basicPadding;
     font-size:20px;
     font-family: $fontFamily;

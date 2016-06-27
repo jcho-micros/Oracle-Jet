@@ -84,6 +84,10 @@ define([
         self.rehireEligibility = ko.observable();
         self.visibleEmployeeDetailFilmStrip = ko.observable(false);
         
+        //filmStrip observables
+        self.currentNavArrowPlacement = ko.observable("adjacent");
+        self.currentNavArrowVisibility = ko.observable("auto");
+
         self.hireStatustabsChangeHandler = function(event, data) {
             self.hireStatusSelectedTab(data.value);
          };

@@ -109,7 +109,7 @@ a.oj-navigationlist-item-content.oj-navigationlist-item-no-icon {
       #topDrawer #offCanvasScope .analyticsWrapper .analyticsTotalgreen {
         color: #22a451; }
       #topDrawer #offCanvasScope .analyticsWrapper .analyticsTotalred {
-        color: #ff0000; }
+        color: #E40004; }
     #topDrawer #offCanvasScope .oj-tabs-tab.oj-selected, #topDrawer #offCanvasScope .oj-tabs-tab.oj-active .oj-tabs-close-icon, #topDrawer #offCanvasScope .oj-tabs-tab.oj-active .oj-tabs-anchor {
       border: 0;
       background-color: #454545; }
@@ -213,13 +213,13 @@ html:not([dir="rtl"]) .oj-dialog-title {
   background-color: #AB4100; }
 
 #ojDialogWrapper-inventoryDialogWindow .oj-dialog-header {
-  background-color: #79006C; }
+  background-color: #172777; }
   #ojDialogWrapper-inventoryDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper {
-    background-color: #A90083; }
+    background-color: #5a68ad; }
     #ojDialogWrapper-inventoryDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper.oj-hover .oj-dialog-close-icon {
-      color: #A90083; }
+      color: #5a68ad; }
 #ojDialogWrapper-inventoryDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-default, #ojDialogWrapper-inventoryDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-hover, #ojDialogWrapper-inventoryDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-focus-only {
-  background-color: #79006C; }
+  background-color: #172777; }
 
 #ojDialogWrapper-gift-loyaltyDialogWindow .oj-dialog-header {
   background-color: #410b6e; }
@@ -249,31 +249,31 @@ html:not([dir="rtl"]) .oj-dialog-title {
   background-color: #ba0006; }
 
 #ojDialogWrapper-peopleDialogWindow .oj-dialog-header {
-  background-color: #172777; }
+  background-color: #79006C; }
   #ojDialogWrapper-peopleDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper {
-    background-color: #5a68ad; }
+    background-color: #A90083; }
     #ojDialogWrapper-peopleDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper.oj-hover .oj-dialog-close-icon {
-      color: #5a68ad; }
+      color: #A90083; }
 #ojDialogWrapper-peopleDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-default, #ojDialogWrapper-peopleDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-hover, #ojDialogWrapper-peopleDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-focus-only {
-  background-color: #172777; }
+  background-color: #79006C; }
 
 #ojDialogWrapper-empBasicDialogWindow .oj-dialog-header {
-  background-color: #172777; }
+  background-color: #79006C; }
   #ojDialogWrapper-empBasicDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper {
-    background-color: #5a68ad; }
+    background-color: #A90083; }
     #ojDialogWrapper-empBasicDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper.oj-hover .oj-dialog-close-icon {
-      color: #5a68ad; }
+      color: #A90083; }
 #ojDialogWrapper-empBasicDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-default, #ojDialogWrapper-empBasicDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-hover, #ojDialogWrapper-empBasicDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-focus-only {
-  background-color: #172777; }
+  background-color: #79006C; }
 
 #ojDialogWrapper-profileDialogWindow .oj-dialog-header {
-  background-color: #172777; }
+  background-color: #79006C; }
   #ojDialogWrapper-profileDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper {
-    background-color: #5a68ad; }
+    background-color: #A90083; }
     #ojDialogWrapper-profileDialogWindow .oj-dialog-header .oj-dialog-header-close-wrapper.oj-hover .oj-dialog-close-icon {
-      color: #5a68ad; }
+      color: #A90083; }
 #ojDialogWrapper-profileDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-default, #ojDialogWrapper-profileDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-hover, #ojDialogWrapper-profileDialogWindow .dialogSendBtn.oj-button.oj-button-full-chrome.oj-focus-only {
-  background-color: #172777; }
+  background-color: #79006C; }
 
 /*Header*/
 .appHeader {
@@ -353,7 +353,7 @@ html:not([dir="rtl"]) .oj-dialog-title {
   background-color: #AB4100; }
 
 .inventory-managementTitleWrap {
-  background-color: #79006C; }
+  background-color: #172777; }
 
 .gift-loyaltyTitleWrap {
   background-color: #410b6e; }
@@ -365,10 +365,10 @@ html:not([dir="rtl"]) .oj-dialog-title {
   background-color: #ba0006; }
 
 .peopleTitleWrap {
-  background-color: #172777; }
+  background-color: #79006C; }
 
 .profileTitleWrap {
-  background-color: #172777; }
+  background-color: #79006C; }
 
 #appHeaderDesktopNav .topNavImgIcon, #appHeaderMobileNav .topNavImgIcon {
   margin-top: 3px;
@@ -394,7 +394,7 @@ html:not([dir="rtl"]) .oj-dialog-title {
   #appHeaderDesktopNav .oj-navigationlist-item.oj-focus#inventory-management a .topNavImgIcon, #appHeaderDesktopNav .oj-navigationlist-item.oj-default#inventory-management a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-focus#inventory-management a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-default#inventory-management a .topNavImgIcon {
     background-image: url("images/icon/inventory-default.png"); }
   #appHeaderDesktopNav .oj-navigationlist-item.oj-selected#inventory-management, #appHeaderDesktopNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#inventory-management, #appHeaderMobileNav .oj-navigationlist-item.oj-selected#inventory-management, #appHeaderMobileNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#inventory-management {
-    background-color: #79006C; }
+    background-color: #172777; }
     #appHeaderDesktopNav .oj-navigationlist-item.oj-selected#inventory-management a .topNavImgIcon, #appHeaderDesktopNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#inventory-management a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-selected#inventory-management a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#inventory-management a .topNavImgIcon {
       background-image: url("images/icon/inventory-hover.png"); }
   #appHeaderDesktopNav .oj-navigationlist-item.oj-focus#gift-loyalty a .topNavImgIcon, #appHeaderDesktopNav .oj-navigationlist-item.oj-default#gift-loyalty a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-focus#gift-loyalty a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-default#gift-loyalty a .topNavImgIcon {
@@ -418,13 +418,13 @@ html:not([dir="rtl"]) .oj-dialog-title {
   #appHeaderDesktopNav .oj-navigationlist-item.oj-focus#people a .topNavImgIcon, #appHeaderDesktopNav .oj-navigationlist-item.oj-default#people a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-focus#people a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-default#people a .topNavImgIcon {
     background-image: url("images/icon/people-default.png"); }
   #appHeaderDesktopNav .oj-navigationlist-item.oj-selected#people, #appHeaderDesktopNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#people, #appHeaderMobileNav .oj-navigationlist-item.oj-selected#people, #appHeaderMobileNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#people {
-    background-color: #172777; }
+    background-color: #79006C; }
     #appHeaderDesktopNav .oj-navigationlist-item.oj-selected#people a .topNavImgIcon, #appHeaderDesktopNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#people a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-selected#people a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#people a .topNavImgIcon {
       background-image: url("images/icon/people-hover.png"); }
   #appHeaderDesktopNav .oj-navigationlist-item.oj-focus#profile a .topNavImgIcon, #appHeaderDesktopNav .oj-navigationlist-item.oj-default#profile a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-focus#profile a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-default#profile a .topNavImgIcon {
     background-image: url("images/icon/people-default.png"); }
   #appHeaderDesktopNav .oj-navigationlist-item.oj-selected#profile, #appHeaderDesktopNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#profile, #appHeaderMobileNav .oj-navigationlist-item.oj-selected#profile, #appHeaderMobileNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#profile {
-    background-color: #172777; }
+    background-color: #79006C; }
     #appHeaderDesktopNav .oj-navigationlist-item.oj-selected#profile a .topNavImgIcon, #appHeaderDesktopNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#profile a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-selected#profile a .topNavImgIcon, #appHeaderMobileNav .oj-navigationlist-item.oj-hover:not(.oj-selected)#profile a .topNavImgIcon {
       background-image: url("images/icon/people-hover.png"); }
 
@@ -457,7 +457,7 @@ a.addEmp {
     font-size: 16px; }
 
 .empStatusInactive {
-  color: #ff0000; }
+  color: #E40004; }
   .empStatusInactive .fa-times-circle {
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
@@ -597,58 +597,64 @@ a.addEmp {
   #dialogTitleId .dialogHeaderText a .fa {
     margin-left: 5px; }
 
-#empBasicDialogWindow #status, #laborDialogWindow #status {
+#status {
   text-align: center; }
-#empBasicDialogWindow .scheduleLayout, #laborDialogWindow .scheduleLayout {
+
+.scheduleLayout {
   align-self: flex-start;
   margin: 0 5px; }
-#empBasicDialogWindow .empInfo .oj-flex-item, #empBasicDialogWindow .empContactInfo .oj-flex-item, #laborDialogWindow .empInfo .oj-flex-item, #laborDialogWindow .empContactInfo .oj-flex-item {
+
+.empInfo .oj-flex-item, .empContactInfo .oj-flex-item {
   margin: 0 20px 10px 0; }
-#empBasicDialogWindow .empInfo, #laborDialogWindow .empInfo {
+
+.empInfo {
   margin-left: 10px; }
-#empBasicDialogWindow .weekSummary, #laborDialogWindow .weekSummary {
+
+.weekSummary {
   font-weight: bold; }
-  #empBasicDialogWindow .weekSummary .weekTotals, #laborDialogWindow .weekSummary .weekTotals {
+  .weekSummary .weekTotals {
     font-size: 30px;
     margin-top: 15px; }
-#empBasicDialogWindow label, #laborDialogWindow label {
+
+label {
   font-weight: bold;
   text-transform: uppercase; }
-  #empBasicDialogWindow label.subLabel, #laborDialogWindow label.subLabel {
+  label.subLabel {
     text-transform: capitalize; }
-  #empBasicDialogWindow label.empStatus, #laborDialogWindow label.empStatus {
+  label.empStatus {
     text-transform: capitalize;
     margin-bottom: 10px;
     display: inline-block; }
-    #empBasicDialogWindow label.empStatus.clockedIn, #laborDialogWindow label.empStatus.clockedIn {
+    label.empStatus.clockedIn {
       color: #22a451; }
-    #empBasicDialogWindow label.empStatus.clockedOut, #laborDialogWindow label.empStatus.clockedOut {
-      color: #ff0000; }
-#empBasicDialogWindow #filmStripDiv, #laborDialogWindow #filmStripDiv {
+    label.empStatus.clockedOut {
+      color: #E40004; }
+
+#filmStripDiv, .filmStripDiv {
   background-color: #F5F5F5; }
-  #empBasicDialogWindow #filmStripDiv .dayTotals, #laborDialogWindow #filmStripDiv .dayTotals {
+  #filmStripDiv .dayTotals, .filmStripDiv .dayTotals {
     font-weight: bold; }
-  #empBasicDialogWindow #filmStripDiv .dayHeader, #laborDialogWindow #filmStripDiv .dayHeader {
+  #filmStripDiv .dayHeader, .filmStripDiv .dayHeader {
     background-color: #F5F5F5;
     text-align: center;
     margin-top: 10px; }
-  #empBasicDialogWindow #filmStripDiv .daySections, #laborDialogWindow #filmStripDiv .daySections {
+  #filmStripDiv .daySections, .filmStripDiv .daySections {
     padding: 10px;
     margin: 10px 0;
     background-color: #fff;
     min-height: 150px;
     -webkit-box-shadow: 0 5px 5px 0px #AFBAC5;
     box-shadow: 0 5px 5px 0px #AFBAC5; }
-  #empBasicDialogWindow #filmStripDiv .locSections, #laborDialogWindow #filmStripDiv .locSections {
+  #filmStripDiv .locSections, .filmStripDiv .locSections {
     text-align: center; }
-    #empBasicDialogWindow #filmStripDiv .locSections .locLabel, #laborDialogWindow #filmStripDiv .locSections .locLabel {
+    #filmStripDiv .locSections .locLabel, .filmStripDiv .locSections .locLabel {
       font-weight: bold; }
-    #empBasicDialogWindow #filmStripDiv .locSections .jobSection, #laborDialogWindow #filmStripDiv .locSections .jobSection {
+    #filmStripDiv .locSections .jobSection, .filmStripDiv .locSections .jobSection {
       border-top: 10px solid;
       margin: 10px 0 0 0;
       padding: 5px 0;
       text-align: left; }
-      #empBasicDialogWindow #filmStripDiv .locSections .jobSection .Bartender, #empBasicDialogWindow #filmStripDiv .locSections .jobSection .Server, #laborDialogWindow #filmStripDiv .locSections .jobSection .Bartender, #laborDialogWindow #filmStripDiv .locSections .jobSection .Server {
+      #filmStripDiv .locSections .jobSection .Bartender, #filmStripDiv .locSections .jobSection .Server, .filmStripDiv .locSections .jobSection .Bartender, .filmStripDiv .locSections .jobSection .Server {
         margin-top: 3px;
         margin-right: 3px;
         display: inline-block;
@@ -656,49 +662,55 @@ a.addEmp {
         text-rendering: auto;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale; }
-      #empBasicDialogWindow #filmStripDiv .locSections .jobSection .Bartender:before, #laborDialogWindow #filmStripDiv .locSections .jobSection .Bartender:before {
+      #filmStripDiv .locSections .jobSection .Bartender:before, .filmStripDiv .locSections .jobSection .Bartender:before {
         content: "\f000";
         font-size: 30px; }
-      #empBasicDialogWindow #filmStripDiv .locSections .jobSection .Server:before, #laborDialogWindow #filmStripDiv .locSections .jobSection .Server:before {
+      #filmStripDiv .locSections .jobSection .Server:before, .filmStripDiv .locSections .jobSection .Server:before {
         content: "\f0f5";
         font-size: 30px; }
-      #empBasicDialogWindow #filmStripDiv .locSections .jobSection .fa, #laborDialogWindow #filmStripDiv .locSections .jobSection .fa {
+      #filmStripDiv .locSections .jobSection .fa, .filmStripDiv .locSections .jobSection .fa {
         font-size: 30px;
         margin-top: 3px; }
-  #empBasicDialogWindow #filmStripDiv .dollarAmts, #laborDialogWindow #filmStripDiv .dollarAmts {
+  #filmStripDiv .dollarAmts, .filmStripDiv .dollarAmts {
     text-align: right; }
-  #empBasicDialogWindow #filmStripDiv .empAvailability .prefLabel, #empBasicDialogWindow #filmStripDiv .empAvailability .notAvailLabel, #laborDialogWindow #filmStripDiv .empAvailability .prefLabel, #laborDialogWindow #filmStripDiv .empAvailability .notAvailLabel {
+  #filmStripDiv .empAvailability .prefLabel, #filmStripDiv .empAvailability .notAvailLabel, .filmStripDiv .empAvailability .prefLabel, .filmStripDiv .empAvailability .notAvailLabel {
     text-transform: uppercase;
     font-weight: bold;
     font-family: "Helvetica Neue Light", Arial, sans-serif;
     font-size: 14px; }
-    #empBasicDialogWindow #filmStripDiv .empAvailability .prefLabel .fa, #empBasicDialogWindow #filmStripDiv .empAvailability .notAvailLabel .fa, #laborDialogWindow #filmStripDiv .empAvailability .prefLabel .fa, #laborDialogWindow #filmStripDiv .empAvailability .notAvailLabel .fa {
+    #filmStripDiv .empAvailability .prefLabel .fa, #filmStripDiv .empAvailability .notAvailLabel .fa, .filmStripDiv .empAvailability .prefLabel .fa, .filmStripDiv .empAvailability .notAvailLabel .fa {
       vertical-align: middle; }
-  #empBasicDialogWindow #filmStripDiv .empAvailability .notAvailLabel, #laborDialogWindow #filmStripDiv .empAvailability .notAvailLabel {
-    color: #ff0000; }
-  #empBasicDialogWindow #filmStripDiv .empAvailability .prefLabel, #laborDialogWindow #filmStripDiv .empAvailability .prefLabel {
+  #filmStripDiv .empAvailability .notAvailLabel, .filmStripDiv .empAvailability .notAvailLabel {
+    color: #E40004; }
+  #filmStripDiv .empAvailability .prefLabel, .filmStripDiv .empAvailability .prefLabel {
     color: #6E8598; }
-#empBasicDialogWindow .currentWeekHeaderArea, #laborDialogWindow .currentWeekHeaderArea {
+
+.currentWeekHeaderArea {
   background-color: #F5F5F5;
   margin-top: 10px; }
-  #empBasicDialogWindow .currentWeekHeaderArea .currentWeekHeader, #laborDialogWindow .currentWeekHeaderArea .currentWeekHeader {
+  .currentWeekHeaderArea .currentWeekHeader {
     color: #000;
     padding: 10px; }
-#empBasicDialogWindow .currentWeekSummary, #laborDialogWindow .currentWeekSummary {
+
+.currentWeekSummary {
   padding: 10px; }
-#empBasicDialogWindow .emailAndPringDiv, #laborDialogWindow .emailAndPringDiv {
+
+.emailAndPringDiv {
   float: right; }
-  #empBasicDialogWindow .emailAndPringDiv ul, #laborDialogWindow .emailAndPringDiv ul {
+  .emailAndPringDiv ul {
     margin: 0;
     list-style-type: none;
     padding: 0; }
-    #empBasicDialogWindow .emailAndPringDiv ul li, #laborDialogWindow .emailAndPringDiv ul li {
+    .emailAndPringDiv ul li {
       display: inline-block; }
-#empBasicDialogWindow .weeklyTotalHeader, #laborDialogWindow .weeklyTotalHeader {
+
+.weeklyTotalHeader {
   border-top: 10px solid #04b404; }
-#empBasicDialogWindow .job1TotalHeader, #laborDialogWindow .job1TotalHeader {
+
+.job1TotalHeader {
   border-top: 10px solid #fe9a2e; }
-#empBasicDialogWindow .job2TotalHeader, #laborDialogWindow .job2TotalHeader {
+
+.job2TotalHeader {
   border-top: 10px solid #2e2efe; }
 
 .searchWindow h3 {
@@ -708,13 +720,11 @@ a.addEmp {
   padding: 10px; }
   .daySummary .dayTotalsLabel {
     text-transform: uppercase; }
-  .daySummary .dayTotals {
+  .daySummary .dayTotalsPrice {
     font-weight: bold;
     font-size: 30px; }
 
 .scheduleContent {
-  height: 250px;
-  overflow-y: scroll;
   background-color: #F5F5F5; }
 
 #laborTabSection .oj-accordion-collapsible > .oj-collapsible-header {
@@ -732,8 +742,8 @@ a.addEmp {
     font-size: 14px; }
 
 .scheduleDayHeader {
-  background-color: #919fAB;
-  color: #fff;
+  background-color: #CFDCE8;
+  color: #000;
   padding: 10px;
   font-size: 20px;
   font-family: "Helvetica Neue Light", Arial, sans-serif; }
@@ -779,7 +789,7 @@ a.addEmp {
     background-repeat: no-repeat;
     background-size: 223px 111px;
     background-position: 100% 30%;
-    background-color: #79006C;
+    background-color: #172777;
     height: 110px; }
 
   .gift-loyaltyTitleWrap {
@@ -811,7 +821,7 @@ a.addEmp {
     background-repeat: no-repeat;
     background-size: 223px 111px;
     background-position: 100% 30%;
-    background-color: #172777;
+    background-color: #79006C;
     height: 110px; }
 
   .profileTitleWrap {
@@ -819,7 +829,7 @@ a.addEmp {
     background-repeat: no-repeat;
     background-size: 223px 111px;
     background-position: 100% 30%;
-    background-color: #172777;
+    background-color: #79006C;
     height: 110px; }
 
   #homeTabs {
@@ -869,15 +879,15 @@ a.addEmp {
       outline-color: transparent; }
     #inventoryTabs .oj-navigationlist-item.oj-hover:not(.oj-selected) {
       background-color: #fff;
-      border-color: #920083; }
+      border-color: #1F348F; }
       #inventoryTabs .oj-navigationlist-item.oj-hover:not(.oj-selected) .oj-navigationlist-item-label {
-        color: #79006C; }
+        color: #172777; }
     #inventoryTabs .oj-navigationlist-item.oj-default {
-      background-color: #920083; }
+      background-color: #1F348F; }
       #inventoryTabs .oj-navigationlist-item.oj-default .oj-navigationlist-item-label {
         color: #fff; }
     #inventoryTabs .oj-navigationlist-item.oj-selected {
-      border-color: #920083; }
+      border-color: #1F348F; }
       #inventoryTabs .oj-navigationlist-item.oj-selected a .oj-navigationlist-item-label {
         font-weight: 300;
         color: #000; }
@@ -949,15 +959,15 @@ a.addEmp {
       outline-color: transparent; }
     #peopleTabs .oj-navigationlist-item.oj-hover:not(.oj-selected) {
       background-color: #fff;
-      border-color: #5a68ad; }
+      border-color: #A90083; }
       #peopleTabs .oj-navigationlist-item.oj-hover:not(.oj-selected) .oj-navigationlist-item-label {
-        color: #172777; }
+        color: #79006C; }
     #peopleTabs .oj-navigationlist-item.oj-default {
-      background-color: #5a68ad; }
+      background-color: #A90083; }
       #peopleTabs .oj-navigationlist-item.oj-default .oj-navigationlist-item-label {
         color: #fff; }
     #peopleTabs .oj-navigationlist-item.oj-selected {
-      border-color: #5a68ad; }
+      border-color: #A90083; }
       #peopleTabs .oj-navigationlist-item.oj-selected a .oj-navigationlist-item-label {
         font-weight: 300;
         color: #000; }
@@ -969,15 +979,15 @@ a.addEmp {
       outline-color: transparent; }
     #profileTabs .oj-navigationlist-item.oj-hover:not(.oj-selected) {
       background-color: #fff;
-      border-color: #5a68ad; }
+      border-color: #A90083; }
       #profileTabs .oj-navigationlist-item.oj-hover:not(.oj-selected) .oj-navigationlist-item-label {
-        color: #172777; }
+        color: #79006C; }
     #profileTabs .oj-navigationlist-item.oj-default {
-      background-color: #5a68ad; }
+      background-color: #A90083; }
       #profileTabs .oj-navigationlist-item.oj-default .oj-navigationlist-item-label {
         color: #fff; }
     #profileTabs .oj-navigationlist-item.oj-selected {
-      border-color: #5a68ad; }
+      border-color: #A90083; }
       #profileTabs .oj-navigationlist-item.oj-selected a .oj-navigationlist-item-label {
         font-weight: 300;
         color: #000; }
@@ -1048,14 +1058,14 @@ a.addEmp {
       background-color: #454545; }
 
   #inventoryNavList {
-    background-color: #79006C;
+    background-color: #172777;
     height: auto;
     min-height: 10px; }
 
   #inventoryTabs {
-    border-top: 1px solid #920083; }
+    border-top: 1px solid #1F348F; }
     #inventoryTabs .oj-navigationlist-item:not(.oj-disabled).oj-default {
-      background-color: #79006C; }
+      background-color: #172777; }
     #inventoryTabs .oj-navigationlist-item:not(.oj-disabled).oj-selected {
       background-color: #454545; }
     #inventoryTabs .oj-navigationlist-item:not(.oj-disabled).oj-hover {
@@ -1104,28 +1114,28 @@ a.addEmp {
       background-color: #454545; }
 
   #peopleNavList {
-    background-color: #172777;
+    background-color: #79006C;
     height: auto;
     min-height: 10px; }
 
   #peopleTabs {
-    border-top: 1px solid #1F348F; }
+    border-top: 1px solid #920083; }
     #peopleTabs .oj-navigationlist-item:not(.oj-disabled).oj-default {
-      background-color: #172777; }
+      background-color: #79006C; }
     #peopleTabs .oj-navigationlist-item:not(.oj-disabled).oj-selected {
       background-color: #454545; }
     #peopleTabs .oj-navigationlist-item:not(.oj-disabled).oj-hover {
       background-color: #454545; }
 
   #profileNavList {
-    background-color: #172777;
+    background-color: #79006C;
     height: auto;
     min-height: 10px; }
 
   #profileTabs {
-    border-top: 1px solid #1F348F; }
+    border-top: 1px solid #920083; }
     #profileTabs .oj-navigationlist-item:not(.oj-disabled).oj-default {
-      background-color: #172777; }
+      background-color: #79006C; }
     #profileTabs .oj-navigationlist-item:not(.oj-disabled).oj-selected {
       background-color: #454545; }
     #profileTabs .oj-navigationlist-item:not(.oj-disabled).oj-hover {
