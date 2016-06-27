@@ -5,13 +5,13 @@
 
             <div class="searchFieldWrap">
                   <div id="accordionPage" data-bind="ojComponent: {component: 'ojAccordion'}">
-                                  <div id="c1">
+                                  <div id="c1"   data-bind="ojComponent: {component: 'ojCollapsible', expanded:true}">
                                       <label class="searchTitleBar">Search</label>
                                       <div>
                 <div id="simplesearch" class="simplesearchWrap" data-bind="visible:$parent.visibleAdvanceSearch()===false">
                     <input class="inputField"
                            placeholder="search for active names, stores, jobs"
-                           id="firstname" data-bind="value: $parent.firstNameSearch, ojComponent: {component: 'ojInputText', rootAttributes:{class:'inputFieldWrap'}}"/>
+                           id="firstname" data-bind="event:{'keydown':$parent.preventDefaultFunc},value: $parent.firstNameSearch, ojComponent: {component: 'ojInputText', rootAttributes:{class:'inputFieldWrap'}}"/>
                     <input class="oj-button-primary" id="submit" type="submit"
                            data-bind="ojComponent: {component: 'ojButton',
                     label: 'search', icons: { start: 'fa fa-search'} }" />
@@ -127,7 +127,7 @@
     </form>
 </div>
 
-<div class="searchWindow">
+<div class="searchWindow"  data-bind="visible: $parent.visibleSearchResult">
 
     <div class="oj-flex">
         <h3>Search Results</h3>
@@ -200,7 +200,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div data-bind="click: $parent.empHireStatusOpen" class="oj-swipetoreveal-flag">
+                                        <div data-bind="click: $parents[1].empHireStatusOpen" class="oj-swipetoreveal-flag">
                                             <div class="oj-flex-bar" style="height:100%">
                                                 <div class="oj-flex-bar-center-absolute">
                                                     <div class="oj-flex oj-sm-flex-direction-column">
@@ -220,5 +220,6 @@
              </script>
 
 
-<!-- <div data-bind="template: {name: 'partials/employee-hire-status-modal/employee-hire-status-modal-small'}"></div>-->
+<div data-bind="template: {name: 'labor-management/dialogwindow/employee-hirestatus-modal-small'}"></div>
  <div data-bind="template: {name: 'labor-management/dialogwindow/employee-basicinfo-modal-small'}"></div>
+ 

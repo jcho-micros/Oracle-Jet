@@ -12,19 +12,19 @@
                 <div class="oj-sm-6 oj-flex-item scheduleIconBar">
                     <ul class="scheduleToolArea">
                         <li id="email"><a href="#"><span class="fa fa-envelope-o"></span></a></li>
-                        <li id="print"><a href="#"><span class="fa fa-print""></span></a></li>
+                        <li id="print"><a href="#"><span class="fa fa-print"></span></a></li>
                     </ul>
                 </div>
             </div>
             <div class="oj-sm-12 oj-flex-item currentFilmStrip">
-                <div id="filmStripDiv" class="oj-panel" style="margin: '20px';  width='776px'">
+                <div id="filmStripDiv" class="oj-panel" style="margin: '20px';  width: '776px'">
                   <div id="filmStrip" aria-label="Set of chemicals" data-bind="ojComponent: {component: 'ojFilmStrip', arrowPlacement: self.currentNavArrowPlacement, arrowVisibility: self.currentNavArrowVisibility}">
                       <!-- ko foreach: $parent.currentScheduledDates -->
 
-                      <div class="oj-panel oj-panel-alt2 schedule-filmstrip-item" data-bind="style: {display: getItemInitialDisplay($index())}">
+                      <div class="oj-panel oj-panel-alt2 schedule-filmstrip-item">
 
                               <div>
-                                <a data-bind="click:function(){$parents[1].showItemIndex('#currentWeekModal')}">        
+                                <a data-bind="click:function(){$parents[1].showItemIndex('#currentWeekModal')}">    
                                 <span data-bind="text: currentDayStart"></span> <span data-bind="text: currentDayStartTime"></span> - <span data-bind="text: currentDayEndTime"></span>
                                 </a>
                                 <br /><span data-bind="text: location"></span>, <span data-bind="text: revenueCenter"></span>
@@ -32,7 +32,7 @@
                                 <br /><span data-bind="text: status"></span>
                                 <br /><span data-bind="text: notes"></span>
                               </div>
-                            </a>
+                            
                         </div>
 
                     <!-- /ko -->
@@ -47,17 +47,17 @@
                 <div class="oj-sm-6 oj-flex-item scheduleIconBar">
                     <ul class="scheduleToolArea">
                         <li id="email"><a href="#"><span class="fa fa-envelope-o"></span></a></li>
-                        <li id="print"><a href="#"><span class="fa fa-print""></span></a></li>
+                        <li id="print"><a href="#"><span class="fa fa-print"></span></a></li>
                     </ul>
                 </div>
             </div>
             <div class="oj-flex-item currentFilmStrip">
-                <div id="filmStripDiv" class="oj-panel" style="margin: '20px';  width='776px'">
+                <div id="filmStripDiv" class="oj-panel" style="margin: '20px';  width: '776px'">
                   <div id="filmStrip" aria-label="Set of chemicals" data-bind="ojComponent: {component: 'ojFilmStrip', arrowPlacement: self.currentNavArrowPlacement, arrowVisibility: self.currentNavArrowVisibility}">
 
                     <!-- ko foreach: $parent.futureScheduledDates -->
 
-                    <div class="oj-panel oj-panel-alt2 schedule-filmstrip-item" data-bind="style: {display: getItemInitialDisplay($index())}">
+                    <div class="oj-panel oj-panel-alt2 schedule-filmstrip-item">
                         <a data-bind="click:function(){$parents[1].showItemIndex('#upcomingWeekModal')}">    
                         <span data-bind="text: futureDayStart"></span> <span data-bind="text: futureDayStartTime"></span> - <span data-bind="text: futureDayEndTime"></span>
                         </a>

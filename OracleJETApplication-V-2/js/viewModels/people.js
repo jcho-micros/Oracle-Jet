@@ -28,13 +28,20 @@ define([
     'ojs/ojswitch',
     'ojs/ojmenu'
 ], function (oj, ko, data, $, Hammer) {
-    
-    
     function peopleContentViewModel() {
         
         
         
         var self = this;
+        self.preventDefaultFunc=function(data,e){
+            var keycode1 = (e.keyCode ? e.keyCode : e.which);
+            if (keycode1 == 9) {
+                e.preventDefault();
+                e.stopPropagation();
+            }else{
+                return true;
+            }
+        };
         var monthNames = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN",
             "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
         var weekday = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
@@ -43,6 +50,7 @@ define([
 
         self.ready = ko.observable(false);
         self.visibleAdvanceSearch = ko.observable(false);
+        self.visibleSearchResult = ko.observable(false);
         self.pageHeading = ko.observable("People");
 
         //where the all employee info will be stored
@@ -341,10 +349,13 @@ define([
 
         self.filteredAllPeople = ko.computed(
             function(){
+               
+                var isSearchTextExist = true;
                  var peopleFilter = new Array();
                  if (self.allPeople().length !== 0) {
                      if(self.visibleAdvanceSearch() === false){//Simple search functionality
                          if (self.firstNameSearch().length === 0) {
+                            isSearchTextExist = false;
                             peopleFilter = self.allPeople();
                          } else {
                             ko.utils.arrayFilter(self.allPeople(),
@@ -365,6 +376,7 @@ define([
                                  self.awayStoreSearch().length === 0 &&
                                  self.jobSearch().length === 0 &&
                                  self.payrollIdSearch().length === 0 ) {
+                            isSearchTextExist = false;
                             peopleFilter = self.allPeople();
                          } else {
                             console.log("sortvalue = "+self.sortvalue());
@@ -415,6 +427,7 @@ define([
                          }
                      });
                  }
+                 self.visibleSearchResult(isSearchTextExist);
                  return peopleFilter;
              }
             );
@@ -628,9 +641,6 @@ define([
         self.toggleSections = function () {
             self.sectionsState(!self.sectionsState());
         };
-        
-        
-
     }
 
     return peopleContentViewModel;

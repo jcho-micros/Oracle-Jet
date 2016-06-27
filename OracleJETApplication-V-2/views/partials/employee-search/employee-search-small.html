@@ -5,13 +5,13 @@
 
             <div class="searchFieldWrap">
                   <div id="accordionPage" data-bind="ojComponent: {component: 'ojAccordion'}">
-                                  <div id="c1">
+                                  <div id="c1"  data-bind="ojComponent: {component: 'ojCollapsible', expanded:true}">
                                       <label class="searchTitleBar">Search</label>
                                       <div>
                 <div id="simplesearch" class="simplesearchWrap" data-bind="visible:visibleAdvanceSearch()===false">
                     <input class="inputField"
                            placeholder="search for active names, stores, jobs"
-                           id="firstname" data-bind="value: firstNameSearch, ojComponent: {component: 'ojInputText', rootAttributes:{class:'inputFieldWrap'}}"/>
+                           id="firstname" data-bind="event:{'keydown':preventDefaultFunc}, value: firstNameSearch, ojComponent: {component: 'ojInputText', rootAttributes:{class:'inputFieldWrap'}}"/>
                     <input class="oj-button-primary" id="submit" type="submit"
                            data-bind="ojComponent: {component: 'ojButton',
                     label: 'search', icons: { start: 'fa fa-search'} }" />
@@ -127,7 +127,7 @@
     </form>
 </div>
 
-<div class="searchWindow">
+<div class="searchWindow"  data-bind="visible: visibleSearchResult">
 
     <div class="oj-flex">
         <h3>Search Results</h3>
@@ -189,7 +189,7 @@
                                
                                  
                                     <div tabIndex="-1" data-bind="attr: {id: 'second_toolbar_'+$data['name']}" class="oj-offcanvas-end" style="width:150px">
-                                        <div data-bind="click: $parents[1].empBasicInfoOpen" class="oj-swipetoreveal-more">
+                                        <div data-bind="click: $parent.empBasicInfoOpen" class="oj-swipetoreveal-more">
                                             <div class="oj-flex-bar" style="height:100%">
                                                 <div class="oj-flex-bar-center-absolute">
                                                     <div class="oj-flex oj-sm-flex-direction-column">

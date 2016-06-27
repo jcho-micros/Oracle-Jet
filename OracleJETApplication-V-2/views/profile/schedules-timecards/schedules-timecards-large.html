@@ -31,8 +31,7 @@
                                arrowVisibility: self.currentNavArrowVisibility}">
                   <!-- ko foreach: $parent.currentScheduledDates -->
                   
-                  <div class="oj-panel oj-panel-alt2 schedule-filmstrip-item" 
-                       data-bind="style: {display: getItemInitialDisplay($index())}">
+                  <div class="oj-panel oj-panel-alt2 schedule-filmstrip-item">
                     <div>
                        
                        <a data-bind="click:function(){$parents[1].showItemIndex('#currentWeekModal')}">

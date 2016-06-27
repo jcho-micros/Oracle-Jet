@@ -15,13 +15,13 @@
                 <div class="oj-flex-item">
                     <div class="oj-flex-item searchFieldWrap">
                         <div id="accordionPage" data-bind="ojComponent: {component: 'ojAccordion'}">
-                              <div id="c1">
+                              <div id="c1"  data-bind="ojComponent: {component: 'ojCollapsible', expanded:true}">
                                   <label class="searchTitleBar">Search</label>
                                   <div>
                         <div id="simplesearch" class="simplesearchWrap"  data-bind="visible: $parent.visibleAdvanceSearch()===false">
                             <input class="oj-flex-item inputField"
                                    placeholder="Search for active names, stores, jobs" 
-                                   id="firstname" data-bind="value: $parent.firstNameSearch, ojComponent: {component: 'ojInputText', rootAttributes:{class:'inputFieldWrap'}}"/>
+                                   id="firstname" data-bind="event:{'keydown':$parent.preventDefaultFunc},value: $parent.firstNameSearch, ojComponent: {component: 'ojInputText', rootAttributes:{class:'inputFieldWrap'}}"/>
                             <div class="searchBtnWrap">
                                 <input class="oj-flex-item oj-button-primary" id="submit" type="submit"
                                        data-bind="ojComponent: {component: 'ojButton',
@@ -134,7 +134,7 @@
 
     </div>
 </div>
-<div class="oj-flex" >
+<!--<div class="oj-flex" >
     <div class="oj-lg-4 oj-md-3 oj-flex-item peopleSearchWrapper" >
 
     </div>
@@ -180,9 +180,9 @@
         </select>
     </div>
 
-</div>
+</div>-->
 <!-- Start of the Result template -->
-<div class="oj-flex">
+<div class="oj-flex"  data-bind="visible: $parent.visibleSearchResult">
     <div class="oj-md-12 oj-flex-item">
         <div class="resultWrapper headerPeople">
 
@@ -258,7 +258,7 @@
                                     <div class="hireDateListview" data-bind="text: $parents[1].getBasicFormattedDate(hireDate)"></div>
                                 </div>
                                 <div class="oj-lg-2 oj-md-2 oj-flex-item">
-                                    <div class="employeeStatusListView" data-bind="style:{color: status == 'Inactive-Terminated' ? '#e80023' : '#81bb5f'}"> <span data-bind="text: status"></span></div>
+                                    <div class="employeeStatusListView" data-bind="style:{color: status == 'Inactive-Terminated' ? '#e80023' : '#81bb5f'}, click: $parents[1].empHireStatusOpen"> <span data-bind="text: status"></span></div>
                                 </div>
                             </div>
 
@@ -270,4 +270,5 @@
 
         </div>
     </div>
+    <div data-bind="template: {name: 'labor-management/dialogwindow/employee-hirestatus-modal-large'}"></div>
     <div data-bind="template: {name: 'labor-management/dialogwindow/employee-basicinfo-modal-large'}"></div>

@@ -132,14 +132,17 @@
                 </div>
             </div>
         </div>
-        <div class="oj-flex">
+        <!-- ko if:$parent.visibleEmployeeDetailFilmStrip() -->
+        <div class="oj-flex" >
             <div class="oj-flex-item currentFilmStrip">
                 <div id="filmStripDiv">
-                    <div id="filmStrip" aria-label="Set of chemicals" data-bind="ojComponent: {component: 'ojFilmStrip', arrowPlacement: self.currentNavArrowPlacement, arrowVisibility: self.currentNavArrowVisibility}">
+                    <div id="filmStrip" aria-label="Set of chemicals" data-bind="ojComponent: {component: 'ojFilmStrip', 
+                            arrowPlacement: $parent.currentNavArrowPlacement, 
+                            arrowVisibility: $parent.currentNavArrowVisibility}">
 
                         <!-- ko foreach:$parent.formttedCurrentScheduledDateValues -->
 
-                        <div class="schedule-filmstrip-item scheduleLayout">
+                        <div class="schedule-filmstrip-item scheduleLayout" >
                              <div>
                                 <div class="dayHeader">
                                     <span data-bind="text: startDate"></span>
@@ -220,10 +223,9 @@
                 </div>
                </div>
         </div>
-
+        <!-- /ko --> 
         
 
     </div>
 
-</div>
 </div>

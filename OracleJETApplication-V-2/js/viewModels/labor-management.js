@@ -32,6 +32,15 @@ define([
     
     function laborContentViewModel(params) {
         var self = this;
+        self.preventDefaultFunc=function(data,e){
+            var keycode1 = (e.keyCode ? e.keyCode : e.which);
+            if (keycode1 == 9) {
+                e.preventDefault();
+                e.stopPropagation();
+            }else{
+                return true;
+            }
+        };
         //Child Router
         this.router = undefined;
        var that = params.self;
@@ -52,12 +61,33 @@ define([
         self.visibleclockout = ko.observable(false);
         self.visibleclockin = ko.observable(false);
         self.scheduleStatusChanges = ko.observableArray([]);
+        self.hireStatusChanges = ko.observableArray([]);
         self.currentShiftStatus = ko.observable("");
         self.clockindate = ko.observable(oj.IntlConverterUtils.dateToLocalIso(new Date(2014, 1, 1)));
         self.clockintime = ko.observable("");
         self.clockoutdate = ko.observable("");
         self.clockouttime = ko.observable("");
         self.clockinreason = ko.observable("");
+        
+        self.hireType =  ko.observable("");      
+        self.reHireDate = ko.observable(oj.IntlConverterUtils.dateToLocalIso(new Date()));
+        self.hiredateprev = ko.observable("");  
+        self.leavestartdate = ko.observable(oj.IntlConverterUtils.dateToLocalIso(new Date()));
+        self.leaveenddate = ko.observable(oj.IntlConverterUtils.dateToLocalIso(new Date()));
+        self.reasonvalue = ko.observableArray([""]);
+        self.leavenotes = ko.observable("");
+        self.terminationdate = ko.observable(oj.IntlConverterUtils.dateToLocalIso(new Date()));
+        self.termstatusvalue = ko.observableArray([""]);
+        self.terminotes =  ko.observable("");
+        self.termsreasonvalue1 = ko.observableArray([""]);
+        self.hireStatusSelectedTab = ko.observable("");  
+        self.rehireEligibility = ko.observable();
+        self.visibleEmployeeDetailFilmStrip = ko.observable(false);
+        
+        self.hireStatustabsChangeHandler = function(event, data) {
+            self.hireStatusSelectedTab(data.value);
+         };
+        
         //People functionality
         var monthNames = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN",
             "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
@@ -156,6 +186,7 @@ define([
         
          
         self.visibleAdvanceSearch = ko.observable(false);
+        self.visibleSearchResult = ko.observable(false);
         self.pageHeading = ko.observable("People");
         
         self.allPeople = ko.observableArray([]);
@@ -204,7 +235,7 @@ define([
         self.downloadoption = ko.observable("pdf");
         self.personProfile=ko.observableArray([]);
         self.currentScheduledDates=ko.observableArray([]);
-        self.formttedCurrentScheduledDateValues = ko.observableArray([]);
+        self.formttedCurrentScheduledDateValues = ko.observableArray();
         
         
         //Search form observables
@@ -287,6 +318,7 @@ define([
                                     if(item.jobName !== 'Not Assigned') 
                                         return item.jobName;})).sort();
                             }));
+                            self.visibleEmployeeDetailFilmStrip(true);
                             $("#laborDialogWindow").ojDialog("open");
                             setTimeout(function(){$( "#filmStrip" ).ojFilmStrip( "option", "maxItemsPerPage", 4)}, 1000);
                             $("#filmStrip").ojFilmStrip("refresh");
@@ -303,6 +335,90 @@ define([
             $("#laborScheduleDailogWindow").ojDialog("open");
         };
         
+         self.empHireStatusOpen =  function(emp) {
+            self.basicEmpInfo(emp);
+            return new Promise(function(resolve, reject) {
+                        data.fetchData("js/data/employee" + emp.empId + ".json").then(function (person) {
+                            self.personProfile(person);
+                            self.hiredateprev(oj.IntlConverterUtils.dateToLocalIso(new Date(
+                                    new Date(self.basicEmpInfo().hireDate).getFullYear(),
+                                    new Date(self.basicEmpInfo().hireDate).getMonth(),
+                                    new Date(self.basicEmpInfo().hireDate).getDate())));
+                                    
+                            $("#laborEmployeeHireStatusDialog").ojDialog("open");
+                            $( "#tabs" ).ojTabs( "refresh" );
+                            if(self.basicEmpInfo().hireStatus === 'Active'){
+                                $( "#tabs" ).ojTabs( { "selected": "tabs-1" } );
+                            } else if(self.basicEmpInfo().hireStatus === 'Inactive-Suspended'){
+                                $( "#tabs" ).ojTabs( { "selected": "tabs-2" } );
+                            } else if(self.basicEmpInfo().hireStatus === 'Inactive-Terminated'){
+                                $( "#tabs" ).ojTabs( { "selected": "tabs-2" } );
+                            } else if(self.basicEmpInfo().hireStatus === 'Inactive-Leave Of Absence'){
+                                $( "#tabs" ).ojTabs( { "selected": "tabs-3" } );
+                            }
+                            
+                            
+                            resolve(true);
+                        }).fail(function (error) {
+                            console.log('Error: ' + error.message);
+                            resolve(false);
+                        });
+                    });
+            
+        };
+
+
+        self.empBasicInfoClose =  function() {
+            $("#empBasicDialogWindow").ojDialog("close");
+        };
+        
+        self.empHireStatusClose =  function() {
+            var a=self.hireStatusChanges();
+            var found = false;
+            for (var i = 0; i < a.length; i++) {
+                if (a[i].empid === self.basicEmpInfo().empId) {
+                    found = true;
+                    if(self.hireStatusSelectedTab() === 't1'){
+                        a[i].newhiredate = self.reHireDate();
+                        a[i].newhirestatus = 'Active';
+                    } else if(self.hireStatusSelectedTab() === 't2'){
+                        a[i].newhiredate = self.terminationdate();
+                        a[i].newhirestatus = 'Inactive-Terminated';
+                    } else if(self.hireStatusSelectedTab() === 't3'){
+                        a[i].newhiredate = self.leavestartdate();
+                        a[i].newhirestatus = 'Inactive-Leave Of Absence';
+                    }
+                    break;
+                }
+            }
+            if(found === false){
+                if(self.hireStatusSelectedTab() === 't1'){
+                a.push({
+                'empid': self.basicEmpInfo().empId,
+                'newhiredate' : self.reHireDate(),
+                'newhirestatus' : 'Active'
+                });
+            } else if(self.hireStatusSelectedTab() === 't2'){
+                a.push({
+                'empid': self.basicEmpInfo().empId,
+                'newhiredate' : self.terminationdate(),
+                'newhirestatus' : 'Inactive-Terminated'
+                });
+            } else if(self.hireStatusSelectedTab() === 't3'){
+                a.push({
+                'empid': self.basicEmpInfo().empId,
+                'newhiredate' : self.leavestartdate(),
+                'newhirestatus' : 'Inactive-Leave Of Absence'
+                });
+            }
+
+            }
+                        
+            self.hireStatusChanges(a);
+            console.log("length of hireStatusChanges = "+self.hireStatusChanges().length);
+            $("#laborEmployeeHireStatusDialog").ojDialog("close");
+            //self.filteredAllPeople();
+        };
         
         self.empScheduleDetailInfoOpen = function(emp){
             self.scheduleDetailContnet(emp);
@@ -441,12 +557,13 @@ define([
 
         self.filteredAllPeople = ko.computed(
             function(){
+                var isSearchTextExist = true;
                  var peopleFilter = new Array();
-                
                  if (self.allPeople().length !== 0) {
                      if(self.visibleAdvanceSearch() === false){//Simple search functionality
                          
                          if (self.firstNameSearch().length === 0) {
+                              isSearchTextExist = false;
                             peopleFilter = self.allPeople();
                             
                          } else {
@@ -468,6 +585,7 @@ define([
                                  self.awayStoreSearch().length === 0 &&
                                  self.jobSearch().length === 0 &&
                                  self.payrollIdSearch().length === 0 ) {
+                              isSearchTextExist = false;
                             peopleFilter = self.allPeople();
                          } else {
                             console.log("sortvalue = "+self.sortvalue());
@@ -495,6 +613,16 @@ define([
                          }
                      }
                  }
+                  if(self.hireStatusChanges().length > 0){
+                     for(var item = 0; item < peopleFilter.length; item++){
+                         for(var changeItem = 0;  changeItem < self.hireStatusChanges().length; changeItem++){
+                             if(peopleFilter[item].empId === self.hireStatusChanges()[changeItem].empid){
+                                 peopleFilter[item].hireDate = self.hireStatusChanges()[changeItem].newhiredate;
+                                 peopleFilter[item].status = self.hireStatusChanges()[changeItem].newhirestatus;
+                             }
+                         }   
+                     }
+                 }
                  if(peopleFilter.length > 0){
                      peopleFilter.sort(function(a, b){
                          if(self.sortvalue() === "FN"){
@@ -508,6 +636,7 @@ define([
                          }
                      });
                  }
+                 self.visibleSearchResult(isSearchTextExist);
                  return peopleFilter;
              }
             );
@@ -562,14 +691,11 @@ define([
                             self.reviewsandapprovals(schedulecontent.reviewsandapprovals);
                             self.managerlogs(schedulecontent.managerlogs);
                             self.currentlyclockedin(schedulecontent.currentlyclockedin);
-                            self.jobTabContent(schedulecontent.jobtabcontent);
-                            self.stationTabContent(schedulecontent.stationcontent);
-                            //self.listViewDataSource();
                         }).fail(function (error) {
                             console.log('Error: ' + error.message);
                         });
-        
-        
+             self.currentNavArrowPlacement = ko.observable("adjacent");
+                self.currentNavArrowVisibility = ko.observable("auto");            
         self.handleActivated = function (data) {
 
             var parentRouter = oj.Router.rootInstance;
@@ -617,6 +743,21 @@ define([
         };
         
         self.changeTabContent = function(state){
+                
+                if(state === 'Job'){
+                     data.fetchData("js/data/employeeschedulejobcontent.json").then(function (schedulecontent) {
+                            self.jobTabContent(schedulecontent.jobtabcontent);
+                        }).fail(function (error) {
+                            console.log('Error: ' + error.message);
+                        });
+                } else if(state === 'Station'){
+                    data.fetchData("js/data/employeeschedulestationcontent.json").then(function (schedulecontent) {
+                            self.stationTabContent(schedulecontent.stationcontent);
+                        }).fail(function (error) {
+                            console.log('Error: ' + error.message);
+                        });
+                    
+                }
                 self.selectedTab(state);
         };
         
@@ -624,7 +765,6 @@ define([
             return new Promise(function(resolve, reject) {
                 data.fetchData("js/data/employeesjobschedules.json").then(function (schedulecontent) {
                             self.jobSchedules(schedulecontent.jobschedules);
-                            //self.personSchedules(schedulecontent.employees);
                             self.router.go('schedules-timecards');
                             setTimeout(function(){self.selectedTab('Day');}, 1000);
                             // $("#laborScheduleDailogWindow").ojDialog("open");
