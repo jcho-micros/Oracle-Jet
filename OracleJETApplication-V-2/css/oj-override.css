@@ -7,41 +7,7 @@
 /*****Ramu Section**********/
 .redText {
   color: #e4001e; }
-   
-.jobSection {
-      border-top: 10px solid;
-      margin: 10px 0 0 0;
-      padding: 5px 0;
-      text-align: left; }
 
-.locSections {
-    text-align: center; }
-    .locLabel {
-      font-weight: bold; }
-    .jobSection {
-      border-top: 10px solid;
-      margin: 10px 0 0 0;
-      padding: 5px 0;
-      text-align: left; }
-      .Bartender, .Server {
-        margin-top: 3px;
-        margin-right: 3px;
-        display: inline-block;
-        font: normal normal normal 14px/1 FontAwesome;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale; }
-      .Bartender:before {
-        content: "\f000";
-        font-size: 30px; }
-      .Server:before {
-        content: "\f0f5";
-        font-size: 30px; }
-      .fa {
-        font-size: 30px;
-        margin-top: 3px; }
-  .dollarAmts {
-    text-align: right; }
 /*****Section Variables*****/
 html {
   height: 100vh; }
@@ -66,8 +32,7 @@ hr {
   border-width: 1px 0 0; }
 
 .txtHighlight {
-  color: #00a8ff;
-  }
+  color: #00a8ff; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue Light", Arial, sans-serif;
@@ -571,6 +536,9 @@ a.addEmp {
   padding: 0 0 10px 0;
   border-bottom: 1px solid #AFBAC5; }
 
+.advSearchWrap {
+  padding: 10px; }
+
 .advSearchCol {
   border-right: 1px solid #AFBAC5;
   padding: 10px 20px; }
@@ -629,58 +597,58 @@ a.addEmp {
   #dialogTitleId .dialogHeaderText a .fa {
     margin-left: 5px; }
 
-#empBasicDialogWindow #status {
+#empBasicDialogWindow #status, #laborDialogWindow #status {
   text-align: center; }
-#empBasicDialogWindow .scheduleLayout {
+#empBasicDialogWindow .scheduleLayout, #laborDialogWindow .scheduleLayout {
   align-self: flex-start;
   margin: 0 5px; }
-#empBasicDialogWindow .empInfo .oj-flex-item, #empBasicDialogWindow .empContactInfo .oj-flex-item {
+#empBasicDialogWindow .empInfo .oj-flex-item, #empBasicDialogWindow .empContactInfo .oj-flex-item, #laborDialogWindow .empInfo .oj-flex-item, #laborDialogWindow .empContactInfo .oj-flex-item {
   margin: 0 20px 10px 0; }
-#empBasicDialogWindow .empInfo {
+#empBasicDialogWindow .empInfo, #laborDialogWindow .empInfo {
   margin-left: 10px; }
-#empBasicDialogWindow .weekSummary {
+#empBasicDialogWindow .weekSummary, #laborDialogWindow .weekSummary {
   font-weight: bold; }
-  #empBasicDialogWindow .weekSummary .weekTotals {
+  #empBasicDialogWindow .weekSummary .weekTotals, #laborDialogWindow .weekSummary .weekTotals {
     font-size: 30px;
     margin-top: 15px; }
-#empBasicDialogWindow label {
+#empBasicDialogWindow label, #laborDialogWindow label {
   font-weight: bold;
   text-transform: uppercase; }
-  #empBasicDialogWindow label.subLabel {
+  #empBasicDialogWindow label.subLabel, #laborDialogWindow label.subLabel {
     text-transform: capitalize; }
-  #empBasicDialogWindow label.empStatus {
+  #empBasicDialogWindow label.empStatus, #laborDialogWindow label.empStatus {
     text-transform: capitalize;
     margin-bottom: 10px;
     display: inline-block; }
-    #empBasicDialogWindow label.empStatus.clockedIn {
+    #empBasicDialogWindow label.empStatus.clockedIn, #laborDialogWindow label.empStatus.clockedIn {
       color: #22a451; }
-    #empBasicDialogWindow label.empStatus.clockedOut {
+    #empBasicDialogWindow label.empStatus.clockedOut, #laborDialogWindow label.empStatus.clockedOut {
       color: #ff0000; }
-#empBasicDialogWindow #filmStripDiv {
+#empBasicDialogWindow #filmStripDiv, #laborDialogWindow #filmStripDiv {
   background-color: #F5F5F5; }
-  #empBasicDialogWindow #filmStripDiv .dayTotals {
+  #empBasicDialogWindow #filmStripDiv .dayTotals, #laborDialogWindow #filmStripDiv .dayTotals {
     font-weight: bold; }
-  #empBasicDialogWindow #filmStripDiv .dayHeader {
+  #empBasicDialogWindow #filmStripDiv .dayHeader, #laborDialogWindow #filmStripDiv .dayHeader {
     background-color: #F5F5F5;
     text-align: center;
     margin-top: 10px; }
-  #empBasicDialogWindow #filmStripDiv .daySections {
+  #empBasicDialogWindow #filmStripDiv .daySections, #laborDialogWindow #filmStripDiv .daySections {
     padding: 10px;
     margin: 10px 0;
     background-color: #fff;
     min-height: 150px;
     -webkit-box-shadow: 0 5px 5px 0px #AFBAC5;
     box-shadow: 0 5px 5px 0px #AFBAC5; }
-  #empBasicDialogWindow #filmStripDiv .locSections {
+  #empBasicDialogWindow #filmStripDiv .locSections, #laborDialogWindow #filmStripDiv .locSections {
     text-align: center; }
-    #empBasicDialogWindow #filmStripDiv .locSections .locLabel {
+    #empBasicDialogWindow #filmStripDiv .locSections .locLabel, #laborDialogWindow #filmStripDiv .locSections .locLabel {
       font-weight: bold; }
-    #empBasicDialogWindow #filmStripDiv .locSections .jobSection {
+    #empBasicDialogWindow #filmStripDiv .locSections .jobSection, #laborDialogWindow #filmStripDiv .locSections .jobSection {
       border-top: 10px solid;
       margin: 10px 0 0 0;
       padding: 5px 0;
       text-align: left; }
-      #empBasicDialogWindow #filmStripDiv .locSections .jobSection .Bartender, #empBasicDialogWindow #filmStripDiv .locSections .jobSection .Server {
+      #empBasicDialogWindow #filmStripDiv .locSections .jobSection .Bartender, #empBasicDialogWindow #filmStripDiv .locSections .jobSection .Server, #laborDialogWindow #filmStripDiv .locSections .jobSection .Bartender, #laborDialogWindow #filmStripDiv .locSections .jobSection .Server {
         margin-top: 3px;
         margin-right: 3px;
         display: inline-block;
@@ -688,53 +656,87 @@ a.addEmp {
         text-rendering: auto;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale; }
-      #empBasicDialogWindow #filmStripDiv .locSections .jobSection .Bartender:before {
+      #empBasicDialogWindow #filmStripDiv .locSections .jobSection .Bartender:before, #laborDialogWindow #filmStripDiv .locSections .jobSection .Bartender:before {
         content: "\f000";
         font-size: 30px; }
-      #empBasicDialogWindow #filmStripDiv .locSections .jobSection .Server:before {
+      #empBasicDialogWindow #filmStripDiv .locSections .jobSection .Server:before, #laborDialogWindow #filmStripDiv .locSections .jobSection .Server:before {
         content: "\f0f5";
         font-size: 30px; }
-      #empBasicDialogWindow #filmStripDiv .locSections .jobSection .fa {
+      #empBasicDialogWindow #filmStripDiv .locSections .jobSection .fa, #laborDialogWindow #filmStripDiv .locSections .jobSection .fa {
         font-size: 30px;
         margin-top: 3px; }
-  #empBasicDialogWindow #filmStripDiv .dollarAmts {
+  #empBasicDialogWindow #filmStripDiv .dollarAmts, #laborDialogWindow #filmStripDiv .dollarAmts {
     text-align: right; }
-  #empBasicDialogWindow #filmStripDiv .empAvailability .prefLabel, #empBasicDialogWindow #filmStripDiv .empAvailability .notAvailLabel {
+  #empBasicDialogWindow #filmStripDiv .empAvailability .prefLabel, #empBasicDialogWindow #filmStripDiv .empAvailability .notAvailLabel, #laborDialogWindow #filmStripDiv .empAvailability .prefLabel, #laborDialogWindow #filmStripDiv .empAvailability .notAvailLabel {
     text-transform: uppercase;
     font-weight: bold;
     font-family: "Helvetica Neue Light", Arial, sans-serif;
     font-size: 14px; }
-    #empBasicDialogWindow #filmStripDiv .empAvailability .prefLabel .fa, #empBasicDialogWindow #filmStripDiv .empAvailability .notAvailLabel .fa {
+    #empBasicDialogWindow #filmStripDiv .empAvailability .prefLabel .fa, #empBasicDialogWindow #filmStripDiv .empAvailability .notAvailLabel .fa, #laborDialogWindow #filmStripDiv .empAvailability .prefLabel .fa, #laborDialogWindow #filmStripDiv .empAvailability .notAvailLabel .fa {
       vertical-align: middle; }
-  #empBasicDialogWindow #filmStripDiv .empAvailability .notAvailLabel {
+  #empBasicDialogWindow #filmStripDiv .empAvailability .notAvailLabel, #laborDialogWindow #filmStripDiv .empAvailability .notAvailLabel {
     color: #ff0000; }
-  #empBasicDialogWindow #filmStripDiv .empAvailability .prefLabel {
+  #empBasicDialogWindow #filmStripDiv .empAvailability .prefLabel, #laborDialogWindow #filmStripDiv .empAvailability .prefLabel {
     color: #6E8598; }
-#empBasicDialogWindow .currentWeekHeaderArea {
+#empBasicDialogWindow .currentWeekHeaderArea, #laborDialogWindow .currentWeekHeaderArea {
   background-color: #F5F5F5;
   margin-top: 10px; }
-  #empBasicDialogWindow .currentWeekHeaderArea .currentWeekHeader {
+  #empBasicDialogWindow .currentWeekHeaderArea .currentWeekHeader, #laborDialogWindow .currentWeekHeaderArea .currentWeekHeader {
     color: #000;
     padding: 10px; }
-#empBasicDialogWindow .currentWeekSummary {
+#empBasicDialogWindow .currentWeekSummary, #laborDialogWindow .currentWeekSummary {
   padding: 10px; }
-#empBasicDialogWindow .emailAndPringDiv {
+#empBasicDialogWindow .emailAndPringDiv, #laborDialogWindow .emailAndPringDiv {
   float: right; }
-  #empBasicDialogWindow .emailAndPringDiv ul {
+  #empBasicDialogWindow .emailAndPringDiv ul, #laborDialogWindow .emailAndPringDiv ul {
     margin: 0;
     list-style-type: none;
     padding: 0; }
-    #empBasicDialogWindow .emailAndPringDiv ul li {
+    #empBasicDialogWindow .emailAndPringDiv ul li, #laborDialogWindow .emailAndPringDiv ul li {
       display: inline-block; }
-#empBasicDialogWindow .weeklyTotalHeader {
+#empBasicDialogWindow .weeklyTotalHeader, #laborDialogWindow .weeklyTotalHeader {
   border-top: 10px solid #04b404; }
-#empBasicDialogWindow .job1TotalHeader {
+#empBasicDialogWindow .job1TotalHeader, #laborDialogWindow .job1TotalHeader {
   border-top: 10px solid #fe9a2e; }
-#empBasicDialogWindow .job2TotalHeader {
+#empBasicDialogWindow .job2TotalHeader, #laborDialogWindow .job2TotalHeader {
   border-top: 10px solid #2e2efe; }
 
 .searchWindow h3 {
   padding: 10px; }
+
+.daySummary {
+  padding: 10px; }
+  .daySummary .dayTotalsLabel {
+    text-transform: uppercase; }
+  .daySummary .dayTotals {
+    font-weight: bold;
+    font-size: 30px; }
+
+.scheduleContent {
+  height: 250px;
+  overflow-y: scroll;
+  background-color: #F5F5F5; }
+
+#laborTabSection .oj-accordion-collapsible > .oj-collapsible-header {
+  background-color: #F5F5F5;
+  border-color: #AFBAC5; }
+
+.accordionLink {
+  float: right;
+  padding: 10px;
+  line-height: 14px;
+  font-weight: normal;
+  display: inline-block;
+  color: #4C759B; }
+  .accordionLink .fa {
+    font-size: 14px; }
+
+.scheduleDayHeader {
+  background-color: #919fAB;
+  color: #fff;
+  padding: 10px;
+  font-size: 20px;
+  font-family: "Helvetica Neue Light", Arial, sans-serif; }
 
 @media only screen and (min-width: 768px) {
   .searchFieldWrap {
@@ -1019,7 +1021,8 @@ a.addEmp {
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   #homeNavList {
     background-color: #015FAB;
-    height: 10px; }
+    height: auto;
+    min-height: 10px; }
 
   #homeTabs {
     border-top: 1px solid #004587; }
@@ -1032,7 +1035,8 @@ a.addEmp {
 
   #laborNavList {
     background-color: #AB4100;
-    height: 10px; }
+    height: auto;
+    min-height: 10px; }
 
   #laborTabs {
     border-top: 1px solid #8b3300; }
@@ -1045,7 +1049,8 @@ a.addEmp {
 
   #inventoryNavList {
     background-color: #79006C;
-    height: 10px; }
+    height: auto;
+    min-height: 10px; }
 
   #inventoryTabs {
     border-top: 1px solid #920083; }
@@ -1058,7 +1063,8 @@ a.addEmp {
 
   #gift-loyaltyNavList {
     background-color: #410b6e;
-    height: 10px; }
+    height: auto;
+    min-height: 10px; }
 
   #gift-loyaltyTabs {
     border-top: 1px solid #501884; }
@@ -1071,7 +1077,8 @@ a.addEmp {
 
   #enterpriseNavList {
     background-color: #ba0006;
-    height: 10px; }
+    height: auto;
+    min-height: 10px; }
 
   #enterpriseTabs {
     border-top: 1px solid #88000d; }
@@ -1084,7 +1091,8 @@ a.addEmp {
 
   #reports-analyticsNavList {
     background-color: #007B2B;
-    height: 10px; }
+    height: auto;
+    min-height: 10px; }
 
   #reports-analyticsTabs {
     border-top: 1px solid #005C3A; }
@@ -1097,7 +1105,8 @@ a.addEmp {
 
   #peopleNavList {
     background-color: #172777;
-    height: 10px; }
+    height: auto;
+    min-height: 10px; }
 
   #peopleTabs {
     border-top: 1px solid #1F348F; }
@@ -1110,7 +1119,8 @@ a.addEmp {
 
   #profileNavList {
     background-color: #172777;
-    height: 10px; }
+    height: auto;
+    min-height: 10px; }
 
   #profileTabs {
     border-top: 1px solid #1F348F; }
@@ -1313,5 +1323,3 @@ a.addEmp {
     border-radius: 50%; }
   #loginPage .footer {
     text-align: right; } }
-
-/*# sourceMappingURL=oj-override.css.map */

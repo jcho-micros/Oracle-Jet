@@ -32,6 +32,7 @@ $medBlue3: #2e2efe;
 
 //New Colors
 $darkGray: #37424C;
+$darkGray2: #4C759B;
 $medGray1: #6E8598;
 $medGray2: #919fAB;
 $gray: #AFBAC5;
@@ -78,37 +79,7 @@ $medMustard1: #905200;
 $medMustard2: #926200;
 $lightMustard: #947100;
 
-
-//Old Colors
-//$primaryLightBlue: #346fd4;
-//$secondaryLightBlue: #84bbe6;
-//$tertiaryLightBlue: #045fab;
-//
-//$primaryOrange: #EA5801;
-//$secondaryOrange: #EE7934;
-//$tertiaryOrange: #C74B01;
-//
-//$primaryGreen: #3E9850;
-//$secondaryGreen: #65AD73;
-//$tertiaryGreen: #358144;
-//
-//$primaryPurple: #4C1889;
-//$secondaryPurple: #7046A1;
-//$tertiaryPurple: #411475;
-//
-//$primaryBlueGray: #596D86;
-//$secondaryBlueGray: #7A8A9E;
-//$tertiaryBlueGray: #4C5D72;
-//
-//$primaryDarkGray:#2D3142;
-//$secondaryDarkGray: #575A68;
-//$tertiaryDarkGray: #262A38;
-//
-//$primaryLightGrayBlue: #507AA0;
-//$secondaryLightGrayBlue: #6A8EAE;
-//
-//$tertiaryLightGreen: #446888;
-
+//old colors
 $lightGrayOld: #f5f5f5;
 $lightGrayOld2: #e8eef4;
 $lightGrayOld3: #d5d7d6;
@@ -231,6 +202,11 @@ $sideNavLinkColorHover:$white;
 $sideNavLinkBckBgHover: $sideNavLinkHover;
 $sideNavLinkBckColor:$sideNavBckColor;
 
+//Accordion Variables
+$accordionBckgColor: $lightGray2;
+$accordionBorderColor: $gray;
+$accordionLinkColor: $darkGray2;
+
 //Page Variables
 $mainAreaBckgColor: $white;
 $mainAreaBorderColor: $lightGrayOld2;
@@ -307,10 +283,17 @@ $tableHeaderBckg: $darkGray;
 $formBorders: $gray;
 $oddEmpTableBckg: $lightGray2;
 
+//Labor Variables
+$scheduleDayHeaderBckgColor: $medGray2;
+$scheduleContentBckgColor: $lightGray2;
 
 //Footer Variables
 $footerBorderColor: $lightGrayOld4;
 $footerBckgColor: $white;
+
+//Spacing Variables
+$basicPadding: 10px;
+$basicMargin: 10px;
 
 // MOBILE FIRST SETUP
 // Custom Override CSS
@@ -1080,21 +1063,55 @@ a.addEmp{
         border-top:10px solid $job2TotalHeader;
     }
 }
-//.searchWindow{
-//    .peopleSearchWrapper {
-//        padding: 0 20px;
-//
-//    }
-//    .button-row {
-//        padding: 10px 10px 0 10px;
-//    }
-//}
+
 .searchWindow{
     h3{
-        padding:10px;
+        padding:$basicPadding;
     }
 }
 
+//Labor Overview
+.daySummary{
+    padding: $basicPadding;
+    .dayTotalsLabel{
+        text-transform: uppercase;
+    }
+    .dayTotals{
+        font-weight:bold;
+        font-size: 30px;
+    }
+}
+.scheduleContent{
+    height: 250px;
+    overflow-y: scroll;
+    background-color: $scheduleContentBckgColor;
+}
+#laborTabSection {
+    .oj-accordion-collapsible > .oj-collapsible-header{
+        background-color: $accordionBckgColor;
+        border-color:$accordionBorderColor;
+    }
+}
+.accordionLink{
+    float: right;
+    padding: $basicPadding;
+    line-height: 14px;
+    font-weight: normal;
+    display: inline-block;
+    color: $accordionLinkColor;
+
+    .fa{
+        font-size:14px;
+    }
+}
+
+.scheduleDayHeader{
+    background-color: $scheduleDayHeaderBckgColor;
+    color: $white;
+    padding:$basicPadding;
+    font-size:20px;
+    font-family: $fontFamily;
+}
 //Media Query
 //Medium/ipad (UP)
 @media only screen and (min-width: 768px){
@@ -1264,7 +1281,8 @@ a.addEmp{
     {
         ##{$section}NavList{
             background-color:$backGroundColor;
-            height: 10px;
+            height: auto;
+            min-height: 10px;
         }
         ##{$section}Tabs{
             border-top:1px solid $accentColor;

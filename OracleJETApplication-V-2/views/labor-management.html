@@ -19,7 +19,7 @@
         </div>
     </div>
     <div class="mainContentArea">
-        <div class="oj-flex oj-flex-items-pad" data-bind="if: router.stateId()">
+        <div class="oj-flex" data-bind="if: router.stateId()">
             <div id="laborTabSection" class="oj-flex-item" data-bind="with: router.currentState()">
                 <div data-bind="template: {name: 'labor-management/' + id +'/' + id + '-small'}"></div>
             </div>
