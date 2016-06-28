@@ -649,7 +649,6 @@ define([
         self.listViewDataSource = ko.computed(function () {
            return new oj.PagingTableDataSource(new oj.ArrayTableDataSource(self.filteredAllPeople(),
                     {idAttribute: 'empId'}));
-           
         });
         
         
@@ -713,7 +712,7 @@ define([
                 'payroll': {label: 'Payroll', value: 'payroll'},
                 'analytics': {label: 'Analytics', value: 'analytics'}
             });
-
+            
         // Now that the router for this view exist, synchronise it with the URL
             oj.Router.sync();
         };
@@ -749,12 +748,14 @@ define([
         self.changeTabContent = function(state){
                 
                 if(state === 'Job'){
+                    
                      data.fetchData("js/data/employeeschedulejobcontent.json").then(function (schedulecontent) {
                             self.jobTabContent(schedulecontent.jobtabcontent);
                         }).fail(function (error) {
                             console.log('Error: ' + error.message);
                         });
                 } else if(state === 'Station'){
+                     
                     data.fetchData("js/data/employeeschedulestationcontent.json").then(function (schedulecontent) {
                             self.stationTabContent(schedulecontent.stationcontent);
                         }).fail(function (error) {

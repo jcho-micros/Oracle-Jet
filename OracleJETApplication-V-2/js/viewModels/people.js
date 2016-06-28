@@ -235,7 +235,7 @@ define([
                             
                             $("#empBasicDialogWindow").ojDialog("open");
                            
-                            setTimeout(function(){$( "#filmStrip" ).ojFilmStrip( "option", "maxItemsPerPage", 4)}, 1000);
+                            setTimeout(function(){$( "#filmStrip" ).ojFilmStrip( "option", "maxItemsPerPage", 4)}, 200);
                             $("#filmStrip").ojFilmStrip("refresh");
                             resolve(true);
                         }).fail(function (error) {

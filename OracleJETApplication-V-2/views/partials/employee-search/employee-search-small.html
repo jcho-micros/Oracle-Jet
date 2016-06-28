@@ -158,7 +158,7 @@
                                 data: listViewDataSource, pageSize:10}"></div>
     </div>
     <script type="text/html" id="peoplelist_template">
-                 <li data-bind="attr: {id: $data['name']}", class="item-marker">
+                 <li data-bind="attr: {id: $data['name']}, click: $parent.empBasicInfoOpen" class="item-marker">
                     <!-- Offcanvas swipe menu -->
                         <div class="oj-offcanvas-outer-wrapper">
                           <div class="oj-offcanvas-inner-wrapper">

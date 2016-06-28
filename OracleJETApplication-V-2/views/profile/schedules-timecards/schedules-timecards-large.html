@@ -1,4 +1,4 @@
-<div class="justifyCenter">
+<div class="justifyCenter" id="profileSchedules">
     <div class="oj-flex">
         <div class="oj-md-10 oj-flex-item">
             <div class="scheduleHeader"> <h2>Schedule</h2> <span class="timeOffRequest"><a data-bind="click:$parent.editRequestTimehandleOpen">Time Off Request</a></span></div>
@@ -7,57 +7,212 @@
             <a data-bind="click: function(){$parent.handleOpen('#scheduleDetailDialog')}" style="line-height:39px;">edit <i class="fa fa-pencil-square-o"></i></a>
         </div>
     </div>
-    <div class="oj-flex">
-        <div class="oj-md-12 oj-flex-item currentWeekHeaderArea">
-            <div class="currentWeekHeader"><strong>Current Week</strong> (8/40) </div>
-        </div>
-        <div class="oj-md-12 oj-flex-item">
-            <div class="oj-flex oj-flex-item">
-                <div class="oj-md-6 oj-flex-item shiftPoolDiv">
-                   <a data-bind="click: $parent.handleOpen('#shiftPoolModal')" class="shiftPoolLink">Shift Pool</a>
-                </div>
-                <div class="oj-md-6 oj-flex-item emailAndPringDiv">
-                    <ul class="scheduleToolArea">
-                        <li id="email"><a href="#"><span class="fa fa-envelope-o"></span> email</a></li>
-                        <li id="print"><a href="#"><span class="fa fa-print"></span> print</a></li>
-                    </ul>
-                </div>
+    <div class="oj-dialog-body">
+        <div class="oj-flex">
+            <div class="oj-flex-item">
+                <div class="oj-flex oj-flex-items-pad oj-sm-flex-items-1">
 
-            </div>
-            <div id="filmStripDiv" class="oj-panel" style="margin: '20px';  width: '100%'">
-              <div id="filmStrip" aria-label="Set of chemicals" 
-                   data-bind="ojComponent: {component: 'ojFilmStrip', 
-                               arrowPlacement: self.currentNavArrowPlacement, 
-                               arrowVisibility: self.currentNavArrowVisibility}">
-                  <!-- ko foreach: $parent.currentScheduledDates -->
-                  
-                  <div class="oj-panel oj-panel-alt2 schedule-filmstrip-item">
-                    <div>
-                       
-                       <a data-bind="click:function(){$parents[1].showItemIndex('#currentWeekModal')}">
-                           <p>
-                               <span data-bind="text: currentDayStart"></span> 
-                           </p>
-                           <p>
-                                <span data-bind="text: currentDayStartTime"></span> - <span data-bind="text: currentDayEndTime"></span> 
-                           </p>
-                            <p>
-                                 <span data-bind="text: currentSecondDayStartTime"></span> - <span data-bind="text: currentSecondDayEndTime"></span>
-                            </p>
-                        </a>
-                        <br /><span data-bind="text: location"></span>, <span data-bind="text: revenueCenter"></span>
-                       <br /><span data-bind="text: job"></span>, <span data-bind="text: station"></span>
-                       <br /><span data-bind="text: status"></span>
-                       <br /><span data-bind="text: notes"></span>
-                    </div> 
-                       
+                    
+                    <div class="oj-flex-item">
+                        <label for="homestore"><strong>HOME STORE</strong></label>
+                        <br /><span id="homestore" data-bind="text: $parent.personProfile().homeStore"></span>
+
+                        <br />
+                        <br />
+                        <label for="hiredate"><strong>HIRE DATE</strong></label>
+                        <br /><span id="hiredate" data-bind="text: new Date($parent.personProfile().hireDate).getYear();"></span>
+
                     </div>
-                      
-                <!-- /ko -->
+                    <div class="oj-flex-item">
+                        <label for="contact"><strong>CONTACT</strong></label>
+                        <br /><span id="contact" data-bind="text: $parent.personProfile().mobile + ' mobile' "></span>
+                        <br /><span id="contact" data-bind="text: $parent.personProfile().email + ' email' "></span>
 
-              </div>
-            </div> <!-- end filmStripDiv -->
+                        <br />
+                        <br />
+                        <label for="emecontact"><strong>EMERGENCY CONTACT</strong></label>
+                        <br /><span id="emecontact" data-bind="text: $parent.personProfile().emergencyName + ' ('+$parent.personProfile().relationship+ ') '+$parent.personProfile().emergencyPhone"></span>
+
+                    </div>
+                    <div class="oj-flex-item">
+                        <label for="clockedin"><strong>Clocked in</strong></label>
+                        <br />
+                        <label for="clockedin"><strong>LAST CLOCKED IN</strong></label>
+                        <br /><span id="clockedin" data-bind="text: $parent.personProfile().homeStore"></span>
+
+                        <br />
+                        <br /><a href="#">view all employees <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                    <div class="oj-flex-item">
+                        <label for="availability"><strong>AVAILABILITY (Days &amp; Time)</strong></label>
+                        <br />
+                        <label for="unavailable"><strong>UNAVAILABLE</strong></label>
+                        <div data-bind="foreach: $parent.unavailableDaysAndTimes()">
+                            <div class="oj-flex-item">
+                                <div data-bind="text: day + ': '+ (allday === 'yes' ? 'all day' : starttime + ' - '+endtime)">
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                    <div class="oj-flex-item">
+
+                        <label for="preferred"><strong>PREFERRED</strong></label>
+                        <div data-bind="foreach: $parent.preferredDaysAndTimes()">
+                            <div class="oj-flex-item">
+                                <div data-bind="text: day + ': '+ (allday === 'yes' ? 'all day' : starttime + ' - '+endtime)">
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="oj-flex">
+            <div class="oj-flex-item currentWeekHeaderArea">
+                <div class="currentWeekHeader">
+                    <span><strong>Current Week Schedule</strong> (8/40 ours) </span>
+                
+                    <span class="emailAndPringDiv">
+                        <ul>
+                            <li id="email"><a href="#"><span class="fa fa-envelope-o"></span> email</a></li>
+                            <li id="print"><a href="#"><span class="fa fa-print"></span> print</a></li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="oj-flex weekSummary">
+            <div class="oj-flex-item currentWeekSummary" style="border-top: 10px solid #04b404;">
+                <div>
+                    <h3>WEEKLY TOTALS</h3>
+                    <div>$126.75 (18.5 hours) | $120.00 tips</div>
+                    <div class="weekTotals">$246.75</div>
+                </div>
+            </div>
+            <div class="oj-flex-item currentWeekSummary" style="border-top: 10px solid #fe9a2e;">
+                <div>
+                    <h3>BARTENDER TOTALS</h3>
+                    <div>$126.75 (18.5 hours) | $120.00 tips</div>
+                    <div class="weekTotals">$246.75</div>
+                </div>
+            </div>
+            <div class="oj-flex-item currentWeekSummary" style="border-top: 10px solid #2e2efe;">
+                <div>
+                    <h3>SERVER TOTALS</h3>
+                    <div>$126.75 (18.5 hours) | $120.00 tips</div>
+                    <div class="weekTotals">$246.75</div>
+                </div>
+            </div>
         </div>
         
+        <div class="oj-flex" >
+            <div class="oj-flex-item currentFilmStrip">
+                <div id="filmStripDiv">
+                    <div id="filmStrip" aria-label="Set of chemicals" data-bind="ojComponent: {component: 'ojFilmStrip', 
+                            arrowPlacement: $parent.currentNavArrowPlacement, 
+                            maxItemsPerPage : 4,
+                            arrowVisibility: $parent.currentNavArrowVisibility}">
+
+                        <!-- ko foreach:$parent.formattedCurrentScheduledDateValues() -->
+
+                        <div class="schedule-filmstrip-item" style="align-self: flex-start;
+  margin: 0 5px;">
+                             <div>
+                                <div style="background-color: #F5F5F5;
+    text-align: center;
+    margin-top: 10px;">
+                                    <span data-bind="text: startDate"></span>
+<!--                                    <br /><span data-bind="text: dailyLoacl"></span>-->
+                                </div>
+                                <div class="daySummary" style="padding: 10px;
+    margin: 10px 0;
+    background-color: #fff;
+    min-height: 150px;
+    -webkit-box-shadow: 0 5px 5px 0px #AFBAC5;
+    box-shadow: 0 5px 5px 0px #AFBAC5;">
+                                  <div class="oj-flex">
+                                      <span class="oj-flex-item oj-sm-6">
+                                          <span data-bind="text: totalHours"></span><span> hours</span>
+                                      </span>
+                                      <span class="oj-flex-item oj-sm-6 dollarAmts">
+                                         <!--Need total earnings for current job, not including tips?-->
+                                          <span data-bind="text: hourlyWage"></span>
+                                      </span>
+                                  </div>
+                                  <div class="oj-flex">
+                                      <span class="oj-flex-item oj-sm-6">
+                                         <span>Tips</span>
+                                      </span>
+                                      <span class="oj-flex-item oj-sm-6 dollarAmts">
+                                         <!--Need total tips?-->
+                                          <span data-bind="text: hourlyWage"></span>
+                                      </span>
+                                  </div>
+                                   <div class="oj-flex" style="font-weight: bold;">
+                                        <span class="oj-flex-item oj-sm-6">Daily Total</span>
+                                        <span class="oj-flex-item oj-sm-6 dollarAmts" data-bind="text: totalEarning;"></span>
+                                    </div>
+                                    <hr/>
+                                    <div data-bind="visible: (preferred === 'yes')" class="empAvailability">
+                                        <div class="oj-flex">
+
+                                            <span class="oj-flex-item prefLabel">
+                                                <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                                                PREFERRED
+                                            </span>
+                                        </div>
+                                        <div class="oj-flex">
+                                            <span data-bind="text: preferredtime" class="oj-flex-item"></span>
+                                        </div>
+                                    </div>
+                                    <div data-bind="visible: (unavailable === 'yes')" class="empAvailability">
+                                        <div class="oj-flex">
+                                            <span class="notAvailLabel oj-flex-item">
+                                                <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                                                NOT AVAILABLE
+                                            </span>
+                                        </div>
+                                        <div class="oj-flex">
+                                            <span data-bind="text: unavialbaletime" class="oj-flex-item"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-bind="foreach: locations" >
+                                    <div class="daySections locSections">
+                                        <div>
+                                            <span data-bind="text: name" class="locLabel"> </span>
+                                            <br /><span data-bind="text: address"> </span>
+                                        </div>
+                                        <div data-bind="foreach: workDetails;">
+
+                                            <div data-bind=" style: { 'border-color': backgroundcolor}" class="jobSection oj-flex">
+                                                <!--Notes to Dev: Would be good to have class name in json for each job-->
+                                                <span data-bind="css: jobtitle" class="oj-flex-item"></span>
+                                                <span class="oj-flex-item">
+                                                   <span data-bind="text: jobtitle" class="locLabel"> </span>
+                                                    <br /><span data-bind="text: (jobtitle === 'Not Scheduled' ? '' : workStation)"> </span>
+                                                    <br /><span data-bind="text: (jobtitle === 'Not Scheduled' ? '' : time)"> </span>
+                                                    <br /><span data-bind="text: (jobtitle === 'Not Scheduled' ? '' : (hours + ' hours'))"> </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <br />
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- /ko --> 
+                    </div>
+                </div>
+               </div>
+        </div>
+        
+        
+
     </div>
+    
 </div>

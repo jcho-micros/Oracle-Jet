@@ -65,7 +65,7 @@
                         <br /><span id="clockedin" data-bind="text: basicEmpInfo().homeStore"></span>
 
                         <br />
-                        <br /><a href="#">view all employees <i class="fa fa-arrow-circle-right"></i></a>
+<!--                        <br /><a href="#">view all employees <i class="fa fa-arrow-circle-right"></i></a>-->
                     </div>
                     <div class="oj-flex-item">
                         <label for="availability">AVAILABILITY (Days &amp; Time)</label>
@@ -135,7 +135,10 @@
         <div class="oj-flex">
             <div class="oj-flex-item currentFilmStrip">
                 <div id="filmStripDiv">
-                    <div id="filmStrip" aria-label="Set of chemicals" data-bind="ojComponent: {component: 'ojFilmStrip', arrowPlacement: self.currentNavArrowPlacement, arrowVisibility: self.currentNavArrowVisibility}">
+                    <div id="filmStrip" aria-label="Set of chemicals" data-bind="ojComponent: {component: 'ojFilmStrip', 
+                            arrowPlacement: self.currentNavArrowPlacement, 
+                             maxItemsPerPage : 4,
+                            arrowVisibility: self.currentNavArrowVisibility}">
 
                         <!-- ko foreach:formttedCurrentScheduledDateValues -->
 

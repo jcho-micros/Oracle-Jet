@@ -22,7 +22,18 @@ define([
             function PersonViewModel() {
                 var self = this;
                 self.personProfile = ko.observableArray([]);
-
+                
+                var monthNames = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN",
+            "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+        var weekday = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+        
+                self.daysandtimes = ko.observableArray([]);
+        self.unavailableDaysAndTimes = ko.observableArray([]);
+        self.preferredDaysAndTimes = ko.observableArray([]);
+        self.currentScheduledDateValues = ko.observableArray([]);
+        self.formattedCurrentScheduledDateValues = ko.observableArray([]);
+        self.currentScheduledDates=ko.observableArray([]);
+        self.currentScheduledJobNames = ko.observableArray([]);
                 //Employee Dialog
                 self.handleOpen = function (dialog) {
                     if (dialog == "#scheduleDetailDialog") {
@@ -110,6 +121,42 @@ define([
 
                         jsonData.fetchData(getEmpURL(id)).then(function (person) {
                             self.personProfile(person);
+                            self.currentScheduledDates(self.personProfile().currentScheduledDates);
+                            self.formattedCurrentScheduledDateValues(self.personProfile().formattedCurrentScheduledDates);
+                            
+                            self.currentScheduledDateValues(ko.dependentObservable(function() {
+                               
+                                return ko.utils.arrayGetDistinctValues(
+                                        ko.utils.arrayMap(self.currentScheduledDates(), 
+                                function(item){ 
+                                    var dateValue = new Date(item.currentDayStart);
+                                        return dateValue.getDate() + ' ' +monthNames[dateValue.getMonth()] + ' ' +weekday[dateValue.getDay()];
+                                    })).sort();
+                            }));
+                            
+                            self.daysandtimes(self.personProfile().daysandtimes);
+                            self.unavailableDaysAndTimes(ko.dependentObservable(function() {
+                                return ko.utils.arrayFilter(self.daysandtimes(), function(item) {
+                                    if(item.timesegment === 'unavailable'){
+                                        return item;
+                                    }
+                                });
+                            }));
+                            self.preferredDaysAndTimes(ko.dependentObservable(function() {
+                                return ko.utils.arrayFilter(self.daysandtimes(), function(item) {
+                                    if(item.timesegment === 'preferred'){
+                                        return item;
+                                    }
+                                });
+                            }));
+                            self.currentScheduledJobNames(ko.dependentObservable(function() {
+                               
+                                return ko.utils.arrayGetDistinctValues(
+                                        ko.utils.arrayMap(self.currentScheduledDates(), 
+                                function(item){ 
+                                    if(item.jobName !== 'Not Assigned') 
+                                        return item.jobName;})).sort();
+                            }));
                             self.setupObservables();
                             self.directReports(self.personProfile().reports);
                             loadPerfandPotenialData();
@@ -739,7 +786,7 @@ define([
                 self.currentNavArrowPlacement = ko.observable("adjacent");
                 self.currentNavArrowVisibility = ko.observable("auto");
 
-                getItemInitialDisplay = function (index) {
+                self.getItemInitialDisplay = function (index) {
                     return index < 3 ? '' : 'none';
                 };
 
