@@ -634,27 +634,36 @@ label {
   background-color: #F5F5F5; }
   #filmStripDiv .dayTotals, .filmStripDiv .dayTotals {
     font-weight: bold; }
-  #filmStripDiv .dayHeader, .filmStripDiv .dayHeader {
+  #filmStripDiv .dayHeader, #filmStripDiv .jobDayHeader, .filmStripDiv .dayHeader, .filmStripDiv #filmStripDiv .jobDayHeader, #filmStripDiv .filmStripDiv .jobDayHeader, .filmStripDiv .jobDayHeader {
     background-color: #F5F5F5;
     text-align: center;
-    margin-top: 10px; }
-  #filmStripDiv .daySections, .filmStripDiv .daySections {
+    margin-top: 10px;
+    text-transform: uppercase; }
+  #filmStripDiv .jobDayHeader, .filmStripDiv .jobDayHeader {
+    text-align: left;
+    font-weight: bold; }
+  #filmStripDiv .daySections, #filmStripDiv .scheduleDaySections, .filmStripDiv .daySections, .filmStripDiv #filmStripDiv .scheduleDaySections, #filmStripDiv .filmStripDiv .scheduleDaySections, .filmStripDiv .scheduleDaySections {
     padding: 10px;
     margin: 10px 0;
     background-color: #fff;
     min-height: 150px;
     -webkit-box-shadow: 0 5px 5px 0px #AFBAC5;
     box-shadow: 0 5px 5px 0px #AFBAC5; }
+  #filmStripDiv .scheduleDaySections, .filmStripDiv .scheduleDaySections {
+    min-height: 55px; }
   #filmStripDiv .locSections, .filmStripDiv .locSections {
     text-align: center; }
     #filmStripDiv .locSections .locLabel, .filmStripDiv .locSections .locLabel {
       font-weight: bold; }
-    #filmStripDiv .locSections .jobSection, .filmStripDiv .locSections .jobSection {
+    #filmStripDiv .locSections .locSectionSep, .filmStripDiv .locSections .locSectionSep {
+      border-width: 2px 0 0;
+      border-color: #CFDCE8; }
+    #filmStripDiv .locSections .jobSection, #filmStripDiv .locSections .scheduleJobSection, .filmStripDiv .locSections .jobSection, .filmStripDiv #filmStripDiv .locSections .scheduleJobSection, #filmStripDiv .filmStripDiv .locSections .scheduleJobSection, .filmStripDiv .locSections .scheduleJobSection {
       border-top: 10px solid;
       margin: 10px 0 0 0;
       padding: 5px 0;
       text-align: left; }
-      #filmStripDiv .locSections .jobSection .Bartender, #filmStripDiv .locSections .jobSection .Server, .filmStripDiv .locSections .jobSection .Bartender, .filmStripDiv .locSections .jobSection .Server {
+      #filmStripDiv .locSections .jobSection .Bartender, #filmStripDiv .locSections .scheduleJobSection .Bartender, #filmStripDiv .locSections .jobSection .Server, #filmStripDiv .locSections .scheduleJobSection .Server, .filmStripDiv .locSections .jobSection .Bartender, .filmStripDiv #filmStripDiv .locSections .scheduleJobSection .Bartender, #filmStripDiv .filmStripDiv .locSections .scheduleJobSection .Bartender, .filmStripDiv .locSections .scheduleJobSection .Bartender, .filmStripDiv .locSections .jobSection .Server, .filmStripDiv #filmStripDiv .locSections .scheduleJobSection .Server, #filmStripDiv .filmStripDiv .locSections .scheduleJobSection .Server, .filmStripDiv .locSections .scheduleJobSection .Server {
         margin-top: 3px;
         margin-right: 3px;
         display: inline-block;
@@ -662,15 +671,17 @@ label {
         text-rendering: auto;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale; }
-      #filmStripDiv .locSections .jobSection .Bartender:before, .filmStripDiv .locSections .jobSection .Bartender:before {
+      #filmStripDiv .locSections .jobSection .Bartender:before, #filmStripDiv .locSections .scheduleJobSection .Bartender:before, .filmStripDiv .locSections .jobSection .Bartender:before, .filmStripDiv #filmStripDiv .locSections .scheduleJobSection .Bartender:before, #filmStripDiv .filmStripDiv .locSections .scheduleJobSection .Bartender:before, .filmStripDiv .locSections .scheduleJobSection .Bartender:before {
         content: "\f000";
         font-size: 30px; }
-      #filmStripDiv .locSections .jobSection .Server:before, .filmStripDiv .locSections .jobSection .Server:before {
+      #filmStripDiv .locSections .jobSection .Server:before, #filmStripDiv .locSections .scheduleJobSection .Server:before, .filmStripDiv .locSections .jobSection .Server:before, .filmStripDiv #filmStripDiv .locSections .scheduleJobSection .Server:before, #filmStripDiv .filmStripDiv .locSections .scheduleJobSection .Server:before, .filmStripDiv .locSections .scheduleJobSection .Server:before {
         content: "\f0f5";
         font-size: 30px; }
-      #filmStripDiv .locSections .jobSection .fa, .filmStripDiv .locSections .jobSection .fa {
+      #filmStripDiv .locSections .jobSection .fa, #filmStripDiv .locSections .scheduleJobSection .fa, .filmStripDiv .locSections .jobSection .fa, .filmStripDiv #filmStripDiv .locSections .scheduleJobSection .fa, #filmStripDiv .filmStripDiv .locSections .scheduleJobSection .fa, .filmStripDiv .locSections .scheduleJobSection .fa {
         font-size: 30px;
         margin-top: 3px; }
+    #filmStripDiv .locSections .scheduleJobSection, .filmStripDiv .locSections .scheduleJobSection {
+      margin: 0; }
   #filmStripDiv .dollarAmts, .filmStripDiv .dollarAmts {
     text-align: right; }
   #filmStripDiv .empAvailability .prefLabel, #filmStripDiv .empAvailability .notAvailLabel, .filmStripDiv .empAvailability .prefLabel, .filmStripDiv .empAvailability .notAvailLabel {
@@ -727,6 +738,15 @@ label {
 .scheduleContent {
   background-color: #F5F5F5; }
 
+.scheduleEmpInfo {
+  margin: 5px 0; }
+
+.scheduleEmpImg {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  padding-right: 5px; }
+
 #laborTabSection .oj-accordion-collapsible > .oj-collapsible-header {
   background-color: #F5F5F5;
   border-color: #AFBAC5; }
@@ -747,6 +767,9 @@ label {
   padding: 10px;
   font-size: 20px;
   font-family: "Helvetica Neue Light", Arial, sans-serif; }
+
+.empName {
+  color: #CFDCE8; }
 
 @media only screen and (min-width: 768px) {
   .searchFieldWrap {

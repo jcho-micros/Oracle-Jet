@@ -312,6 +312,7 @@ $oddEmpTableBckg: $lightGray2;
 //Labor Variables
 $scheduleDayHeaderBckgColor: $lightGray1;
 $scheduleContentBckgColor: $lightGray2;
+$scheduleHighlightColor: $lightGray1;
 
 //Footer Variables
 $footerBorderColor: $lightGrayOld4;
@@ -988,20 +989,34 @@ label{
         background-color: $dayHeaderBckgColor;
         text-align:center;
         margin-top:10px;
+        text-transform: uppercase;
+    }
+    .jobDayHeader{
+        @extend .dayHeader;
+        text-align: left;
+        font-weight:bold;
     }
     .daySections{
         //border:1px solid $daySectionsBorderColor;
-        padding:10px;
+        padding:$basicPadding;
         margin:10px 0;
         background-color: $daySectionsBckgColor;
         min-height:150px;
         -webkit-box-shadow: 0 5px 5px 0px $daySectionsBorderColor;
         box-shadow: 0 5px 5px 0px $daySectionsBorderColor;
     }
+    .scheduleDaySections{
+        @extend .daySections;
+        min-height:55px;
+    }
     .locSections{
         text-align: center;
         .locLabel{
             font-weight: bold;
+        }
+        .locSectionSep{
+            border-width:2px 0 0;
+            border-color: $scheduleHighlightColor;
         }
         .jobSection{
             border-top:10px solid;
@@ -1033,6 +1048,10 @@ label{
                 font-size: 30px;
                 margin-top: 3px;
             }
+        }
+        .scheduleJobSection{
+            margin:0;
+            @extend .jobSection;
         }
     }
     .dollarAmts{
@@ -1111,6 +1130,15 @@ label{
     //overflow-y: scroll;
     background-color: $scheduleContentBckgColor;
 }
+.scheduleEmpInfo{
+    margin: $basicMargin/2 0;
+}
+.scheduleEmpImg{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    padding-right:5px;
+}
 #laborTabSection {
     .oj-accordion-collapsible > .oj-collapsible-header{
         background-color: $accordionBckgColor;
@@ -1136,6 +1164,10 @@ label{
     padding:$basicPadding;
     font-size:20px;
     font-family: $fontFamily;
+}
+
+.empName{
+    color:$scheduleHighlightColor;
 }
 //Media Query
 //Medium/ipad (UP)

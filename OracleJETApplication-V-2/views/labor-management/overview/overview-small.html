@@ -39,115 +39,130 @@ View complete schedule</a>
                                                 <div class="oj-flex">
                                                     <!--ko foreach: jobs-->
                                                     <div class="oj-flex-item">
-                                                        <div data-bind="style : {'background-color': backgroundcolor}">
-                                                            <strong><span data-bind="text: jobtitle"> </span></strong>
-                                                            <br /><span data-bind="text: workStation"> </span>
-
+                                                        <div class="jobDayHeader">
+                                                            <div data-bind="text: jobtitle"></div>
+                                                            <div data-bind="text: workStation"></div>
                                                         </div>
 
-                                                        <div class="daySections">
-                                                            <span data-bind="text: '$'+totalearning"> </span>
-                                                            <br /><span> Daily Total</span>
-                                                            <br /><span data-bind="text: '$'+hourlyWage+ ' ('+totalhours+' hours)'"></span>
-                                                            <br /><span data-bind="text: '$'+tipsamount+ 'tips'"></span>
+                                                        <div class="scheduleDaySections locSections">
+                                                            <div class="scheduleJobSection" data-bind="style : {'border-color': backgroundcolor}">
+                                                                <div data-bind="text: '$'+totalearning"> </div>
+                                                                <div> Daily Total</div>
+                                                                <div data-bind="text: '$'+hourlyWage+ ' ('+totalhours+' hours)'"></div>
+                                                                <div data-bind="text: '$'+tipsamount+ 'tips'"></div>
+                                                            </div>
                                                         </div>
                                                         <div data-bind="foreach: openingshift;">
-                                                            <div style="border: 1px solid #000000; background-color: white; color: black;  text-align: center;">
-                                                                <strong><span >OPENING SHIFT</span></strong>
-                                                                <br /><span>#.# hours | $##.###</span>
-                                                            </div>
+                                                            <div class="scheduleDaySections">
+                                                                <div class="locSections">
+                                                                    <div class="locLabel">OPENING SHIFT</div>
+                                                                    <div>#.# hours | $##.###</div>
+                                                                    <hr class="locSectionSep"/>
+                                                                </div>
 
-                                                            <div data-bind="foreach: revenuecenters;">
-                                                                <div class="oj-flex" style="background-color: #ded8d2; color: black;  text-align: left;">
-                                                                   <div class="oj-flex-item">
-                                                                         <br /><strong><span data-bind="text: revenuecenter"></span></strong>
-                                                                        <div data-bind="foreach: employees;" style="margin-top: 5px">
-                                                                            <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" style="height: 20px; width: 30px;" />
-                                                                            <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
+                                                                <div data-bind="foreach: revenuecenters;">
+                                                                    <strong><span data-bind="text: revenuecenter"></span></strong>
+                                                                    <div data-bind="foreach: employees;" class="scheduleEmpInfo oj-flex">
+                                                                        <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"  class="scheduleEmpImg oj-flex-item"/>
+                                                                       <div class="oj-flex-item">
+                                                                             <a href="#" data-bind="click: $parents[6].empScheduleDetailInfoOpen" class="empName"> <span data-bind="text: empname"></span></a>
                                                                             <br /><span data-bind="text: timings"></span>
                                                                             <br /><span data-bind="text: hours +' hours | $'+hourlywage"></span>
-                                                                            <br />
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div data-bind="foreach: breakfastshift;">
-                                                            <div style="border: 1px solid #000000; background-color: white; color: black;  text-align: center;">
-                                                                <strong><span >BREAKFAST SHIFT</span></strong>
-                                                                <br /><span>#.# hours | $##.###</span>
-                                                            </div>
+                                                            <div class="scheduleDaySections">
+                                                                <div class="locSections">
+                                                                    <div class="locLabel">BREAKFAST SHIFT</div>
+                                                                    <div>#.# hours | $##.###</div>
+                                                                    <hr class="locSectionSep"/>
+                                                                </div>
 
-                                                            <div data-bind="foreach: revenuecenters;" style="margin-left: 10px; margin-right: 10px">
-                                                                <div style="background-color: #ded8d2; color: black;  text-align: left;">
-                                                                    <br /><strong><span data-bind="text: revenuecenter"></span></strong>
-                                                                    <div data-bind="foreach: employees;" style="margin-top: 5px">
-                                                                        <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" style="height: 20px; width: 30px;" />
-                                                                        <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
+                                                                <div data-bind="foreach: revenuecenters;">
+                                                                    <div>
+                                                                        <strong><span data-bind="text: revenuecenter"></span></strong>
 
-                                                                        <br /><span data-bind="text: timings"></span>
-                                                                        <br /><span data-bind="text: hours +' hours | $'+hourlywage"></span>
-                                                                        <br />
+                                                                        <div data-bind="foreach: employees;" class="scheduleEmpInfo oj-flex">
+                                                                        <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"  class="scheduleEmpImg oj-flex-item"/>
+                                                                       <div class="oj-flex-item">
+                                                                             <a href="#" data-bind="click: $parents[6].empScheduleDetailInfoOpen" class="empName"> <span data-bind="text: empname"></span></a>
+                                                                            <br /><span data-bind="text: timings"></span>
+                                                                            <br /><span data-bind="text: hours +' hours | $'+hourlywage"></span>
+                                                                        </div>
+                                                                    </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div data-bind="foreach: lunchshift;">
-                                                            <div style="border: 1px solid #000000; background-color: white; color: black;  text-align: center;">
-                                                                <strong><span >LUNCH SHIFT</span></strong>
-                                                                <br /><span>#.# hours | $##.###</span>
-                                                            </div>
+                                                            <div class="scheduleDaySections">
+                                                                <div class="locSections">
+                                                                    <div class="locLabel">LUNCH SHIFT</div>
+                                                                    <div>#.# hours | $##.###</div>
+                                                                    <hr class="locSectionSep"/>
+                                                                </div>
 
-                                                            <div data-bind="foreach: revenuecenters;" style="margin-left: 10px; margin-right: 10px">
-                                                                <div style="background-color: #ded8d2; color: black;  text-align: left;">
-                                                                    <br /><strong><span data-bind="text: revenuecenter"></span></strong>
-                                                                    <div data-bind="foreach: employees;" style="margin-top: 5px">
-                                                                        <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" style="height: 20px; width: 30px;" />
-                                                                        <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
-
-                                                                        <br /><span data-bind="text: timings"></span>
-                                                                        <br /><span data-bind="text: hours +' hours | $'+hourlywage"></span>
-                                                                        <br />
+                                                                <div data-bind="foreach: revenuecenters;">
+                                                                    <div>
+                                                                        <strong><span data-bind="text: revenuecenter"></span></strong>
+                                                                        <div data-bind="foreach: employees;" class="scheduleEmpInfo oj-flex">
+                                                                        <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"  class="scheduleEmpImg oj-flex-item"/>
+                                                                       <div class="oj-flex-item">
+                                                                             <a href="#" data-bind="click: $parents[6].empScheduleDetailInfoOpen" class="empName"> <span data-bind="text: empname"></span></a>
+                                                                            <br /><span data-bind="text: timings"></span>
+                                                                            <br /><span data-bind="text: hours +' hours | $'+hourlywage"></span>
+                                                                        </div>
+                                                                    </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div data-bind="foreach: dinnershift;">
-                                                            <div style="border: 1px solid #000000; background-color: white; color: black;  text-align: center;">
-                                                                <strong><span >DINNER SHIFT</span></strong>
-                                                                <br /><span>#.# hours | $##.###</span>
-                                                            </div>
+                                                            <div class="scheduleDaySections">
+                                                                <div class="locSections">
+                                                                    <div class="locLabel">DINNER SHIFT</div>
+                                                                    <div>#.# hours | $##.###</div>
+                                                                    <hr class="locSectionSep"/>
+                                                                </div>
 
-                                                            <div data-bind="foreach: revenuecenters;" style="margin-left: 10px; margin-right: 10px">
-                                                                <div style="background-color: #ded8d2; color: black;  text-align: left;">
-                                                                    <br /><strong><span data-bind="text: revenuecenter"></span></strong>
-                                                                    <div data-bind="foreach: employees;" style="margin-top: 5px">
-                                                                        <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" style="height: 20px; width: 30px;" />
-                                                                        <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
-
-                                                                        <br /><span data-bind="text: timings"></span>
-                                                                        <br /><span data-bind="text: hours +' hours | $'+hourlywage"></span>
-                                                                        <br />
+                                                                <div data-bind="foreach: revenuecenters;">
+                                                                    <div>
+                                                                       <strong><span data-bind="text: revenuecenter"></span></strong>
+                                                                        <div data-bind="foreach: employees;" class="scheduleEmpInfo oj-flex">
+                                                                        <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"  class="scheduleEmpImg oj-flex-item"/>
+                                                                       <div class="oj-flex-item">
+                                                                             <a href="#" data-bind="click: $parents[6].empScheduleDetailInfoOpen" class="empName">
+                                                                             <span data-bind="text: empname"></span></a>
+                                                                            <br /><span data-bind="text: timings"></span>
+                                                                            <br /><span data-bind="text: hours +' hours | $'+hourlywage"></span>
+                                                                        </div>
+                                                                    </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div data-bind="foreach: closingshift;">
-                                                            <div style="border: 1px solid #000000; background-color: white; color: black;  text-align: center;">
-                                                                <strong><span >CLOSING SHIFT</span></strong>
-                                                                <br /><span>#.# hours | $##.###</span>
-                                                            </div>
+                                                            <div class="scheduleDaySections">
+                                                                <div class="locSections">
+                                                                    <div class="locLabel">CLOSING SHIFT</div>
+                                                                    <div>#.# hours | $##.###</div>
+                                                                    <hr class="locSectionSep"/>
+                                                                </div>
 
-                                                            <div data-bind="foreach: revenuecenters;" style="margin-left: 10px; margin-right: 10px">
-                                                                <div style="background-color: #ded8d2; color: black;  text-align: left;">
-                                                                    <br /><strong><span data-bind="text: revenuecenter"></span></strong>
-                                                                    <div data-bind="foreach: employees;" style="margin-top: 5px">
-                                                                        <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" style="height: 20px; width: 30px;" />
-                                                                        <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
-
-                                                                        <br /><span data-bind="text: timings"></span>
-                                                                        <br /><span data-bind="text: hours +' hours | $'+hourlywage"></span>
-                                                                        <br />
+                                                                <div data-bind="foreach: revenuecenters;">
+                                                                    <div>
+                                                                       <strong><span data-bind="text: revenuecenter"></span></strong>
+                                                                        <div data-bind="foreach: employees;" class="scheduleEmpInfo oj-flex">
+                                                                        <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"  class="scheduleEmpImg oj-flex-item"/>
+                                                                       <div class="oj-flex-item">
+                                                                             <a href="#" data-bind="click: $parents[6].empScheduleDetailInfoOpen" class="empName"> <span data-bind="text: empname"></span></a>
+                                                                            <br /><span data-bind="text: timings"></span>
+                                                                            <br /><span data-bind="text: hours +' hours | $'+hourlywage"></span>
+                                                                        </div>
+                                                                    </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -367,3 +382,4 @@ View complete schedule</a>
     </div>
 </div>
 <div data-bind="template: {name: 'labor-management/dialogwindow/schedule-dailogwindow-small'}"></div>
+<div data-bind="template: {name: 'labor-management/dialogwindow/shift-detail-dialogwindow-small'}"></div>
