@@ -106,17 +106,17 @@
                     data-bind="click: $parent.changeTabContent('Station'), visible: ($parent.selectedTab() !== 'Station')" 
                     />
          </div>
-         <div>
+ <!--    <div>
              <input id="btnLocation" type="button" value="LOCATION" 
                     style="background-color: #ffffff; color: #000000; width: 60px; font-size: 10px; height: 30px" title="Location"
                     data-bind="visible: ($parent.selectedTab() === 'Location')"/>
          </div>
-         <div >
+        <div >
              <input id="btnLocation" type="button" value="LOCATION" 
                     style="background-color: #FF4000; color: #ffffff; width: 60px; font-size: 10px; height: 30px" title="Location"
                     data-bind="click: $parent.changeTabContent('Location'), visible: ($parent.selectedTab() !== 'Location');"/>
          </div>
-<!--         <div>
+         <div>
              <input id="btnRevenue" type="button" value="REV CENTER" 
                     style="background-color: #ffffff; color: #000000; width: 60px; font-size: 10px; height: 30px" title="Revenue"
                     data-bind="visible: ($parent.selectedTab() === 'Revenue')"/>
