@@ -349,7 +349,7 @@ define([
 
         self.filteredAllPeople = ko.computed(
             function(){
-               
+                 $("#firstname").blur();
                 var isSearchTextExist = true;
                  var peopleFilter = new Array();
                  if (self.allPeople().length !== 0) {

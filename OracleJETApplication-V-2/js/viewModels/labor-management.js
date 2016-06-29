@@ -84,10 +84,6 @@ define([
         self.rehireEligibility = ko.observable();
         self.visibleEmployeeDetailFilmStrip = ko.observable(false);
         
-        //filmStrip observables
-        self.currentNavArrowPlacement = ko.observable("adjacent");
-        self.currentNavArrowVisibility = ko.observable("auto");
-
         self.hireStatustabsChangeHandler = function(event, data) {
             self.hireStatusSelectedTab(data.value);
          };
@@ -324,7 +320,7 @@ define([
                             }));
                             self.visibleEmployeeDetailFilmStrip(true);
                             $("#laborDialogWindow").ojDialog("open");
-                            setTimeout(function(){$( "#filmStrip" ).ojFilmStrip( "option", "maxItemsPerPage", 4)}, 1000);
+                            setTimeout(function(){$( "#filmStrip" ).ojFilmStrip( "option", "maxItemsPerPage", 4)}, 100);
                             $("#filmStrip").ojFilmStrip("refresh");
                             resolve(true);
                         }).fail(function (error) {
@@ -561,6 +557,7 @@ define([
 
         self.filteredAllPeople = ko.computed(
             function(){
+                $("#firstname").blur();
                 var isSearchTextExist = true;
                  var peopleFilter = new Array();
                  if (self.allPeople().length !== 0) {
@@ -688,7 +685,7 @@ define([
                         });
                             
         data.fetchData("js/data/employeesjobschedules.json").then(function (schedulecontent) {
-                            self.jobSchedules(schedulecontent.jobschedules);
+                            //self.jobSchedules(schedulecontent.jobschedules);
                             self.firstJobSchedules(schedulecontent.jobschedules);
                             self.firstJobSchedules( self.firstJobSchedules.slice(0,1));
                             self.reviewsandapprovals(schedulecontent.reviewsandapprovals);
@@ -697,8 +694,9 @@ define([
                         }).fail(function (error) {
                             console.log('Error: ' + error.message);
                         });
-             self.currentNavArrowPlacement = ko.observable("adjacent");
-                self.currentNavArrowVisibility = ko.observable("auto");            
+        self.currentNavArrowPlacement = ko.observable("adjacent");
+        self.currentNavArrowVisibility = ko.observable("auto");     
+        
         self.handleActivated = function (data) {
 
             var parentRouter = oj.Router.rootInstance;
@@ -721,6 +719,11 @@ define([
                 // Invoke go() with the selected item.
                 self.router.go(ui.key);
                 if(ui.key === 'schedules-timecards'){
+                    data.fetchData("js/data/employeedayandlocationcontent.json").then(function (schedulecontent) {
+                            self.jobSchedules(schedulecontent.jobschedules);
+                        }).fail(function (error) {
+                            console.log('Error: ' + error.message);
+                     });
                     setTimeout(function(){self.selectedTab('Day');}, 1000);
                 } 
             }
@@ -745,30 +748,35 @@ define([
 
         };
         
-        self.changeTabContent = function(state){
-                
+        self.changeTabContent = function(d,event){
+            var state=$("#"+event.currentTarget.id).attr('title');
                 if(state === 'Job'){
-                    
                      data.fetchData("js/data/employeeschedulejobcontent.json").then(function (schedulecontent) {
                             self.jobTabContent(schedulecontent.jobtabcontent);
                         }).fail(function (error) {
                             console.log('Error: ' + error.message);
                         });
                 } else if(state === 'Station'){
-                     
+                    
                     data.fetchData("js/data/employeeschedulestationcontent.json").then(function (schedulecontent) {
-                            self.stationTabContent(schedulecontent.stationcontent);
+                                self.stationTabContent(schedulecontent.stationcontent);
+                        }).fail(function (error) {
+                                console.log('Error: ' + error.message);
+                    });
+                    
+                } else if(state === 'Day' || state === 'Location' ){
+                    data.fetchData("js/data/employeedayandlocationcontent.json").then(function (schedulecontent) {
+                            self.jobSchedules(schedulecontent.jobschedules);
                         }).fail(function (error) {
                             console.log('Error: ' + error.message);
                         });
-                    
                 }
                 self.selectedTab(state);
         };
         
         self.empDayScheduleOpen = function(){
             return new Promise(function(resolve, reject) {
-                data.fetchData("js/data/employeesjobschedules.json").then(function (schedulecontent) {
+                data.fetchData("js/data/employeedayandlocationcontent.json").then(function (schedulecontent) {
                             self.jobSchedules(schedulecontent.jobschedules);
                             self.router.go('schedules-timecards');
                             setTimeout(function(){self.selectedTab('Day');}, 1000);

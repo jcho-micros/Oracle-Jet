@@ -37,7 +37,7 @@
          <div >
              <input id="btnJob" type="button" value="JOB" 
                     style="background-color: #FF4000; color: #ffffff; width: 30px; font-size: 10px; height: 30px" title="Job"
-                    data-bind="click: $parent.changeTabContent('Job'), visible: ($parent.selectedTab() !== 'Job');"/>
+                    data-bind="click: $parent.changeTabContent, visible: ($parent.selectedTab() !== 'Job');"/>
          </div>
          <div >
              <input id="btnEmployee" type="button" value="EMPLOYEE" 
@@ -47,7 +47,7 @@
          <div >
              <input id="btnEmployee" type="button" value="EMPLOYEE" 
                     style="background-color: #FF4000; color: #ffffff; width: 65px; font-size: 10px; height: 30px" title="Employee"
-                    data-bind="click: $parent.changeTabContent('Employee'), visible: ($parent.selectedTab() !== 'Employee');"/>
+                    data-bind="click: $parent.changeTabContent, visible: ($parent.selectedTab() !== 'Employee');"/>
          </div>
          <div>
              <input id="btnDay" type="button" value="DAY" 
@@ -57,7 +57,7 @@
          <div>
              <input id="btnDay" type="button" value="DAY" 
                     style="background-color: #FF4000; color: #ffffff; width: 30px; font-size: 10px; height: 30px" title="Day"
-                    data-bind="click: $parent.changeTabContent('Day'), visible: ($parent.selectedTab() !== 'Day')" 
+                    data-bind="click: $parent.changeTabContent, visible: ($parent.selectedTab() !== 'Day')" 
                     />
          </div>
          <div>
@@ -68,7 +68,7 @@
          <div>
              <input id="btnStation" type="button" value="STATION" 
                     style="background-color: #FF4000; color: #ffffff; width: 65px; font-size: 10px; height: 30px" title="Station"
-                    data-bind="click: $parent.changeTabContent('Station'), visible: ($parent.selectedTab() !== 'Station')" 
+                    data-bind="click: $parent.changeTabContent, visible: ($parent.selectedTab() !== 'Station')" 
                     />
          </div>
          <div>
@@ -79,7 +79,7 @@
          <div >
              <input id="btnLocation" type="button" value="LOCATION" 
                     style="background-color: #FF4000; color: #ffffff; width: 70px; font-size: 10px; height: 30px" title="Location"
-                    data-bind="click: $parent.changeTabContent('Location'), visible: ($parent.selectedTab() !== 'Location');"/>
+                    data-bind="click: $parent.changeTabContent, visible: ($parent.selectedTab() !== 'Location');"/>
          </div>
 <!--         <div>
              <input id="btnRevenue" type="button" value="REV CENTER" 
