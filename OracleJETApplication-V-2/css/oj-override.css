@@ -70,6 +70,53 @@ a.oj-navigationlist-item-content.oj-navigationlist-item-no-icon {
 .fa-chevron-down, .fa-chevron-up {
   font-size: 14px; }
 
+.messageArea {
+  min-height: 50px;
+  padding: 10px;
+  border-top: 10px solid #F5F5F5;
+  background-color: #F5F5F5; }
+  .messageArea .messageLabel {
+    font-weight: bold; }
+    .messageArea .messageLabel:after {
+      content: 'Note: ';
+      display: inline-block;
+      margin: 0 0 0 3px;
+      font-family: "Helvetica Neue Medium", Arial, sans-serif; }
+  .messageArea .messageLink {
+    cursor: pointer;
+    color: #4C759B;
+    margin-top: 5px; }
+  .messageArea .fa {
+    font-size: 16px; }
+
+.successArea {
+  border-color: #00A02D; }
+  .successArea .messageLabel {
+    color: #00A02D; }
+    .successArea .messageLabel:after {
+      content: 'Success: '; }
+
+.warningArea {
+  border-color: #DF6D00; }
+  .warningArea .messageLabel {
+    color: #DF6D00; }
+    .warningArea .messageLabel:after {
+      content: 'Warning: '; }
+
+.errorArea {
+  border-color: #E40004; }
+  .errorArea .messageLabel {
+    color: #E40004; }
+    .errorArea .messageLabel:after {
+      content: 'Error: '; }
+
+.informationArea {
+  border-color: #0572CE; }
+  .informationArea .messageLabel {
+    color: #0572CE; }
+    .informationArea .messageLabel:after {
+      content: 'Note: '; }
+
 /*Page layouts*/
 #topDrawer {
   background-color: #696e72;
@@ -713,7 +760,8 @@ label {
     text-transform: uppercase; }
   #filmStripDiv .jobDayHeader, .filmStripDiv .jobDayHeader {
     text-align: left;
-    font-weight: bold; }
+    font-weight: bold;
+    min-height: 40px; }
   #filmStripDiv .daySections, #filmStripDiv .scheduleDaySections, .filmStripDiv .daySections, .filmStripDiv #filmStripDiv .scheduleDaySections, #filmStripDiv .filmStripDiv .scheduleDaySections, .filmStripDiv .scheduleDaySections {
     padding: 10px;
     margin: 10px 0;
@@ -723,6 +771,23 @@ label {
     box-shadow: 0 5px 5px 0px #AFBAC5; }
   #filmStripDiv .scheduleDaySections, .filmStripDiv .scheduleDaySections {
     min-height: 55px; }
+  #filmStripDiv .Bartender, #filmStripDiv .Server, #filmStripDiv .jobDayHeader .fa-star, .filmStripDiv .Bartender, .filmStripDiv .Server, .filmStripDiv .jobDayHeader .fa-star {
+    margin-top: 3px;
+    margin-right: 3px;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+    #filmStripDiv .Bartender .fa, #filmStripDiv .Bartender.fa, #filmStripDiv .Server .fa, #filmStripDiv .Server.fa, #filmStripDiv .jobDayHeader .fa-star .fa, #filmStripDiv .jobDayHeader .fa-star.fa, .filmStripDiv .Bartender .fa, .filmStripDiv .Bartender.fa, .filmStripDiv .Server .fa, .filmStripDiv .Server.fa, .filmStripDiv .jobDayHeader .fa-star .fa, .filmStripDiv .jobDayHeader .fa-star.fa {
+      font-size: 30px;
+      margin-top: 3px; }
+  #filmStripDiv .Bartender:before, .filmStripDiv .Bartender:before {
+    content: "\f000";
+    font-size: 30px; }
+  #filmStripDiv .Server:before, .filmStripDiv .Server:before {
+    content: "\f0f5";
+    font-size: 30px; }
   #filmStripDiv .locSections, .filmStripDiv .locSections {
     text-align: center; }
     #filmStripDiv .locSections .locLabel, .filmStripDiv .locSections .locLabel {
@@ -735,23 +800,6 @@ label {
       margin: 10px 0 0 0;
       padding: 5px 0;
       text-align: left; }
-      #filmStripDiv .locSections .jobSection .Bartender, #filmStripDiv .locSections .scheduleJobSection .Bartender, #filmStripDiv .locSections .jobSection .Server, #filmStripDiv .locSections .scheduleJobSection .Server, .filmStripDiv .locSections .jobSection .Bartender, .filmStripDiv #filmStripDiv .locSections .scheduleJobSection .Bartender, #filmStripDiv .filmStripDiv .locSections .scheduleJobSection .Bartender, .filmStripDiv .locSections .scheduleJobSection .Bartender, .filmStripDiv .locSections .jobSection .Server, .filmStripDiv #filmStripDiv .locSections .scheduleJobSection .Server, #filmStripDiv .filmStripDiv .locSections .scheduleJobSection .Server, .filmStripDiv .locSections .scheduleJobSection .Server {
-        margin-top: 3px;
-        margin-right: 3px;
-        display: inline-block;
-        font: normal normal normal 14px/1 FontAwesome;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale; }
-      #filmStripDiv .locSections .jobSection .Bartender:before, #filmStripDiv .locSections .scheduleJobSection .Bartender:before, .filmStripDiv .locSections .jobSection .Bartender:before, .filmStripDiv #filmStripDiv .locSections .scheduleJobSection .Bartender:before, #filmStripDiv .filmStripDiv .locSections .scheduleJobSection .Bartender:before, .filmStripDiv .locSections .scheduleJobSection .Bartender:before {
-        content: "\f000";
-        font-size: 30px; }
-      #filmStripDiv .locSections .jobSection .Server:before, #filmStripDiv .locSections .scheduleJobSection .Server:before, .filmStripDiv .locSections .jobSection .Server:before, .filmStripDiv #filmStripDiv .locSections .scheduleJobSection .Server:before, #filmStripDiv .filmStripDiv .locSections .scheduleJobSection .Server:before, .filmStripDiv .locSections .scheduleJobSection .Server:before {
-        content: "\f0f5";
-        font-size: 30px; }
-      #filmStripDiv .locSections .jobSection .fa, #filmStripDiv .locSections .scheduleJobSection .fa, .filmStripDiv .locSections .jobSection .fa, .filmStripDiv #filmStripDiv .locSections .scheduleJobSection .fa, #filmStripDiv .filmStripDiv .locSections .scheduleJobSection .fa, .filmStripDiv .locSections .scheduleJobSection .fa {
-        font-size: 30px;
-        margin-top: 3px; }
     #filmStripDiv .locSections .scheduleJobSection, .filmStripDiv .locSections .scheduleJobSection {
       margin: 0; }
   #filmStripDiv .dollarAmts, .filmStripDiv .dollarAmts {
@@ -799,6 +847,29 @@ label {
 .searchWindow h3 {
   padding: 10px; }
 
+.tempLaborCostChart {
+  background-image: url("images/lineWithAreaChart.png");
+  height: 353px;
+  width: 496px;
+  margin: 0 auto; }
+
+.preferredArea, .onCallArea, .notAvailableArea, .notScheduledArea {
+  border-top: 10px solid;
+  padding: 5px 0;
+  text-align: left; }
+
+.preferredArea {
+  border-top-color: #37424C; }
+
+.onCallArea {
+  border-top-color: #37424C; }
+
+.notAvailableArea {
+  border-top-color: #e4001e; }
+
+.notAvailableArea {
+  border-top-color: #C5DEF4; }
+
 .daySummary {
   padding: 10px; }
   .daySummary .dayTotalsLabel {
@@ -811,13 +882,14 @@ label {
   background-color: #F5F5F5; }
 
 .scheduleEmpInfo {
-  margin: 5px 0; }
+  margin: 10px 0; }
 
 .scheduleEmpImg {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  padding-right: 5px; }
+  margin-right: 5px;
+  border: 1px solid #AFBAC5; }
 
 #laborTabSection .oj-accordion-collapsible > .oj-collapsible-header {
   background-color: #F5F5F5;
@@ -842,6 +914,48 @@ label {
 
 .empName {
   color: #CFDCE8; }
+
+.reviewApprovalSection {
+  margin: 10px 0;
+  display: flex;
+  display: -webkit-flex;
+  width: 100%;
+  height: 110px; }
+  .reviewApprovalSection .reviewApprovalEmpInfo {
+    height: 92px;
+    flex: 4;
+    -webkit-flex: 4;
+    padding: 10px;
+    border: 1px solid #CFDCE8; }
+    .reviewApprovalSection .reviewApprovalEmpInfo .empAddNotes {
+      font-weight: bold;
+      margin-top: 10px; }
+    .reviewApprovalSection .reviewApprovalEmpInfo .timeAdded {
+      text-transform: uppercase; }
+  .reviewApprovalSection .reviewApprovalActions {
+    width: 55px; }
+    .reviewApprovalSection .reviewApprovalActions .reviewApprovalBtnsWrap {
+      display: flex;
+      display: -webkit-flex;
+      justify-content: flex-end;
+      -webkit-justify-content: flex-end; }
+    .reviewApprovalSection .reviewApprovalActions .reviewApprovalBtns {
+      display: flex;
+      display: -webkit-flex;
+      flex-direction: column;
+      -webkit-flex-direction: column; }
+    .reviewApprovalSection .reviewApprovalActions a {
+      width: 55px;
+      height: 55px;
+      display: block;
+      border-color: #CFDCE8;
+      border-style: solid;
+      border-width: 1px 1px 1px 0;
+      background-color: transparent;
+      line-height: 55px;
+      text-align: center; }
+      .reviewApprovalSection .reviewApprovalActions a .fa {
+        font-size: 20px; }
 
 @media only screen and (min-width: 768px) {
   .searchFieldWrap {

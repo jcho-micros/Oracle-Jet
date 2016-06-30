@@ -2,7 +2,7 @@
     <div class="oj-flex oj-sm-12">
         <div class="oj-sm-12 oj-flex-item">
             <div id="accordionPage" data-bind="ojComponent: {component: 'ojAccordion'}">
-                <div id="c1">
+                <div id="c1" data-bind="ojComponent: {component: 'ojCollapsible', expanded:true}">
 
                     <div>
                         <span>Schedule</span>
@@ -39,9 +39,12 @@ View complete schedule</a>
                                                 <div class="oj-flex">
                                                     <!--ko foreach: jobs-->
                                                     <div class="oj-flex-item">
-                                                        <div class="jobDayHeader">
-                                                            <div data-bind="text: jobtitle"></div>
-                                                            <div data-bind="text: workStation"></div>
+                                                        <div class="jobDayHeader oj-flex">
+                                                            <span data-bind="css: jobtitle"></span>
+                                                            <div class="oj-flex-item">
+                                                                <div data-bind="text: jobtitle"></div>
+                                                                <div data-bind="text: workStation"></div>
+                                                            </div>
                                                         </div>
 
                                                         <div class="scheduleDaySections locSections">
@@ -185,52 +188,68 @@ View complete schedule</a>
                                                     <!--/ko-->
 
 
-<!--
-                                                    <div class="" data-bind="visible: haveprefered === 'yes'">
-                                                        <div style="border: 1px solid #000000; padding-top: 45px; background-color: #494745;  height: 55px;
-                                          margin-top: 5px; color: white;  text-align: center;">
-                                                            <strong><span >PREFERRED </span></strong>
-                                                        </div>
-                                                        <div data-bind="foreach: prefered;" style="margin-top: 5px; margin-left: 10px; margin-right: 10px">
-                                                            <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" style="height: 20px; width: 30px;" />
-                                                            <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
-
-                                                            <br /><span data-bind="text: timing"></span>
-                                                            <br /><span data-bind="text: phonenumber"></span>
-                                                            <br />
-                                                            <br />
+                                                    <div data-bind="visible: haveprefered === 'yes'">
+                                                       <div class="jobDayHeader oj-flex">
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                            <span >PREFERRED </span>
+                                                       </div>
+                                                       <div class="scheduleDaySections">
+                                                             <div data-bind="foreach: prefered;" class="preferredArea">
+                                                                <div class="scheduleEmpInfo oj-flex">
+                                                                    <div class="oj-flex-item">
+                                                                        <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" class="scheduleEmpImg" />
+                                                                    </div>
+                                                                   <div class="oj-flex-item">
+                                                                         <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
+                                                                        <div data-bind="text: timing"></div>
+                                                                        <div data-bind="text: phonenumber"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="" data-bind="visible: haveoncall === 'yes'">
-                                                        <div style="border: 1px solid #000000; padding-top: 45px;  background-color: #494745;  height: 55px;  margin-top: 5px; color: white;  text-align: center;">
-                                                            <strong><span >ON CALL </span></strong>
+                                                        <div class="jobDayHeader oj-flex">
+                                                            <i class="fa fa-phone" aria-hidden="true"></i>
+                                                            <span >ON CALL </span>
                                                         </div>
-                                                        <div data-bind="foreach: oncall;" style="margin-top: 5px; margin-left: 10px; margin-right: 10px">
-                                                            <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" style="height: 20px; width: 30px;" />
-                                                            <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
+                                                        <div class="scheduleDaySections">
+                                                            <div data-bind="foreach: oncall;" class="onCallArea">
+                                                               <div class="scheduleEmpInfo oj-flex">
+                                                                   <div class="oj-flex-item">
+                                                                         <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" class="scheduleEmpImg" />
+                                                                    </div>
+                                                                   <div class="oj-flex-item">
+                                                                         <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
 
-                                                            <br /><span data-bind="text: timing"></span>
-                                                            <br /><span data-bind="text: phonenumber"></span>
-                                                            <br />
-                                                            <br />
+                                                                        <div data-bind="text: timing"></div>
+                                                                        <div data-bind="text: phonenumber"></div>
+                                                                    </div>
+                                                               </div>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div class="" data-bind="visible: haveunavailable === 'yes'">
-                                                        <div style="border: 1px solid #000000; padding-top: 45px;  background-color: #494745;  height: 55px; margin-top: 5px; color: white;  text-align: center;">
-                                                            <strong><span >NOT AVAILABLE </span></strong>
+                                                    <div data-bind="visible: haveunavailable === 'yes'">
+                                                        <div class="jobDayHeader oj-flex">
+                                                           <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                                                           <span >NOT AVAILABLE </span>
                                                         </div>
-                                                        <div data-bind="foreach: notavailable;" style="margin-top: 5px; margin-left: 10px; margin-right: 10px;">
+                                                        <div class="scheduleDaySections">
+                                                            <div data-bind="foreach: notavailable;" class="notAvailableArea">
+                                                                <div class="scheduleEmpInfo oj-flex">
+                                                                   <div class="oj-flex-item">
+                                                                         <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" class="scheduleEmpImg"/>
+                                                                    </div>
+                                                                   <div class="oj-flex-item">
+                                                                         <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
 
-                                                            <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};" style="height: 20px; width: 30px;" />
-                                                            <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: empname"></span></strong></a>
-
-                                                            <br /><span data-bind="text: timing"></span>
-                                                            <br /><span data-bind="text: phonenumber"></span>
-                                                            <br />
-                                                            <br />
+                                                                        <div data-bind="text: timing"></div>
+                                                                        <div data-bind="text: phonenumber"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
--->
 
                                                 </div>
                                             </div>
@@ -283,7 +302,7 @@ View complete schedule</a>
                         <span>Projected vs Actual Labor Costs</span>
                     </div>
                     <div>
-                        <div style="margin-left: 5px; margin-right: 5px; margin-top: 5px; height: 250px; background-color: #d5ae2a;">
+                        <div class="tempLaborCostChart">
 
                         </div>
                     </div>
@@ -330,52 +349,47 @@ View complete schedule</a>
                         <div id="tabs-2">Last 3 Days Content Area</div>
                     </div>
                 </div>
-                 <!--Need to take out databind on next line before commit-->
-                <div id="c5" data-bind="ojComponent: {component: 'ojCollapsible', expanded:true}">
+                <div id="c5">
                     <div>
                         <span>Reviews and Approvals</span>
                     </div>
                     <div>
                         <div>
                             <!--  ko foreach: $parent.reviewsandapprovals -->
-                            <div>
+                            <div class="reviewApprovalSectionWrap">
                                 <!--ko foreach: requests-->
-                                <div class="oj-flex-bar">
-                                    <div class="oj-flex-bar-start">
+                                <div class="reviewApprovalSection">
+                                    <div class="reviewApprovalEmpInfo">
                                         <div class="oj-flex">
-                                            <div class="oj-flex-item">
-                                                <img data-bind="attr: {src: 'css/images/people/101.png'};" class="scheduleEmpImg" />
-                                            </div>
-                                            <div class="oj-flex-item">
+                                            <img data-bind="attr: {src: 'css/images/people/101.png'};" class="scheduleEmpImg" />
+                                            <div>
                                                 <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: name"></span></strong></a>
-                                                <span data-bind="text: time" style="padding-left: 35px"></span>
-                                                <strong><span data-bind="text: subject"></span></strong>
+                                                <div class="timeAdded" data-bind="text: time"></div>
+                                            </div>
+                                        </div>
+                                        <div class="oj-flex empAddNotes" data-bind="text: subject"></div>
+                                    </div>
+                                    <div class="reviewApprovalActions">
+                                         <div class="reviewApprovalBtnsWrap">
+                                            <div class="reviewApprovalBtns">
+                                                <a id="btnAdjust" type="button" value="ADJUST TIMECARD" data-bind="visible: (btntype === 'adjusttimecard')" title="ADJUST"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                                <a id="btnDismiss" type="button" value="DISMISS" data-bind="visible: (btntype === 'adjusttimecard')" title="DISMISS"><i class="fa fa-times" aria-hidden="true"></i></a>
+                                                <a id="btnAdjust" type="button" value="APPROVE" data-bind="visible: (btntype === 'approval')" title="APPROVE"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
+                                                <a id="btnDismiss" type="button" value="DISMISS" data-bind="visible: (btntype === 'approval')" title="DISMISS"><i class="fa fa-times" aria-hidden="true"></i></a>
+                                                <a id="btnDismiss" type="button" value="REVIEW TIMECARDS" data-bind="visible: (btntype === 'reviewtimecards')" title="REVIEW"><i class="fa fa-check-square-o" aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="oj-flex-bar-end">
-                                           <div class="oj-flex">
-                                                 <input id="btnAdjust" type="button" value="ADJUST TIMECARD" data-bind="visible: (btntype === 'adjusttimecard')" style="background-color: #ffffff; color: #778ef5; width: 50%; height: 30px" title="ADJUST" />
-                                            </div>
-                                           <div class="oj-flex">
-                                                 <input id="btnDismiss" type="button" value="DISMISS" data-bind="visible: (btntype === 'adjusttimecard')" style="background-color: #ffffff; color: #778ef5; width: 48%; height: 30px" title="DISMISS" />
-                                            </div>
-     <!--
-                                            <input id="btnAdjust" type="button" value="APPROVE" data-bind="visible: (btntype === 'approval')" style="background-color: #ffffff; color: #778ef5; width: 50%; height: 30px" title="APPROVE" />
-                                             <input id="btnDismiss" type="button" value="DISMISS" data-bind="visible: (btntype === 'approval')" style="background-color: #ffffff; color: #778ef5; width: 48%; height: 30px" title="DISMISS" />
-                                            <input id="btnDismiss" type="button" value="REVIEW TIMECARDS" data-bind="visible: (btntype === 'reviewtimecards')" style="background-color: #ffffff; color: #778ef5; width: 100%; height: 30px" title="REVIEW" />
--->
-
-                                    </div>
                                 </div>
                                 <!-- /ko -->
-
-
                             </div>
-
                             <!-- /ko -->
                         </div>
-
+                        <div class="messageArea informationArea">
+                            <span class="messageLabel fa fa-info-circle"></span>
+                            <span>Daily timecard is ready for review</span>
+                            <div class="messageLink">review timecards <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></div>
+                        </div>
                     </div>
 
 
