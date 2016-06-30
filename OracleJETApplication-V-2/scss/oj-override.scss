@@ -682,6 +682,20 @@ html:not([dir="rtl"]) .oj-dialog-title{
                                     background-color: $color;
                                 }
 
+                                .#{$section}SubSectionTabs{
+                                    .oj-tabs-tab.oj-selected{
+                                        border-color:$color;
+                                        .oj-tabs-title{
+                                            color:$black;
+                                        }
+                                    }
+                                    .oj-tabs-tab:not(.oj-selected){
+                                        background-color:$color;
+                                        .oj-tabs-title{
+                                            color:$white;
+                                        }
+                                    }
+                                }
                             }
 #appHeaderDesktopNav, #appHeaderMobileNav{
     .topNavImgIcon{
@@ -1133,8 +1147,8 @@ label{
     margin: $basicMargin/2 0;
 }
 .scheduleEmpImg{
-    width:45px;
-    height:45px;
+    width:50px;
+    height:50px;
     border-radius:50%;
     padding-right:5px;
 }
@@ -1353,7 +1367,7 @@ label{
                     background-color: $navListSelected;
                 }
             }
-        }    
+        }
     }
 }
 // MD IPad (CAP)

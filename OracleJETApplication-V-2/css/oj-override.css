@@ -349,26 +349,98 @@ html:not([dir="rtl"]) .oj-dialog-title {
 .homeTitleWrap {
   background-color: #015FAB; }
 
+.homeSubSectionTabs .oj-tabs-tab.oj-selected {
+  border-color: #015FAB; }
+  .homeSubSectionTabs .oj-tabs-tab.oj-selected .oj-tabs-title {
+    color: #000; }
+.homeSubSectionTabs .oj-tabs-tab:not(.oj-selected) {
+  background-color: #015FAB; }
+  .homeSubSectionTabs .oj-tabs-tab:not(.oj-selected) .oj-tabs-title {
+    color: #fff; }
+
 .labor-managementTitleWrap {
   background-color: #AB4100; }
+
+.labor-managementSubSectionTabs .oj-tabs-tab.oj-selected {
+  border-color: #AB4100; }
+  .labor-managementSubSectionTabs .oj-tabs-tab.oj-selected .oj-tabs-title {
+    color: #000; }
+.labor-managementSubSectionTabs .oj-tabs-tab:not(.oj-selected) {
+  background-color: #AB4100; }
+  .labor-managementSubSectionTabs .oj-tabs-tab:not(.oj-selected) .oj-tabs-title {
+    color: #fff; }
 
 .inventory-managementTitleWrap {
   background-color: #172777; }
 
+.inventory-managementSubSectionTabs .oj-tabs-tab.oj-selected {
+  border-color: #172777; }
+  .inventory-managementSubSectionTabs .oj-tabs-tab.oj-selected .oj-tabs-title {
+    color: #000; }
+.inventory-managementSubSectionTabs .oj-tabs-tab:not(.oj-selected) {
+  background-color: #172777; }
+  .inventory-managementSubSectionTabs .oj-tabs-tab:not(.oj-selected) .oj-tabs-title {
+    color: #fff; }
+
 .gift-loyaltyTitleWrap {
   background-color: #410b6e; }
+
+.gift-loyaltySubSectionTabs .oj-tabs-tab.oj-selected {
+  border-color: #410b6e; }
+  .gift-loyaltySubSectionTabs .oj-tabs-tab.oj-selected .oj-tabs-title {
+    color: #000; }
+.gift-loyaltySubSectionTabs .oj-tabs-tab:not(.oj-selected) {
+  background-color: #410b6e; }
+  .gift-loyaltySubSectionTabs .oj-tabs-tab:not(.oj-selected) .oj-tabs-title {
+    color: #fff; }
 
 .reports-analyticsTitleWrap {
   background-color: #007B2B; }
 
+.reports-analyticsSubSectionTabs .oj-tabs-tab.oj-selected {
+  border-color: #007B2B; }
+  .reports-analyticsSubSectionTabs .oj-tabs-tab.oj-selected .oj-tabs-title {
+    color: #000; }
+.reports-analyticsSubSectionTabs .oj-tabs-tab:not(.oj-selected) {
+  background-color: #007B2B; }
+  .reports-analyticsSubSectionTabs .oj-tabs-tab:not(.oj-selected) .oj-tabs-title {
+    color: #fff; }
+
 .enterpriseTitleWrap {
   background-color: #ba0006; }
+
+.enterpriseSubSectionTabs .oj-tabs-tab.oj-selected {
+  border-color: #ba0006; }
+  .enterpriseSubSectionTabs .oj-tabs-tab.oj-selected .oj-tabs-title {
+    color: #000; }
+.enterpriseSubSectionTabs .oj-tabs-tab:not(.oj-selected) {
+  background-color: #ba0006; }
+  .enterpriseSubSectionTabs .oj-tabs-tab:not(.oj-selected) .oj-tabs-title {
+    color: #fff; }
 
 .peopleTitleWrap {
   background-color: #79006C; }
 
+.peopleSubSectionTabs .oj-tabs-tab.oj-selected {
+  border-color: #79006C; }
+  .peopleSubSectionTabs .oj-tabs-tab.oj-selected .oj-tabs-title {
+    color: #000; }
+.peopleSubSectionTabs .oj-tabs-tab:not(.oj-selected) {
+  background-color: #79006C; }
+  .peopleSubSectionTabs .oj-tabs-tab:not(.oj-selected) .oj-tabs-title {
+    color: #fff; }
+
 .profileTitleWrap {
   background-color: #79006C; }
+
+.profileSubSectionTabs .oj-tabs-tab.oj-selected {
+  border-color: #79006C; }
+  .profileSubSectionTabs .oj-tabs-tab.oj-selected .oj-tabs-title {
+    color: #000; }
+.profileSubSectionTabs .oj-tabs-tab:not(.oj-selected) {
+  background-color: #79006C; }
+  .profileSubSectionTabs .oj-tabs-tab:not(.oj-selected) .oj-tabs-title {
+    color: #fff; }
 
 #appHeaderDesktopNav .topNavImgIcon, #appHeaderMobileNav .topNavImgIcon {
   margin-top: 3px;
@@ -742,8 +814,8 @@ label {
   margin: 5px 0; }
 
 .scheduleEmpImg {
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   padding-right: 5px; }
 

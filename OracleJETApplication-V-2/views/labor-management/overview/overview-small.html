@@ -8,7 +8,6 @@
                         <span>Schedule</span>
                         <a href="#" class="accordionLink" data-bind="click: $parent.empDayScheduleOpen"><i class="fa fa-eye" aria-hidden="true"></i>
 View complete schedule</a>
-                   <--test comment-->
                     </div>
 
                     <div>
@@ -64,7 +63,9 @@ View complete schedule</a>
                                                                 <div data-bind="foreach: revenuecenters;">
                                                                     <strong><span data-bind="text: revenuecenter"></span></strong>
                                                                     <div data-bind="foreach: employees;" class="scheduleEmpInfo oj-flex">
-                                                                        <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"  class="scheduleEmpImg oj-flex-item"/>
+                                                                       <div class="oj-flex-item">
+                                                                             <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"  class="scheduleEmpImg"/>
+                                                                        </div>
                                                                        <div class="oj-flex-item">
                                                                              <a href="#" data-bind="click: $parents[6].empScheduleDetailInfoOpen" class="empName"> <span data-bind="text: empname"></span></a>
                                                                             <br /><span data-bind="text: timings"></span>
@@ -87,7 +88,9 @@ View complete schedule</a>
                                                                         <strong><span data-bind="text: revenuecenter"></span></strong>
 
                                                                         <div data-bind="foreach: employees;" class="scheduleEmpInfo oj-flex">
-                                                                        <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"  class="scheduleEmpImg oj-flex-item"/>
+                                                                        <div class="oj-flex-item">
+                                                                            <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"  class="scheduleEmpImg"/>
+                                                                        </div>
                                                                        <div class="oj-flex-item">
                                                                              <a href="#" data-bind="click: $parents[6].empScheduleDetailInfoOpen" class="empName"> <span data-bind="text: empname"></span></a>
                                                                             <br /><span data-bind="text: timings"></span>
@@ -110,7 +113,9 @@ View complete schedule</a>
                                                                     <div>
                                                                         <strong><span data-bind="text: revenuecenter"></span></strong>
                                                                         <div data-bind="foreach: employees;" class="scheduleEmpInfo oj-flex">
-                                                                        <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"  class="scheduleEmpImg oj-flex-item"/>
+                                                                       <div class="oj-flex-item">
+                                                                             <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"  class="scheduleEmpImg"/>
+                                                                        </div>
                                                                        <div class="oj-flex-item">
                                                                              <a href="#" data-bind="click: $parents[6].empScheduleDetailInfoOpen" class="empName"> <span data-bind="text: empname"></span></a>
                                                                             <br /><span data-bind="text: timings"></span>
@@ -133,7 +138,9 @@ View complete schedule</a>
                                                                     <div>
                                                                        <strong><span data-bind="text: revenuecenter"></span></strong>
                                                                         <div data-bind="foreach: employees;" class="scheduleEmpInfo oj-flex">
-                                                                        <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"  class="scheduleEmpImg oj-flex-item"/>
+                                                                        <div class="oj-flex-item">
+                                                                            <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"  class="scheduleEmpImg"/>
+                                                                        </div>
                                                                        <div class="oj-flex-item">
                                                                              <a href="#" data-bind="click: $parents[6].empScheduleDetailInfoOpen" class="empName">
                                                                              <span data-bind="text: empname"></span></a>
@@ -157,7 +164,9 @@ View complete schedule</a>
                                                                     <div>
                                                                        <strong><span data-bind="text: revenuecenter"></span></strong>
                                                                         <div data-bind="foreach: employees;" class="scheduleEmpInfo oj-flex">
-                                                                        <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"  class="scheduleEmpImg oj-flex-item"/>
+                                                                        <div class="oj-flex-item">
+                                                                            <img data-bind="attr: {src: 'css/images/people/'+empid+'.png'};"  class="scheduleEmpImg"/>
+                                                                        </div>
                                                                        <div class="oj-flex-item">
                                                                              <a href="#" data-bind="click: $parents[6].empScheduleDetailInfoOpen" class="empName"> <span data-bind="text: empname"></span></a>
                                                                             <br /><span data-bind="text: timings"></span>
@@ -235,46 +244,38 @@ View complete schedule</a>
                         </div>
                     </div>
                 </div>
+
                 <div id="c2">
                     <div>
                         <span>Currently Clocked In</span>
                     </div>
-                    <div>
-                        <div class="oj-flex" style="margin-top: 5px; margin-left: 2px; margin-right: 2px">
-                            <div>
-                                <input id="btnOnTime" type="button" value="On Time" style="background-color: #ffffff; color: #00000; width: 65px; height: 30px" title="On Time" />
-                            </div>
-                            <div>
-                                <input id="btnLate" type="button" value="Late Clock-In" style="background-color: #FF4000; color: #ffffff; width: 95px; height: 30px" title="Late Clock-In" />
-                            </div>
-                            <div>
-                                <input id="btnConflist" type="button" value="Job Conflict" style="background-color: #FF4000; color: #ffffff; width: 90px; height: 30px" title="Job Conflict" />
-                            </div>
-                        </div>
-
-                        <div class="oj-flex">
-
-                            <!--  ko foreach: $parent.currentlyclockedin -->
-                            <div style="margin-left: 15px; margin-right: 15px; border: 1px solid #000000; " data-bind="visible: (category.toLowerCase() === 'ontime')">
-                                <div class="oj-flex">
+                    <div id="clockedInTabs" class="labor-managementSubSectionTabs" data-bind="ojComponent: {component: 'ojTabs'}">
+                        <ul>
+                            <li><span>On Time</span></li>
+                            <li><span>Late Clock-In</span></li>
+                            <li><span>Job Conflict</span></li>
+                        </ul>
+                        <div id="tabs-1">
+                           <!--  ko foreach: $parent.currentlyclockedin -->
+                            <div data-bind="visible: (category.toLowerCase() === 'ontime')">
                                     <!--ko foreach: records-->
-                                    <div class="oj-flex-item" style="border: 1px solid #000000; margin-top: 5px; width: 100%">
-                                        <!--                                    <strong><span data-bind="text: name"> </span></strong><br>-->
-                                        <img data-bind="attr: {src: 'css/images/people/101.png'};" style="height: 20px; width: 30px;" />
-                                        <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: name"></span></strong></a>
-                                        <br>
+                                    <div class="oj-flex oj-sm-flex-items-initial">
+                                        <div class="oj-flex-item">
+                                            <img data-bind="attr: {src: 'css/images/people/101.png'};" class="scheduleEmpImg" />
+                                        </div>
+                                        <div class="oj-flex-item">
+                                            <a href="#" data-bind="click: $parent.empBasicInfoOpen"><span data-bind="text: name"></span></a>
 
-                                        <span data-bind="text: notes" style="padding-left: 35px"></span>
-                                        <br/>
+                                            <div data-bind="text: notes"></div>
+                                        </div>
                                     </div>
+                                    <hr class="locSectionSep"/>
                                     <!-- /ko -->
-                                </div>
-
                             </div>
 
-                            <!-- /ko -->
-                        </div>
-
+                            <!-- /ko --></div>
+                        <div id="tabs-2">Late Clock-In Content Area</div>
+                        <div id="tabs-3">Job Conflict Content Area</div>
                     </div>
                 </div>
                 <div id="c3">
@@ -289,31 +290,26 @@ View complete schedule</a>
                 </div>
                 <div id="c4">
                     <div>
-                        <span>Manager's log</span>
+                      <span>Manager's log</span>
+                      <span class="accordionLink">
+                        <a href="#">+ add entry</a>
+                      </span>
                     </div>
-                    <div>
-                        <div style="line-height:19px; float: right">
-                            <a href="#">+ add entry</a>
-                        </div>
-                        <div class="oj-flex" style="margin-top: 15px; margin-left: 2px; margin-right: 2px">
-                            <div>
-                                <input id="btnHours" type="button" value="LAST 24 HOURS" style="background-color: #ffffff; color: #00000; width: 120px; height: 30px" title="lasttwofour" />
-                            </div>
-                            <div>
-                                <input id="btnthreedays" type="button" value="LAST 3 DAYS" style="background-color: #FF4000; color: #ffffff; width: 120px; height: 30px" title="lastthree" />
-                            </div>
-                        </div>
+                    <div id="managersLogTabs" class="labor-managementSubSectionTabs" data-bind="ojComponent: {component: 'ojTabs'}">
 
-                        <div class="oj-flex">
-
-                            <!--  ko foreach: $parent.managerlogs -->
-                            <div style="margin-left: 15px; margin-right: 15px; border: 1px solid #000000; height: 150px; overflow-y: scroll;" data-bind="visible: (location.toLowerCase() === $root.activeLocation().toString().toLowerCase())">
-                                <div class="oj-flex">
+                        <ul>
+                            <li><span>Last 24 Hours</span></li>
+                            <li><span>Last 3 Days</span></li>
+                        </ul>
+                        <div id="tabs-1">
+                          <!--  ko foreach: $parent.managerlogs -->
+                          <div data-bind="visible: (location.toLowerCase() === $root.activeLocation().toString().toLowerCase())">
+                                <div>
                                     <!--ko foreach: logdates-->
-                                    <div class="oj-flex-item">
+                                    <div>
                                         <strong><span data-bind="text: logdate"> </span></strong>
-                                        <br/>
-                                        <br/>
+
+                                        <hr class="locSectionSep"/>
                                         <!--ko foreach: logs-->
                                         <div>
                                             <strong><span data-bind="text: time + ' : '"> </span></strong>
@@ -327,41 +323,48 @@ View complete schedule</a>
                                     </div>
                                     <!-- /ko -->
                                 </div>
-
                             </div>
 
                             <!-- /ko -->
                         </div>
+                        <div id="tabs-2">Last 3 Days Content Area</div>
                     </div>
                 </div>
-                <div id="c5">
+                 <!--Need to take out databind on next line before commit-->
+                <div id="c5" data-bind="ojComponent: {component: 'ojCollapsible', expanded:true}">
                     <div>
                         <span>Reviews and Approvals</span>
                     </div>
                     <div>
-                        <div class="oj-flex">
-
+                        <div>
                             <!--  ko foreach: $parent.reviewsandapprovals -->
-                            <div style="margin-left: 15px; margin-right: 15px;  width: 100%; margin-top: 5px">
-
+                            <div>
                                 <!--ko foreach: requests-->
-                                <div style="border: 1px solid #000000; width: 100%; margin-top: 5px;">
-                                    <!--                                        <strong><span data-bind="text: name"></span></strong><br/>-->
-                                    <img data-bind="attr: {src: 'css/images/people/101.png'};" style="height: 20px; width: 30px;" />
-                                    <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: name"></span></strong></a>
-                                    <br>
-
-                                    <span data-bind="text: time" style="padding-left: 35px"></span>
-                                    <br/>
-                                    <br/>
-                                    <strong><span data-bind="text: subject"></span></strong>
-                                    <br/>
-                                    <div style="border: 1px solid #000000;">
-                                        <input id="btnAdjust" type="button" value="ADJUST TIMECARD" data-bind="visible: (btntype === 'adjusttimecard')" style="background-color: #ffffff; color: #778ef5; width: 50%; height: 30px" title="ADJUST" />
-                                        <input id="btnDismiss" type="button" value="DISMISS" data-bind="visible: (btntype === 'adjusttimecard')" style="background-color: #ffffff; color: #778ef5; width: 48%; height: 30px" title="DISMISS" />
-                                        <input id="btnAdjust" type="button" value="APPROVE" data-bind="visible: (btntype === 'approval')" style="background-color: #ffffff; color: #778ef5; width: 50%; height: 30px" title="APPROVE" />
-                                        <input id="btnDismiss" type="button" value="DISMISS" data-bind="visible: (btntype === 'approval')" style="background-color: #ffffff; color: #778ef5; width: 48%; height: 30px" title="DISMISS" />
-                                        <input id="btnDismiss" type="button" value="REVIEW TIMECARDS" data-bind="visible: (btntype === 'reviewtimecards')" style="background-color: #ffffff; color: #778ef5; width: 100%; height: 30px" title="REVIEW" />
+                                <div class="oj-flex-bar">
+                                    <div class="oj-flex-bar-start">
+                                        <div class="oj-flex">
+                                            <div class="oj-flex-item">
+                                                <img data-bind="attr: {src: 'css/images/people/101.png'};" class="scheduleEmpImg" />
+                                            </div>
+                                            <div class="oj-flex-item">
+                                                <a href="#" data-bind="click: $parent.empBasicInfoOpen"> <strong><span data-bind="text: name"></span></strong></a>
+                                                <span data-bind="text: time" style="padding-left: 35px"></span>
+                                                <strong><span data-bind="text: subject"></span></strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="oj-flex-bar-end">
+                                           <div class="oj-flex">
+                                                 <input id="btnAdjust" type="button" value="ADJUST TIMECARD" data-bind="visible: (btntype === 'adjusttimecard')" style="background-color: #ffffff; color: #778ef5; width: 50%; height: 30px" title="ADJUST" />
+                                            </div>
+                                           <div class="oj-flex">
+                                                 <input id="btnDismiss" type="button" value="DISMISS" data-bind="visible: (btntype === 'adjusttimecard')" style="background-color: #ffffff; color: #778ef5; width: 48%; height: 30px" title="DISMISS" />
+                                            </div>
+     <!--
+                                            <input id="btnAdjust" type="button" value="APPROVE" data-bind="visible: (btntype === 'approval')" style="background-color: #ffffff; color: #778ef5; width: 50%; height: 30px" title="APPROVE" />
+                                             <input id="btnDismiss" type="button" value="DISMISS" data-bind="visible: (btntype === 'approval')" style="background-color: #ffffff; color: #778ef5; width: 48%; height: 30px" title="DISMISS" />
+                                            <input id="btnDismiss" type="button" value="REVIEW TIMECARDS" data-bind="visible: (btntype === 'reviewtimecards')" style="background-color: #ffffff; color: #778ef5; width: 100%; height: 30px" title="REVIEW" />
+-->
 
                                     </div>
                                 </div>
